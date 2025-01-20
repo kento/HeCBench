@@ -29,9 +29,9 @@ make: *** [Makefile:52: main.o] Error 1
 ```
 
 # kalman-omp
-## 実行時エラー
+## 実行時エラー ( nvc )
 ```
-/main 1000 100 3 100
+./main 1000 100 3 100
 Fatal error: expression 'HX_CU_CALL_CHECK(p_cuStreamSynchronize(stream))' (value 1) is not equal to expression 'HX_SUCCESS' (value 0)
 Aborted (core dumped)
 ```
