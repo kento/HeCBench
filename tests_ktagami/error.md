@@ -1,3 +1,94 @@
+# jaccard-hipified
+## make
+```
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+main.cu:59:12: error: use of undeclared identifier '__shfl_sync'
+   59 |     last = __shfl_sync(mask, sum, blockDim.x-1, blockDim.x);
+      |
+(中略)
+4 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile:51: main.o] Error 1
+```
+
+# jacobi-hipified
+## make
+```
+ipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+main.cu:102:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+  102 |     err += __shfl_down_sync(0xffffffff, err, offset);
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+(中略)
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile:52: main.o] Error 1
+```
+
+# kalman-omp
+## 実行時エラー
+```
+/main 1000 100 3 100
+Fatal error: expression 'HX_CU_CALL_CHECK(p_cuStreamSynchronize(stream))' (value 1) is not equal to expression 'HX_SUCCESS' (value 0)
+Aborted (core dumped)
+```
+
+# kalman-omp
+## make -f Makefile.aomp
+```
+In file included from main.cpp:19:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |
+(中略)
+7 errors generated.
+make: *** [Makefile.aomp:60: main.o] Error 1
+```
+
+# keogh-omp
+## make -f Makefile.aomp
+```
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+7 errors generated.
+make: *** [Makefile.aomp:60: main.o] Error 1
+```
+
+# kernelLaunch-cuda
+## make
+
+```
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cu -o main.o
+main.cu(49): Error: Formal parameter space overflowed (4104 bytes required, max 4096 bytes allowed) in function _Z19KernelWithLargeArgs15LargeKernelArgsPc
+
+make: *** [Makefile:50: main.o] Error 1
+```
+
+# kmc-hip,  kmc-hipified
+## make
+
+```
+hipcc  -std=c++14 -Wall -Wno-unused-result -I../kmc-cuda -O3 -c main.cpp -o main.o
+main.cpp:3:10: fatal error: 'hipblas.h' file not found
+    3 | #include <hipblas.h>
+      |          ^~~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -Wno-unused-result -I../kmc-cuda -O3 -c -x hip main.cpp -o "main.o"
+make: *** [Makefile:47: main.o] Error 1
+```
+
 # kmeans-omp
 ## make -f Makefile.aomp
 ```
