@@ -1,3 +1,137 @@
+# halo-finder-cuda
+## make
+```
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/ForceTreeTest.o ForceTreeTest.cxx
+In file included from ForceTreeTest.cxx:23:
+./Partition.h:68:10: fatal error: mpi.h: No such file or directory
+   68 | #include <mpi.h>
+      |          ^~~~~~~
+compilation terminated.
+make: *** [Makefile:100: cuda/ForceTreeTest.o] Error 1
+```
+
+# haversine-omp
+##  make -f Makefile.aomp
+```
+clang++  -std=c++14 -Wall -I../haversine-cuda/ -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx906 -c distance.cpp -o distance.o
+In file included from distance.cpp:1:
+In file included from ../haversine-cuda/distance.h:5:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |
+(中略)
+7 errors generated.
+make: *** [Makefile.aomp:64: distance.o] Error 1
+```
+
+# heat2d-cuda
+## make
+```
+nvcc  -std=c++14 -Xcompiler -Wall -Xcompiler -fopenmp -arch=sm_60 -O3 -c main.cu -o main.o
+In file included from main.cu:16:
+lapl_ss.c:1:10: fatal error: xmmintrin.h: No such file or directory
+    1 | #include <xmmintrin.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:51: main.o] Error 1
+```
+# heat2d-hip
+## make
+```
+main.cu:106:3: error: expected ')'
+  106 |          Lx*Ly*sizeof(float)*2.0/(t0*1.0e3),
+      |
+(中略)
+23 warnings and 1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -fopenmp -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile:50: main.o] Error 1
+```
+
+# henry-omp
+## make -f Makefile.aomp
+
+```
+clang++  -std=c++14 -Wall  -O3 -ffast-math -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx906 -c main.cpp -o main.o
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::_Rb_tree_node_base *const &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |
+(中略)
+18 errors generated.
+make: *** [Makefile.aomp:61: main.o] Error 1
+```
+
+# hexciton-hipified
+## make
+```
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+In file included from main.cu:6:
+In file included from ./utils.hpp:44:
+./helper_math.h:1455:30: error: use of overloaded operator '/' is ambiguous (with operand types 'float2' (aka 'HIP_vector_type<float, 2>') and 'float2')
+ 1455 |     float2 y = clamp((x - a) / (b - a), 0.0f, 1.0f);
+      |
+(中略)
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+50 warnings and 20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile:51: main.o] Error 1
+```
+
+# histogram-omp
+## make -f Makefile.aomp
+```
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march= -c histogram_compare_base.cpp -o histogram_compare_base.o
+clang++: error: invalid target ID ''; format is a processor name followed by an optional colon-delimited list of features followed by an enable/disable sign (e.g., 'gfx908:sramecc+:xnack-')
+make: *** [Makefile.aomp:60: histogram_compare_base.o] Error 1
+```
+
+# hwt1d-omp
+## make -f Makefile.aomp
+
+```
+In file included from main.cpp:17:
+In file included from ./hwt.h:28:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |
+(中略)
+8 errors generated.
+make: *** [Makefile.aomp:61: main.o] Error 1
+```
+
+
+# hybridsort-omp
+## make -f Makefile.aomp
+
+```
+clang++  -std=c++11 -Wall -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march= -o hybridsort.o -c hybridsort.c
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: error: invalid target ID ''; format is a processor name followed by an optional colon-delimited list of features followed by an enable/disable sign (e.g., 'gfx908:sramecc+:xnack-')
+make: *** [Makefile.aomp:55: hybridsort.o] Error 1
+```
+
+# intrinsics-simd-hipified
+## make
+```
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+main.cu:21:8: error: use of undeclared identifier '__vabs2'
+   21 |   r  = __vabs2(a);
+      |
+(中略)
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile:50: main.o] Error 1
+```
 # jaccard-hipified
 ## make
 ```
