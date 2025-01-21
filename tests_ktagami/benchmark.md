@@ -13,6 +13,7 @@
 
 * hipified は、cuda フォルダに対して hipify-perl を適用したもの。
 * omp-nvc 及び omp-amp は、それぞれ omp フォルダ内の Makefile.nvc 及び Makefile.aomp を用いたもの。
+* エラーの詳細は error.md を参照。
 
 ## i*
 | 名称     | cuda    | hip    |  hipified  | omp-nvc  | omp-aomp |  引数         | 使用メモリ cuda (hip) | 
