@@ -33,7 +33,7 @@ make: *** [Makefile.aomp:64: distance.o] Error 1
 Workgroup size of kernel = 256
 frame progress: Failing in Thread:1
 Accelerator Fatal Error: call to cuMemcpyDtoHAsync returned error 719 (CUDA_ERROR_LAUNCH_FAILED): Launch failed (often invalid pointer dereference)
- File: /hs/work0/home/users/u0001620/work3/heartwall/heartwall-omp-nvc/./kernel/kernel.cpp
+ File: /hs/work0/home/users/u000XXX/work3/heartwall/heartwall-omp-nvc/./kernel/kernel.cpp
  Function: _Z18kernel_gpu_wrapper13params_commonPiS0_S0_S0_S0_S0_S0_S0_P5avi_t:20
  Line: 492
 ```
