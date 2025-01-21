@@ -83,7 +83,7 @@ CXXFLAGS += ${HF_WARNING}
 #CXXFLAGS += -g
 #CXXFLAGS += -DDEBUG
 CXXFLAGS += -I.
-CXXFLAGS += -x cu
+CXXFLAGS += -x hip
 #LDFLAGS  = ${MPI_LD_FLAGS} -lmpi_cxx
 
 CFLAGS += -Idfft

@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall  --expt-relaxed-constexpr
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall  
 
 # Linker Flags
 LDFLAGS = 
