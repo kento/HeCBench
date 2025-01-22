@@ -1419,8 +1419,8 @@ Sycl版しかない。
  | 引数の説明     | 1 : path to image, 2 : path to ref. image, 3 : repeat |
  | 引数タイプ     | positional                        |
  | 問題サイズ     | 調整不可（画像による？）          |
- | 実行の容易さ   | D                                 |
- | 備考           | Makefileにおいて ../dxtc1-sycl/data/lena\_std.ppm, ../dxtc1-sycl/data/lena\_ref.ddsというファイルを参照しているがそもそもdxtc1-syclディレクトリーが存在しない。 dxtc2-syclは存在し、dataの下に同名ファイルがある。これを用いると実行できたがステータスはFailとなった。 |
+ | 実行の容易さ   | B                                 |
+ | 備考           | Makefileにおいて ../dxtc1-sycl/data/lena\_std.ppm, ../dxtc1-sycl/data/lena\_ref.ddsというファイルを参照しているがそもそもdxtc1-syclディレクトリーが存在しない。 dxtc2-syclは存在し、dataの下に同名ファイルがある。これを用いると実行できた。 |
 
 ## dxtc2-cuda
 
@@ -1463,8 +1463,8 @@ Sycl版しかない。
  | 引数の説明     | なし                              |
  | 引数タイプ     | -                                 |
  | 問題サイズ     | 調整不可                          |
- | 実行の容易さ   | A                                 |
- | 備考           | なし |
+ | 実行の容易さ   | A-                                |
+ | 備考           | あらかじめdata.tar.gzを解凍しておく必要がある |
 
 ## eigenvalue-cuda
 
