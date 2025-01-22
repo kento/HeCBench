@@ -102,6 +102,26 @@ clang++: error: invalid target ID ''; format is a processor name followed by an 
 make: *** [Makefile.aomp:60: histogram_compare_base.o] Error 1
 ```
 
+# hpl-cuda
+## make
+```
+mpicc -o HPL_dlacpy.o -c -DAdd__ -DF77_INTEGER=int -DStringSunStyle -DHPL_CALL_CBLAS -I/hs
+/work0/home/users/u0001620/work3/hpl/hpl-cuda/src/hpl-2.3/include -I/hs/work0/home/users/u
+0001620/work3/hpl/hpl-cuda/src/hpl-2.3/include/intel64  -fomit-frame-pointer -O3 -funroll-
+loops -W -Wall -fopenmp  ../HPL_dlacpy.c
+make[2]: mpicc: No such file or directory
+make[2]: *** [Makefile:79: HPL_dlacpy.o] Error 127
+```
+
+# hpl-hip, hipified
+## make
+```
+cuda_dgemm.cpp:103:10: fatal error: cblas.h: No such file or directory
+  103 | #include <cblas.h>
+      |          ^~~~~~~~~
+compilation terminated.
+```
+
 # hwt1d-omp
 ## make -f Makefile.aomp
 
