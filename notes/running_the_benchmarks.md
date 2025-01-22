@@ -101,6 +101,71 @@ adam
 
 `rocm-smi` コマンドを周期的に実行するシェルスクリプト。 `Makefile.MAD` の `run_mem` ターゲットから呼ばれる。
 
+## 具体例
+
+ `accuracy` ベンチマークを例に，具体的に生成される `Makefile` などについて説明する。
+
+`accuracy` ベンチマークは `*-cuda`, `*-hip`, `*-omp/Makefile.aomp`, `*-omp/Makefile.nvc` すべてがそろっている。したがって，5通りの実行ディレクトリーと `Makefile` が必要となる。また `accuracy-cuda` の `Makefile` の `run` ターゲットは以下のような内容になっている。
+
+```
+run: $(program)
+        $(LAUNCHER) ./$(program) 8192 10000 10 100
+```
+
+ `gen_bench.sh` を `src` ディレクトリーにおいて以下のように `accuracy` に対して実行する。
+
+```
+./gen_bench.sh accuracy
+```
+
+この処理の結果，以下のファイルやディレクトリーが得られる。
+
+```
+accuracy-NVIDIA-cmd accuracy-AMD-cmd accuracy-cuda/Makefile.NVD accuracy-hip/Makefile.AMD accuracy-hipified/Makefile.AMD accuracy-omp_amd/Makefile.AMD accuracy-omp_nvc/Makefile.NVD
+```
+
+`accuracy-NVIDIA-cmd` と `accuracy-AMD-cmd` の内容は同じであるが，前者はNVIDIA用の `Makefile.NVD` ファイル，後者はAMD用の `Makefile.AMD` ファイルから読み込まれる点に違いがある。すなわち，環境に応じてパラメーターを個別に設定できるようになっている。 `accuracy` ベンチマークの場合，その内容は以下のようになっている。
+
+```
+COMMAND =  ./$(program) 8192 10000 10 100
+```
+
+あたらしく生成された `Makefile` を用いて，たとえば以下のようにベンチマークを実行することができる。
+
+```
+make -f Makefile.NVD run_mem
+nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+bash -c "time ./main 8192 10000 10 100"
+...
+...
+Grid size is 8192
+Average execution time of accuracy kernel: 153.000580 (us)
+PASS
+
+real    0m2.778s
+user    0m0.406s
+sys     0m0.557s
+pkill nvidia-smi
+../m.sh
+min max diff memory in [MB] : 2 874 872
+```
+
+ `accuracy-NVIDIA-cmd` もしくは `accuracy-AMD-cmd` ファイルを適宜編集し，消費メモリを調節する。
+
+パラメーターの調整が不要もしくはが調整済みの場合， `run_bench.sh` で環境ごとのベンチマークを実行することができる。ベンチマークの標準出力は各ベンチマークディレクトリーの下の `log` というファイルに記録される。
+
+```
+./run_bench.sh accuracy NVIDIA
+running accuracy on NVIDIA
+command
+COMMAND =  ./$(program) 8192 10000 10 100
+
+running benchmark under accuracy-cuda
+running benchmark under accuracy-omp_nvc
+```
+
+いずれも `exec_gen_bench.sh`, `exec_run_bench.sh` を用いることによって複数のベンチマークを一度に処理することもできる。
+
 ## 作業の流れ
 
 たとえば，以下のような流れで作業を実施する。
