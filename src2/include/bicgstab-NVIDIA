@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) TEM27623/TEM27623_M.mtx 100 0

@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) blastx -q $(DMND_PATH)/long.fastq.gz -d $(DMND_PATH)/ARDB.dmnd -o long_cur.m8 --tmpdir /dev/shm -p1

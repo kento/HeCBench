@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) 256 256 256 100 1;time -p ./$(program) 512 512 512 100 1;time -p ./$(program) 1024 1024 1024 100 0;time -p ./$(program) 4096 4096 4096 100 0

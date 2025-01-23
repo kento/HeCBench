@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ./HIV1-NL43.seq

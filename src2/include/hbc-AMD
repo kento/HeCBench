@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) -i ../hbc-cuda/graphs/breast_coexpress.txt -v --printscores=output.txt

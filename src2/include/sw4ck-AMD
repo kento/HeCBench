@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../sw4ck-cuda/sw4ck.in 100

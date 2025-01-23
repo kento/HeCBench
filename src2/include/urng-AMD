@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../urng-sycl/URNG_Input.bmp 16 16 1000

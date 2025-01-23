@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../tonemapping-sycl/input.hdr 10000

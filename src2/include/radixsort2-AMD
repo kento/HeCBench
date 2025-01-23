@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) -float -keysonly -n=536870912;time -p ./$(program) -float -n=536870912;time -p ./$(program) -keysonly -n=536870912;time -p ./$(program) -n=536870912

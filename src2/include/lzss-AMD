@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) -i ../lzss-cuda/tpch/tpch@1.0-15.bin

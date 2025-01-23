@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) Inputs/input_256x256.params Obstacles/obstacles_256x256.dat

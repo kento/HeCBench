@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) 4 1000 1;time -p ./$(program) 4 4000 0

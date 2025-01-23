@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) log2_parameters.config

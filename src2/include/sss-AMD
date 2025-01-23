@@ -1,0 +1,1 @@
+COMMAND = time -p GSL_RNG_SEED=123 ./$(program) f9_n150_p50

@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) 7680 4320 256 100

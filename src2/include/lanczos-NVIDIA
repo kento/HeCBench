@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) -g data/social-large-800k.txt -n 800000 -k 3 -d float

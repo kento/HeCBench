@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../sptrsv-sycl/lp1.mtx 2000

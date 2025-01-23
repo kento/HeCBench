@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) input.txt 10000

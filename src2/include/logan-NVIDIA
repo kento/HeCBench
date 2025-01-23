@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) inputs/100k.txt 17 100 1

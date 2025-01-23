@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) test_data/truerand_1bit.bin

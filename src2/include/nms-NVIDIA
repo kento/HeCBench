@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) detections.txt output.txt 1000

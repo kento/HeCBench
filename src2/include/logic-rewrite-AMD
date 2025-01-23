@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) -c "read ./benchmarks/arithmetic/hyp.aig; resyn2; write hyp_resyn2.aig"

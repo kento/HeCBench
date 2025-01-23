@@ -1,0 +1,22 @@
+LAUNCHER = bash -c
+#===============================================================================
+# Targets to Build
+#===============================================================================
+
+build: setup.py
+	python setup.py build develop
+
+clean:
+	rm -rf *.egg-info *.so build __pycache__
+
+include ../include/convolutionDeformable-NVIDIA
+
+run: build
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: build
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill nvidia-smi
+	../scripts/m.sh
+

@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../gibbs-cuda/data.csv 5000

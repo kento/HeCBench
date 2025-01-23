@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../sobel-sycl/SobelFilter_Input.bmp 100000

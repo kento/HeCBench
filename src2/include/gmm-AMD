@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) 500 data result

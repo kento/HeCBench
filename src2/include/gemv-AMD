@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) -s 16384 -i 100 -x 512 -y 2;time -p ./$(program) -s 16384 -i 100 -x 128 -y 8;time -p ./$(program) -s 16384 -i 100 -x 32 -y 32

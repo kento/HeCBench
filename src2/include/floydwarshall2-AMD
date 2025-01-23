@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../floydwarshall2-cuda/CollegeMsg.egr 1000

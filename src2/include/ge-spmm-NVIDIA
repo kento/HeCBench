@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) data/snap/amazon0302/amazon0302.mtx 8 1000

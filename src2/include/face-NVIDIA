@@ -1,0 +1,1 @@
+COMMAND = time -p ./vj-cpu Face.pgm info.txt class.txt Output-cpu.pgm;time -p ./vj-gpu Face.pgm info.txt class.txt Output-gpu.pgm

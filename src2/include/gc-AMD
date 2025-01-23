@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) ../mis-cuda/internet.egr 100

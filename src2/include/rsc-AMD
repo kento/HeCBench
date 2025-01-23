@@ -1,0 +1,1 @@
+COMMAND = time -p ./$(program) -f ../rsc-cuda/input/vectors.csv -g 512
