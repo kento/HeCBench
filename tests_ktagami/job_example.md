@@ -35,7 +35,7 @@ params2="  100"
 #
 EXE=./main
 #################
-./rock-smi.sh > log.mem &#
+./rock-smi.sh > log.mem &
 ( time $EXE $params1  ) > Log 2>&1
 pkill ./rock-smi.sh
 #################
