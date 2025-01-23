@@ -58,4 +58,22 @@ minm=$( cat log.mem | awk 'BEGIN{m="inf"}{if(m>$8) m=$8} END{printf("%.2f\n", m/
 diffm=$( printf %.2f $( echo ${maxm}-${minm} | bc -l ) )
 echo "min max diff memory in [MB] : ${minm} ${maxm} ${diffm}"
 ```
-(甲賀さん版を少し変更してます)
+(甲賀さん版を少し変更しています)
+
+## コメント
+
+* (メモリ計測済み等の理由で) メモリ計測が不要な場合
+* 計算に時間かかかりすぎる場合
+* Log と Log2 に出力される時間に差がある場合、
+以下を試した。
+
+### job.sh
+```
+#!/bin/sh
+params1="  100"
+params2="  100"
+#
+EXE=./main
+
+( time $EXE $params2  ) > Log2 2>&1
+```
