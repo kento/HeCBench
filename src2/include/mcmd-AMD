@@ -1,1 +1,1 @@
-COMMAND = time -p ../../mcmd-hip/$(program) mcmd.inp && cd ../../mcmd-hip
+COMMAND = time -p ( ../../mcmd-hip/$(program) mcmd.inp && cd ../../mcmd-hip 1>log.std 2>log.err ) 2> log.time

@@ -48,7 +48,7 @@ def gen_newmake(machine, basename, orgMakefile):
             newMake += '\t'+LAUNCHER+' "$(COMMAND)"\n'
             il = 2
             skip_ids.append(idx+1)
-            baseCommand = 'time -p '+nextLine.split(LAUNCHER)[1].strip()
+            baseCommand = 'time -p ( '+nextLine.split(LAUNCHER)[1].strip() +' 1>log.std 2>log.err'
             # process lines which start with a tab character
             while(True):
                 if len(lines)<=idx+il:
@@ -59,9 +59,10 @@ def gen_newmake(machine, basename, orgMakefile):
                 #newMake += nline
                 nnline = nline.split(LAUNCHER)
                 if len(nnline)>1:
-                    baseCommand += ';time -p '+nnline[1].strip()
+                    baseCommand += ';'+nnline[1].strip()+' 1>log.std 2>log.err'
                 skip_ids.append(idx+il)
                 il += 1
+            baseCommand += ' ) 2> log.time'
             command  = 'COMMAND = '+baseCommand+'\n'
             newMake += '\n'
             newMake += 'run_mem: '  + dep+'\n'

@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) ../prna-cuda/HIV1-NL43.seq
+COMMAND = time -p ( ./$(program) ../prna-cuda/HIV1-NL43.seq 1>log.std 2>log.err ) 2> log.time

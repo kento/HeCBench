@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) --dimx=192 --dimy=184 --timesteps=90
+COMMAND = time -p ( ./$(program) --dimx=192 --dimy=184 --timesteps=90 1>log.std 2>log.err ) 2> log.time

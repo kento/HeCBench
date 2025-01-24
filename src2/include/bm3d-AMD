@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) ../bm3d-cuda/noised-bufferfly-20.png denoised.png 20 color ../bm3d-cuda/bufferfly.png
+COMMAND = time -p ( ./$(program) ../bm3d-cuda/noised-bufferfly-20.png denoised.png 20 color ../bm3d-cuda/bufferfly.png 1>log.std 2>log.err ) 2> log.time

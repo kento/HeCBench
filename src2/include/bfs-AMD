@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) ../data/bfs/graph1MW_6.txt
+COMMAND = time -p ( ./$(program) ../data/bfs/graph1MW_6.txt 1>log.std 2>log.err ) 2> log.time

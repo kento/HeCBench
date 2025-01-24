@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) 0 100;time -p ./$(program) 1 100;time -p ./$(program) 2 100;time -p ./$(program) 3 100;time -p ./$(program) 4 100;time -p ./$(program) 5 100
+COMMAND = time -p ( ./$(program) 0 100 1>log.std 2>log.err;./$(program) 1 100 1>log.std 2>log.err;./$(program) 2 100 1>log.std 2>log.err;./$(program) 3 100 1>log.std 2>log.err;./$(program) 4 100 1>log.std 2>log.err;./$(program) 5 100 1>log.std 2>log.err ) 2> log.time

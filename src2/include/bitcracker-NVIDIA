@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) -f ./hash_pass/img_win8_user_hash.txt                      -d ./hash_pass/user_passwords_60000.txt                      -b 60000
+COMMAND = time -p ( ./$(program) -f ./hash_pass/img_win8_user_hash.txt                      -d ./hash_pass/user_passwords_60000.txt                      -b 60000 1>log.std 2>log.err ) 2> log.time

@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) data/dirty_4096.img data/psf_4096.img 1000
+COMMAND = time -p ( ./$(program) data/dirty_4096.img data/psf_4096.img 1000 1>log.std 2>log.err ) 2> log.time

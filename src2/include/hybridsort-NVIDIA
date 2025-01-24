@@ -1,1 +1,1 @@
-COMMAND = time -p ./hybridsort r
+COMMAND = time -p ( ./hybridsort r 1>log.std 2>log.err ) 2> log.time

@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) dataset/data.csv dataset/centroids.csv
+COMMAND = time -p ( ./$(program) dataset/data.csv dataset/centroids.csv 1>log.std 2>log.err ) 2> log.time

@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) -f input/vectors.csv -g 512
+COMMAND = time -p ( ./$(program) -f input/vectors.csv -g 512 1>log.std 2>log.err ) 2> log.time

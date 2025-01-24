@@ -1,1 +1,1 @@
-COMMAND = time -p ./$(program) datasets/128x128x128/input/128x128x128.bin output_128
+COMMAND = time -p ( ./$(program) datasets/128x128x128/input/128x128x128.bin output_128 1>log.std 2>log.err ) 2> log.time
