@@ -1,0 +1,183 @@
+make -f Make.top startup_dir     arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+mkdir -p include/intel64
+mkdir -p lib
+mkdir -p lib/intel64
+mkdir -p bin
+mkdir -p bin/intel64
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make -f Make.top startup_src     arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/auxil       arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/auxil ; mkdir -p intel64 )
+( cd src/auxil/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/blas        arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/blas ; mkdir -p intel64 )
+( cd src/blas/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/comm        arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/comm ; mkdir -p intel64 )
+( cd src/comm/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/grid        arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/grid ; mkdir -p intel64 )
+( cd src/grid/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/panel       arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/panel ; mkdir -p intel64 )
+( cd src/panel/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/pauxil      arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/pauxil ; mkdir -p intel64 )
+( cd src/pauxil/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/pfact       arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/pfact ; mkdir -p intel64 )
+( cd src/pfact/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=src/pgesv       arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/pgesv ; mkdir -p intel64 )
+( cd src/pgesv/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make -f Make.top startup_tst     arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=testing/matgen  arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd testing/matgen ; mkdir -p intel64 )
+( cd testing/matgen/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=testing/timer   arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd testing/timer ; mkdir -p intel64 )
+( cd testing/timer/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=testing/pmatgen arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd testing/pmatgen ; mkdir -p intel64 )
+( cd testing/pmatgen/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=testing/ptimer  arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd testing/ptimer ; mkdir -p intel64 )
+( cd testing/ptimer/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 -f Make.top leaf le=testing/ptest   arch=intel64
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd testing/ptest ; mkdir -p intel64 )
+( cd testing/ptest/intel64 ; \
+            ln -fs /hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/Make.intel64 Make.inc )
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make -f Make.top refresh_src     arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+cp makes/Make.auxil    src/auxil/intel64/Makefile
+cp makes/Make.blas     src/blas/intel64/Makefile
+cp makes/Make.comm     src/comm/intel64/Makefile
+cp makes/Make.grid     src/grid/intel64/Makefile
+cp makes/Make.panel    src/panel/intel64/Makefile
+cp makes/Make.pauxil   src/pauxil/intel64/Makefile
+cp makes/Make.pfact    src/pfact/intel64/Makefile
+cp makes/Make.pgesv    src/pgesv/intel64/Makefile
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make -f Make.top refresh_tst     arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+cp makes/Make.matgen   testing/matgen/intel64/Makefile
+cp makes/Make.timer    testing/timer/intel64/Makefile
+cp makes/Make.pmatgen  testing/pmatgen/intel64/Makefile
+cp makes/Make.ptimer   testing/ptimer/intel64/Makefile
+cp makes/Make.ptest    testing/ptest/intel64/Makefile
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make -f Make.top refresh_src     arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+cp makes/Make.auxil    src/auxil/intel64/Makefile
+cp makes/Make.blas     src/blas/intel64/Makefile
+cp makes/Make.comm     src/comm/intel64/Makefile
+cp makes/Make.grid     src/grid/intel64/Makefile
+cp makes/Make.panel    src/panel/intel64/Makefile
+cp makes/Make.pauxil   src/pauxil/intel64/Makefile
+cp makes/Make.pfact    src/pfact/intel64/Makefile
+cp makes/Make.pgesv    src/pgesv/intel64/Makefile
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make -f Make.top refresh_tst     arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+cp makes/Make.matgen   testing/matgen/intel64/Makefile
+cp makes/Make.timer    testing/timer/intel64/Makefile
+cp makes/Make.pmatgen  testing/pmatgen/intel64/Makefile
+cp makes/Make.ptimer   testing/ptimer/intel64/Makefile
+cp makes/Make.ptest    testing/ptest/intel64/Makefile
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make -f Make.top build_src       arch=intel64
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+( cd src/auxil/intel64;         make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/auxil/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/auxil/intel64'
+( cd src/blas/intel64;          make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/blas/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/blas/intel64'
+( cd src/comm/intel64;          make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/comm/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/comm/intel64'
+( cd src/grid/intel64;          make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/grid/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/grid/intel64'
+( cd src/panel/intel64;         make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/panel/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/panel/intel64'
+( cd src/pauxil/intel64;        make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/pauxil/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/pauxil/intel64'
+( cd src/pfact/intel64;         make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/pfact/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/pfact/intel64'
+( cd src/pgesv/intel64;         make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/pgesv/intel64'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/pgesv/intel64'
+( cd src/cuda/;                make VERBOSE=1 arch=intel64 TOPdir=/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3 )
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/cuda'
+#mpicc -O0 -c -fPIC -DMPI cuda_dgemm.cpp -o cuda_dgemm.o -I/usr/local/cuda/include
+mpicc -O3 -c -fPIC -DMPI cuda_dgemm.cpp -o cuda_dgemm.o \
+-I/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda/include \
+-I/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/math_libs/include 
+cuda_dgemm.cpp:99: warning: "_GNU_SOURCE" redefined
+   99 | #define _GNU_SOURCE
+      | 
+<command-line>: note: this is the location of the previous definition
+cuda_dgemm.cpp:103:10: fatal error: cblas.h: No such file or directory
+  103 | #include <cblas.h>
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [Makefile:109: cuda_dgemm.o] Error 1
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3/src/cuda'
+make[1]: *** [Make.top:62: build_src] Error 2
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work3/hpl/hpl-hipified/src/hpl-2.3'
+make: *** [Makefile:117: build] Error 2

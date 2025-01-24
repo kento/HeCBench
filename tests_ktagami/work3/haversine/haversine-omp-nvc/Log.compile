@@ -1,0 +1,8 @@
+nvc++  -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c distance.cpp -o distance.o
+"distance.cpp", line 1: catastrophic error: cannot open source file "distance.h"
+  #include "distance.h"
+                       ^
+
+1 catastrophic error detected in the compilation of "distance.cpp".
+Compilation terminated.
+make: *** [Makefile.nvc:60: distance.o] Error 2

@@ -1,0 +1,12 @@
+ Ly,Lx = 8192,4096
+ niter = 1000
+ input file = data.txt
+Host: iters =     1000, (Lx,Ly) =   4096,   8192, t = 244419.7 usec/iter, BW =  1.098 GB/s, P =  0.824 Gflop/s
+Device: iters =     1000, (Lx,Ly) =   4096,   8192, t =    343.4 usec/iter, BW = 781.649 GB/s, P = 586.237 Gflop/s
+Mismatch at 0 cpu=2966591463533229935796474446086144.000000 gpu=2966593939413308506557024244334592.000000
+FAIL
+
+real	4m5.442s
+user	4m4.796s
+sys	0m0.640s
+min max diff memory in [MB] : 1 815 814

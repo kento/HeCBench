@@ -1,0 +1,10 @@
+ Ly,Lx = 8192,4096
+ niter = 1000
+ input file = data.txt
+Host: iters =     1000, (Lx,Ly) =   4096,   8192, t = 395502.1 usec/iter, BW =  0.679 GB/s, P =  0.509 Gflop/s
+Device: iters =     1000, (Lx,Ly) =   4096,   8192, t = 329690.8 usec/iter, BW =  0.814 GB/s, P =  0.611 Gflop/s
+PASS
+
+real	12m6.234s
+user	11m56.339s
+sys	0m0.967s

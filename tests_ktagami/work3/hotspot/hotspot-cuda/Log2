@@ -1,0 +1,7 @@
+Work-group size of kernel = 16 X 16
+Total kernel execution time 0.002020 (s)
+Device offloading time: 4.019 seconds
+
+real	0m6.209s
+user	0m0.150s
+sys	0m2.619s

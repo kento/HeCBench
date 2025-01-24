@@ -1,0 +1,9 @@
+Executing kernel for 100 iterations
+-------------------------------------------
+Average device offload time 0.0131445 (s)
+PASS
+
+real	0m4.132s
+user	0m1.368s
+sys	0m0.669s
+min max diff memory in [MB] : 2 716 714

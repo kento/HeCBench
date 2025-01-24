@@ -1,0 +1,7 @@
+Reading city locations from file locations.txt...
+The maximum error in distance is 0.000000
+
+real	0m4.090s
+user	0m2.182s
+sys	0m0.578s
+min max diff memory in [MB] : 2 1136 1134

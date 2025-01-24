@@ -1,0 +1,8 @@
+Average execution time of kernels: 6.459212 (ms)
+Verifying the result may take a while..
+PASS
+
+real	0m31.313s
+user	0m28.578s
+sys	0m0.590s
+min max diff memory in [MB] : 2 558 556

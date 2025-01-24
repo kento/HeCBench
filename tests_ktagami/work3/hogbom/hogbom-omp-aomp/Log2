@@ -1,0 +1,13 @@
+Reading dirty image and psf image
+Iterations = 1000
+Image dimensions = 4096x4096
++++++ Offload processing on a device +++++
+Found peak of PSF: Maximum = 1.37891e+21 at location 0,0
+    Time 21.38 (s) 
+    Time per cycle 21.38 (ms)
+    Cleaning rate  46.7727 (iterations per second)
+Done
+
+real	0m22.295s
+user	31m36.742s
+sys	3m28.643s

@@ -1,0 +1,16 @@
+Chosen Device: NVIDIA GH200 480GB
+Number of Multiprocessors: 132
+Size of Global Memory: 95 GB
+
+Number of nodes: 7819
+Number of edges: 195928
+Kernel execution time 0.289354 (s)
+RMS Error: 0.0230145
+Maximum error: 1
+Time for CPU execution: 11.076669 s
+Time for GPU execution: 0.294966 s
+
+real	0m14.215s
+user	0m11.506s
+sys	0m0.570s
+min max diff memory in [MB] : 2 591 589

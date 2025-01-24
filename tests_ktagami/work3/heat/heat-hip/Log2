@@ -1,0 +1,32 @@
+
+ MMS heat equation
+
+--------------------
+Problem input
+
+ Grid size: 32768 x 32768
+ Cell width: 0.0305166
+ Grid length: 1000x1000
+
+ Alpha: 0.1
+
+ Steps: 1000
+ Total time: 0.5
+ Time step: 0.0005
+ GPU device: AMD Instinct MI250X/MI250
+--------------------
+Stability
+
+ r value: 0.0536904
+--------------------
+Results
+
+Error (L2norm): 1.84573e-09
+Solve time (s): 15.1686
+Total time (s): 44.8658
+Bandwidth (GB/s): 1132.59
+--------------------
+
+real	0m44.967s
+user	0m42.843s
+sys	0m1.596s

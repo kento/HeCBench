@@ -1,0 +1,11 @@
+ Ly,Lx = 8192,4096
+ niter = 1000
+ input file = data.txt
+ iters =     1000, (Lx,Ly) =   4096,   8192, t =  12330.5 usec/iter, BW = 21.770 GB/s, P = 16.327 Gflop/s
+Device: iters =     1000, (Lx,Ly) =   4096,   8192, t =    461.2 usec/iter, BW = 582.065 GB/s, P = 436.549 Gflop/s
+Mismatch at 0 cpu=2966776535569103100147571865157632.000000 gpu=2966591463533229935796474446086144.000000
+FAIL
+
+real	0m14.370s
+user	0m12.823s
+sys	0m1.240s

@@ -1,0 +1,7 @@
+Average execution time of kernels: 7.215828 (ms)
+Verifying the result may take a while..
+PASS
+
+real	0m35.728s
+user	0m29.651s
+sys	0m2.850s

@@ -1,0 +1,8 @@
+Average kernel execution time 28.287001 (us)
+Device offloading time: 0.640 (s)
+Root-mean-square error: 1.315878e-04
+
+real	0m27.733s
+user	0m26.934s
+sys	0m0.394s
+min max diff memory in [MB] : 10.99 310.46 299.47

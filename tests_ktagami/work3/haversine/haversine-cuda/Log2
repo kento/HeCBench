@@ -1,0 +1,7 @@
+Reading city locations from file locations.txt...
+Average kernel execution time 0.000282 (s)
+The maximum error in distance is 0.000000
+
+real	0m7.153s
+user	0m2.374s
+sys	0m2.663s

@@ -1,0 +1,3 @@
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march= -c histogram_compare_base.cpp -o histogram_compare_base.o
+clang++: error: invalid target ID ''; format is a processor name followed by an optional colon-delimited list of features followed by an enable/disable sign (e.g., 'gfx908:sramecc+:xnack-')
+make: *** [Makefile.aomp:60: histogram_compare_base.o] Error 1

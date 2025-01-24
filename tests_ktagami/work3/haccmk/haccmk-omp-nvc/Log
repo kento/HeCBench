@@ -1,0 +1,10 @@
+Outer loop count is set 784
+Inner loop count is set 15000
+Average kernel execution time 0.001967 (s)
+error at vz2[8]: 33492.117188 33492.230469
+FAIL
+
+real	0m4.754s
+user	0m2.013s
+sys	0m0.588s
+min max diff memory in [MB] : 2 560 558

@@ -1,0 +1,9 @@
+Outer loop count is set 784
+Inner loop count is set 15000
+Average kernel execution time 0.002135 (s)
+PASS
+
+real	0m4.880s
+user	0m2.201s
+sys	0m0.550s
+min max diff memory in [MB] : 2 558 556

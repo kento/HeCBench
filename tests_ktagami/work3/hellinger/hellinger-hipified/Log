@@ -1,0 +1,8 @@
+Average kernel execution time 0.0110865 (s)
+Problem size: c(768,3072) = a(768,1536) * b(1536,3072)
+PASS
+
+real	0m8.340s
+user	0m7.416s
+sys	0m0.812s
+min max diff memory in [MB] : 11.00 320.96 309.96

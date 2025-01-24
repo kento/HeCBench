@@ -1,0 +1,8 @@
+Executing kernel for 100 iterations
+-------------------------------------------
+Average device offload time 0.0153616 (s)
+PASS
+
+real	0m7.423s
+user	0m1.580s
+sys	0m2.772s

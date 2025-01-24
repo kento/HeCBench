@@ -1,0 +1,15 @@
+Chosen Device: AMD Instinct MI250X/MI250
+Number of Multiprocessors: 104
+Size of Global Memory: 63.9844 GB
+
+Number of nodes: 7819
+Number of edges: 195928
+Kernel execution time 0.561224 (s)
+RMS Error: 0.0235671
+Maximum error: 1
+Time for CPU execution: 16.796988 s
+Time for GPU execution: 0.880381 s
+
+real	0m18.984s
+user	0m17.694s
+sys	0m1.050s
