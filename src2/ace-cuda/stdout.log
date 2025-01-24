@@ -1,5 +1,0 @@
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cu -o main.o
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 main.o -o main 
-bash -c "time -p ./main 100"
-Total kernel execution time: 674.967 (ms)
-Offload time: 4447.823 (ms)

@@ -1,5 +1,0 @@
-nvc++  -std=c++14 -Wall -I../ace-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
-nvc++  -std=c++14 -Wall -I../ace-cuda -O3 -Minfo -mp=gpu -gpu=cc70 main.o -o main 
-bash -c "time -p ./main 100"
-Total kernel execution time: 704.448 (ms)
-Offload time: 3164.057 (ms)

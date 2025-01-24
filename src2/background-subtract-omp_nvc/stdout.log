@@ -1,6 +1,0 @@
-nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
-nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 main.o -o main 
-bash -c "time -p ./main 4096 2048 0 102"
-Average kernel execution time: 204.919342 (us)
-Average threshold change is 127
-Bin counts are 8381965 6114 406 123

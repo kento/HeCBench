@@ -1,5 +1,0 @@
-hipcc  -std=c++14 -Wall -I../ace-cuda -O3 -c main.cu -o main.o
-hipcc  -std=c++14 -Wall -I../ace-cuda -O3 main.o -o main 
-bash -c "time -p ./main 100"
-Total kernel execution time: 2114.293 (ms)
-Offload time: 2644.536 (ms)

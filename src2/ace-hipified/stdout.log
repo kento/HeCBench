@@ -1,5 +1,0 @@
-hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
-hipcc  -std=c++14  -Wall  -O3 main.o -o main 
-bash -c "time -p ./main 100"
-Total kernel execution time: 2115.754 (ms)
-Offload time: 2646.831 (ms)
