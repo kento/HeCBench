@@ -1,0 +1,13 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -I../include -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -I../include -O3 main.o -o main 
+bash -c "time -p ./main 100 0 ../urng-sycl/URNG_Input.bmp;time -p ./main 100 1 ../urng-sycl/URNG_Input.bmp"
+Image width and height: 512 512
+Executing kernel for 100 iterations
+-------------------------------------------
+Average kernel execution time 0.000181887 (s)
+Pass
+Image width and height: 512 512
+Executing kernel for 100 iterations
+-------------------------------------------
+Average kernel execution time 0.000167647 (s)
+Pass

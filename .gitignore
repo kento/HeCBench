@@ -9,7 +9,6 @@
 *.swp
 *.out
 *.json
-*.log
 *.yaml
 dpct_output
 */main

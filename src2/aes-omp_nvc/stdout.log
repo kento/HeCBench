@@ -1,0 +1,13 @@
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc70 main.o -o main 
+bash -c "time -p ./main 100 0 ../urng-sycl/URNG_Input.bmp;time -p ./main 100 1 ../urng-sycl/URNG_Input.bmp"
+Image width and height: 512 512
+Executing kernel for 100 iterations
+-------------------------------------------
+Average kernel execution time 0.000212908 (s)
+Fail
+Image width and height: 512 512
+Executing kernel for 100 iterations
+-------------------------------------------
+Average kernel execution time 0.000211252 (s)
+Fail

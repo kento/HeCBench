@@ -1,0 +1,6 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 main.o -o main 
+bash -c "time -p ./main 4096 2048 0 102"
+Average kernel execution time: 122.855576 (us)
+Average threshold change is 94
+Bin counts are 7643276 738627 6705 0

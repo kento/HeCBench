@@ -1,0 +1,13 @@
+bash -c "time -p ./main 81920 26000 10 100"
+Grid size is 20480
+Average execution time of accuracy kernel: 3701.458496 (us)
+PASS
+Grid size is 40960
+Average execution time of accuracy kernel: 3651.437256 (us)
+PASS
+Grid size is 61440
+Average execution time of accuracy kernel: 3640.125244 (us)
+PASS
+Grid size is 81920
+Average execution time of accuracy kernel: 3646.860840 (us)
+PASS

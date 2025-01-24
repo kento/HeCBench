@@ -1,0 +1,15 @@
+clang++  -std=c++14 -Wall -I../accuracy-cuda  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c main.cpp -o main.o
+clang++  -std=c++14 -Wall -I../accuracy-cuda  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 main.o -o main 
+bash -c "time -p ./main 8192 10000 10 100"
+Grid size is 2048
+Average execution time of accuracy kernel: 7914.793945 (us)
+PASS
+Grid size is 4096
+Average execution time of accuracy kernel: 6589.872070 (us)
+PASS
+Grid size is 6144
+Average execution time of accuracy kernel: 5161.739258 (us)
+PASS
+Grid size is 8192
+Average execution time of accuracy kernel: 3375.947510 (us)
+PASS
