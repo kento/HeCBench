@@ -1,11 +1,15 @@
 #!/bin/bash
 
 if [ -z "${1}" ];then
-  echo Usage : ./gen_bench.sh BENCHMARK_NAME
+  echo Usage : ./gen_bench.sh BENCHMARK_NAME [skip cuda2hip yes or no]
   exit
 else
   if [ -e ${1}-cuda ];then
-    ./scripts/cuda2hip.sh ${1}-cuda ${1}-hipified
+    if [ "${2}" = "yes" ];then
+      echo "skipping cuda2hip.sh"
+    else
+      ./scripts/cuda2hip.sh ${1}-cuda ${1}-hipified
+    fi
     cd ${1}-hipified
     pwd
     ../scripts/edit_makefile.py -t AMD

@@ -6,6 +6,6 @@ if [ -z "${1}" ];then
 fi
 while read line
 do echo ${line}
-  ./scripts/gen_bench.sh ${line}
+  ./scripts/gen_bench.sh ${line} ${2}
 done < "${1}"
 

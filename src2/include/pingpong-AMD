@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(mpi-program) 1>log.std 2>log.err;./$(nccl-program) 1>log.std 2>log.err ) 2> log.time
+COMMAND = time -p ( ./$(mpi-program) 1>log.std 2>log.err;./$(nccl-program) 1>>log.std 2>>log.err ) 2> log.time

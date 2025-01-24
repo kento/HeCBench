@@ -59,7 +59,7 @@ def gen_newmake(machine, basename, orgMakefile):
                 #newMake += nline
                 nnline = nline.split(LAUNCHER)
                 if len(nnline)>1:
-                    baseCommand += ';'+nnline[1].strip()+' 1>log.std 2>log.err'
+                    baseCommand += ';'+nnline[1].strip()+' 1>>log.std 2>>log.err'
                 skip_ids.append(idx+il)
                 il += 1
             baseCommand += ' ) 2> log.time'

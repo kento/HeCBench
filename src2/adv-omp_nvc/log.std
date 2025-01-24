@@ -1,3 +1,3 @@
 Data type in bytes: 8
- NRepetitions=100 N=7 cubN=15 Nelements=8000 elapsed time=6.03857e+06 GDOF/s=0.454412
+ NRepetitions=100 N=7 cubN=15 Nelements=8000 elapsed time=6.03809e+06 GDOF/s=0.454448
 Checksum=3.29805e+13

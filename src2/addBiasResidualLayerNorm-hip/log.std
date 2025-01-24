@@ -1,60 +1,60 @@
 ---------------- float16 (version 1) -------------
-Average execution time of AddBiasResidualLayerNorm (4096 x 256): 18.408148 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 256): 18.330048 (us)
 Checksum = 7.553816
-Average execution time of AddBiasResidualLayerNorm (4096 x 512): 25.386986 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 512): 25.246323 (us)
 Checksum = 4.022516
-Average execution time of AddBiasResidualLayerNorm (4096 x 768): 32.411057 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 768): 32.277744 (us)
 Checksum = 2.663465
-Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 36.090038 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 35.968670 (us)
 Checksum = 2.002779
-Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 67.121788 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 67.022125 (us)
 Checksum = 0.998082
-Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 152.663681 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 152.579224 (us)
 Checksum = 0.506729
-Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 364.721863 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 364.630035 (us)
 Checksum = 0.251701
 ---------------- float16 (version 2) -------------
-Average execution time of AddBiasResidualLayerNorm (4096 x 256): 9.288901 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 256): 9.245181 (us)
 Checksum = 7.553640
-Average execution time of AddBiasResidualLayerNorm (4096 x 512): 11.216188 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 512): 11.038303 (us)
 Checksum = 4.022415
-Average execution time of AddBiasResidualLayerNorm (4096 x 768): 20.809490 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 768): 20.676176 (us)
 Checksum = 2.663425
-Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 24.835752 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 24.763050 (us)
 Checksum = 2.002757
-Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 45.765903 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 45.674599 (us)
 Checksum = 0.998050
-Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 89.675606 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 89.562897 (us)
 Checksum = 0.506717
-Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 183.080551 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 182.956009 (us)
 Checksum = 0.251698
 ---------------- bfloat16 (version 1) -------------
-Average execution time of AddBiasResidualLayerNorm (4096 x 256): 19.482233 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 256): 19.415781 (us)
 Checksum = 7.553375
-Average execution time of AddBiasResidualLayerNorm (4096 x 512): 28.943554 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 512): 28.821943 (us)
 Checksum = 4.023380
-Average execution time of AddBiasResidualLayerNorm (4096 x 768): 41.877548 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 768): 41.753124 (us)
 Checksum = 2.663240
-Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 47.525890 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 47.381138 (us)
 Checksum = 2.002563
-Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 83.584915 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 83.485336 (us)
 Checksum = 0.998032
-Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 174.157593 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 174.052917 (us)
 Checksum = 0.506657
-Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 399.983337 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 399.826721 (us)
 Checksum = 0.251638
 ---------------- bfloat16 (version 2) -------------
-Average execution time of AddBiasResidualLayerNorm (4096 x 256): 25.448126 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 256): 25.358435 (us)
 Checksum = 7.554762
-Average execution time of AddBiasResidualLayerNorm (4096 x 512): 27.718451 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 512): 27.644650 (us)
 Checksum = 4.022954
-Average execution time of AddBiasResidualLayerNorm (4096 x 768): 47.686398 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 768): 47.511402 (us)
 Checksum = 2.663213
-Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 48.953484 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 1024): 48.317310 (us)
 Checksum = 2.002365
-Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 87.174316 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 2048): 87.103378 (us)
 Checksum = 0.997755
-Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 171.584610 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 4096): 171.440353 (us)
 Checksum = 0.506866
-Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 362.210480 (us)
+Average execution time of AddBiasResidualLayerNorm (4096 x 8192): 362.081909 (us)
 Checksum = 0.251636
