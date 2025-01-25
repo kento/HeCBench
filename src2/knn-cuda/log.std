@@ -1,0 +1,17 @@
+Number of reference points      :   4096
+Number of query points          :   4096
+Dimension of points             :   68
+Number of neighbors to consider :   20
+Processing kNN search           :
+Ground truth computation in progress...
+
+On CPU: 
+ done in 1.847278 s for 1 iterations (1.847278 s by iteration)
+on GPU: 
+ done in 2.783406 s for 100 iterations (0.027834 s by iteration)
+Mismatch @52898: 1807 1697
+Mismatch @56994: 1697 1807
+Mismatch @74335: 3910 3006
+Mismatch @78431: 3006 3910
+Precision accuracy 1.000000
+Index accuracy 0.999951

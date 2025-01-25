@@ -1,0 +1,30 @@
+Using kernel 1
+Checking block size 32.
+Checking block size 64.
+Checking block size 128.
+Checking block size 256.
+Checking block size 512.
+Checking block size 1024.
+All results match. Starting benchmarks.
+
+block_size   32 | time 0.0245 ms | bandwidth 2055.81 GB/s
+block_size   64 | time 0.0202 ms | bandwidth 2493.80 GB/s
+block_size  128 | time 0.0196 ms | bandwidth 2574.41 GB/s
+block_size  256 | time 0.0192 ms | bandwidth 2627.14 GB/s
+block_size  512 | time 0.0187 ms | bandwidth 2686.77 GB/s
+block_size 1024 | time 0.0186 ms | bandwidth 2710.65 GB/s
+Using kernel 2
+Checking block size 32.
+Checking block size 64.
+Checking block size 128.
+Checking block size 256.
+Checking block size 512.
+Checking block size 1024.
+All results match. Starting benchmarks.
+
+block_size   32 | time 0.0230 ms | bandwidth 2190.00 GB/s
+block_size   64 | time 0.0185 ms | bandwidth 2717.41 GB/s
+block_size  128 | time 0.0184 ms | bandwidth 2730.80 GB/s
+block_size  256 | time 0.0183 ms | bandwidth 2748.91 GB/s
+block_size  512 | time 0.0180 ms | bandwidth 2799.43 GB/s
+block_size 1024 | time 0.0173 ms | bandwidth 2917.04 GB/s

@@ -1,0 +1,221 @@
+Detecting cells in frame 0
+Kernel execution time (GICOV): 0.000979 (s)
+Kernel execution time (dilated): 0.000255 (s)
+Cells detected: 36
+
+Detection runtime
+-----------------
+GICOV computation: 0.36048 seconds
+   GICOV dilation: 0.00053 seconds
+            Total: 0.39241 seconds
+
+Tracking cells across 100 frames
+Processing frame 1 / 100
+Kernel execution time (IMGVF): 0.002732 (s)
+Processing frame 2 / 100
+Kernel execution time (IMGVF): 0.002443 (s)
+Processing frame 3 / 100
+Kernel execution time (IMGVF): 0.002364 (s)
+Processing frame 4 / 100
+Kernel execution time (IMGVF): 0.002482 (s)
+Processing frame 5 / 100
+Kernel execution time (IMGVF): 0.002419 (s)
+Processing frame 6 / 100
+Kernel execution time (IMGVF): 0.002451 (s)
+Processing frame 7 / 100
+Kernel execution time (IMGVF): 0.002500 (s)
+Processing frame 8 / 100
+Kernel execution time (IMGVF): 0.002383 (s)
+Processing frame 9 / 100
+Kernel execution time (IMGVF): 0.002414 (s)
+Processing frame 10 / 100
+Kernel execution time (IMGVF): 0.002512 (s)
+Processing frame 11 / 100
+Kernel execution time (IMGVF): 0.002280 (s)
+Processing frame 12 / 100
+Kernel execution time (IMGVF): 0.002380 (s)
+Processing frame 13 / 100
+Kernel execution time (IMGVF): 0.002380 (s)
+Processing frame 14 / 100
+Kernel execution time (IMGVF): 0.002207 (s)
+Processing frame 15 / 100
+Kernel execution time (IMGVF): 0.002315 (s)
+Processing frame 16 / 100
+Kernel execution time (IMGVF): 0.002229 (s)
+Processing frame 17 / 100
+Kernel execution time (IMGVF): 0.002072 (s)
+Processing frame 18 / 100
+Kernel execution time (IMGVF): 0.002225 (s)
+Processing frame 19 / 100
+Kernel execution time (IMGVF): 0.002199 (s)
+Processing frame 20 / 100
+Kernel execution time (IMGVF): 0.002372 (s)
+Processing frame 21 / 100
+Kernel execution time (IMGVF): 0.002397 (s)
+Processing frame 22 / 100
+Kernel execution time (IMGVF): 0.002395 (s)
+Processing frame 23 / 100
+Kernel execution time (IMGVF): 0.002441 (s)
+Processing frame 24 / 100
+Kernel execution time (IMGVF): 0.002416 (s)
+Processing frame 25 / 100
+Kernel execution time (IMGVF): 0.002334 (s)
+Processing frame 26 / 100
+Kernel execution time (IMGVF): 0.002430 (s)
+Processing frame 27 / 100
+Kernel execution time (IMGVF): 0.002360 (s)
+Processing frame 28 / 100
+Kernel execution time (IMGVF): 0.002348 (s)
+Processing frame 29 / 100
+Kernel execution time (IMGVF): 0.002384 (s)
+Processing frame 30 / 100
+Kernel execution time (IMGVF): 0.002330 (s)
+Processing frame 31 / 100
+Kernel execution time (IMGVF): 0.002469 (s)
+Processing frame 32 / 100
+Kernel execution time (IMGVF): 0.002267 (s)
+Processing frame 33 / 100
+Kernel execution time (IMGVF): 0.002315 (s)
+Processing frame 34 / 100
+Kernel execution time (IMGVF): 0.002283 (s)
+Processing frame 35 / 100
+Kernel execution time (IMGVF): 0.002522 (s)
+Processing frame 36 / 100
+Kernel execution time (IMGVF): 0.002277 (s)
+Processing frame 37 / 100
+Kernel execution time (IMGVF): 0.002066 (s)
+Processing frame 38 / 100
+Kernel execution time (IMGVF): 0.002228 (s)
+Processing frame 39 / 100
+Kernel execution time (IMGVF): 0.002208 (s)
+Processing frame 40 / 100
+Kernel execution time (IMGVF): 0.002339 (s)
+Processing frame 41 / 100
+Kernel execution time (IMGVF): 0.002511 (s)
+Processing frame 42 / 100
+Kernel execution time (IMGVF): 0.002417 (s)
+Processing frame 43 / 100
+Kernel execution time (IMGVF): 0.002460 (s)
+Processing frame 44 / 100
+Kernel execution time (IMGVF): 0.002487 (s)
+Processing frame 45 / 100
+Kernel execution time (IMGVF): 0.002472 (s)
+Processing frame 46 / 100
+Kernel execution time (IMGVF): 0.002369 (s)
+Processing frame 47 / 100
+Kernel execution time (IMGVF): 0.002459 (s)
+Processing frame 48 / 100
+Kernel execution time (IMGVF): 0.002484 (s)
+Processing frame 49 / 100
+Kernel execution time (IMGVF): 0.002433 (s)
+Processing frame 50 / 100
+Kernel execution time (IMGVF): 0.002431 (s)
+Processing frame 51 / 100
+Kernel execution time (IMGVF): 0.002425 (s)
+Processing frame 52 / 100
+Kernel execution time (IMGVF): 0.002489 (s)
+Processing frame 53 / 100
+Kernel execution time (IMGVF): 0.002400 (s)
+Processing frame 54 / 100
+Kernel execution time (IMGVF): 0.002395 (s)
+Processing frame 55 / 100
+Kernel execution time (IMGVF): 0.002306 (s)
+Processing frame 56 / 100
+Kernel execution time (IMGVF): 0.002554 (s)
+Processing frame 57 / 100
+Kernel execution time (IMGVF): 0.002520 (s)
+Processing frame 58 / 100
+Kernel execution time (IMGVF): 0.002232 (s)
+Processing frame 59 / 100
+Kernel execution time (IMGVF): 0.002497 (s)
+Processing frame 60 / 100
+Kernel execution time (IMGVF): 0.002623 (s)
+Processing frame 61 / 100
+Kernel execution time (IMGVF): 0.002296 (s)
+Processing frame 62 / 100
+Kernel execution time (IMGVF): 0.002292 (s)
+Processing frame 63 / 100
+Kernel execution time (IMGVF): 0.002481 (s)
+Processing frame 64 / 100
+Kernel execution time (IMGVF): 0.002424 (s)
+Processing frame 65 / 100
+Kernel execution time (IMGVF): 0.002436 (s)
+Processing frame 66 / 100
+Kernel execution time (IMGVF): 0.002412 (s)
+Processing frame 67 / 100
+Kernel execution time (IMGVF): 0.002420 (s)
+Processing frame 68 / 100
+Kernel execution time (IMGVF): 0.002447 (s)
+Processing frame 69 / 100
+Kernel execution time (IMGVF): 0.002366 (s)
+Processing frame 70 / 100
+Kernel execution time (IMGVF): 0.002418 (s)
+Processing frame 71 / 100
+Kernel execution time (IMGVF): 0.002479 (s)
+Processing frame 72 / 100
+Kernel execution time (IMGVF): 0.002404 (s)
+Processing frame 73 / 100
+Kernel execution time (IMGVF): 0.002431 (s)
+Processing frame 74 / 100
+Kernel execution time (IMGVF): 0.002342 (s)
+Processing frame 75 / 100
+Kernel execution time (IMGVF): 0.002430 (s)
+Processing frame 76 / 100
+Kernel execution time (IMGVF): 0.002341 (s)
+Processing frame 77 / 100
+Kernel execution time (IMGVF): 0.002535 (s)
+Processing frame 78 / 100
+Kernel execution time (IMGVF): 0.002417 (s)
+Processing frame 79 / 100
+Kernel execution time (IMGVF): 0.002258 (s)
+Processing frame 80 / 100
+Kernel execution time (IMGVF): 0.002362 (s)
+Processing frame 81 / 100
+Kernel execution time (IMGVF): 0.002241 (s)
+Processing frame 82 / 100
+Kernel execution time (IMGVF): 0.002291 (s)
+Processing frame 83 / 100
+Kernel execution time (IMGVF): 0.002383 (s)
+Processing frame 84 / 100
+Kernel execution time (IMGVF): 0.002412 (s)
+Processing frame 85 / 100
+Kernel execution time (IMGVF): 0.002327 (s)
+Processing frame 86 / 100
+Kernel execution time (IMGVF): 0.002444 (s)
+Processing frame 87 / 100
+Kernel execution time (IMGVF): 0.002362 (s)
+Processing frame 88 / 100
+Kernel execution time (IMGVF): 0.002416 (s)
+Processing frame 89 / 100
+Kernel execution time (IMGVF): 0.002469 (s)
+Processing frame 90 / 100
+Kernel execution time (IMGVF): 0.002480 (s)
+Processing frame 91 / 100
+Kernel execution time (IMGVF): 0.002431 (s)
+Processing frame 92 / 100
+Kernel execution time (IMGVF): 0.002498 (s)
+Processing frame 93 / 100
+Kernel execution time (IMGVF): 0.002493 (s)
+Processing frame 94 / 100
+Kernel execution time (IMGVF): 0.002595 (s)
+Processing frame 95 / 100
+Kernel execution time (IMGVF): 0.002480 (s)
+Processing frame 96 / 100
+Kernel execution time (IMGVF): 0.002432 (s)
+Processing frame 97 / 100
+Kernel execution time (IMGVF): 0.002501 (s)
+Processing frame 98 / 100
+Kernel execution time (IMGVF): 0.002413 (s)
+Processing frame 99 / 100
+Kernel execution time (IMGVF): 0.002400 (s)
+Processing frame 100 / 100
+Kernel execution time (IMGVF): 0.002441 (s)
+
+
+Tracking runtime (average per frame):
+------------------------------------
+MGVF computation: 0.00323 seconds
+ Snake evolution: 0.00168 seconds
+           Total: 0.00717 seconds
+
+Total application run time: 1.10914 seconds
