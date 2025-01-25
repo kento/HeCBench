@@ -1,0 +1,8 @@
+
+
+ NAS Parallel Benchmarks 4.1 IS Benchmark
+
+ Size:  134217728  (class C)
+ Iterations:   24
+Average execution time of the rank kernels 0.036645 (s)
+PASS

@@ -1,0 +1,8 @@
+"PluginInterface" error: Failure to notify data mapped (nil): Error in hsa_amd_pointer_info: HSA_STATUS_ERROR_INVALID_ARGUMENT: One of the actual arguments does not meet a precondition stated in the documentation of the corresponding formal argument.
+omptarget error: Notifiying about data mapping failed.
+omptarget error: Call to getTargetPointer returned null pointer (device failure or illegal mapping).
+omptarget error: Call to targetDataBegin failed, abort target.
+omptarget error: Failed to process data before launching the kernel.
+omptarget error: Consult https://openmp.llvm.org/design/Runtimes.html for debugging options.
+omptarget error: Source location information not present. Compile with -g or -gline-tables-only.
+omptarget fatal error 1: failure of target construct while offloading is mandatory

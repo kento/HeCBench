@@ -1,0 +1,16 @@
+Initializing ... 
+Grid Sizes: 65536 65536
+Iterations: 1
+
+Computing wavefield in device ..
+Running on:: AMD Instinct MI250X/MI250
+The Device Max Work Group Size is : 1024
+Total kernel execution time 167.82 (ms)
+Average kernel execution time 167820 (us)
+Computing wavefield in CPU ..
+Initializing ... 
+Host time: 2460 ms
+
+Final wavefields from device and CPU are equivalent: Success
+Final wavefields (from device and CPU) written to disk
+Finished.  

@@ -1,0 +1,9 @@
+Running functional test on 100000 divisors, with 1000192 dividents for each divisor
+THROUGHPUT TEST
+Benchmarking plain division by constant... 0.00667275 seconds
+Benchmarking fast division by constant... 0.00430328 seconds
+Speedup = 1.55062
+LATENCY TEST
+Benchmarking plain division by constant... 0.0224191 seconds
+Benchmarking fast division by constant... 0.0224468 seconds
+Speedup = 0.998765
