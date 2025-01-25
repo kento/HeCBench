@@ -1,5 +1,5 @@
 Outer loop count is set 784
 Inner loop count is set 15000
-Average kernel execution time 0.001968 (s)
+Average kernel execution time 0.001966 (s)
 error at vz2[8]: 33492.117188 33492.230469
 FAIL

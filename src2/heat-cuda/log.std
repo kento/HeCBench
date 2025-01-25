@@ -22,7 +22,7 @@ Stability
 Results
 
 Error (L2norm): 1.84574e-09
-Solve time (s): 5.36409
-Total time (s): 24.208
-Bandwidth (GB/s): 3202.76
+Solve time (s): 5.36482
+Total time (s): 24.3223
+Bandwidth (GB/s): 3202.32
 --------------------
