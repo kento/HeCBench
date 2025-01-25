@@ -1,0 +1,9 @@
+Average kernel execution time (n_diff = 0): 0.321101 (s)
+Average kernel execution time (n_diff = 1): 0.320786 (s)
+Average kernel execution time (n_diff = 2): 0.320671 (s)
+Average kernel execution time (n_diff = 3): 0.320735 (s)
+Average kernel execution time (n_diff = 4): 0.320767 (s)
+Average kernel execution time (n_diff = 5): 0.320660 (s)
+Average kernel execution time (n_diff = 6): 0.320610 (s)
+Average kernel execution time (n_diff = 7): 0.320675 (s)
+Checksum: 3952319.350855

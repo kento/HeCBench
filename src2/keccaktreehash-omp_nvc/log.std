@@ -1,0 +1,19 @@
+
+Numbers of Threads PER BLOCK            NB_THREADS           64 
+Numbers of Threads Blocks               NB_THREADS_BLOCKS    64 
+
+Input block size of Keccak (in Byte)    INPUT_BLOCK_SIZE_B   32 
+Output block size of Keccak (in Byte)   OUTPUT_BLOCK_SIZE_B  32 
+
+NB of input blocks in by Threads        NB_INPUT_BLOCK       1024 
+
+CPU speed test started 
+
+506f1eca ab60120a b402f830 ea46f6c2 75d8b317 0f7944a5 60b36a16 64d38a43 
+CPU speed : 134050.17 kB/s 
+
+GPU speed test started
+
+506f1eca ab60120a b402f830 ea46f6c2 75d8b317 0f7944a5 60b36a16 64d38a43 
+GPU speed : 107374182.40 kB/s 
+
