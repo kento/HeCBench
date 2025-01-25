@@ -12,25 +12,25 @@ def main(argv=None):
     try:
         try:
             opts, args = getopt.getopt(argv[1:], "h", ["help"])
-        except getopt.GetoptError, msg:
+        except getopt.GetoptError as msg:
             raise Usage(msg)
 
         for o, a in opts:
             if o in ["-h", "--help"]:
-                print(" Usage: %s [OPTIONS] LX LY FILE_NAME" % argv[0])
+                print((" Usage: %s [OPTIONS] LX LY FILE_NAME" % argv[0]))
                 print(" Options:")
                 print("  -h, --help\t\t: This help message")
-                print 
+                print() 
                 return 2
 
             else:
-                print(" %s: ignoring unhandled option" % o)
+                print((" %s: ignoring unhandled option" % o))
 
         if len(args) != 3:
             raise Usage(" Usage: %s [OPTIONS] LX LY FILE_NAME" % argv[0])
 
-    except Usage, err:
-        print(err.msg)
+    except Usage as err:
+        print((err.msg))
         print(" for help use --help")
         return 2
 

@@ -52,8 +52,8 @@ $(program): $(obj) Makefile
 clean:
 	rm -rf $(program) $(obj)
 
-data.txt: mkinit.py
-	python2 mkinit.py 4096 8192 data.txt
+#data.txt: mkinit.py
+#	python2 mkinit.py 4096 8192 data.txt
 
 include ../include/heat2d-AMD
 
