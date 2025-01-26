@@ -29,14 +29,14 @@ $(program): $(OBJ)
 clean:
 	rm -f $(ODIR)/*.o lsqt_gpu
 
-include ../include/lsqt-AMD
+include ../include/lsqt-NVIDIA
 
 run: $(program)
 	$(LAUNCHER) "$(COMMAND)"
 
 run_mem: $(program)
-	../scripts/rocm-smi.sh > log.mem &
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
-	pkill rocm-smi.sh
-	../scripts/rocm-m.sh
+	pkill nvidia-smi
+	../scripts/m.sh
 

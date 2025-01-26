@@ -1,0 +1,1 @@
+COMMAND = time -p ( ./$(program) ../lsqt-cuda/examples/input.txt 1>log.std 2>log.err ) 2> log.time

@@ -1,16 +1,22 @@
-CC   = nvcc
-ARCH = sm_60
 LAUNCHER = bash -c
+CC        = nvc++
+OPTIMIZE  = yes
+DEBUG     = no
+DEVICE    = gpu
+SM        = cc70
 
-program =  lsqt_gpu
+program = lsqt_gpu
 
-# -DDEBUG sets a constant seed for random number generation
-CFLAGS = -O3 -std=c++11 -arch=$(ARCH) -use_fast_math -DDEBUG
+CFLAGS +=-O3 -DDEBUG -Wall -Minfo -mp=gpu -gpu=$(SM),fastmath
 
 
-SOURCES = main.cu lsqt.cu sigma.cu vector.cu hamiltonian.cu model.	cu model_general.cu model_lattice.cu anderson.cu charge.cu
-
+SOURCES = main.cpp lsqt.cpp sigma.cpp vector.cpp hamiltonian.cpp model.	cpp model_general.cpp model_lattice.cpp anderson.cpp charge.cpp
+	
+ifdef OS # for Windows
+_OBJ = main.obj lsqt.obj sigma.obj vector.obj hamiltonian.obj model.obj model_general.obj 	model_lattice.obj anderson.obj charge.obj
+else # for Linux
 _OBJ = main.o lsqt.o sigma.o vector.o hamiltonian.o model.o model_general.o 	model_lattice.o anderson.o charge.o
+endif
 
 HEADERS = sigma.h vector.h lsqt.h hamiltonian.h model.h anderson.h charge.h common.h
 
@@ -20,14 +26,14 @@ OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 all: lsqt_gpu
 
-$(ODIR)/%.o: %.cu $(HEADERS)
+$(ODIR)/%.o: %.cpp $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(program): $(OBJ)
-	$(CC) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	rm -f $(ODIR)/*.o lsqt_gpu
+	rm -f $(ODIR)/*.o lsqt_gpu *.out
 
 include ../include/lsqt-NVIDIA
 

@@ -1,0 +1,93 @@
+
+***************************************************************
+*                  Welcome to use LSQT                        *
+*          (Linear Scaling Quantum Transport)                 *
+*        (Author:  Zheyong Fan <brucenju@gmail.com>)          *
+***************************************************************
+
+
+===============================================================
+Run LSQT simulation for ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive
+===============================================================
+
+===========================================================
+Started reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/para.in
+
+- Use lattice model
+- Add Anderson disorder with strength W = 4
+- No charged impurity
+- No vacancy disorder
+- DOS will be calculated
+- VAC0 will not be calculated
+- VAC will be calculated
+- MSD will be calculated
+- spin polarization will not be calculated
+- Number of random vectors is 1
+- Number of moments is 1000
+- Energy maximum is 6.1
+
+Finished reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/para.in
+===========================================================
+
+
+===========================================================
+Started reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/lattice.in
+
+- Number of cells in the x direction = 2000
+- Number of cells in the y direction = 2000
+- Number of cells in the z direction = 1
+- x direction has periodic boundary
+- y direction has periodic boundary
+- z direction has open boundary
+- transport in x direction
+- lattice constant in x direction = 1
+- lattice constant in y direction = 1
+- lattice constant in z direction = 1
+- number of orbitals per cell = 1
+- maximum number of hoppings per orbital = 4
+- total number of orbitals = 4000000
+
+	orbital	x	y	z
+	0	0	0	0
+
+- number of hoppings for orbital 0 = 4
+	H(0,0,0,0; -1,0,0,0) = -1 + i 0
+	H(0,0,0,0; 1,0,0,0) = -1 + i 0
+	H(0,0,0,0; 0,1,0,0) = -1 + i 0
+	H(0,0,0,0; 0,-1,0,0) = -1 + i 0
+
+Finished reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/lattice.in
+===========================================================
+
+
+===========================================================
+Started reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/energy.in
+
+- number of energy points = 601
+
+Finished reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/energy.in
+===========================================================
+
+
+===========================================================
+Started reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/time_step.in
+
+- number of time steps = 20
+
+Finished reading ../lsqt-cuda/examples/fan2018cpc/lattice/diffusive/time_step.in
+===========================================================
+
+
+===========================================================
+Started  simulation with random vector number 0
+
+Info: open ./dos.out for output 
+- Time used for finding DOS = 43.0013 s
+Info: open ./vac.out for output 
+- calculating VAC step 0
+- calculating VAC step 1
+- calculating VAC step 2
+- calculating VAC step 3
+- calculating VAC step 4
+- calculating VAC step 5
+- calculating VAC step 6

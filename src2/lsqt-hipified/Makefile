@@ -1,6 +1,6 @@
 CC   = hipcc
 ARCH = sm_60
-LAUNCHER = bash -c
+LAUNCHER  =
 
 program =  lsqt_gpu
 
@@ -8,9 +8,11 @@ program =  lsqt_gpu
 CFLAGS = -O3 -std=c++11   -DDEBUG
 
 
-SOURCES = main.cu lsqt.cu sigma.cu vector.cu hamiltonian.cu model.	cu model_general.cu model_lattice.cu anderson.cu charge.cu
+SOURCES = main.cu lsqt.cu sigma.cu vector.cu hamiltonian.cu model.\
+	cu model_general.cu model_lattice.cu anderson.cu charge.cu
 
-_OBJ = main.o lsqt.o sigma.o vector.o hamiltonian.o model.o model_general.o 	model_lattice.o anderson.o charge.o
+_OBJ = main.o lsqt.o sigma.o vector.o hamiltonian.o model.o model_general.o \
+	model_lattice.o anderson.o charge.o
 
 HEADERS = sigma.h vector.h lsqt.h hamiltonian.h model.h anderson.h charge.h common.h
 
@@ -29,14 +31,5 @@ $(program): $(OBJ)
 clean:
 	rm -f $(ODIR)/*.o lsqt_gpu
 
-include ../include/lsqt-AMD
-
 run: $(program)
-	$(LAUNCHER) "$(COMMAND)"
-
-run_mem: $(program)
-	../scripts/rocm-smi.sh > log.mem &
-	$(LAUNCHER) "$(COMMAND)"
-	pkill rocm-smi.sh
-	../scripts/rocm-m.sh
-
+	$(LAUNCHER) ./$(program)  examples/input.txt
