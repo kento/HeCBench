@@ -1,0 +1,8 @@
+> initializing..
+> using SINGLE precision..
+> pivot ENABLED..
+> generating random matrices..
+> performing batched LU decomposition..
+Average kernel execution time : 841.005371 (us)
+> verifying the result..
+> TEST SUCCESSFUL, with precision: 1e-06
