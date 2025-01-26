@@ -1,0 +1,23 @@
+
+Data size:   16 MB
+MatchCPU1:   2503449405000 ms  2.61783e-08 Gflops
+MatchGPU1:   142462449360 ms  4.60023e-07 Gflops
+Number of incorrect matches: 0
+MatchGPU2:   62305874150 ms  1.05184e-06 Gflops
+Number of incorrect matches: 0
+MatchGPU3:   31823397930 ms  2.05937e-06 Gflops
+Number of incorrect matches: 0
+MatchGPU4:   24123400930 ms  2.7167e-06 Gflops
+Number of incorrect matches: 0
+MatchGPU5:   30972042100 ms  2.11597e-06 Gflops
+Number of incorrect matches: 0
+MatchGPU6:   24388435490 ms  2.68718e-06 Gflops
+Number of incorrect matches: 0
+MatchGPU7:   8210169660 ms  7.9823e-06 Gflops
+Number of incorrect matches: 0
+MatchGPU8:   9056816760 ms  7.2361e-06 Gflops
+Number of incorrect matches: 0
+Match9:   6495329800 ms  1.00897e-05 Gflops
+Number of incorrect matches: 0
+MatchGPU10:   17893108240 ms  3.66264e-06 Gflops
+Number of incorrect matches: 0

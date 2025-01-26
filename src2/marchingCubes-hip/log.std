@@ -1,0 +1,8 @@
+Block Lv1: 8296
+Block Lv2: 240380
+Vertices Size: 73075520
+Triangles Size: 227159100
+Vertices: 4856560
+Triangles: 6101640
+Average kernel execution time (generatingTriangles): 0.071302 (s)
+PASS

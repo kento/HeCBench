@@ -1,0 +1,14 @@
+
+M = 5012, N = 5012, B = 256
+Average execution time of sequenceMask kernel: 21307.613281 (us)
+PASS, Mask ratio: 0.751808
+Average execution time of windowMask kernel: 64825.183594 (us)
+PASS, Mask ratio: 0.561718
+Average execution time of upperMask kernel: 17847.396484 (us)
+PASS, Mask ratio: 0.500032
+Average execution time of lowerMask kernel: 17425.644531 (us)
+PASS, Mask ratio: 0.499768
+Average execution time of upperDiagMask kernel: 17412.775391 (us)
+PASS, Mask ratio: 0.500232
+Average execution time of lowerDiagMask kernel: 51372.949219 (us)
+PASS, Mask ratio: 0.499968

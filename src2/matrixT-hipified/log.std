@@ -1,0 +1,12 @@
+
+Matrix size: 44800x44800 (2800x2800 tiles), tile size: 16x16, block size: 16x16
+
+Average kernel (simple copy       ) execution time: 20823.726562 (us)
+Average kernel (shared memory copy) execution time: 20127.214844 (us)
+Average kernel (naive             ) execution time: 39145.070312 (us)
+Average kernel (coalesced         ) execution time: 32085.408203 (us)
+Average kernel (optimized         ) execution time: 27662.109375 (us)
+Average kernel (coarse-grained    ) execution time: 27624.533203 (us)
+Average kernel (fine-grained      ) execution time: 20224.035156 (us)
+Average kernel (diagonal          ) execution time: 30551.687500 (us)
+PASS
