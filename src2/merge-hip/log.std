@@ -1,0 +1,32 @@
+uint32_t 1000000000 :
+	errors 	: 0
+PASS. Warmup run
+
+uint32_t 1000000000 :
+	errors 	: 0
+PASS. Average kernel execution time: 132587.817298 (us).
+
+float 1000000000 :
+	errors 	: 0
+PASS. Warmup run
+
+float 1000000000 :
+	errors 	: 0
+PASS. Average kernel execution time: 130146.226182 (us).
+
+uint64_t 1000000000 :
+	errors 	: 0
+PASS. Warmup run
+
+uint64_t 1000000000 :
+	errors 	: 0
+PASS. Average kernel execution time: 143357.138809 (us).
+
+double 1000000000 :
+	errors 	: 0
+PASS. Warmup run
+
+double 1000000000 :
+	errors 	: 0
+PASS. Average kernel execution time: 144055.329842 (us).
+
