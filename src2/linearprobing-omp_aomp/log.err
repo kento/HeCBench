@@ -1,0 +1,5 @@
+"PluginInterface" error: Faliure to copy data from device to host. Pointers: host = 0x00007f1b43bfe010, device = 0x00007f1ac9200000, size = 0: Failure to allocate from AMDGPU memory manager
+omptarget error: Copying data from device failed.
+omptarget error: Consult https://openmp.llvm.org/design/Runtimes.html for debugging options.
+omptarget error: Source location information not present. Compile with -g or -gline-tables-only.
+omptarget fatal error 1: failure of target construct while offloading is mandatory

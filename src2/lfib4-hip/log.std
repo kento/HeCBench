@@ -1,0 +1,16 @@
+n=2000000000 r=17 s=124999936
+r = 17 | host time = 1.600847 | device time = 1.392687 | speedup = 1.1 check = PASS
+n=2000000000 r=35 s=58823424
+r = 35 | host time = 1.042390 | device time = 0.538723 | speedup = 1.9 check = PASS
+n=2000000000 r=71 s=28571392
+r = 71 | host time = 1.028438 | device time = 0.263320 | speedup = 3.9 check = PASS
+n=2000000000 r=143 s=14084352
+r = 143 | host time = 1.022880 | device time = 0.131955 | speedup = 7.8 check = PASS
+n=2000000000 r=287 s=6992896
+r = 287 | host time = 1.042454 | device time = 0.069201 | speedup = 15.1 check = PASS
+n=2000000000 r=575 s=3484160
+r = 575 | host time = 1.055557 | device time = 0.039573 | speedup = 26.7 check = PASS
+n=2000000000 r=1151 s=1739008
+r = 1151 | host time = 1.025157 | device time = 0.028556 | speedup = 35.9 check = PASS
+n=2000000000 r=2303 s=868608
+r = 2303 | host time = 1.025109 | device time = 0.031755 | speedup = 32.3 check = PASS

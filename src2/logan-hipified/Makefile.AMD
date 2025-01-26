@@ -3,7 +3,8 @@
 #===============================================================================
 
 # Compiler can be set below, or via environment variable
-CC        = hipcc
+#CC        = hipcc
+CC        = hipcc -fgpu-rdc
 OPTIMIZE  = yes
 DEBUG     = no
 ARCH      = sm_60

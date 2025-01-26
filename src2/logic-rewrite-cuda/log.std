@@ -1,0 +1,445 @@
+>> Dynamic heap size changed to: 2048.00 MB
+Running in script mode: "read ../logic-rewrite-cuda/benchmarks/arithmetic/hyp.aig; resyn2; write hyp_resyn2.aig".
+============================================
+Phase 1 time: 0.914093
+Max cover len: 4
+Total number of covers: 206197
+*** Max Level: 24800
+Reconstruct complete! #reconstructed covers = 206197
+#nodes = 214335
+Phase 2 time: 4.684641
+Total time: 5.598896
+balance: alg time 5.60, full time 5.60
+ *** Topo sort time: 0.00 sec
+GPUSolver: setting cudaLimitStackSize = 12288
+GPU memory usage: used = 5668.937500, free = 91611.062500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5680.937500, free = 91599.062500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5686.937500, free = 91593.062500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5732.937500, free = 91547.062500 MB, total = 97280.000000 MB
+[ 7.836] Rewrite Iteration
+[ 9.446] Finished GPU enumeration and pre-evaluation
+[ 9.465] Replacing sub-graphs
+N = 217132   n = 214591   n * RATIO = 493559
+before rebuild, nn = 214591
+after rebuild, n = 217130
+successfully replaced 1250 cones (pos 1250, zero 0), reverted 2 cones, compromised 28 cones, pre-eval rejected 213055 cones, small cut reject 0 cones, new idx reject 0 cones
+after replace, n = 217130
+[ 9.472] Finished eval and replace
+ *** Topo sort time: 0.00 sec
+[ 9.476] Rewrite Iteration Ends
+real reduction: 1252
+** Total Time breakdown: ENUM 1.61, EVAL 0.00, REPLACE 0.03, REORDER 0.01, REDUNDANCY 0.00
+** Replace Time breakdown: COPYBACK 0.01, REID 0.00, CHOICE 0.00
+** CPU sequential time: 0.01 sec
+GPUSolver: setting cudaLimitStackSize = 1024
+after rewrite, n = 217130
+GPU strash: start with nNodes = 216874
+  detected 3791 dangling nodes
+GPU strash: finish with nNodes = 213083, time = 1.47 sec
+rewrite: after rewrite, nNodes = 213083
+rewrite: alg time 1.65, full time 3.13
+refactor: perform MFFC covering algorithm
+Refactor: setting cudaLimitStackSize = 65536
+Refactor: checked cudaLimitStackSize = 65536
+Gathered 128 POs
+Level 0, global list len 128
+Level 1, global list len 416
+Level 2, global list len 454
+Level 3, global list len 514
+Level 4, global list len 555
+Level 5, global list len 569
+Level 6, global list len 587
+Level 7, global list len 613
+Level 8, global list len 633
+Level 9, global list len 661
+Level 10, global list len 685
+Level 11, global list len 713
+Level 12, global list len 738
+Level 13, global list len 771
+Level 14, global list len 799
+Level 15, global list len 829
+Level 16, global list len 859
+Level 17, global list len 891
+Level 18, global list len 901
+Level 19, global list len 943
+Level 20, global list len 977
+Level 21, global list len 1011
+Level 22, global list len 1024
+Level 23, global list len 1066
+Level 24, global list len 1084
+Level 25, global list len 1110
+Level 26, global list len 1133
+Level 27, global list len 1115
+Level 28, global list len 1143
+Level 29, global list len 1169
+Level 30, global list len 1163
+Level 31, global list len 1160
+Level 32, global list len 1203
+Level 33, global list len 1240
+Level 34, global list len 1207
+Level 35, global list len 1270
+Level 36, global list len 1271
+Level 37, global list len 1329
+Level 38, global list len 1314
+Level 39, global list len 1399
+Level 40, global list len 1397
+Level 41, global list len 1422
+Level 42, global list len 1515
+Level 43, global list len 1511
+Level 44, global list len 1551
+Level 45, global list len 1617
+Level 46, global list len 1681
+Level 47, global list len 1724
+Level 48, global list len 1761
+Level 49, global list len 1753
+Level 50, global list len 1801
+Level 51, global list len 1798
+Level 52, global list len 1836
+Level 53, global list len 2008
+Level 54, global list len 2067
+Level 55, global list len 2067
+Level 56, global list len 2081
+Level 57, global list len 2128
+Level 58, global list len 2110
+Level 59, global list len 2153
+Level 60, global list len 2274
+Level 61, global list len 2381
+Level 62, global list len 2291
+Level 63, global list len 2377
+Level 64, global list len 2514
+Level 65, global list len 2662
+Level 66, global list len 2389
+Level 67, global list len 2258
+Level 68, global list len 2343
+Level 69, global list len 2542
+Level 70, global list len 2599
+Level 71, global list len 2651
+Level 72, global list len 2717
+Level 73, global list len 2695
+Level 74, global list len 2750
+Level 75, global list len 2622
+Level 76, global list len 2626
+Level 77, global list len 2308
+Level 78, global list len 1149
+Level 79, global list len 270
+Level 80, global list len 28
+Level 81, global list len 0
+Total number of cones to be resyned: 51560
+Truth table computation time: 0.01 sec
+ISOP + factor time: 0.00 sec
+Number of subgraphs to be inserted: 263
+iter 1: number of subgraphs remained: 263
+iter 2: number of subgraphs remained: 255
+iter 3: number of subgraphs remained: 116
+iter 4: number of subgraphs remained: 31
+iter 5: number of subgraphs remained: 7
+iter 6: number of subgraphs remained: 6
+iter 7: number of subgraphs remained: 3
+iter 8: number of subgraphs remained: 3
+iter 9: number of subgraphs remained: 3
+iter 10: number of subgraphs remained: 2
+iter 11: number of subgraphs remained: 2
+iter 12: number of subgraphs remained: 2
+iter 13: number of subgraphs remained: 2
+iter 14: number of subgraphs remained: 2
+iter 15: number of subgraphs remained: 0
+Insertion complete, idCounter = 214300
+Start reordering ...
+Reordered network new nObjs: 213239, original nObjs: 213340
+Reordering complete!
+ ** CPU sequential time: 0.00 sec
+Sequential reorder time: 0.00 secs
+GPU strash: start with nNodes = 212982
+  detected 0 dangling nodes
+GPU strash: finish with nNodes = 212982, time = 1.47 sec
+Phase 1 time: 0.929617
+Max cover len: 4
+Total number of covers: 204955
+*** Max Level: 24789
+Reconstruct complete! #reconstructed covers = 204955
+#nodes = 212982
+Phase 2 time: 4.693713
+Total time: 5.623392
+balance: alg time 5.62, full time 5.62
+ *** Topo sort time: 0.00 sec
+GPUSolver: setting cudaLimitStackSize = 12288
+GPU memory usage: used = 5677.437500, free = 91602.562500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5689.437500, free = 91590.562500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5695.437500, free = 91584.562500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5741.437500, free = 91538.562500 MB, total = 97280.000000 MB
+[18.121] Rewrite Iteration
+[19.735] Finished GPU enumeration and pre-evaluation
+[19.753] Replacing sub-graphs
+N = 213238   n = 213238   n * RATIO = 490447
+before rebuild, nn = 213238
+after rebuild, n = 213238
+successfully replaced 2 cones (pos 2, zero 0), reverted 0 cones, compromised 0 cones, pre-eval rejected 212980 cones, small cut reject 0 cones, new idx reject 0 cones
+after replace, n = 213238
+[19.759] Finished eval and replace
+ *** Topo sort time: 0.00 sec
+[19.764] Rewrite Iteration Ends
+real reduction: 2
+** Total Time breakdown: ENUM 3.22, EVAL 0.01, REPLACE 0.05, REORDER 0.01, REDUNDANCY 0.00
+** Replace Time breakdown: COPYBACK 0.01, REID 0.00, CHOICE 0.00
+** CPU sequential time: 0.01 sec
+GPUSolver: setting cudaLimitStackSize = 1024
+after rewrite, n = 213238
+GPU strash: start with nNodes = 212982
+  detected 2 dangling nodes
+GPU strash: finish with nNodes = 212980, time = 1.45 sec
+rewrite: after rewrite, nNodes = 212980
+rewrite: alg time 1.65, full time 3.11
+rewrite: use zeros activated!
+ *** Topo sort time: 0.00 sec
+GPUSolver: setting cudaLimitStackSize = 12288
+GPU memory usage: used = 5684.750000, free = 91595.250000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5696.750000, free = 91583.250000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5702.750000, free = 91577.250000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5748.750000, free = 91531.250000 MB, total = 97280.000000 MB
+[21.233] Rewrite Iteration
+[22.847] Finished GPU enumeration and pre-evaluation
+[22.865] Replacing sub-graphs
+N = 254808   n = 213236   n * RATIO = 490442
+before rebuild, nn = 213236
+after rebuild, n = 254796
+successfully replaced 22324 cones (pos 4, zero 22320), reverted 146 cones, compromised 201 cones, pre-eval rejected 141979 cones, small cut reject 0 cones, new idx reject 48330 cones
+after replace, n = 254796
+[22.876] Finished eval and replace
+ *** Topo sort time: 0.00 sec
+[22.882] Rewrite Iteration Ends
+real reduction: 4
+** Total Time breakdown: ENUM 4.83, EVAL 0.01, REPLACE 0.08, REORDER 0.02, REDUNDANCY 0.00
+** Replace Time breakdown: COPYBACK 0.02, REID 0.00, CHOICE 0.00
+** CPU sequential time: 0.01 sec
+GPUSolver: setting cudaLimitStackSize = 1024
+after rewrite, n = 254796
+GPU strash: start with nNodes = 254540
+  detected 41564 dangling nodes
+GPU strash: finish with nNodes = 212976, time = 1.46 sec
+rewrite: after rewrite, nNodes = 212976
+rewrite: alg time 1.66, full time 3.13
+rewrite: use zeros activated!
+ *** Topo sort time: 0.00 sec
+GPUSolver: setting cudaLimitStackSize = 12288
+GPU memory usage: used = 5693.750000, free = 91586.250000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5705.750000, free = 91574.250000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5711.750000, free = 91568.250000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5757.750000, free = 91522.250000 MB, total = 97280.000000 MB
+[24.357] Rewrite Iteration
+[25.967] Finished GPU enumeration and pre-evaluation
+[25.985] Replacing sub-graphs
+N = 242900   n = 213232   n * RATIO = 490433
+before rebuild, nn = 213232
+after rebuild, n = 242813
+successfully replaced 18471 cones (pos 1, zero 18470), reverted 1087 cones, compromised 51 cones, pre-eval rejected 139342 cones, small cut reject 0 cones, new idx reject 54025 cones
+after replace, n = 242813
+[25.990] Finished eval and replace
+ *** Topo sort time: 0.00 sec
+[25.995] Rewrite Iteration Ends
+real reduction: 4
+** Total Time breakdown: ENUM 6.43, EVAL 0.01, REPLACE 0.10, REORDER 0.02, REDUNDANCY 0.00
+** Replace Time breakdown: COPYBACK 0.02, REID 0.00, CHOICE 0.00
+** CPU sequential time: 0.01 sec
+GPUSolver: setting cudaLimitStackSize = 1024
+after rewrite, n = 242813
+GPU strash: start with nNodes = 242557
+  detected 29585 dangling nodes
+GPU strash: finish with nNodes = 212972, time = 1.45 sec
+rewrite: after rewrite, nNodes = 212972
+rewrite: alg time 1.65, full time 3.11
+Phase 1 time: 0.923064
+Max cover len: 4
+Total number of covers: 204822
+*** Max Level: 24671
+Reconstruct complete! #reconstructed covers = 204822
+#nodes = 212972
+Phase 2 time: 5.863998
+Total time: 6.787127
+balance: alg time 6.79, full time 6.79
+refactor: use zeros activated!
+refactor: perform MFFC covering algorithm
+Refactor: setting cudaLimitStackSize = 65536
+Refactor: checked cudaLimitStackSize = 65536
+Gathered 128 POs
+Level 0, global list len 128
+Level 1, global list len 438
+Level 2, global list len 432
+Level 3, global list len 536
+Level 4, global list len 602
+Level 5, global list len 639
+Level 6, global list len 679
+Level 7, global list len 728
+Level 8, global list len 769
+Level 9, global list len 819
+Level 10, global list len 865
+Level 11, global list len 914
+Level 12, global list len 957
+Level 13, global list len 1001
+Level 14, global list len 1026
+Level 15, global list len 1033
+Level 16, global list len 1035
+Level 17, global list len 1046
+Level 18, global list len 1033
+Level 19, global list len 1056
+Level 20, global list len 1070
+Level 21, global list len 1089
+Level 22, global list len 1079
+Level 23, global list len 1125
+Level 24, global list len 1122
+Level 25, global list len 1150
+Level 26, global list len 1158
+Level 27, global list len 1187
+Level 28, global list len 1242
+Level 29, global list len 1287
+Level 30, global list len 1269
+Level 31, global list len 1288
+Level 32, global list len 1329
+Level 33, global list len 1385
+Level 34, global list len 1358
+Level 35, global list len 1405
+Level 36, global list len 1445
+Level 37, global list len 1497
+Level 38, global list len 1512
+Level 39, global list len 1597
+Level 40, global list len 1561
+Level 41, global list len 1558
+Level 42, global list len 1636
+Level 43, global list len 1667
+Level 44, global list len 1657
+Level 45, global list len 1752
+Level 46, global list len 1823
+Level 47, global list len 1779
+Level 48, global list len 1856
+Level 49, global list len 1891
+Level 50, global list len 1983
+Level 51, global list len 2021
+Level 52, global list len 1846
+Level 53, global list len 1960
+Level 54, global list len 2193
+Level 55, global list len 2163
+Level 56, global list len 2136
+Level 57, global list len 2024
+Level 58, global list len 2094
+Level 59, global list len 2199
+Level 60, global list len 2406
+Level 61, global list len 2470
+Level 62, global list len 2320
+Level 63, global list len 2296
+Level 64, global list len 2338
+Level 65, global list len 2383
+Level 66, global list len 2229
+Level 67, global list len 2227
+Level 68, global list len 2217
+Level 69, global list len 2431
+Level 70, global list len 2554
+Level 71, global list len 2541
+Level 72, global list len 2439
+Level 73, global list len 2462
+Level 74, global list len 2660
+Level 75, global list len 2616
+Level 76, global list len 2351
+Level 77, global list len 1868
+Level 78, global list len 1227
+Level 79, global list len 669
+Level 80, global list len 158
+Level 81, global list len 4
+Level 82, global list len 0
+Total number of cones to be resyned: 47269
+Truth table computation time: 0.01 sec
+ISOP + factor time: 0.00 sec
+Number of subgraphs to be inserted: 791
+iter 1: number of subgraphs remained: 791
+iter 2: number of subgraphs remained: 177
+iter 3: number of subgraphs remained: 109
+iter 4: number of subgraphs remained: 36
+iter 5: number of subgraphs remained: 35
+iter 6: number of subgraphs remained: 31
+iter 7: number of subgraphs remained: 31
+iter 8: number of subgraphs remained: 31
+iter 9: number of subgraphs remained: 30
+iter 10: number of subgraphs remained: 29
+iter 11: number of subgraphs remained: 1
+iter 12: number of subgraphs remained: 1
+iter 13: number of subgraphs remained: 1
+iter 14: number of subgraphs remained: 1
+iter 15: number of subgraphs remained: 0
+Insertion complete, idCounter = 215324
+Start reordering ...
+Reordered network new nObjs: 212001, original nObjs: 213229
+Reordering complete!
+ ** CPU sequential time: 0.00 sec
+Sequential reorder time: 0.00 secs
+GPU strash: start with nNodes = 211744
+  detected 0 dangling nodes
+GPU strash: finish with nNodes = 211744, time = 1.45 sec
+rewrite: use zeros activated!
+ *** Topo sort time: 0.00 sec
+GPUSolver: setting cudaLimitStackSize = 12288
+GPU memory usage: used = 5700.687500, free = 91579.312500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5712.687500, free = 91567.312500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5718.687500, free = 91561.312500 MB, total = 97280.000000 MB
+GPU memory usage: used = 5764.687500, free = 91515.312500 MB, total = 97280.000000 MB
+[35.774] Rewrite Iteration
+[37.370] Finished GPU enumeration and pre-evaluation
+[37.388] Replacing sub-graphs
+N = 238880   n = 212000   n * RATIO = 487599
+before rebuild, nn = 212000
+after rebuild, n = 238305
+successfully replaced 16198 cones (pos 3, zero 16195), reverted 85 cones, compromised 300 cones, pre-eval rejected 142604 cones, small cut reject 0 cones, new idx reject 52555 cones
+after replace, n = 238305
+[37.393] Finished eval and replace
+ *** Topo sort time: 0.00 sec
+[37.398] Rewrite Iteration Ends
+real reduction: 3
+** Total Time breakdown: ENUM 8.02, EVAL 0.02, REPLACE 0.13, REORDER 0.03, REDUNDANCY 0.00
+** Replace Time breakdown: COPYBACK 0.02, REID 0.00, CHOICE 0.01
+** CPU sequential time: 0.01 sec
+GPUSolver: setting cudaLimitStackSize = 1024
+after rewrite, n = 238305
+GPU strash: start with nNodes = 238049
+  detected 26308 dangling nodes
+GPU strash: finish with nNodes = 211741, time = 1.46 sec
+rewrite: after rewrite, nNodes = 211741
+rewrite: alg time 1.63, full time 3.10
+rewrite: use zeros activated!
+ *** Topo sort time: 0.00 sec
+GPUSolver: setting cudaLimitStackSize = 12288
+GPU memory usage: used = 5702.375000, free = 91577.625000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5714.375000, free = 91565.625000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5720.375000, free = 91559.625000 MB, total = 97280.000000 MB
+GPU memory usage: used = 5766.375000, free = 91513.625000 MB, total = 97280.000000 MB
+[38.875] Rewrite Iteration
+[40.469] Finished GPU enumeration and pre-evaluation
+[40.487] Replacing sub-graphs
+N = 235640   n = 211997   n * RATIO = 487593
+before rebuild, nn = 211997
+after rebuild, n = 235553
+successfully replaced 13936 cones (pos 0, zero 13936), reverted 41 cones, compromised 35 cones, pre-eval rejected 142122 cones, small cut reject 0 cones, new idx reject 55607 cones
+after replace, n = 235553
+[40.493] Finished eval and replace
+ *** Topo sort time: 0.00 sec
+[40.498] Rewrite Iteration Ends
+real reduction: 0
+** Total Time breakdown: ENUM 9.61, EVAL 0.02, REPLACE 0.15, REORDER 0.04, REDUNDANCY 0.01
+** Replace Time breakdown: COPYBACK 0.03, REID 0.00, CHOICE 0.01
+** CPU sequential time: 0.02 sec
+GPUSolver: setting cudaLimitStackSize = 1024
+after rewrite, n = 235553
+GPU strash: start with nNodes = 235297
+  detected 23556 dangling nodes
+GPU strash: finish with nNodes = 211741, time = 1.45 sec
+rewrite: after rewrite, nNodes = 211741
+rewrite: alg time 1.63, full time 3.09
+Phase 1 time: 0.932130
+Max cover len: 4
+Total number of covers: 203518
+*** Max Level: 24670
+Reconstruct complete! #reconstructed covers = 203518
+#nodes = 211741
+Phase 2 time: 5.868001
+Total time: 6.800190
+balance: alg time 6.80, full time 6.80
+GPU strash: start with nNodes = 211741
+  detected 0 dangling nodes
+GPU strash: finish with nNodes = 211741, time = 1.45 sec
+Output AIG file saved at path: hyp_resyn2.aig

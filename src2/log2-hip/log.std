@@ -1,0 +1,100 @@
+Number of precision counts : 19
+ Number of inputs to evaluate for each precision: 10000000
+ Number of runs for each precision : 100
+
+Iterative approximation with 1 bits of precision
+Average kernel execution time 83.7852 (us)
+
+Iterative approximation with 2 bits of precision
+Average kernel execution time 91.0139 (us)
+
+Iterative approximation with 3 bits of precision
+Average kernel execution time 103.396 (us)
+
+Iterative approximation with 4 bits of precision
+Average kernel execution time 118.216 (us)
+
+Iterative approximation with 5 bits of precision
+Average kernel execution time 134.542 (us)
+
+Iterative approximation with 6 bits of precision
+Average kernel execution time 151.981 (us)
+
+Iterative approximation with 7 bits of precision
+Average kernel execution time 170.108 (us)
+
+Iterative approximation with 8 bits of precision
+Average kernel execution time 189.318 (us)
+
+Iterative approximation with 9 bits of precision
+Average kernel execution time 207.492 (us)
+
+Iterative approximation with 10 bits of precision
+Average kernel execution time 226.604 (us)
+
+Iterative approximation with 11 bits of precision
+Average kernel execution time 246.145 (us)
+
+Iterative approximation with 12 bits of precision
+Average kernel execution time 266.334 (us)
+
+Iterative approximation with 13 bits of precision
+Average kernel execution time 287.6 (us)
+
+Iterative approximation with 14 bits of precision
+Average kernel execution time 310.301 (us)
+
+Iterative approximation with 15 bits of precision
+Average kernel execution time 335.343 (us)
+
+Iterative approximation with 16 bits of precision
+Average kernel execution time 363.684 (us)
+
+Iterative approximation with 18 bits of precision
+Average kernel execution time 433.582 (us)
+
+Iterative approximation with 20 bits of precision
+Average kernel execution time 522.143 (us)
+
+Iterative approximation with 23 bits of precision
+Average kernel execution time 663.914 (us)
+-------------- SUMMARY (Device results): --------------
+
+----- Iterative approximation with 1 bits of precision -----
+RMSE : 0.572639
+----- Iterative approximation with 2 bits of precision -----
+RMSE : 0.280665
+----- Iterative approximation with 3 bits of precision -----
+RMSE : 0.14669
+----- Iterative approximation with 4 bits of precision -----
+RMSE : 0.0725577
+----- Iterative approximation with 5 bits of precision -----
+RMSE : 0.0360742
+----- Iterative approximation with 6 bits of precision -----
+RMSE : 0.0179829
+----- Iterative approximation with 7 bits of precision -----
+RMSE : 0.00897885
+----- Iterative approximation with 8 bits of precision -----
+RMSE : 0.00448697
+----- Iterative approximation with 9 bits of precision -----
+RMSE : 0.00224429
+----- Iterative approximation with 10 bits of precision -----
+RMSE : 0.00112187
+----- Iterative approximation with 11 bits of precision -----
+RMSE : 0.000561048
+----- Iterative approximation with 12 bits of precision -----
+RMSE : 0.000280499
+----- Iterative approximation with 13 bits of precision -----
+RMSE : 0.000140179
+----- Iterative approximation with 14 bits of precision -----
+RMSE : 7.02021e-05
+----- Iterative approximation with 15 bits of precision -----
+RMSE : 3.51399e-05
+----- Iterative approximation with 16 bits of precision -----
+RMSE : 1.7682e-05
+----- Iterative approximation with 18 bits of precision -----
+RMSE : 4.32917e-06
+----- Iterative approximation with 20 bits of precision -----
+RMSE : 1.34771e-06
+----- Iterative approximation with 23 bits of precision -----
+RMSE : 4.9292e-07
