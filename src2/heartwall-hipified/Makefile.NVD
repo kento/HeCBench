@@ -7,8 +7,7 @@ LAUNCHER = bash -c
 
 
 # Standard flags
-#CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall 
-CFLAGS := $(EXTRA_CFLAGS)   -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall 
 
 # Linker flags
 LDFLAGS = -lm
@@ -62,16 +61,16 @@ heartwall:	./main.o 	./kernel/kernel.o 	./util/avi/avilib.o 	./util/avi/avimod.o
 ./util/timer/timer.o:	./util/timer/timer.h 	./util/timer/timer.c
 	$(CC)	$(CFLAGS) ./util/timer/timer.c 		-I./util/timer 		-c 		-o ./util/timer/timer.o 
 
-include ../include/heartwall-AMD
+include ../include/heartwall-NVIDIA
 
 run: heartwall
 	$(LAUNCHER) "$(COMMAND)"
 
 run_mem: heartwall
-	../scripts/rocm-smi.sh > log.mem &
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
-	pkill rocm-smi.sh
-	../scripts/rocm-m.sh
+	pkill nvidia-smi
+	../scripts/m.sh
 
 clean:
 	rm	-rf *.o heartwall 		./kernel/*.o 		./util/avi/*.o 		./util/file/*.o 		./util/timer/*.o 

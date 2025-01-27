@@ -1,5 +1,3 @@
-#include "hip/hip_runtime.h"
-#include "hip/hip_runtime.h"
 #include <hip/hip_runtime.h>
 #include "./../main.h"                // (in main directory)            needed to recognized input parameters
 #include "./../util/avi/avilib.h"          // (in directory)              needed by avi functions

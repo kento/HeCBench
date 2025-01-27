@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
