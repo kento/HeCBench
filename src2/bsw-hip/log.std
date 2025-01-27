@@ -1,0 +1,12 @@
+Number of loop iterations: 2
+Shared memory bytes: 1212
+sequences per stream (CUDA grid size): 15000
+minSize (CUDA block size): 200
+Shared memory bytes: 1212
+sequences per stream (CUDA grid size): 15000
+minSize (CUDA block size): 200
+Total Alignments:30000
+Max Reference Size:1448
+Max Query Size:200
+Total loop iteration time (seconds):0.0383655
+Total Cells:1175735375

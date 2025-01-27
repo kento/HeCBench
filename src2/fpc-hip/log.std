@@ -1,0 +1,3 @@
+fpc: average device offload time 0.002578 (s)
+fpc2: average device offload time 0.002576 (s)
+PASS

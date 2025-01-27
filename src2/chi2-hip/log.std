@@ -1,0 +1,5 @@
+Individuals=4000 SNPs=400000 cases=2000 controls=2000 nthreads=256
+Size of the data = 1600000000
+Average kernel execution time = 0.004596 (s)
+Host execution time = 7.896692 (s)
+PASS

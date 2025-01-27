@@ -1,0 +1,15 @@
+Allocating and initializing host memory...
+Performing Forward DCT8x8 of 8192 x 8192 image on the device
+
+Average DCT8x8 kernel execution time 0.000569 (s)
+Comparing against Host/C++ computation...
+Relative L2 norm: 3.311e-08
+
+PASS
+Performing Inverse DCT8x8 of 8192 x 8192 image on the device
+
+Average IDCT8x8 kernel execution time 0.000564 (s)
+Comparing against Host/C++ computation...
+Relative L2 norm: 7.991e-08
+
+PASS

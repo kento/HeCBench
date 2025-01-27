@@ -1,0 +1,9 @@
+
+GPU_BLOCKS     1024
+GPU_THREADS    256
+runtime (half2): 1.123015 (s)
+checksum: -16777216.000000
+runtime (float): 1.557647 (s)
+checksum: -8388608.000000
+runtime (double): 0.684191 (s)
+checksum: -4194304.000000

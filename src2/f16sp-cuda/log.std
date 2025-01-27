@@ -1,0 +1,45 @@
+
+Number of elements in the vectors is 268435456
+
+GPU grid size is 1048576
+Average kernel1 execution time 2055.726318 (us)
+Error rate: 4.731939e-04
+Average kernel2 execution time 2057.770020 (us)
+Error rate: 4.731939e-04
+Average kernel3 execution time 2056.553711 (us)
+Error rate: 4.731939e-04
+
+GPU grid size is 524288
+Average kernel1 execution time 1079.967285 (us)
+Error rate: 4.579277e-04
+Average kernel2 execution time 1080.773560 (us)
+Error rate: 4.579277e-04
+Average kernel3 execution time 1080.032104 (us)
+Error rate: 4.579277e-04
+
+GPU grid size is 262144
+Average kernel1 execution time 575.065308 (us)
+Error rate: 4.731939e-04
+Average kernel2 execution time 575.072693 (us)
+Error rate: 4.273952e-04
+Average kernel3 execution time 574.786804 (us)
+Error rate: 4.273952e-04
+
+GPU grid size is 131072
+Average kernel1 execution time 317.382629 (us)
+Error rate: 4.579277e-04
+Average kernel2 execution time 322.712616 (us)
+Error rate: 3.662706e-04
+Average kernel3 execution time 316.406403 (us)
+Error rate: 3.662706e-04
+
+GPU grid size is 65536
+Average kernel1 execution time 315.621185 (us)
+Error rate: 4.273952e-04
+Average kernel2 execution time 319.983337 (us)
+Error rate: 2.440214e-04
+Average kernel3 execution time 316.668060 (us)
+Error rate: 2.440214e-04
+
+Average kernel (cublasDot) execution time 334.038361 (us)
+Error rate: 4.885198e-04

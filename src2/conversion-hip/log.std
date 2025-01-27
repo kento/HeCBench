@@ -1,0 +1,60 @@
+bfloat16 -> half
+size(GB):1.07, average time(sec):0.001371, BW:783.181491
+bfloat16 -> float
+size(GB):1.61, average time(sec):0.001592, BW:1011.691417
+bfloat16 -> int
+size(GB):1.61, average time(sec):0.001594, BW:1010.422043
+bfloat16 -> char
+size(GB):0.81, average time(sec):0.001344, BW:599.186286
+bfloat16 -> uchar
+size(GB):0.81, average time(sec):0.001344, BW:599.186286
+half -> half
+size(GB):1.07, average time(sec):0.001376, BW:780.335628
+half -> float
+size(GB):1.61, average time(sec):0.001592, BW:1011.691417
+half -> int
+size(GB):1.61, average time(sec):0.001593, BW:1011.056331
+half -> char
+size(GB):0.81, average time(sec):0.001341, BW:600.526747
+half -> uchar
+size(GB):0.81, average time(sec):0.001342, BW:600.079261
+float -> float
+size(GB):2.15, average time(sec):0.001782, BW:1205.097446
+float -> half
+size(GB):1.61, average time(sec):0.001517, BW:1061.709121
+float -> int
+size(GB):2.15, average time(sec):0.001788, BW:1201.053494
+float -> char
+size(GB):1.34, average time(sec):0.001420, BW:945.195268
+float -> uchar
+size(GB):1.34, average time(sec):0.001421, BW:944.530106
+int -> int
+size(GB):2.15, average time(sec):0.001788, BW:1201.053494
+int -> float
+size(GB):2.15, average time(sec):0.001787, BW:1201.725600
+int -> half
+size(GB):1.61, average time(sec):0.001521, BW:1058.916986
+int -> char
+size(GB):1.34, average time(sec):0.001416, BW:947.865311
+int -> uchar
+size(GB):1.34, average time(sec):0.001415, BW:948.535180
+char -> int
+size(GB):1.34, average time(sec):0.001586, BW:846.265624
+char -> float
+size(GB):1.34, average time(sec):0.001592, BW:843.076181
+char -> half
+size(GB):0.81, average time(sec):0.001367, BW:589.104878
+char -> char
+size(GB):0.54, average time(sec):0.001320, BW:406.720388
+char -> uchar
+size(GB):0.54, average time(sec):0.001320, BW:406.720388
+uchar -> int
+size(GB):1.34, average time(sec):0.001586, BW:846.265624
+uchar -> float
+size(GB):1.34, average time(sec):0.001590, BW:844.136654
+uchar -> half
+size(GB):0.81, average time(sec):0.001367, BW:589.104878
+uchar -> char
+size(GB):0.54, average time(sec):0.001320, BW:406.720388
+uchar -> uchar
+size(GB):0.54, average time(sec):0.001320, BW:406.720388

@@ -1,0 +1,15 @@
+10	#kernel execution times
+8	#fsm size
+65536	#entries
+32768	#tab size
+1024	#blocks
+256	#threads
+1	#cutoff
+0.655975	#runtime [s]
+52.379623	#throughput [Gtr/s]
+32676	#sudcnt hits
+32826	#GAfsm hits
+49.860%	#sudcnt hits
+50.089%	#GAfsm hits
+
+PASS

@@ -1,0 +1,63 @@
+Array size: 200 MB
+Repeat the kernel execution: 32 times
+Device name: AMD Instinct MI250X/MI250
+Thread block size: 128, The average performance of reduction is 998.715 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 1392.73 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 1414.64 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 1387.22 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 1326.6 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 1188.65 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 1198.8 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 1369.11 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 1435.87 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 1134.78 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 1195.89 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 1253.41 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 1334.09 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 1254.42 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 1062.19 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 1023.92 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 1235 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 1313.88 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 1208.87 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 938.79 GBytes/sec
+VERIFICATION: PASS
+

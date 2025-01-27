@@ -1,0 +1,6 @@
+Create a square matrix (4096 x 4096) internally
+Total kernel execution time 286839 (us)
+Device offloading time 3350200 (us)
+
+Checking the results..
+PASS

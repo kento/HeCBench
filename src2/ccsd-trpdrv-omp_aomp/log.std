@@ -1,0 +1,9 @@
+Test driver for cbody with nocc=40, nvir=200, maxiter=100, nkpass=1
+This test requires 0.064514 GB of memory.
+Stopping after 100 iterations...
+TIMING: min=1.511849, max=3.237199, avg=2.032303
+OPS: dgemm_flops= 7.680e+07 dgemm_mops= 1.408e+06 tengy_ops= 3.760e+06
+PERF: GF/s= 3.964e-02 GB/s= 2.034e-02
+These are meaningless but should not vary for a particular input:
+emp4=6618520.899911 emp5=-668612.795120
+Finished

@@ -1,0 +1,22 @@
+Global Work Size 		= 3200000000
+Local Work Size 		= 256
+Average kernel execution time 7.955816 (ms)
+PASS
+
+Average cublasDotEx execution time 0.000993 (ms)
+PASS
+
+Average std::transform_reduce execution time 6.877422 (ms)
+PASS
+
+Global Work Size 		= 3200000000
+Local Work Size 		= 256
+Average kernel execution time 13.139453 (ms)
+PASS
+
+Average cublasDotEx execution time 0.000976 (ms)
+PASS
+
+Average std::transform_reduce execution time 13.373912 (ms)
+PASS
+

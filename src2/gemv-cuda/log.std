@@ -1,0 +1,12 @@
+size=32768, iter=100
+GPU block_dim	(512, 2)
+GPU grid_dim	(1, 16384)
+num_per_thread=64
+int8/int4: scale=0.062500, zero_point=0.010000
+GEMV int8 quantized...
+Average kernel execution time: 449.182465 (us)
+Check correctness on the device
+!!![idx=0] 42592.000000 != 42603.789062, diff=11.789062
+GEMV int4 quantized...
+Average kernel execution time: 383.850281 (us)
+Check correctness on the device

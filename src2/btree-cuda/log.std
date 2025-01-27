@@ -1,0 +1,11 @@
+Building the tree with 2000000000 keys
+Searching the tree with -294967296 queries
+CUDA error at main.cu 112: an illegal memory access was encountered
+CUDA error at main.cu 118: an illegal memory access was encountered
+Total device execution time = 6.082 s
+Error validating queries (Key = 1871184312, Value = 1871184312) found (Value = 0)
+CUDA error at allocator/pool_allocator.cuh 48: an illegal memory access was encountered
+Tree size: 207.173325 GiBs.
+CUDA error at map/map.cuh 99: an illegal memory access was encountered
+CUDA error at allocator/pool_allocator.cuh 42: an illegal memory access was encountered
+CUDA error at allocator/pool_allocator.cuh 43: an illegal memory access was encountered

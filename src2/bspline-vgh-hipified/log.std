@@ -1,0 +1,2 @@
+Total kernel execution time 0.414225 (s)
+walkers[0]->collect([resVal resGrad resHess]) = [-1.315771e+04 1.767622e+04 3.817450e+05]

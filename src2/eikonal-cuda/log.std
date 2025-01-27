@@ -1,0 +1,10 @@
+# of total voxels : 2000376000
+# of total blocks : 31255875
+Eikonal solver converged after 943 iterations
+Total Running Time: 11.196950 (sec)
+Time for solver : 0.253642 (sec)
+Time for reduction : 0.092671 (sec)
+Time for list update-1 (CPU) : 0.452287 (sec)
+Time for list update-2 (CPU) : 10.398164 (sec)
+Total # of blocks processed : 31255875
+Checksum = 1212.249986

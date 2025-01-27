@@ -1,0 +1,5854 @@
+Parsing input file...File Extension: ata
+Number of events removed to ensure memory alignment 7
+Number of events: 992
+Number of dimensions: 1
+
+Starting with 500 cluster(s), will stop at 1 cluster(s).
+Gaussian.cu: epsilon = 0.020699
+Performing EM algorithm on 500 clusters.
+
+Likelihood: 4.556509e+03
+
+Rissanen Score: 6.148335e+02
+
+Minimum distance between (62,104). Combining clusters
+Performing EM algorithm on 240 clusters.
+
+Likelihood: -2.218710e+03
+
+Rissanen Score: 4.699161e+03
+
+Minimum distance between (59,169). Combining clusters
+Performing EM algorithm on 205 clusters.
+
+Likelihood: -2.192265e+03
+
+Rissanen Score: 4.310479e+03
+
+Minimum distance between (48,50). Combining clusters
+Performing EM algorithm on 200 clusters.
+
+Likelihood: -2.187718e+03
+
+Rissanen Score: 4.254185e+03
+
+Minimum distance between (2,165). Combining clusters
+Performing EM algorithm on 198 clusters.
+
+Likelihood: -2.187699e+03
+
+Rissanen Score: 4.233467e+03
+
+Minimum distance between (72,162). Combining clusters
+Performing EM algorithm on 197 clusters.
+
+Likelihood: -2.187682e+03
+
+Rissanen Score: 4.223101e+03
+
+Minimum distance between (116,170). Combining clusters
+Performing EM algorithm on 196 clusters.
+
+Likelihood: -2.187666e+03
+
+Rissanen Score: 4.212735e+03
+
+Minimum distance between (69,109). Combining clusters
+Performing EM algorithm on 195 clusters.
+
+Likelihood: -2.187649e+03
+
+Rissanen Score: 4.202368e+03
+
+Minimum distance between (29,120). Combining clusters
+Performing EM algorithm on 194 clusters.
+
+Likelihood: -2.187632e+03
+
+Rissanen Score: 4.192001e+03
+
+Minimum distance between (143,186). Combining clusters
+Performing EM algorithm on 193 clusters.
+
+Likelihood: -2.187613e+03
+
+Rissanen Score: 4.181633e+03
+
+Minimum distance between (28,81). Combining clusters
+Performing EM algorithm on 192 clusters.
+
+Likelihood: -2.187593e+03
+
+Rissanen Score: 4.171263e+03
+
+Minimum distance between (12,109). Combining clusters
+Performing EM algorithm on 191 clusters.
+
+Likelihood: -2.186372e+03
+
+Rissanen Score: 4.159693e+03
+
+Minimum distance between (24,143). Combining clusters
+Performing EM algorithm on 189 clusters.
+
+Likelihood: -2.186357e+03
+
+Rissanen Score: 4.138979e+03
+
+Minimum distance between (84,91). Combining clusters
+Performing EM algorithm on 188 clusters.
+
+Likelihood: -2.186343e+03
+
+Rissanen Score: 4.128615e+03
+
+Minimum distance between (2,57). Combining clusters
+Performing EM algorithm on 187 clusters.
+
+Likelihood: -2.186330e+03
+
+Rissanen Score: 4.118252e+03
+
+Minimum distance between (3,168). Combining clusters
+Performing EM algorithm on 186 clusters.
+
+Likelihood: -2.186316e+03
+
+Rissanen Score: 4.107889e+03
+
+Minimum distance between (94,145). Combining clusters
+Performing EM algorithm on 185 clusters.
+
+Likelihood: -2.186302e+03
+
+Rissanen Score: 4.097525e+03
+
+Minimum distance between (26,86). Combining clusters
+Performing EM algorithm on 184 clusters.
+
+Likelihood: -2.186288e+03
+
+Rissanen Score: 4.087162e+03
+
+Minimum distance between (54,68). Combining clusters
+Performing EM algorithm on 183 clusters.
+
+Likelihood: -2.186274e+03
+
+Rissanen Score: 4.076798e+03
+
+Minimum distance between (47,108). Combining clusters
+Performing EM algorithm on 182 clusters.
+
+Likelihood: -2.186259e+03
+
+Rissanen Score: 4.066434e+03
+
+Minimum distance between (41,138). Combining clusters
+Performing EM algorithm on 181 clusters.
+
+Likelihood: -2.186244e+03
+
+Rissanen Score: 4.056069e+03
+
+Minimum distance between (131,167). Combining clusters
+Performing EM algorithm on 180 clusters.
+
+Likelihood: -2.186230e+03
+
+Rissanen Score: 4.045705e+03
+
+Minimum distance between (8,154). Combining clusters
+Performing EM algorithm on 179 clusters.
+
+Likelihood: -2.186214e+03
+
+Rissanen Score: 4.035340e+03
+
+Minimum distance between (150,152). Combining clusters
+Performing EM algorithm on 178 clusters.
+
+Likelihood: -2.186163e+03
+
+Rissanen Score: 4.024939e+03
+
+Minimum distance between (13,140). Combining clusters
+Performing EM algorithm on 176 clusters.
+
+Likelihood: -2.186146e+03
+
+Rissanen Score: 4.004223e+03
+
+Minimum distance between (109,145). Combining clusters
+Performing EM algorithm on 175 clusters.
+
+Likelihood: -2.186128e+03
+
+Rissanen Score: 3.993855e+03
+
+Minimum distance between (14,84). Combining clusters
+Performing EM algorithm on 174 clusters.
+
+Likelihood: -2.186110e+03
+
+Rissanen Score: 3.983488e+03
+
+Minimum distance between (109,124). Combining clusters
+Performing EM algorithm on 173 clusters.
+
+Likelihood: -2.186091e+03
+
+Rissanen Score: 3.973119e+03
+
+Minimum distance between (99,112). Combining clusters
+Performing EM algorithm on 172 clusters.
+
+Likelihood: -2.186072e+03
+
+Rissanen Score: 3.962751e+03
+
+Minimum distance between (19,164). Combining clusters
+Performing EM algorithm on 171 clusters.
+
+Likelihood: -2.186052e+03
+
+Rissanen Score: 3.952381e+03
+
+Minimum distance between (107,160). Combining clusters
+Performing EM algorithm on 170 clusters.
+
+Likelihood: -2.184600e+03
+
+Rissanen Score: 3.940580e+03
+
+Minimum distance between (15,155). Combining clusters
+Performing EM algorithm on 169 clusters.
+
+Likelihood: -2.184581e+03
+
+Rissanen Score: 3.930210e+03
+
+Minimum distance between (24,154). Combining clusters
+Performing EM algorithm on 168 clusters.
+
+Likelihood: -2.183450e+03
+
+Rissanen Score: 3.918730e+03
+
+Minimum distance between (62,161). Combining clusters
+Performing EM algorithm on 166 clusters.
+
+Likelihood: -2.183433e+03
+
+Rissanen Score: 3.898014e+03
+
+Minimum distance between (41,136). Combining clusters
+Performing EM algorithm on 165 clusters.
+
+Likelihood: -2.183416e+03
+
+Rissanen Score: 3.887648e+03
+
+Minimum distance between (25,139). Combining clusters
+Performing EM algorithm on 164 clusters.
+
+Likelihood: -2.183400e+03
+
+Rissanen Score: 3.877282e+03
+
+Minimum distance between (30,54). Combining clusters
+Performing EM algorithm on 163 clusters.
+
+Likelihood: -2.183384e+03
+
+Rissanen Score: 3.866917e+03
+
+Minimum distance between (26,93). Combining clusters
+Performing EM algorithm on 162 clusters.
+
+Likelihood: -2.183368e+03
+
+Rissanen Score: 3.856551e+03
+
+Minimum distance between (126,161). Combining clusters
+Performing EM algorithm on 161 clusters.
+
+Likelihood: -2.183352e+03
+
+Rissanen Score: 3.846185e+03
+
+Minimum distance between (45,55). Combining clusters
+Performing EM algorithm on 160 clusters.
+
+Likelihood: -2.183337e+03
+
+Rissanen Score: 3.835820e+03
+
+Minimum distance between (37,148). Combining clusters
+Performing EM algorithm on 159 clusters.
+
+Likelihood: -2.183320e+03
+
+Rissanen Score: 3.825454e+03
+
+Minimum distance between (63,147). Combining clusters
+Performing EM algorithm on 158 clusters.
+
+Likelihood: -2.183267e+03
+
+Rissanen Score: 3.815051e+03
+
+Minimum distance between (50,118). Combining clusters
+Performing EM algorithm on 156 clusters.
+
+Likelihood: -2.183248e+03
+
+Rissanen Score: 3.794333e+03
+
+Minimum distance between (47,151). Combining clusters
+Performing EM algorithm on 155 clusters.
+
+Likelihood: -2.183228e+03
+
+Rissanen Score: 3.783964e+03
+
+Minimum distance between (19,32). Combining clusters
+Performing EM algorithm on 154 clusters.
+
+Likelihood: -2.183208e+03
+
+Rissanen Score: 3.773594e+03
+
+Minimum distance between (65,77). Combining clusters
+Performing EM algorithm on 153 clusters.
+
+Likelihood: -2.164612e+03
+
+Rissanen Score: 3.744648e+03
+
+Minimum distance between (10,47). Combining clusters
+Performing EM algorithm on 147 clusters.
+
+Likelihood: -2.164593e+03
+
+Rissanen Score: 3.682532e+03
+
+Minimum distance between (34,42). Combining clusters
+Performing EM algorithm on 146 clusters.
+
+Likelihood: -2.164574e+03
+
+Rissanen Score: 3.672164e+03
+
+Minimum distance between (63,65). Combining clusters
+Performing EM algorithm on 145 clusters.
+
+Likelihood: -2.164556e+03
+
+Rissanen Score: 3.661796e+03
+
+Minimum distance between (55,99). Combining clusters
+Performing EM algorithm on 144 clusters.
+
+Likelihood: -2.164539e+03
+
+Rissanen Score: 3.651429e+03
+
+Minimum distance between (45,98). Combining clusters
+Performing EM algorithm on 143 clusters.
+
+Likelihood: -2.164523e+03
+
+Rissanen Score: 3.641064e+03
+
+Minimum distance between (22,28). Combining clusters
+Performing EM algorithm on 142 clusters.
+
+Likelihood: -2.164508e+03
+
+Rissanen Score: 3.630699e+03
+
+Minimum distance between (115,133). Combining clusters
+Performing EM algorithm on 141 clusters.
+
+Likelihood: -2.164492e+03
+
+Rissanen Score: 3.620334e+03
+
+Minimum distance between (12,88). Combining clusters
+Performing EM algorithm on 140 clusters.
+
+Likelihood: -2.164478e+03
+
+Rissanen Score: 3.609970e+03
+
+Minimum distance between (87,95). Combining clusters
+Performing EM algorithm on 139 clusters.
+
+Likelihood: -2.164464e+03
+
+Rissanen Score: 3.599606e+03
+
+Minimum distance between (47,115). Combining clusters
+Performing EM algorithm on 138 clusters.
+
+Likelihood: -2.164451e+03
+
+Rissanen Score: 3.589244e+03
+
+Minimum distance between (77,129). Combining clusters
+Performing EM algorithm on 137 clusters.
+
+Likelihood: -2.164439e+03
+
+Rissanen Score: 3.578882e+03
+
+Minimum distance between (38,40). Combining clusters
+Performing EM algorithm on 136 clusters.
+
+Likelihood: -2.164427e+03
+
+Rissanen Score: 3.568521e+03
+
+Minimum distance between (25,107). Combining clusters
+Performing EM algorithm on 135 clusters.
+
+Likelihood: -2.164416e+03
+
+Rissanen Score: 3.558160e+03
+
+Minimum distance between (60,97). Combining clusters
+Performing EM algorithm on 134 clusters.
+
+Likelihood: -2.164405e+03
+
+Rissanen Score: 3.547799e+03
+
+Minimum distance between (81,129). Combining clusters
+Performing EM algorithm on 133 clusters.
+
+Likelihood: -2.164395e+03
+
+Rissanen Score: 3.537439e+03
+
+Minimum distance between (14,121). Combining clusters
+Performing EM algorithm on 132 clusters.
+
+Likelihood: -2.164384e+03
+
+Rissanen Score: 3.527080e+03
+
+Minimum distance between (51,73). Combining clusters
+Performing EM algorithm on 131 clusters.
+
+Likelihood: -2.164375e+03
+
+Rissanen Score: 3.516721e+03
+
+Minimum distance between (3,88). Combining clusters
+Performing EM algorithm on 130 clusters.
+
+Likelihood: -2.164366e+03
+
+Rissanen Score: 3.506362e+03
+
+Minimum distance between (55,62). Combining clusters
+Performing EM algorithm on 129 clusters.
+
+Likelihood: -2.164357e+03
+
+Rissanen Score: 3.496003e+03
+
+Minimum distance between (24,124). Combining clusters
+Performing EM algorithm on 128 clusters.
+
+Likelihood: -2.164348e+03
+
+Rissanen Score: 3.485645e+03
+
+Minimum distance between (56,111). Combining clusters
+Performing EM algorithm on 127 clusters.
+
+Likelihood: -2.164340e+03
+
+Rissanen Score: 3.475288e+03
+
+Minimum distance between (67,88). Combining clusters
+Performing EM algorithm on 126 clusters.
+
+Likelihood: -2.164332e+03
+
+Rissanen Score: 3.464930e+03
+
+Minimum distance between (37,42). Combining clusters
+Performing EM algorithm on 125 clusters.
+
+Likelihood: -2.164324e+03
+
+Rissanen Score: 3.454572e+03
+
+Minimum distance between (53,91). Combining clusters
+Performing EM algorithm on 124 clusters.
+
+Likelihood: -2.164317e+03
+
+Rissanen Score: 3.444216e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 123 clusters.
+
+Likelihood: -2.164310e+03
+
+Rissanen Score: 3.433859e+03
+
+Minimum distance between (35,113). Combining clusters
+Performing EM algorithm on 122 clusters.
+
+Likelihood: -2.164303e+03
+
+Rissanen Score: 3.423502e+03
+
+Minimum distance between (34,111). Combining clusters
+Performing EM algorithm on 121 clusters.
+
+Likelihood: -2.164296e+03
+
+Rissanen Score: 3.413146e+03
+
+Minimum distance between (15,101). Combining clusters
+Performing EM algorithm on 120 clusters.
+
+Likelihood: -2.164289e+03
+
+Rissanen Score: 3.402789e+03
+
+Minimum distance between (14,63). Combining clusters
+Performing EM algorithm on 119 clusters.
+
+Likelihood: -2.164283e+03
+
+Rissanen Score: 3.392434e+03
+
+Minimum distance between (77,106). Combining clusters
+Performing EM algorithm on 118 clusters.
+
+Likelihood: -2.164276e+03
+
+Rissanen Score: 3.382078e+03
+
+Minimum distance between (9,81). Combining clusters
+Performing EM algorithm on 117 clusters.
+
+Likelihood: -2.164270e+03
+
+Rissanen Score: 3.371721e+03
+
+Minimum distance between (57,69). Combining clusters
+Performing EM algorithm on 116 clusters.
+
+Likelihood: -2.164264e+03
+
+Rissanen Score: 3.361366e+03
+
+Minimum distance between (11,27). Combining clusters
+Performing EM algorithm on 115 clusters.
+
+Likelihood: -2.164258e+03
+
+Rissanen Score: 3.351011e+03
+
+Minimum distance between (77,98). Combining clusters
+Performing EM algorithm on 114 clusters.
+
+Likelihood: -2.164252e+03
+
+Rissanen Score: 3.340655e+03
+
+Minimum distance between (49,72). Combining clusters
+Performing EM algorithm on 113 clusters.
+
+Likelihood: -2.164247e+03
+
+Rissanen Score: 3.330300e+03
+
+Minimum distance between (2,103). Combining clusters
+Performing EM algorithm on 112 clusters.
+
+Likelihood: -2.164241e+03
+
+Rissanen Score: 3.319945e+03
+
+Minimum distance between (12,101). Combining clusters
+Performing EM algorithm on 111 clusters.
+
+Likelihood: -2.164236e+03
+
+Rissanen Score: 3.309590e+03
+
+Minimum distance between (69,95). Combining clusters
+Performing EM algorithm on 110 clusters.
+
+Likelihood: -2.164217e+03
+
+Rissanen Score: 3.299221e+03
+
+Minimum distance between (36,85). Combining clusters
+Performing EM algorithm on 108 clusters.
+
+Likelihood: -2.164212e+03
+
+Rissanen Score: 3.278517e+03
+
+Minimum distance between (39,72). Combining clusters
+Performing EM algorithm on 107 clusters.
+
+Likelihood: -2.164207e+03
+
+Rissanen Score: 3.268163e+03
+
+Minimum distance between (21,26). Combining clusters
+Performing EM algorithm on 106 clusters.
+
+Likelihood: -2.164202e+03
+
+Rissanen Score: 3.257808e+03
+
+Minimum distance between (46,48). Combining clusters
+Performing EM algorithm on 105 clusters.
+
+Likelihood: -2.164197e+03
+
+Rissanen Score: 3.247453e+03
+
+Minimum distance between (29,32). Combining clusters
+Performing EM algorithm on 104 clusters.
+
+Likelihood: -2.164192e+03
+
+Rissanen Score: 3.237099e+03
+
+Minimum distance between (15,38). Combining clusters
+Performing EM algorithm on 103 clusters.
+
+Likelihood: -2.164187e+03
+
+Rissanen Score: 3.226744e+03
+
+Minimum distance between (73,81). Combining clusters
+Performing EM algorithm on 102 clusters.
+
+Likelihood: -2.164182e+03
+
+Rissanen Score: 3.216390e+03
+
+Minimum distance between (23,96). Combining clusters
+Performing EM algorithm on 101 clusters.
+
+Likelihood: -2.164178e+03
+
+Rissanen Score: 3.206036e+03
+
+Minimum distance between (4,28). Combining clusters
+Performing EM algorithm on 100 clusters.
+
+Likelihood: -2.164173e+03
+
+Rissanen Score: 3.195682e+03
+
+Minimum distance between (45,57). Combining clusters
+Performing EM algorithm on 99 clusters.
+
+Likelihood: -2.164169e+03
+
+Rissanen Score: 3.185328e+03
+
+Minimum distance between (0,92). Combining clusters
+Performing EM algorithm on 98 clusters.
+
+Likelihood: -2.164164e+03
+
+Rissanen Score: 3.174974e+03
+
+Minimum distance between (16,66). Combining clusters
+Performing EM algorithm on 97 clusters.
+
+Likelihood: -2.164160e+03
+
+Rissanen Score: 3.164620e+03
+
+Minimum distance between (11,51). Combining clusters
+Performing EM algorithm on 96 clusters.
+
+Likelihood: -2.164156e+03
+
+Rissanen Score: 3.154266e+03
+
+Minimum distance between (13,32). Combining clusters
+Performing EM algorithm on 95 clusters.
+
+Likelihood: -2.164151e+03
+
+Rissanen Score: 3.143912e+03
+
+Minimum distance between (9,71). Combining clusters
+Performing EM algorithm on 94 clusters.
+
+Likelihood: -2.164147e+03
+
+Rissanen Score: 3.133558e+03
+
+Minimum distance between (24,46). Combining clusters
+Performing EM algorithm on 93 clusters.
+
+Likelihood: -2.164142e+03
+
+Rissanen Score: 3.123204e+03
+
+Minimum distance between (46,61). Combining clusters
+Performing EM algorithm on 92 clusters.
+
+Likelihood: -2.164138e+03
+
+Rissanen Score: 3.112850e+03
+
+Minimum distance between (22,32). Combining clusters
+Performing EM algorithm on 91 clusters.
+
+Likelihood: -2.164134e+03
+
+Rissanen Score: 3.102497e+03
+
+Minimum distance between (7,55). Combining clusters
+Performing EM algorithm on 90 clusters.
+
+Likelihood: -2.164130e+03
+
+Rissanen Score: 3.092143e+03
+
+Minimum distance between (47,67). Combining clusters
+Performing EM algorithm on 89 clusters.
+
+Likelihood: -2.164126e+03
+
+Rissanen Score: 3.081789e+03
+
+Minimum distance between (18,21). Combining clusters
+Performing EM algorithm on 88 clusters.
+
+Likelihood: -2.164122e+03
+
+Rissanen Score: 3.071435e+03
+
+Minimum distance between (36,71). Combining clusters
+Performing EM algorithm on 87 clusters.
+
+Likelihood: -2.164118e+03
+
+Rissanen Score: 3.061082e+03
+
+Minimum distance between (43,62). Combining clusters
+Performing EM algorithm on 86 clusters.
+
+Likelihood: -2.164114e+03
+
+Rissanen Score: 3.050728e+03
+
+Minimum distance between (14,62). Combining clusters
+Performing EM algorithm on 85 clusters.
+
+Likelihood: -2.164110e+03
+
+Rissanen Score: 3.040375e+03
+
+Minimum distance between (41,42). Combining clusters
+Performing EM algorithm on 84 clusters.
+
+Likelihood: -2.164106e+03
+
+Rissanen Score: 3.030021e+03
+
+Minimum distance between (22,40). Combining clusters
+Performing EM algorithm on 83 clusters.
+
+Likelihood: -2.164102e+03
+
+Rissanen Score: 3.019668e+03
+
+Minimum distance between (28,56). Combining clusters
+Performing EM algorithm on 82 clusters.
+
+Likelihood: -2.164098e+03
+
+Rissanen Score: 3.009314e+03
+
+Minimum distance between (16,73). Combining clusters
+Performing EM algorithm on 81 clusters.
+
+Likelihood: -2.164094e+03
+
+Rissanen Score: 2.998961e+03
+
+Minimum distance between (15,35). Combining clusters
+Performing EM algorithm on 80 clusters.
+
+Likelihood: -2.164091e+03
+
+Rissanen Score: 2.988608e+03
+
+Minimum distance between (7,31). Combining clusters
+Performing EM algorithm on 79 clusters.
+
+Likelihood: -2.164087e+03
+
+Rissanen Score: 2.978255e+03
+
+Minimum distance between (9,32). Combining clusters
+Performing EM algorithm on 78 clusters.
+
+Likelihood: -2.164084e+03
+
+Rissanen Score: 2.967902e+03
+
+Minimum distance between (2,21). Combining clusters
+Performing EM algorithm on 77 clusters.
+
+Likelihood: -2.164080e+03
+
+Rissanen Score: 2.957548e+03
+
+Minimum distance between (12,18). Combining clusters
+Performing EM algorithm on 76 clusters.
+
+Likelihood: -2.164077e+03
+
+Rissanen Score: 2.947195e+03
+
+Minimum distance between (13,21). Combining clusters
+Performing EM algorithm on 75 clusters.
+
+Likelihood: -2.164073e+03
+
+Rissanen Score: 2.936843e+03
+
+Minimum distance between (0,11). Combining clusters
+Performing EM algorithm on 74 clusters.
+
+Likelihood: -2.164070e+03
+
+Rissanen Score: 2.926490e+03
+
+Minimum distance between (37,47). Combining clusters
+Performing EM algorithm on 73 clusters.
+
+Likelihood: -2.164067e+03
+
+Rissanen Score: 2.916136e+03
+
+Minimum distance between (19,23). Combining clusters
+Performing EM algorithm on 72 clusters.
+
+Likelihood: -2.164063e+03
+
+Rissanen Score: 2.905783e+03
+
+Minimum distance between (17,51). Combining clusters
+Performing EM algorithm on 71 clusters.
+
+Likelihood: -2.164061e+03
+
+Rissanen Score: 2.895431e+03
+
+Minimum distance between (1,25). Combining clusters
+Performing EM algorithm on 70 clusters.
+
+Likelihood: -2.164057e+03
+
+Rissanen Score: 2.885078e+03
+
+Minimum distance between (7,31). Combining clusters
+Performing EM algorithm on 69 clusters.
+
+Likelihood: -2.164054e+03
+
+Rissanen Score: 2.874725e+03
+
+Minimum distance between (61,64). Combining clusters
+Performing EM algorithm on 68 clusters.
+
+Likelihood: -2.164050e+03
+
+Rissanen Score: 2.864372e+03
+
+Minimum distance between (13,15). Combining clusters
+Performing EM algorithm on 67 clusters.
+
+Likelihood: -2.164046e+03
+
+Rissanen Score: 2.854019e+03
+
+Minimum distance between (4,33). Combining clusters
+Performing EM algorithm on 66 clusters.
+
+Likelihood: -2.164043e+03
+
+Rissanen Score: 2.843666e+03
+
+Minimum distance between (12,14). Combining clusters
+Performing EM algorithm on 65 clusters.
+
+Likelihood: -2.164041e+03
+
+Rissanen Score: 2.833314e+03
+
+Minimum distance between (7,30). Combining clusters
+Performing EM algorithm on 64 clusters.
+
+Likelihood: -2.164041e+03
+
+Rissanen Score: 2.822965e+03
+
+Minimum distance between (2,42). Combining clusters
+Performing EM algorithm on 63 clusters.
+
+Likelihood: -2.164038e+03
+
+Rissanen Score: 2.812612e+03
+
+Minimum distance between (17,21). Combining clusters
+Performing EM algorithm on 62 clusters.
+
+Likelihood: -2.164036e+03
+
+Rissanen Score: 2.802260e+03
+
+Minimum distance between (9,11). Combining clusters
+Performing EM algorithm on 61 clusters.
+
+Likelihood: -2.164032e+03
+
+Rissanen Score: 2.791907e+03
+
+Minimum distance between (0,7). Combining clusters
+Performing EM algorithm on 60 clusters.
+
+Likelihood: -2.164029e+03
+
+Rissanen Score: 2.781554e+03
+
+Minimum distance between (11,26). Combining clusters
+Performing EM algorithm on 59 clusters.
+
+Likelihood: -2.164025e+03
+
+Rissanen Score: 2.771201e+03
+
+Minimum distance between (0,32). Combining clusters
+Performing EM algorithm on 58 clusters.
+
+Likelihood: -2.164026e+03
+
+Rissanen Score: 2.760852e+03
+
+Minimum distance between (1,22). Combining clusters
+Performing EM algorithm on 57 clusters.
+
+Likelihood: -2.164025e+03
+
+Rissanen Score: 2.750501e+03
+
+Minimum distance between (4,15). Combining clusters
+Performing EM algorithm on 56 clusters.
+
+Likelihood: -2.164022e+03
+
+Rissanen Score: 2.740149e+03
+
+Minimum distance between (1,13). Combining clusters
+Performing EM algorithm on 55 clusters.
+
+Likelihood: -2.164018e+03
+
+Rissanen Score: 2.729796e+03
+
+Minimum distance between (8,10). Combining clusters
+Performing EM algorithm on 54 clusters.
+
+Likelihood: -2.164021e+03
+
+Rissanen Score: 2.719449e+03
+
+Minimum distance between (10,14). Combining clusters
+Performing EM algorithm on 53 clusters.
+
+Likelihood: -2.164074e+03
+
+Rissanen Score: 2.709152e+03
+
+Minimum distance between (2,8). Combining clusters
+Performing EM algorithm on 52 clusters.
+
+Likelihood: -2.164071e+03
+
+Rissanen Score: 2.698800e+03
+
+Minimum distance between (25,45). Combining clusters
+Performing EM algorithm on 51 clusters.
+
+Likelihood: -2.164166e+03
+
+Rissanen Score: 2.688545e+03
+
+Minimum distance between (5,26). Combining clusters
+Performing EM algorithm on 50 clusters.
+
+Likelihood: -2.166271e+03
+
+Rissanen Score: 2.680301e+03
+
+Minimum distance between (17,25). Combining clusters
+Performing EM algorithm on 49 clusters.
+
+Likelihood: -2.168068e+03
+
+Rissanen Score: 2.671747e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 48 clusters.
+
+Likelihood: -2.168137e+03
+
+Rissanen Score: 2.661467e+03
+
+Minimum distance between (10,39). Combining clusters
+Performing EM algorithm on 47 clusters.
+
+Likelihood: -2.169559e+03
+
+Rissanen Score: 2.652540e+03
+
+Minimum distance between (1,30). Combining clusters
+Performing EM algorithm on 46 clusters.
+
+Likelihood: -2.170729e+03
+
+Rissanen Score: 2.643361e+03
+
+Minimum distance between (21,33). Combining clusters
+Performing EM algorithm on 45 clusters.
+
+Likelihood: -2.172687e+03
+
+Rissanen Score: 2.634969e+03
+
+Minimum distance between (21,43). Combining clusters
+Performing EM algorithm on 44 clusters.
+
+Likelihood: -2.173331e+03
+
+Rissanen Score: 2.625262e+03
+
+Minimum distance between (21,42). Combining clusters
+Performing EM algorithm on 43 clusters.
+
+Likelihood: -2.174012e+03
+
+Rissanen Score: 2.615594e+03
+
+Minimum distance between (13,25). Combining clusters
+Performing EM algorithm on 42 clusters.
+
+Likelihood: -2.176902e+03
+
+Rissanen Score: 2.608135e+03
+
+Minimum distance between (35,36). Combining clusters
+Performing EM algorithm on 41 clusters.
+
+Likelihood: -2.181045e+03
+
+Rissanen Score: 2.601928e+03
+
+Minimum distance between (16,24). Combining clusters
+Performing EM algorithm on 40 clusters.
+
+Likelihood: -2.182680e+03
+
+Rissanen Score: 2.593213e+03
+
+Minimum distance between (26,35). Combining clusters
+Performing EM algorithm on 39 clusters.
+
+Likelihood: -2.192094e+03
+
+Rissanen Score: 2.592278e+03
+
+Minimum distance between (2,27). Combining clusters
+Performing EM algorithm on 38 clusters.
+
+Likelihood: -2.194768e+03
+
+Rissanen Score: 2.584603e+03
+
+Minimum distance between (2,7). Combining clusters
+Performing EM algorithm on 37 clusters.
+
+Likelihood: -2.195866e+03
+
+Rissanen Score: 2.575351e+03
+
+Minimum distance between (25,32). Combining clusters
+Performing EM algorithm on 36 clusters.
+
+Likelihood: -2.198441e+03
+
+Rissanen Score: 2.567577e+03
+
+Minimum distance between (12,34). Combining clusters
+Performing EM algorithm on 35 clusters.
+
+Likelihood: -2.205527e+03
+
+Rissanen Score: 2.564312e+03
+
+Minimum distance between (3,9). Combining clusters
+Performing EM algorithm on 34 clusters.
+
+Likelihood: -2.205617e+03
+
+Rissanen Score: 2.554053e+03
+
+Minimum distance between (6,23). Combining clusters
+Performing EM algorithm on 33 clusters.
+
+Likelihood: -2.207568e+03
+
+Rissanen Score: 2.545654e+03
+
+Minimum distance between (11,31). Combining clusters
+Performing EM algorithm on 32 clusters.
+
+Likelihood: -2.209224e+03
+
+Rissanen Score: 2.536960e+03
+
+Minimum distance between (14,16). Combining clusters
+Performing EM algorithm on 31 clusters.
+
+Likelihood: -2.211914e+03
+
+Rissanen Score: 2.529301e+03
+
+Minimum distance between (12,24). Combining clusters
+Performing EM algorithm on 30 clusters.
+
+Likelihood: -2.214192e+03
+
+Rissanen Score: 2.521229e+03
+
+Minimum distance between (10,23). Combining clusters
+Performing EM algorithm on 29 clusters.
+
+Likelihood: -2.222517e+03
+
+Rissanen Score: 2.519205e+03
+
+Minimum distance between (8,12). Combining clusters
+Performing EM algorithm on 28 clusters.
+
+Likelihood: -2.223642e+03
+
+Rissanen Score: 2.509980e+03
+
+Minimum distance between (18,21). Combining clusters
+Performing EM algorithm on 27 clusters.
+
+Likelihood: -2.228752e+03
+
+Rissanen Score: 2.504741e+03
+
+Minimum distance between (1,22). Combining clusters
+Performing EM algorithm on 26 clusters.
+
+Likelihood: -2.229302e+03
+
+Rissanen Score: 2.494942e+03
+
+Minimum distance between (19,24). Combining clusters
+Performing EM algorithm on 25 clusters.
+
+Likelihood: -2.233458e+03
+
+Rissanen Score: 2.488748e+03
+
+Minimum distance between (4,13). Combining clusters
+Performing EM algorithm on 24 clusters.
+
+Likelihood: -2.237736e+03
+
+Rissanen Score: 2.482677e+03
+
+Minimum distance between (1,13). Combining clusters
+Performing EM algorithm on 23 clusters.
+
+Likelihood: -2.241798e+03
+
+Rissanen Score: 2.476388e+03
+
+Minimum distance between (20,22). Combining clusters
+Performing EM algorithm on 22 clusters.
+
+Likelihood: -2.244484e+03
+
+Rissanen Score: 2.468725e+03
+
+Minimum distance between (3,5). Combining clusters
+Performing EM algorithm on 21 clusters.
+
+Likelihood: -2.253930e+03
+
+Rissanen Score: 2.467822e+03
+
+Minimum distance between (3,6). Combining clusters
+Performing EM algorithm on 20 clusters.
+
+Likelihood: -2.255091e+03
+
+Rissanen Score: 2.458633e+03
+
+Minimum distance between (16,17). Combining clusters
+Performing EM algorithm on 19 clusters.
+
+Likelihood: -2.258557e+03
+
+Rissanen Score: 2.451749e+03
+
+Minimum distance between (8,18). Combining clusters
+Performing EM algorithm on 18 clusters.
+
+Likelihood: -2.261529e+03
+
+Rissanen Score: 2.444372e+03
+
+Minimum distance between (6,12). Combining clusters
+Performing EM algorithm on 17 clusters.
+
+Likelihood: -2.264070e+03
+
+Rissanen Score: 2.436563e+03
+
+Minimum distance between (11,15). Combining clusters
+Performing EM algorithm on 16 clusters.
+
+Likelihood: -2.276114e+03
+
+Rissanen Score: 2.438257e+03
+
+Minimum distance between (2,15). Combining clusters
+Performing EM algorithm on 15 clusters.
+
+Likelihood: -2.279570e+03
+
+Rissanen Score: 2.431364e+03
+
+Minimum distance between (5,12). Combining clusters
+Performing EM algorithm on 14 clusters.
+
+Likelihood: -2.288031e+03
+
+Rissanen Score: 2.429475e+03
+
+Minimum distance between (8,11). Combining clusters
+Performing EM algorithm on 13 clusters.
+
+Likelihood: -2.292047e+03
+
+Rissanen Score: 2.423142e+03
+
+Minimum distance between (0,6). Combining clusters
+Performing EM algorithm on 12 clusters.
+
+Likelihood: -2.293448e+03
+
+Rissanen Score: 2.414193e+03
+
+Minimum distance between (6,10). Combining clusters
+Performing EM algorithm on 11 clusters.
+
+Likelihood: -2.306116e+03
+
+Rissanen Score: 2.416512e+03
+
+Minimum distance between (6,10). Combining clusters
+Performing EM algorithm on 10 clusters.
+
+Likelihood: -2.312319e+03
+
+Rissanen Score: 2.412365e+03
+
+Minimum distance between (2,6). Combining clusters
+Performing EM algorithm on 9 clusters.
+
+Likelihood: -2.313853e+03
+
+Rissanen Score: 2.403549e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 8 clusters.
+
+Likelihood: -2.315212e+03
+
+Rissanen Score: 2.394559e+03
+
+Minimum distance between (0,7). Combining clusters
+Performing EM algorithm on 7 clusters.
+
+Likelihood: -2.323905e+03
+
+Rissanen Score: 2.392903e+03
+
+Minimum distance between (3,6). Combining clusters
+Performing EM algorithm on 6 clusters.
+
+Likelihood: -2.330116e+03
+
+Rissanen Score: 2.388764e+03
+
+Minimum distance between (2,4). Combining clusters
+Performing EM algorithm on 5 clusters.
+
+Likelihood: -2.334117e+03
+
+Rissanen Score: 2.382415e+03
+
+Minimum distance between (3,4). Combining clusters
+Performing EM algorithm on 4 clusters.
+
+Likelihood: -2.335928e+03
+
+Rissanen Score: 2.373876e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 3 clusters.
+
+Likelihood: -2.340956e+03
+
+Rissanen Score: 2.368555e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 2 clusters.
+
+Likelihood: -2.383972e+03
+
+Rissanen Score: 2.401221e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 1 clusters.
+
+Likelihood: -2.502673e+03
+
+Rissanen Score: 2.509572e+03
+
+Final rissanen Score was: 614.833496, with 500 clusters.
+Summary filename: result.summary
+Results filename: result.results
+Cluster #0
+Probability: 0.004450
+N: 0.004385
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #1
+Probability: 0.004234
+N: 0.004176
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #2
+Probability: 0.004425
+N: 0.004360
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #3
+Probability: 0.004305
+N: 0.004244
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #4
+Probability: 0.009249
+N: 0.009101
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #5
+Probability: 0.002431
+N: 0.002395
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #6
+Probability: 0.001862
+N: 0.001833
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #7
+Probability: 0.010468
+N: 0.010188
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #8
+Probability: 0.004004
+N: 0.003942
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #9
+Probability: 0.003349
+N: 0.003298
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #10
+Probability: 0.003687
+N: 0.003629
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #11
+Probability: 0.001242
+N: 0.001225
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #12
+Probability: 0.006579
+N: 0.006474
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #13
+Probability: 0.004315
+N: 0.004252
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #14
+Probability: 0.004380
+N: 0.004318
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #15
+Probability: 0.004632
+N: 0.004565
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #16
+Probability: 0.002531
+N: 0.002515
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #17
+Probability: 0.003814
+N: 0.003755
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #18
+Probability: 0.000554
+N: 0.000547
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #19
+Probability: 0.004579
+N: 0.004513
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #20
+Probability: 0.004012
+N: 0.003951
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #21
+Probability: 0.002488
+N: 0.002448
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #22
+Probability: 0.004421
+N: 0.004358
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #23
+Probability: 0.004243
+N: 0.004184
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #24
+Probability: 0.001639
+N: 0.001613
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #25
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #26
+Probability: 0.003732
+N: 0.003664
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #27
+Probability: 0.001970
+N: 0.001942
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #28
+Probability: 0.004324
+N: 0.004263
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #29
+Probability: 0.004366
+N: 0.004297
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #30
+Probability: 0.002811
+N: 0.002793
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #31
+Probability: 0.004629
+N: 0.004563
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #32
+Probability: 0.022004
+N: 0.021665
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #33
+Probability: 0.004319
+N: 0.004287
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #34
+Probability: 0.004465
+N: 0.004402
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #35
+Probability: 0.004448
+N: 0.004385
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #36
+Probability: 0.004361
+N: 0.004297
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #37
+Probability: 0.002068
+N: 0.002038
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #38
+Probability: 0.004156
+N: 0.004091
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #39
+Probability: 0.005216
+N: 0.005144
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #40
+Probability: 0.001781
+N: 0.001753
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #41
+Probability: 0.004170
+N: 0.004105
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #42
+Probability: 0.002448
+N: 0.002412
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #43
+Probability: 0.003891
+N: 0.003830
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #44
+Probability: 0.017304
+N: 0.016928
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #45
+Probability: 0.004183
+N: 0.004118
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #46
+Probability: 0.004246
+N: 0.004190
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #47
+Probability: 0.004623
+N: 0.004556
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #48
+Probability: 0.004339
+N: 0.004278
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #49
+Probability: 0.003090
+N: 0.003043
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #50
+Probability: 0.004333
+N: 0.004272
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #51
+Probability: 0.004145
+N: 0.004081
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #52
+Probability: 0.004725
+N: 0.004650
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #53
+Probability: 0.004575
+N: 0.004509
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #54
+Probability: 0.004628
+N: 0.004561
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #55
+Probability: 0.001121
+N: 0.001104
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #56
+Probability: 0.004608
+N: 0.004541
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #57
+Probability: 0.002340
+N: 0.002306
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #58
+Probability: 0.004628
+N: 0.004561
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #59
+Probability: 0.002180
+N: 0.002146
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #60
+Probability: 0.000715
+N: 0.000706
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #61
+Probability: 0.004042
+N: 0.004017
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #62
+Probability: 0.003707
+N: 0.003648
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #63
+Probability: 0.002963
+N: 0.002922
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #64
+Probability: 0.004547
+N: 0.004481
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #65
+Probability: 0.004445
+N: 0.004382
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #66
+Probability: 0.003183
+N: 0.003140
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #67
+Probability: 0.001370
+N: 0.001349
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #68
+Probability: 0.004153
+N: 0.004089
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #69
+Probability: 0.004428
+N: 0.004363
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #70
+Probability: 0.004300
+N: 0.004275
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #71
+Probability: 0.007388
+N: 0.007240
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #72
+Probability: 0.003133
+N: 0.003112
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #73
+Probability: 0.004225
+N: 0.004159
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #74
+Probability: 0.004007
+N: 0.003947
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #75
+Probability: 0.004244
+N: 0.004178
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #76
+Probability: 0.003836
+N: 0.003779
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #77
+Probability: 0.003902
+N: 0.003842
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #78
+Probability: 0.004621
+N: 0.004555
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #79
+Probability: 0.003997
+N: 0.003973
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #80
+Probability: 0.002946
+N: 0.002901
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #81
+Probability: 0.006052
+N: 0.005848
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #82
+Probability: 0.004442
+N: 0.004379
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #83
+Probability: 0.002189
+N: 0.002154
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #84
+Probability: 0.004224
+N: 0.004162
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #85
+Probability: 0.002685
+N: 0.002643
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #86
+Probability: 0.003835
+N: 0.003776
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #87
+Probability: 0.002804
+N: 0.002761
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #88
+Probability: 0.003685
+N: 0.003625
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #89
+Probability: 0.002163
+N: 0.002129
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #90
+Probability: 0.018551
+N: 0.018271
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #91
+Probability: 0.004304
+N: 0.004237
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #92
+Probability: 0.009821
+N: 0.009559
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #93
+Probability: 0.003754
+N: 0.003698
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #94
+Probability: 0.002095
+N: 0.002062
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #95
+Probability: 0.004307
+N: 0.004275
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #96
+Probability: 0.002520
+N: 0.002480
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #97
+Probability: 0.002261
+N: 0.002225
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #98
+Probability: 0.011018
+N: 0.010721
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #99
+Probability: 0.002734
+N: 0.002719
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #100
+Probability: 0.003528
+N: 0.003475
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #101
+Probability: 0.001418
+N: 0.001397
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #102
+Probability: 0.009191
+N: 0.008944
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #103
+Probability: 0.002308
+N: 0.002272
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #104
+Probability: 0.004632
+N: 0.004565
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #105
+Probability: 0.004235
+N: 0.004176
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #106
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #107
+Probability: 0.002342
+N: 0.002306
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #108
+Probability: 0.002282
+N: 0.002249
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #109
+Probability: 0.004630
+N: 0.004563
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #110
+Probability: 0.003920
+N: 0.003897
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #111
+Probability: 0.004210
+N: 0.004145
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #112
+Probability: 0.002351
+N: 0.002314
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #113
+Probability: 0.002107
+N: 0.002074
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #114
+Probability: 0.006699
+N: 0.006568
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #115
+Probability: 0.003520
+N: 0.003467
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #116
+Probability: 0.002960
+N: 0.002913
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #117
+Probability: 0.005380
+N: 0.005266
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #118
+Probability: 0.002975
+N: 0.002930
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #119
+Probability: 0.004108
+N: 0.004047
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #120
+Probability: 0.004123
+N: 0.004060
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #121
+Probability: 0.004590
+N: 0.004524
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #122
+Probability: 0.004044
+N: 0.003982
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #123
+Probability: 0.004631
+N: 0.004564
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #124
+Probability: 0.002884
+N: 0.002842
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #125
+Probability: 0.003679
+N: 0.003620
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #126
+Probability: 0.002761
+N: 0.002722
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #127
+Probability: 0.007227
+N: 0.007098
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #128
+Probability: 0.004549
+N: 0.004485
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #129
+Probability: 0.004301
+N: 0.004238
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #130
+Probability: 0.004291
+N: 0.004224
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #131
+Probability: 0.003992
+N: 0.003931
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #132
+Probability: 0.004301
+N: 0.004240
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #133
+Probability: 0.004443
+N: 0.004380
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #134
+Probability: 0.001210
+N: 0.001196
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #135
+Probability: 0.004320
+N: 0.004257
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #136
+Probability: 0.003686
+N: 0.003631
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #137
+Probability: 0.004241
+N: 0.004181
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #138
+Probability: 0.004502
+N: 0.004438
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #139
+Probability: 0.004577
+N: 0.004511
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #140
+Probability: 0.001492
+N: 0.001469
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #141
+Probability: 0.004541
+N: 0.004477
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #142
+Probability: 0.004614
+N: 0.004547
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #143
+Probability: 0.003752
+N: 0.003693
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #144
+Probability: 0.001478
+N: 0.001455
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #145
+Probability: 0.001527
+N: 0.001503
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #146
+Probability: 0.002019
+N: 0.001987
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #147
+Probability: 0.004464
+N: 0.004401
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #148
+Probability: 0.004288
+N: 0.004225
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #149
+Probability: 0.004469
+N: 0.004420
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #150
+Probability: 0.002255
+N: 0.002220
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #151
+Probability: 0.003910
+N: 0.003851
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #152
+Probability: 0.004173
+N: 0.004111
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #153
+Probability: 0.005240
+N: 0.005166
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #154
+Probability: 0.001297
+N: 0.001277
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #155
+Probability: 0.003658
+N: 0.003638
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #156
+Probability: 0.004349
+N: 0.004287
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #157
+Probability: 0.003210
+N: 0.003157
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #158
+Probability: 0.004389
+N: 0.004359
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #159
+Probability: 0.003969
+N: 0.003908
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #160
+Probability: 0.005290
+N: 0.005210
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #161
+Probability: 0.003714
+N: 0.003655
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #162
+Probability: 0.000872
+N: 0.000860
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #163
+Probability: 0.003166
+N: 0.003123
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #164
+Probability: 0.004373
+N: 0.004305
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #165
+Probability: 0.004932
+N: 0.004878
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #166
+Probability: 0.034322
+N: 0.033816
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #167
+Probability: 0.001670
+N: 0.001648
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #168
+Probability: 0.004627
+N: 0.004560
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #169
+Probability: 0.004855
+N: 0.004816
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #170
+Probability: 0.002805
+N: 0.002761
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #171
+Probability: 0.004599
+N: 0.004532
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #172
+Probability: 0.002980
+N: 0.002936
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #173
+Probability: 0.001339
+N: 0.001318
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #174
+Probability: 0.002792
+N: 0.002753
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #175
+Probability: 0.003312
+N: 0.003256
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #176
+Probability: 0.004536
+N: 0.004469
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #177
+Probability: 0.002979
+N: 0.002935
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #178
+Probability: 0.002484
+N: 0.002449
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #179
+Probability: 0.004624
+N: 0.004557
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #180
+Probability: 0.001597
+N: 0.001572
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #181
+Probability: 0.001849
+N: 0.001820
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #182
+Probability: 0.002014
+N: 0.001983
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #183
+Probability: 0.001350
+N: 0.001329
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #184
+Probability: 0.004625
+N: 0.004558
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #185
+Probability: 0.001317
+N: 0.001297
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #186
+Probability: 0.002811
+N: 0.002793
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #187
+Probability: 0.004125
+N: 0.004061
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #188
+Probability: 0.002253
+N: 0.002221
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #189
+Probability: 0.004612
+N: 0.004546
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #190
+Probability: 0.004080
+N: 0.004017
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #191
+Probability: 0.004028
+N: 0.003966
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #192
+Probability: 0.004370
+N: 0.004301
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #193
+Probability: 0.004397
+N: 0.004334
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #194
+Probability: 0.004612
+N: 0.004545
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #195
+Probability: 0.004081
+N: 0.004035
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #196
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #197
+Probability: 0.004732
+N: 0.004711
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #198
+Probability: 0.002687
+N: 0.002645
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #199
+Probability: 0.004198
+N: 0.004133
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #200
+Probability: 0.004313
+N: 0.004252
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #201
+Probability: 0.004153
+N: 0.004089
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #202
+Probability: 0.004426
+N: 0.004361
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #203
+Probability: 0.004194
+N: 0.004129
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #204
+Probability: 0.004633
+N: 0.004566
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #205
+Probability: 0.003363
+N: 0.003312
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #206
+Probability: 0.003536
+N: 0.003492
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #207
+Probability: 0.013728
+N: 0.013521
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #208
+Probability: 0.001070
+N: 0.001054
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #209
+Probability: 0.004485
+N: 0.004419
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #210
+Probability: 0.004540
+N: 0.004476
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #211
+Probability: 0.003784
+N: 0.003763
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #212
+Probability: 0.003749
+N: 0.003691
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #213
+Probability: 0.001346
+N: 0.001325
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #214
+Probability: 0.001484
+N: 0.001461
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #215
+Probability: 0.008234
+N: 0.008067
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #216
+Probability: 0.001160
+N: 0.001154
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #217
+Probability: 0.003771
+N: 0.003713
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #218
+Probability: 0.004618
+N: 0.004551
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #219
+Probability: 0.002472
+N: 0.002438
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #220
+Probability: 0.004306
+N: 0.004245
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #221
+Probability: 0.001507
+N: 0.001483
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #222
+Probability: 0.003812
+N: 0.003753
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #223
+Probability: 0.001390
+N: 0.001371
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #224
+Probability: 0.004365
+N: 0.004297
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #225
+Probability: 0.003099
+N: 0.003051
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #226
+Probability: 0.004258
+N: 0.004199
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #227
+Probability: 0.002782
+N: 0.002738
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #228
+Probability: 0.003404
+N: 0.003350
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #229
+Probability: 0.004544
+N: 0.004479
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #230
+Probability: 0.004438
+N: 0.004409
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #231
+Probability: 0.004588
+N: 0.004565
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #232
+Probability: 0.004328
+N: 0.004260
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #233
+Probability: 0.004600
+N: 0.004534
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #234
+Probability: 0.004424
+N: 0.004362
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #235
+Probability: 0.004537
+N: 0.004471
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #236
+Probability: 0.002436
+N: 0.002400
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #237
+Probability: 0.004581
+N: 0.004516
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #238
+Probability: 0.004257
+N: 0.004190
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #239
+Probability: 0.005371
+N: 0.005358
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #240
+Probability: 0.003844
+N: 0.003790
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #241
+Probability: 0.001300
+N: 0.001280
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #242
+Probability: 0.004008
+N: 0.003928
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #243
+Probability: 0.004593
+N: 0.004526
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #244
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #245
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #246
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #247
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #248
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #249
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #250
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #251
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #252
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #253
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #254
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #255
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #256
+Probability: 4.414670
+N: 4.414670
+Means: -2.403068 
+
+R Matrix:
+0.552616 
+
+
+Cluster #257
+Probability: 4.199677
+N: 4.199677
+Means: -1.252480 
+
+R Matrix:
+0.378857 
+
+
+Cluster #258
+Probability: 4.389122
+N: 4.389122
+Means: -2.418648 
+
+R Matrix:
+0.539666 
+
+
+Cluster #259
+Probability: 4.270723
+N: 4.270723
+Means: -1.531884 
+
+R Matrix:
+0.454863 
+
+
+Cluster #260
+Probability: 9.174873
+N: 9.174873
+Means: 5.203215 
+
+R Matrix:
+0.002997 
+
+
+Cluster #261
+Probability: 2.411663
+N: 2.411663
+Means: 6.159831 
+
+R Matrix:
+0.494871 
+
+
+Cluster #262
+Probability: 1.847399
+N: 1.847399
+Means: 3.398333 
+
+R Matrix:
+1.025771 
+
+
+Cluster #263
+Probability: 10.384675
+N: 10.384675
+Means: 1.126001 
+
+R Matrix:
+0.012721 
+
+
+Cluster #264
+Probability: 3.972232
+N: 3.972232
+Means: 3.058572 
+
+R Matrix:
+0.453762 
+
+
+Cluster #265
+Probability: 3.321779
+N: 3.321779
+Means: -2.867530 
+
+R Matrix:
+0.609537 
+
+
+Cluster #266
+Probability: 3.657928
+N: 3.657928
+Means: 2.249562 
+
+R Matrix:
+0.366889 
+
+
+Cluster #267
+Probability: 1.232559
+N: 1.232559
+Means: -1.781038 
+
+R Matrix:
+0.672593 
+
+
+Cluster #268
+Probability: 6.526820
+N: 6.526820
+Means: 5.206336 
+
+R Matrix:
+0.002939 
+
+
+Cluster #269
+Probability: 4.280571
+N: 4.280571
+Means: -2.469501 
+
+R Matrix:
+0.516711 
+
+
+Cluster #270
+Probability: 4.344574
+N: 4.344574
+Means: -1.638122 
+
+R Matrix:
+0.488889 
+
+
+Cluster #271
+Probability: 4.594843
+N: 4.594843
+Means: -2.107623 
+
+R Matrix:
+0.641364 
+
+
+Cluster #272
+Probability: 2.510966
+N: 2.510966
+Means: 1.713768 
+
+R Matrix:
+0.128549 
+
+
+Cluster #273
+Probability: 3.783330
+N: 3.783330
+Means: 2.399238 
+
+R Matrix:
+0.457653 
+
+
+Cluster #274
+Probability: 0.549214
+N: 0.549214
+Means: -1.522217 
+
+R Matrix:
+1.161130 
+
+
+Cluster #275
+Probability: 4.542765
+N: 4.542765
+Means: -2.264573 
+
+R Matrix:
+0.636003 
+
+
+Cluster #276
+Probability: 3.980293
+N: 3.980293
+Means: 2.554978 
+
+R Matrix:
+0.530290 
+
+
+Cluster #277
+Probability: 2.467642
+N: 2.467642
+Means: -3.380331 
+
+R Matrix:
+0.408137 
+
+
+Cluster #278
+Probability: 4.385837
+N: 4.385837
+Means: -1.689919 
+
+R Matrix:
+0.506301 
+
+
+Cluster #279
+Probability: 4.209239
+N: 4.209239
+Means: -1.388417 
+
+R Matrix:
+0.412953 
+
+
+Cluster #280
+Probability: 1.625414
+N: 1.625414
+Means: 3.734028 
+
+R Matrix:
+1.211336 
+
+
+Cluster #281
+Probability: 0.321148
+N: 0.321148
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #282
+Probability: 3.702384
+N: 3.702384
+Means: 4.614394 
+
+R Matrix:
+0.068798 
+
+
+Cluster #283
+Probability: 1.953770
+N: 1.953770
+Means: -1.715555 
+
+R Matrix:
+0.540196 
+
+
+Cluster #284
+Probability: 4.289435
+N: 4.289435
+Means: -1.561663 
+
+R Matrix:
+0.464172 
+
+
+Cluster #285
+Probability: 4.330862
+N: 4.330862
+Means: 2.967977 
+
+R Matrix:
+0.501330 
+
+
+Cluster #286
+Probability: 2.788271
+N: 2.788271
+Means: 1.651895 
+
+R Matrix:
+0.166062 
+
+
+Cluster #287
+Probability: 4.592118
+N: 4.592118
+Means: -2.037783 
+
+R Matrix:
+0.626124 
+
+
+Cluster #288
+Probability: 21.827848
+N: 21.827848
+Means: 6.224323 
+
+R Matrix:
+0.005342 
+
+
+Cluster #289
+Probability: 4.284923
+N: 4.284923
+Means: 1.767673 
+
+R Matrix:
+0.135607 
+
+
+Cluster #290
+Probability: 4.429646
+N: 4.429646
+Means: -1.743675 
+
+R Matrix:
+0.524946 
+
+
+Cluster #291
+Probability: 4.412470
+N: 4.412470
+Means: -1.722576 
+
+R Matrix:
+0.517559 
+
+
+Cluster #292
+Probability: 4.326334
+N: 4.326334
+Means: -2.449819 
+
+R Matrix:
+0.520685 
+
+
+Cluster #293
+Probability: 2.051119
+N: 2.051119
+Means: -1.689315 
+
+R Matrix:
+0.523380 
+
+
+Cluster #294
+Probability: 4.122531
+N: 4.122531
+Means: 3.072076 
+
+R Matrix:
+0.442413 
+
+
+Cluster #295
+Probability: 5.173807
+N: 5.173807
+Means: 1.697405 
+
+R Matrix:
+0.055113 
+
+
+Cluster #296
+Probability: 1.766940
+N: 1.766940
+Means: 3.490770 
+
+R Matrix:
+1.103086 
+
+
+Cluster #297
+Probability: 4.136552
+N: 4.136552
+Means: 2.698395 
+
+R Matrix:
+0.563158 
+
+
+Cluster #298
+Probability: 2.428268
+N: 2.428268
+Means: 6.252265 
+
+R Matrix:
+0.448609 
+
+
+Cluster #299
+Probability: 3.860066
+N: 3.860066
+Means: 3.044580 
+
+R Matrix:
+0.465136 
+
+
+Cluster #300
+Probability: 17.165455
+N: 17.165455
+Means: 0.461682 
+
+R Matrix:
+0.006316 
+
+
+Cluster #301
+Probability: 4.149809
+N: 4.149809
+Means: 2.712615 
+
+R Matrix:
+0.564083 
+
+
+Cluster #302
+Probability: 4.212053
+N: 4.212053
+Means: -1.188833 
+
+R Matrix:
+0.364564 
+
+
+Cluster #303
+Probability: 4.585690
+N: 4.585690
+Means: -2.162167 
+
+R Matrix:
+0.647031 
+
+
+Cluster #304
+Probability: 4.304258
+N: 4.304258
+Means: -1.583531 
+
+R Matrix:
+0.471122 
+
+
+Cluster #305
+Probability: 3.065119
+N: 3.065119
+Means: -2.971343 
+
+R Matrix:
+0.576028 
+
+
+Cluster #306
+Probability: 4.298440
+N: 4.298440
+Means: -1.575100 
+
+R Matrix:
+0.468430 
+
+
+Cluster #307
+Probability: 4.111835
+N: 4.111835
+Means: 2.672841 
+
+R Matrix:
+0.560347 
+
+
+Cluster #308
+Probability: 4.687138
+N: 4.687138
+Means: -4.626362 
+
+R Matrix:
+0.166733 
+
+
+Cluster #309
+Probability: 4.538136
+N: 4.538136
+Means: -1.894444 
+
+R Matrix:
+0.579346 
+
+
+Cluster #310
+Probability: 4.591055
+N: 4.591055
+Means: -2.137499 
+
+R Matrix:
+0.645273 
+
+
+Cluster #311
+Probability: 1.111622
+N: 1.111622
+Means: 2.297687 
+
+R Matrix:
+0.471779 
+
+
+Cluster #312
+Probability: 4.570972
+N: 4.570972
+Means: -2.206954 
+
+R Matrix:
+0.646237 
+
+
+Cluster #313
+Probability: 2.321142
+N: 2.321142
+Means: 6.175399 
+
+R Matrix:
+0.441642 
+
+
+Cluster #314
+Probability: 4.591194
+N: 4.591194
+Means: -2.136669 
+
+R Matrix:
+0.645189 
+
+
+Cluster #315
+Probability: 2.162604
+N: 2.162604
+Means: 5.841254 
+
+R Matrix:
+0.556794 
+
+
+Cluster #316
+Probability: 0.709620
+N: 0.709620
+Means: -1.663589 
+
+R Matrix:
+0.903096 
+
+
+Cluster #317
+Probability: 4.010015
+N: 4.010015
+Means: 1.622304 
+
+R Matrix:
+0.173848 
+
+
+Cluster #318
+Probability: 3.677094
+N: 3.677094
+Means: 2.285065 
+
+R Matrix:
+0.389357 
+
+
+Cluster #319
+Probability: 2.939222
+N: 2.939222
+Means: -1.347368 
+
+R Matrix:
+0.402258 
+
+
+Cluster #320
+Probability: 4.510572
+N: 4.510572
+Means: -2.312791 
+
+R Matrix:
+0.617363 
+
+
+Cluster #321
+Probability: 4.409086
+N: 4.409086
+Means: -1.718429 
+
+R Matrix:
+0.516118 
+
+
+Cluster #322
+Probability: 3.157810
+N: 3.157810
+Means: -1.232910 
+
+R Matrix:
+0.374452 
+
+
+Cluster #323
+Probability: 1.358977
+N: 1.358977
+Means: 5.443154 
+
+R Matrix:
+0.753359 
+
+
+Cluster #324
+Probability: 4.120049
+N: 4.120049
+Means: 2.681197 
+
+R Matrix:
+0.561425 
+
+
+Cluster #325
+Probability: 4.392680
+N: 4.392680
+Means: -2.416611 
+
+R Matrix:
+0.541292 
+
+
+Cluster #326
+Probability: 4.265979
+N: 4.265979
+Means: 0.879173 
+
+R Matrix:
+0.049850 
+
+
+Cluster #327
+Probability: 7.329350
+N: 7.329350
+Means: -0.512504 
+
+R Matrix:
+0.081217 
+
+
+Cluster #328
+Probability: 3.107735
+N: 3.107735
+Means: 0.973264 
+
+R Matrix:
+0.065453 
+
+
+Cluster #329
+Probability: 4.191186
+N: 4.191186
+Means: 2.759404 
+
+R Matrix:
+0.563793 
+
+
+Cluster #330
+Probability: 3.974817
+N: 3.974817
+Means: -2.607447 
+
+R Matrix:
+0.587398 
+
+
+Cluster #331
+Probability: 4.210071
+N: 4.210071
+Means: 2.782032 
+
+R Matrix:
+0.561776 
+
+
+Cluster #332
+Probability: 3.805494
+N: 3.805494
+Means: -2.685170 
+
+R Matrix:
+0.623967 
+
+
+Cluster #333
+Probability: 3.871055
+N: 3.871055
+Means: 2.469856 
+
+R Matrix:
+0.494305 
+
+
+Cluster #334
+Probability: 4.583999
+N: 4.583999
+Means: -2.000228 
+
+R Matrix:
+0.615290 
+
+
+Cluster #335
+Probability: 3.965430
+N: 3.965430
+Means: 1.613382 
+
+R Matrix:
+0.175686 
+
+
+Cluster #336
+Probability: 2.922235
+N: 2.922235
+Means: -3.036462 
+
+R Matrix:
+0.552215 
+
+
+Cluster #337
+Probability: 6.003657
+N: 6.003657
+Means: 1.706536 
+
+R Matrix:
+0.029043 
+
+
+Cluster #338
+Probability: 4.406748
+N: 4.406748
+Means: -1.715572 
+
+R Matrix:
+0.515126 
+
+
+Cluster #339
+Probability: 2.171104
+N: 2.171104
+Means: 3.173810 
+
+R Matrix:
+0.795749 
+
+
+Cluster #340
+Probability: 4.190651
+N: 4.190651
+Means: -2.507088 
+
+R Matrix:
+0.525448 
+
+
+Cluster #341
+Probability: 2.663292
+N: 2.663292
+Means: -3.182852 
+
+R Matrix:
+0.494143 
+
+
+Cluster #342
+Probability: 3.804078
+N: 3.804078
+Means: 2.416713 
+
+R Matrix:
+0.467209 
+
+
+Cluster #343
+Probability: 2.781954
+N: 2.781954
+Means: -3.109283 
+
+R Matrix:
+0.523966 
+
+
+Cluster #344
+Probability: 3.655674
+N: 3.655674
+Means: 2.126284 
+
+R Matrix:
+0.293962 
+
+
+Cluster #345
+Probability: 2.145955
+N: 2.145955
+Means: 5.817121 
+
+R Matrix:
+0.563973 
+
+
+Cluster #346
+Probability: 18.402901
+N: 18.402901
+Means: 5.512380 
+
+R Matrix:
+0.006368 
+
+
+Cluster #347
+Probability: 4.269281
+N: 4.269281
+Means: 3.067071 
+
+R Matrix:
+0.443983 
+
+
+Cluster #348
+Probability: 9.742155
+N: 9.742155
+Means: 1.122294 
+
+R Matrix:
+0.012696 
+
+
+Cluster #349
+Probability: 3.724314
+N: 3.724314
+Means: -2.718055 
+
+R Matrix:
+0.630431 
+
+
+Cluster #350
+Probability: 2.078104
+N: 2.078104
+Means: 5.712216 
+
+R Matrix:
+0.601607 
+
+
+Cluster #351
+Probability: 4.272758
+N: 4.272758
+Means: 1.771101 
+
+R Matrix:
+0.139115 
+
+
+Cluster #352
+Probability: 2.499696
+N: 2.499696
+Means: -3.330500 
+
+R Matrix:
+0.430899 
+
+
+Cluster #353
+Probability: 2.242769
+N: 2.242769
+Means: 3.139834 
+
+R Matrix:
+0.762870 
+
+
+Cluster #354
+Probability: 10.929640
+N: 10.929640
+Means: 1.129514 
+
+R Matrix:
+0.012729 
+
+
+Cluster #355
+Probability: 2.712572
+N: 2.712572
+Means: 1.544460 
+
+R Matrix:
+0.185605 
+
+
+Cluster #356
+Probability: 3.499866
+N: 3.499866
+Means: -2.801344 
+
+R Matrix:
+0.625534 
+
+
+Cluster #357
+Probability: 1.406689
+N: 1.406689
+Means: 4.968568 
+
+R Matrix:
+0.512143 
+
+
+Cluster #358
+Probability: 9.117123
+N: 9.117123
+Means: 1.128199 
+
+R Matrix:
+0.012729 
+
+
+Cluster #359
+Probability: 2.289634
+N: 2.289634
+Means: 6.013131 
+
+R Matrix:
+0.519857 
+
+
+Cluster #360
+Probability: 4.595203
+N: 4.595203
+Means: -2.102415 
+
+R Matrix:
+0.640502 
+
+
+Cluster #361
+Probability: 4.201266
+N: 4.201266
+Means: -1.347721 
+
+R Matrix:
+0.402133 
+
+
+Cluster #362
+Probability: 0.388284
+N: 0.388284
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #363
+Probability: 2.323385
+N: 2.323385
+Means: 6.055569 
+
+R Matrix:
+0.512905 
+
+
+Cluster #364
+Probability: 2.264112
+N: 2.264112
+Means: 6.127705 
+
+R Matrix:
+0.430046 
+
+
+Cluster #365
+Probability: 4.592593
+N: 4.592593
+Means: -2.040991 
+
+R Matrix:
+0.626977 
+
+
+Cluster #366
+Probability: 3.888771
+N: 3.888771
+Means: 1.597628 
+
+R Matrix:
+0.178513 
+
+
+Cluster #367
+Probability: 4.176557
+N: 4.176557
+Means: 2.742449 
+
+R Matrix:
+0.564498 
+
+
+Cluster #368
+Probability: 2.332252
+N: 2.332252
+Means: 3.102656 
+
+R Matrix:
+0.727528 
+
+
+Cluster #369
+Probability: 2.090387
+N: 2.090387
+Means: 5.732193 
+
+R Matrix:
+0.593706 
+
+
+Cluster #370
+Probability: 6.645512
+N: 6.645512
+Means: -0.529691 
+
+R Matrix:
+0.085508 
+
+
+Cluster #371
+Probability: 3.491496
+N: 3.491496
+Means: -2.804397 
+
+R Matrix:
+0.624955 
+
+
+Cluster #372
+Probability: 2.936292
+N: 2.936292
+Means: 2.974864 
+
+R Matrix:
+0.581440 
+
+
+Cluster #373
+Probability: 5.336839
+N: 5.336839
+Means: 1.710318 
+
+R Matrix:
+0.041386 
+
+
+Cluster #374
+Probability: 2.951301
+N: 2.951301
+Means: -3.022622 
+
+R Matrix:
+0.557407 
+
+
+Cluster #375
+Probability: 4.074890
+N: 4.074890
+Means: -2.559077 
+
+R Matrix:
+0.555764 
+
+
+Cluster #376
+Probability: 4.090206
+N: 4.090206
+Means: 2.651469 
+
+R Matrix:
+0.556908 
+
+
+Cluster #377
+Probability: 4.553169
+N: 4.553169
+Means: -1.922112 
+
+R Matrix:
+0.589224 
+
+
+Cluster #378
+Probability: 4.011630
+N: 4.011630
+Means: 2.580785 
+
+R Matrix:
+0.539048 
+
+
+Cluster #379
+Probability: 4.593583
+N: 4.593583
+Means: -2.048443 
+
+R Matrix:
+0.628909 
+
+
+Cluster #380
+Probability: 2.860447
+N: 2.860447
+Means: 6.513976 
+
+R Matrix:
+0.392852 
+
+
+Cluster #381
+Probability: 3.649860
+N: 3.649860
+Means: 2.143281 
+
+R Matrix:
+0.302807 
+
+
+Cluster #382
+Probability: 2.738963
+N: 2.738963
+Means: -1.444776 
+
+R Matrix:
+0.429423 
+
+
+Cluster #383
+Probability: 7.169654
+N: 7.169654
+Means: 7.347024 
+
+R Matrix:
+0.186451 
+
+
+Cluster #384
+Probability: 4.512962
+N: 4.512962
+Means: -1.854189 
+
+R Matrix:
+0.564739 
+
+
+Cluster #385
+Probability: 4.266693
+N: 4.266693
+Means: -2.475288 
+
+R Matrix:
+0.516807 
+
+
+Cluster #386
+Probability: 4.256729
+N: 4.256729
+Means: 3.069257 
+
+R Matrix:
+0.442665 
+
+
+Cluster #387
+Probability: 3.960327
+N: 3.960327
+Means: 2.539017 
+
+R Matrix:
+0.524335 
+
+
+Cluster #388
+Probability: 4.266282
+N: 4.266282
+Means: -1.524340 
+
+R Matrix:
+0.452535 
+
+
+Cluster #389
+Probability: 4.407863
+N: 4.407863
+Means: -1.716925 
+
+R Matrix:
+0.515595 
+
+
+Cluster #390
+Probability: 1.200690
+N: 1.200690
+Means: 4.770987 
+
+R Matrix:
+0.056567 
+
+
+Cluster #391
+Probability: 4.285767
+N: 4.285767
+Means: -2.467322 
+
+R Matrix:
+0.516821 
+
+
+Cluster #392
+Probability: 3.656216
+N: 3.656216
+Means: -2.744025 
+
+R Matrix:
+0.631702 
+
+
+Cluster #393
+Probability: 4.206623
+N: 4.206623
+Means: -1.377275 
+
+R Matrix:
+0.409938 
+
+
+Cluster #394
+Probability: 4.466456
+N: 4.466456
+Means: -1.790048 
+
+R Matrix:
+0.541463 
+
+
+Cluster #395
+Probability: 4.540183
+N: 4.540183
+Means: -1.898013 
+
+R Matrix:
+0.580630 
+
+
+Cluster #396
+Probability: 1.480143
+N: 1.480143
+Means: 5.554847 
+
+R Matrix:
+0.674436 
+
+
+Cluster #397
+Probability: 4.504924
+N: 4.504924
+Means: -1.842374 
+
+R Matrix:
+0.560435 
+
+
+Cluster #398
+Probability: 4.576667
+N: 4.576667
+Means: -2.191814 
+
+R Matrix:
+0.647129 
+
+
+Cluster #399
+Probability: 3.722184
+N: 3.722184
+Means: 3.025864 
+
+R Matrix:
+0.480619 
+
+
+Cluster #400
+Probability: 1.466299
+N: 1.466299
+Means: 5.584383 
+
+R Matrix:
+0.662111 
+
+
+Cluster #401
+Probability: 1.514619
+N: 1.514619
+Means: 3.989139 
+
+R Matrix:
+1.250018 
+
+
+Cluster #402
+Probability: 2.002473
+N: 2.002473
+Means: 3.271969 
+
+R Matrix:
+0.895881 
+
+
+Cluster #403
+Probability: 4.428448
+N: 4.428448
+Means: -1.742211 
+
+R Matrix:
+0.524430 
+
+
+Cluster #404
+Probability: 4.254050
+N: 4.254050
+Means: -2.480541 
+
+R Matrix:
+0.517345 
+
+
+Cluster #405
+Probability: 4.433382
+N: 4.433382
+Means: -0.879333 
+
+R Matrix:
+0.281883 
+
+
+Cluster #406
+Probability: 2.237025
+N: 2.237025
+Means: 5.944261 
+
+R Matrix:
+0.532243 
+
+
+Cluster #407
+Probability: 3.878369
+N: 3.878369
+Means: -2.653174 
+
+R Matrix:
+0.612183 
+
+
+Cluster #408
+Probability: 4.139540
+N: 4.139540
+Means: -2.529364 
+
+R Matrix:
+0.537027 
+
+
+Cluster #409
+Probability: 5.198333
+N: 5.198333
+Means: 1.697582 
+
+R Matrix:
+0.053970 
+
+
+Cluster #410
+Probability: 1.286924
+N: 1.286924
+Means: 5.092192 
+
+R Matrix:
+0.946270 
+
+
+Cluster #411
+Probability: 3.629041
+N: 3.629041
+Means: 1.539715 
+
+R Matrix:
+0.186026 
+
+
+Cluster #412
+Probability: 4.313773
+N: 4.313773
+Means: -1.596955 
+
+R Matrix:
+0.475436 
+
+
+Cluster #413
+Probability: 3.184340
+N: 3.184340
+Means: -3.759718 
+
+R Matrix:
+0.187653 
+
+
+Cluster #414
+Probability: 4.353420
+N: 4.353420
+Means: 1.751646 
+
+R Matrix:
+0.117846 
+
+
+Cluster #415
+Probability: 3.937367
+N: 3.937367
+Means: 2.521012 
+
+R Matrix:
+0.517155 
+
+
+Cluster #416
+Probability: 5.247309
+N: 5.247309
+Means: 1.697927 
+
+R Matrix:
+0.051821 
+
+
+Cluster #417
+Probability: 3.684074
+N: 3.684074
+Means: 2.295386 
+
+R Matrix:
+0.395837 
+
+
+Cluster #418
+Probability: 0.864993
+N: 0.864993
+Means: -1.719809 
+
+R Matrix:
+0.786829 
+
+
+Cluster #419
+Probability: 3.140323
+N: 3.140323
+Means: -1.242205 
+
+R Matrix:
+0.376572 
+
+
+Cluster #420
+Probability: 4.338361
+N: 4.338361
+Means: 3.000903 
+
+R Matrix:
+0.483715 
+
+
+Cluster #421
+Probability: 4.893017
+N: 4.893017
+Means: -0.666385 
+
+R Matrix:
+0.173003 
+
+
+Cluster #422
+Probability: 34.047058
+N: 34.047058
+Means: 4.728424 
+
+R Matrix:
+0.041676 
+
+
+Cluster #423
+Probability: 1.657036
+N: 1.657036
+Means: 1.939374 
+
+R Matrix:
+0.249843 
+
+
+Cluster #424
+Probability: 4.589862
+N: 4.589862
+Means: -2.024940 
+
+R Matrix:
+0.622585 
+
+
+Cluster #425
+Probability: 4.816495
+N: 4.816495
+Means: 1.695085 
+
+R Matrix:
+0.079702 
+
+
+Cluster #426
+Probability: 2.782662
+N: 2.782662
+Means: 2.989482 
+
+R Matrix:
+0.608212 
+
+
+Cluster #427
+Probability: 4.561966
+N: 4.561966
+Means: -2.227832 
+
+R Matrix:
+0.643848 
+
+
+Cluster #428
+Probability: 2.955992
+N: 2.955992
+Means: 6.565859 
+
+R Matrix:
+0.370725 
+
+
+Cluster #429
+Probability: 1.328174
+N: 1.328174
+Means: 5.345626 
+
+R Matrix:
+0.808776 
+
+
+Cluster #430
+Probability: 2.769431
+N: 2.769431
+Means: -1.430650 
+
+R Matrix:
+0.425274 
+
+
+Cluster #431
+Probability: 3.285460
+N: 3.285460
+Means: 4.646894 
+
+R Matrix:
+0.065502 
+
+
+Cluster #432
+Probability: 4.499456
+N: 4.499456
+Means: -2.326763 
+
+R Matrix:
+0.609910 
+
+
+Cluster #433
+Probability: 2.954859
+N: 2.954859
+Means: 6.565275 
+
+R Matrix:
+0.370996 
+
+
+Cluster #434
+Probability: 2.463860
+N: 2.463860
+Means: -1.558491 
+
+R Matrix:
+0.465878 
+
+
+Cluster #435
+Probability: 4.586781
+N: 4.586781
+Means: -2.157840 
+
+R Matrix:
+0.646827 
+
+
+Cluster #436
+Probability: 1.583996
+N: 1.583996
+Means: 3.823903 
+
+R Matrix:
+1.230714 
+
+
+Cluster #437
+Probability: 1.834177
+N: 1.834177
+Means: 5.165082 
+
+R Matrix:
+0.728991 
+
+
+Cluster #438
+Probability: 1.997396
+N: 1.997396
+Means: 8.395813 
+
+R Matrix:
+0.000005 
+
+
+Cluster #439
+Probability: 1.339544
+N: 1.339544
+Means: 4.540765 
+
+R Matrix:
+1.183553 
+
+
+Cluster #440
+Probability: 4.588291
+N: 4.588291
+Means: -2.151340 
+
+R Matrix:
+0.646435 
+
+
+Cluster #441
+Probability: 1.306346
+N: 1.306346
+Means: 4.716390 
+
+R Matrix:
+1.121821 
+
+
+Cluster #442
+Probability: 2.788072
+N: 2.788072
+Means: 1.622744 
+
+R Matrix:
+0.173950 
+
+
+Cluster #443
+Probability: 4.092013
+N: 4.092013
+Means: 2.653226 
+
+R Matrix:
+0.557227 
+
+
+Cluster #444
+Probability: 2.234616
+N: 2.234616
+Means: -1.635571 
+
+R Matrix:
+0.496001 
+
+
+Cluster #445
+Probability: 4.574804
+N: 4.574804
+Means: -1.971560 
+
+R Matrix:
+0.606157 
+
+
+Cluster #446
+Probability: 4.047307
+N: 4.047307
+Means: 2.611669 
+
+R Matrix:
+0.548016 
+
+
+Cluster #447
+Probability: 3.995931
+N: 3.995931
+Means: 2.567729 
+
+R Matrix:
+0.534755 
+
+
+Cluster #448
+Probability: 4.335030
+N: 4.335030
+Means: 2.981413 
+
+R Matrix:
+0.494347 
+
+
+Cluster #449
+Probability: 4.361499
+N: 4.361499
+Means: -1.659682 
+
+R Matrix:
+0.496070 
+
+
+Cluster #450
+Probability: 4.574774
+N: 4.574774
+Means: -2.197068 
+
+R Matrix:
+0.646897 
+
+
+Cluster #451
+Probability: 4.048099
+N: 4.048099
+Means: 1.849904 
+
+R Matrix:
+0.199375 
+
+
+Cluster #452
+Probability: 0.490175
+N: 0.490175
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #453
+Probability: 4.694489
+N: 4.694489
+Means: 0.823570 
+
+R Matrix:
+0.047886 
+
+
+Cluster #454
+Probability: 2.665043
+N: 2.665043
+Means: -3.181644 
+
+R Matrix:
+0.494642 
+
+
+Cluster #455
+Probability: 4.164638
+N: 4.164638
+Means: 2.728958 
+
+R Matrix:
+0.564571 
+
+
+Cluster #456
+Probability: 4.278019
+N: 4.278019
+Means: -1.543844 
+
+R Matrix:
+0.458580 
+
+
+Cluster #457
+Probability: 4.119796
+N: 4.119796
+Means: 2.680933 
+
+R Matrix:
+0.561393 
+
+
+Cluster #458
+Probability: 4.390306
+N: 4.390306
+Means: -2.417976 
+
+R Matrix:
+0.540196 
+
+
+Cluster #459
+Probability: 4.160915
+N: 4.160915
+Means: 2.724803 
+
+R Matrix:
+0.564504 
+
+
+Cluster #460
+Probability: 4.595745
+N: 4.595745
+Means: -2.084029 
+
+R Matrix:
+0.637073 
+
+
+Cluster #461
+Probability: 3.335910
+N: 3.335910
+Means: -2.862152 
+
+R Matrix:
+0.611049 
+
+
+Cluster #462
+Probability: 3.507880
+N: 3.507880
+Means: -1.048499 
+
+R Matrix:
+0.332821 
+
+
+Cluster #463
+Probability: 13.618506
+N: 13.618506
+Means: 5.495528 
+
+R Matrix:
+0.005674 
+
+
+Cluster #464
+Probability: 1.061615
+N: 1.061615
+Means: 2.333059 
+
+R Matrix:
+0.510687 
+
+
+Cluster #465
+Probability: 4.448863
+N: 4.448863
+Means: -2.377743 
+
+R Matrix:
+0.574173 
+
+
+Cluster #466
+Probability: 4.504068
+N: 4.504068
+Means: -1.841143 
+
+R Matrix:
+0.559987 
+
+
+Cluster #467
+Probability: 3.754203
+N: 3.754203
+Means: 1.568614 
+
+R Matrix:
+0.182752 
+
+
+Cluster #468
+Probability: 3.719304
+N: 3.719304
+Means: 2.338408 
+
+R Matrix:
+0.422326 
+
+
+Cluster #469
+Probability: 1.335152
+N: 1.335152
+Means: 4.560575 
+
+R Matrix:
+1.177458 
+
+
+Cluster #470
+Probability: 1.472118
+N: 1.472118
+Means: 4.100302 
+
+R Matrix:
+1.252758 
+
+
+Cluster #471
+Probability: 8.168033
+N: 8.168033
+Means: 0.738997 
+
+R Matrix:
+0.005977 
+
+
+Cluster #472
+Probability: 1.150322
+N: 1.150322
+Means: 4.809399 
+
+R Matrix:
+0.134922 
+
+
+Cluster #473
+Probability: 3.740360
+N: 3.740360
+Means: 2.012890 
+
+R Matrix:
+0.252047 
+
+
+Cluster #474
+Probability: 4.580658
+N: 4.580658
+Means: -1.988858 
+
+R Matrix:
+0.611743 
+
+
+Cluster #475
+Probability: 2.452718
+N: 2.452718
+Means: -1.562572 
+
+R Matrix:
+0.467318 
+
+
+Cluster #476
+Probability: 4.271600
+N: 4.271600
+Means: -1.533345 
+
+R Matrix:
+0.455316 
+
+
+Cluster #477
+Probability: 1.494764
+N: 1.494764
+Means: 5.452005 
+
+R Matrix:
+0.718602 
+
+
+Cluster #478
+Probability: 3.781298
+N: 3.781298
+Means: 2.397490 
+
+R Matrix:
+0.456681 
+
+
+Cluster #479
+Probability: 1.379304
+N: 1.379304
+Means: 4.887409 
+
+R Matrix:
+0.423289 
+
+
+Cluster #480
+Probability: 4.329946
+N: 4.329946
+Means: 3.035636 
+
+R Matrix:
+0.463411 
+
+
+Cluster #481
+Probability: 3.074651
+N: 3.074651
+Means: 2.970395 
+
+R Matrix:
+0.560809 
+
+
+Cluster #482
+Probability: 4.224327
+N: 4.224327
+Means: -1.436920 
+
+R Matrix:
+0.426515 
+
+
+Cluster #483
+Probability: 2.760210
+N: 2.760210
+Means: 2.992544 
+
+R Matrix:
+0.612562 
+
+
+Cluster #484
+Probability: 3.376427
+N: 3.376427
+Means: 2.984391 
+
+R Matrix:
+0.521892 
+
+
+Cluster #485
+Probability: 4.507699
+N: 4.507699
+Means: -1.846395 
+
+R Matrix:
+0.561900 
+
+
+Cluster #486
+Probability: 4.402667
+N: 4.402667
+Means: 1.743210 
+
+R Matrix:
+0.107360 
+
+
+Cluster #487
+Probability: 4.551371
+N: 4.551371
+Means: 0.848486 
+
+R Matrix:
+0.049346 
+
+
+Cluster #488
+Probability: 4.292881
+N: 4.292881
+Means: 2.894657 
+
+R Matrix:
+0.533832 
+
+
+Cluster #489
+Probability: 4.563125
+N: 4.563125
+Means: -1.942948 
+
+R Matrix:
+0.596502 
+
+
+Cluster #490
+Probability: 4.389067
+N: 4.389067
+Means: -1.693895 
+
+R Matrix:
+0.507660 
+
+
+Cluster #491
+Probability: 4.500810
+N: 4.500810
+Means: -2.325137 
+
+R Matrix:
+0.610830 
+
+
+Cluster #492
+Probability: 2.416687
+N: 2.416687
+Means: 6.165481 
+
+R Matrix:
+0.493770 
+
+
+Cluster #493
+Probability: 4.544326
+N: 4.544326
+Means: -1.905433 
+
+R Matrix:
+0.583293 
+
+
+Cluster #494
+Probability: 4.222687
+N: 4.222687
+Means: 2.797612 
+
+R Matrix:
+0.559668 
+
+
+Cluster #495
+Probability: 5.328025
+N: 5.328025
+Means: 0.724183 
+
+R Matrix:
+0.028207 
+
+
+Cluster #496
+Probability: 3.813592
+N: 3.813592
+Means: 1.957552 
+
+R Matrix:
+0.238329 
+
+
+Cluster #497
+Probability: 1.290077
+N: 1.290077
+Means: 2.170390 
+
+R Matrix:
+0.357482 
+
+
+Cluster #498
+Probability: 3.975760
+N: 3.975760
+Means: 4.575112 
+
+R Matrix:
+0.070308 
+
+
+Cluster #499
+Probability: 4.556530
+N: 4.556530
+Means: -2.239110 
+
+R Matrix:
+0.641959 
+
+
+Execution time of the cluster function 0.886804 (s)

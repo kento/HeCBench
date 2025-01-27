@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(OBJ_DIR)/$(EXEC_NAME) 10 1>log.std 2>log.err ) 2> log.time
+COMMAND = time -p ( ./$(OBJ_DIR)/$(EXEC_NAME) 1 1>log.std 2>log.err ) 2> log.time

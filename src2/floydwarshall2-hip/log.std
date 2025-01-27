@@ -1,0 +1,11 @@
+ECL-APSP v1.0 (main.cu)
+Copyright 2021 Texas State University
+input: ../floydwarshall2-cuda/CollegeMsg.egr
+nodes: 1899
+edges: 20296
+GPU matrix size: 14.1 MB
+Average kernel (initialization) time:   0.000167 s
+Average kernel (compute) time:   0.003389 s
+CPU init time:   0.002032 s
+CPU comp time:   2.217751 s
+results match

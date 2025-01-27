@@ -1,0 +1,4 @@
+ECL-BH v4.5
+Copyright (c) 2010-2020 Texas State University
+configuration: 100000 bodies, 100 time steps
+Total kernel execution time: 3.7540 s

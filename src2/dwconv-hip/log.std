@@ -1,0 +1,36 @@
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 1, output channel = 16
+Average execution time of dwconv2d_forward kernel: 1.310320 (ms)
+Checksum = 0.320777
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 3, output channel = 16
+Average execution time of dwconv2d_forward kernel: 2.785819 (ms)
+Checksum = 0.967811
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 5, output channel = 16
+Average execution time of dwconv2d_forward kernel: 5.829881 (ms)
+Checksum = 2.659524
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 1, output channel = 32
+Average execution time of dwconv2d_forward kernel: 3.142133 (ms)
+Checksum = 0.160388
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 3, output channel = 32
+Average execution time of dwconv2d_forward kernel: 5.926793 (ms)
+Checksum = 0.567830
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 5, output channel = 32
+Average execution time of dwconv2d_forward kernel: 11.593858 (ms)
+Checksum = 1.329762
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 1, output channel = 48
+Average execution time of dwconv2d_forward kernel: 4.656533 (ms)
+Checksum = 0.106926
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 3, output channel = 48
+Average execution time of dwconv2d_forward kernel: 8.753739 (ms)
+Checksum = 0.435374
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 5, output channel = 48
+Average execution time of dwconv2d_forward kernel: 17.186087 (ms)
+Checksum = 0.886508
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 1, output channel = 64
+Average execution time of dwconv2d_forward kernel: 6.208076 (ms)
+Checksum = 0.080194
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 3, output channel = 64
+Average execution time of dwconv2d_forward kernel: 11.681209 (ms)
+Checksum = 0.326531
+batch = 128, input channel = 16, height = 224, width = 224, kernel size = 5, output channel = 64
+Average execution time of dwconv2d_forward kernel: 22.688393 (ms)
+Checksum = 0.664881

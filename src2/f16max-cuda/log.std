@@ -1,0 +1,4 @@
+Average kernel execution time 1025.559204 (us)
+fp16_hmax2 PASS
+Average kernel execution time 1460.970581 (us)
+fp16_hmax PASS

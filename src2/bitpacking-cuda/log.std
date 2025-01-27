@@ -1,0 +1,24 @@
+Size =          2
+Total kernel execution time (1000 iterations) = 0.012054 (s)
+Device offload time = 2.373518 (s)
+PASS
+Size =        123
+Total kernel execution time (1000 iterations) = 0.009059 (s)
+Device offload time = 0.009126 (s)
+PASS
+Size =       3411
+Total kernel execution time (1000 iterations) = 0.010696 (s)
+Device offload time = 0.010761 (s)
+PASS
+Size =      83621
+Total kernel execution time (1000 iterations) = 0.011273 (s)
+Device offload time = 0.011700 (s)
+PASS
+Size =     872163
+Total kernel execution time (1000 iterations) = 0.022103 (s)
+Device offload time = 0.025569 (s)
+PASS
+Size =  100000001
+Total kernel execution time (1000 iterations) = 1.240314 (s)
+Device offload time = 1.661722 (s)
+PASS

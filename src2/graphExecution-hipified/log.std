@@ -1,0 +1,69 @@
+
+-----------------------------
+512 elements
+Threads per block  = 256
+Launch iterations = 3
+[usingGraph] final reduced sum = 0.000032
+Execution time: 3265.874268 (us)
+
+[usingGraph] final reduced sum = 0.000032
+Execution time: 573.975037 (us)
+
+[usingGraph] final reduced sum = 0.000032
+Execution time: 560.006042 (us)
+
+[UsingStream] final reduced sum = 0.000032
+Execution time: 793.403015 (us)
+
+[UsingStream] final reduced sum = 0.000032
+Execution time: 748.184021 (us)
+
+[UsingStream] final reduced sum = 0.000032
+Execution time: 746.664062 (us)
+
+
+-----------------------------
+262144 elements
+Threads per block  = 256
+Launch iterations = 3
+[usingGraph] final reduced sum = 0.015569
+Execution time: 1346.379028 (us)
+
+[usingGraph] final reduced sum = 0.015569
+Execution time: 1057.890991 (us)
+
+[usingGraph] final reduced sum = 0.015569
+Execution time: 1053.302002 (us)
+
+[UsingStream] final reduced sum = 0.015569
+Execution time: 1272.250000 (us)
+
+[UsingStream] final reduced sum = 0.015569
+Execution time: 1239.910034 (us)
+
+[UsingStream] final reduced sum = 0.015569
+Execution time: 1239.920044 (us)
+
+
+-----------------------------
+134217728 elements
+Threads per block  = 256
+Launch iterations = 3
+[usingGraph] final reduced sum = 7.968836
+Execution time: 90902.390625 (us)
+
+[usingGraph] final reduced sum = 7.968836
+Execution time: 96819.851562 (us)
+
+[usingGraph] final reduced sum = 7.968836
+Execution time: 87815.835938 (us)
+
+[UsingStream] final reduced sum = 7.968836
+Execution time: 85915.203125 (us)
+
+[UsingStream] final reduced sum = 7.968836
+Execution time: 84550.531250 (us)
+
+[UsingStream] final reduced sum = 7.968836
+Execution time: 97655.343750 (us)
+

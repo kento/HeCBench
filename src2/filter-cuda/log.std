@@ -1,0 +1,4 @@
+Average execution time of filter (shared memory) 6.236772 (ms)
+PASS
+Average execution time of filter (global aggregate) 37.609017 (ms)
+PASS

@@ -1,0 +1,48 @@
+
+(N=1 C=32 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.052872 (ms)
+Average time of channel shuffle (NCHW): 0.006609 (ms)
+
+(N=1 C=128 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.042707 (ms)
+Average time of channel shuffle (NCHW): 0.024335 (ms)
+
+(N=1 C=512 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.092139 (ms)
+Average time of channel shuffle (NCHW): 0.092232 (ms)
+
+(N=4 C=32 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.138290 (ms)
+Average time of channel shuffle (NCHW): 0.023503 (ms)
+
+(N=4 C=128 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.168157 (ms)
+Average time of channel shuffle (NCHW): 0.093103 (ms)
+
+(N=4 C=512 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.354937 (ms)
+Average time of channel shuffle (NCHW): 0.361131 (ms)
+
+(N=16 C=32 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.566228 (ms)
+Average time of channel shuffle (NCHW): 0.093515 (ms)
+
+(N=16 C=128 W=224 H=224)
+Average time of channel shuffle (NHWC): 0.661356 (ms)
+Average time of channel shuffle (NCHW): 0.362320 (ms)
+
+(N=16 C=512 W=224 H=224)
+Average time of channel shuffle (NHWC): 1.404184 (ms)
+Average time of channel shuffle (NCHW): 1.438274 (ms)
+
+(N=64 C=32 W=224 H=224)
+Average time of channel shuffle (NHWC): 2.253377 (ms)
+Average time of channel shuffle (NCHW): 0.363032 (ms)
+
+(N=64 C=128 W=224 H=224)
+Average time of channel shuffle (NHWC): 2.637160 (ms)
+Average time of channel shuffle (NCHW): 1.440840 (ms)
+
+(N=64 C=512 W=224 H=224)
+Average time of channel shuffle (NHWC): 5.609479 (ms)
+Average time of channel shuffle (NCHW): 5.763072 (ms)

@@ -1,0 +1,57 @@
+Input min, max values: (-5.951013 16.297764)
+Maximum shared local memory size per block in bytes: 49152
+
+Number of bins: 768
+bincount using global atomics
+Average execution time of bincount kernel: 2429.262695 (us)
+Output min, median, max values: (0 57455 58192)
+
+bincount using global and local atomics
+Average execution time of bincount kernel: 375.434967 (us)
+Output min, median, max values: (0 57455 58192)
+
+
+Number of bins: 1536
+bincount using global atomics
+Average execution time of bincount kernel: 1688.396973 (us)
+Output min, median, max values: (0 28820 29212)
+
+bincount using global and local atomics
+Average execution time of bincount kernel: 376.350830 (us)
+Output min, median, max values: (0 28820 29212)
+
+
+Number of bins: 3072
+bincount using global atomics
+Average execution time of bincount kernel: 1128.570190 (us)
+Output min, median, max values: (0 14434 14670)
+
+bincount using global and local atomics
+Average execution time of bincount kernel: 512.424866 (us)
+Output min, median, max values: (0 14434 14670)
+
+
+Number of bins: 6144
+bincount using global atomics
+Average execution time of bincount kernel: 635.074707 (us)
+Output min, median, max values: (0 7270 7427)
+
+bincount using global and local atomics
+Average execution time of bincount kernel: 483.687866 (us)
+Output min, median, max values: (0 7270 7427)
+
+
+Number of bins: 12288
+bincount using global atomics
+Average execution time of bincount kernel: 333.908356 (us)
+Output min, median, max values: (0 3595 3754)
+
+bincount using global and local atomics
+Average execution time of bincount kernel: 941.478760 (us)
+Output min, median, max values: (0 3595 3754)
+
+
+Number of bins: 24576
+bincount using global atomics
+Average execution time of bincount kernel: 193.055801 (us)
+Output min, median, max values: (0 1791 1918)

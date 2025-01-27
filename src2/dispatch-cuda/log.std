@@ -1,0 +1,6 @@
+
+ Enqueue rate: mean = 1.3 us, stddev = 0.1 us
+
+ Single dispatch latency: mean = 7.3 us, stddev = 18.2 us
+
+ Batch dispatch latency: mean = 1.8 us, stddev = 0.0 us

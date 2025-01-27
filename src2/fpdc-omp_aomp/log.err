@@ -1,0 +1,6 @@
+GPU FP Compressor v2.2
+Copyright 2011-2020 Texas State University
+OMP: Warning #96: Cannot form a team with 255 threads, using 128 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+Average compression kernel execution time 0.002237 (s)
+main: main.cpp:307: void Compress(int, int, int, int): Assertion `off[i] == num' failed.

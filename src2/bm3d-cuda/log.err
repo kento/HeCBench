@@ -1,0 +1,10 @@
+sh: line 1: convert: command not found
+sh: line 1: gm: command not found
+sh: line 1: convert: command not found
+sh: line 1: gm: command not found
+sh: line 1: convert: command not found
+sh: line 1: gm: command not found
+
+[CImg] *** CImgIOException *** [instance(0,0,0,0,(nil),non-shared)] CImg<unsigned char>::load(): Failed to recognize format of file 'noised-bufferfly-20.png'.
+terminate called after throwing an instance of 'cimg_library::CImgIOException'
+  what():  [instance(0,0,0,0,(nil),non-shared)] CImg<unsigned char>::load(): Failed to recognize format of file 'noised-bufferfly-20.png'.

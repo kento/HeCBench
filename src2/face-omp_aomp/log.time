@@ -1,0 +1,4 @@
+bash: line 1: 2596813 Segmentation fault      (core dumped) ./vj-gpu ../face-cuda/Face.pgm ../face-cuda/info.txt ../face-cuda/class.txt Output-gpu.pgm >> log.std 2>> log.err
+real 0.69
+user 10.31
+sys 1.22

@@ -1,0 +1,75 @@
+verbosity 1
+factorDim 20
+maxIterations 10000
+linesAtOnce 112
+distanceThreshold -3.40282e+38
+distanceShowEvery 18446744073709551615
+stuckIterationsBeforeBreak 10000
+tempStart 0
+tempEnd -1
+reduceFactor 0.98
+reduceStep 18446744073709551615
+seed 123
+loadBalance 0
+flipManyChance 0.1
+flipManyDepth 2
+weight 1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+READING OF DATA FILE COMPLETE
+Read height: 10001
+Read width: 785
+Non-zero elements: 1052359
+Density: 0.134045
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+~~~ GPU cuBool ~~~
+Using device 0: NVIDIA GH200 480GB
+cuBool allocation complete.
+Matrix dimensions:	10001x785
+cuBool initialization complete.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Starting run 1 in slot 0 with seed 1192430860
+Starting run 0 in slot 1 with seed 3007757058
+	Start distance for slot 1	abs_err: 1.50726e+06	rel_err: 0.191988
+	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 1	abs_err: 641261	rel_err: 0.0816811
+	Result is better than previous best. Copying to host.
+Starting run 2 in slot 1 with seed 2703985752
+	Start distance for slot 0	abs_err: 1.49139e+06	rel_err: 0.189967
+	Break condition for slot 0:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 0	abs_err: 642110	rel_err: 0.0817893
+Starting run 3 in slot 0 with seed 3230891671
+	Start distance for slot 0	abs_err: 1.49486e+06	rel_err: 0.190409
+	Break condition for slot 0:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 0	abs_err: 658365	rel_err: 0.0838598
+Starting run 4 in slot 0 with seed 628461821
+	Start distance for slot 1	abs_err: 1.47289e+06	rel_err: 0.18761
+	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 1	abs_err: 638737	rel_err: 0.0813596
+	Result is better than previous best. Copying to host.
+Starting run 5 in slot 1 with seed 1224256096
+	Start distance for slot 0	abs_err: 1.48412e+06	rel_err: 0.189041
+	Break condition for slot 0:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 0	abs_err: 640595	rel_err: 0.0815963
+Starting run 6 in slot 0 with seed 2456613905
+	Start distance for slot 1	abs_err: 1.46137e+06	rel_err: 0.186144
+	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 1	abs_err: 639168	rel_err: 0.0814145
+Starting run 7 in slot 1 with seed 4189240124
+	Start distance for slot 0	abs_err: 1.47784e+06	rel_err: 0.18824
+	Break condition for slot 0:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 0	abs_err: 649353	rel_err: 0.0827119
+	Start distance for slot 1	abs_err: 1.5003e+06	rel_err: 0.191103
+	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 1	abs_err: 636778	rel_err: 0.0811101
+	Result is better than previous best. Copying to host.
+# elapsed time (GPUKERNELLOOP): 1.54347s
+Writing to files "data/MNIST.in_distances_1-26_21:28:18.txt" complete
+Writing to files "data/MNIST.in_best_factor_A_1-26_21:28:18.data" and "data/MNIST.in_best_factor_B_1-26_21:28:18.data" complete
+true_positives: 	410829	true_negatives: 	6256432
+false_positives:	541994	false_negatives:	641530
+total error:	1183524	rel error:	0.150752
+precision:	43.117 %
+recall:   	39.0389 %
+F1 score: 	0.409767
+A uses 20 of 20 columns
+B uses 20 of 20 columns

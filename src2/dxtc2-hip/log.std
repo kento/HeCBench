@@ -1,0 +1,13 @@
+Image Loaded '../dxtc2-sycl/data/lena_std.ppm', 512 x 512 pixels
+
+Running DXT Compression on 512 x 512 image...
+
+16384 Blocks, 64 Threads per Block, 1048576 Threads in Grid...
+
+Average kernel execution time 498.416962 (us)
+
+Checking accuracy...
+RMS(reference, result) = 0.010642
+
+Test passed
+Error, unable to open source image file <../dxtc2-sycl/data/teapot512_std.ppm>

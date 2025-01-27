@@ -1,0 +1,25 @@
+graphB+ balancing code for signed social network graphs (main.cu)
+Copyright 2021 Texas State University
+verification is off
+input: graph.csv
+  read 10128 lines
+  number of unique nodes: 792
+  number of unique edges: 10127
+nodes: 792
+edges: 20254
+Device: NVIDIA GH200 480GB with 132 SMs and 2048 mTpSM (1980.0 MHz and 2619.0 MHz)
+Total graphB+ runtime:    2.850951 s
+number of trees 10000
+Min depth of the trees 2
+ Max depth of the trees 2
+ Avg depth of the trees 2.0000
+     0:    194   (  1.9%)  105
+     1:   8749   ( 87.5%)  1003
+     2:   9077   ( 90.8%)  1008
+     3:   8775   ( 87.8%)  1036
+     4:   8675   ( 86.8%)  1058
+     5:   8256   ( 82.6%)  1090
+     6:   9075   ( 90.8%)  1102
+     7:   8716   ( 87.2%)  1155
+     8:   8885   ( 88.8%)  1182
+     9:   9090   ( 90.9%)  1183

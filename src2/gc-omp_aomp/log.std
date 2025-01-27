@@ -1,0 +1,5 @@
+ECL-GC OpenMP v1.2 (main.cpp)
+Copyright 2020 Texas State University
+
+USAGE: ./main <input_file_name> <thread_count> <repeat>
+

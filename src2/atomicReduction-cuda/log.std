@@ -1,0 +1,63 @@
+Array size: 200 MB
+Repeat the kernel execution: 32 times
+Device name: NVIDIA GH200 480GB
+Thread block size: 128, The average performance of reduction is 2280.98 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 2280.48 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 2207.13 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 2050.43 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 128, The average performance of reduction is 1504.65 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 2219.73 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 3154.64 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 3187.92 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 3068.96 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 256, The average performance of reduction is 1931.79 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 2160.34 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 2960.19 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 3283.04 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 3456.52 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 512, The average performance of reduction is 1934.29 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 2075.16 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 2830.35 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 3117.13 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 3384.78 GBytes/sec
+VERIFICATION: PASS
+
+Thread block size: 1024, The average performance of reduction is 1923.45 GBytes/sec
+VERIFICATION: PASS
+

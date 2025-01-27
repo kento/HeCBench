@@ -1,0 +1,19 @@
+Tensor size (BatchSize * Width * Height) = 128 * 81 * 8732 
+=========== Data type is FP16 ==========
+GPU device memory allocation and data transfer time (ms) : 2.97667
+Average GPU kernel time (ms) : 0.889926
+CPU serial time (ms) : 3474.72
+BandWidth = 434.555944 (GB / s)
+PASS
+=========== Data type is FP32 ==========
+GPU device memory allocation and data transfer time (ms) : 0.785067
+Average GPU kernel time (ms) : 1.43573
+CPU serial time (ms) : 493.574
+BandWidth = 526.255477 (GB / s)
+PASS
+=========== Data type is FP64 ==========
+GPU device memory allocation and data transfer time (ms) : 1.60251
+Average GPU kernel time (ms) : 1.69469
+CPU serial time (ms) : 851.465
+BandWidth = 881.129302 (GB / s)
+PASS

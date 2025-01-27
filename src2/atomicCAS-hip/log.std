@@ -1,0 +1,10 @@
+Atomic min for data type U64 | Average execution time: 0.000003 (s)
+Atomic min for data type S64 | Average execution time: 0.000003 (s)
+Atomic min for data type F64 | Average execution time: 0.000003 (s)
+Atomic max for data type U64 | Average execution time: 0.000003 (s)
+Atomic max for data type S64 | Average execution time: 0.000003 (s)
+Atomic max for data type F64 | Average execution time: 0.000003 (s)
+Atomic add for data type U64 | Average execution time: 4.667632 (s)
+Atomic add for data type S64 | Average execution time: 4.364299 (s)
+Atomic add for data type F64 | Average execution time: 4.895872 (s)
+PASS

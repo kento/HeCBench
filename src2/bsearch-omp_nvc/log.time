@@ -1,0 +1,4 @@
+bash: line 1: 2109641 Aborted                 (core dumped) ./main 2000000800 100 > log.std 2> log.err
+real 72.35
+user 62.58
+sys 3.19

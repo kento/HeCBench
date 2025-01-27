@@ -1,0 +1,4284 @@
+Parsing input file...File Extension: ata
+Number of events removed to ensure memory alignment 7
+Number of events: 992
+Number of dimensions: 1
+
+Starting with 500 cluster(s), will stop at 1 cluster(s).
+Gaussian.cu: epsilon = 0.020699
+Performing EM algorithm on 500 clusters.
+
+Likelihood: 5.926420e+03
+
+Rissanen Score: -7.550776e+02
+
+Minimum distance between (258,427). Combining clusters
+Performing EM algorithm on 499 clusters.
+
+Likelihood: 5.924464e+03
+
+Rissanen Score: -7.634717e+02
+
+Minimum distance between (256,322). Combining clusters
+Performing EM algorithm on 498 clusters.
+
+Likelihood: 5.922505e+03
+
+Rissanen Score: -7.718618e+02
+
+Minimum distance between (257,263). Combining clusters
+Performing EM algorithm on 497 clusters.
+
+Likelihood: 5.920541e+03
+
+Rissanen Score: -7.802476e+02
+
+Minimum distance between (256,260). Combining clusters
+Performing EM algorithm on 496 clusters.
+
+Likelihood: 5.918572e+03
+
+Rissanen Score: -7.886284e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 495 clusters.
+
+Likelihood: 5.916599e+03
+
+Rissanen Score: -7.970039e+02
+
+Minimum distance between (256,257). Combining clusters
+Performing EM algorithm on 494 clusters.
+
+Likelihood: 5.914620e+03
+
+Rissanen Score: -8.053745e+02
+
+Minimum distance between (0,238). Combining clusters
+Performing EM algorithm on 493 clusters.
+
+Likelihood: 5.912636e+03
+
+Rissanen Score: -8.137402e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 492 clusters.
+
+Likelihood: 5.910648e+03
+
+Rissanen Score: -8.221025e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 491 clusters.
+
+Likelihood: 5.908656e+03
+
+Rissanen Score: -8.304600e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 490 clusters.
+
+Likelihood: 5.906660e+03
+
+Rissanen Score: -8.388135e+02
+
+Minimum distance between (0,234). Combining clusters
+Performing EM algorithm on 489 clusters.
+
+Likelihood: 5.904657e+03
+
+Rissanen Score: -8.471602e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 488 clusters.
+
+Likelihood: 5.902651e+03
+
+Rissanen Score: -8.555039e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 487 clusters.
+
+Likelihood: 5.900639e+03
+
+Rissanen Score: -8.638408e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 486 clusters.
+
+Likelihood: 5.898623e+03
+
+Rissanen Score: -8.721743e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 485 clusters.
+
+Likelihood: 5.896602e+03
+
+Rissanen Score: -8.805034e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 484 clusters.
+
+Likelihood: 5.894576e+03
+
+Rissanen Score: -8.888267e+02
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 483 clusters.
+
+Likelihood: 5.892544e+03
+
+Rissanen Score: -8.971450e+02
+
+Minimum distance between (256,257). Combining clusters
+Performing EM algorithm on 482 clusters.
+
+Likelihood: 5.890509e+03
+
+Rissanen Score: -9.054590e+02
+
+Minimum distance between (1,226). Combining clusters
+Performing EM algorithm on 481 clusters.
+
+Likelihood: 5.888470e+03
+
+Rissanen Score: -9.137695e+02
+
+Minimum distance between (0,225). Combining clusters
+Performing EM algorithm on 480 clusters.
+
+Likelihood: 5.886425e+03
+
+Rissanen Score: -9.220742e+02
+
+Minimum distance between (224,225). Combining clusters
+Performing EM algorithm on 479 clusters.
+
+Likelihood: 5.884373e+03
+
+Rissanen Score: -9.303721e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 478 clusters.
+
+Likelihood: 5.882316e+03
+
+Rissanen Score: -9.386650e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 477 clusters.
+
+Likelihood: 5.880257e+03
+
+Rissanen Score: -9.469556e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 476 clusters.
+
+Likelihood: 5.878190e+03
+
+Rissanen Score: -9.552373e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 475 clusters.
+
+Likelihood: 5.876119e+03
+
+Rissanen Score: -9.635161e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 474 clusters.
+
+Likelihood: 5.874042e+03
+
+Rissanen Score: -9.717886e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 473 clusters.
+
+Likelihood: 5.871962e+03
+
+Rissanen Score: -9.800581e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 472 clusters.
+
+Likelihood: 5.869875e+03
+
+Rissanen Score: -9.883208e+02
+
+Minimum distance between (0,216). Combining clusters
+Performing EM algorithm on 471 clusters.
+
+Likelihood: 5.867784e+03
+
+Rissanen Score: -9.965796e+02
+
+Minimum distance between (215,255). Combining clusters
+Performing EM algorithm on 470 clusters.
+
+Likelihood: 5.865687e+03
+
+Rissanen Score: -1.004832e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 469 clusters.
+
+Likelihood: 5.863584e+03
+
+Rissanen Score: -1.013079e+03
+
+Minimum distance between (0,213). Combining clusters
+Performing EM algorithm on 468 clusters.
+
+Likelihood: 5.861477e+03
+
+Rissanen Score: -1.021321e+03
+
+Minimum distance between (0,212). Combining clusters
+Performing EM algorithm on 467 clusters.
+
+Likelihood: 5.859363e+03
+
+Rissanen Score: -1.029557e+03
+
+Minimum distance between (0,211). Combining clusters
+Performing EM algorithm on 466 clusters.
+
+Likelihood: 5.857246e+03
+
+Rissanen Score: -1.037789e+03
+
+Minimum distance between (0,210). Combining clusters
+Performing EM algorithm on 465 clusters.
+
+Likelihood: 5.855123e+03
+
+Rissanen Score: -1.046016e+03
+
+Minimum distance between (209,210). Combining clusters
+Performing EM algorithm on 464 clusters.
+
+Likelihood: 5.852992e+03
+
+Rissanen Score: -1.054235e+03
+
+Minimum distance between (0,208). Combining clusters
+Performing EM algorithm on 463 clusters.
+
+Likelihood: 5.850857e+03
+
+Rissanen Score: -1.062450e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 462 clusters.
+
+Likelihood: 5.848717e+03
+
+Rissanen Score: -1.070659e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 461 clusters.
+
+Likelihood: 5.846572e+03
+
+Rissanen Score: -1.078864e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 460 clusters.
+
+Likelihood: 5.844421e+03
+
+Rissanen Score: -1.087062e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 459 clusters.
+
+Likelihood: 5.842264e+03
+
+Rissanen Score: -1.095254e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 458 clusters.
+
+Likelihood: 5.840102e+03
+
+Rissanen Score: -1.103442e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 457 clusters.
+
+Likelihood: 5.837934e+03
+
+Rissanen Score: -1.111624e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 456 clusters.
+
+Likelihood: 5.835761e+03
+
+Rissanen Score: -1.119800e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 455 clusters.
+
+Likelihood: 5.833581e+03
+
+Rissanen Score: -1.127970e+03
+
+Minimum distance between (199,200). Combining clusters
+Performing EM algorithm on 454 clusters.
+
+Likelihood: 5.831396e+03
+
+Rissanen Score: -1.136134e+03
+
+Minimum distance between (198,199). Combining clusters
+Performing EM algorithm on 453 clusters.
+
+Likelihood: 5.829206e+03
+
+Rissanen Score: -1.144293e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 452 clusters.
+
+Likelihood: 5.827006e+03
+
+Rissanen Score: -1.152444e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 451 clusters.
+
+Likelihood: 5.824805e+03
+
+Rissanen Score: -1.160592e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 450 clusters.
+
+Likelihood: 5.822595e+03
+
+Rissanen Score: -1.168731e+03
+
+Minimum distance between (0,194). Combining clusters
+Performing EM algorithm on 449 clusters.
+
+Likelihood: 5.820383e+03
+
+Rissanen Score: -1.176869e+03
+
+Minimum distance between (0,193). Combining clusters
+Performing EM algorithm on 448 clusters.
+
+Likelihood: 5.818162e+03
+
+Rissanen Score: -1.184998e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 447 clusters.
+
+Likelihood: 5.815936e+03
+
+Rissanen Score: -1.193121e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 446 clusters.
+
+Likelihood: 5.813703e+03
+
+Rissanen Score: -1.201238e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 445 clusters.
+
+Likelihood: 5.811463e+03
+
+Rissanen Score: -1.209348e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 444 clusters.
+
+Likelihood: 5.809219e+03
+
+Rissanen Score: -1.217453e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 443 clusters.
+
+Likelihood: 5.806968e+03
+
+Rissanen Score: -1.225552e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 442 clusters.
+
+Likelihood: 5.804712e+03
+
+Rissanen Score: -1.233646e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 441 clusters.
+
+Likelihood: 5.802447e+03
+
+Rissanen Score: -1.241730e+03
+
+Minimum distance between (185,186). Combining clusters
+Performing EM algorithm on 440 clusters.
+
+Likelihood: 5.800179e+03
+
+Rissanen Score: -1.249812e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 439 clusters.
+
+Likelihood: 5.797902e+03
+
+Rissanen Score: -1.257885e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 438 clusters.
+
+Likelihood: 5.795621e+03
+
+Rissanen Score: -1.265953e+03
+
+Minimum distance between (0,182). Combining clusters
+Performing EM algorithm on 437 clusters.
+
+Likelihood: 5.793332e+03
+
+Rissanen Score: -1.274013e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 436 clusters.
+
+Likelihood: 5.791036e+03
+
+Rissanen Score: -1.282067e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 435 clusters.
+
+Likelihood: 5.788735e+03
+
+Rissanen Score: -1.290116e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 434 clusters.
+
+Likelihood: 5.786427e+03
+
+Rissanen Score: -1.298157e+03
+
+Minimum distance between (0,178). Combining clusters
+Performing EM algorithm on 433 clusters.
+
+Likelihood: 5.784111e+03
+
+Rissanen Score: -1.306191e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 432 clusters.
+
+Likelihood: 5.781791e+03
+
+Rissanen Score: -1.314220e+03
+
+Minimum distance between (0,176). Combining clusters
+Performing EM algorithm on 431 clusters.
+
+Likelihood: 5.779464e+03
+
+Rissanen Score: -1.322243e+03
+
+Minimum distance between (0,175). Combining clusters
+Performing EM algorithm on 430 clusters.
+
+Likelihood: 5.777128e+03
+
+Rissanen Score: -1.330256e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 429 clusters.
+
+Likelihood: 5.774788e+03
+
+Rissanen Score: -1.338266e+03
+
+Minimum distance between (0,173). Combining clusters
+Performing EM algorithm on 428 clusters.
+
+Likelihood: 5.772440e+03
+
+Rissanen Score: -1.346268e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 427 clusters.
+
+Likelihood: 5.770085e+03
+
+Rissanen Score: -1.354262e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 426 clusters.
+
+Likelihood: 5.767723e+03
+
+Rissanen Score: -1.362250e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 425 clusters.
+
+Likelihood: 5.765355e+03
+
+Rissanen Score: -1.370231e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 424 clusters.
+
+Likelihood: 5.762979e+03
+
+Rissanen Score: -1.378206e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 423 clusters.
+
+Likelihood: 5.760596e+03
+
+Rissanen Score: -1.386172e+03
+
+Minimum distance between (0,167). Combining clusters
+Performing EM algorithm on 422 clusters.
+
+Likelihood: 5.758208e+03
+
+Rissanen Score: -1.394133e+03
+
+Minimum distance between (0,166). Combining clusters
+Performing EM algorithm on 421 clusters.
+
+Likelihood: 5.755809e+03
+
+Rissanen Score: -1.402083e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 420 clusters.
+
+Likelihood: 5.753405e+03
+
+Rissanen Score: -1.410030e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 419 clusters.
+
+Likelihood: 5.750996e+03
+
+Rissanen Score: -1.417970e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 418 clusters.
+
+Likelihood: 5.748576e+03
+
+Rissanen Score: -1.425900e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 417 clusters.
+
+Likelihood: 5.746151e+03
+
+Rissanen Score: -1.433824e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 416 clusters.
+
+Likelihood: 5.743718e+03
+
+Rissanen Score: -1.441741e+03
+
+Minimum distance between (256,257). Combining clusters
+Performing EM algorithm on 415 clusters.
+
+Likelihood: 5.741277e+03
+
+Rissanen Score: -1.449649e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 414 clusters.
+
+Likelihood: 5.738831e+03
+
+Rissanen Score: -1.457552e+03
+
+Minimum distance between (0,158). Combining clusters
+Performing EM algorithm on 413 clusters.
+
+Likelihood: 5.736375e+03
+
+Rissanen Score: -1.465446e+03
+
+Minimum distance between (256,257). Combining clusters
+Performing EM algorithm on 412 clusters.
+
+Likelihood: 5.733912e+03
+
+Rissanen Score: -1.473333e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 411 clusters.
+
+Likelihood: 5.731441e+03
+
+Rissanen Score: -1.481212e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 410 clusters.
+
+Likelihood: 5.728962e+03
+
+Rissanen Score: -1.489083e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 409 clusters.
+
+Likelihood: 5.726477e+03
+
+Rissanen Score: -1.496946e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 408 clusters.
+
+Likelihood: 5.723984e+03
+
+Rissanen Score: -1.504803e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 407 clusters.
+
+Likelihood: 5.721481e+03
+
+Rissanen Score: -1.512650e+03
+
+Minimum distance between (0,151). Combining clusters
+Performing EM algorithm on 406 clusters.
+
+Likelihood: 5.718974e+03
+
+Rissanen Score: -1.520492e+03
+
+Minimum distance between (0,150). Combining clusters
+Performing EM algorithm on 405 clusters.
+
+Likelihood: 5.716455e+03
+
+Rissanen Score: -1.528323e+03
+
+Minimum distance between (0,149). Combining clusters
+Performing EM algorithm on 404 clusters.
+
+Likelihood: 5.713930e+03
+
+Rissanen Score: -1.536148e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 403 clusters.
+
+Likelihood: 5.711397e+03
+
+Rissanen Score: -1.543964e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 402 clusters.
+
+Likelihood: 5.708855e+03
+
+Rissanen Score: -1.551772e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 401 clusters.
+
+Likelihood: 5.706304e+03
+
+Rissanen Score: -1.559571e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 400 clusters.
+
+Likelihood: 5.703747e+03
+
+Rissanen Score: -1.567363e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 399 clusters.
+
+Likelihood: 5.701181e+03
+
+Rissanen Score: -1.575147e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 398 clusters.
+
+Likelihood: 5.698606e+03
+
+Rissanen Score: -1.582922e+03
+
+Minimum distance between (0,142). Combining clusters
+Performing EM algorithm on 397 clusters.
+
+Likelihood: 5.696023e+03
+
+Rissanen Score: -1.590688e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 396 clusters.
+
+Likelihood: 5.693431e+03
+
+Rissanen Score: -1.598445e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 395 clusters.
+
+Likelihood: 5.690829e+03
+
+Rissanen Score: -1.606193e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 394 clusters.
+
+Likelihood: 5.688222e+03
+
+Rissanen Score: -1.613935e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 393 clusters.
+
+Likelihood: 5.685604e+03
+
+Rissanen Score: -1.621667e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 392 clusters.
+
+Likelihood: 5.682978e+03
+
+Rissanen Score: -1.629390e+03
+
+Minimum distance between (136,255). Combining clusters
+Performing EM algorithm on 391 clusters.
+
+Likelihood: 5.680342e+03
+
+Rissanen Score: -1.637104e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 390 clusters.
+
+Likelihood: 5.677697e+03
+
+Rissanen Score: -1.644809e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 389 clusters.
+
+Likelihood: 5.675042e+03
+
+Rissanen Score: -1.652504e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 388 clusters.
+
+Likelihood: 5.672381e+03
+
+Rissanen Score: -1.660192e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 387 clusters.
+
+Likelihood: 5.669708e+03
+
+Rissanen Score: -1.667869e+03
+
+Minimum distance between (0,131). Combining clusters
+Performing EM algorithm on 386 clusters.
+
+Likelihood: 5.667027e+03
+
+Rissanen Score: -1.675538e+03
+
+Minimum distance between (0,130). Combining clusters
+Performing EM algorithm on 385 clusters.
+
+Likelihood: 5.664338e+03
+
+Rissanen Score: -1.683198e+03
+
+Minimum distance between (0,129). Combining clusters
+Performing EM algorithm on 384 clusters.
+
+Likelihood: 5.661638e+03
+
+Rissanen Score: -1.690847e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 383 clusters.
+
+Likelihood: 5.658928e+03
+
+Rissanen Score: -1.698487e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 382 clusters.
+
+Likelihood: 5.656209e+03
+
+Rissanen Score: -1.706117e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 381 clusters.
+
+Likelihood: 5.653481e+03
+
+Rissanen Score: -1.713740e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 380 clusters.
+
+Likelihood: 5.650742e+03
+
+Rissanen Score: -1.721350e+03
+
+Minimum distance between (124,255). Combining clusters
+Performing EM algorithm on 379 clusters.
+
+Likelihood: 5.647993e+03
+
+Rissanen Score: -1.728950e+03
+
+Minimum distance between (0,123). Combining clusters
+Performing EM algorithm on 378 clusters.
+
+Likelihood: 5.645235e+03
+
+Rissanen Score: -1.736542e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 377 clusters.
+
+Likelihood: 5.642468e+03
+
+Rissanen Score: -1.744125e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 376 clusters.
+
+Likelihood: 5.639691e+03
+
+Rissanen Score: -1.751697e+03
+
+Minimum distance between (0,120). Combining clusters
+Performing EM algorithm on 375 clusters.
+
+Likelihood: 5.636902e+03
+
+Rissanen Score: -1.759258e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 374 clusters.
+
+Likelihood: 5.634102e+03
+
+Rissanen Score: -1.766807e+03
+
+Minimum distance between (118,255). Combining clusters
+Performing EM algorithm on 373 clusters.
+
+Likelihood: 5.631293e+03
+
+Rissanen Score: -1.774348e+03
+
+Minimum distance between (0,117). Combining clusters
+Performing EM algorithm on 372 clusters.
+
+Likelihood: 5.628476e+03
+
+Rissanen Score: -1.781880e+03
+
+Minimum distance between (0,116). Combining clusters
+Performing EM algorithm on 371 clusters.
+
+Likelihood: 5.625645e+03
+
+Rissanen Score: -1.789399e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 370 clusters.
+
+Likelihood: 5.622804e+03
+
+Rissanen Score: -1.796907e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 369 clusters.
+
+Likelihood: 5.619952e+03
+
+Rissanen Score: -1.804405e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 368 clusters.
+
+Likelihood: 5.617089e+03
+
+Rissanen Score: -1.811892e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 367 clusters.
+
+Likelihood: 5.614217e+03
+
+Rissanen Score: -1.819369e+03
+
+Minimum distance between (0,111). Combining clusters
+Performing EM algorithm on 366 clusters.
+
+Likelihood: 5.611332e+03
+
+Rissanen Score: -1.826834e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 365 clusters.
+
+Likelihood: 5.608436e+03
+
+Rissanen Score: -1.834287e+03
+
+Minimum distance between (0,109). Combining clusters
+Performing EM algorithm on 364 clusters.
+
+Likelihood: 5.605530e+03
+
+Rissanen Score: -1.841731e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 363 clusters.
+
+Likelihood: 5.602610e+03
+
+Rissanen Score: -1.849161e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 362 clusters.
+
+Likelihood: 5.599682e+03
+
+Rissanen Score: -1.856582e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 361 clusters.
+
+Likelihood: 5.596739e+03
+
+Rissanen Score: -1.863989e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 360 clusters.
+
+Likelihood: 5.593785e+03
+
+Rissanen Score: -1.871385e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 359 clusters.
+
+Likelihood: 5.590821e+03
+
+Rissanen Score: -1.878770e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 358 clusters.
+
+Likelihood: 5.587843e+03
+
+Rissanen Score: -1.886142e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 357 clusters.
+
+Likelihood: 5.584854e+03
+
+Rissanen Score: -1.893502e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 356 clusters.
+
+Likelihood: 5.581852e+03
+
+Rissanen Score: -1.900850e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 355 clusters.
+
+Likelihood: 5.578837e+03
+
+Rissanen Score: -1.908184e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 354 clusters.
+
+Likelihood: 5.575811e+03
+
+Rissanen Score: -1.915508e+03
+
+Minimum distance between (0,98). Combining clusters
+Performing EM algorithm on 353 clusters.
+
+Likelihood: 5.572771e+03
+
+Rissanen Score: -1.922817e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 352 clusters.
+
+Likelihood: 5.569719e+03
+
+Rissanen Score: -1.930115e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 351 clusters.
+
+Likelihood: 5.566653e+03
+
+Rissanen Score: -1.937399e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 350 clusters.
+
+Likelihood: 5.563577e+03
+
+Rissanen Score: -1.944672e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 349 clusters.
+
+Likelihood: 5.560485e+03
+
+Rissanen Score: -1.951930e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 348 clusters.
+
+Likelihood: 5.557377e+03
+
+Rissanen Score: -1.959172e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 347 clusters.
+
+Likelihood: 5.554260e+03
+
+Rissanen Score: -1.966404e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 346 clusters.
+
+Likelihood: 5.551127e+03
+
+Rissanen Score: -1.973621e+03
+
+Minimum distance between (90,91). Combining clusters
+Performing EM algorithm on 345 clusters.
+
+Likelihood: 5.547982e+03
+
+Rissanen Score: -1.980825e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 344 clusters.
+
+Likelihood: 5.544822e+03
+
+Rissanen Score: -1.988015e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 343 clusters.
+
+Likelihood: 5.541646e+03
+
+Rissanen Score: -1.995188e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 342 clusters.
+
+Likelihood: 5.538458e+03
+
+Rissanen Score: -2.002350e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 341 clusters.
+
+Likelihood: 5.535254e+03
+
+Rissanen Score: -2.009495e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 340 clusters.
+
+Likelihood: 5.532036e+03
+
+Rissanen Score: -2.016627e+03
+
+Minimum distance between (0,84). Combining clusters
+Performing EM algorithm on 339 clusters.
+
+Likelihood: 5.528802e+03
+
+Rissanen Score: -2.023742e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 338 clusters.
+
+Likelihood: 5.525553e+03
+
+Rissanen Score: -2.030844e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 337 clusters.
+
+Likelihood: 5.522290e+03
+
+Rissanen Score: -2.037930e+03
+
+Minimum distance between (0,81). Combining clusters
+Performing EM algorithm on 336 clusters.
+
+Likelihood: 5.519009e+03
+
+Rissanen Score: -2.044998e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 335 clusters.
+
+Likelihood: 5.515715e+03
+
+Rissanen Score: -2.052054e+03
+
+Minimum distance between (0,79). Combining clusters
+Performing EM algorithm on 334 clusters.
+
+Likelihood: 5.512403e+03
+
+Rissanen Score: -2.059092e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 333 clusters.
+
+Likelihood: 5.509075e+03
+
+Rissanen Score: -2.066113e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 332 clusters.
+
+Likelihood: 5.505731e+03
+
+Rissanen Score: -2.073119e+03
+
+Minimum distance between (256,257). Combining clusters
+Performing EM algorithm on 331 clusters.
+
+Likelihood: 5.502371e+03
+
+Rissanen Score: -2.080108e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 330 clusters.
+
+Likelihood: 5.498995e+03
+
+Rissanen Score: -2.087082e+03
+
+Minimum distance between (0,74). Combining clusters
+Performing EM algorithm on 329 clusters.
+
+Likelihood: 5.495599e+03
+
+Rissanen Score: -2.094036e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 328 clusters.
+
+Likelihood: 5.492188e+03
+
+Rissanen Score: -2.100974e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 327 clusters.
+
+Likelihood: 5.488758e+03
+
+Rissanen Score: -2.107894e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 326 clusters.
+
+Likelihood: 5.485311e+03
+
+Rissanen Score: -2.114796e+03
+
+Minimum distance between (70,255). Combining clusters
+Performing EM algorithm on 325 clusters.
+
+Likelihood: 5.481847e+03
+
+Rissanen Score: -2.121682e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 324 clusters.
+
+Likelihood: 5.478362e+03
+
+Rissanen Score: -2.128547e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 323 clusters.
+
+Likelihood: 5.474859e+03
+
+Rissanen Score: -2.135393e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 322 clusters.
+
+Likelihood: 5.471339e+03
+
+Rissanen Score: -2.142222e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 321 clusters.
+
+Likelihood: 5.467799e+03
+
+Rissanen Score: -2.149032e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 320 clusters.
+
+Likelihood: 5.464238e+03
+
+Rissanen Score: -2.155821e+03
+
+Minimum distance between (64,255). Combining clusters
+Performing EM algorithm on 319 clusters.
+
+Likelihood: 5.460658e+03
+
+Rissanen Score: -2.162590e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 318 clusters.
+
+Likelihood: 5.457058e+03
+
+Rissanen Score: -2.169340e+03
+
+Minimum distance between (62,255). Combining clusters
+Performing EM algorithm on 317 clusters.
+
+Likelihood: 5.453435e+03
+
+Rissanen Score: -2.176067e+03
+
+Minimum distance between (0,61). Combining clusters
+Performing EM algorithm on 316 clusters.
+
+Likelihood: 5.449793e+03
+
+Rissanen Score: -2.182774e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 315 clusters.
+
+Likelihood: 5.446131e+03
+
+Rissanen Score: -2.189462e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 314 clusters.
+
+Likelihood: 5.442446e+03
+
+Rissanen Score: -2.196127e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 313 clusters.
+
+Likelihood: 5.438738e+03
+
+Rissanen Score: -2.202768e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 312 clusters.
+
+Likelihood: 5.435009e+03
+
+Rissanen Score: -2.209389e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 311 clusters.
+
+Likelihood: 5.431258e+03
+
+Rissanen Score: -2.215987e+03
+
+Minimum distance between (55,255). Combining clusters
+Performing EM algorithm on 310 clusters.
+
+Likelihood: 5.427482e+03
+
+Rissanen Score: -2.222561e+03
+
+Minimum distance between (54,55). Combining clusters
+Performing EM algorithm on 309 clusters.
+
+Likelihood: 5.423683e+03
+
+Rissanen Score: -2.229111e+03
+
+Minimum distance between (0,53). Combining clusters
+Performing EM algorithm on 308 clusters.
+
+Likelihood: 5.419858e+03
+
+Rissanen Score: -2.235636e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 307 clusters.
+
+Likelihood: 5.416011e+03
+
+Rissanen Score: -2.242138e+03
+
+Minimum distance between (0,51). Combining clusters
+Performing EM algorithm on 306 clusters.
+
+Likelihood: 5.412138e+03
+
+Rissanen Score: -2.248615e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 305 clusters.
+
+Likelihood: 5.408238e+03
+
+Rissanen Score: -2.255065e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 304 clusters.
+
+Likelihood: 5.404314e+03
+
+Rissanen Score: -2.261490e+03
+
+Minimum distance between (0,48). Combining clusters
+Performing EM algorithm on 303 clusters.
+
+Likelihood: 5.400363e+03
+
+Rissanen Score: -2.267889e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 302 clusters.
+
+Likelihood: 5.396384e+03
+
+Rissanen Score: -2.274259e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 301 clusters.
+
+Likelihood: 5.392378e+03
+
+Rissanen Score: -2.280603e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 300 clusters.
+
+Likelihood: 5.388342e+03
+
+Rissanen Score: -2.286917e+03
+
+Minimum distance between (0,255). Combining clusters
+Performing EM algorithm on 299 clusters.
+
+Likelihood: 5.384278e+03
+
+Rissanen Score: -2.293202e+03
+
+Minimum distance between (43,255). Combining clusters
+Performing EM algorithm on 298 clusters.
+
+Likelihood: 5.380183e+03
+
+Rissanen Score: -2.299457e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 297 clusters.
+
+Likelihood: 5.376059e+03
+
+Rissanen Score: -2.305682e+03
+
+Minimum distance between (0,41). Combining clusters
+Performing EM algorithm on 296 clusters.
+
+Likelihood: 5.371905e+03
+
+Rissanen Score: -2.311878e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 295 clusters.
+
+Likelihood: 5.367717e+03
+
+Rissanen Score: -2.318040e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 294 clusters.
+
+Likelihood: 5.363496e+03
+
+Rissanen Score: -2.324168e+03
+
+Minimum distance between (38,255). Combining clusters
+Performing EM algorithm on 293 clusters.
+
+Likelihood: 5.359243e+03
+
+Rissanen Score: -2.330265e+03
+
+Minimum distance between (0,37). Combining clusters
+Performing EM algorithm on 292 clusters.
+
+Likelihood: 5.354953e+03
+
+Rissanen Score: -2.336324e+03
+
+Minimum distance between (36,255). Combining clusters
+Performing EM algorithm on 291 clusters.
+
+Likelihood: 5.350630e+03
+
+Rissanen Score: -2.342351e+03
+
+Minimum distance between (0,35). Combining clusters
+Performing EM algorithm on 290 clusters.
+
+Likelihood: 5.346272e+03
+
+Rissanen Score: -2.348342e+03
+
+Minimum distance between (34,255). Combining clusters
+Performing EM algorithm on 289 clusters.
+
+Likelihood: 5.341873e+03
+
+Rissanen Score: -2.354293e+03
+
+Minimum distance between (33,255). Combining clusters
+Performing EM algorithm on 288 clusters.
+
+Likelihood: 5.337439e+03
+
+Rissanen Score: -2.360209e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 287 clusters.
+
+Likelihood: 5.332963e+03
+
+Rissanen Score: -2.366082e+03
+
+Minimum distance between (0,31). Combining clusters
+Performing EM algorithm on 286 clusters.
+
+Likelihood: 5.328447e+03
+
+Rissanen Score: -2.371916e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 285 clusters.
+
+Likelihood: 5.323892e+03
+
+Rissanen Score: -2.377710e+03
+
+Minimum distance between (0,29). Combining clusters
+Performing EM algorithm on 284 clusters.
+
+Likelihood: 5.319292e+03
+
+Rissanen Score: -2.383459e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 283 clusters.
+
+Likelihood: 5.314646e+03
+
+Rissanen Score: -2.389164e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 282 clusters.
+
+Likelihood: 5.309957e+03
+
+Rissanen Score: -2.394824e+03
+
+Minimum distance between (26,27). Combining clusters
+Performing EM algorithm on 281 clusters.
+
+Likelihood: 5.305219e+03
+
+Rissanen Score: -2.400436e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 280 clusters.
+
+Likelihood: 5.300432e+03
+
+Rissanen Score: -2.405998e+03
+
+Minimum distance between (0,24). Combining clusters
+Performing EM algorithm on 279 clusters.
+
+Likelihood: 5.295596e+03
+
+Rissanen Score: -2.411511e+03
+
+Minimum distance between (0,23). Combining clusters
+Performing EM algorithm on 278 clusters.
+
+Likelihood: 5.290706e+03
+
+Rissanen Score: -2.416971e+03
+
+Minimum distance between (0,22). Combining clusters
+Performing EM algorithm on 277 clusters.
+
+Likelihood: 5.285761e+03
+
+Rissanen Score: -2.422376e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 276 clusters.
+
+Likelihood: 5.280761e+03
+
+Rissanen Score: -2.427726e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 275 clusters.
+
+Likelihood: 5.275702e+03
+
+Rissanen Score: -2.433016e+03
+
+Minimum distance between (0,19). Combining clusters
+Performing EM algorithm on 274 clusters.
+
+Likelihood: 5.270582e+03
+
+Rissanen Score: -2.438246e+03
+
+Minimum distance between (256,257). Combining clusters
+Performing EM algorithm on 273 clusters.
+
+Likelihood: 5.265399e+03
+
+Rissanen Score: -2.443413e+03
+
+Minimum distance between (1,18). Combining clusters
+Performing EM algorithm on 272 clusters.
+
+Likelihood: 5.260150e+03
+
+Rissanen Score: -2.448513e+03
+
+Minimum distance between (0,16). Combining clusters
+Performing EM algorithm on 271 clusters.
+
+Likelihood: 5.254832e+03
+
+Rissanen Score: -2.453544e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 270 clusters.
+
+Likelihood: 5.249439e+03
+
+Rissanen Score: -2.458501e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 269 clusters.
+
+Likelihood: 5.243973e+03
+
+Rissanen Score: -2.463385e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 268 clusters.
+
+Likelihood: 5.238429e+03
+
+Rissanen Score: -2.468190e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 267 clusters.
+
+Likelihood: 5.232802e+03
+
+Rissanen Score: -2.472913e+03
+
+Minimum distance between (0,11). Combining clusters
+Performing EM algorithm on 266 clusters.
+
+Likelihood: 5.227085e+03
+
+Rissanen Score: -2.477546e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 265 clusters.
+
+Likelihood: 5.221278e+03
+
+Rissanen Score: -2.482088e+03
+
+Minimum distance between (0,9). Combining clusters
+Performing EM algorithm on 264 clusters.
+
+Likelihood: 5.215373e+03
+
+Rissanen Score: -2.486532e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 263 clusters.
+
+Likelihood: 5.209367e+03
+
+Rissanen Score: -2.490876e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 262 clusters.
+
+Likelihood: 5.203250e+03
+
+Rissanen Score: -2.495109e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 261 clusters.
+
+Likelihood: 5.197021e+03
+
+Rissanen Score: -2.499229e+03
+
+Minimum distance between (0,5). Combining clusters
+Performing EM algorithm on 260 clusters.
+
+Likelihood: 5.190668e+03
+
+Rissanen Score: -2.503226e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 259 clusters.
+
+Likelihood: 5.184183e+03
+
+Rissanen Score: -2.507091e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 258 clusters.
+
+Likelihood: 5.177559e+03
+
+Rissanen Score: -2.510816e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 257 clusters.
+
+Likelihood: 5.170781e+03
+
+Rissanen Score: -2.514387e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 256 clusters.
+
+Likelihood: 4.725403e+03
+
+Rissanen Score: -2.079360e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 255 clusters.
+
+Likelihood: 4.721911e+03
+
+Rissanen Score: -2.086217e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 254 clusters.
+
+Likelihood: 4.718406e+03
+
+Rissanen Score: -2.093062e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 253 clusters.
+
+Likelihood: 4.714884e+03
+
+Rissanen Score: -2.099889e+03
+
+Minimum distance between (3,252). Combining clusters
+Performing EM algorithm on 252 clusters.
+
+Likelihood: 4.711350e+03
+
+Rissanen Score: -2.106704e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 251 clusters.
+
+Likelihood: 4.707801e+03
+
+Rissanen Score: -2.113505e+03
+
+Minimum distance between (3,4). Combining clusters
+Performing EM algorithm on 250 clusters.
+
+Likelihood: 4.704238e+03
+
+Rissanen Score: -2.120292e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 249 clusters.
+
+Likelihood: 4.700662e+03
+
+Rissanen Score: -2.127065e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 248 clusters.
+
+Likelihood: 4.697071e+03
+
+Rissanen Score: -2.133824e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 247 clusters.
+
+Likelihood: 4.693465e+03
+
+Rissanen Score: -2.140567e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 246 clusters.
+
+Likelihood: 4.689846e+03
+
+Rissanen Score: -2.147298e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 245 clusters.
+
+Likelihood: 4.686210e+03
+
+Rissanen Score: -2.154012e+03
+
+Minimum distance between (1,3). Combining clusters
+Performing EM algorithm on 244 clusters.
+
+Likelihood: 4.682561e+03
+
+Rissanen Score: -2.160712e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 243 clusters.
+
+Likelihood: 4.678896e+03
+
+Rissanen Score: -2.167397e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 242 clusters.
+
+Likelihood: 4.675217e+03
+
+Rissanen Score: -2.174068e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 241 clusters.
+
+Likelihood: 4.671521e+03
+
+Rissanen Score: -2.180721e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 240 clusters.
+
+Likelihood: 4.667811e+03
+
+Rissanen Score: -2.187361e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 239 clusters.
+
+Likelihood: 4.664085e+03
+
+Rissanen Score: -2.193984e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 238 clusters.
+
+Likelihood: 4.660345e+03
+
+Rissanen Score: -2.200594e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 237 clusters.
+
+Likelihood: 4.656589e+03
+
+Rissanen Score: -2.207187e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 236 clusters.
+
+Likelihood: 4.652816e+03
+
+Rissanen Score: -2.213764e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 235 clusters.
+
+Likelihood: 4.649026e+03
+
+Rissanen Score: -2.220324e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 234 clusters.
+
+Likelihood: 4.645223e+03
+
+Rissanen Score: -2.226870e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 233 clusters.
+
+Likelihood: 4.641402e+03
+
+Rissanen Score: -2.233398e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 232 clusters.
+
+Likelihood: 4.637564e+03
+
+Rissanen Score: -2.239911e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 231 clusters.
+
+Likelihood: 4.633711e+03
+
+Rissanen Score: -2.246407e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 230 clusters.
+
+Likelihood: 4.629841e+03
+
+Rissanen Score: -2.252887e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 229 clusters.
+
+Likelihood: 4.625953e+03
+
+Rissanen Score: -2.259348e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 228 clusters.
+
+Likelihood: 4.622049e+03
+
+Rissanen Score: -2.265794e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 227 clusters.
+
+Likelihood: 4.618128e+03
+
+Rissanen Score: -2.272222e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 226 clusters.
+
+Likelihood: 4.614188e+03
+
+Rissanen Score: -2.278632e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 225 clusters.
+
+Likelihood: 4.610234e+03
+
+Rissanen Score: -2.285028e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 224 clusters.
+
+Likelihood: 4.606260e+03
+
+Rissanen Score: -2.291403e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 223 clusters.
+
+Likelihood: 4.602271e+03
+
+Rissanen Score: -2.297763e+03
+
+Minimum distance between (1,3). Combining clusters
+Performing EM algorithm on 222 clusters.
+
+Likelihood: 4.598261e+03
+
+Rissanen Score: -2.304103e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 221 clusters.
+
+Likelihood: 4.594234e+03
+
+Rissanen Score: -2.310426e+03
+
+Minimum distance between (3,4). Combining clusters
+Performing EM algorithm on 220 clusters.
+
+Likelihood: 4.590189e+03
+
+Rissanen Score: -2.316730e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 219 clusters.
+
+Likelihood: 4.586126e+03
+
+Rissanen Score: -2.323017e+03
+
+Minimum distance between (1,3). Combining clusters
+Performing EM algorithm on 218 clusters.
+
+Likelihood: 4.582044e+03
+
+Rissanen Score: -2.329284e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 217 clusters.
+
+Likelihood: 4.577943e+03
+
+Rissanen Score: -2.335533e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 216 clusters.
+
+Likelihood: 4.573822e+03
+
+Rissanen Score: -2.341762e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 215 clusters.
+
+Likelihood: 4.569685e+03
+
+Rissanen Score: -2.347974e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 214 clusters.
+
+Likelihood: 4.565528e+03
+
+Rissanen Score: -2.354167e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 213 clusters.
+
+Likelihood: 4.561351e+03
+
+Rissanen Score: -2.360339e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 212 clusters.
+
+Likelihood: 4.557154e+03
+
+Rissanen Score: -2.366492e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 211 clusters.
+
+Likelihood: 4.552938e+03
+
+Rissanen Score: -2.372625e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 210 clusters.
+
+Likelihood: 4.548700e+03
+
+Rissanen Score: -2.378737e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 209 clusters.
+
+Likelihood: 4.544445e+03
+
+Rissanen Score: -2.384832e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 208 clusters.
+
+Likelihood: 4.540168e+03
+
+Rissanen Score: -2.390904e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 207 clusters.
+
+Likelihood: 4.535869e+03
+
+Rissanen Score: -2.396955e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 206 clusters.
+
+Likelihood: 4.531553e+03
+
+Rissanen Score: -2.402988e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 205 clusters.
+
+Likelihood: 4.527214e+03
+
+Rissanen Score: -2.408999e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 204 clusters.
+
+Likelihood: 4.522853e+03
+
+Rissanen Score: -2.414988e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 203 clusters.
+
+Likelihood: 4.518472e+03
+
+Rissanen Score: -2.420956e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 202 clusters.
+
+Likelihood: 4.514069e+03
+
+Rissanen Score: -2.426903e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 201 clusters.
+
+Likelihood: 4.509645e+03
+
+Rissanen Score: -2.432828e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 200 clusters.
+
+Likelihood: 4.505198e+03
+
+Rissanen Score: -2.438731e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 199 clusters.
+
+Likelihood: 4.500730e+03
+
+Rissanen Score: -2.444613e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 198 clusters.
+
+Likelihood: 4.496238e+03
+
+Rissanen Score: -2.450470e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 197 clusters.
+
+Likelihood: 4.491724e+03
+
+Rissanen Score: -2.456306e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 196 clusters.
+
+Likelihood: 4.487188e+03
+
+Rissanen Score: -2.462120e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 195 clusters.
+
+Likelihood: 4.482629e+03
+
+Rissanen Score: -2.467910e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 194 clusters.
+
+Likelihood: 4.478045e+03
+
+Rissanen Score: -2.473675e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 193 clusters.
+
+Likelihood: 4.473438e+03
+
+Rissanen Score: -2.479418e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 192 clusters.
+
+Likelihood: 4.468809e+03
+
+Rissanen Score: -2.485138e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 191 clusters.
+
+Likelihood: 4.464153e+03
+
+Rissanen Score: -2.490833e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 190 clusters.
+
+Likelihood: 4.459476e+03
+
+Rissanen Score: -2.496504e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 189 clusters.
+
+Likelihood: 4.454773e+03
+
+Rissanen Score: -2.502151e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 188 clusters.
+
+Likelihood: 4.450044e+03
+
+Rissanen Score: -2.507772e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 187 clusters.
+
+Likelihood: 4.445292e+03
+
+Rissanen Score: -2.513369e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 186 clusters.
+
+Likelihood: 4.440513e+03
+
+Rissanen Score: -2.518940e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 185 clusters.
+
+Likelihood: 4.435708e+03
+
+Rissanen Score: -2.524485e+03
+
+Minimum distance between (1,3). Combining clusters
+Performing EM algorithm on 184 clusters.
+
+Likelihood: 4.430877e+03
+
+Rissanen Score: -2.530004e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 183 clusters.
+
+Likelihood: 4.426021e+03
+
+Rissanen Score: -2.535497e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 182 clusters.
+
+Likelihood: 4.421140e+03
+
+Rissanen Score: -2.540966e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 181 clusters.
+
+Likelihood: 4.416229e+03
+
+Rissanen Score: -2.546405e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 180 clusters.
+
+Likelihood: 4.411292e+03
+
+Rissanen Score: -2.551817e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 179 clusters.
+
+Likelihood: 4.406328e+03
+
+Rissanen Score: -2.557202e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 178 clusters.
+
+Likelihood: 4.401337e+03
+
+Rissanen Score: -2.562561e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 177 clusters.
+
+Likelihood: 4.396318e+03
+
+Rissanen Score: -2.567892e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 176 clusters.
+
+Likelihood: 4.391270e+03
+
+Rissanen Score: -2.573193e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 175 clusters.
+
+Likelihood: 4.386195e+03
+
+Rissanen Score: -2.578467e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 174 clusters.
+
+Likelihood: 4.381089e+03
+
+Rissanen Score: -2.583711e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 173 clusters.
+
+Likelihood: 4.375955e+03
+
+Rissanen Score: -2.588926e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 172 clusters.
+
+Likelihood: 4.370790e+03
+
+Rissanen Score: -2.594111e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 171 clusters.
+
+Likelihood: 4.365597e+03
+
+Rissanen Score: -2.599268e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 170 clusters.
+
+Likelihood: 4.360372e+03
+
+Rissanen Score: -2.604392e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 169 clusters.
+
+Likelihood: 4.355117e+03
+
+Rissanen Score: -2.609487e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 168 clusters.
+
+Likelihood: 4.349831e+03
+
+Rissanen Score: -2.614550e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 167 clusters.
+
+Likelihood: 4.344515e+03
+
+Rissanen Score: -2.619584e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 166 clusters.
+
+Likelihood: 4.339164e+03
+
+Rissanen Score: -2.624583e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 165 clusters.
+
+Likelihood: 4.333784e+03
+
+Rissanen Score: -2.629553e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 164 clusters.
+
+Likelihood: 4.328370e+03
+
+Rissanen Score: -2.634488e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 163 clusters.
+
+Likelihood: 4.322923e+03
+
+Rissanen Score: -2.639390e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 162 clusters.
+
+Likelihood: 4.317442e+03
+
+Rissanen Score: -2.644259e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 161 clusters.
+
+Likelihood: 4.311930e+03
+
+Rissanen Score: -2.649096e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 160 clusters.
+
+Likelihood: 4.306381e+03
+
+Rissanen Score: -2.653898e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 159 clusters.
+
+Likelihood: 4.300800e+03
+
+Rissanen Score: -2.658666e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 158 clusters.
+
+Likelihood: 4.295182e+03
+
+Rissanen Score: -2.663397e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 157 clusters.
+
+Likelihood: 4.289529e+03
+
+Rissanen Score: -2.668094e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 156 clusters.
+
+Likelihood: 4.283841e+03
+
+Rissanen Score: -2.672755e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 155 clusters.
+
+Likelihood: 4.278114e+03
+
+Rissanen Score: -2.677378e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 154 clusters.
+
+Likelihood: 4.272354e+03
+
+Rissanen Score: -2.681968e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 153 clusters.
+
+Likelihood: 4.266554e+03
+
+Rissanen Score: -2.686517e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 152 clusters.
+
+Likelihood: 4.260717e+03
+
+Rissanen Score: -2.691030e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 151 clusters.
+
+Likelihood: 4.254842e+03
+
+Rissanen Score: -2.695505e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 150 clusters.
+
+Likelihood: 4.248929e+03
+
+Rissanen Score: -2.699941e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 149 clusters.
+
+Likelihood: 4.242976e+03
+
+Rissanen Score: -2.704337e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 148 clusters.
+
+Likelihood: 4.236981e+03
+
+Rissanen Score: -2.708693e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 147 clusters.
+
+Likelihood: 4.230949e+03
+
+Rissanen Score: -2.713010e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 146 clusters.
+
+Likelihood: 4.224875e+03
+
+Rissanen Score: -2.717285e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 145 clusters.
+
+Likelihood: 4.218758e+03
+
+Rissanen Score: -2.721518e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 144 clusters.
+
+Likelihood: 4.212602e+03
+
+Rissanen Score: -2.725711e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 143 clusters.
+
+Likelihood: 4.206400e+03
+
+Rissanen Score: -2.729859e+03
+
+Minimum distance between (1,3). Combining clusters
+Performing EM algorithm on 142 clusters.
+
+Likelihood: 4.200156e+03
+
+Rissanen Score: -2.733965e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 141 clusters.
+
+Likelihood: 4.193869e+03
+
+Rissanen Score: -2.738027e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 140 clusters.
+
+Likelihood: 4.187537e+03
+
+Rissanen Score: -2.742045e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 139 clusters.
+
+Likelihood: 4.181160e+03
+
+Rissanen Score: -2.746018e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 138 clusters.
+
+Likelihood: 4.174738e+03
+
+Rissanen Score: -2.749945e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 137 clusters.
+
+Likelihood: 4.168269e+03
+
+Rissanen Score: -2.753825e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 136 clusters.
+
+Likelihood: 4.161752e+03
+
+Rissanen Score: -2.757658e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 135 clusters.
+
+Likelihood: 4.155188e+03
+
+Rissanen Score: -2.761444e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 134 clusters.
+
+Likelihood: 4.148577e+03
+
+Rissanen Score: -2.765183e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 133 clusters.
+
+Likelihood: 4.141915e+03
+
+Rissanen Score: -2.768870e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 132 clusters.
+
+Likelihood: 4.135205e+03
+
+Rissanen Score: -2.772510e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 131 clusters.
+
+Likelihood: 4.128442e+03
+
+Rissanen Score: -2.776097e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 130 clusters.
+
+Likelihood: 4.121629e+03
+
+Rissanen Score: -2.779633e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 129 clusters.
+
+Likelihood: 4.114763e+03
+
+Rissanen Score: -2.783117e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 128 clusters.
+
+Likelihood: 4.107845e+03
+
+Rissanen Score: -2.786548e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 127 clusters.
+
+Likelihood: 4.100873e+03
+
+Rissanen Score: -2.789925e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 126 clusters.
+
+Likelihood: 4.093845e+03
+
+Rissanen Score: -2.793248e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 125 clusters.
+
+Likelihood: 4.086763e+03
+
+Rissanen Score: -2.796515e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 124 clusters.
+
+Likelihood: 4.079625e+03
+
+Rissanen Score: -2.799726e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 123 clusters.
+
+Likelihood: 4.072427e+03
+
+Rissanen Score: -2.802878e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 122 clusters.
+
+Likelihood: 4.065173e+03
+
+Rissanen Score: -2.805974e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 121 clusters.
+
+Likelihood: 4.057859e+03
+
+Rissanen Score: -2.809009e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 120 clusters.
+
+Likelihood: 4.050485e+03
+
+Rissanen Score: -2.811985e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 119 clusters.
+
+Likelihood: 4.043050e+03
+
+Rissanen Score: -2.814899e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 118 clusters.
+
+Likelihood: 4.035552e+03
+
+Rissanen Score: -2.817751e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 117 clusters.
+
+Likelihood: 4.027992e+03
+
+Rissanen Score: -2.820541e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 116 clusters.
+
+Likelihood: 4.020366e+03
+
+Rissanen Score: -2.823264e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 115 clusters.
+
+Likelihood: 4.012677e+03
+
+Rissanen Score: -2.825925e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 114 clusters.
+
+Likelihood: 4.004919e+03
+
+Rissanen Score: -2.828516e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 113 clusters.
+
+Likelihood: 3.997094e+03
+
+Rissanen Score: -2.831041e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 112 clusters.
+
+Likelihood: 3.989201e+03
+
+Rissanen Score: -2.833497e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 111 clusters.
+
+Likelihood: 3.981236e+03
+
+Rissanen Score: -2.835882e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 110 clusters.
+
+Likelihood: 3.973202e+03
+
+Rissanen Score: -2.838198e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 109 clusters.
+
+Likelihood: 3.965094e+03
+
+Rissanen Score: -2.840439e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 108 clusters.
+
+Likelihood: 3.956912e+03
+
+Rissanen Score: -2.842606e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 107 clusters.
+
+Likelihood: 3.948655e+03
+
+Rissanen Score: -2.844699e+03
+
+Minimum distance between (3,4). Combining clusters
+Performing EM algorithm on 106 clusters.
+
+Likelihood: 3.940320e+03
+
+Rissanen Score: -2.846714e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 105 clusters.
+
+Likelihood: 3.931907e+03
+
+Rissanen Score: -2.848651e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 104 clusters.
+
+Likelihood: 3.923416e+03
+
+Rissanen Score: -2.850509e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 103 clusters.
+
+Likelihood: 3.914843e+03
+
+Rissanen Score: -2.852285e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 102 clusters.
+
+Likelihood: 3.906186e+03
+
+Rissanen Score: -2.853978e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 101 clusters.
+
+Likelihood: 3.897446e+03
+
+Rissanen Score: -2.855588e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 100 clusters.
+
+Likelihood: 3.888619e+03
+
+Rissanen Score: -2.857111e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 99 clusters.
+
+Likelihood: 3.879703e+03
+
+Rissanen Score: -2.858544e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 98 clusters.
+
+Likelihood: 3.870700e+03
+
+Rissanen Score: -2.859890e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 97 clusters.
+
+Likelihood: 3.861604e+03
+
+Rissanen Score: -2.861145e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 96 clusters.
+
+Likelihood: 3.852416e+03
+
+Rissanen Score: -2.862305e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 95 clusters.
+
+Likelihood: 3.843130e+03
+
+Rissanen Score: -2.863370e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 94 clusters.
+
+Likelihood: 3.833750e+03
+
+Rissanen Score: -2.864339e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 93 clusters.
+
+Likelihood: 3.824269e+03
+
+Rissanen Score: -2.865208e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 92 clusters.
+
+Likelihood: 3.814688e+03
+
+Rissanen Score: -2.865976e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 91 clusters.
+
+Likelihood: 3.805003e+03
+
+Rissanen Score: -2.866641e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 90 clusters.
+
+Likelihood: 3.795210e+03
+
+Rissanen Score: -2.867198e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 89 clusters.
+
+Likelihood: 3.785312e+03
+
+Rissanen Score: -2.867649e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 88 clusters.
+
+Likelihood: 3.775302e+03
+
+Rissanen Score: -2.867988e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 87 clusters.
+
+Likelihood: 3.765178e+03
+
+Rissanen Score: -2.868214e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 86 clusters.
+
+Likelihood: 3.754939e+03
+
+Rissanen Score: -2.868324e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 85 clusters.
+
+Likelihood: 3.744582e+03
+
+Rissanen Score: -2.868317e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 84 clusters.
+
+Likelihood: 3.734104e+03
+
+Rissanen Score: -2.868189e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 83 clusters.
+
+Likelihood: 3.723502e+03
+
+Rissanen Score: -2.867936e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 82 clusters.
+
+Likelihood: 3.712773e+03
+
+Rissanen Score: -2.867557e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 81 clusters.
+
+Likelihood: 3.701914e+03
+
+Rissanen Score: -2.867048e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 80 clusters.
+
+Likelihood: 3.690921e+03
+
+Rissanen Score: -2.866405e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 79 clusters.
+
+Likelihood: 3.679792e+03
+
+Rissanen Score: -2.865625e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 78 clusters.
+
+Likelihood: 3.668524e+03
+
+Rissanen Score: -2.864707e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 77 clusters.
+
+Likelihood: 3.657112e+03
+
+Rissanen Score: -2.863644e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 76 clusters.
+
+Likelihood: 3.645552e+03
+
+Rissanen Score: -2.862433e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 75 clusters.
+
+Likelihood: 3.633842e+03
+
+Rissanen Score: -2.861073e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 74 clusters.
+
+Likelihood: 3.621976e+03
+
+Rissanen Score: -2.859557e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 73 clusters.
+
+Likelihood: 3.609952e+03
+
+Rissanen Score: -2.857882e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 72 clusters.
+
+Likelihood: 3.597763e+03
+
+Rissanen Score: -2.856043e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 71 clusters.
+
+Likelihood: 3.585406e+03
+
+Rissanen Score: -2.854036e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 70 clusters.
+
+Likelihood: 3.572877e+03
+
+Rissanen Score: -2.851856e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 69 clusters.
+
+Likelihood: 3.560171e+03
+
+Rissanen Score: -2.849500e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 68 clusters.
+
+Likelihood: 3.547281e+03
+
+Rissanen Score: -2.846959e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 67 clusters.
+
+Likelihood: 3.534204e+03
+
+Rissanen Score: -2.844232e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 66 clusters.
+
+Likelihood: 3.520932e+03
+
+Rissanen Score: -2.841309e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 65 clusters.
+
+Likelihood: 3.507462e+03
+
+Rissanen Score: -2.838189e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 64 clusters.
+
+Likelihood: 3.493785e+03
+
+Rissanen Score: -2.834861e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 63 clusters.
+
+Likelihood: 3.479896e+03
+
+Rissanen Score: -2.831323e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 62 clusters.
+
+Likelihood: 3.465791e+03
+
+Rissanen Score: -2.827566e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 61 clusters.
+
+Likelihood: 3.451457e+03
+
+Rissanen Score: -2.823582e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 60 clusters.
+
+Likelihood: 3.436892e+03
+
+Rissanen Score: -2.819367e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 59 clusters.
+
+Likelihood: 3.422085e+03
+
+Rissanen Score: -2.814910e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 58 clusters.
+
+Likelihood: 3.407031e+03
+
+Rissanen Score: -2.810205e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 57 clusters.
+
+Likelihood: 3.391718e+03
+
+Rissanen Score: -2.805242e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 56 clusters.
+
+Likelihood: 3.376141e+03
+
+Rissanen Score: -2.800014e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 55 clusters.
+
+Likelihood: 3.360288e+03
+
+Rissanen Score: -2.794510e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 54 clusters.
+
+Likelihood: 3.344148e+03
+
+Rissanen Score: -2.788721e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 53 clusters.
+
+Likelihood: 3.327713e+03
+
+Rissanen Score: -2.782635e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 52 clusters.
+
+Likelihood: 3.310971e+03
+
+Rissanen Score: -2.776243e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 51 clusters.
+
+Likelihood: 3.293911e+03
+
+Rissanen Score: -2.769532e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 50 clusters.
+
+Likelihood: 3.276519e+03
+
+Rissanen Score: -2.762489e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 49 clusters.
+
+Likelihood: 3.258782e+03
+
+Rissanen Score: -2.755103e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 48 clusters.
+
+Likelihood: 3.240688e+03
+
+Rissanen Score: -2.747358e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 47 clusters.
+
+Likelihood: 3.222222e+03
+
+Rissanen Score: -2.739241e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 46 clusters.
+
+Likelihood: 3.203367e+03
+
+Rissanen Score: -2.730736e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 45 clusters.
+
+Likelihood: 3.184107e+03
+
+Rissanen Score: -2.721825e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 44 clusters.
+
+Likelihood: 3.164423e+03
+
+Rissanen Score: -2.712491e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 43 clusters.
+
+Likelihood: 3.144298e+03
+
+Rissanen Score: -2.702716e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 42 clusters.
+
+Likelihood: 3.123711e+03
+
+Rissanen Score: -2.692479e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 41 clusters.
+
+Likelihood: 3.102640e+03
+
+Rissanen Score: -2.681757e+03
+
+Minimum distance between (1,3). Combining clusters
+Performing EM algorithm on 40 clusters.
+
+Likelihood: 3.081062e+03
+
+Rissanen Score: -2.670528e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 39 clusters.
+
+Likelihood: 3.058951e+03
+
+Rissanen Score: -2.658767e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 38 clusters.
+
+Likelihood: 3.036282e+03
+
+Rissanen Score: -2.646448e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 37 clusters.
+
+Likelihood: 3.013024e+03
+
+Rissanen Score: -2.633540e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 36 clusters.
+
+Likelihood: 2.989148e+03
+
+Rissanen Score: -2.620013e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 35 clusters.
+
+Likelihood: 2.964617e+03
+
+Rissanen Score: -2.605832e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 34 clusters.
+
+Likelihood: 2.939397e+03
+
+Rissanen Score: -2.590961e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 33 clusters.
+
+Likelihood: 2.913448e+03
+
+Rissanen Score: -2.575362e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 32 clusters.
+
+Likelihood: 2.886726e+03
+
+Rissanen Score: -2.558989e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 31 clusters.
+
+Likelihood: 2.859181e+03
+
+Rissanen Score: -2.541794e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 30 clusters.
+
+Likelihood: 2.830766e+03
+
+Rissanen Score: -2.523729e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 29 clusters.
+
+Likelihood: 2.801420e+03
+
+Rissanen Score: -2.504732e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 28 clusters.
+
+Likelihood: 2.771082e+03
+
+Rissanen Score: -2.484743e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 27 clusters.
+
+Likelihood: 2.739681e+03
+
+Rissanen Score: -2.463692e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 26 clusters.
+
+Likelihood: 2.707142e+03
+
+Rissanen Score: -2.441503e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 25 clusters.
+
+Likelihood: 2.673379e+03
+
+Rissanen Score: -2.418089e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 24 clusters.
+
+Likelihood: 2.638295e+03
+
+Rissanen Score: -2.393355e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 23 clusters.
+
+Likelihood: 2.601786e+03
+
+Rissanen Score: -2.367195e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 22 clusters.
+
+Likelihood: 2.563728e+03
+
+Rissanen Score: -2.339487e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 21 clusters.
+
+Likelihood: 2.523984e+03
+
+Rissanen Score: -2.310093e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 20 clusters.
+
+Likelihood: 2.482402e+03
+
+Rissanen Score: -2.278860e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 19 clusters.
+
+Likelihood: 2.438801e+03
+
+Rissanen Score: -2.245609e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 18 clusters.
+
+Likelihood: 2.392977e+03
+
+Rissanen Score: -2.210134e+03
+
+Minimum distance between (0,3). Combining clusters
+Performing EM algorithm on 17 clusters.
+
+Likelihood: 2.344691e+03
+
+Rissanen Score: -2.172198e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 16 clusters.
+
+Likelihood: 2.293666e+03
+
+Rissanen Score: -2.131522e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 15 clusters.
+
+Likelihood: 2.239572e+03
+
+Rissanen Score: -2.087778e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 14 clusters.
+
+Likelihood: 2.182022e+03
+
+Rissanen Score: -2.040577e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 13 clusters.
+
+Likelihood: 2.120544e+03
+
+Rissanen Score: -1.989449e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 12 clusters.
+
+Likelihood: 2.054569e+03
+
+Rissanen Score: -1.933824e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 11 clusters.
+
+Likelihood: 1.983395e+03
+
+Rissanen Score: -1.872999e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 10 clusters.
+
+Likelihood: 1.906142e+03
+
+Rissanen Score: -1.806096e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 9 clusters.
+
+Likelihood: 1.821695e+03
+
+Rissanen Score: -1.731998e+03
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 8 clusters.
+
+Likelihood: 1.728605e+03
+
+Rissanen Score: -1.649259e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 7 clusters.
+
+Likelihood: 1.624962e+03
+
+Rissanen Score: -1.555964e+03
+
+Minimum distance between (2,3). Combining clusters
+Performing EM algorithm on 6 clusters.
+
+Likelihood: 1.508176e+03
+
+Rissanen Score: -1.449528e+03
+
+Minimum distance between (1,3). Combining clusters
+Performing EM algorithm on 5 clusters.
+
+Likelihood: 1.374683e+03
+
+Rissanen Score: -1.326385e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 4 clusters.
+
+Likelihood: 1.219546e+03
+
+Rissanen Score: -1.181598e+03
+
+Minimum distance between (1,2). Combining clusters
+Performing EM algorithm on 3 clusters.
+
+Likelihood: 1.036449e+03
+
+Rissanen Score: -1.008851e+03
+
+Minimum distance between (0,2). Combining clusters
+Performing EM algorithm on 2 clusters.
+
+Likelihood: 8.224860e+02
+
+Rissanen Score: -8.052367e+02
+
+Minimum distance between (0,1). Combining clusters
+Performing EM algorithm on 1 clusters.
+
+Likelihood: 6.494260e+02
+
+Rissanen Score: -6.425263e+02
+
+Final rissanen Score was: -2868.324219, with 86 clusters.
+Summary filename: result.summary
+Results filename: result.results
+Cluster #0
+Probability: 0.011735
+N: 11.641012
+Means: 0.910852 
+
+R Matrix:
+9.105948 
+
+
+Cluster #1
+Probability: 0.011628
+N: 11.534637
+Means: 0.913015 
+
+R Matrix:
+9.095969 
+
+
+Cluster #2
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #3
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #4
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #5
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #6
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #7
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #8
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #9
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #10
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #11
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #12
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #13
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #14
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #15
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #16
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #17
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #18
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #19
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #20
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #21
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #22
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #23
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #24
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #25
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #26
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #27
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #28
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #29
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #30
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #31
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #32
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #33
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #34
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #35
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #36
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #37
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #38
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #39
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #40
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #41
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #42
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #43
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #44
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #45
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #46
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #47
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #48
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #49
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #50
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #51
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #52
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #53
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #54
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #55
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #56
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #57
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #58
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #59
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #60
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #61
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #62
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #63
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #64
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #65
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #66
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #67
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #68
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #69
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #70
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #71
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #72
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #73
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #74
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #75
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #76
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #77
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #78
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #79
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #80
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #81
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #82
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #83
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #84
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Cluster #85
+Probability: 0.011627
+N: 11.533625
+Means: 0.913057 
+
+R Matrix:
+9.095871 
+
+
+Execution time of the cluster function 1.849141 (s)

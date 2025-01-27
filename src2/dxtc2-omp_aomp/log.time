@@ -1,0 +1,4 @@
+bash: line 1: 2593410 Aborted                 (core dumped) ./main ../dxtc2-sycl/data/teapot512_std.ppm ../dxtc2-sycl/data/teapot512_ref.dds 100 >> log.std 2>> log.err
+real 0.60
+user 13.50
+sys 1.80

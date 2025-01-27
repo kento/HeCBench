@@ -1,0 +1,3 @@
+CANNOT access pageable memory
+Execution time of atomic kernels on host and device: 10.011158 (s)
+systemWideAtomics completed, returned OK 

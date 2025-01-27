@@ -1,0 +1,14 @@
+ECL-CC v1.1 (main.cu)
+Copyright 2017-2020 Texas State University
+input graph: 16777216 nodes and 100663202 edges (delaunay_n24.egr)
+average degree: 6.00 edges per node
+minimum degree: 3 edges
+maximum degree: 26 edges
+Number of multiprocessor = 104
+Max threads per multiprocessor = 2048
+Number of thread blocks in a grid = 832
+Average kernel execution time: 0.0040 s
+throughput: 4180.143 Mnodes/s
+throughput: 25080.836 Medges/s
+number of connected components: 1
+PASS

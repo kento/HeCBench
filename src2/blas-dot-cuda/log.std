@@ -1,0 +1,24 @@
+
+FP64 Dot
+Average cublasDotEx execution time 1.136904 (ms)
+Host: 65503.996094  Device: 65504.000000
+PASS
+
+
+FP32 Dot
+Average cublasDotEx execution time 0.576031 (ms)
+Host: 65503.996094  Device: 65503.996094
+PASS
+
+
+FP16 Dot
+Average cublasDotEx execution time 0.334883 (ms)
+Host: 65472.015625  Device: 65472.000000
+PASS
+
+
+BF16 Dot
+Average cublasDotEx execution time 0.334696 (ms)
+Host: 65536.000000  Device: 65536.000000
+PASS
+

@@ -1,0 +1,37 @@
+
+########################################################################
+# Batched strided GELS example:
+# 
+# Computes least squares of a batch of matrices and right hand sides.
+# Supported floating point type precisions:
+#   float
+#   double
+#   std::complex<float>
+#   std::complex<double>
+# 
+########################################################################
+
+Running with single precision real data type:
+Average kernel execution time : 23.728806 (us)
+Results:
+  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00
+Calculations successfully finished
+Running with single precision complex data type:
+Average kernel execution time : 25.907026 (us)
+Results:
+<  1.00,  0.00> <  1.00,  0.00> <  1.00,  0.00> <  1.00, -0.00> <  1.00, -0.00> 
+<  1.00,  0.00> <  1.00, -0.00> <  1.00,  0.00> <  1.00, -0.00> <  1.00,  0.00> 
+Calculations successfully finished
+Running with double precision real data type:
+Average kernel execution time : 23.949099 (us)
+Results:
+  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00
+Calculations successfully finished
+Running with double precision complex data type:
+Average kernel execution time : 31.390848 (us)
+Results:
+<  1.00, -0.00> <  1.00,  0.00> <  1.00, -0.00> <  1.00, -0.00> <  1.00,  0.00> 
+<  1.00, -0.00> <  1.00,  0.00> <  1.00,  0.00> <  1.00, -0.00> <  1.00,  0.00> 
+Calculations successfully finished

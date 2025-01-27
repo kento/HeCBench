@@ -1,0 +1,4 @@
+[./main] - Starting...
+time clocks = 39600000
+Measured time for sample = 280.417s
+PASS

@@ -1,0 +1,9 @@
+
+Single-precision complex data type
+Average kernel execution time 0.004450 (s)
+Average kernel execution time (reference) 0.004450 (s)
+
+Double-precision complex data type
+Average kernel execution time 0.005516 (s)
+Average kernel execution time (reference) 0.005516 (s)
+PASS

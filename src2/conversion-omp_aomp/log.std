@@ -1,0 +1,32 @@
+float -> float
+size(GB):2.15, average time(sec):0.028960, BW:74.153441
+float -> int
+size(GB):2.15, average time(sec):0.019902, BW:107.902907
+float -> char
+size(GB):1.34, average time(sec):0.002226, BW:602.954753
+float -> uchar
+size(GB):1.34, average time(sec):0.001721, BW:779.882208
+int -> int
+size(GB):2.15, average time(sec):0.014263, BW:150.563251
+int -> float
+size(GB):2.15, average time(sec):0.012582, BW:170.679037
+int -> char
+size(GB):1.34, average time(sec):0.001557, BW:862.027797
+int -> uchar
+size(GB):1.34, average time(sec):0.001638, BW:819.400049
+char -> int
+size(GB):1.34, average time(sec):0.013555, BW:99.017136
+char -> float
+size(GB):1.34, average time(sec):0.012377, BW:108.441244
+char -> char
+size(GB):0.54, average time(sec):0.001008, BW:532.610032
+char -> uchar
+size(GB):0.54, average time(sec):0.000886, BW:605.949111
+uchar -> int
+size(GB):1.34, average time(sec):0.009075, BW:147.898323
+uchar -> float
+size(GB):1.34, average time(sec):0.008368, BW:160.394034
+uchar -> char
+size(GB):0.54, average time(sec):0.000924, BW:581.029126
+uchar -> uchar
+size(GB):0.54, average time(sec):0.001041, BW:515.726140

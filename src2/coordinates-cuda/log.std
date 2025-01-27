@@ -1,0 +1,10 @@
+
+Double-precision coordinates transform
+Average execution time of device transform: 16446.910156 (us)
+Average execution time of host transform: 11661357.000000 (us)
+PASS
+
+Single-precision coordinates transform
+Average execution time of device transform: 8835.926758 (us)
+Average execution time of host transform: 13373647.000000 (us)
+PASS

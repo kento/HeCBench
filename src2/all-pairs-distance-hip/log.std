@@ -1,0 +1,5 @@
+CPU time: 17050.000000 (us)
+Average kernel execution time (w/o shared memory): 1631.663940 (us)
+PASS
+Average kernel execution time (w/ shared memory): 187.286301 (us)
+PASS

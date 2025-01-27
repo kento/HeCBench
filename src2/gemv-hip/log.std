@@ -1,0 +1,42 @@
+size=16384, iter=100
+GPU block_dim	(512, 2)
+GPU grid_dim	(1, 8192)
+num_per_thread=32
+GEMV FP16 ..
+Average kernel execution time: 391.474213 (us)
+Check correctness on the device
+int8/int4: scale=0.062500, zero_point=0.010000
+GEMV int8 quantized...
+Average kernel execution time: 293.339691 (us)
+Check correctness on the device
+GEMV int4 quantized...
+Average kernel execution time: 284.015167 (us)
+Check correctness on the device
+size=16384, iter=100
+GPU block_dim	(128, 8)
+GPU grid_dim	(1, 2048)
+num_per_thread=128
+GEMV FP16 ..
+Average kernel execution time: 459.382294 (us)
+Check correctness on the device
+int8/int4: scale=0.062500, zero_point=0.010000
+GEMV int8 quantized...
+Average kernel execution time: 251.890778 (us)
+Check correctness on the device
+GEMV int4 quantized...
+Average kernel execution time: 231.420059 (us)
+Check correctness on the device
+size=16384, iter=100
+GPU block_dim	(32, 32)
+GPU grid_dim	(1, 512)
+num_per_thread=512
+GEMV FP16 ..
+Average kernel execution time: 921.786560 (us)
+Check correctness on the device
+int8/int4: scale=0.062500, zero_point=0.010000
+GEMV int8 quantized...
+Average kernel execution time: 255.443573 (us)
+Check correctness on the device
+GEMV int4 quantized...
+Average kernel execution time: 230.539978 (us)
+Check correctness on the device

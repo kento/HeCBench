@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(program) 128 16 224 224 100 1>log.std 2>log.err ) 2> log.time
+COMMAND = time -p ( ./$(program) 16 16 730 730 100 1>log.std 2>log.err ) 2> log.time

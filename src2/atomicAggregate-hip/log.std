@@ -1,0 +1,12 @@
+Total kernel time (32 locations): 1.683988 (s)
+PASS
+Total kernel time (16 locations): 0.862076 (s)
+PASS
+Total kernel time (8 locations): 0.623404 (s)
+PASS
+Total kernel time (4 locations): 0.626284 (s)
+PASS
+Total kernel time (2 locations): 0.624808 (s)
+PASS
+Total kernel time (1 locations): 0.625844 (s)
+PASS

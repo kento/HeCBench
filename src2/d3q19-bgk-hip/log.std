@@ -1,0 +1,52 @@
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+omega = 1.737318
+Starting 1000 warmup iterations
+energy 8175.797310 iteration 149 
+Starting 1000 benchmark iterations
+
+Performance: MLUPS
+1721.6173
+1722.3200
+1721.5919
+1725.1295
+1724.0985
+1720.7528
+1724.7706
+1724.2119
+1724.3253
+1720.8474
