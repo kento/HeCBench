@@ -1,0 +1,4 @@
+hipcc  -std=c++14 -Wall -O3 -c ../lebesgue-cuda/main.cpp -o main.o
+hipcc  -std=c++14 -Wall -O3 -c ../lebesgue-cuda/utils.cpp -o utils.o
+hipcc  -std=c++14 -Wall -O3 -c kernels.cu -o kernels.o
+hipcc  -std=c++14 -Wall -O3 main.o utils.o kernels.o -o main 

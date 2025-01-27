@@ -1,0 +1,5 @@
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/main.cu -o src/main.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/seed.cu -o src/seed.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/score.cu -o src/score.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/logan_functions.cu -o src/logan_functions.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE src/main.o src/seed.o src/score.o src/logan_functions.o -o main -fgpu-rdc --hip-link 

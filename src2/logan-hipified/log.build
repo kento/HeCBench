@@ -1,0 +1,9 @@
+hipcc -fgpu-rdc  -std=c++14            -Wall  -fopenmp            -Isrc  -O3  -DADAPTABLE -c -dc src/main.cu -o src/main.o
+clang++: warning: argument unused during compilation: '-dc' [-Wunused-command-line-argument]
+hipcc -fgpu-rdc  -std=c++14            -Wall  -fopenmp            -Isrc  -O3  -DADAPTABLE -c -dc src/seed.cu -o src/seed.o
+clang++: warning: argument unused during compilation: '-dc' [-Wunused-command-line-argument]
+hipcc -fgpu-rdc  -std=c++14            -Wall  -fopenmp            -Isrc  -O3  -DADAPTABLE -c -dc src/score.cu -o src/score.o
+clang++: warning: argument unused during compilation: '-dc' [-Wunused-command-line-argument]
+hipcc -fgpu-rdc  -std=c++14            -Wall  -fopenmp            -Isrc  -O3  -DADAPTABLE -c -dc src/logan_functions.cu -o src/logan_functions.o
+clang++: warning: argument unused during compilation: '-dc' [-Wunused-command-line-argument]
+hipcc -fgpu-rdc  -std=c++14            -Wall  -fopenmp            -Isrc  -O3  -DADAPTABLE src/main.o src/seed.o src/score.o src/logan_functions.o -o main 

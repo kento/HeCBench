@@ -1,0 +1,10 @@
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+main.cu:156:8: warning: unused variable 'write' [-Wunused-variable]
+  156 |   bool write = false;
+      |        ^~~~~
+1 warning generated when compiling for gfx90a.
+main.cu:156:8: warning: unused variable 'write' [-Wunused-variable]
+  156 |   bool write = false;
+      |        ^~~~~
+1 warning generated when compiling for host.
+hipcc  -std=c++14  -Wall  -O3 main.o -o main 

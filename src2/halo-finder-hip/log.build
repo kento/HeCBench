@@ -1,0 +1,1170 @@
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/ForceTreeTest.o ForceTreeTest.cxx
+ForceTreeTest.cxx:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipHostMalloc(&m_xArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:87:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   87 |   hipHostMalloc(&m_yArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:89:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   89 |   hipHostMalloc(&m_zArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:91:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   91 |   hipHostMalloc(&m_vxArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:93:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   93 |   hipHostMalloc(&m_vyArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipHostMalloc(&m_vzArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:97:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   97 |   hipHostMalloc(&m_massArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:329:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  329 |   hipHostFree(m_xArr);
+      |   ^~~~~~~~~~~ ~~~~~~
+ForceTreeTest.cxx:330:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  330 |   hipHostFree(m_yArr);
+      |   ^~~~~~~~~~~ ~~~~~~
+ForceTreeTest.cxx:331:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  331 |   hipHostFree(m_zArr);
+      |   ^~~~~~~~~~~ ~~~~~~
+ForceTreeTest.cxx:332:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  332 |   hipHostFree(m_vxArr);
+      |   ^~~~~~~~~~~ ~~~~~~~
+ForceTreeTest.cxx:333:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  333 |   hipHostFree(m_vyArr);
+      |   ^~~~~~~~~~~ ~~~~~~~
+ForceTreeTest.cxx:334:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  334 |   hipHostFree(m_vzArr);
+      |   ^~~~~~~~~~~ ~~~~~~~
+ForceTreeTest.cxx:335:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  335 |   hipHostFree(m_massArr);
+      |   ^~~~~~~~~~~ ~~~~~~~~~
+14 warnings generated when compiling for gfx90a.
+ForceTreeTest.cxx:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipHostMalloc(&m_xArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:87:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   87 |   hipHostMalloc(&m_yArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:89:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   89 |   hipHostMalloc(&m_zArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:91:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   91 |   hipHostMalloc(&m_vxArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:93:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   93 |   hipHostMalloc(&m_vyArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipHostMalloc(&m_vzArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:97:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   97 |   hipHostMalloc(&m_massArr, Np*sizeof(POSVEL_T));
+      |   ^~~~~~~~~~~~~
+ForceTreeTest.cxx:329:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  329 |   hipHostFree(m_xArr);
+      |   ^~~~~~~~~~~ ~~~~~~
+ForceTreeTest.cxx:330:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  330 |   hipHostFree(m_yArr);
+      |   ^~~~~~~~~~~ ~~~~~~
+ForceTreeTest.cxx:331:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  331 |   hipHostFree(m_zArr);
+      |   ^~~~~~~~~~~ ~~~~~~
+ForceTreeTest.cxx:332:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  332 |   hipHostFree(m_vxArr);
+      |   ^~~~~~~~~~~ ~~~~~~~
+ForceTreeTest.cxx:333:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  333 |   hipHostFree(m_vyArr);
+      |   ^~~~~~~~~~~ ~~~~~~~
+ForceTreeTest.cxx:334:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  334 |   hipHostFree(m_vzArr);
+      |   ^~~~~~~~~~~ ~~~~~~~
+ForceTreeTest.cxx:335:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  335 |   hipHostFree(m_massArr);
+      |   ^~~~~~~~~~~ ~~~~~~~~~
+14 warnings generated when compiling for host.
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/ParticleDistribute.o ParticleDistribute.cxx
+ar rv objs/libparticle.a objs/ParticleDistribute.o
+ar: creating objs/libparticle.a
+a - objs/ParticleDistribute.o
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/ParticleExchange.o ParticleExchange.cxx
+ar rv objs/libparticle.a objs/ParticleExchange.o
+a - objs/ParticleExchange.o
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/InitialExchange.o InitialExchange.cxx
+ar rv objs/libparticle.a objs/InitialExchange.o
+a - objs/InitialExchange.o
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/Message.o Message.cxx
+ar rv objs/libparticle.a objs/Message.o
+a - objs/Message.o
+ranlib objs/libparticle.a
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/ForceLaw.o ForceLaw.cxx
+ar rv objs/libBHForceTree.a objs/ForceLaw.o
+ar: creating objs/libBHForceTree.a
+a - objs/ForceLaw.o
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/BHForceTree.o BHForceTree.cxx
+ar rv objs/libBHForceTree.a objs/BHForceTree.o
+a - objs/BHForceTree.o
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/RCOForceTree.o RCOForceTree.cxx
+ar rv objs/libBHForceTree.a objs/RCOForceTree.o
+a - objs/RCOForceTree.o
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/RCBForceTree.o RCBForceTree.cxx
+In file included from RCBForceTree.cxx:86:
+./hipUtil.h:55:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   55 |     hipSetDevice(dev);
+      |     ^~~~~~~~~~~~ ~~~
+RCBForceTree.cxx:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipHostMalloc(&nx_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipHostMalloc(&ny_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:397:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  397 |   hipHostMalloc(&nz_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:398:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  398 |   hipHostMalloc(&nm_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:409:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |   hipHostMalloc(&d_xx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:410:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |   hipHostMalloc(&d_yy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipHostMalloc(&d_zz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:412:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  412 |   hipHostMalloc(&d_vx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:413:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |   hipHostMalloc(&d_vy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:414:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |   hipHostMalloc(&d_vz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:415:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  415 |   hipHostMalloc(&d_mass,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:426:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  426 |   hipHostMalloc(&d_nx_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:427:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |   hipHostMalloc(&d_ny_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:428:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  428 |   hipHostMalloc(&d_nz_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:429:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  429 |   hipHostMalloc(&d_nm_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:442:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |     hipEventCreate(&event_v[i]);
+      |     ^~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:443:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |     hipStreamCreate(&stream_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipHostFree(d_xx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipHostFree(d_yy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipHostFree(d_zz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipHostFree(d_vx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipHostFree(d_vy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipHostFree(d_vz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipHostFree(d_mass);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipHostFree(d_nx_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipHostFree(d_ny_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipHostFree(d_nz_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipHostFree(d_nm_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:538:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |     hipEventDestroy(event_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~
+RCBForceTree.cxx:539:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |     hipStreamDestroy(stream_v[i]);
+      |     ^~~~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:547:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  547 |   hipHostFree(nx_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:548:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  548 |   hipHostFree(ny_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:549:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  549 |   hipHostFree(nz_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:550:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  550 |   hipHostFree(nm_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:959:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  959 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1244:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |   hipEventSynchronize(event);  //wait for transfers from previous call to finish before overwriting nx,ny,nz,nm
+      |   ^~~~~~~~~~~~~~~~~~~ ~~~~~
+RCBForceTree.cxx:1451:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1451 |   hipMemcpyAsync(d_nx,nx,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1452:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1452 |   hipMemcpyAsync(d_ny,ny,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1453:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1453 |   hipMemcpyAsync(d_nz,nz,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1454:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1454 |   hipMemcpyAsync(d_nm,nm,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1455:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1455 |   hipEventRecord(event,stream);  //mark when transfers have finished
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:1457:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1457 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1460:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1460 |   hipMemcpyAsync(d_xxl,xx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1461:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1461 |   hipMemcpyAsync(d_yyl,yy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1462:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1462 |   hipMemcpyAsync(d_zzl,zz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1463:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1463 |   hipMemcpyAsync(d_massl,mass+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1464:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1464 |   hipMemcpyAsync(d_vxl,vx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1465:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1465 |   hipMemcpyAsync(d_vyl,vy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1466:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1466 |   hipMemcpyAsync(d_vzl,vz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1468:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1468 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1474:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1474 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1481:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1481 |   hipMemcpyAsync(vx+off,d_vxl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1482:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1482 |   hipMemcpyAsync(vy+off,d_vyl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1483:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1483 |   hipMemcpyAsync(vz+off,d_vzl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1485:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1485 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipHostMalloc(&nx_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:1529:16: note: in instantiation of member function 'RCBForceTree<12>::RCBForceTree' requested here
+ 1529 | template class RCBForceTree<QUADRUPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipHostMalloc(&ny_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:397:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  397 |   hipHostMalloc(&nz_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:398:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  398 |   hipHostMalloc(&nm_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:409:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |   hipHostMalloc(&d_xx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:410:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |   hipHostMalloc(&d_yy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipHostMalloc(&d_zz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:412:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  412 |   hipHostMalloc(&d_vx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:413:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |   hipHostMalloc(&d_vy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:414:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |   hipHostMalloc(&d_vz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:415:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  415 |   hipHostMalloc(&d_mass,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:426:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  426 |   hipHostMalloc(&d_nx_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:427:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |   hipHostMalloc(&d_ny_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:428:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  428 |   hipHostMalloc(&d_nz_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:429:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  429 |   hipHostMalloc(&d_nm_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:442:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |     hipEventCreate(&event_v[i]);
+      |     ^~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:443:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |     hipStreamCreate(&stream_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipHostFree(d_xx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1529:16: note: in instantiation of member function 'RCBForceTree<12>::~RCBForceTree' requested here
+ 1529 | template class RCBForceTree<QUADRUPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipHostFree(d_yy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipHostFree(d_zz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipHostFree(d_vx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipHostFree(d_vy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipHostFree(d_vz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipHostFree(d_mass);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipHostFree(d_nx_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipHostFree(d_ny_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipHostFree(d_nz_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipHostFree(d_nm_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:538:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |     hipEventDestroy(event_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~
+RCBForceTree.cxx:539:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |     hipStreamDestroy(stream_v[i]);
+      |     ^~~~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:547:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  547 |   hipHostFree(nx_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:548:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  548 |   hipHostFree(ny_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:549:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  549 |   hipHostFree(nz_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:550:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  550 |   hipHostFree(nm_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1244:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |   hipEventSynchronize(event);  //wait for transfers from previous call to finish before overwriting nx,ny,nz,nm
+      |   ^~~~~~~~~~~~~~~~~~~ ~~~~~
+RCBForceTree.cxx:1529:16: note: in instantiation of member function 'RCBForceTree<12>::calcInternodeForce' requested here
+ 1529 | template class RCBForceTree<QUADRUPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:1451:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1451 |   hipMemcpyAsync(d_nx,nx,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1452:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1452 |   hipMemcpyAsync(d_ny,ny,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1453:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1453 |   hipMemcpyAsync(d_nz,nz,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1454:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1454 |   hipMemcpyAsync(d_nm,nm,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1455:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1455 |   hipEventRecord(event,stream);  //mark when transfers have finished
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:1457:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1457 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1460:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1460 |   hipMemcpyAsync(d_xxl,xx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1461:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1461 |   hipMemcpyAsync(d_yyl,yy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1462:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1462 |   hipMemcpyAsync(d_zzl,zz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1463:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1463 |   hipMemcpyAsync(d_massl,mass+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1464:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1464 |   hipMemcpyAsync(d_vxl,vx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1465:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1465 |   hipMemcpyAsync(d_vyl,vy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1466:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1466 |   hipMemcpyAsync(d_vzl,vz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1468:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1468 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1474:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1474 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1481:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1481 |   hipMemcpyAsync(vx+off,d_vxl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1482:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1482 |   hipMemcpyAsync(vy+off,d_vyl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1483:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1483 |   hipMemcpyAsync(vz+off,d_vzl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1485:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1485 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipHostMalloc(&nx_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:1530:16: note: in instantiation of member function 'RCBForceTree<1>::RCBForceTree' requested here
+ 1530 | template class RCBForceTree<MONOPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipHostMalloc(&ny_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:397:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  397 |   hipHostMalloc(&nz_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:398:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  398 |   hipHostMalloc(&nm_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:409:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |   hipHostMalloc(&d_xx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:410:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |   hipHostMalloc(&d_yy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipHostMalloc(&d_zz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:412:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  412 |   hipHostMalloc(&d_vx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:413:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |   hipHostMalloc(&d_vy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:414:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |   hipHostMalloc(&d_vz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:415:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  415 |   hipHostMalloc(&d_mass,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:426:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  426 |   hipHostMalloc(&d_nx_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:427:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |   hipHostMalloc(&d_ny_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:428:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  428 |   hipHostMalloc(&d_nz_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:429:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  429 |   hipHostMalloc(&d_nm_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:442:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |     hipEventCreate(&event_v[i]);
+      |     ^~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:443:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |     hipStreamCreate(&stream_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipHostFree(d_xx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1530:16: note: in instantiation of member function 'RCBForceTree<1>::~RCBForceTree' requested here
+ 1530 | template class RCBForceTree<MONOPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipHostFree(d_yy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipHostFree(d_zz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipHostFree(d_vx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipHostFree(d_vy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipHostFree(d_vz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipHostFree(d_mass);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipHostFree(d_nx_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipHostFree(d_ny_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipHostFree(d_nz_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipHostFree(d_nm_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:538:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |     hipEventDestroy(event_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~
+RCBForceTree.cxx:539:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |     hipStreamDestroy(stream_v[i]);
+      |     ^~~~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:547:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  547 |   hipHostFree(nx_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:548:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  548 |   hipHostFree(ny_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:549:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  549 |   hipHostFree(nz_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:550:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  550 |   hipHostFree(nm_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1244:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |   hipEventSynchronize(event);  //wait for transfers from previous call to finish before overwriting nx,ny,nz,nm
+      |   ^~~~~~~~~~~~~~~~~~~ ~~~~~
+RCBForceTree.cxx:1530:16: note: in instantiation of member function 'RCBForceTree<1>::calcInternodeForce' requested here
+ 1530 | template class RCBForceTree<MONOPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:1451:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1451 |   hipMemcpyAsync(d_nx,nx,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1452:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1452 |   hipMemcpyAsync(d_ny,ny,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1453:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1453 |   hipMemcpyAsync(d_nz,nz,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1454:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1454 |   hipMemcpyAsync(d_nm,nm,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1455:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1455 |   hipEventRecord(event,stream);  //mark when transfers have finished
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:1457:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1457 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1460:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1460 |   hipMemcpyAsync(d_xxl,xx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1461:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1461 |   hipMemcpyAsync(d_yyl,yy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1462:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1462 |   hipMemcpyAsync(d_zzl,zz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1463:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1463 |   hipMemcpyAsync(d_massl,mass+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1464:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1464 |   hipMemcpyAsync(d_vxl,vx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1465:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1465 |   hipMemcpyAsync(d_vyl,vy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1466:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1466 |   hipMemcpyAsync(d_vzl,vz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1468:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1468 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1474:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1474 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1481:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1481 |   hipMemcpyAsync(vx+off,d_vxl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1482:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1482 |   hipMemcpyAsync(vy+off,d_vyl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1483:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1483 |   hipMemcpyAsync(vz+off,d_vzl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1485:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1485 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+164 warnings generated when compiling for gfx90a.
+In file included from RCBForceTree.cxx:86:
+./hipUtil.h:55:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   55 |     hipSetDevice(dev);
+      |     ^~~~~~~~~~~~ ~~~
+RCBForceTree.cxx:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipHostMalloc(&nx_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipHostMalloc(&ny_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:397:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  397 |   hipHostMalloc(&nz_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:398:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  398 |   hipHostMalloc(&nm_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:409:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |   hipHostMalloc(&d_xx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:410:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |   hipHostMalloc(&d_yy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipHostMalloc(&d_zz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:412:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  412 |   hipHostMalloc(&d_vx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:413:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |   hipHostMalloc(&d_vy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:414:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |   hipHostMalloc(&d_vz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:415:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  415 |   hipHostMalloc(&d_mass,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:426:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  426 |   hipHostMalloc(&d_nx_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:427:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |   hipHostMalloc(&d_ny_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:428:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  428 |   hipHostMalloc(&d_nz_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:429:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  429 |   hipHostMalloc(&d_nm_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:442:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |     hipEventCreate(&event_v[i]);
+      |     ^~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:443:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |     hipStreamCreate(&stream_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipHostFree(d_xx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipHostFree(d_yy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipHostFree(d_zz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipHostFree(d_vx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipHostFree(d_vy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipHostFree(d_vz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipHostFree(d_mass);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipHostFree(d_nx_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipHostFree(d_ny_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipHostFree(d_nz_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipHostFree(d_nm_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:538:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |     hipEventDestroy(event_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~
+RCBForceTree.cxx:539:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |     hipStreamDestroy(stream_v[i]);
+      |     ^~~~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:547:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  547 |   hipHostFree(nx_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:548:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  548 |   hipHostFree(ny_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:549:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  549 |   hipHostFree(nz_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:550:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  550 |   hipHostFree(nm_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:959:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  959 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1244:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |   hipEventSynchronize(event);  //wait for transfers from previous call to finish before overwriting nx,ny,nz,nm
+      |   ^~~~~~~~~~~~~~~~~~~ ~~~~~
+RCBForceTree.cxx:1451:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1451 |   hipMemcpyAsync(d_nx,nx,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1452:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1452 |   hipMemcpyAsync(d_ny,ny,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1453:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1453 |   hipMemcpyAsync(d_nz,nz,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1454:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1454 |   hipMemcpyAsync(d_nm,nm,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1455:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1455 |   hipEventRecord(event,stream);  //mark when transfers have finished
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:1457:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1457 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1460:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1460 |   hipMemcpyAsync(d_xxl,xx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1461:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1461 |   hipMemcpyAsync(d_yyl,yy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1462:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1462 |   hipMemcpyAsync(d_zzl,zz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1463:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1463 |   hipMemcpyAsync(d_massl,mass+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1464:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1464 |   hipMemcpyAsync(d_vxl,vx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1465:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1465 |   hipMemcpyAsync(d_vyl,vy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1466:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1466 |   hipMemcpyAsync(d_vzl,vz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1468:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1468 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1474:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1474 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1481:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1481 |   hipMemcpyAsync(vx+off,d_vxl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1482:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1482 |   hipMemcpyAsync(vy+off,d_vyl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1483:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1483 |   hipMemcpyAsync(vz+off,d_vzl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1485:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1485 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipHostMalloc(&nx_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:1529:16: note: in instantiation of member function 'RCBForceTree<12>::RCBForceTree' requested here
+ 1529 | template class RCBForceTree<QUADRUPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipHostMalloc(&ny_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:397:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  397 |   hipHostMalloc(&nz_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:398:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  398 |   hipHostMalloc(&nm_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:409:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |   hipHostMalloc(&d_xx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:410:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |   hipHostMalloc(&d_yy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipHostMalloc(&d_zz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:412:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  412 |   hipHostMalloc(&d_vx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:413:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |   hipHostMalloc(&d_vy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:414:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |   hipHostMalloc(&d_vz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:415:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  415 |   hipHostMalloc(&d_mass,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:426:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  426 |   hipHostMalloc(&d_nx_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:427:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |   hipHostMalloc(&d_ny_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:428:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  428 |   hipHostMalloc(&d_nz_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:429:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  429 |   hipHostMalloc(&d_nm_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:442:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |     hipEventCreate(&event_v[i]);
+      |     ^~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:443:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |     hipStreamCreate(&stream_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipHostFree(d_xx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1529:16: note: in instantiation of member function 'RCBForceTree<12>::~RCBForceTree' requested here
+ 1529 | template class RCBForceTree<QUADRUPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipHostFree(d_yy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipHostFree(d_zz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipHostFree(d_vx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipHostFree(d_vy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipHostFree(d_vz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipHostFree(d_mass);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipHostFree(d_nx_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipHostFree(d_ny_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipHostFree(d_nz_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipHostFree(d_nm_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:538:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |     hipEventDestroy(event_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~
+RCBForceTree.cxx:539:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |     hipStreamDestroy(stream_v[i]);
+      |     ^~~~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:547:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  547 |   hipHostFree(nx_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:548:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  548 |   hipHostFree(ny_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:549:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  549 |   hipHostFree(nz_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:550:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  550 |   hipHostFree(nm_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1244:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |   hipEventSynchronize(event);  //wait for transfers from previous call to finish before overwriting nx,ny,nz,nm
+      |   ^~~~~~~~~~~~~~~~~~~ ~~~~~
+RCBForceTree.cxx:1529:16: note: in instantiation of member function 'RCBForceTree<12>::calcInternodeForce' requested here
+ 1529 | template class RCBForceTree<QUADRUPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:1451:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1451 |   hipMemcpyAsync(d_nx,nx,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1452:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1452 |   hipMemcpyAsync(d_ny,ny,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1453:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1453 |   hipMemcpyAsync(d_nz,nz,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1454:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1454 |   hipMemcpyAsync(d_nm,nm,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1455:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1455 |   hipEventRecord(event,stream);  //mark when transfers have finished
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:1457:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1457 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1460:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1460 |   hipMemcpyAsync(d_xxl,xx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1461:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1461 |   hipMemcpyAsync(d_yyl,yy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1462:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1462 |   hipMemcpyAsync(d_zzl,zz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1463:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1463 |   hipMemcpyAsync(d_massl,mass+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1464:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1464 |   hipMemcpyAsync(d_vxl,vx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1465:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1465 |   hipMemcpyAsync(d_vyl,vy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1466:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1466 |   hipMemcpyAsync(d_vzl,vz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1468:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1468 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1474:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1474 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1481:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1481 |   hipMemcpyAsync(vx+off,d_vxl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1482:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1482 |   hipMemcpyAsync(vy+off,d_vyl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1483:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1483 |   hipMemcpyAsync(vz+off,d_vzl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1485:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1485 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipHostMalloc(&nx_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:1530:16: note: in instantiation of member function 'RCBForceTree<1>::RCBForceTree' requested here
+ 1530 | template class RCBForceTree<MONOPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipHostMalloc(&ny_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:397:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  397 |   hipHostMalloc(&nz_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:398:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  398 |   hipHostMalloc(&nm_v, VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:409:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |   hipHostMalloc(&d_xx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:410:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |   hipHostMalloc(&d_yy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipHostMalloc(&d_zz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:412:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  412 |   hipHostMalloc(&d_vx,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:413:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |   hipHostMalloc(&d_vy,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:414:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |   hipHostMalloc(&d_vz,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:415:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  415 |   hipHostMalloc(&d_mass,size*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:426:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  426 |   hipHostMalloc(&d_nx_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:427:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |   hipHostMalloc(&d_ny_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:428:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  428 |   hipHostMalloc(&d_nz_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:429:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  429 |   hipHostMalloc(&d_nm_v,VMAX*sizeof(POSVEL_T)*numThreads);
+      |   ^~~~~~~~~~~~~
+RCBForceTree.cxx:442:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |     hipEventCreate(&event_v[i]);
+      |     ^~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:443:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |     hipStreamCreate(&stream_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipHostFree(d_xx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1530:16: note: in instantiation of member function 'RCBForceTree<1>::~RCBForceTree' requested here
+ 1530 | template class RCBForceTree<MONOPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipHostFree(d_yy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipHostFree(d_zz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipHostFree(d_vx);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipHostFree(d_vy);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipHostFree(d_vz);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipHostFree(d_mass);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipHostFree(d_nx_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipHostFree(d_ny_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipHostFree(d_nz_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipHostFree(d_nm_v);
+      |   ^~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:538:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |     hipEventDestroy(event_v[i]);
+      |     ^~~~~~~~~~~~~~~ ~~~~~~~~~~
+RCBForceTree.cxx:539:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |     hipStreamDestroy(stream_v[i]);
+      |     ^~~~~~~~~~~~~~~~ ~~~~~~~~~~~
+RCBForceTree.cxx:547:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  547 |   hipHostFree(nx_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:548:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  548 |   hipHostFree(ny_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:549:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  549 |   hipHostFree(nz_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:550:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  550 |   hipHostFree(nm_v);
+      |   ^~~~~~~~~~~ ~~~~
+RCBForceTree.cxx:1244:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |   hipEventSynchronize(event);  //wait for transfers from previous call to finish before overwriting nx,ny,nz,nm
+      |   ^~~~~~~~~~~~~~~~~~~ ~~~~~
+RCBForceTree.cxx:1530:16: note: in instantiation of member function 'RCBForceTree<1>::calcInternodeForce' requested here
+ 1530 | template class RCBForceTree<MONOPOLE_TDPTS>;
+      |                ^
+RCBForceTree.cxx:1451:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1451 |   hipMemcpyAsync(d_nx,nx,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1452:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1452 |   hipMemcpyAsync(d_ny,ny,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1453:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1453 |   hipMemcpyAsync(d_nz,nz,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1454:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1454 |   hipMemcpyAsync(d_nm,nm,sizeof(POSVEL_T)*SIZE,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1455:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1455 |   hipEventRecord(event,stream);  //mark when transfers have finished
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~
+RCBForceTree.cxx:1457:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1457 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1460:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1460 |   hipMemcpyAsync(d_xxl,xx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1461:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1461 |   hipMemcpyAsync(d_yyl,yy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1462:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1462 |   hipMemcpyAsync(d_zzl,zz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1463:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1463 |   hipMemcpyAsync(d_massl,mass+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1464:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1464 |   hipMemcpyAsync(d_vxl,vx+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1465:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1465 |   hipMemcpyAsync(d_vyl,vy+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1466:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1466 |   hipMemcpyAsync(d_vzl,vz+off,sizeof(POSVEL_T)*cnt,hipMemcpyHostToDevice,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1468:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1468 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1474:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1474 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+RCBForceTree.cxx:1481:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1481 |   hipMemcpyAsync(vx+off,d_vxl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1482:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1482 |   hipMemcpyAsync(vy+off,d_vyl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1483:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1483 |   hipMemcpyAsync(vz+off,d_vzl,sizeof(POSVEL_T)*cnt,hipMemcpyDeviceToHost,stream);
+      |   ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RCBForceTree.cxx:1485:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1485 |   hipStreamSynchronize(stream);
+      |   ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+164 warnings generated when compiling for host.
+ar rv objs/libBHForceTree.a objs/RCBForceTree.o
+a - objs/RCBForceTree.o
+/opt/rocm/bin/hipcc -x c -Xclang -std=c99 -Xclang -pthread -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -Idfft -c -o objs/BGQStep16.o BGQStep16.c
+ar rv objs/libBHForceTree.a objs/BGQStep16.o
+a - objs/BGQStep16.o
+/opt/rocm/bin/hipcc -x c -Xclang -std=c99 -Xclang -pthread -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -Idfft -c -o objs/BGQCM.o BGQCM.c
+ar rv objs/libBHForceTree.a objs/BGQCM.o
+a - objs/BGQCM.o
+ranlib objs/libBHForceTree.a
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/Partition.o Partition.cxx
+ar rv objs/libpartition.a objs/Partition.o
+ar: creating objs/libpartition.a
+a - objs/Partition.o
+ranlib objs/libpartition.a
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/Timings.o Timings.cxx
+ar rv objs/libhalotime.a objs/Timings.o
+ar: creating objs/libhalotime.a
+a - objs/Timings.o
+/opt/rocm/bin/hipcc -Xclang -pthread -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -c -o objs/Timer.o Timer.cxx
+ar rv objs/libhalotime.a objs/Timer.o
+a - objs/Timer.o
+ranlib objs/libhalotime.a
+/opt/rocm/bin/hipcc -x c -Xclang -std=c99 -Xclang -pthread -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -Idfft -c -o objs/bigchunk.o bigchunk.c
+bigchunk.c:86:33: warning: comparison of distinct pointer types ('void *' and 'char *') [-Wcompare-distinct-pointer-types]
+   86 |         if (ptr < _bigchunk_ptr || ptr >= (char *)_bigchunk_ptr + _bigchunk_sz) {
+      |                                    ~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+ar rv objs/libbigchunk.a objs/bigchunk.o
+ar: creating objs/libbigchunk.a
+a - objs/bigchunk.o
+ranlib objs/libbigchunk.a
+/opt/rocm/bin/hipcc -x c -Xclang -std=c99 -Xclang -pthread -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -Idfft -c -o objs/dims-local.o dims-local.c
+/opt/rocm/bin/hipcc -Xclang -pthread -o objs/ForceTreeTest objs/ForceTreeTest.o objs/libparticle.a objs/libBHForceTree.a objs/libpartition.a objs/libhalotime.a objs/libbigchunk.a objs/dims-local.o -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/opt/rocm/hip/include -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -Idfft -lm -lrt -DUSE_SERIAL_COSMO=1
+rm objs/Partition.o objs/Message.o objs/Timer.o objs/ForceLaw.o objs/BGQCM.o objs/bigchunk.o objs/RCBForceTree.o objs/BHForceTree.o objs/ParticleExchange.o objs/BGQStep16.o objs/Timings.o objs/ParticleDistribute.o objs/InitialExchange.o objs/RCOForceTree.o

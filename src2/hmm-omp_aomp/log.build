@@ -1,0 +1,52 @@
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c HiddenMarkovModel.cpp -o HiddenMarkovModel.o
+HiddenMarkovModel.cpp:141:38: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+  141 |             mtState[i*nState + j] /= RAND_MAX;
+      |                                   ~~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+HiddenMarkovModel.cpp:141:38: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+  141 |             mtState[i*nState + j] /= RAND_MAX;
+      |                                   ~~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ViterbiCPU.cpp -o ViterbiCPU.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ViterbiGPU.cpp -o ViterbiGPU.o
+ViterbiGPU.cpp:32:20: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   float maxProbNew[nState];
+      |                    ^~~~~~
+ViterbiGPU.cpp:32:20: note: function parameter 'nState' with unknown value cannot be used in a constant expression
+ViterbiGPU.cpp:28:15: note: declared here
+   28 |     const int nState,
+      |               ^
+ViterbiGPU.cpp:33:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   int path[(nObs-1)*nState];
+      |            ^~~~~~~~~~~~~~~
+ViterbiGPU.cpp:33:13: note: function parameter 'nObs' with unknown value cannot be used in a constant expression
+   33 |   int path[(nObs-1)*nState];
+      |             ^
+ViterbiGPU.cpp:24:15: note: declared here
+   24 |     const int nObs, 
+      |               ^
+2 warnings generated.
+ViterbiGPU.cpp:32:20: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   float maxProbNew[nState];
+      |                    ^~~~~~
+ViterbiGPU.cpp:32:20: note: function parameter 'nState' with unknown value cannot be used in a constant expression
+ViterbiGPU.cpp:28:15: note: declared here
+   28 |     const int nState,
+      |               ^
+ViterbiGPU.cpp:33:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   int path[(nObs-1)*nState];
+      |            ^~~~~~~~~~~~~~~
+ViterbiGPU.cpp:33:13: note: function parameter 'nObs' with unknown value cannot be used in a constant expression
+   33 |   int path[(nObs-1)*nState];
+      |             ^
+ViterbiGPU.cpp:24:15: note: declared here
+   24 |     const int nObs, 
+      |               ^
+2 warnings generated.
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a HiddenMarkovModel.o ViterbiCPU.o ViterbiGPU.o -o main 

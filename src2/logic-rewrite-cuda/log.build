@@ -1,0 +1,135 @@
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c aig_manager.cu -o aig_manager.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c balance.cu -o balance.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c print.cu -o print.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c refactor_core.cu -o refactor_core.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c refactor.cu -o refactor.o
+refactor.cu: In function 'std::tuple<int, int*, int*, int*, int> choiceReorder(int*, int*, int*, int*, int*, int*, int*, int*, int, int, int, int, int, bool)':
+refactor.cu:873:32: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  873 |                 while (vLevelNodesCount.size() < vhLevels[i] + 1)
+      |                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c refactor_mffc.cu -o refactor_mffc.o
+refactor_mffc.cu: In function 'std::tuple<int, int*, int*, int*, int> reorder(int*, int*, int*, int, int, int, int)':
+refactor_mffc.cu:615:32: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  615 |                 while (vLevelNodesCount.size() < vhLevels[i] + 1)
+      |                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c rewrite.cu -o rewrite.o
+rewrite.cu: In member function 'void rw::GPUSolver::EnumerateAndPreEvaluate(int*, const std::vector<int>&, int, int*, int*, int*, bool)':
+rewrite.cu:701:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  701 |     for(int i = 1; i < levelCount.size(); i++)
+      |                 ~~^~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c strash.cu -o strash.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c truth.cu -o truth.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c command_manager.cu -o command_manager.o
+CLI11.hpp(1029): warning #2361-D: invalid narrowing conversion from "double" to "unsigned long"
+          TT { std::declval<CC>() }
+               ^
+          detected during:
+            instantiation of "CLI::detail::is_direct_constructible<T, C>::test [with T=std::vector<std::string, std::allocator<std::string>>, C=double]" based on template arguments <std::vector<std::string, std::allocator<std::string>>, double> at line 1041
+            instantiation of class "CLI::detail::is_direct_constructible<T, C> [with T=std::vector<std::string, std::allocator<std::string>>, C=double]" at line 5005
+            instantiation of "void CLI::Option::results(T &) const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 5034
+            instantiation of "T CLI::Option::as<T>() const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 7315
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+CLI11.hpp(1029): warning #2361-D: invalid narrowing conversion from "int" to "unsigned long"
+          TT { std::declval<CC>() }
+               ^
+          detected during:
+            instantiation of "CLI::detail::is_direct_constructible<T, C>::test [with T=std::vector<std::string, std::allocator<std::string>>, C=int]" based on template arguments <std::vector<std::string, std::allocator<std::string>>, int> at line 1041
+            instantiation of class "CLI::detail::is_direct_constructible<T, C> [with T=std::vector<std::string, std::allocator<std::string>>, C=int]" at line 5005
+            instantiation of "void CLI::Option::results(T &) const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 5034
+            instantiation of "T CLI::Option::as<T>() const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 7315
+
+cli/detail/fromstring.h(134): warning #61-D: integer operation result is out of range
+          if ( val > static_cast<U>( - std::numeric_limits<T>::min() ) )
+                                     ^
+          detected during instantiation of "T cli::detail::detail::signed_from_string<T>(std::string) [with T=int]" at line 159
+
+cli/detail/fromstring.h(134): warning #61-D: integer operation result is out of range
+          if ( val > static_cast<U>( - std::numeric_limits<T>::min() ) )
+                                     ^
+          detected during instantiation of "T cli::detail::detail::signed_from_string<T>(std::string) [with T=long]" at line 162
+
+cli/detail/fromstring.h(134): warning #61-D: integer operation result is out of range
+          if ( val > static_cast<U>( - std::numeric_limits<T>::min() ) )
+                                     ^
+          detected during instantiation of "T cli::detail::detail::signed_from_string<T>(std::string) [with T=long long]" at line 165
+
+string_utils.h: In function 'std::string strUtil::join(const std::vector<std::__cxx11::basic_string<char> >&, const string&)':
+string_utils.h:46:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   46 |     for (int i = 0; i < v.size(); i++) {
+      |                 ~~^~~~~~~~~~
+string_utils.h:48:7: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   48 |         if (i != v.size() - 1)
+      |       ^ ~~~~~~~~~~~~~~~~~
+command_manager.cu: In function 'int balanceHandler(AIGMan&, const std::vector<std::__cxx11::basic_string<char> >&)':
+command_manager.cu:44:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   44 |     for (int i = 1; i < vLiterals.size(); i++) {
+      |                 ~~^~~~~~~~~~~~~~~~~~
+command_manager.cu: In function 'int rewriteHandler(AIGMan&, const std::vector<std::__cxx11::basic_string<char> >&)':
+command_manager.cu:56:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   56 |     for (int i = 1; i < vLiterals.size(); i++) {
+      |                 ~~^~~~~~~~~~~~~~~~~~
+command_manager.cu: In function 'int refactorHandler(AIGMan&, const std::vector<std::__cxx11::basic_string<char> >&)':
+command_manager.cu:71:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   71 |     for (int i = 1; i < vLiterals.size(); i++) {
+      |                 ~~^~~~~~~~~~~~~~~~~~
+command_manager.cu: In function 'int strashHandler(AIGMan&, const std::vector<std::__cxx11::basic_string<char> >&)':
+command_manager.cu:97:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   97 |     for (int i = 1; i < vLiterals.size(); i++) {
+      |                 ~~^~~~~~~~~~~~~~~~~~
+command_manager.cu: In function 'int resyn2Handler(AIGMan&, const std::vector<std::__cxx11::basic_string<char> >&)':
+command_manager.cu:118:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  118 |     for (int i = 0; i < vLiterals.size(); i++) {
+      |                 ~~^~~~~~~~~~~~~~~~~~
+command_manager.cu:120:7: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  120 |         if (i != vLiterals.size() - 1)
+      |       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c main.cu -o main.o
+main.cu(24): warning #177-D: variable "cmdFlag" was declared but never referenced
+      char cmdFlag = 0;
+           ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+CLI11.hpp(1029): warning #2361-D: invalid narrowing conversion from "double" to "unsigned long"
+          TT { std::declval<CC>() }
+               ^
+          detected during:
+            instantiation of "CLI::detail::is_direct_constructible<T, C>::test [with T=std::vector<std::string, std::allocator<std::string>>, C=double]" based on template arguments <std::vector<std::string, std::allocator<std::string>>, double> at line 1041
+            instantiation of class "CLI::detail::is_direct_constructible<T, C> [with T=std::vector<std::string, std::allocator<std::string>>, C=double]" at line 5005
+            instantiation of "void CLI::Option::results(T &) const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 5034
+            instantiation of "T CLI::Option::as<T>() const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 7315
+
+CLI11.hpp(1029): warning #2361-D: invalid narrowing conversion from "int" to "unsigned long"
+          TT { std::declval<CC>() }
+               ^
+          detected during:
+            instantiation of "CLI::detail::is_direct_constructible<T, C>::test [with T=std::vector<std::string, std::allocator<std::string>>, C=int]" based on template arguments <std::vector<std::string, std::allocator<std::string>>, int> at line 1041
+            instantiation of class "CLI::detail::is_direct_constructible<T, C> [with T=std::vector<std::string, std::allocator<std::string>>, C=int]" at line 5005
+            instantiation of "void CLI::Option::results(T &) const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 5034
+            instantiation of "T CLI::Option::as<T>() const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 7315
+
+cli/detail/fromstring.h(134): warning #61-D: integer operation result is out of range
+          if ( val > static_cast<U>( - std::numeric_limits<T>::min() ) )
+                                     ^
+          detected during instantiation of "T cli::detail::detail::signed_from_string<T>(std::string) [with T=int]" at line 159
+
+cli/detail/fromstring.h(134): warning #61-D: integer operation result is out of range
+          if ( val > static_cast<U>( - std::numeric_limits<T>::min() ) )
+                                     ^
+          detected during instantiation of "T cli::detail::detail::signed_from_string<T>(std::string) [with T=long]" at line 162
+
+cli/detail/fromstring.h(134): warning #61-D: integer operation result is out of range
+          if ( val > static_cast<U>( - std::numeric_limits<T>::min() ) )
+                                     ^
+          detected during instantiation of "T cli::detail::detail::signed_from_string<T>(std::string) [with T=long long]" at line 165
+
+string_utils.h: In function 'std::string strUtil::join(const std::vector<std::__cxx11::basic_string<char> >&, const string&)':
+string_utils.h:46:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   46 |     for (int i = 0; i < v.size(); i++) {
+      |                 ~~^~~~~~~~~~
+string_utils.h:48:7: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+   48 |         if (i != v.size() - 1)
+      |       ^ ~~~~~~~~~~~~~~~~~
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  aig_manager.o balance.o print.o refactor_core.o refactor.o refactor_mffc.o rewrite.o strash.o truth.o command_manager.o main.o -o main 

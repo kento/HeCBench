@@ -1,0 +1,40 @@
+nvc++  -Wall  -O3 -Minfo -mp=multicore,gpu -gpu=cc90 -c main.cpp -o main.o
+gendata(float*, float*, float*, float*, float*, float*, float*, float*, int, int):
+     31, Loop not vectorized/parallelized: contains call
+     39, Loop not vectorized/parallelized: contains call
+print_total(float*, int):
+     50, Generated vector simd code for the loop containing reductions
+run_gpu_kernel(int, int, int, int, int, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float, float, float*):
+     88, #omp target teams distribute thread_limit(wgsize)
+         85, Generating map(to:ax[:natom],ay[:natom],az[:natom],gz[:ngadj],charge[:natom],gx[:ngadj],gy[:ngadj]) 
+             Generating map(alloc:val[:ngadj]) 
+             Generating map(to:size[:natom]) 
+         88, Generating "nvkernel__Z14run_gpu_kerneliiiiiPKfS0_S0_S0_S0_S0_S0_S0_ffPf_F1L88_2" GPU kernel
+         90, Loop parallelized across teams, schedule(static)
+         93, Team private (sum,igrid) located in CUDA shared memory
+             #omp parallel
+           93, Generating reduction(+:sum)
+               Loop parallelized across threads, schedule(static)
+     88, Loop not vectorized/parallelized: contains call
+     90, Loop not vectorized/parallelized: contains structure move
+     93, Loop not vectorized/parallelized: not countable
+    111, Generating update from(val[:ngrid])
+run_cpu_kernel(int, int, int, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float, float, float*):
+    137, Loop not vectorized/parallelized: contains call
+    139, #omp parallel
+        142, #omp parallel
+          142, Generating reduction(+:sum)
+    139, Loop not vectorized/parallelized: contains structure move
+    142, Generated vector simd code for the loop containing reductions
+getargs(int, char const**, int*, int*):
+    171, Loop not vectorized/parallelized: contains call
+main:
+         171, Loop not vectorized/parallelized: contains call
+          31, Loop not vectorized/parallelized: contains call
+          39, Loop not vectorized/parallelized: contains call
+          50, Loop not fused: function call before adjacent loop
+              Generated vector simd code for the loop containing reductions
+          50, Loop not fused: function call before adjacent loop
+              Generated vector simd code for the loop containing reductions
+nvc++  -Wall  -O3 -Minfo -mp=multicore,gpu -gpu=cc90 -c WKFUtils.cpp -o WKFUtils.o
+nvc++  -Wall  -O3 -Minfo -mp=multicore,gpu -gpu=cc90 main.o WKFUtils.o -o main 

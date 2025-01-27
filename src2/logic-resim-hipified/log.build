@@ -1,0 +1,171 @@
+hipcc  -std=c++14  -Wall            -Isrc/gate -Isrc/parser -Isrc/sim -Isrc/util -Isrc/wave -O3 src/gate/*.cpp src/main/*.cpp src/parser/*.cpp          src/sim/*.cu src/util/*.cpp src/wave/*.cpp -o main 
+In file included from src/main/main.cpp:1:
+src/parser/vcdParser.h:31:57: warning: field 'modCounter' will be initialized after field 'dumpOff' [-Wreorder-ctor]
+   31 |         vcdParser(WireMgr* mgr, tUnit off): _wMgr(mgr), modCounter(0), dumpOff(off) {}
+      |                                                         ^~~~~~~~~~~~~  ~~~~~~~~~~~~
+      |                                                         dumpOff(off)   modCounter(0)
+In file included from src/main/main.cpp:2:
+src/parser/interParser.h:58:71: warning: field 'BlockC' will be initialized after field '_simulator' [-Wreorder-ctor]
+   58 |             :EvalC(0), TransC(0), iWireC(0), oWireC(0), AssignedC(0), BlockC(0), _simulator(sim)
+      |              ~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~  ^~~~~~~~~  ~~~~~~~~~~~~~~~
+      |              _simulator(sim) EvalC(0) TransC(0) iWireC(0) oWireC(0)   AssignedC(0) BlockC(0)
+In file included from src/main/main.cpp:1:
+In file included from src/parser/vcdParser.h:5:
+src/parser/getChar.h:19:1: warning: unused function 'jump' [-Wunused-function]
+   19 | jump(char*& c, size_t s) {
+      | ^~~~
+src/parser/getChar.h:30:1: warning: unused function 'jumpline' [-Wunused-function]
+   30 | jumpline(char*& c, size_t s) {
+      | ^~~~~~~~
+src/parser/getChar.h:37:1: warning: unused function 'getString' [-Wunused-function]
+   37 | getString(char*& c, size_t s) {
+      | ^~~~~~~~~
+src/parser/getChar.h:48:1: warning: unused function 'getSizeT' [-Wunused-function]
+   48 | getSizeT(char*& c, size_t value) {
+      | ^~~~~~~~
+src/parser/getChar.h:55:1: warning: unused function 'getULL' [-Wunused-function]
+   55 | getULL(char*& c, ULL value) {
+      | ^~~~~~
+src/parser/getChar.h:62:1: warning: unused function 'myCmp' [-Wunused-function]
+   62 | myCmp(char* c, const char* p, size_t s) {
+      | ^~~~~
+8 warnings generated when compiling for gfx90a.
+In file included from src/main/main.cpp:1:
+src/parser/vcdParser.h:31:57: warning: field 'modCounter' will be initialized after field 'dumpOff' [-Wreorder-ctor]
+   31 |         vcdParser(WireMgr* mgr, tUnit off): _wMgr(mgr), modCounter(0), dumpOff(off) {}
+      |                                                         ^~~~~~~~~~~~~  ~~~~~~~~~~~~
+      |                                                         dumpOff(off)   modCounter(0)
+In file included from src/main/main.cpp:2:
+src/parser/interParser.h:58:71: warning: field 'BlockC' will be initialized after field '_simulator' [-Wreorder-ctor]
+   58 |             :EvalC(0), TransC(0), iWireC(0), oWireC(0), AssignedC(0), BlockC(0), _simulator(sim)
+      |              ~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~  ^~~~~~~~~  ~~~~~~~~~~~~~~~
+      |              _simulator(sim) EvalC(0) TransC(0) iWireC(0) oWireC(0)   AssignedC(0) BlockC(0)
+In file included from src/main/main.cpp:1:
+In file included from src/parser/vcdParser.h:5:
+src/parser/getChar.h:19:1: warning: unused function 'jump' [-Wunused-function]
+   19 | jump(char*& c, size_t s) {
+      | ^~~~
+src/parser/getChar.h:30:1: warning: unused function 'jumpline' [-Wunused-function]
+   30 | jumpline(char*& c, size_t s) {
+      | ^~~~~~~~
+src/parser/getChar.h:37:1: warning: unused function 'getString' [-Wunused-function]
+   37 | getString(char*& c, size_t s) {
+      | ^~~~~~~~~
+src/parser/getChar.h:48:1: warning: unused function 'getSizeT' [-Wunused-function]
+   48 | getSizeT(char*& c, size_t value) {
+      | ^~~~~~~~
+src/parser/getChar.h:55:1: warning: unused function 'getULL' [-Wunused-function]
+   55 | getULL(char*& c, ULL value) {
+      | ^~~~~~
+src/parser/getChar.h:62:1: warning: unused function 'myCmp' [-Wunused-function]
+   62 | myCmp(char* c, const char* p, size_t s) {
+      | ^~~~~
+8 warnings generated when compiling for host.
+src/parser/SAIF.cpp:7:16: warning: initializer order does not match the declaration order [-Wreorder-ctor]
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |   ~~~~~~~~~~~  ^~~~~~~~~~~~  ~~~~~~~~~~  ~~~~~~~~~~
+      |   buffer_size(TransC) counter(0) modC(modc) filename(f)
+    8 |         buffer_size(TransC), counter(0)
+      |         ~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~
+      |         dumpOn(on)           dumpOff(off)
+src/parser/SAIF.cpp:7:16: note: field 'dumpOff' will be initialized after field 'dumpOn'
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |                ^~~~~~~~~~~~
+src/parser/SAIF.cpp:7:30: note: field 'dumpOn' will be initialized after field 'modC'
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |                              ^~~~~~~~~~
+src/parser/SAIF.cpp:7:42: note: field 'modC' will be initialized after field 'buffer_size'
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |                                          ^~~~~~~~~~
+In file included from src/parser/SAIF.cpp:1:
+src/parser/SAIF.h:15:25: warning: private field 'buffer_size' is not used [-Wunused-private-field]
+   15 |         size_t          buffer_size,
+      |                         ^
+src/parser/SAIF.h:16:25: warning: private field 'counter' is not used [-Wunused-private-field]
+   16 |                         counter;
+      |                         ^
+3 warnings generated when compiling for gfx90a.
+src/parser/SAIF.cpp:7:16: warning: initializer order does not match the declaration order [-Wreorder-ctor]
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |   ~~~~~~~~~~~  ^~~~~~~~~~~~  ~~~~~~~~~~  ~~~~~~~~~~
+      |   buffer_size(TransC) counter(0) modC(modc) filename(f)
+    8 |         buffer_size(TransC), counter(0)
+      |         ~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~
+      |         dumpOn(on)           dumpOff(off)
+src/parser/SAIF.cpp:7:16: note: field 'dumpOff' will be initialized after field 'dumpOn'
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |                ^~~~~~~~~~~~
+src/parser/SAIF.cpp:7:30: note: field 'dumpOn' will be initialized after field 'modC'
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |                              ^~~~~~~~~~
+src/parser/SAIF.cpp:7:42: note: field 'modC' will be initialized after field 'buffer_size'
+    7 | : filename(f), dumpOff(off), dumpOn(on), modC(modc),
+      |                                          ^~~~~~~~~~
+In file included from src/parser/SAIF.cpp:1:
+src/parser/SAIF.h:15:25: warning: private field 'buffer_size' is not used [-Wunused-private-field]
+   15 |         size_t          buffer_size,
+      |                         ^
+src/parser/SAIF.h:16:25: warning: private field 'counter' is not used [-Wunused-private-field]
+   16 |                         counter;
+      |                         ^
+3 warnings generated when compiling for host.
+In file included from src/parser/interParser.cpp:1:
+src/parser/interParser.h:58:71: warning: field 'BlockC' will be initialized after field '_simulator' [-Wreorder-ctor]
+   58 |             :EvalC(0), TransC(0), iWireC(0), oWireC(0), AssignedC(0), BlockC(0), _simulator(sim)
+      |              ~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~  ^~~~~~~~~  ~~~~~~~~~~~~~~~
+      |              _simulator(sim) EvalC(0) TransC(0) iWireC(0) oWireC(0)   AssignedC(0) BlockC(0)
+src/parser/interParser.cpp:9:11: warning: unused variable 'begin' [-Wunused-variable]
+    9 |     char* begin = c;
+      |           ^~~~~
+In file included from src/parser/interParser.cpp:2:
+src/parser/getChar.h:19:1: warning: unused function 'jump' [-Wunused-function]
+   19 | jump(char*& c, size_t s) {
+      | ^~~~
+src/parser/getChar.h:55:1: warning: unused function 'getULL' [-Wunused-function]
+   55 | getULL(char*& c, ULL value) {
+      | ^~~~~~
+src/parser/getChar.h:62:1: warning: unused function 'myCmp' [-Wunused-function]
+   62 | myCmp(char* c, const char* p, size_t s) {
+      | ^~~~~
+5 warnings generated when compiling for gfx90a.
+In file included from src/parser/interParser.cpp:1:
+src/parser/interParser.h:58:71: warning: field 'BlockC' will be initialized after field '_simulator' [-Wreorder-ctor]
+   58 |             :EvalC(0), TransC(0), iWireC(0), oWireC(0), AssignedC(0), BlockC(0), _simulator(sim)
+      |              ~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~  ^~~~~~~~~  ~~~~~~~~~~~~~~~
+      |              _simulator(sim) EvalC(0) TransC(0) iWireC(0) oWireC(0)   AssignedC(0) BlockC(0)
+src/parser/interParser.cpp:9:11: warning: unused variable 'begin' [-Wunused-variable]
+    9 |     char* begin = c;
+      |           ^~~~~
+In file included from src/parser/interParser.cpp:2:
+src/parser/getChar.h:19:1: warning: unused function 'jump' [-Wunused-function]
+   19 | jump(char*& c, size_t s) {
+      | ^~~~
+src/parser/getChar.h:55:1: warning: unused function 'getULL' [-Wunused-function]
+   55 | getULL(char*& c, ULL value) {
+      | ^~~~~~
+src/parser/getChar.h:62:1: warning: unused function 'myCmp' [-Wunused-function]
+   62 | myCmp(char* c, const char* p, size_t s) {
+      | ^~~~~
+5 warnings generated when compiling for host.
+In file included from src/parser/vcdParser.cpp:1:
+src/parser/vcdParser.h:31:57: warning: field 'modCounter' will be initialized after field 'dumpOff' [-Wreorder-ctor]
+   31 |         vcdParser(WireMgr* mgr, tUnit off): _wMgr(mgr), modCounter(0), dumpOff(off) {}
+      |                                                         ^~~~~~~~~~~~~  ~~~~~~~~~~~~
+      |                                                         dumpOff(off)   modCounter(0)
+In file included from src/parser/vcdParser.cpp:1:
+In file included from src/parser/vcdParser.h:5:
+src/parser/getChar.h:30:1: warning: unused function 'jumpline' [-Wunused-function]
+   30 | jumpline(char*& c, size_t s) {
+      | ^~~~~~~~
+2 warnings generated when compiling for gfx90a.
+In file included from src/parser/vcdParser.cpp:1:
+src/parser/vcdParser.h:31:57: warning: field 'modCounter' will be initialized after field 'dumpOff' [-Wreorder-ctor]
+   31 |         vcdParser(WireMgr* mgr, tUnit off): _wMgr(mgr), modCounter(0), dumpOff(off) {}
+      |                                                         ^~~~~~~~~~~~~  ~~~~~~~~~~~~
+      |                                                         dumpOff(off)   modCounter(0)
+In file included from src/parser/vcdParser.cpp:1:
+In file included from src/parser/vcdParser.h:5:
+src/parser/getChar.h:30:1: warning: unused function 'jumpline' [-Wunused-function]
+   30 | jumpline(char*& c, size_t s) {
+      | ^~~~~~~~
+2 warnings generated when compiling for host.

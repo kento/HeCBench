@@ -1,0 +1,27 @@
+hipcc  -std=c++14  -Wall             -fopenmp -O3  -c main.cu -o main.o
+In file included from main.cu:27:
+./reduce.h:9:12: error: use of undeclared identifier '__shfl_xor_sync'
+    9 |     val += __shfl_xor_sync(FINAL_MASK, val, mask, 32);
+      |            ^
+./reduce.h:21:9: note: in instantiation of function template specialization 'warpReduceSum<float>' requested here
+   21 |   val = warpReduceSum<T>(val);
+      |         ^
+main.cu:125:17: note: in instantiation of function template specialization 'blockReduceSum<float>' requested here
+  125 |   float accum = blockReduceSum<float>(local_accum);
+      |                 ^
+In file included from main.cu:27:
+./reduce.h:41:20: error: use of undeclared identifier '__shfl_xor_sync'
+   41 |     val = max(val, __shfl_xor_sync(FINAL_MASK, val, mask, 32));
+      |                    ^
+./reduce.h:53:9: note: in instantiation of function template specialization 'warpReduceMax<float>' requested here
+   53 |   val = warpReduceMax(val);  // get maxx in each warp
+      |         ^
+main.cu:76:21: note: in instantiation of function template specialization 'blockReduceMax<float>' requested here
+   76 |     float max_val = blockReduceMax<float>(local_max);
+      |                     ^
+main.cu:211:3: note: in instantiation of function template specialization 'log_probs_kernel<float>' requested here
+  211 |   log_probs_kernel<float><<<grid, block>>>(
+      |   ^
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -fopenmp -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

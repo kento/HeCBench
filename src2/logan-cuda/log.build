@@ -1,0 +1,5 @@
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/main.cu -o src/main.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/seed.cu -o src/seed.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/score.cu -o src/score.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/logan_functions.cu -o src/logan_functions.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE src/main.o src/seed.o src/score.o src/logan_functions.o -o main 

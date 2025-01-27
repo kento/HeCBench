@@ -1,0 +1,2 @@
+hipcc  -std=c++14 -Wall -I../marchingCubes-cuda -O3 -munsafe-fp-atomics -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -I../marchingCubes-cuda -O3 -munsafe-fp-atomics main.o -o main 

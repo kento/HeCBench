@@ -1,0 +1,6 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cpp -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c kernels.cu -o kernels.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c util.cpp -o util.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c parse.cpp -o parse.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c sequential.cpp -o sequential.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o kernels.o util.o parse.o sequential.o -o main 

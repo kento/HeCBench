@@ -1,0 +1,2 @@
+hipcc  -std=c++14  -Wall  -O3 -c iso2dfd.cu -o iso2dfd.o
+hipcc  -std=c++14  -Wall  -O3 iso2dfd.o -o main 

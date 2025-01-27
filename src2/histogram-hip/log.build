@@ -1,0 +1,2 @@
+hipcc  -std=c++14 -Wall -O3 -c histogram_compare.cu -o histogram_compare.o
+hipcc  -std=c++14 -Wall -O3 histogram_compare.o -o main 

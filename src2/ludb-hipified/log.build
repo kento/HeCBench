@@ -1,0 +1,7 @@
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+main.cu:51:10: fatal error: 'hipblas.h' file not found
+   51 | #include <hipblas.h>
+      |          ^~~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

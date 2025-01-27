@@ -1,0 +1,36 @@
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
+init_spins(signed char*, float const*, long long, long long):
+     37, #omp target teams distribute parallel for simd thread_limit(128)
+         37, Generating "nvkernel__Z10init_spinsPaPKfxx_F1L37_2" GPU kernel
+         39, Loop parallelized across teams and threads(128), schedule(static)
+     39, Loop not vectorized/parallelized: not countable
+void update_lattice<true>(signed char*, signed char*, float*, float, long long, long long):
+     52, #omp target teams distribute parallel for thread_limit(128)
+         52, Generating "nvkernel__Z14update_latticeILb1EEvPaS0_Pffxx_F1L52_6" GPU kernel
+         55, Loop parallelized across teams and threads(128), schedule(static)
+     56, Loop not vectorized/parallelized: not countable
+void update_lattice<false>(signed char*, signed char*, float*, float, long long, long long):
+     52, #omp target teams distribute parallel for thread_limit(128)
+         52, Generating "nvkernel__Z14update_latticeILb0EEvPaS0_Pffxx_F1L52_10" GPU kernel
+         55, Loop parallelized across teams and threads(128), schedule(static)
+     56, Loop not vectorized/parallelized: not countable
+main:
+    137, Loop not vectorized/parallelized: contains call
+    192, Loop not vectorized/parallelized: contains call
+    199, Generating target enter data map(create: lattice_b[:(nx*ny)/2])
+         Generating target enter data map(to: randvals[:(nx*ny)/2])
+         Generating target enter data map(create: lattice_w[:(nx*ny)/2])
+    206, Loop not vectorized/parallelized: contains call
+    212, Loop not vectorized/parallelized: contains call
+    222, Generating target exit data map(delete: randvals[:(nx*ny)/2]) finalize
+         Generating target exit data map(from: lattice_w[:(nx*ny)/2],lattice_b[:(nx*ny)/2])
+    233, Multiple reductions compressed
+         Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop containing reductions
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     23, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+std::chrono::duration<long, std::ratio<1l, 1000000l>>::_S_gcd(long, long):
+     23, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 main.o -o main 

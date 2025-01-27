@@ -1,0 +1,2 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c MD5Hash.cu -o MD5Hash.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 MD5Hash.o -o MD5Hash 

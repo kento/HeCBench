@@ -1,0 +1,8 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cu -o main.o
+main.cu(154): warning #177-D: variable "write" was declared but never referenced
+    bool write = false;
+         ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o -o main 

@@ -1,0 +1,9 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cu -o main.o
+main.cu: In function 'int main(int, char**)':
+main.cu:198:19: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+  198 |     for (int j = 0; j < sizeof(block_sizes) / sizeof(int); j++) {
+      |                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:212:19: warning: comparison of integer expressions of different signedness: 'int' and 'long unsigned int' [-Wsign-compare]
+  212 |     for (int j = 0; j < sizeof(block_sizes) / sizeof(int); j++) {
+      |                 ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o -o main 

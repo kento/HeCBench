@@ -1,0 +1,5 @@
+hipcc  -std=c++14 -Wall -fopenmp -O3 -c main.cu -o main.o
+warning: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+1 warning generated when compiling for host.
+hipcc  -std=c++14 -Wall -fopenmp -O3 -c WKFUtils.cu -o WKFUtils.o
+hipcc  -std=c++14 -Wall -fopenmp -O3 main.o WKFUtils.o -o main 

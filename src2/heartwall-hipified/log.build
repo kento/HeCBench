@@ -1,0 +1,459 @@
+hipcc	-DOUTPUT  ./main.cu 		-I./util/timer/ 		-I./util/file/ 		-c 		-o ./main.o 
+hipcc    -Wall  -O3   ./kernel/kernel.cu 		-c 		-o ./kernel/kernel.o 
+./kernel/kernel.cu:34:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   34 |   hipMalloc((void**)&d_endoT, common.in_mem * common.endoPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMalloc((void**)&d_epiT, common.in_mem * common.epiPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:55:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   55 |   hipMalloc((void**)&d_in2, common.in2_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:72:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   72 |   hipMalloc((void**)&d_conv, common.conv_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipMalloc((void**)&d_in2_pad_cumv, common.in2_pad_cumv_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:115:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  115 |   hipMalloc((void**)&d_in2_pad_cumv_sel, common.in2_pad_cumv_sel_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:135:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  135 |   hipMalloc((void**)&d_in2_sub_cumh, common.in2_sub_cumh_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:155:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  155 |   hipMalloc((void**)&d_in2_sub_cumh_sel, common.in2_sub_cumh_sel_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:175:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  175 |   hipMalloc((void**)&d_in2_sub2, common.in2_sub2_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:195:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  195 |   hipMalloc((void**)&d_in2_sqr, common.in2_sqr_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:211:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  211 |   hipMalloc((void**)&d_in2_sqr_sub2, common.in2_sqr_sub2_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:227:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  227 |   hipMalloc((void**)&d_in_sqr, common.in_sqr_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:243:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  243 |   hipMalloc((void**)&d_tMask, common.tMask_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:295:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  295 |   hipMalloc((void**)&d_endoRow, common.endo_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:296:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  296 |   hipMemcpy(d_endoRow, endoRow, common.endo_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:299:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  299 |   hipMalloc((void**)&d_endoCol, common.endo_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:300:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  300 |   hipMemcpy(d_endoCol, endoCol, common.endo_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:304:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  304 |   hipMalloc((void**)&d_tEndoRowLoc, common.endo_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:305:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  305 |   hipMemcpy(d_tEndoRowLoc, tEndoRowLoc, common.endo_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:306:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  306 |   hipMalloc((void**)&d_tEndoColLoc, common.endo_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:307:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  307 |   hipMemcpy(d_tEndoColLoc, tEndoColLoc, common.endo_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:311:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  311 |   hipMalloc((void**)&d_epiRow, common.epi_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:312:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  312 |   hipMemcpy(d_epiRow, epiRow, common.epi_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:313:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  313 |   hipMalloc((void**)&d_epiCol, common.epi_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:314:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  314 |   hipMemcpy(d_epiCol, epiCol, common.epi_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:318:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  318 |   hipMalloc((void**)&d_tEpiRowLoc, common.epi_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:319:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  319 |   hipMemcpy(d_tEpiRowLoc, tEpiRowLoc, common.epi_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:320:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  320 |   hipMalloc((void**)&d_tEpiColLoc, common.epi_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:321:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  321 |   hipMemcpy(d_tEpiColLoc, tEpiColLoc, common.epi_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:326:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  326 |   hipMalloc((void**)&d_mask_conv, common.mask_conv_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:332:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  332 |   hipMalloc((void**)&d_in_mod_temp, common.in_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:339:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  339 |   hipMalloc((void**)&d_in_partial_sum, sizeof(fp)*common.in_cols * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:346:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  346 |   hipMalloc((void**)&d_in_sqr_partial_sum, sizeof(fp)*common.in_sqr_rows * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:354:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  354 |   hipMalloc((void**)&d_par_max_val, sizeof(fp)*common.mask_conv_rows * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:361:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |   hipMalloc((void**)&d_par_max_coo, sizeof(fp)*common.mask_conv_rows * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:367:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  367 |   hipMalloc((void**)&d_in_final_sum, sizeof(fp)*common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:372:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  372 |   hipMalloc((void**)&d_in_sqr_final_sum, sizeof(fp)*common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:378:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  378 |   hipMalloc((void**)&d_denomT, sizeof(fp)*common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipMalloc((void**)&d_frame, sizeof(fp)*common.frame_elem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:427:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |     hipMemcpy(d_frame, frame, sizeof(fp)*common.frame_elem, hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:497:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  497 |   hipMemcpy(tEndoRowLoc, d_tEndoRowLoc, common.endo_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:498:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  498 |   hipMemcpy(tEndoColLoc, d_tEndoColLoc, common.endo_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:499:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  499 |   hipMemcpy(tEpiRowLoc, d_tEpiRowLoc, common.epi_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:500:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  500 |   hipMemcpy(tEpiColLoc, d_tEpiColLoc, common.epi_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:510:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  510 |   hipFree(d_epiT);
+      |   ^~~~~~~ ~~~~~~
+./kernel/kernel.cu:511:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  511 |   hipFree(d_endoT);
+      |   ^~~~~~~ ~~~~~~~
+./kernel/kernel.cu:512:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  512 |   hipFree(d_in2);
+      |   ^~~~~~~ ~~~~~
+./kernel/kernel.cu:513:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  513 |   hipFree(d_conv);
+      |   ^~~~~~~ ~~~~~~
+./kernel/kernel.cu:514:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  514 |   hipFree(d_in2_pad_cumv);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:515:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  515 |   hipFree(d_in2_pad_cumv_sel);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:516:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  516 |   hipFree(d_in2_sub_cumh);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:517:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  517 |   hipFree(d_in2_sub_cumh_sel);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:518:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  518 |   hipFree(d_in2_sub2);
+      |   ^~~~~~~ ~~~~~~~~~~
+./kernel/kernel.cu:519:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  519 |   hipFree(d_in2_sqr);
+      |   ^~~~~~~ ~~~~~~~~~
+./kernel/kernel.cu:520:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  520 |   hipFree(d_in2_sqr_sub2);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:521:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  521 |   hipFree(d_in_sqr);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:522:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  522 |   hipFree(d_tMask);
+      |   ^~~~~~~ ~~~~~~~
+./kernel/kernel.cu:523:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  523 |   hipFree(d_endoRow);
+      |   ^~~~~~~ ~~~~~~~~~
+./kernel/kernel.cu:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipFree(d_endoCol);
+      |   ^~~~~~~ ~~~~~~~~~
+./kernel/kernel.cu:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipFree(d_tEndoRowLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipFree(d_tEndoColLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipFree(d_epiRow);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipFree(d_epiCol);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipFree(d_tEpiRowLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~
+./kernel/kernel.cu:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipFree(d_tEpiColLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~
+./kernel/kernel.cu:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipFree(d_mask_conv);
+      |   ^~~~~~~ ~~~~~~~~~~~
+./kernel/kernel.cu:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipFree(d_in_mod_temp);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipFree(d_in_partial_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipFree(d_in_sqr_partial_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:535:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  535 |   hipFree(d_par_max_val);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:536:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  536 |   hipFree(d_par_max_coo);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:537:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  537 |   hipFree(d_in_final_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:538:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |   hipFree(d_in_sqr_final_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:539:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |   hipFree(d_denomT);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:540:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  540 |   hipFree(d_frame);
+      |   ^~~~~~~ ~~~~~~~
+75 warnings generated when compiling for gfx90a.
+./kernel/kernel.cu:34:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   34 |   hipMalloc((void**)&d_endoT, common.in_mem * common.endoPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMalloc((void**)&d_epiT, common.in_mem * common.epiPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:55:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   55 |   hipMalloc((void**)&d_in2, common.in2_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:72:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   72 |   hipMalloc((void**)&d_conv, common.conv_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipMalloc((void**)&d_in2_pad_cumv, common.in2_pad_cumv_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:115:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  115 |   hipMalloc((void**)&d_in2_pad_cumv_sel, common.in2_pad_cumv_sel_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:135:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  135 |   hipMalloc((void**)&d_in2_sub_cumh, common.in2_sub_cumh_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:155:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  155 |   hipMalloc((void**)&d_in2_sub_cumh_sel, common.in2_sub_cumh_sel_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:175:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  175 |   hipMalloc((void**)&d_in2_sub2, common.in2_sub2_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:195:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  195 |   hipMalloc((void**)&d_in2_sqr, common.in2_sqr_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:211:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  211 |   hipMalloc((void**)&d_in2_sqr_sub2, common.in2_sqr_sub2_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:227:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  227 |   hipMalloc((void**)&d_in_sqr, common.in_sqr_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:243:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  243 |   hipMalloc((void**)&d_tMask, common.tMask_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:295:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  295 |   hipMalloc((void**)&d_endoRow, common.endo_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:296:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  296 |   hipMemcpy(d_endoRow, endoRow, common.endo_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:299:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  299 |   hipMalloc((void**)&d_endoCol, common.endo_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:300:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  300 |   hipMemcpy(d_endoCol, endoCol, common.endo_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:304:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  304 |   hipMalloc((void**)&d_tEndoRowLoc, common.endo_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:305:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  305 |   hipMemcpy(d_tEndoRowLoc, tEndoRowLoc, common.endo_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:306:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  306 |   hipMalloc((void**)&d_tEndoColLoc, common.endo_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:307:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  307 |   hipMemcpy(d_tEndoColLoc, tEndoColLoc, common.endo_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:311:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  311 |   hipMalloc((void**)&d_epiRow, common.epi_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:312:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  312 |   hipMemcpy(d_epiRow, epiRow, common.epi_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:313:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  313 |   hipMalloc((void**)&d_epiCol, common.epi_mem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:314:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  314 |   hipMemcpy(d_epiCol, epiCol, common.epi_mem, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:318:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  318 |   hipMalloc((void**)&d_tEpiRowLoc, common.epi_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:319:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  319 |   hipMemcpy(d_tEpiRowLoc, tEpiRowLoc, common.epi_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:320:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  320 |   hipMalloc((void**)&d_tEpiColLoc, common.epi_mem*common.no_frames);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:321:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  321 |   hipMemcpy(d_tEpiColLoc, tEpiColLoc, common.epi_mem*common.no_frames, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:326:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  326 |   hipMalloc((void**)&d_mask_conv, common.mask_conv_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:332:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  332 |   hipMalloc((void**)&d_in_mod_temp, common.in_mem * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:339:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  339 |   hipMalloc((void**)&d_in_partial_sum, sizeof(fp)*common.in_cols * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:346:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  346 |   hipMalloc((void**)&d_in_sqr_partial_sum, sizeof(fp)*common.in_sqr_rows * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:354:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  354 |   hipMalloc((void**)&d_par_max_val, sizeof(fp)*common.mask_conv_rows * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:361:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |   hipMalloc((void**)&d_par_max_coo, sizeof(fp)*common.mask_conv_rows * common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:367:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  367 |   hipMalloc((void**)&d_in_final_sum, sizeof(fp)*common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:372:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  372 |   hipMalloc((void**)&d_in_sqr_final_sum, sizeof(fp)*common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:378:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  378 |   hipMalloc((void**)&d_denomT, sizeof(fp)*common.allPoints);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:411:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  411 |   hipMalloc((void**)&d_frame, sizeof(fp)*common.frame_elem);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:427:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |     hipMemcpy(d_frame, frame, sizeof(fp)*common.frame_elem, hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:497:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  497 |   hipMemcpy(tEndoRowLoc, d_tEndoRowLoc, common.endo_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:498:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  498 |   hipMemcpy(tEndoColLoc, d_tEndoColLoc, common.endo_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:499:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  499 |   hipMemcpy(tEpiRowLoc, d_tEpiRowLoc, common.epi_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:500:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  500 |   hipMemcpy(tEpiColLoc, d_tEpiColLoc, common.epi_mem * common.no_frames, hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:510:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  510 |   hipFree(d_epiT);
+      |   ^~~~~~~ ~~~~~~
+./kernel/kernel.cu:511:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  511 |   hipFree(d_endoT);
+      |   ^~~~~~~ ~~~~~~~
+./kernel/kernel.cu:512:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  512 |   hipFree(d_in2);
+      |   ^~~~~~~ ~~~~~
+./kernel/kernel.cu:513:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  513 |   hipFree(d_conv);
+      |   ^~~~~~~ ~~~~~~
+./kernel/kernel.cu:514:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  514 |   hipFree(d_in2_pad_cumv);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:515:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  515 |   hipFree(d_in2_pad_cumv_sel);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:516:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  516 |   hipFree(d_in2_sub_cumh);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:517:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  517 |   hipFree(d_in2_sub_cumh_sel);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:518:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  518 |   hipFree(d_in2_sub2);
+      |   ^~~~~~~ ~~~~~~~~~~
+./kernel/kernel.cu:519:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  519 |   hipFree(d_in2_sqr);
+      |   ^~~~~~~ ~~~~~~~~~
+./kernel/kernel.cu:520:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  520 |   hipFree(d_in2_sqr_sub2);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:521:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  521 |   hipFree(d_in_sqr);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:522:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  522 |   hipFree(d_tMask);
+      |   ^~~~~~~ ~~~~~~~
+./kernel/kernel.cu:523:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  523 |   hipFree(d_endoRow);
+      |   ^~~~~~~ ~~~~~~~~~
+./kernel/kernel.cu:524:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |   hipFree(d_endoCol);
+      |   ^~~~~~~ ~~~~~~~~~
+./kernel/kernel.cu:525:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |   hipFree(d_tEndoRowLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:526:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  526 |   hipFree(d_tEndoColLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:527:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |   hipFree(d_epiRow);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:528:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  528 |   hipFree(d_epiCol);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:529:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |   hipFree(d_tEpiRowLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~
+./kernel/kernel.cu:530:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  530 |   hipFree(d_tEpiColLoc);
+      |   ^~~~~~~ ~~~~~~~~~~~~
+./kernel/kernel.cu:531:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  531 |   hipFree(d_mask_conv);
+      |   ^~~~~~~ ~~~~~~~~~~~
+./kernel/kernel.cu:532:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  532 |   hipFree(d_in_mod_temp);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:533:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  533 |   hipFree(d_in_partial_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:534:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  534 |   hipFree(d_in_sqr_partial_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:535:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  535 |   hipFree(d_par_max_val);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:536:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  536 |   hipFree(d_par_max_coo);
+      |   ^~~~~~~ ~~~~~~~~~~~~~
+./kernel/kernel.cu:537:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  537 |   hipFree(d_in_final_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+./kernel/kernel.cu:538:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  538 |   hipFree(d_in_sqr_final_sum);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+./kernel/kernel.cu:539:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  539 |   hipFree(d_denomT);
+      |   ^~~~~~~ ~~~~~~~~
+./kernel/kernel.cu:540:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  540 |   hipFree(d_frame);
+      |   ^~~~~~~ ~~~~~~~
+75 warnings generated when compiling for host.
+hipcc	   -Wall  -O3 ./util/avi/avilib.c 		-I./util/avi 		-c 		-o ./util/avi/avilib.o 
+hipcc	   -Wall  -O3 ./util/avi/avimod.c 		-I./util/avi 		-c 		-o ./util/avi/avimod.o 
+hipcc	   -Wall  -O3 ./util/file/file.c 		-I./util/file 		-I./util/timer 		-c 		-o ./util/file/file.o 
+hipcc	   -Wall  -O3 ./util/timer/timer.c 		-I./util/timer 		-c 		-o ./util/timer/timer.o 
+hipcc	   -Wall  -O3 ./main.o 		./kernel/kernel.o 		./util/avi/avilib.o 		./util/avi/avimod.o 		./util/file/file.o 		./util/timer/timer.o 		-lm -o heartwall

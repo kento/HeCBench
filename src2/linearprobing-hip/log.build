@@ -1,0 +1,4 @@
+hipcc  -std=c++14 -Wall -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -O3 -c linearprobing.cu -o linearprobing.o
+hipcc  -std=c++14 -Wall -O3 -c test.cu -o test.o
+hipcc  -std=c++14 -Wall -O3 main.o linearprobing.o test.o -o main 

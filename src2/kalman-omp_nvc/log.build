@@ -1,0 +1,78 @@
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
+main:
+    300, Loop not vectorized/parallelized: contains call
+    304, Loop not vectorized/parallelized: contains call
+    308, Loop not vectorized/parallelized: contains call
+    312, Loop not vectorized/parallelized: contains call
+    316, Loop not vectorized/parallelized: contains call
+    320, Loop not vectorized/parallelized: contains call
+    324, Loop not vectorized/parallelized: contains call
+    349, Generating map(to:P[:rd2_word],RQR[:rd2_word]) 
+         Generating map(alloc:Fs[:nobs_word]) 
+         Generating map(to:T[:rd2_word],Z[:rd_word]) 
+         Generating map(alloc:vs[:nobs_word]) 
+         Generating map(to:ys[:nobs_word]) 
+         Generating map(alloc:fc[:fc_word],sum_logFs[:ns_word]) 
+         Generating map(from:F_fc[:fc_word]) 
+         Generating map(to:mu[:ns_word],alpha[:rd_word]) 
+    354, Loop not vectorized/parallelized: contains call
+    382, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop containing reductions
+void kalman<8>(double const*, int, double const*, double const*, double const*, double const*, double const*, bool, double const*, int, double*, double*, double*, int, int, double*, bool, double*):
+    112, #omp target teams distribute parallel for thread_limit(256)
+        112, Generating "nvkernel__Z6kalmanILi8EEvPKdiS1_S1_S1_S1_S1_bS1_iPdS2_S2_iiS2_bS2__F1L112_2" GPU kernel
+        114, Loop parallelized across teams and threads(128), schedule(static)
+    114, Loop not vectorized/parallelized: too deeply nested
+    128, Generated vector simd code for the loop
+    133, Invariant if transformation
+         Loop unrolled 8 times (completely unrolled)
+    145, Loop not vectorized/parallelized: too deeply nested
+    151, Generated vector simd code for the loop containing reductions
+    163, Loop interchange produces reordered loop nest: 164,163
+         Generated vector simd code for the loop containing reductions
+          57, Generated vector simd code for the loop containing reductions
+    178, Generated vector simd code for the loop
+          43, Generated vector simd code for the loop containing reductions
+          31, Generated vector simd code for the loop containing reductions
+    188, Generated vector simd code for the loop
+    196, Recognized memory copy idiom
+    201, Generated vector simd code for the loop
+    205, Loop interchange produces reordered loop nest: 206,205
+         Generated vector simd code for the loop
+          57, Loop not vectorized: unprofitable for target
+              Loop unrolled 2 times
+    216, Generated vector simd code for the loop
+         Vectorized loop was interleaved
+    225, Loop not vectorized/parallelized: too deeply nested
+    230, Generated vector simd code for the loop containing reductions
+          31, Generated vector simd code for the loop containing reductions
+    238, Generated vector simd code for the loop
+    248, Loop interchange produces reordered loop nest: 249,248
+         Generated vector simd code for the loop containing reductions
+    249, Outer loop unwound (8)
+          57, Generated vector simd code for the loop containing reductions
+          57, Loop not vectorized: unprofitable for target
+              Loop unrolled 2 times
+    262, Generated vector simd code for the loop
+         Vectorized loop was interleaved
+void MM_l<8, false, false>(double const*, double const*, double*):
+     53, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+     57, Generated vector simd code for the loop containing reductions
+void Mv_l<8>(double, double const*, double const*, double*):
+     40, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+     43, Generated vector simd code for the loop containing reductions
+void Mv_l<8>(double const*, double const*, double*):
+     28, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+     31, Generated vector simd code for the loop containing reductions
+void MM_l<8, false, true>(double const*, double const*, double*):
+     53, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+     57, Loop not vectorized: unprofitable for target
+         Loop unrolled 2 times
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     20, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 main.o -o main 

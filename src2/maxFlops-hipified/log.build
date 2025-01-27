@@ -1,0 +1,222 @@
+hipcc  -std=c++14  -Wall  -I../include -O3 -c main.cu -o main.o
+In file included from main.cu:5:
+./kernels.h:78:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+   78 |   register T s = data[gid];
+      |   ^~~~~~~~
+./kernels.h:92:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+   92 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:92:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+   92 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:135:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  135 |   register T s = data[gid]-data[gid]+0.999f;
+      |   ^~~~~~~~
+./kernels.h:149:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  149 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f;
+      |   ^~~~~~~~
+./kernels.h:149:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  149 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:192:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  192 |   register T s = data[gid];
+      |   ^~~~~~~~
+./kernels.h:206:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  206 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:206:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  206 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:249:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  249 |   register T s = data[gid];
+      |   ^~~~~~~~
+./kernels.h:263:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  263 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:263:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  263 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+36 warnings generated when compiling for gfx90a.
+In file included from main.cu:5:
+./kernels.h:78:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+   78 |   register T s = data[gid];
+      |   ^~~~~~~~
+./kernels.h:92:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+   92 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:92:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+   92 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:106:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  106 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:120:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  120 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2, s5=8.0f-s, s6=8.0f-s2, s7=7.0f-s, s8=7.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:135:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  135 |   register T s = data[gid]-data[gid]+0.999f;
+      |   ^~~~~~~~
+./kernels.h:149:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  149 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f;
+      |   ^~~~~~~~
+./kernels.h:149:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  149 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:163:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  163 |   register T s = data[gid]-data[gid]+0.999f, s2=s-0.0001f, s3=s-0.0002f, s4=s-0.0003f;
+      |   ^~~~~~~~
+./kernels.h:192:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  192 |   register T s = data[gid];
+      |   ^~~~~~~~
+./kernels.h:206:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  206 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:206:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  206 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:220:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  220 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:249:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  249 |   register T s = data[gid];
+      |   ^~~~~~~~
+./kernels.h:263:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  263 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:263:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  263 |   register T s = data[gid], s2=10.0f-s;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+./kernels.h:277:3: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+  277 |   register T s = data[gid], s2=10.0f-s, s3=9.0f-s, s4=9.0f-s2;
+      |   ^~~~~~~~
+36 warnings generated when compiling for host.
+hipcc  -std=c++14  -Wall  -I../include -O3 main.o -o main 

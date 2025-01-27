@@ -1,0 +1,15 @@
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
+"main.cpp", line 72: error: expression must be a modifiable lvalue
+        time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+        ^
+
+"main.cpp", line 79: error: identifier "timeH2D" is undefined
+                << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
+                                   ^
+
+"main.cpp", line 79: error: identifier "timeD2H" is undefined
+                << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
+                                             ^
+
+3 errors detected in the compilation of "main.cpp".
+make: *** [Makefile.NVD:58: main.o] Error 2

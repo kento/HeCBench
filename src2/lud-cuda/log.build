@@ -1,0 +1,7 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -I./common -O3 lud.cu ./common/common.cu  -o lud 
+lud_kernels.cu(120): warning #550-D: variable "peri_row" was set but never used
+              float peri_row [16*16];
+                    ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+

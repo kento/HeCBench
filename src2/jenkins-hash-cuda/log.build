@@ -1,0 +1,6 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cu -o main.o
+main.cu: In function 'int main(int, char**)':
+main.cu:257:7: warning: array subscript 'unsigned char [64][0]' is partly outside array bounds of 'const char [31]' [-Warray-bounds]
+  257 |   memcpy(src, str, 64);
+      |   ~~~~^~~~~~~~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o -o main 

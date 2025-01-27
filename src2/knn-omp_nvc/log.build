@@ -1,0 +1,47 @@
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
+compute_distance(float const*, int, float const*, int, int, int, int):
+     28, Generated vector simd code for the loop containing reductions
+modified_insertion_sort(float*, int*, int, int):
+     56, Loop not vectorized/parallelized: potential early exits
+knn_serial(float const*, int, float const*, int, int, int, float*, int*):
+          28, Generated vector simd code for the loop containing reductions
+          56, Loop not vectorized/parallelized: potential early exits
+     96, Loop not vectorized: data dependency
+         Loop unrolled 4 times
+main:
+    137, Loop not vectorized/parallelized: contains call
+    139, Loop not vectorized/parallelized: contains call
+          88, Generated vector simd code for the loop containing reductions
+          93, Loop not vectorized/parallelized: potential early exits
+          96, Loop not vectorized: data dependency
+              Loop unrolled 4 times
+          88, Generated vector simd code for the loop containing reductions
+          93, Loop not vectorized/parallelized: potential early exits
+          96, Loop not vectorized: data dependency
+              Loop unrolled 4 times
+         166, Loop not vectorized/parallelized: too deeply nested
+    178, Loop not vectorized/parallelized: contains call
+    184, #omp target teams num_teams(((query_nb+15)*(ref_nb+15))/256) thread_limit(256)
+        184, Generating "nvkernel_main_F1L184_2" GPU kernel
+        194, #omp parallel
+          232, Barrier
+          245, Barrier
+        205, Team private (begin_A,shared_B,step_B,step_A,begin_B,end_A,shared_A) located in CUDA shared memory
+    219, Loop not vectorized/parallelized: contains call
+    237, Generated vector simd code for the loop containing reductions
+    251, #omp target teams distribute parallel for thread_limit(256)
+        251, Generating "nvkernel_main_F1L251_4" GPU kernel
+        255, Loop parallelized across teams and threads(128), schedule(static)
+    268, Loop not vectorized/parallelized: potential early exits
+    274, Loop not vectorized: data dependency
+    292, Loop not vectorized/parallelized: potential early exits
+    298, Loop not vectorized: data dependency
+    307, #omp target teams distribute parallel for thread_limit(256)
+        181, Generating map(to:ref[:dim*ref_nb],query[:dim*query_nb]) 
+             Generating map(alloc:ind[:query_nb*k],dist[:ref_nb*query_nb]) 
+        307, Generating "nvkernel_main_F1L307_6" GPU kernel
+        311, Loop parallelized across teams and threads(128), schedule(static)
+    311, Loop not vectorized/parallelized: not countable
+    316, Generating update from(ind[:query_nb*k],dist[:query_nb*k])
+    325, Loop not vectorized/parallelized: contains call
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 main.o -o main 

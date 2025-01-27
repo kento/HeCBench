@@ -1,0 +1,103 @@
+hipcc -O3 -std=c++11   -DDEBUG -c main.cu -o obj_gpu/main.o
+hipcc -O3 -std=c++11   -DDEBUG -c lsqt.cu -o obj_gpu/lsqt.o
+hipcc -O3 -std=c++11   -DDEBUG -c sigma.cu -o obj_gpu/sigma.o
+hipcc -O3 -std=c++11   -DDEBUG -c vector.cu -o obj_gpu/vector.o
+vector.cu:253:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+vector.cu:253:32: error: too few arguments to function call, expected at least 1, have 0
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:254:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  254 |   s[t] = v;         __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:254:32: error: too few arguments to function call, expected at least 1, have 0
+  254 |   s[t] = v;         __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:255:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  255 |   v += s[t + 16];   __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:255:32: error: too few arguments to function call, expected at least 1, have 0
+  255 |   v += s[t + 16];   __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:256:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  256 |   s[t] = v;         __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:256:32: error: too few arguments to function call, expected at least 1, have 0
+  256 |   s[t] = v;         __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:257:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  257 |   v += s[t + 8];    __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:257:32: error: too few arguments to function call, expected at least 1, have 0
+  257 |   v += s[t + 8];    __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:258:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  258 |   s[t] = v;         __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:258:32: error: too few arguments to function call, expected at least 1, have 0
+  258 |   s[t] = v;         __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:259:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  259 |   v += s[t + 4];    __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:259:32: error: too few arguments to function call, expected at least 1, have 0
+  259 |   v += s[t + 4];    __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:260:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  260 |   s[t] = v;         __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:260:32: error: too few arguments to function call, expected at least 1, have 0
+  260 |   s[t] = v;         __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:261:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  261 |   v += s[t + 2];    __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+vector.cu:261:32: error: too few arguments to function call, expected at least 1, have 0
+  261 |   v += s[t + 2];    __syncwrap();
+      |                     ~~~~~~~~~~ ^
+vector.cu:262:21: error: use of undeclared identifier '__syncwrap'; did you mean '__sync_swap'?
+  262 |   s[t] = v;         __syncwrap();
+      |                     ^~~~~~~~~~
+      |                     __sync_swap
+vector.cu:253:21: note: '__sync_swap' declared here
+  253 |   v += s[t + 32];   __syncwrap();
+      |                     ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -O3 -std=c++11 -DDEBUG -c -x hip vector.cu -o "obj_gpu/vector.o"
+make: *** [Makefile.AMD:24: obj_gpu/vector.o] Error 1

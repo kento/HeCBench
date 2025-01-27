@@ -1,0 +1,4 @@
+hipcc  -std=c++14 -Wall -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -O3 -c util/num/num.cu -o util/num/num.o
+hipcc  -std=c++14 -Wall -O3 -c util/timer/timer.cu -o util/timer/timer.o
+hipcc  -std=c++14 -Wall -O3 main.o ./util/num/num.o ./util/timer/timer.o -o main 

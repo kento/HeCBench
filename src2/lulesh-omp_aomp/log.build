@@ -1,0 +1,5 @@
+g++    -c -o lulesh.o lulesh.cc
+g++    -c -o lulesh-viz.o lulesh-viz.cc
+g++    -c -o lulesh-util.o lulesh-util.cc
+g++    -c -o lulesh-init.o lulesh-init.cc
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a lulesh.o lulesh-viz.o lulesh-util.o lulesh-init.o -o lulesh 

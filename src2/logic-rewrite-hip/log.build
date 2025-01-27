@@ -1,0 +1,2606 @@
+hipcc  -std=c++17 -Wall  -O3 -ffast-math -c aig_manager.cu -o aig_manager.o
+In file included from aig_manager.cu:8:
+./robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+ 1445 |         Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+      |                                 ^
+./robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+  210 | #    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+      |                                                   ^
+aig_manager.cu:21:59: warning: field 'deviceAllocated' will be initialized after field 'nLevels' [-Wreorder-ctor]
+   20 |     nObjs(0), nPIs(0), nPOs(0), nNodes(0), pFanin0(NULL), pFanin1(NULL), pOuts(NULL), pLevel(NULL), 
+      |                                            ~~~~~~~~~~~~~  ~~~~~~~~~~~~~  ~~~~~~~~~~~  ~~~~~~~~~~~~
+      |                                            nLevels(0)     pFanin0(NULL)  pFanin1(NULL)pOuts(NULL)
+   21 |     moduleName("module"), modulePath(""), moduleInfo(""), deviceAllocated(0), nLevels(0), 
+      |     ~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~  ^~~~~~~~~~~~~~~~~~  ~~~~~~~~~~
+      |     pLevel(NULL)          moduleName("module") modulePath("") moduleInfo("")  deviceAllocated(0)
+aig_manager.cu:26:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   26 |         hipDeviceSetLimit(hipLimitMallocHeapSize, (size_t)2048 * 1024 * 1024); // 2GB
+      |         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:27:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   27 |         hipDeviceGetLimit(&dynamicHeapSize, hipLimitMallocHeapSize);
+      |         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:38:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   38 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:41:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |         hipDeviceReset(); // for cuda memcheck
+      |         ^~~~~~~~~~~~~~
+aig_manager.cu:81:12: warning: unused variable 'res' [-Wunused-variable]
+   81 |     size_t res = fread(pContents, nFileSize, 1, pFile);
+      |            ^~~
+aig_manager.cu:270:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |     hipMalloc(&d_pnObjs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:271:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |     hipMalloc(&d_pnPIs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:272:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  272 |     hipMalloc(&d_pnPOs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:273:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  273 |     hipMalloc(&d_pnNodes, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:274:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  274 |     hipMalloc(&d_pFanin0, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:275:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  275 |     hipMalloc(&d_pFanin1, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:276:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  276 |     hipMalloc(&d_pOuts, this->nPOs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:277:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  277 |     hipMalloc(&d_pNumFanouts, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:284:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  284 |     hipMemset(d_pNumFanouts, 0, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:286:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  286 |     hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:287:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  287 |     hipMemcpy(d_pnPIs, &nPIs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:288:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  288 |     hipMemcpy(d_pnPOs, &nPOs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:289:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  289 |     hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:290:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  290 |     hipMemcpy(d_pFanin0, pFanin0, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:291:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  291 |     hipMemcpy(d_pFanin1, pFanin1, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:292:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  292 |     hipMemcpy(d_pOuts, pOuts, this->nPOs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:293:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  293 |     hipMemcpy(d_pNumFanouts, pNumFanouts, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:295:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  295 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:307:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  307 |     hipMemcpy(&nObjs, d_pnObjs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:308:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  308 |     hipMemcpy(&nPIs, d_pnPIs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:309:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  309 |     hipMemcpy(&nPOs, d_pnPOs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:310:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  310 |     hipMemcpy(&nNodes, d_pnNodes, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:311:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  311 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:315:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  315 |     hipMemcpy(pFanin0, d_pFanin0, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:316:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  316 |     hipMemcpy(pFanin1, d_pFanin1, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:317:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  317 |     hipMemcpy(pNumFanouts, d_pNumFanouts, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:318:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  318 |     hipMemcpy(pOuts, d_pOuts, this->nPOs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:321:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  321 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:337:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  337 |         hipFree(d_pnObjs);
+      |         ^~~~~~~ ~~~~~~~~
+aig_manager.cu:338:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  338 |         hipFree(d_pnPIs);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:339:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  339 |         hipFree(d_pnPOs);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:340:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  340 |         hipFree(d_pnNodes);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:342:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  342 |         hipFree(d_pFanin0);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:343:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  343 |         hipFree(d_pFanin1);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:344:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  344 |         hipFree(d_pOuts);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:345:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  345 |         hipFree(d_pNumFanouts);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+aig_manager.cu:514:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  514 |         hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:515:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  515 |         hipMemcpy(d_pnPIs, &nPIs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:516:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  516 |         hipMemcpy(d_pnPOs, &nPOs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:517:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  517 |         hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:520:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  520 |         hipMemcpy(d_pFanin0, rwMan.fanin0, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:521:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  521 |         hipMemcpy(d_pFanin1, rwMan.fanin1, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:522:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  522 |         hipMemcpy(d_pOuts, rwMan.output, nPOs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:525:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |         hipMemset(d_pNumFanouts, 0, this->nObjs * sizeof(int));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:583:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  583 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:593:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  593 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:674:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  674 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:679:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  679 |     hipFree(d_pFanin0);
+      |     ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:680:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  680 |     hipFree(d_pFanin1);
+      |     ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:681:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  681 |     hipFree(d_pOuts);
+      |     ^~~~~~~ ~~~~~~~
+aig_manager.cu:682:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  682 |     hipFree(d_pNumFanouts);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+58 warnings generated when compiling for gfx90a.
+In file included from aig_manager.cu:8:
+./robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+ 1445 |         Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+      |                                 ^
+./robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+  210 | #    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+      |                                                   ^
+aig_manager.cu:21:59: warning: field 'deviceAllocated' will be initialized after field 'nLevels' [-Wreorder-ctor]
+   20 |     nObjs(0), nPIs(0), nPOs(0), nNodes(0), pFanin0(NULL), pFanin1(NULL), pOuts(NULL), pLevel(NULL), 
+      |                                            ~~~~~~~~~~~~~  ~~~~~~~~~~~~~  ~~~~~~~~~~~  ~~~~~~~~~~~~
+      |                                            nLevels(0)     pFanin0(NULL)  pFanin1(NULL)pOuts(NULL)
+   21 |     moduleName("module"), modulePath(""), moduleInfo(""), deviceAllocated(0), nLevels(0), 
+      |     ~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~  ^~~~~~~~~~~~~~~~~~  ~~~~~~~~~~
+      |     pLevel(NULL)          moduleName("module") modulePath("") moduleInfo("")  deviceAllocated(0)
+aig_manager.cu:26:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   26 |         hipDeviceSetLimit(hipLimitMallocHeapSize, (size_t)2048 * 1024 * 1024); // 2GB
+      |         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:27:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   27 |         hipDeviceGetLimit(&dynamicHeapSize, hipLimitMallocHeapSize);
+      |         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:38:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   38 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:41:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |         hipDeviceReset(); // for cuda memcheck
+      |         ^~~~~~~~~~~~~~
+aig_manager.cu:81:12: warning: unused variable 'res' [-Wunused-variable]
+   81 |     size_t res = fread(pContents, nFileSize, 1, pFile);
+      |            ^~~
+aig_manager.cu:270:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |     hipMalloc(&d_pnObjs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:271:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |     hipMalloc(&d_pnPIs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:272:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  272 |     hipMalloc(&d_pnPOs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:273:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  273 |     hipMalloc(&d_pnNodes, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:274:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  274 |     hipMalloc(&d_pFanin0, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:275:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  275 |     hipMalloc(&d_pFanin1, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:276:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  276 |     hipMalloc(&d_pOuts, this->nPOs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:277:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  277 |     hipMalloc(&d_pNumFanouts, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:284:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  284 |     hipMemset(d_pNumFanouts, 0, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:286:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  286 |     hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:287:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  287 |     hipMemcpy(d_pnPIs, &nPIs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:288:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  288 |     hipMemcpy(d_pnPOs, &nPOs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:289:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  289 |     hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:290:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  290 |     hipMemcpy(d_pFanin0, pFanin0, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:291:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  291 |     hipMemcpy(d_pFanin1, pFanin1, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:292:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  292 |     hipMemcpy(d_pOuts, pOuts, this->nPOs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:293:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  293 |     hipMemcpy(d_pNumFanouts, pNumFanouts, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:295:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  295 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:307:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  307 |     hipMemcpy(&nObjs, d_pnObjs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:308:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  308 |     hipMemcpy(&nPIs, d_pnPIs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:309:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  309 |     hipMemcpy(&nPOs, d_pnPOs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:310:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  310 |     hipMemcpy(&nNodes, d_pnNodes, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:311:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  311 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:315:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  315 |     hipMemcpy(pFanin0, d_pFanin0, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:316:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  316 |     hipMemcpy(pFanin1, d_pFanin1, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:317:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  317 |     hipMemcpy(pNumFanouts, d_pNumFanouts, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:318:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  318 |     hipMemcpy(pOuts, d_pOuts, this->nPOs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:321:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  321 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:337:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  337 |         hipFree(d_pnObjs);
+      |         ^~~~~~~ ~~~~~~~~
+aig_manager.cu:338:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  338 |         hipFree(d_pnPIs);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:339:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  339 |         hipFree(d_pnPOs);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:340:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  340 |         hipFree(d_pnNodes);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:342:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  342 |         hipFree(d_pFanin0);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:343:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  343 |         hipFree(d_pFanin1);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:344:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  344 |         hipFree(d_pOuts);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:345:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  345 |         hipFree(d_pNumFanouts);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+aig_manager.cu:514:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  514 |         hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:515:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  515 |         hipMemcpy(d_pnPIs, &nPIs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:516:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  516 |         hipMemcpy(d_pnPOs, &nPOs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:517:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  517 |         hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:520:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  520 |         hipMemcpy(d_pFanin0, rwMan.fanin0, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:521:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  521 |         hipMemcpy(d_pFanin1, rwMan.fanin1, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:522:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  522 |         hipMemcpy(d_pOuts, rwMan.output, nPOs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:525:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  525 |         hipMemset(d_pNumFanouts, 0, this->nObjs * sizeof(int));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:583:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  583 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:593:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  593 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:674:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  674 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:679:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  679 |     hipFree(d_pFanin0);
+      |     ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:680:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  680 |     hipFree(d_pFanin1);
+      |     ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:681:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  681 |     hipFree(d_pOuts);
+      |     ^~~~~~~ ~~~~~~~
+aig_manager.cu:682:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  682 |     hipFree(d_pNumFanouts);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+58 warnings generated when compiling for host.
+hipcc  -std=c++17 -Wall  -O3 -ffast-math -c balance.cu -o balance.o
+In file included from balance.cu:15:
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+balance.cu:50:13: warning: unused variable 'nodeIsComplement' [-Wunused-variable]
+   50 |         int nodeIsComplement = dUtils::AigNodeIsComplement(thisLit);
+      |             ^~~~~~~~~~~~~~~~
+balance.cu:262:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  262 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:269:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:560:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  560 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:561:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  561 |     hipMemcpy(&nGathered, &vMask[arrayLen - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:943:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  943 |     hipMalloc(&vNodes, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:944:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  944 |     hipMalloc(&vNodes2, globalListLen2 * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:945:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  945 |     hipMalloc(&vNodesFilter, globalListLen2 * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:946:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  946 |     hipMalloc(&vCoverWiseLens, globalListLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:947:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  947 |     hipMalloc(&vCoverRanges, globalListLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:948:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  948 |     hipMemcpy(vNodes, d_pOuts, nPOs * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:949:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  949 |     hipMalloc(&vNodesStatus, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:950:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  950 |     hipMalloc(&vNodesIndices, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:952:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  952 |     hipMalloc(&vCanonTable, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:953:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  953 |     hipMalloc(&vLastAppearLevel, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:954:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  954 |     hipMalloc(&vLastAppearLevelNodes, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:955:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  955 |     hipMemset(vCanonTable, 0, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:956:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  956 |     hipMemset(vLastAppearLevel, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:958:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  958 |     hipMalloc(&vCoverTable, 2 * nObjs * COVER_TABLE_NUM_COLS * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:959:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  959 |     hipMalloc(&vCoverTableLinks, 2 * nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:960:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  960 |     hipMalloc(&vCoverTableLens, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:961:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  961 |     hipMalloc(&nCoverTableNext, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:962:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  962 |     hipMemset(vCoverTableLinks, -1, 2 * nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:963:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  963 |     hipMemset(vCoverTableLens, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:964:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  964 |     hipMemcpy(nCoverTableNext, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:967:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  967 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:975:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  975 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:995:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  995 |         hipMemset(vNodesStatus, 0, nObjs * sizeof(int));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1003:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1003 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1025:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1025 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1033:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1033 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1034:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1034 |     hipMemcpy(&maxCoverLen, pMaxCoverLen, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1061:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1061 |     hipMalloc(&vNodeCoverIdMapping, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1081:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1081 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1084:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1084 |     hipMemcpy(&nCovers, &vNodeCoverIdMapping[nObjs - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1085:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1085 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1090:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1090 |     hipMalloc(&vLastAppearLevelRanges, levelCount * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1106:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1106 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1112:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1112 |     hipMemcpy(levelRanges, vLastAppearLevelRanges, levelCount * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1119:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1119 |     hipMalloc(&vCoverNodeIdMapping, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1120:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1120 |     hipMalloc(&vCoverNodeNewLitMapping, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1121:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1121 |     hipMalloc(&vThisIterReady, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1122:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1122 |     hipMalloc(&vGatheredReadyCovers, nCovers * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1125:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1125 |     hipMalloc(&vLocalReconstructLens, nCovers * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1126:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1126 |     hipMalloc(&vStepNodeKeys, nCovers * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1127:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1127 |     hipMalloc(&vStepNodeValues, nCovers * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1128:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1128 |     hipMalloc(&vStepNodeMask, nCovers * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1129:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1129 |     hipMalloc(&vStepNodeLevels, nCovers * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1131:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1131 |     hipMemset(vCoverNodeNewLitMapping, -1, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1132:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1132 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1138:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1138 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1145:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1145 |     hipMalloc(&vReconstructedKeys, nObjs * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1146:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1146 |     hipMalloc(&vReconstructedIds, nObjs * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1147:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1147 |     hipMalloc(&vOutIds, nObjs * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1148:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1148 |     hipMalloc(&vNewOuts, nPOs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1205:17: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1205 |                 hipDeviceSynchronize();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1242:17: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1242 |                 hipDeviceSynchronize();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1253:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1253 |             hipDeviceSynchronize();
+      |             ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1290:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1290 |     hipMemset(vNumFanoutsNew, 0, nObjsNew * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1293:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1293 |     hipMemcpy(vFanin0New, d_pFanin0, (nPIs + 1) * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1294:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1294 |     hipMemcpy(vFanin1New, d_pFanin1, (nPIs + 1) * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1295:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1295 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1304:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1304 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1312:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1312 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1336:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1336 |     hipFree(vNodes);
+      |     ^~~~~~~ ~~~~~~
+balance.cu:1337:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1337 |     hipFree(vNodes2);
+      |     ^~~~~~~ ~~~~~~~
+balance.cu:1338:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1338 |     hipFree(vNodesFilter);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+balance.cu:1339:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1339 |     hipFree(vCoverWiseLens);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~
+balance.cu:1340:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1340 |     hipFree(vCoverRanges);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+balance.cu:1341:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1341 |     hipFree(vNodesStatus);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+balance.cu:1342:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1342 |     hipFree(vNodesIndices);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+balance.cu:1344:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1344 |     hipFree(vCanonTable);
+      |     ^~~~~~~ ~~~~~~~~~~~
+balance.cu:1345:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1345 |     hipFree(vCoverTable);
+      |     ^~~~~~~ ~~~~~~~~~~~
+balance.cu:1346:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1346 |     hipFree(vCoverTableLinks);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~
+balance.cu:1347:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1347 |     hipFree(vCoverTableLens);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1348:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1348 |     hipFree(nCoverTableNext);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1349:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1349 |     hipFree(vLastAppearLevel);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~
+balance.cu:1350:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1350 |     hipFree(vLastAppearLevelNodes);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1351:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1351 |     hipFree(vLastAppearLevelRanges);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1354:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1354 |     hipFree(vNodeCoverIdMapping);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~
+balance.cu:1355:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1355 |     hipFree(vCoverNodeIdMapping);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~
+balance.cu:1356:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1356 |     hipFree(vCoverNodeNewLitMapping);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1357:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1357 |     hipFree(vThisIterReady);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~
+balance.cu:1358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1358 |     hipFree(vGatheredReadyCovers);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~
+balance.cu:1359:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1359 |     hipFree(vLocalReconstructArrays);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1360:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1360 |     hipFree(vLocalReconstructLevels);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1361 |     hipFree(vLocalReconstructLens);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1362:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1362 |     hipFree(vStepNodeKeys);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+balance.cu:1363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1363 |     hipFree(vStepNodeValues);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1364 |     hipFree(vStepNodeMask);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+balance.cu:1365:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1365 |     hipFree(vStepNodeLevels);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1367:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1367 |     hipFree(vReconstructedKeys);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+balance.cu:1368:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1368 |     hipFree(vReconstructedIds);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~
+balance.cu:1369:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1369 |     hipFree(vOutIds);
+      |     ^~~~~~~ ~~~~~~~
+In file included from balance.cu:15:
+./hash_table.h:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipMalloc(&keys, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1064:31: note: in instantiation of member function 'HashTable<unsigned int, unsigned int>::HashTable' requested here
+ 1064 |     HashTable<uint32, uint32> levelHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:30:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   30 |         hipMalloc(&values, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:31:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   31 |         hipMemset(keys, 0xff, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:32:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   32 |         hipMemset(values, 0xff, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:42:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |             hipFree(keys);
+      |             ^~~~~~~ ~~~~
+./hash_table.h:37:9: note: in instantiation of member function 'HashTable<unsigned int, unsigned int>::freeMem' requested here
+   37 |         freeMem();
+      |         ^
+balance.cu:1064:31: note: in instantiation of member function 'HashTable<unsigned int, unsigned int>::~HashTable' requested here
+ 1064 |     HashTable<uint32, uint32> levelHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:43:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |             hipFree(values);
+      |             ^~~~~~~ ~~~~~~
+./hash_table.h:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipMalloc(&keys, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1065:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::HashTable' requested here
+ 1065 |     HashTable<uint64, uint32> reconstructHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:30:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   30 |         hipMalloc(&values, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:31:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   31 |         hipMemset(keys, 0xff, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:32:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   32 |         hipMemset(values, 0xff, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:42:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |             hipFree(keys);
+      |             ^~~~~~~ ~~~~
+./hash_table.h:37:9: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::freeMem' requested here
+   37 |         freeMem();
+      |         ^
+balance.cu:1065:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::~HashTable' requested here
+ 1065 |     HashTable<uint64, uint32> reconstructHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:43:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |             hipFree(values);
+      |             ^~~~~~~ ~~~~~~
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1272:41: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::retrieve_all' requested here
+ 1272 |     int nEntries = reconstructHashTable.retrieve_all(vReconstructedKeys, vReconstructedIds, nObjs, 1);
+      |                                         ^
+In file included from balance.cu:15:
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+122 warnings generated when compiling for gfx90a.
+In file included from balance.cu:15:
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+balance.cu:50:13: warning: unused variable 'nodeIsComplement' [-Wunused-variable]
+   50 |         int nodeIsComplement = dUtils::AigNodeIsComplement(thisLit);
+      |             ^~~~~~~~~~~~~~~~
+balance.cu:262:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  262 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:269:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:560:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  560 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:561:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  561 |     hipMemcpy(&nGathered, &vMask[arrayLen - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:943:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  943 |     hipMalloc(&vNodes, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:944:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  944 |     hipMalloc(&vNodes2, globalListLen2 * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:945:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  945 |     hipMalloc(&vNodesFilter, globalListLen2 * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:946:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  946 |     hipMalloc(&vCoverWiseLens, globalListLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:947:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  947 |     hipMalloc(&vCoverRanges, globalListLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:948:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  948 |     hipMemcpy(vNodes, d_pOuts, nPOs * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:949:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  949 |     hipMalloc(&vNodesStatus, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:950:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  950 |     hipMalloc(&vNodesIndices, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:952:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  952 |     hipMalloc(&vCanonTable, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:953:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  953 |     hipMalloc(&vLastAppearLevel, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:954:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  954 |     hipMalloc(&vLastAppearLevelNodes, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:955:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  955 |     hipMemset(vCanonTable, 0, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:956:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  956 |     hipMemset(vLastAppearLevel, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:958:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  958 |     hipMalloc(&vCoverTable, 2 * nObjs * COVER_TABLE_NUM_COLS * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:959:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  959 |     hipMalloc(&vCoverTableLinks, 2 * nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:960:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  960 |     hipMalloc(&vCoverTableLens, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:961:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  961 |     hipMalloc(&nCoverTableNext, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:962:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  962 |     hipMemset(vCoverTableLinks, -1, 2 * nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:963:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  963 |     hipMemset(vCoverTableLens, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:964:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  964 |     hipMemcpy(nCoverTableNext, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:967:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  967 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:975:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  975 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:995:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  995 |         hipMemset(vNodesStatus, 0, nObjs * sizeof(int));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1003:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1003 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1025:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1025 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1033:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1033 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1034:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1034 |     hipMemcpy(&maxCoverLen, pMaxCoverLen, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1061:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1061 |     hipMalloc(&vNodeCoverIdMapping, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1081:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1081 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1084:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1084 |     hipMemcpy(&nCovers, &vNodeCoverIdMapping[nObjs - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1085:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1085 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1090:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1090 |     hipMalloc(&vLastAppearLevelRanges, levelCount * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1106:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1106 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1112:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1112 |     hipMemcpy(levelRanges, vLastAppearLevelRanges, levelCount * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1119:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1119 |     hipMalloc(&vCoverNodeIdMapping, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1120:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1120 |     hipMalloc(&vCoverNodeNewLitMapping, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1121:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1121 |     hipMalloc(&vThisIterReady, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1122:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1122 |     hipMalloc(&vGatheredReadyCovers, nCovers * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1125:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1125 |     hipMalloc(&vLocalReconstructLens, nCovers * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1126:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1126 |     hipMalloc(&vStepNodeKeys, nCovers * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1127:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1127 |     hipMalloc(&vStepNodeValues, nCovers * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1128:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1128 |     hipMalloc(&vStepNodeMask, nCovers * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1129:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1129 |     hipMalloc(&vStepNodeLevels, nCovers * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1131:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1131 |     hipMemset(vCoverNodeNewLitMapping, -1, (nCovers + 1) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1132:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1132 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1138:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1138 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1145:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1145 |     hipMalloc(&vReconstructedKeys, nObjs * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1146:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1146 |     hipMalloc(&vReconstructedIds, nObjs * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1147:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1147 |     hipMalloc(&vOutIds, nObjs * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1148:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1148 |     hipMalloc(&vNewOuts, nPOs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1205:17: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1205 |                 hipDeviceSynchronize();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1242:17: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1242 |                 hipDeviceSynchronize();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1253:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1253 |             hipDeviceSynchronize();
+      |             ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1290:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1290 |     hipMemset(vNumFanoutsNew, 0, nObjsNew * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1293:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1293 |     hipMemcpy(vFanin0New, d_pFanin0, (nPIs + 1) * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1294:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1294 |     hipMemcpy(vFanin1New, d_pFanin1, (nPIs + 1) * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1295:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1295 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1304:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1304 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1312:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1312 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+balance.cu:1336:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1336 |     hipFree(vNodes);
+      |     ^~~~~~~ ~~~~~~
+balance.cu:1337:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1337 |     hipFree(vNodes2);
+      |     ^~~~~~~ ~~~~~~~
+balance.cu:1338:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1338 |     hipFree(vNodesFilter);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+balance.cu:1339:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1339 |     hipFree(vCoverWiseLens);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~
+balance.cu:1340:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1340 |     hipFree(vCoverRanges);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+balance.cu:1341:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1341 |     hipFree(vNodesStatus);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+balance.cu:1342:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1342 |     hipFree(vNodesIndices);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+balance.cu:1344:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1344 |     hipFree(vCanonTable);
+      |     ^~~~~~~ ~~~~~~~~~~~
+balance.cu:1345:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1345 |     hipFree(vCoverTable);
+      |     ^~~~~~~ ~~~~~~~~~~~
+balance.cu:1346:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1346 |     hipFree(vCoverTableLinks);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~
+balance.cu:1347:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1347 |     hipFree(vCoverTableLens);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1348:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1348 |     hipFree(nCoverTableNext);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1349:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1349 |     hipFree(vLastAppearLevel);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~
+balance.cu:1350:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1350 |     hipFree(vLastAppearLevelNodes);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1351:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1351 |     hipFree(vLastAppearLevelRanges);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1354:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1354 |     hipFree(vNodeCoverIdMapping);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~
+balance.cu:1355:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1355 |     hipFree(vCoverNodeIdMapping);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~
+balance.cu:1356:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1356 |     hipFree(vCoverNodeNewLitMapping);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1357:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1357 |     hipFree(vThisIterReady);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~
+balance.cu:1358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1358 |     hipFree(vGatheredReadyCovers);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~
+balance.cu:1359:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1359 |     hipFree(vLocalReconstructArrays);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1360:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1360 |     hipFree(vLocalReconstructLevels);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1361 |     hipFree(vLocalReconstructLens);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1362:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1362 |     hipFree(vStepNodeKeys);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+balance.cu:1363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1363 |     hipFree(vStepNodeValues);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1364 |     hipFree(vStepNodeMask);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+balance.cu:1365:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1365 |     hipFree(vStepNodeLevels);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~
+balance.cu:1367:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1367 |     hipFree(vReconstructedKeys);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+balance.cu:1368:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1368 |     hipFree(vReconstructedIds);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~
+balance.cu:1369:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1369 |     hipFree(vOutIds);
+      |     ^~~~~~~ ~~~~~~~
+In file included from balance.cu:15:
+./hash_table.h:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipMalloc(&keys, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1064:31: note: in instantiation of member function 'HashTable<unsigned int, unsigned int>::HashTable' requested here
+ 1064 |     HashTable<uint32, uint32> levelHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:30:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   30 |         hipMalloc(&values, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:31:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   31 |         hipMemset(keys, 0xff, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:32:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   32 |         hipMemset(values, 0xff, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:42:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |             hipFree(keys);
+      |             ^~~~~~~ ~~~~
+./hash_table.h:37:9: note: in instantiation of member function 'HashTable<unsigned int, unsigned int>::freeMem' requested here
+   37 |         freeMem();
+      |         ^
+balance.cu:1064:31: note: in instantiation of member function 'HashTable<unsigned int, unsigned int>::~HashTable' requested here
+ 1064 |     HashTable<uint32, uint32> levelHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:43:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |             hipFree(values);
+      |             ^~~~~~~ ~~~~~~
+./hash_table.h:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipMalloc(&keys, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1065:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::HashTable' requested here
+ 1065 |     HashTable<uint64, uint32> reconstructHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:30:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   30 |         hipMalloc(&values, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:31:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   31 |         hipMemset(keys, 0xff, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:32:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   32 |         hipMemset(values, 0xff, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:42:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |             hipFree(keys);
+      |             ^~~~~~~ ~~~~
+./hash_table.h:37:9: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::freeMem' requested here
+   37 |         freeMem();
+      |         ^
+balance.cu:1065:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::~HashTable' requested here
+ 1065 |     HashTable<uint64, uint32> reconstructHashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from balance.cu:15:
+./hash_table.h:43:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |             hipFree(values);
+      |             ^~~~~~~ ~~~~~~
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+balance.cu:1272:41: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::retrieve_all' requested here
+ 1272 |     int nEntries = reconstructHashTable.retrieve_all(vReconstructedKeys, vReconstructedIds, nObjs, 1);
+      |                                         ^
+In file included from balance.cu:15:
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+122 warnings generated when compiling for host.
+hipcc  -std=c++17 -Wall  -O3 -ffast-math -c print.cu -o print.o
+hipcc  -std=c++17 -Wall  -O3 -ffast-math -c refactor_core.cu -o refactor_core.o
+In file included from refactor_core.cu:2:
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+8 warnings generated when compiling for gfx90a.
+In file included from refactor_core.cu:2:
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+8 warnings generated when compiling for host.
+hipcc  -std=c++17 -Wall  -O3 -ffast-math -c refactor.cu -o refactor.o
+In file included from refactor.cu:13:
+In file included from ./aig_manager.h:6:
+In file included from ./rewrite.h:4:
+./robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+ 1445 |         Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+      |                                 ^
+./robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+  210 | #    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+      |                                                   ^
+In file included from refactor.cu:14:
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:550:20: warning: unused variable 'hashRet' [-Wunused-variable]
+  550 |             uint32 hashRet = insert_single_no_update_volatile<uint64, uint32>(htKeys, htValues, key, (uint32)newId, htCapacity);
+      |                    ^~~~~~~
+refactor.cu:676:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  676 |     hipHostAlloc((void**)&vhFanin0, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:676:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  676 |     hipHostAlloc((void**)&vhFanin0, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:677:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  677 |     hipHostAlloc((void**)&vhFanin1, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:677:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  677 |     hipHostAlloc((void**)&vhFanin1, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:678:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  678 |     hipHostAlloc((void**)&vhResynInd, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:678:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  678 |     hipHostAlloc((void**)&vhResynInd, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:679:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  679 |     hipHostAlloc((void**)&vhChoicesLit, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:679:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  679 |     hipHostAlloc((void**)&vhChoicesLit, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:680:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  680 |     hipHostAlloc((void**)&vhCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:680:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  680 |     hipHostAlloc((void**)&vhCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:681:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  681 |     hipHostAlloc((void**)&vhCutSizes, nObjs * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:681:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  681 |     hipHostAlloc((void**)&vhCutSizes, nObjs * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:682:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  682 |     hipHostAlloc((void**)&vhDeleted, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:682:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  682 |     hipHostAlloc((void**)&vhDeleted, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:683:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  683 |     hipHostAlloc((void**)&vhNumFanouts, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:683:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  683 |     hipHostAlloc((void**)&vhNumFanouts, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:684:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  684 |     hipHostAlloc((void**)&vhLevels, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:684:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  684 |     hipHostAlloc((void**)&vhLevels, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:685:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  685 |     hipHostAlloc((void**)&vhNewInd, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:685:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  685 |     hipHostAlloc((void**)&vhNewInd, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:686:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  686 |     hipMemcpy(vhFanin0, vFanin0New, nBufferLen * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:687:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  687 |     hipMemcpy(vhFanin1, vFanin1New, nBufferLen * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:688:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  688 |     hipMemcpy(vhResynInd, vResynInd, nResyn * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:689:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  689 |     hipMemcpy(vhChoicesLit, vChoicesLit, nResyn * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:690:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  690 |     hipMemcpy(vhCutTable, vCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:691:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  691 |     hipMemcpy(vhCutSizes, vCutSizes, nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:692:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  692 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:974:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  974 |     hipHostFree(vhFanin0);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:975:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  975 |     hipHostFree(vhFanin1);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:976:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  976 |     hipHostFree(vhResynInd);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~
+refactor.cu:977:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  977 |     hipHostFree(vhChoicesLit);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~~~
+refactor.cu:978:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  978 |     hipHostFree(vhCutTable);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~
+refactor.cu:979:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  979 |     hipHostFree(vhCutSizes);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~
+refactor.cu:980:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  980 |     hipHostFree(vhDeleted);
+      |     ^~~~~~~~~~~ ~~~~~~~~~
+refactor.cu:981:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  981 |     hipHostFree(vhNumFanouts);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~~~
+refactor.cu:982:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  982 |     hipHostFree(vhLevels);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:983:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  983 |     hipHostFree(vhNewInd);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:1009:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1009 |     hipMalloc(&vCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1010:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1010 |     hipMalloc(&vCutSizes, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1011:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1011 |     hipMalloc(&vNumSaved, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1012:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1012 |     hipMemset(vCutSizes, 0, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1014:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1014 |     hipMalloc(&vIdxSeq, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1015:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1015 |     hipMalloc(&vResynInd, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1041:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1041 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1045:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1045 |         hipFree(vCutTable);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1046:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1046 |         hipFree(vCutSizes);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1047:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1047 |         hipFree(vNumSaved);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1048:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1048 |         hipFree(vIdxSeq);
+      |         ^~~~~~~ ~~~~~~~
+refactor.cu:1049:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1049 |         hipFree(vResynInd);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1054:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1054 |     hipMalloc(&vReconvInd, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1062:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1062 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1090:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1090 |     hipMalloc(&vTruthRanges, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1096:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1096 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1099:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1099 |     hipMemcpy(&nTruthTableLen, &vTruthRanges[nResyn - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1100:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1100 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1102:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1102 |     hipMalloc(&vTruth, nTruthTableLen * sizeof(unsigned));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1103:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1103 |     hipMalloc(&vTruthElem, cutSize * dUtils::TruthWordNum(cutSize) * sizeof(unsigned));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1140:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1140 |     hipMalloc(&vSubgTable, 2 * nResyn * SUBG_TABLE_SIZE * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1141:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1141 |     hipMalloc(&vSubgLinks, 2 * nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1142:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1142 |     hipMalloc(&vSubgLens, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1143:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1143 |     hipMalloc(&pSubgTableNext, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1144:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1144 |     hipMemset(vSubgLinks, -1, 2 * nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1145:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1145 |     hipMemset(vSubgLens, -1, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1146:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1146 |     hipMemcpy(pSubgTableNext, &nResyn, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1147:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1147 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1172:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1172 |     hipMalloc(&vChoicesLit, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1173:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1173 |     hipMemset(vChoicesLit, -1, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1185:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1185 |     hipFree(vTruth);
+      |     ^~~~~~~ ~~~~~~
+refactor.cu:1186:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1186 |     hipFree(vTruthRanges);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+refactor.cu:1187:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1187 |     hipFree(vTruthElem);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1188:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1188 |     hipFree(vSubgTable);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1189:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1189 |     hipFree(vSubgLinks);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1190:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1190 |     hipFree(vSubgLens);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1191:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1191 |     hipFree(pSubgTableNext);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~
+refactor.cu:1193:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1193 |     hipMalloc(&vReconstructedKeys, nNewObjs * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1194:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1194 |     hipMalloc(&vReconstructedIds, nNewObjs * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1196:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1196 |     hipMalloc(&vFanin0New, nNewObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1197:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1197 |     hipMalloc(&vFanin1New, nNewObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1198:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1198 |     hipMemset(vFanin0New + nObjs, -1, (nNewObjs - nObjs) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1199:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1199 |     hipMemset(vFanin1New + nObjs, -1, (nNewObjs - nObjs) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1201:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1201 |     hipMemcpy(vFanin0New, d_pFanin0, nObjs * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1202:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1202 |     hipMemcpy(vFanin1New, d_pFanin1, nObjs * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1203:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1203 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1234:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1234 |     hipFree(vCutTable);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1235:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1235 |     hipFree(vCutSizes);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1236:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1236 |     hipFree(vNumSaved);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1237:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1237 |     hipFree(vIdxSeq);
+      |     ^~~~~~~ ~~~~~~~
+refactor.cu:1238:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1238 |     hipFree(vResynInd);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1239:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1239 |     hipFree(vReconvInd);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1240:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1240 |     hipFree(vChoicesLit);
+      |     ^~~~~~~ ~~~~~~~~~~~
+refactor.cu:1241:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1241 |     hipFree(vFanin0New);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1242:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1242 |     hipFree(vFanin1New);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1243:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1243 |     hipFree(vReconstructedKeys);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+refactor.cu:1244:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |     hipFree(vReconstructedIds);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~
+refactor.cu:1297:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1297 |     hipMalloc(&d_pLevel, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1298:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1298 |     hipMemcpy(d_pLevel, pLevel, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1304:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1304 |     hipDeviceGetLimit(&cuStackSize, hipLimitStackSize);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1306:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1306 |     hipDeviceSetLimit(hipLimitStackSize, cuStackSizeEnlarged);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1307:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1307 |     hipDeviceGetLimit(&cuStackSizeEnlarged, hipLimitStackSize);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1329:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1329 |     hipFree(d_pLevel);
+      |     ^~~~~~~ ~~~~~~~~
+refactor.cu:1331:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1331 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1334:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1334 |     hipDeviceSetLimit(hipLimitStackSize, cuStackSize);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1377:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1377 |         hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1378:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1378 |         hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1379:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1379 |         hipFree(d_pFanin0);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1380:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1380 |         hipFree(d_pFanin1);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1381 |         hipFree(d_pOuts);
+      |         ^~~~~~~ ~~~~~~~
+refactor.cu:1382:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1382 |         hipFree(d_pNumFanouts);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+In file included from refactor.cu:14:
+./hash_table.h:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipMalloc(&keys, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1126:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::HashTable' requested here
+ 1126 |     HashTable<uint64, uint32> hashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from refactor.cu:14:
+./hash_table.h:30:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   30 |         hipMalloc(&values, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:31:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   31 |         hipMemset(keys, 0xff, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:32:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   32 |         hipMemset(values, 0xff, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:42:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |             hipFree(keys);
+      |             ^~~~~~~ ~~~~
+./hash_table.h:37:9: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::freeMem' requested here
+   37 |         freeMem();
+      |         ^
+refactor.cu:1126:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::~HashTable' requested here
+ 1126 |     HashTable<uint64, uint32> hashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from refactor.cu:14:
+./hash_table.h:43:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |             hipFree(values);
+      |             ^~~~~~~ ~~~~~~
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1208:26: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::retrieve_all' requested here
+ 1208 |     nNewObjs = hashTable.retrieve_all(vReconstructedKeys, vReconstructedIds, nNewObjs, 1);
+      |                          ^
+In file included from refactor.cu:14:
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+132 warnings generated when compiling for gfx90a.
+In file included from refactor.cu:13:
+In file included from ./aig_manager.h:6:
+In file included from ./rewrite.h:4:
+./robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+ 1445 |         Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+      |                                 ^
+./robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+  210 | #    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+      |                                                   ^
+In file included from refactor.cu:14:
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:550:20: warning: unused variable 'hashRet' [-Wunused-variable]
+  550 |             uint32 hashRet = insert_single_no_update_volatile<uint64, uint32>(htKeys, htValues, key, (uint32)newId, htCapacity);
+      |                    ^~~~~~~
+refactor.cu:676:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  676 |     hipHostAlloc((void**)&vhFanin0, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:676:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  676 |     hipHostAlloc((void**)&vhFanin0, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:677:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  677 |     hipHostAlloc((void**)&vhFanin1, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:677:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  677 |     hipHostAlloc((void**)&vhFanin1, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:678:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  678 |     hipHostAlloc((void**)&vhResynInd, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:678:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  678 |     hipHostAlloc((void**)&vhResynInd, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:679:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  679 |     hipHostAlloc((void**)&vhChoicesLit, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:679:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  679 |     hipHostAlloc((void**)&vhChoicesLit, nResyn * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:680:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  680 |     hipHostAlloc((void**)&vhCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:680:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  680 |     hipHostAlloc((void**)&vhCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:681:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  681 |     hipHostAlloc((void**)&vhCutSizes, nObjs * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:681:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  681 |     hipHostAlloc((void**)&vhCutSizes, nObjs * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:682:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  682 |     hipHostAlloc((void**)&vhDeleted, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:682:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  682 |     hipHostAlloc((void**)&vhDeleted, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:683:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  683 |     hipHostAlloc((void**)&vhNumFanouts, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:683:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  683 |     hipHostAlloc((void**)&vhNumFanouts, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:684:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  684 |     hipHostAlloc((void**)&vhLevels, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:684:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  684 |     hipHostAlloc((void**)&vhLevels, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:685:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  685 |     hipHostAlloc((void**)&vhNewInd, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor.cu:685:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  685 |     hipHostAlloc((void**)&vhNewInd, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:686:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  686 |     hipMemcpy(vhFanin0, vFanin0New, nBufferLen * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:687:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  687 |     hipMemcpy(vhFanin1, vFanin1New, nBufferLen * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:688:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  688 |     hipMemcpy(vhResynInd, vResynInd, nResyn * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:689:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  689 |     hipMemcpy(vhChoicesLit, vChoicesLit, nResyn * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:690:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  690 |     hipMemcpy(vhCutTable, vCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:691:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  691 |     hipMemcpy(vhCutSizes, vCutSizes, nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:692:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  692 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:974:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  974 |     hipHostFree(vhFanin0);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:975:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  975 |     hipHostFree(vhFanin1);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:976:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  976 |     hipHostFree(vhResynInd);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~
+refactor.cu:977:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  977 |     hipHostFree(vhChoicesLit);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~~~
+refactor.cu:978:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  978 |     hipHostFree(vhCutTable);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~
+refactor.cu:979:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  979 |     hipHostFree(vhCutSizes);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~
+refactor.cu:980:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  980 |     hipHostFree(vhDeleted);
+      |     ^~~~~~~~~~~ ~~~~~~~~~
+refactor.cu:981:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  981 |     hipHostFree(vhNumFanouts);
+      |     ^~~~~~~~~~~ ~~~~~~~~~~~~
+refactor.cu:982:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  982 |     hipHostFree(vhLevels);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:983:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  983 |     hipHostFree(vhNewInd);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor.cu:1009:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1009 |     hipMalloc(&vCutTable, nObjs * CUT_TABLE_SIZE * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1010:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1010 |     hipMalloc(&vCutSizes, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1011:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1011 |     hipMalloc(&vNumSaved, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1012:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1012 |     hipMemset(vCutSizes, 0, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1014:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1014 |     hipMalloc(&vIdxSeq, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1015:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1015 |     hipMalloc(&vResynInd, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1041:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1041 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1045:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1045 |         hipFree(vCutTable);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1046:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1046 |         hipFree(vCutSizes);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1047:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1047 |         hipFree(vNumSaved);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1048:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1048 |         hipFree(vIdxSeq);
+      |         ^~~~~~~ ~~~~~~~
+refactor.cu:1049:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1049 |         hipFree(vResynInd);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1054:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1054 |     hipMalloc(&vReconvInd, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1062:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1062 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1090:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1090 |     hipMalloc(&vTruthRanges, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1096:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1096 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1099:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1099 |     hipMemcpy(&nTruthTableLen, &vTruthRanges[nResyn - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1100:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1100 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1102:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1102 |     hipMalloc(&vTruth, nTruthTableLen * sizeof(unsigned));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1103:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1103 |     hipMalloc(&vTruthElem, cutSize * dUtils::TruthWordNum(cutSize) * sizeof(unsigned));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1140:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1140 |     hipMalloc(&vSubgTable, 2 * nResyn * SUBG_TABLE_SIZE * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1141:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1141 |     hipMalloc(&vSubgLinks, 2 * nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1142:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1142 |     hipMalloc(&vSubgLens, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1143:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1143 |     hipMalloc(&pSubgTableNext, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1144:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1144 |     hipMemset(vSubgLinks, -1, 2 * nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1145:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1145 |     hipMemset(vSubgLens, -1, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1146:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1146 |     hipMemcpy(pSubgTableNext, &nResyn, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1147:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1147 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1172:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1172 |     hipMalloc(&vChoicesLit, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1173:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1173 |     hipMemset(vChoicesLit, -1, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1185:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1185 |     hipFree(vTruth);
+      |     ^~~~~~~ ~~~~~~
+refactor.cu:1186:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1186 |     hipFree(vTruthRanges);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+refactor.cu:1187:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1187 |     hipFree(vTruthElem);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1188:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1188 |     hipFree(vSubgTable);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1189:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1189 |     hipFree(vSubgLinks);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1190:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1190 |     hipFree(vSubgLens);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1191:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1191 |     hipFree(pSubgTableNext);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~
+refactor.cu:1193:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1193 |     hipMalloc(&vReconstructedKeys, nNewObjs * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1194:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1194 |     hipMalloc(&vReconstructedIds, nNewObjs * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1196:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1196 |     hipMalloc(&vFanin0New, nNewObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1197:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1197 |     hipMalloc(&vFanin1New, nNewObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1198:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1198 |     hipMemset(vFanin0New + nObjs, -1, (nNewObjs - nObjs) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1199:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1199 |     hipMemset(vFanin1New + nObjs, -1, (nNewObjs - nObjs) * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1201:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1201 |     hipMemcpy(vFanin0New, d_pFanin0, nObjs * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1202:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1202 |     hipMemcpy(vFanin1New, d_pFanin1, nObjs * sizeof(int), hipMemcpyDeviceToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1203:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1203 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1234:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1234 |     hipFree(vCutTable);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1235:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1235 |     hipFree(vCutSizes);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1236:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1236 |     hipFree(vNumSaved);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1237:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1237 |     hipFree(vIdxSeq);
+      |     ^~~~~~~ ~~~~~~~
+refactor.cu:1238:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1238 |     hipFree(vResynInd);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor.cu:1239:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1239 |     hipFree(vReconvInd);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1240:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1240 |     hipFree(vChoicesLit);
+      |     ^~~~~~~ ~~~~~~~~~~~
+refactor.cu:1241:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1241 |     hipFree(vFanin0New);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1242:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1242 |     hipFree(vFanin1New);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor.cu:1243:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1243 |     hipFree(vReconstructedKeys);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+refactor.cu:1244:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1244 |     hipFree(vReconstructedIds);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~
+refactor.cu:1297:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1297 |     hipMalloc(&d_pLevel, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1298:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1298 |     hipMemcpy(d_pLevel, pLevel, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1304:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1304 |     hipDeviceGetLimit(&cuStackSize, hipLimitStackSize);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1306:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1306 |     hipDeviceSetLimit(hipLimitStackSize, cuStackSizeEnlarged);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1307:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1307 |     hipDeviceGetLimit(&cuStackSizeEnlarged, hipLimitStackSize);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1329:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1329 |     hipFree(d_pLevel);
+      |     ^~~~~~~ ~~~~~~~~
+refactor.cu:1331:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1331 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor.cu:1334:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1334 |     hipDeviceSetLimit(hipLimitStackSize, cuStackSize);
+      |     ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1377:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1377 |         hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1378:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1378 |         hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1379:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1379 |         hipFree(d_pFanin0);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1380:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1380 |         hipFree(d_pFanin1);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor.cu:1381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1381 |         hipFree(d_pOuts);
+      |         ^~~~~~~ ~~~~~~~
+refactor.cu:1382:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+ 1382 |         hipFree(d_pNumFanouts);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+In file included from refactor.cu:14:
+./hash_table.h:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipMalloc(&keys, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1126:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::HashTable' requested here
+ 1126 |     HashTable<uint64, uint32> hashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from refactor.cu:14:
+./hash_table.h:30:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   30 |         hipMalloc(&values, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:31:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   31 |         hipMemset(keys, 0xff, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:32:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   32 |         hipMemset(values, 0xff, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:42:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |             hipFree(keys);
+      |             ^~~~~~~ ~~~~
+./hash_table.h:37:9: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::freeMem' requested here
+   37 |         freeMem();
+      |         ^
+refactor.cu:1126:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::~HashTable' requested here
+ 1126 |     HashTable<uint64, uint32> hashTable((int)(nObjs / HT_LOAD_FACTOR));
+      |                               ^
+In file included from refactor.cu:14:
+./hash_table.h:43:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |             hipFree(values);
+      |             ^~~~~~~ ~~~~~~
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor.cu:1208:26: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::retrieve_all' requested here
+ 1208 |     nNewObjs = hashTable.retrieve_all(vReconstructedKeys, vReconstructedIds, nNewObjs, 1);
+      |                          ^
+In file included from refactor.cu:14:
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+132 warnings generated when compiling for host.
+hipcc  -std=c++17 -Wall  -O3 -ffast-math -c refactor_mffc.cu -o refactor_mffc.o
+In file included from refactor_mffc.cu:14:
+In file included from ./mffc.cuh:3:
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:247:20: error: use of undeclared identifier '__activemask'
+  247 |         warpMask = __activemask();
+      |                    ^
+refactor_mffc.cu:261:23: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  261 |         nOtherAdded = __shfl_xor_sync(warpMask, nAdded, 1); // nAdded of the corresponding negated subgraph
+      |                       ^~~~~~~~~~~~~~~
+      |                       __shfl_xor
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:493:15: note: '__shfl_xor' declared here
+  493 | unsigned long __shfl_xor(unsigned long var, int lane_mask, int width = warpSize)
+      |               ^
+refactor_mffc.cu:262:26: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  262 |         nOtherNewLevel = __shfl_xor_sync(warpMask, nNewLevel, 1);
+      |                          ^~~~~~~~~~~~~~~
+      |                          __shfl_xor
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:493:15: note: '__shfl_xor' declared here
+  493 | unsigned long __shfl_xor(unsigned long var, int lane_mask, int width = warpSize)
+      |               ^
+refactor_mffc.cu:498:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  498 |     hipMalloc(&vResynIdSeq, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:499:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  499 |     hipMalloc(&vFinishedMark, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:500:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  500 |     hipMemset(vFinishedMark, 0, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:508:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  508 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:518:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  518 |         hipMemset(vFinishedMark, 0, nReplace * sizeof(int));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:523:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  523 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:529:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  529 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:537:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  537 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:549:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  549 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:553:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  553 |     hipFree(vFinishedMark);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+refactor_mffc.cu:554:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  554 |     hipFree(vResynIdSeq);
+      |     ^~~~~~~ ~~~~~~~~~~~
+refactor_mffc.cu:588:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  588 |     hipHostAlloc((void**)&vhFanin0, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor_mffc.cu:588:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  588 |     hipHostAlloc((void**)&vhFanin0, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:589:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  589 |     hipHostAlloc((void**)&vhFanin1, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor_mffc.cu:589:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  589 |     hipHostAlloc((void**)&vhFanin1, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:590:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  590 |     hipHostAlloc((void**)&vhLevels, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor_mffc.cu:590:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  590 |     hipHostAlloc((void**)&vhLevels, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:591:5: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  591 |     hipHostAlloc((void**)&vhNewInd, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+refactor_mffc.cu:591:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  591 |     hipHostAlloc((void**)&vhNewInd, nBufferLen * sizeof(int), hipHostMallocDefault);
+      |     ^~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:593:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  593 |     hipMemcpy(vhFanin0, vFanin0New, nBufferLen * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:594:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  594 |     hipMemcpy(vhFanin1, vFanin1New, nBufferLen * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:686:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  686 |     hipHostFree(vhFanin0);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor_mffc.cu:687:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  687 |     hipHostFree(vhFanin1);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor_mffc.cu:688:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  688 |     hipHostFree(vhLevels);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor_mffc.cu:689:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  689 |     hipHostFree(vhNewInd);
+      |     ^~~~~~~~~~~ ~~~~~~~~
+refactor_mffc.cu:721:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  721 |     hipMalloc(&vRoots, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:722:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  722 |     hipMalloc(&vNodesStatus, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:723:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  723 |     hipMalloc(&vNodesIndices, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:724:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  724 |     hipMalloc(&vResynRoots, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:726:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  726 |     hipMalloc(&vCutTable, (size_t)nObjs * CUT_TABLE_SIZE * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:727:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  727 |     hipMalloc(&vCutSizes, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:728:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  728 |     hipMalloc(&vNumSaved, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:729:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  729 |     hipMemset(vCutSizes, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:730:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  730 |     hipMemset(vNumSaved, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:752:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  752 |         hipMemset(vNodesStatus, 0, nObjs * sizeof(int));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:759:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  759 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:764:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  764 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:775:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  775 |     hipFree(vRoots);
+      |     ^~~~~~~ ~~~~~~
+refactor_mffc.cu:776:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  776 |     hipFree(vNodesStatus);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+refactor_mffc.cu:792:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  792 |         hipFree(vCutTable);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:793:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  793 |         hipFree(vCutSizes);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:794:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  794 |         hipFree(vNumSaved);
+      |         ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:795:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  795 |         hipFree(vNodesIndices);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+refactor_mffc.cu:796:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  796 |         hipFree(vResynRoots);
+      |         ^~~~~~~ ~~~~~~~~~~~
+refactor_mffc.cu:800:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  800 |     hipMalloc(&vCutRanges, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:801:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  801 |     hipMalloc(&vTruthRanges, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:815:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  815 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:818:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  818 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:820:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  820 |     hipMemcpy(&nCutArrayLen, &vCutRanges[nResyn - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:821:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  821 |     hipMemcpy(&nTruthArrayLen, &vTruthRanges[nResyn - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:822:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  822 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:823:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  823 |     hipMalloc(&vCuts, nCutArrayLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:824:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  824 |     hipMalloc(&vTruths, nTruthArrayLen * sizeof(unsigned));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:825:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  825 |     hipMalloc(&vTruthsNeg, nTruthArrayLen * sizeof(unsigned));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:832:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  832 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:833:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  833 |     hipFree(vCutTable);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:836:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  836 |     hipMalloc(&vNode2ConeResynIdx, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:837:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  837 |     hipMemset(vNode2ConeResynIdx, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:840:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  840 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:849:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  849 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:857:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  857 |     hipMalloc(&vSelectedSubgInd, nResyn * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:858:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  858 |     hipMalloc(&vSubgTable, (size_t)2 * nResynGraphs * SUBG_TABLE_SIZE * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:859:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  859 |     hipMalloc(&vSubgLinks, (size_t)2 * nResynGraphs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:860:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  860 |     hipMalloc(&vSubgLens, (size_t)nResynGraphs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:861:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  861 |     hipMalloc(&pSubgTableNext, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:862:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  862 |     hipMemset(vSubgLinks, -1, (size_t)2 * nResynGraphs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:863:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  863 |     hipMemset(vSubgLens, -1, (size_t)nResynGraphs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:864:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  864 |     hipMemcpy(pSubgTableNext, &nResynGraphs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:865:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  865 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:884:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  884 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:910:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  910 |     hipMalloc(&vOldRoot2NewRootLits, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:911:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  911 |     hipMemset(vOldRoot2NewRootLits, -1, nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:918:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  918 |     hipMalloc(&vReconstructedKeys, nBufferLen * sizeof(uint64));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:919:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  919 |     hipMalloc(&vReconstructedIds, nBufferLen * sizeof(uint32));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:920:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  920 |     hipMalloc(&vFanin0New, nBufferLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:921:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  921 |     hipMalloc(&vFanin1New, nBufferLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:922:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  922 |     hipMemset(vFanin0New, -1, nBufferLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:923:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  923 |     hipMemset(vFanin1New, -1, nBufferLen * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:925:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  925 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:933:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  933 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:941:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  941 |     hipFree(vNodesIndices);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+refactor_mffc.cu:942:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  942 |     hipFree(vCutSizes);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:943:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  943 |     hipFree(vNumSaved);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:944:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  944 |     hipFree(vResynRoots);
+      |     ^~~~~~~ ~~~~~~~~~~~
+refactor_mffc.cu:945:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  945 |     hipFree(vCuts);
+      |     ^~~~~~~ ~~~~~
+refactor_mffc.cu:946:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  946 |     hipFree(vCutRanges);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor_mffc.cu:947:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  947 |     hipFree(vTruthRanges);
+      |     ^~~~~~~ ~~~~~~~~~~~~
+refactor_mffc.cu:948:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  948 |     hipFree(vTruths);
+      |     ^~~~~~~ ~~~~~~~
+refactor_mffc.cu:949:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  949 |     hipFree(vTruthsNeg);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor_mffc.cu:950:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  950 |     hipFree(vTruthElem);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor_mffc.cu:951:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  951 |     hipFree(vNode2ConeResynIdx);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:952:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  952 |     hipFree(vSubgTable);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor_mffc.cu:953:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  953 |     hipFree(vSubgLinks);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor_mffc.cu:954:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  954 |     hipFree(vSubgLens);
+      |     ^~~~~~~ ~~~~~~~~~
+refactor_mffc.cu:955:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  955 |     hipFree(pSubgTableNext);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~
+refactor_mffc.cu:956:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  956 |     hipFree(vSelectedSubgInd);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~
+refactor_mffc.cu:957:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  957 |     hipFree(vOldRoot2NewRootLits);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:958:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  958 |     hipFree(vReconstructedKeys);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:959:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  959 |     hipFree(vReconstructedIds);
+      |     ^~~~~~~ ~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:960:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  960 |     hipFree(vFanin0New);
+      |     ^~~~~~~ ~~~~~~~~~~
+refactor_mffc.cu:961:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  961 |     hipFree(vFanin1New);
+      |     ^~~~~~~ ~~~~~~~~~~
+In file included from refactor_mffc.cu:14:
+In file included from ./mffc.cuh:3:
+./hash_table.h:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipMalloc(&keys, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:877:31: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::HashTable' requested here
+  877 |     HashTable<uint64, uint32> hashTable((int)(nObjs / (HT_LOAD_FACTOR * 1.5)));
+      |                               ^
+In file included from refactor_mffc.cu:14:
+In file included from ./mffc.cuh:3:
+./hash_table.h:30:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   30 |         hipMalloc(&values, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:31:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   31 |         hipMemset(keys, 0xff, capacity * sizeof(KeyT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:32:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   32 |         hipMemset(values, 0xff, capacity * sizeof(ValueT));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:42:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |             hipFree(keys);
+      |             ^~~~~~~ ~~~~
+refactor_mffc.cu:907:15: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::freeMem' requested here
+  907 |     hashTable.freeMem();
+      |               ^
+In file included from refactor_mffc.cu:14:
+In file included from ./mffc.cuh:3:
+./hash_table.h:43:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |             hipFree(values);
+      |             ^~~~~~~ ~~~~~~
+./hash_table.h:358:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  358 |     hipMalloc(&indicator, capacity * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+refactor_mffc.cu:924:33: note: in instantiation of member function 'HashTable<unsigned long long, unsigned int>::retrieve_all' requested here
+  924 |     int nEntries = hashTableNew.retrieve_all(vReconstructedKeys, vReconstructedIds, nBufferLen, 1);
+      |                                 ^
+In file included from refactor_mffc.cu:14:
+In file included from ./mffc.cuh:3:
+./hash_table.h:361:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  361 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:363:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  363 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:364:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  364 |     hipMemcpy(&num_entries, &indicator[capacity - 1], sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./hash_table.h:368:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  368 |         hipFree(indicator);
+      |         ^~~~~~~ ~~~~~~~~~
+./hash_table.h:375:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:381:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  381 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+./hash_table.h:384:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  384 |     hipFree(indicator);
+      |     ^~~~~~~ ~~~~~~~~~
+123 warnings and 3 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++17 -Wall -O3 -ffast-math -c -x hip refactor_mffc.cu -o "refactor_mffc.o"
+make: *** [Makefile.AMD:50: refactor_mffc.o] Error 1

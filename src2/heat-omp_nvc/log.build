@@ -1,0 +1,23 @@
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc90 -c heat.cpp -o heat.o
+main:
+    115, #omp target teams distribute parallel for simd thread_limit(256)
+        115, Generating "nvkernel_main_F1L115_2" GPU kernel
+        118, Loop parallelized across teams and threads(128), schedule(static)
+    119, Loop not vectorized/parallelized: not countable
+    124, #omp target teams distribute parallel for simd thread_limit(256)
+        124, Generating "nvkernel_main_F1L124_4" GPU kernel
+        127, Loop parallelized across teams and threads(128), schedule(static)
+    128, Loop not vectorized/parallelized: not countable
+    143, #omp target teams distribute parallel for simd thread_limit(256)
+        115, Generating map(tofrom:u[:n*n],u_tmp[:n*n]) 
+        143, Generating "nvkernel_main_F1L143_6" GPU kernel
+        150, Loop parallelized across teams and threads(128), schedule(static)
+    143, Loop not vectorized/parallelized: contains call
+    151, Loop not vectorized/parallelized: not countable
+         215, Loop not fused: function call before adjacent loop
+         217, Zero trip check eliminated
+              Loop not vectorized: recurrence
+l2norm(int, double const*, int, double, double, double, double):
+    217, Zero trip check eliminated
+         Loop not vectorized: recurrence
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc90 heat.o -o heat 

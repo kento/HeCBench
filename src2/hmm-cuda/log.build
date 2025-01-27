@@ -1,0 +1,13 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c HiddenMarkovModel.cu -o HiddenMarkovModel.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c ViterbiCPU.cu -o ViterbiCPU.o
+ViterbiCPU.cu:35: warning: ignoring '#pragma omp parallel' [-Wunknown-pragmas]
+   35 |     #pragma omp parallel for
+      | 
+ViterbiCPU.cu:44: warning: ignoring '#pragma omp parallel' [-Wunknown-pragmas]
+   44 |         #pragma omp parallel for
+      | 
+ViterbiCPU.cu:63: warning: ignoring '#pragma omp parallel' [-Wunknown-pragmas]
+   63 |         #pragma omp parallel for
+      | 
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c ViterbiGPU.cu -o ViterbiGPU.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 HiddenMarkovModel.o ViterbiCPU.o ViterbiGPU.o -o main 

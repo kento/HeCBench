@@ -1,0 +1,193 @@
+hipcc  -std=c++17  -Wall  -O3   -c aig_manager.cu -o aig_manager.o
+In file included from aig_manager.cu:10:
+./robin_hood.h:1446:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+ 1446 |         Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+      |                                 ^
+./robin_hood.h:211:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+  211 | #    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+      |                                                   ^
+In file included from aig_manager.cu:12:
+./common.h:202:58: error: no matching function for call to 'hipGetErrorString'
+  202 |       printf("GPU kernel assert: %s,\nat %s, line %d\n", hipGetErrorString(code), file, line);
+      |                                                          ^~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:2349:13: note: candidate function not viable: call to __host__ function from __device__ function
+ 2349 | const char* hipGetErrorString(hipError_t hipError);
+      |             ^
+aig_manager.cu:23:59: warning: field 'deviceAllocated' will be initialized after field 'nLevels' [-Wreorder-ctor]
+   22 |     nObjs(0), nPIs(0), nPOs(0), nNodes(0), pFanin0(NULL), pFanin1(NULL), pOuts(NULL), pLevel(NULL), 
+      |                                            ~~~~~~~~~~~~~  ~~~~~~~~~~~~~  ~~~~~~~~~~~  ~~~~~~~~~~~~
+      |                                            nLevels(0)     pFanin0(NULL)  pFanin1(NULL)pOuts(NULL)
+   23 |     moduleName("module"), modulePath(""), moduleInfo(""), deviceAllocated(0), nLevels(0), 
+      |     ~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~  ^~~~~~~~~~~~~~~~~~  ~~~~~~~~~~
+      |     pLevel(NULL)          moduleName("module") modulePath("") moduleInfo("")  deviceAllocated(0)
+aig_manager.cu:28:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   28 |         hipDeviceSetLimit(hipLimitMallocHeapSize, (size_t)2048 * 1024 * 1024); // 2GB
+      |         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:29:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |         hipDeviceGetLimit(&dynamicHeapSize, hipLimitMallocHeapSize);
+      |         ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:40:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   40 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:43:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   43 |         hipDeviceReset(); // for cuda memcheck
+      |         ^~~~~~~~~~~~~~
+aig_manager.cu:83:12: warning: unused variable 'res' [-Wunused-variable]
+   83 |     size_t res = fread(pContents, nFileSize, 1, pFile);
+      |            ^~~
+aig_manager.cu:272:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  272 |     hipMalloc(&d_pnObjs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:273:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  273 |     hipMalloc(&d_pnPIs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:274:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  274 |     hipMalloc(&d_pnPOs, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:275:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  275 |     hipMalloc(&d_pnNodes, sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:276:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  276 |     hipMalloc(&d_pFanin0, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:277:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  277 |     hipMalloc(&d_pFanin1, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:278:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  278 |     hipMalloc(&d_pOuts, this->nPOs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:279:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  279 |     hipMalloc(&d_pNumFanouts, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:286:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  286 |     hipMemset(d_pNumFanouts, 0, this->nObjs * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:288:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  288 |     hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:289:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  289 |     hipMemcpy(d_pnPIs, &nPIs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:290:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  290 |     hipMemcpy(d_pnPOs, &nPOs, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:291:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  291 |     hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:292:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  292 |     hipMemcpy(d_pFanin0, pFanin0, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:293:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  293 |     hipMemcpy(d_pFanin1, pFanin1, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:294:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  294 |     hipMemcpy(d_pOuts, pOuts, this->nPOs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:295:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  295 |     hipMemcpy(d_pNumFanouts, pNumFanouts, this->nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:297:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  297 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:309:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  309 |     hipMemcpy(&nObjs, d_pnObjs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:310:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  310 |     hipMemcpy(&nPIs, d_pnPIs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:311:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  311 |     hipMemcpy(&nPOs, d_pnPOs, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:312:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  312 |     hipMemcpy(&nNodes, d_pnNodes, sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:313:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  313 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:317:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  317 |     hipMemcpy(pFanin0, d_pFanin0, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:318:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  318 |     hipMemcpy(pFanin1, d_pFanin1, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:319:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  319 |     hipMemcpy(pNumFanouts, d_pNumFanouts, this->nObjs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:320:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  320 |     hipMemcpy(pOuts, d_pOuts, this->nPOs * sizeof(int), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:323:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  323 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:339:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  339 |         hipFree(d_pnObjs);
+      |         ^~~~~~~ ~~~~~~~~
+aig_manager.cu:340:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  340 |         hipFree(d_pnPIs);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:341:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  341 |         hipFree(d_pnPOs);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:342:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  342 |         hipFree(d_pnNodes);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:344:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  344 |         hipFree(d_pFanin0);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:345:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  345 |         hipFree(d_pFanin1);
+      |         ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:346:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  346 |         hipFree(d_pOuts);
+      |         ^~~~~~~ ~~~~~~~
+aig_manager.cu:347:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  347 |         hipFree(d_pNumFanouts);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+aig_manager.cu:516:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  516 |         hipMemcpy(d_pnObjs, &nObjs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:517:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  517 |         hipMemcpy(d_pnPIs, &nPIs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:518:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  518 |         hipMemcpy(d_pnPOs, &nPOs, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:519:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  519 |         hipMemcpy(d_pnNodes, &nNodes, sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:522:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  522 |         hipMemcpy(d_pFanin0, rwMan.fanin0, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:523:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  523 |         hipMemcpy(d_pFanin1, rwMan.fanin1, nObjs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:524:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  524 |         hipMemcpy(d_pOuts, rwMan.output, nPOs * sizeof(int), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:527:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  527 |         hipMemset(d_pNumFanouts, 0, this->nObjs * sizeof(int));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:585:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  585 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:595:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  595 |         hipDeviceSynchronize();
+      |         ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:676:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  676 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+aig_manager.cu:681:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  681 |     hipFree(d_pFanin0);
+      |     ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:682:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  682 |     hipFree(d_pFanin1);
+      |     ^~~~~~~ ~~~~~~~~~
+aig_manager.cu:683:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  683 |     hipFree(d_pOuts);
+      |     ^~~~~~~ ~~~~~~~
+aig_manager.cu:684:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  684 |     hipFree(d_pNumFanouts);
+      |     ^~~~~~~ ~~~~~~~~~~~~~
+58 warnings and 1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++17 -Wall -O3 -c -x hip aig_manager.cu -o "aig_manager.o"
+make: *** [Makefile.AMD:51: aig_manager.o] Error 1

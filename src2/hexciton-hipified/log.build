@@ -1,0 +1,489 @@
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+In file included from main.cu:8:
+In file included from ./utils.hpp:46:
+./helper_math.h:1456:30: error: use of overloaded operator '/' is ambiguous (with operand types 'float2' (aka 'HIP_vector_type<float, 2>') and 'float2')
+ 1456 |     float2 y = clamp((x - a) / (b - a), 0.0f, 1.0f);
+      |                      ~~~~~~~ ^ ~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:577:65: note: candidate function
+  577 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator/(
+      |                                                                 ^
+./helper_math.h:981:35: note: candidate function
+  981 | inline __host__ __device__ float2 operator/(float2 a, float2 b)
+      |                                   ^
+./helper_math.h:1457:14: error: use of overloaded operator '*' is ambiguous (with operand types 'float2' (aka 'HIP_vector_type<float, 2>') and 'float2')
+ 1457 |     return (y*y*(make_float2(3.0f) - (make_float2(2.0f)*y)));
+      |             ~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:752:35: note: candidate function
+  752 | inline __host__ __device__ float2 operator*(float2 a, float2 b)
+      |                                   ^
+./helper_math.h:1457:56: error: use of overloaded operator '*' is ambiguous (with operand types 'float2' (aka 'HIP_vector_type<float, 2>') and 'float2')
+ 1457 |     return (y*y*(make_float2(3.0f) - (make_float2(2.0f)*y)));
+      |                                       ~~~~~~~~~~~~~~~~~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:752:35: note: candidate function
+  752 | inline __host__ __device__ float2 operator*(float2 a, float2 b)
+      |                                   ^
+./helper_math.h:1461:30: error: use of overloaded operator '/' is ambiguous (with operand types 'float3' (aka 'HIP_vector_type<float, 3>') and 'float3')
+ 1461 |     float3 y = clamp((x - a) / (b - a), 0.0f, 1.0f);
+      |                      ~~~~~~~ ^ ~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:577:65: note: candidate function
+  577 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator/(
+      |                                                                 ^
+./helper_math.h:1004:35: note: candidate function
+ 1004 | inline __host__ __device__ float3 operator/(float3 a, float3 b)
+      |                                   ^
+./helper_math.h:1462:14: error: use of overloaded operator '*' is ambiguous (with operand types 'float3' (aka 'HIP_vector_type<float, 3>') and 'float3')
+ 1462 |     return (y*y*(make_float3(3.0f) - (make_float3(2.0f)*y)));
+      |             ~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:821:35: note: candidate function
+  821 | inline __host__ __device__ float3 operator*(float3 a, float3 b)
+      |                                   ^
+./helper_math.h:1462:56: error: use of overloaded operator '*' is ambiguous (with operand types 'float3' (aka 'HIP_vector_type<float, 3>') and 'float3')
+ 1462 |     return (y*y*(make_float3(3.0f) - (make_float3(2.0f)*y)));
+      |                                       ~~~~~~~~~~~~~~~~~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:821:35: note: candidate function
+  821 | inline __host__ __device__ float3 operator*(float3 a, float3 b)
+      |                                   ^
+./helper_math.h:1466:30: error: use of overloaded operator '/' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+ 1466 |     float4 y = clamp((x - a) / (b - a), 0.0f, 1.0f);
+      |                      ~~~~~~~ ^ ~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:577:65: note: candidate function
+  577 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator/(
+      |                                                                 ^
+./helper_math.h:1029:35: note: candidate function
+ 1029 | inline __host__ __device__ float4 operator/(float4 a, float4 b)
+      |                                   ^
+./helper_math.h:1467:14: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+ 1467 |     return (y*y*(make_float4(3.0f) - (make_float4(2.0f)*y)));
+      |             ~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+./helper_math.h:1467:56: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+ 1467 |     return (y*y*(make_float4(3.0f) - (make_float4(2.0f)*y)));
+      |                                       ~~~~~~~~~~~~~~~~~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+In file included from main.cu:9:
+./kernels.cu:137:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  137 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:93:9: note: previous definition is here
+   93 | #define sigma_real(i, j) (sigma_id + 2 * ((i) * dim + (j)))
+      |         ^
+./kernels.cu:138:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  138 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:94:9: note: previous definition is here
+   94 | #define sigma_imag(i, j) (sigma_id + 2 * ((i) * dim + (j)) + 1)
+      |         ^
+./kernels.cu:140:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  140 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:95:9: note: previous definition is here
+   95 | #define ham_real(i, j) (2 * ((i) * dim + (j)))
+      |         ^
+./kernels.cu:141:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  141 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:96:9: note: previous definition is here
+   96 | #define ham_imag(i, j) (2 * ((i) * dim + (k)) + 1)
+      |         ^
+./kernels.cu:176:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  176 | #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |         ^
+./kernels.cu:134:9: note: previous definition is here
+  134 | #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |         ^
+./kernels.cu:179:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  179 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:137:9: note: previous definition is here
+  137 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:180:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  180 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:138:9: note: previous definition is here
+  138 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:182:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  182 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:140:9: note: previous definition is here
+  140 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:183:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  183 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:141:9: note: previous definition is here
+  141 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:273:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  273 | #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |         ^
+./kernels.cu:216:9: note: previous definition is here
+  216 | #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |         ^
+./kernels.cu:276:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  276 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:219:9: note: previous definition is here
+  219 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:277:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  277 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:220:9: note: previous definition is here
+  220 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:279:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  279 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:222:9: note: previous definition is here
+  222 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:280:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  280 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:223:9: note: previous definition is here
+  223 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:310:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  310 | #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |         ^
+./kernels.cu:273:9: note: previous definition is here
+  273 | #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * dim * dim)
+      |         ^
+./kernels.cu:313:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  313 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:276:9: note: previous definition is here
+  276 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:314:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  314 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:277:9: note: previous definition is here
+  277 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:316:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  316 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:279:9: note: previous definition is here
+  279 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:317:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  317 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:280:9: note: previous definition is here
+  280 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:388:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  388 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |         ^
+./kernels.cu:347:9: note: previous definition is here
+  347 | #define package_id ((gid / VEC_LENGTH_AUTO) * VEC_LENGTH_AUTO * 2 * DIM * DIM)
+      |         ^
+./kernels.cu:389:9: warning: 'sigma_id' macro redefined [-Wmacro-redefined]
+  389 | #define sigma_id threadIdx.x
+      |         ^
+./kernels.cu:348:9: note: previous definition is here
+  348 | #define sigma_id (gid % VEC_LENGTH_AUTO)
+      |         ^
+./kernels.cu:391:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  391 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:350:9: note: previous definition is here
+  350 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + (sigma_id))
+      |         ^
+./kernels.cu:392:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  392 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:351:9: note: previous definition is here
+  351 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + (sigma_id))
+      |         ^
+./kernels.cu:394:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  394 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:353:9: note: previous definition is here
+  353 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:395:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  395 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:354:9: note: previous definition is here
+  354 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:427:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  427 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |         ^
+./kernels.cu:388:9: note: previous definition is here
+  388 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |         ^
+./kernels.cu:430:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  430 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:391:9: note: previous definition is here
+  391 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:431:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  431 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:392:9: note: previous definition is here
+  392 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:433:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  433 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:394:9: note: previous definition is here
+  394 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:434:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  434 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:395:9: note: previous definition is here
+  395 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:519:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  519 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |         ^
+./kernels.cu:466:9: note: previous definition is here
+  466 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |         ^
+./kernels.cu:522:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  522 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:469:9: note: previous definition is here
+  469 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:523:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  523 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:470:9: note: previous definition is here
+  470 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:525:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  525 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:472:9: note: previous definition is here
+  472 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:526:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  526 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:473:9: note: previous definition is here
+  473 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:554:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  554 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |         ^
+./kernels.cu:519:9: note: previous definition is here
+  519 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * dim * dim))
+      |         ^
+./kernels.cu:557:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  557 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:522:9: note: previous definition is here
+  522 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:558:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  558 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:523:9: note: previous definition is here
+  523 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (dim * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:559:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  559 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:525:9: note: previous definition is here
+  525 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:560:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  560 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:526:9: note: previous definition is here
+  526 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:631:9: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  631 | #define package_id (gid * dim * dim * 2)
+      |         ^
+./kernels.cu:588:9: note: previous definition is here
+  588 | #define package_id ((PACKAGES_PER_WG * blockIdx.y + threadIdx.y) * (VEC_LENGTH_AUTO * 2 * DIM * DIM))
+      |         ^
+./kernels.cu:633:9: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  633 | #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |         ^
+./kernels.cu:591:9: note: previous definition is here
+  591 | #define sigma_real(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + sigma_id)
+      |         ^
+./kernels.cu:634:9: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  634 | #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |         ^
+./kernels.cu:592:9: note: previous definition is here
+  592 | #define sigma_imag(i, j) (package_id + 2 * VEC_LENGTH_AUTO * (DIM * (i) + (j)) + VEC_LENGTH_AUTO + sigma_id)
+      |         ^
+./kernels.cu:636:9: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  636 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:594:9: note: previous definition is here
+  594 | #define ham_real(i, j) ((i) * DIM + (j))
+      |         ^
+./kernels.cu:637:9: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  637 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+./kernels.cu:595:9: note: previous definition is here
+  595 | #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |         ^
+./kernels.cu:645:18: error: use of overloaded operator '-=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  645 |         tmp_imag -= hamiltonian[ham_real(i, k)] * sigma_in[sigma_real(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:531:26: note: candidate function
+  531 |         HIP_vector_type& operator-=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:675:33: note: candidate function
+  675 | inline __host__ __device__ void operator-=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:646:18: error: use of overloaded operator '+=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  646 |         tmp_imag += sigma_in[sigma_real(i, k)] * hamiltonian[ham_real(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:511:26: note: candidate function
+  511 |         HIP_vector_type& operator+=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:446:33: note: candidate function
+  446 | inline __host__ __device__ void operator+=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:647:18: error: use of overloaded operator '+=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  647 |         tmp_imag += hamiltonian[ham_imag(i, k)] * sigma_in[sigma_imag(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:511:26: note: candidate function
+  511 |         HIP_vector_type& operator+=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:446:33: note: candidate function
+  446 | inline __host__ __device__ void operator+=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:648:18: error: use of overloaded operator '-=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  648 |         tmp_imag -= sigma_in[sigma_imag(i, k)] * hamiltonian[ham_imag(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:531:26: note: candidate function
+  531 |         HIP_vector_type& operator-=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:675:33: note: candidate function
+  675 | inline __host__ __device__ void operator-=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:649:18: error: use of overloaded operator '+=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  649 |         tmp_real += hamiltonian[ham_real(i, k)] * sigma_in[sigma_imag(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:511:26: note: candidate function
+  511 |         HIP_vector_type& operator+=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:446:33: note: candidate function
+  446 | inline __host__ __device__ void operator+=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:650:18: error: use of overloaded operator '-=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  650 |         tmp_real -= sigma_in[sigma_real(i, k)] * hamiltonian[ham_imag(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:531:26: note: candidate function
+  531 |         HIP_vector_type& operator-=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:675:33: note: candidate function
+  675 | inline __host__ __device__ void operator-=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:651:18: error: use of overloaded operator '+=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  651 |         tmp_real += hamiltonian[ham_imag(i, k)] * sigma_in[sigma_real(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:511:26: note: candidate function
+  511 |         HIP_vector_type& operator+=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:446:33: note: candidate function
+  446 | inline __host__ __device__ void operator+=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:652:18: error: use of overloaded operator '-=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  652 |         tmp_real -= sigma_in[sigma_imag(i, k)] * hamiltonian[ham_real(k, j)];
+      |         ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:531:26: note: candidate function
+  531 |         HIP_vector_type& operator-=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:675:33: note: candidate function
+  675 | inline __host__ __device__ void operator-=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:654:35: error: use of overloaded operator '+=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  654 |       sigma_out[sigma_real(i, j)] += tmp_real;
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:511:26: note: candidate function
+  511 |         HIP_vector_type& operator+=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:446:33: note: candidate function
+  446 | inline __host__ __device__ void operator+=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:655:35: error: use of overloaded operator '+=' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  655 |       sigma_out[sigma_imag(i, j)] += tmp_imag;
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:511:26: note: candidate function
+  511 |         HIP_vector_type& operator+=(const HIP_vector_type& x) noexcept
+      |                          ^
+./helper_math.h:446:33: note: candidate function
+  446 | inline __host__ __device__ void operator+=(float4 &a, float4 b)
+      |                                 ^
+In file included from main.cu:9:
+./kernels.cu:671:11: warning: 'package_id' macro redefined [-Wmacro-redefined]
+  671 |   #define package_id (gid * DIM * DIM * 2)
+      |           ^
+./kernels.cu:631:9: note: previous definition is here
+  631 | #define package_id (gid * dim * dim * 2)
+      |         ^
+./kernels.cu:673:11: warning: 'sigma_real' macro redefined [-Wmacro-redefined]
+  673 |   #define sigma_real(i, j) (package_id + 2 * (DIM * (i) + (j)))
+      |           ^
+./kernels.cu:633:9: note: previous definition is here
+  633 | #define sigma_real(i, j) (package_id + 2 * (dim * (i) + (j)))
+      |         ^
+./kernels.cu:674:11: warning: 'sigma_imag' macro redefined [-Wmacro-redefined]
+  674 |   #define sigma_imag(i, j) (package_id + 2 * (DIM * (i) + (j)) + 1)
+      |           ^
+./kernels.cu:634:9: note: previous definition is here
+  634 | #define sigma_imag(i, j) (package_id + 2 * (dim * (i) + (j)) + 1)
+      |         ^
+./kernels.cu:676:11: warning: 'ham_real' macro redefined [-Wmacro-redefined]
+  676 |   #define ham_real(i, j) ((i) * DIM + (j))
+      |           ^
+./kernels.cu:636:9: note: previous definition is here
+  636 | #define ham_real(i, j) ((i) * dim + (j))
+      |         ^
+./kernels.cu:677:11: warning: 'ham_imag' macro redefined [-Wmacro-redefined]
+  677 |   #define ham_imag(i, j) (DIM * DIM + (i) * DIM + (j))
+      |           ^
+./kernels.cu:637:9: note: previous definition is here
+  637 | #define ham_imag(i, j) (dim * dim + (i) * dim + (j))
+      |         ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+50 warnings and 20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1
