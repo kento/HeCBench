@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 //Adrian's test 2
 //calculates force on particle due to sphere of particles
 //can use full newton or short range force

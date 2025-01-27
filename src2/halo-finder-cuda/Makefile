@@ -9,8 +9,11 @@ OPT=-O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO
 #NVCC_FLAGS=-use_fast_math -DINLINE_FORCE -I${MPI_INCLUDE}
 NVCC_FLAGS=-I${MPI_INCLUDE}
 
+OBJDIR_TMP=objs
+
 HACC_PLATFORM=cuda
-HACC_OBJDIR=${HACC_PLATFORM}
+#HACC_OBJDIR=${HACC_PLATFORM}
+HACC_OBJDIR=${OBJDIR_TMP}
 
 HACC_CFLAGS=${OPT} ${OMP} ${NVCC_FLAGS}
 HACC_CC=nvcc -x c
@@ -161,7 +164,8 @@ $(OBJDIR)/libbigchunk.a: $(OBJDIR)/libbigchunk.a($(OBJDIR)/bigchunk.o)
 	ranlib $@
 
 clean:
-	rm -rf cuda
+#	rm -rf cuda
+	rm -rf $(OBJDIR_TMP)
 
 run: progs
-	$(LAUNCHER) ./cuda/ForceTreeTest 0.5 0.1 10000 0.1 10 N 12 rcb
+	$(LAUNCHER) ./objs/ForceTreeTest 0.5 0.1 10000 0.1 10 N 12 rcb

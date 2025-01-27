@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 #include "ForceLaw.h"
 
 #define MEM_ALIGN 64

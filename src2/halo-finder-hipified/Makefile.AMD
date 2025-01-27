@@ -8,10 +8,13 @@ MPI_INCLUDE=/usr/include/openmpi-x86_64/
 OPT=-O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO
 
 #NVCC_FLAGS= -DINLINE_FORCE -I${MPI_INCLUDE}
-NVCC_FLAGS=-I${MPI_INCLUDE} 
+NVCC_FLAGS=-I${MPI_INCLUDE}
+
+OBJDIR_TMP=objs
 
 HACC_PLATFORM=cuda
-HACC_OBJDIR=${HACC_PLATFORM}
+#HACC_OBJDIR=${HACC_PLATFORM}
+HACC_OBJDIR=${OBJDIR_TMP}
 
 HACC_CFLAGS=${OPT} ${OMP} ${NVCC_FLAGS}
 HACC_CC=hipcc -x c
@@ -62,7 +65,7 @@ CXXFLAGS += ${HF_TYPE_FLAGS}
 CXXFLAGS += ${HF_WARNING}
 #CXXFLAGS += -g
 #CXXFLAGS += -DDEBUG
-CXXFLAGS += -I. -I/opt/rocm-6.2.0/include/
+CXXFLAGS += -I.
 CXXFLAGS += -x hip
 #LDFLAGS  = ${MPI_LD_FLAGS} -lmpi_cxx
 
@@ -141,7 +144,8 @@ $(OBJDIR)/libbigchunk.a: $(OBJDIR)/libbigchunk.a($(OBJDIR)/bigchunk.o)
 	ranlib $@
 
 clean:
-	rm -rf cuda
+#	rm -rf cuda
+	rm -rf $(OBJDIR_TMP)
 
 include ../include/halo-finder-AMD
 

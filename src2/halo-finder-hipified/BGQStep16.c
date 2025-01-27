@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 /*
 BG/Q tuned version of short force evaluation kernel: 81% of peak performance
 Argonne Leadership Computing Facility, Argonne, IL 60439

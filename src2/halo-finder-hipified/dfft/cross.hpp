@@ -1,5 +1,3 @@
-#include "hip/hip_runtime.h"
-#include "hip/hip_runtime.h"
 #ifndef CROSS_HPP
 #define CROSS_HPP
 

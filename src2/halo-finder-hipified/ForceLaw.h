@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 #ifndef FORCELAW_H
 #define FORCELAW_H
 

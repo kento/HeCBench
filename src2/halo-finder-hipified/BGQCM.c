@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 /*
 BG/Q tuned version of HACC: 69.2% of peak performance on 96 racks of Sequoia
 Argonne Leadership Computing Facility, Argonne, IL 60439

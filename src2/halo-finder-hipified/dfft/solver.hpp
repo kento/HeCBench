@@ -1,5 +1,3 @@
-#include "hip/hip_runtime.h"
-#include "hip/hip_runtime.h"
 #ifndef SOLVER_HPP
 #define SOLVER_HPP
 

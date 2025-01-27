@@ -1,0 +1,375 @@
+mkdir -p cuda
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/ForceTreeTest.o ForceTreeTest.cxx
+ForceTreeTest.cxx(117): warning #177-D: variable "xlo" was declared but never referenced
+    POSVEL_T xlo = 0.0, xhi = L;
+             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ForceTreeTest.cxx(117): warning #177-D: variable "xhi" was declared but never referenced
+    POSVEL_T xlo = 0.0, xhi = L;
+                        ^
+
+ForceTreeTest.cxx(118): warning #177-D: variable "ylo" was declared but never referenced
+    POSVEL_T ylo = 0.0, yhi = L;
+             ^
+
+ForceTreeTest.cxx(118): warning #177-D: variable "yhi" was declared but never referenced
+    POSVEL_T ylo = 0.0, yhi = L;
+                        ^
+
+ForceTreeTest.cxx(119): warning #177-D: variable "zlo" was declared but never referenced
+    POSVEL_T zlo = 0.0, zhi = L;
+             ^
+
+ForceTreeTest.cxx(119): warning #177-D: variable "zhi" was declared but never referenced
+    POSVEL_T zlo = 0.0, zhi = L;
+                        ^
+
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/ParticleDistribute.o ParticleDistribute.cxx
+ar rv cuda/libparticle.a cuda/ParticleDistribute.o
+ar: creating cuda/libparticle.a
+a - cuda/ParticleDistribute.o
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/ParticleExchange.o ParticleExchange.cxx
+ParticleExchange.cxx(503): warning #550-D: variable "d" was set but never used
+    long d[2];
+         ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ar rv cuda/libparticle.a cuda/ParticleExchange.o
+a - cuda/ParticleExchange.o
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/InitialExchange.o InitialExchange.cxx
+InitialExchange.cxx(639): warning #549-D: variable "maxDeadSize" is used before its value is set
+                     (maxDeadSize *
+                      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+InitialExchange.cxx(639): warning #549-D: variable "maxDeadSize" is used before its value is set
+                     (maxDeadSize *
+                      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+InitialExchange.cxx(685): warning #177-D: variable "posValue" was declared but never referenced
+    POSVEL_T posValue;
+             ^
+
+InitialExchange.cxx(686): warning #177-D: variable "potValue" was declared but never referenced
+    POTENTIAL_T potValue;
+                ^
+
+InitialExchange.cxx(687): warning #177-D: variable "idValue" was declared but never referenced
+    ID_T idValue;
+         ^
+
+InitialExchange.cxx(688): warning #177-D: variable "maskValue" was declared but never referenced
+    MASK_T maskValue;
+           ^
+
+ar rv cuda/libparticle.a cuda/InitialExchange.o
+a - cuda/InitialExchange.o
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/Message.o Message.cxx
+ar rv cuda/libparticle.a cuda/Message.o
+a - cuda/Message.o
+ranlib cuda/libparticle.a
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/ForceLaw.o ForceLaw.cxx
+ar rv cuda/libBHForceTree.a cuda/ForceLaw.o
+ar: creating cuda/libBHForceTree.a
+a - cuda/ForceLaw.o
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/BHForceTree.o BHForceTree.cxx
+ar rv cuda/libBHForceTree.a cuda/BHForceTree.o
+a - cuda/BHForceTree.o
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/RCOForceTree.o RCOForceTree.cxx
+RCOForceTree.cxx(263): warning #177-D: member "<unnamed>::sphdesign<14>::x" was declared but never referenced
+  const POSVEL_T sphdesign<14>::x[] = {
+                                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+RCOForceTree.cxx(280): warning #177-D: member "<unnamed>::sphdesign<14>::y" was declared but never referenced
+  const POSVEL_T sphdesign<14>::y[] = {
+                                ^
+
+RCOForceTree.cxx(297): warning #177-D: member "<unnamed>::sphdesign<14>::z" was declared but never referenced
+  const POSVEL_T sphdesign<14>::z[] = {
+                                ^
+
+RCOForceTree.cxx(187): warning #177-D: member "<unnamed>::sphdesign<6>::x" was declared but never referenced
+  const POSVEL_T sphdesign<6>::x[] = {
+                               ^
+
+RCOForceTree.cxx(196): warning #177-D: member "<unnamed>::sphdesign<6>::y" was declared but never referenced
+  const POSVEL_T sphdesign<6>::y[] = {
+                               ^
+
+RCOForceTree.cxx(205): warning #177-D: member "<unnamed>::sphdesign<6>::z" was declared but never referenced
+  const POSVEL_T sphdesign<6>::z[] = {
+                               ^
+
+RCOForceTree.cxx(166): warning #177-D: member "<unnamed>::sphdesign<4>::x" was declared but never referenced
+  const POSVEL_T sphdesign<4>::x[] = {
+                               ^
+
+RCOForceTree.cxx(173): warning #177-D: member "<unnamed>::sphdesign<4>::y" was declared but never referenced
+  const POSVEL_T sphdesign<4>::y[] = {
+                               ^
+
+RCOForceTree.cxx(180): warning #177-D: member "<unnamed>::sphdesign<4>::z" was declared but never referenced
+  const POSVEL_T sphdesign<4>::z[] = {
+                               ^
+
+RCOForceTree.cxx(148): warning #177-D: member "<unnamed>::sphdesign<3>::x" was declared but never referenced
+  const POSVEL_T sphdesign<3>::x[] = {
+                               ^
+
+RCOForceTree.cxx(154): warning #177-D: member "<unnamed>::sphdesign<3>::y" was declared but never referenced
+  const POSVEL_T sphdesign<3>::y[] = {
+                               ^
+
+RCOForceTree.cxx(160): warning #177-D: member "<unnamed>::sphdesign<3>::z" was declared but never referenced
+  const POSVEL_T sphdesign<3>::z[] = {
+                               ^
+
+RCOForceTree.cxx(133): warning #177-D: member "<unnamed>::sphdesign<2>::x" was declared but never referenced
+  const POSVEL_T sphdesign<2>::x[] = {
+                               ^
+
+RCOForceTree.cxx(138): warning #177-D: member "<unnamed>::sphdesign<2>::y" was declared but never referenced
+  const POSVEL_T sphdesign<2>::y[] = {
+                               ^
+
+RCOForceTree.cxx(143): warning #177-D: member "<unnamed>::sphdesign<2>::z" was declared but never referenced
+  const POSVEL_T sphdesign<2>::z[] = {
+                               ^
+
+ar rv cuda/libBHForceTree.a cuda/RCOForceTree.o
+a - cuda/RCOForceTree.o
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/RCBForceTree.o RCBForceTree.cxx
+cudaUtil.h(16): warning #1444-D: function "__shfl_down(float, unsigned int, int)" was declared deprecated ("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning).")
+    val+=__shfl_down(val, 16);
+         ^
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include/sm_30_intrinsics.h(150): note #3287-D: because of a "deprecated" attribute
+  static __attribute__((device)) __inline__ __attribute__((deprecated("__shfl_down""() is deprecated in favor of ""__shfl_down""_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning)."))) float __shfl_down(float var, unsigned int delta, int width=32) ;
+                                                           ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+cudaUtil.h(17): warning #1444-D: function "__shfl_down(float, unsigned int, int)" was declared deprecated ("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning).")
+    val+=__shfl_down(val, 8);
+         ^
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include/sm_30_intrinsics.h(150): note #3287-D: because of a "deprecated" attribute
+  static __attribute__((device)) __inline__ __attribute__((deprecated("__shfl_down""() is deprecated in favor of ""__shfl_down""_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning)."))) float __shfl_down(float var, unsigned int delta, int width=32) ;
+                                                           ^
+
+cudaUtil.h(18): warning #1444-D: function "__shfl_down(float, unsigned int, int)" was declared deprecated ("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning).")
+    val+=__shfl_down(val, 4);
+         ^
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include/sm_30_intrinsics.h(150): note #3287-D: because of a "deprecated" attribute
+  static __attribute__((device)) __inline__ __attribute__((deprecated("__shfl_down""() is deprecated in favor of ""__shfl_down""_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning)."))) float __shfl_down(float var, unsigned int delta, int width=32) ;
+                                                           ^
+
+cudaUtil.h(19): warning #1444-D: function "__shfl_down(float, unsigned int, int)" was declared deprecated ("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning).")
+    val+=__shfl_down(val, 2);
+         ^
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include/sm_30_intrinsics.h(150): note #3287-D: because of a "deprecated" attribute
+  static __attribute__((device)) __inline__ __attribute__((deprecated("__shfl_down""() is deprecated in favor of ""__shfl_down""_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning)."))) float __shfl_down(float var, unsigned int delta, int width=32) ;
+                                                           ^
+
+cudaUtil.h(20): warning #1444-D: function "__shfl_down(float, unsigned int, int)" was declared deprecated ("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning).")
+    val+=__shfl_down(val, 1);
+         ^
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include/sm_30_intrinsics.h(150): note #3287-D: because of a "deprecated" attribute
+  static __attribute__((device)) __inline__ __attribute__((deprecated("__shfl_down""() is deprecated in favor of ""__shfl_down""_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress this warning)."))) float __shfl_down(float var, unsigned int delta, int width=32) ;
+                                                           ^
+
+RCBForceTree.cxx(293): warning #177-D: member "<unnamed>::sphdesign<14>::x" was declared but never referenced
+  const POSVEL_T sphdesign<14>::x[] = {
+                                ^
+
+RCBForceTree.cxx(310): warning #177-D: member "<unnamed>::sphdesign<14>::y" was declared but never referenced
+  const POSVEL_T sphdesign<14>::y[] = {
+                                ^
+
+RCBForceTree.cxx(327): warning #177-D: member "<unnamed>::sphdesign<14>::z" was declared but never referenced
+  const POSVEL_T sphdesign<14>::z[] = {
+                                ^
+
+RCBForceTree.cxx(217): warning #177-D: member "<unnamed>::sphdesign<6>::x" was declared but never referenced
+  const POSVEL_T sphdesign<6>::x[] = {
+                               ^
+
+RCBForceTree.cxx(226): warning #177-D: member "<unnamed>::sphdesign<6>::y" was declared but never referenced
+  const POSVEL_T sphdesign<6>::y[] = {
+                               ^
+
+RCBForceTree.cxx(235): warning #177-D: member "<unnamed>::sphdesign<6>::z" was declared but never referenced
+  const POSVEL_T sphdesign<6>::z[] = {
+                               ^
+
+RCBForceTree.cxx(196): warning #177-D: member "<unnamed>::sphdesign<4>::x" was declared but never referenced
+  const POSVEL_T sphdesign<4>::x[] = {
+                               ^
+
+RCBForceTree.cxx(203): warning #177-D: member "<unnamed>::sphdesign<4>::y" was declared but never referenced
+  const POSVEL_T sphdesign<4>::y[] = {
+                               ^
+
+RCBForceTree.cxx(210): warning #177-D: member "<unnamed>::sphdesign<4>::z" was declared but never referenced
+  const POSVEL_T sphdesign<4>::z[] = {
+                               ^
+
+RCBForceTree.cxx(178): warning #177-D: member "<unnamed>::sphdesign<3>::x" was declared but never referenced
+  const POSVEL_T sphdesign<3>::x[] = {
+                               ^
+
+RCBForceTree.cxx(184): warning #177-D: member "<unnamed>::sphdesign<3>::y" was declared but never referenced
+  const POSVEL_T sphdesign<3>::y[] = {
+                               ^
+
+RCBForceTree.cxx(190): warning #177-D: member "<unnamed>::sphdesign<3>::z" was declared but never referenced
+  const POSVEL_T sphdesign<3>::z[] = {
+                               ^
+
+RCBForceTree.cxx(163): warning #177-D: member "<unnamed>::sphdesign<2>::x" was declared but never referenced
+  const POSVEL_T sphdesign<2>::x[] = {
+                               ^
+
+RCBForceTree.cxx(168): warning #177-D: member "<unnamed>::sphdesign<2>::y" was declared but never referenced
+  const POSVEL_T sphdesign<2>::y[] = {
+                               ^
+
+RCBForceTree.cxx(173): warning #177-D: member "<unnamed>::sphdesign<2>::z" was declared but never referenced
+  const POSVEL_T sphdesign<2>::z[] = {
+                               ^
+
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1397; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1402; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1407; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1412; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1417; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1430; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1434; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1438; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1442; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1446; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1460; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1465; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1470; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1475; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1480; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1490; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1494; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1498; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1502; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1506; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1519; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1524; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1529; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1534; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1539; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1550; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1554; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1558; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1562; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1566; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1579; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1584; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1589; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1594; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1599; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1610; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1614; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1618; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1622; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1626; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1639; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1644; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1649; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1654; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1659; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1671; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1675; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1679; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1683; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1687; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1700; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1705; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1710; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1715; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1720; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1731; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1735; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1739; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1743; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 1747; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2186; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2191; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2196; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2201; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2206; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2219; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2223; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2227; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2231; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2235; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2253; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2258; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2263; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2268; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ptxas /tmp/tmpxft_00322a1e_00000000-6_RCBForceTree.ptx, line 2273; warning : Instruction 'shfl' without '.sync' is deprecated since PTX ISA version 6.0 and will be discontinued in a future PTX ISA version
+ar rv cuda/libBHForceTree.a cuda/RCBForceTree.o
+a - cuda/RCBForceTree.o
+nvcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o cuda/BGQStep16.o BGQStep16.c
+ar rv cuda/libBHForceTree.a cuda/BGQStep16.o
+a - cuda/BGQStep16.o
+nvcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o cuda/BGQCM.o BGQCM.c
+ar rv cuda/libBHForceTree.a cuda/BGQCM.o
+a - cuda/BGQCM.o
+ranlib cuda/libBHForceTree.a
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/Partition.o Partition.cxx
+ar rv cuda/libpartition.a cuda/Partition.o
+ar: creating cuda/libpartition.a
+a - cuda/Partition.o
+ranlib cuda/libpartition.a
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/Timings.o Timings.cxx
+Timings.cxx(133): warning #549-D: variable "rank" is used before its value is set
+    if (rank == 0) {
+        ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+Timings.cxx(136): warning #549-D: variable "nodes" is used before its value is set
+      cout << "     Timing results for " << nodes << " nodes:" << endl;
+                                            ^
+
+Timings.cxx(133): warning #549-D: variable "rank" is used before its value is set
+    if (rank == 0) {
+        ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+Timings.cxx(136): warning #549-D: variable "nodes" is used before its value is set
+      cout << "     Timing results for " << nodes << " nodes:" << endl;
+                                            ^
+
+ar rv cuda/libhalotime.a cuda/Timings.o
+ar: creating cuda/libhalotime.a
+a - cuda/Timings.o
+nvcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x cu -Idfft -c -o cuda/Timer.o Timer.cxx
+ar rv cuda/libhalotime.a cuda/Timer.o
+a - cuda/Timer.o
+ranlib cuda/libhalotime.a
+nvcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o cuda/bigchunk.o bigchunk.c
+bigchunk.c: In function 'bigchunk_free':
+bigchunk.c:86:40: warning: comparison of distinct pointer types lacks a cast
+   86 |         if (ptr < _bigchunk_ptr || ptr >= (char *)_bigchunk_ptr + _bigchunk_sz) {
+      |                                        ^~
+ar rv cuda/libbigchunk.a cuda/bigchunk.o
+ar: creating cuda/libbigchunk.a
+a - cuda/bigchunk.o
+ranlib cuda/libbigchunk.a
+nvcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o cuda/dims-local.o dims-local.c
+nvcc -o cuda/ForceTreeTest cuda/ForceTreeTest.o cuda/libparticle.a cuda/libBHForceTree.a cuda/libpartition.a cuda/libhalotime.a cuda/libbigchunk.a cuda/dims-local.o -lm -lrt -DUSE_SERIAL_COSMO=1
+rm cuda/BGQStep16.o cuda/BGQCM.o cuda/ParticleExchange.o cuda/RCBForceTree.o cuda/Timer.o cuda/Message.o cuda/bigchunk.o cuda/ForceLaw.o cuda/Partition.o cuda/ParticleDistribute.o cuda/RCOForceTree.o cuda/BHForceTree.o cuda/Timings.o cuda/InitialExchange.o

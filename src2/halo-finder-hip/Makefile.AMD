@@ -9,8 +9,11 @@ OPT=-O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO
 #HIPCC_FLAGS=-ffast_math -DINLINE_FORCE -I${MPI_INCLUDE}
 HIPCC_FLAGS=-I${MPI_INCLUDE} -I/opt/rocm/hip/include
 
+OBJDIR_TMP=objs
+
 HACC_PLATFORM=hip
-HACC_OBJDIR=${HACC_PLATFORM}
+##HACC_OBJDIR=${HACC_PLATFORM}
+HACC_OBJDIR=${OBJDIR_TMP}
 
 HACC_CFLAGS=${OPT} ${OMP} ${HIPCC_FLAGS}
 HACC_CC=${HIPCC_BIN}/hipcc -x c -Xclang -std=c99
@@ -139,7 +142,8 @@ $(OBJDIR)/libbigchunk.a: $(OBJDIR)/libbigchunk.a($(OBJDIR)/bigchunk.o)
 	ranlib $@
 
 clean:
-	rm -rf hip
+#	rm -rf hip
+	rm -rf $(OBJDIR_TMP)
 
 include ../include/halo-finder-AMD
 

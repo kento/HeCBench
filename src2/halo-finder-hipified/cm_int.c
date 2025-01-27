@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 #define POSVEL_T float
 #define ID_T int
 

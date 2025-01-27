@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 #include <hip/hip_runtime.h>
 #pragma once
 #include <stdio.h>

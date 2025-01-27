@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 /*=========================================================================
 
 Copyright (c) 2007, Los Alamos National Security, LLC

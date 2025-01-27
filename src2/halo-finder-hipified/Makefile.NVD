@@ -1,34 +1,36 @@
-HIPCC_BIN=/opt/rocm/bin
+LAUNCHER = bash -c
+NVCC_BIN=hipcc
 
 # the path may be adjusted for each platform
-MPI_INCLUDE=/usr/lib/x86_64-linux-gnu/openmpi/include
+#MPI_INCLUDE=/usr/lib/x86_64-linux-gnu/openmpi/include
+MPI_INCLUDE=/usr/include/openmpi-x86_64/
 
 OPT=-O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO
 
-#HIPCC_FLAGS=-ffast_math -DINLINE_FORCE -I${MPI_INCLUDE}
-HIPCC_FLAGS=-I${MPI_INCLUDE} -I/opt/rocm/hip/include
+#NVCC_FLAGS= -DINLINE_FORCE -I${MPI_INCLUDE}
+NVCC_FLAGS=-I${MPI_INCLUDE}
 
 OBJDIR_TMP=objs
 
-HACC_PLATFORM=hip
-##HACC_OBJDIR=${HACC_PLATFORM}
+HACC_PLATFORM=cuda
+#HACC_OBJDIR=${HACC_PLATFORM}
 HACC_OBJDIR=${OBJDIR_TMP}
 
-HACC_CFLAGS=${OPT} ${OMP} ${HIPCC_FLAGS}
-HACC_CC=${HIPCC_BIN}/hipcc -x c -Xclang -std=c99
+HACC_CFLAGS=${OPT} ${OMP} ${NVCC_FLAGS}
+HACC_CC=hipcc -x c
 
-HACC_CXXFLAGS=${OPT} ${OMP} ${HIPCC_FLAGS}
-HACC_CXX=${HIPCC_BIN}/hipcc -Xclang
+HACC_CXXFLAGS=${OPT} ${OMP} ${NVCC_FLAGS}
+HACC_CXX=hipcc
 
 HACC_LDFLAGS=-lm -lrt
 
-HACC_NUM_HIP_DEV="1"
-HACC_MPI_CFLAGS=${OPT} ${OMP} ${HIPCC_FLAGS}
-HACC_MPI_CC=${HIPCC_BIN}/hipcc -x c -Xclang -std=c99 -Xclang -pthread
+HACC_NUM_CUDA_DEV="1"
+HACC_MPI_CFLAGS=${OPT} ${OMP} ${NVCC_FLAGS}
+HACC_MPI_CC=hipcc -x c
 
-HACC_MPI_CXXFLAGS=${OPT} ${OMP} ${HIPCC_FLAGS}
-HACC_MPI_CXX=${HIPCC_BIN}/hipcc -Xclang -pthread
-HACC_MPI_LD=${HIPCC_BIN}/hipcc -Xclang -pthread
+HACC_MPI_CXXFLAGS=${OPT} ${OMP} ${NVCC_FLAGS}
+HACC_MPI_CXX=hipcc
+HACC_MPI_LD=hipcc
 
 HACC_MPI_LDFLAGS=-lm -lrt
 
@@ -36,35 +38,14 @@ OBJDIR = ${HACC_OBJDIR}
 #SOBJDIR = ${HACC_OBJDIR}_serial
 
 
-PROGS    = \
-	$(OBJDIR)/ForceTreeTest
+PROGS    = 	$(OBJDIR)/ForceTreeTest
 
 
-LIBS	= \
-	$(OBJDIR)/libpartition.a \
-	$(OBJDIR)/libparticle.a \
-	$(OBJDIR)/libBHForceTree.a \
-	$(OBJDIR)/libhalotime.a \
-	$(OBJDIR)/libbigchunk.a
+LIBS	= 	$(OBJDIR)/libpartition.a 	$(OBJDIR)/libparticle.a 	$(OBJDIR)/libBHForceTree.a 	$(OBJDIR)/libhalotime.a 	$(OBJDIR)/libbigchunk.a
 
 
 # Probably need to fix dependencies on some of the header files.
-HDR= \
-	RCBForceTree.h \
-	RCOForceTree.h \
-	BHForceTree.h \
-	CosmoHalo.h \
-	Definition.h \
-	ForceLaw.h \
-	ForceTree.h \
-	InitialExchange.h \
-	Message.h \
-	Partition.h \
-	ParticleDistribute.h \
-	ParticleExchange.h \
-	Timer.h \
-	Timings.h \
-	hipUtil.h
+HDR= 	RCBForceTree.h 	RCOForceTree.h 	BHForceTree.h 	CosmoHalo.h 	Definition.h 	ForceLaw.h 	ForceTree.h 	InitialExchange.h 	Message.h 	Partition.h 	ParticleDistribute.h 	ParticleExchange.h 	Timer.h 	Timings.h 	cudaUtil.h
 
 
 all: ${PROGS}
@@ -85,6 +66,7 @@ CXXFLAGS += ${HF_WARNING}
 #CXXFLAGS += -g
 #CXXFLAGS += -DDEBUG
 CXXFLAGS += -I.
+CXXFLAGS += -x hip
 #LDFLAGS  = ${MPI_LD_FLAGS} -lmpi_cxx
 
 CFLAGS += -Idfft
@@ -122,7 +104,7 @@ dims-local.c: dfft/dims.c
 
 
 $(OBJDIR)/ForceTreeTest: $(OBJDIR)/ForceTreeTest.o $(OBJDIR)/libparticle.a $(OBJDIR)/libBHForceTree.a $(OBJDIR)/libpartition.a $(OBJDIR)/libhalotime.a $(OBJDIR)/libbigchunk.a $(OBJDIR)/dims-local.o
-	${HACC_MPI_CXX} -o $@ $^ ${CXXFLAGS} ${LDFLAGS} -DUSE_SERIAL_COSMO=1
+	${HACC_MPI_CXX} -o $@ $^ ${LDFLAGS} -DUSE_SERIAL_COSMO=1
 
 $(OBJDIR)/libpartition.a: $(OBJDIR)/libpartition.a($(OBJDIR)/Partition.o)
 	ranlib $@
@@ -162,8 +144,17 @@ $(OBJDIR)/libbigchunk.a: $(OBJDIR)/libbigchunk.a($(OBJDIR)/bigchunk.o)
 	ranlib $@
 
 clean:
-#	rm -rf hip
+#	rm -rf cuda
 	rm -rf $(OBJDIR_TMP)
 
+include ../include/halo-finder-NVIDIA
+
 run: progs
-	$(LAUNCHER) ./objs/ForceTreeTest 0.5 0.1 10000 0.1 10 N 12 rcb
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: progs
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill nvidia-smi
+	../scripts/m.sh
+

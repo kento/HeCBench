@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 // Compatibility file for C99 and C++ complex.  This header
 // can be included by either C99 or ANSI C++ programs to
 // allow complex arithmetic to be written in a common subset.
