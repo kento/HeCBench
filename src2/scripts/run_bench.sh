@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "${1}" ];then
-  echo Usage : ./scripts/run_bench.sh BENCHMARK_NAME GPU_TYPE [run_mem]
+  echo Usage : ./scripts/run_bench.sh BENCHMARK_NAME GPU_TYPE [run/run_mem] [timeout]
   exit
 else
   echo "running ${1} on ${2}"
@@ -11,37 +11,40 @@ else
   if [ -n "${3}" ];then
     run="${3}"
   fi
-
+  timeout_cmd=""
+  if [ -n "${4}" ];then
+    timeout_cmd=timeout
+  fi
   if [[ "${2}" == "NVIDIA" ]];then
     if [ -e ${1}-cuda ];then
       echo "running benchmark under ${1}-cuda"
       cd ${1}-cuda
-      make -f Makefile.NVD ${run}
+      ${timeout_cmd} ${4} make -f Makefile.NVD ${run} 1> log_run_bench.std 2> log_run_bench.err
       cd ..
     fi
     if [ -e ${1}-omp_nvc ];then
       echo "running benchmark under ${1}-omp_nvc"
       cd ${1}-omp_nvc
-      make -f Makefile.NVD ${run}
+      ${timeout_cmd} ${4} make -f Makefile.NVD ${run} 1> log_run_bench.std 2> log_run_bench.err
       cd ..
     fi
   elif [[ "${2}" == "AMD" ]];then
     echo "running benchmark under ${1}-hip"
     if [ -e ${1}-hip ];then
       cd ${1}-hip
-      make -f Makefile.AMD ${run}
+      ${timeout_cmd} ${4} make -f Makefile.AMD ${run} 1> log_run_bench.std 2> log_run_bench.err
       cd ..
     fi
     if [ -e ${1}-hipified ];then
       echo "running benchmark under ${1}-hipified"
       cd ${1}-hipified
-      make -f Makefile.AMD ${run}
+      ${timeout_cmd} ${4} make -f Makefile.AMD ${run} 1> log_run_bench.std 2> log_run_bench.err
       cd ..
     fi
     if [ -e ${1}-omp_aomp ];then
       echo "running benchmark under ${1}-omp_aomp"
       cd ${1}-omp_aomp
-      make -f Makefile.AMD ${run}
+      ${timeout_cmd} ${4} make -f Makefile.AMD ${run} 1> log_run_bench.std 2> log_run_bench.err
       cd ..
     fi
   else
