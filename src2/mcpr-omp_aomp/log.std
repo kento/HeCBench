@@ -1,0 +1,6 @@
+Average kernel execution time: 0.304775 (s)
+compute_probs: checksum = 26280.000000
+Average kernel execution time: 0.181584 (s)
+compute_probs_unitStrides: checksum = 26280.000000
+Average kernel execution time: 0.188976 (s)
+compute_probs_unitStrides_sharedMem: checksum = 26280.000000

@@ -1,6 +1,6 @@
 CPU offset: 0
-Total execution time: 6784.110069 ms
-Average kernel execution time: 12.802391 us
+Total execution time: 6683.719873 ms
+Average kernel execution time: 12.615479 us
 
 > TEMPERATURE REGRESSION (96453)
 

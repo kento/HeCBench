@@ -230,10 +230,10 @@ misc_math.c:74:22: warning: comparison of integer expressions of different signe
       |                    ~~^~~~~~~~~~~
 nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -I./meschach_lib --x cu -O3 helper.c -c
 cd ./meschach_lib; make cleanup; make all CC=nvcc; make clean
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-cuda/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-cuda/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat *.a 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-cuda/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-cuda/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-cuda/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-cuda/meschach_lib'
 nvcc -c -O3 --x cu -DHAVE_CONFIG_H -DANSI_C copy.c
 copy.c(229): warning #550-D: variable "dim0" was set but never used
       int dim0, i;
@@ -2244,8 +2244,8 @@ zschur.c(39): warning #177-D: variable "rcsid" was declared but never referenced
               ^
 
 ar ru meschach.a zlufctr.o zsolve.o zmatlab.o zhsehldr.o zqrfctr.o zgivens.o  zhessen.o zschur.o; ranlib meschach.a
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-cuda/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-cuda/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-cuda/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-cuda/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-cuda/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-cuda/meschach_lib'
 nvcc  -o leukocyte avilib.o 		track_ellipse.o 		track_ellipse_gpu.o 		find_ellipse.o 		misc_math.o 		detect_main.o 		helper.o 		./meschach_lib/meschach.a -lm

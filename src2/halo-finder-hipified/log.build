@@ -1,3 +1,4 @@
+mkdir -p objs
 hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/ForceTreeTest.o ForceTreeTest.cxx
 ForceTreeTest.cxx:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
    85 |   hipHostMalloc(&m_xArr, Np*sizeof(POSVEL_T));

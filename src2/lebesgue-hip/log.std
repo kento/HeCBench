@@ -1,10 +1,10 @@
 
 LEBESGUE_TEST
-25 January 2025 11:47:45 PM
+28 January 2025 05:47:01 PM
 
 LEBESGUE_TEST01:
   Analyze Chebyshev1 points.
-  Total kernel execution time 1.285755 (s)
+  Total kernel execution time 1.265916 (s)
 
   Chebyshev1 Lebesgue constants for N = 1 to 11:
 
@@ -36,7 +36,7 @@ LEBESGUE_TEST01:
 
 LEBESGUE_TEST02:
   Analyze Chebyshev2 points.
-  Total kernel execution time 1.177122 (s)
+  Total kernel execution time 1.180779 (s)
 
   Chebyshev2 Lebesgue constants for N = 1 to 11:
 
@@ -68,7 +68,7 @@ LEBESGUE_TEST02:
 
 LEBESGUE_TEST03:
   Analyze Chebyshev3 points.
-  Total kernel execution time 1.930857 (s)
+  Total kernel execution time 1.902934 (s)
 
   Chebyshev3 Lebesgue constants for N = 1 to 11:
 
@@ -100,7 +100,7 @@ LEBESGUE_TEST03:
 
 LEBESGUE_TEST04:
   Analyze Chebyshev4 points.
-  Total kernel execution time 1.875073 (s)
+  Total kernel execution time 1.916969 (s)
 
   Chebyshev4 Lebesgue constants for N = 1 to 11:
 
@@ -132,7 +132,7 @@ LEBESGUE_TEST04:
 
 LEBESGUE_TEST05:
   Analyze Equidistant1 points.
-  Total kernel execution time 1.907609 (s)
+  Total kernel execution time 1.891368 (s)
 
   Equidistant1 Lebesgue constants for N = 1 to 11:
 
@@ -164,7 +164,7 @@ LEBESGUE_TEST05:
 
 LEBESGUE_TEST06:
   Analyze Equidistant2 points.
-  Total kernel execution time 1.911442 (s)
+  Total kernel execution time 1.903448 (s)
 
   Equidistant2 Lebesgue constants for N = 1 to 11:
 
@@ -196,7 +196,7 @@ LEBESGUE_TEST06:
 
 LEBESGUE_TEST07:
   Analyze Equidistant3 points.
-  Total kernel execution time 1.893255 (s)
+  Total kernel execution time 1.904692 (s)
 
   Equidistant3 Lebesgue constants for N = 1 to 11:
 
@@ -228,7 +228,7 @@ LEBESGUE_TEST07:
 
 LEBESGUE_TEST08:
   Analyze Fejer1 points.
-  Total kernel execution time 1.907423 (s)
+  Total kernel execution time 1.905416 (s)
 
   Fejer1 Lebesgue constants for N = 1 to 11:
 
@@ -260,7 +260,7 @@ LEBESGUE_TEST08:
 
 LEBESGUE_TEST09:
   Analyze Fejer2 points.
-  Total kernel execution time 1.909487 (s)
+  Total kernel execution time 1.904263 (s)
 
   Fejer2 Lebesgue constants for N = 1 to 11:
 
@@ -289,12 +289,12 @@ LEBESGUE_TEST09:
          8:       0.707107
          9:       0.866025
         10:       0.965926
-25 January 2025 11:48:02 PM
-25 January 2025 11:48:02 PM
+28 January 2025 05:47:17 PM
+28 January 2025 05:47:17 PM
 
 LEBESGUE_TEST01:
   Analyze Chebyshev1 points.
-  Total kernel execution time 1.904146 (s)
+  Total kernel execution time 1.905635 (s)
 
   Chebyshev1 Lebesgue constants for N = 1 to 11:
 
@@ -326,7 +326,7 @@ LEBESGUE_TEST01:
 
 LEBESGUE_TEST02:
   Analyze Chebyshev2 points.
-  Total kernel execution time 1.901362 (s)
+  Total kernel execution time 1.900050 (s)
 
   Chebyshev2 Lebesgue constants for N = 1 to 11:
 
@@ -358,7 +358,7 @@ LEBESGUE_TEST02:
 
 LEBESGUE_TEST03:
   Analyze Chebyshev3 points.
-  Total kernel execution time 1.901583 (s)
+  Total kernel execution time 1.903589 (s)
 
   Chebyshev3 Lebesgue constants for N = 1 to 11:
 
@@ -390,7 +390,7 @@ LEBESGUE_TEST03:
 
 LEBESGUE_TEST04:
   Analyze Chebyshev4 points.
-  Total kernel execution time 1.933274 (s)
+  Total kernel execution time 1.900634 (s)
 
   Chebyshev4 Lebesgue constants for N = 1 to 11:
 
@@ -422,7 +422,7 @@ LEBESGUE_TEST04:
 
 LEBESGUE_TEST05:
   Analyze Equidistant1 points.
-  Total kernel execution time 1.869917 (s)
+  Total kernel execution time 1.901027 (s)
 
   Equidistant1 Lebesgue constants for N = 1 to 11:
 
@@ -454,7 +454,7 @@ LEBESGUE_TEST05:
 
 LEBESGUE_TEST06:
   Analyze Equidistant2 points.
-  Total kernel execution time 1.894626 (s)
+  Total kernel execution time 1.908009 (s)
 
   Equidistant2 Lebesgue constants for N = 1 to 11:
 
@@ -486,7 +486,7 @@ LEBESGUE_TEST06:
 
 LEBESGUE_TEST07:
   Analyze Equidistant3 points.
-  Total kernel execution time 1.896470 (s)
+  Total kernel execution time 1.902181 (s)
 
   Equidistant3 Lebesgue constants for N = 1 to 11:
 
@@ -518,7 +518,7 @@ LEBESGUE_TEST07:
 
 LEBESGUE_TEST08:
   Analyze Fejer1 points.
-  Total kernel execution time 1.927326 (s)
+  Total kernel execution time 1.904835 (s)
 
   Fejer1 Lebesgue constants for N = 1 to 11:
 
@@ -550,7 +550,7 @@ LEBESGUE_TEST08:
 
 LEBESGUE_TEST09:
   Analyze Fejer2 points.
-  Total kernel execution time 1.870131 (s)
+  Total kernel execution time 1.901367 (s)
 
   Fejer2 Lebesgue constants for N = 1 to 11:
 
@@ -579,4 +579,4 @@ LEBESGUE_TEST09:
          8:       0.707107
          9:       0.866025
         10:       0.965926
-25 January 2025 11:48:20 PM
+28 January 2025 05:47:36 PM

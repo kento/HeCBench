@@ -6,10 +6,10 @@ hipcc   -Wall -std=c++11 -I./meschach_lib -x hip -O3 find_ellipse.c -c
 hipcc   -Wall -std=c++11 -I./meschach_lib -x hip -O3 misc_math.c -c
 hipcc   -Wall -std=c++11 -I./meschach_lib -x hip -O3 helper.c -c
 cd ./meschach_lib; make cleanup; make all CC=hipcc; make clean
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-hip/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-hip/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat *.a 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-hip/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-hip/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-hip/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-hip/meschach_lib'
 hipcc -c -O3 -x c++ -DHAVE_CONFIG_H -DANSI_C copy.c
 hipcc -c -O3 -x c++ -DHAVE_CONFIG_H -DANSI_C err.c
 err.c:62:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
@@ -1783,8 +1783,8 @@ zschur.c:67:5: warning: ISO C++11 does not allow conversion from string literal 
       | ^
 1 warning generated.
 ar ru meschach.a zlufctr.o zsolve.o zmatlab.o zhsehldr.o zqrfctr.o zgivens.o  zhessen.o zschur.o; ranlib meschach.a
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-hip/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-hip/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-hip/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-hip/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-hip/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-hip/meschach_lib'
 hipcc  -o leukocyte avilib.o 		track_ellipse.o 		track_ellipse_gpu.o 		find_ellipse.o 		misc_math.o 		detect_main.o 		helper.o 		./meschach_lib/meschach.a -lm

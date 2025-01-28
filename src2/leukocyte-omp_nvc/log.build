@@ -502,10 +502,10 @@ std_dev(VEC*):
      74, Generated vector simd code for the loop containing reductions
 nvc++   -std=c++11 -Wall -I./meschach_lib -O3 -Minfo -mp=gpu -gpu=cc90 helper.c -c
 cd ./meschach_lib; make cleanup; make all CC=nvc++; make clean
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-omp_nvc/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_nvc/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat *.a 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-omp_nvc/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-omp_nvc/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_nvc/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_nvc/meschach_lib'
 nvc++ -c -O3 -DHAVE_CONFIG_H -DANSI_C copy.c
 "copy.c", line 229: warning: variable "dim0" was set but never used [set_but_not_used]
       int		dim0, i;
@@ -1740,8 +1740,8 @@ Remark: individual warnings can be suppressed with "--diag_suppress <warning-nam
               ^
 
 ar ru meschach.a zlufctr.o zsolve.o zmatlab.o zhsehldr.o zqrfctr.o zgivens.o  zhessen.o zschur.o; ranlib meschach.a
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-omp_nvc/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-omp_nvc/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_nvc/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_nvc/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work5/src2/leukocyte-omp_nvc/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_nvc/meschach_lib'
 nvc++  -std=c++11 -Wall -I./meschach_lib -O3 -Minfo -mp=gpu -gpu=cc90 -o leukocyte avilib.o 		track_ellipse.o 		track_ellipse_gpu.o 		find_ellipse.o 		misc_math.o 		detect_main.o 		helper.o 		./meschach_lib/meschach.a -lm

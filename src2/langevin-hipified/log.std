@@ -1,6 +1,6 @@
-Average execution time of k0: 0.036124 (s)
-Average execution time of k1: 0.019134 (s)
-Average execution time of k2: 0.014448 (s)
+Average execution time of k0: 0.035981 (s)
+Average execution time of k1: 0.019075 (s)
+Average execution time of k2: 0.014440 (s)
 
 Error statistics for the kernels:
 16.000000 16.000000 16.000000 

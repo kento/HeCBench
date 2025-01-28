@@ -1,0 +1,158 @@
+GPU LDPC Decoder
+Computing...
+
+Total kernel execution time: 0.443699 (s)
+# codewords = 80, CW=2, MCW=40
+total bit error = 0
+total frame error = 0
+BER = 0.00e+00, FER = 0.00e+00
+
+Total kernel execution time: 0.441864 (s)
+# codewords = 160, CW=2, MCW=40
+total bit error = 0
+total frame error = 0
+BER = 0.00e+00, FER = 0.00e+00
+
+Total kernel execution time: 0.445006 (s)
+# codewords = 240, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 1.81e-03, FER = 2.08e+00
+
+Total kernel execution time: 0.452152 (s)
+# codewords = 320, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 1.36e-03, FER = 1.56e+00
+
+Total kernel execution time: 0.475353 (s)
+# codewords = 400, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 1.09e-03, FER = 1.25e+00
+
+Total kernel execution time: 0.430803 (s)
+# codewords = 480, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 9.04e-04, FER = 1.04e+00
+
+Total kernel execution time: 0.437908 (s)
+# codewords = 560, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 7.75e-04, FER = 8.93e-01
+
+Total kernel execution time: 0.430362 (s)
+# codewords = 640, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 6.78e-04, FER = 7.81e-01
+
+Total kernel execution time: 0.430247 (s)
+# codewords = 720, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 6.03e-04, FER = 6.94e-01
+
+Total kernel execution time: 0.430754 (s)
+# codewords = 800, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 5.43e-04, FER = 6.25e-01
+
+Total kernel execution time: 0.437919 (s)
+# codewords = 880, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 4.93e-04, FER = 5.68e-01
+
+Total kernel execution time: 0.430471 (s)
+# codewords = 960, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 4.52e-04, FER = 5.21e-01
+
+Total kernel execution time: 0.438049 (s)
+# codewords = 1040, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 4.17e-04, FER = 4.81e-01
+
+Total kernel execution time: 0.429678 (s)
+# codewords = 1120, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 3.88e-04, FER = 4.46e-01
+
+Total kernel execution time: 0.436047 (s)
+# codewords = 1200, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 3.62e-04, FER = 4.17e-01
+
+Total kernel execution time: 0.430442 (s)
+# codewords = 1280, CW=2, MCW=40
+total bit error = 500
+total frame error = 500
+BER = 3.39e-04, FER = 3.91e-01
+
+Total kernel execution time: 0.429345 (s)
+# codewords = 1360, CW=2, MCW=40
+total bit error = 1000
+total frame error = 1000
+BER = 6.38e-04, FER = 7.35e-01
+
+Total kernel execution time: 0.429978 (s)
+# codewords = 1440, CW=2, MCW=40
+total bit error = 1000
+total frame error = 1000
+BER = 6.03e-04, FER = 6.94e-01
+
+Total kernel execution time: 0.429400 (s)
+# codewords = 1520, CW=2, MCW=40
+total bit error = 1000
+total frame error = 1000
+BER = 5.71e-04, FER = 6.58e-01
+
+Total kernel execution time: 0.430066 (s)
+# codewords = 1600, CW=2, MCW=40
+total bit error = 1000
+total frame error = 1000
+BER = 5.43e-04, FER = 6.25e-01
+
+Total kernel execution time: 0.429066 (s)
+# codewords = 1680, CW=2, MCW=40
+total bit error = 1000
+total frame error = 1000
+BER = 5.17e-04, FER = 5.95e-01
+
+Total kernel execution time: 0.429933 (s)
+# codewords = 1760, CW=2, MCW=40
+total bit error = 1000
+total frame error = 1000
+BER = 4.93e-04, FER = 5.68e-01
+
+Total kernel execution time: 0.429659 (s)
+# codewords = 1840, CW=2, MCW=40
+total bit error = 1000
+total frame error = 1000
+BER = 4.72e-04, FER = 5.43e-01
+
+Total kernel execution time: 0.437346 (s)
+# codewords = 1920, CW=2, MCW=40
+total bit error = 1500
+total frame error = 1500
+BER = 6.78e-04, FER = 7.81e-01
+
+Total kernel execution time: 0.430096 (s)
+# codewords = 2000, CW=2, MCW=40
+total bit error = 1500
+total frame error = 1500
+BER = 6.51e-04, FER = 7.50e-01
+
+Total kernel execution time: 0.429555 (s)
+# codewords = 2080, CW=2, MCW=40
+total bit error = 1500
+total frame error = 1500
+BER = 6.26e-04, FER = 7.21e-01
