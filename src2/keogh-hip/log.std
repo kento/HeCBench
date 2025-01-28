@@ -1,4 +1,4 @@
 Query length = 256
 Subject length = 200000000
-Average kernel execution time: 0.130235 (s)
+Average kernel execution time: 0.129579 (s)
 PASS

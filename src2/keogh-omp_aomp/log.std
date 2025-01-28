@@ -1,0 +1,5 @@
+Query length = 256
+Subject length = 200000000
+Average kernel execution time: 1.179713 (s)
+14 48940.914062 48940.902344
+FAIL

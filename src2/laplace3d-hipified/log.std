@@ -4,7 +4,7 @@ Result verification enabled
 
 dimGrid  = 32 128 1 
 dimBlock = 32 8 1 
-Average kernel execution time: 0.020213 (s)
+Average kernel execution time: 0.020279 (s)
 
  rms error = 0.000000 
 
@@ -13,4 +13,4 @@ Result verification disabled
 
 dimGrid  = 32 128 1 
 dimBlock = 32 8 1 
-Average kernel execution time: 0.020344 (s)
+Average kernel execution time: 0.020453 (s)
