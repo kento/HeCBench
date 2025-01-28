@@ -5,9 +5,9 @@
 | hausdorff | 32.73 | 14.40 | 14.40 | 33.92 | 15.64 |
 | haversine | 6.46 | 1.85 | 2.05 | 6.52 | compile err |
 | hbc | 15.68 | 15.25 | 15.24 | -- | -- |
-| heartwall | 4.66 | 1.97 | 1.93 | 4.79 | 2.28 |
+| heartwall | 4.66 | 1.97 | 1.93 | exe err | 2.28 |
 | heat | 26.31 | 39.72 | 40.25 | 91.48 | 69.52 |
-| heat2d | compile err | compile err | 11.50 | | 329.62 |
+| heat2d | compile err | compile err | 11.50 | 248.52 | 329.62 |
 | hellinger | 7.13 | 6.61 | 6.62 | 6.87 | 6.52 |
 | henry | 5.87 | 2.93 | 3.89 | 5.07 | compile err |
 | hexciton | 6.06 | 7.37 | compile err | 6.82 | 17.83 |
@@ -21,7 +21,7 @@
 | hwt1d | 6.12 | 3.46 | 3.47 | 6.37 | compile err |
 | hybridsort | 17.40 | 16.39 | 16.36 | 18.47 | 16.45 |
 | hypterm | 10.92 | 15.09 | 15.05 | compile err | 20.58 |
-| idivide | 7.92 | 6.23 | 6.23 | 11.15 | 17.03 |
+| idivide | 7.92 | 6.23 | 6.23 | 11.15 | exe err |
 | interleave | 6.02 | 3.46 | 3.47 | 5.30 | 3.39 |
 | interval | 13.69 | 46.97 | 47.13 | 17.43 | 55.60 |
 | intrinsics-cast | 69.54 | 9.21 | 9.22 | -- | -- |
@@ -43,7 +43,7 @@
 | kurtosis | 22.01 | 167.60 | 167.91 | -- | -- |
 | lanczos | 6.90 | 3.34 | 3.26 | 7.31 | 3.91 |
 | langevin | 73.86 | 10.62 | 13.19 | 74.80 | compile err |
-| langford | 4.89 | 2.58 | 2.59 | compile err | 0.39 |
+| langford | 4.89 | 2.58 | 2.59 | compile err | exe err |
 | laplace | 5.84 | 4.45 | 4.45 | 9.40 | 21.52 |
 | laplace3d | 95.07 | 17.66 | 17.76 | 56.92 | compile err |
 | lavaMD | 104.12 | 61.88 | 61.77 | 194.21 | 55.93 |
@@ -58,8 +58,8 @@
 | libor | 4.75 | 1.29 | 1.29 | 5.20 | compile err |
 | lid-driven-cavity | 12.87 | 16.59 | 16.56 | 26.01 | compile err |
 | lif | 133.75 | 77.13 | 76.29 | 150.82 | compile err |
-| linearprobing | 106.78 | 76.77 | 76.54 | compile err | 1.93 |
-| log2 | 6.85 | 1.27 | 1.28 | 0.03 | 1.78 |
+| linearprobing | 106.78 | 76.77 | 76.54 | compile err | exe err |
+| log2 | 6.85 | 1.27 | 1.28 | exe err | 1.78 |
 | logan | 10.75 | 15.29 | 15.64 | -- | -- |
 | logic-resim | compile err | 7.53 | 7.52 | -- | -- |
 | logic-rewrite | 52.42 | compile err | compile err | -- | -- |
@@ -93,3 +93,4 @@
 | memcpy | 7.45 | 19.46 | 19.69 | compile err | compile err |
 | memtest | 20.17 | 28.04 | 28.04 | 21.57 | 38.18 |
 | merge | 1657.99 | 1798.11 | 1799.55 | 1623.48 | 1814.24 |
+
