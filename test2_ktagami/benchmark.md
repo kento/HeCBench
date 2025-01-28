@@ -20,7 +20,7 @@
 | hungarian | 4.65 | 0.76 | 0.75 | -- | -- |
 | hwt1d | 6.12 | 3.46 | 3.47 | 6.37 | compile err |
 | hybridsort | 17.40 | 16.39 | 16.36 | 18.47 | 16.45 |
-| hypterm | 10.92 | 15.09 | 15.05 | compile err | 20.58 |
+| hypterm | 10.92 | 15.09 | 15.05 | 18.92 | 20.58 |
 | idivide | 7.92 | 6.23 | 6.23 | 11.15 | exe err |
 | interleave | 6.02 | 3.46 | 3.47 | 5.30 | 3.39 |
 | interval | 13.69 | 46.97 | 47.13 | 17.43 | 55.60 |
@@ -31,7 +31,7 @@
 | ising | 33.95 | 15.69 | 15.71 | 33.13 | 22.85 |
 | iso2dfd | 22.57 | 61.89 | 60.41 | 21.23 | 61.67 |
 | jaccard | 197.46 | 254.66 | compile err | -- | -- |
-| jacobi | 4.81 | 8.91 | compile err | compile err | 5.95 |
+| jacobi | 4.81 | 8.91 | compile err | 5.41 | 5.95 |
 | jenkins-hash | 9.50 | 5.10 | 5.11 | 9.52 | 5.57 |
 | kalman | 22.24 | 27.95 | 27.95 | 17.54 | compile err |
 | keccaktreehash | 11.89 | 10.72 | 10.73 | 12.56 | 10.70 |
@@ -53,7 +53,7 @@
 | lda | 5.36 | 2.07 | 2.07 | compile err | 14.90 |
 | ldpc | 7.08 | 11.21 | 11.19 | 12.12 | compile err |
 | lebesgue | 12.90 | 35.08 | compile err | 9.65 | compile err |
-| leukocyte | compile err | compile err | compile err | compile err | compile err |
+| leukocyte | 4.76 | 1.18 | 1.09 | 6.07 | compile err |
 | lfib4 | 188.11 | 31.34 | 28.44 | -- | -- |
 | libor | 4.75 | 1.29 | 1.29 | 5.20 | compile err |
 | lid-driven-cavity | 12.87 | 16.59 | 16.56 | 26.01 | compile err |
@@ -71,7 +71,7 @@
 | lsqt | compile err | 60.44 | compile err | 59.87 | 3224.33 |
 | lud | 20.77 | 10.18 | 10.19 | 62.18 | 21.33 |
 | ludb | 6.93 | 9.73 | compile err | -- | -- |
-| lulesh | 13.37 | 15.84 | 13.93 | compile err | 566.69 |
+| lulesh | 13.37 | 15.84 | 13.93 | 14.09 | 566.69 |
 | lzss | | | | -- | -- |
 | mallocFree | 5.63 | 9.40 | compile err | compile err | 0.72 |
 | mandelbrot | 7.37 | 16.41 | 15.85 | 5.63 | 13.34 |
@@ -93,4 +93,3 @@
 | memcpy | 7.45 | 19.46 | 19.69 | compile err | compile err |
 | memtest | 20.17 | 28.04 | 28.04 | 21.57 | 38.18 |
 | merge | 1657.99 | 1798.11 | 1799.55 | 1623.48 | 1814.24 |
-
