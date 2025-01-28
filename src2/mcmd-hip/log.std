@@ -1,4 +1,4 @@
-MCMD started on 01-26-2025 at 18:03:26
+MCMD started on 01-28-2025 at 14:28:53
 qc-mi250-00.cloud.r-ccs.riken.jp
 model name	: AMD EPYC 7713 64-Core Processor
 1007.16 GB memory available on this node (Linux).
@@ -141,11 +141,11 @@ Calculated Nose-Hoover Q parameter = 683135200.000000 K fs^2 with scale factor =
 |  BEGINNING MOLECULAR DYNAMICS SIMULATION  |
 | ========================================= |
 
-Device offload time: 10.093088 (s)
+Device offload time: 10.197158 (s)
 MCMD (GPU) Molecular Dynamics: gpu_md_water_octane_SMALL (mcmd.inp)
 Input atoms: input.pqr
 Ensemble: NVT; N_movables = 955 N_atoms = 3371
-Time elapsed = 10.48 s = inf sec/step; ETA = inf min = inf hrs
+Time elapsed = 10.58 s = inf sec/step; ETA = inf min = inf hrs
 Step: 0 / 10; Progress = 0.000%; Realtime = 0.00000 fs
         Input T = 298.0000 K | simulated annealing (off)
       Average T = 297.9480 +- 0.0000 K
@@ -168,20 +168,20 @@ Average v = 895.77 m/s; v_init = 895.77 m/s
     H2O VACF = 0.00000e+00
 --------------------
 
-Device offload time: 9.906524 (s)
-Device offload time: 9.695780 (s)
-Device offload time: 9.813823 (s)
-Device offload time: 9.553212 (s)
-Device offload time: 9.875541 (s)
-Device offload time: 9.965655 (s)
-Device offload time: 10.401372 (s)
-Device offload time: 10.243129 (s)
-Device offload time: 10.586309 (s)
-Device offload time: 10.100332 (s)
+Device offload time: 9.961256 (s)
+Device offload time: 9.933284 (s)
+Device offload time: 9.773814 (s)
+Device offload time: 10.147088 (s)
+Device offload time: 10.030042 (s)
+Device offload time: 9.875059 (s)
+Device offload time: 10.715815 (s)
+Device offload time: 9.781922 (s)
+Device offload time: 10.268528 (s)
+Device offload time: 9.705305 (s)
 MCMD (GPU) Molecular Dynamics: gpu_md_water_octane_SMALL (mcmd.inp)
 Input atoms: input.pqr
 Ensemble: NVT; N_movables = 955 N_atoms = 3371
-Time elapsed = 110.84 s = 11.0842 sec/step; ETA = 0.000 min = 0.000 hrs
+Time elapsed = 110.99 s = 11.0989 sec/step; ETA = 0.000 min = 0.000 hrs
 Step: 10 / 10; Progress = 100.000%; Realtime = 10.00000 fs
         Input T = 298.0000 K | simulated annealing (off)
       Average T = 299.3604 +- 1.4124 K
@@ -204,4 +204,4 @@ Average v = 897.34 m/s; v_init = 895.77 m/s
     H2O VACF = 9.92869e-01
 --------------------
 
-Total wall time = 110.878127 s
+Total wall time = 111.027422 s
