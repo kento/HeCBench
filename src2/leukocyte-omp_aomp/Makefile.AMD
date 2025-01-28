@@ -9,7 +9,8 @@ LAUNCHER = bash -c
 MATRIX_DIR = ./meschach_lib
 
 # Standard flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++11 -Wall -I$(MATRIX_DIR)
+#CFLAGS := $(EXTRA_CFLAGS) -std=c++11 -Wall -I$(MATRIX_DIR)
+CFLAGS := $(EXTRA_CFLAGS)  -Wall -I$(MATRIX_DIR)
 
 # Linker flags
 LDFLAGS = -lm
