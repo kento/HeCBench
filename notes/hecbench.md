@@ -3023,3 +3023,2568 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
+## merkle-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## metropolis-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | -l の後に問題サイズ(格子サイズ レプリカ数)を指定することができる。  |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | 格子サイズの3乗                   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | 格子サイズは32で割り切れる必要があるよう。 |
+
+## mf-sgd-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 10 + 2 ( train\_file [model\_file] )  |
+ | 引数の説明     | train\_file:入力データ             |
+ | 引数タイプ     | keyword+positional                |
+ | 問題サイズ     | train\_file に依存                 |
+ | 実行の容易さ   | B                                 |
+ | 備考           | README.mdにあるgoogle driveからnetflix\_test.bin または netflix\_train.binを入手する。 |
+
+## michalewicz-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1が問題サイズ, 2はrepeat数        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## miniDGS-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | メッシュファイル                  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | メッシュファイルに比例            |
+ | 実行の容易さ   | A-                                |
+ | 備考           | MPI(ParMETIS)必須（ソース同梱）, singleCPUは実行エラー(README情報)   |
+
+## miniFE-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 15                                |
+ | 引数の説明     | -nx, -ny, -nz の後に次元数指定可など  |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | nx,ny,nzの積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## miniWeather-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | コンパイルオプション-DNX=,-DNZ=で調整可能 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## minibude-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 11                                |
+ | 引数の説明     | --deck \<DIR\> : 入力データDIR など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ../minibude-sycl/data.tar.gz を展開しておく。  |
+
+## minimap2-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1: 入力ファイル 2:出力ファイル    |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ../minimap2-sycl/in-1k.txt.tar.gz を展開しておく。  |
+
+## minimod-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | --grid \<N\> ; grid数など         |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | Nの3乗に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## minisweep-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | --ncell\_x{,y,z} \<N\> ; grid数 など  |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | --ncell\_x{,y,z} の引数に比例     |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## minkowski-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cuの変数 m\_size=512\*8 を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## minmax-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:BBoxサイズ 2:repeat数           |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## mis-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:入力ファイル 2:repeat数         |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に依存                       |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEの指定に従いhttps://userweb.cs.txstate.edu/~burtscher/research/ECLgraph/index.htmlから入力ファイルをダウンロードする。複数の問題サイズあり。   |
+
+## mixbench-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内 \#define VECTOR\_SIZE (8\*1024\*1024) を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## mmcsf-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | -i \<inputfile\> など             |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | generate\_tensor.py の引数で調整可能 |
+ | 実行の容易さ   | A-                                |
+ | 備考           | generate\_tensor.py を実行しinputfileを作成する必要あり。Makefileにサンプルあり。 |
+
+## mnist-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | iteration数                       |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A-                                |
+ | 備考           | data.zip を展開しておく。         |
+
+## morphology-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | 1:kernel width 2:kernel height 3:image width 4:image height 5:repeat  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数3×引数4 に比例               |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## mpc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1 or 2                            |
+ | 引数の説明     | 1:input (2:dimension) 引数2を設定するとcompression,引数2がないとdecompression   |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEの指定に従い http://www.cs.txstate.edu/~burtscher/research/datasets/FPdouble/msg_sp.trace.fpc をダウンロードする。mainの前にfpcで変換する(Makefile記述あり)。  |
+
+## mr-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (benchmark.h内の \#define BENCHMARK\_ITERATIONS 100000 を修正)                   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## mrc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:length 2:repeat                 |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数 1に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## mrg32k3a-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:生成データ数 2:repeat           |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数 1に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## mriQ-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:input file 2:output file        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数 1に依存                      |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEの指定に従い  https://www.cs.ucr.edu/~nael/217-f19/labs/mri-q.tgz をダウンロード、展開する。  |
+
+## mt-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## mtf-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1: string length 2:repeat         |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## multimaterial-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2 or 5                            |
+ | 引数の説明     | 1:size x 2:size y 3:param1 4:param2 5:param3 |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 と引数2 の積に比例、引数3,4,5はlist\_size計算の係数  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## multinominal-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#distribution 2:#categories 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1と 引数1と引数2の積 の和に比例  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## murmurhash3-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#key 2:repeat                   |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## myocyte-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | time interval [ms]                |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | B                                 |
+ | 備考           | メモリ上限1.0GBの記述あり(work.cu)。work.cu内で読み込まれるy.txt,params.txt は https://lava.cs.virginia.edu/Rodinia/download.htm からダウンロードできるrodinia\_3.1.tar.bz2 を展開すると得られるdata/myocyteディレクトリーに存在するので適宜コピーする。 |
+
+## nbnxm-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (constants.h内の NUM\_ATOMSに関連するgrid\_zを修正?) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## nbody-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#particles 2:#integration step  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## ne-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:width 2:height 3:repeat         |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1, 2の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## nlll-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:minibatch 2:kdim 3:classes 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1, 2, 3の積に比例             |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## nms-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:入力ファイル 2:出力ファイル 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に依存                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## nn-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1+6                               |
+ | 引数の説明     | 入力ファイルリスト + options      |
+ | 引数タイプ     | positional+keyword                |
+ | 問題サイズ     | 入力ファイルに依存                |
+ | 実行の容易さ   | B                                 |
+ | 備考           | filelist.txtに記述されている各入力ファイルは https://lava.cs.virginia.edu/Rodinia/download.htm からダウンロードできるrodinia\_3.1.tar.bz2 を展開すると得られるdata/nnディレクトリーに存在するので適宜コピーする。 |
+
+## nonzero-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#rows 2:#columns 3:repeat       |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1, 2の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## norm2-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## nosync-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#elements 2:repeat              |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## nqueen-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:size 2:initial depth 3:repeat   |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例(?)                   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## ntt-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int nttLen = 64 * 1024;を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## nw-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:max rows,cols 2:repeat          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 の2乗に比例                 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## openmp-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の unsigned int nwords = num\_gpus * 33554432; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## opticalFlow-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | 入力イメージファイルに依存        |
+ | 実行の容易さ   | B                                 |
+ | 備考           | HecBench GithubのReferenceにある、opticalFlowの参照先https://github.com/NVIDIA/cuda-samples/blob/master/Samples/5\_Domain\_Specific/HSOpticalFlowからdata/以下にあるframe10.ppm,frame11.ppmファイルを取得する。 |
+
+## overlap-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main.cu内の int N = 1 << 22; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## overlay-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:width 2:height                  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1, 2の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## p2p-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const size\_t buf\_size = 1024 * 1024 * 16 * sizeof(float); を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## p4-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (params.h内の変数を修正して調整可能？) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pad-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 10                                |
+ | 引数の説明     | -m \<M\> (#rows), -n \<N\> (#columns) 等を指定可 |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | M,Nの積に比例                     |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## page-rank-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | -n \<N\> -i \<iters\> -t \<threshold\> -q \<divisor\> |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | Nの2乗に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## particle-diffusion-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#iterations 2:repeat            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (引数1や motionsim.cu内の n\_particles などで調整可能？) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## particlefilter-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     |  -x \<dimX\> -y \<dimY\> -z \<Nframe\> -np \<Nparticles\>  |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | Nparticles に比例                 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## particles-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | iterations                        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の #define NUM\_PARTICLES     16384 を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pathfinder-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#columns 2:#rows 3:pyramid height |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1, 2の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pcc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#voxels 2:length of time series |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1の2乗や 引数1, 2の積に比例   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## perlin-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (utils.hpp内の WIN\_WIDTH, WIN\_HEIGHT を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## permutate-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | 入力ファイル                      |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 入力ファイルに依存                |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEの指定に従い https://github.com/yeah1kim/yeah\_GPU\_SP800\_90B\_IID のtest\_data/からtruerand\_1bit.bin をダウンロードする。  |
+
+## permute-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:batch size 2:repeat             |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## perplexity-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#point 2:perplexity 3:repeat    |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## phmm-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (constants\_types.h内の x\_dim,y\_dim,batch,states の定義を修正)   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pingpong-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main-\*.cu内のloop回数: // Loop from 65536 B to 1 GB の次の行 を修正)   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pitch-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の変数 w[],h[],d[]の定義を修正)   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pnpoly-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の変数 nPoints, VERTICES の定義を修正)   |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pns-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#grid 2:max step in a trajectory 3:#trajectories |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1の2乗に比例                  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pointwise-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | 1:SeqLength 2:#Layers 3:hiddenSize 4:miniBatch 5:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3,4 の積などに比例        |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pool-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 7                                 |
+ | 引数の説明     | 1:batch 2:inputChannel 3:inputHeight 4:inputWidth 5:outputHeight 6:outputWidth 7:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3,4 の積などに比例        |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## popcount-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:length 2:repeat                 |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## prefetch-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int numElements = 64 * 1024 * 1024; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## present-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#plain text 2:repeat            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int numElements = 64 * 1024 * 1024; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## prna-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 8+1                               |
+ | 引数の説明     | \<options\> + \<sequence file\>   |
+ | 引数タイプ     | keyword+positional                |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A-                                |
+ | 備考           | HIV1-NL43.tar.gz, data\_tables.tar.gz を展開する。実行時に環境変数 DATAPATH でデータへのパスを指定する。 |
+
+## projectile-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (Projectile.cu内の static const int num\_elements = 10000000; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## pso-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#particles 2:repeat数           |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## qem-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の int N = 1999999; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## qkv-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | kernel number                     |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の 変数B,T,C,OC を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## qrg-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const unsigned int N = 1048576; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## qtclustering-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 11                                |
+ | 引数の説明     | -h で一覧表示、                   |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | --size \<number\> で問題サイズ設定可能？ |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## quicksort-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#iteration 2:Width 3:Height     |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2,3 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | 引数2,3は x^2 のみ                |
+
+## radixsort-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の   const unsigned int numElements = 128\*128\*128\*2; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## radixsort2-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | -help で一覧表示、                |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | -n=\<N\> で設定可能               |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rainflow-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#history 2:repeat               |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## randomAccess-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の totalMem = 1024\*1024\*512; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rayleighBenardConvection-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | time steps                        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の #define M, #define N を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## reaction-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | time steps                        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の mx,my,mz の定義を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## recursiveGaussian-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:PathToImage 2:repeat            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 の画像サイズに依存          |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## relu-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:count 2:repeat                  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## remap-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#elements 2:repeat              |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## resize-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | 1:inputImageWidth 2:inputImageHeight 3:outputImageWidth 4:outputImageHeight 5:imageChannel 6:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,5 の積に比例              |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## resnet-kernels-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:mode 2:repeat(>2)               |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A-                                |
+ | 備考           | data\_generator.py を実行しデータ生成が必要。 make data\_gen を実行。 |
+
+## reverse-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | 1:iterations                      |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int len = 256; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## reverse2D-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:nrows 2:ncols 3:iterations      |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rfs-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:nArrays 2:nElems for each array |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## ring-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:min copy length  2:max copy length 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の値に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rle-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | --n=\<input items\> --i=\<timing iterations\> --v |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | おそらく --n=N の値に比例         |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rng-wallace-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (constants.h内の WALLACE\_POOL\_SIZE, WALLACE\_NUM\_BLOCKS あたりを調整？) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rodrigues-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#points 2:repeat数              |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## romberg-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#work-group 2:work-group-size 3:repeat数 |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rotary-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の thread\_work\_size() あたりを調整？) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rowwiseMoments-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | 1:batch 2:channel 3:width 4:height 5:group 6:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3,4 の積に比例            |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rsbench-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | -s {small,large} -n \<nuclides\> など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | small/large のみ?                 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rsc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 10                                |
+ | 引数の説明     | -h , -f \<inputfile\> など        |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | inputfileの大きさ, -m \<Max.iter\> に比例 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rsmt-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | input file                        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | inputfileに比例                   |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEに従い http://www.ispd.cc/contests/08/benchmark/newblue7.kraftwerk70.3d.80.20.82.m8.gr.gz などをダウンロードし、展開する。  |
+
+## rtm8-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (rtm8.cu内の #define nx,ny,xz の定義を調整)    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## rushlarsen-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#time step 2:#nodes             |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## s3d-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 7                                 |
+ | 引数の説明     | -h , --size \<number\> など       |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | --size で問題サイズ指定(0-3) S3D.cu内のprobSize\_SP[4]などを確認 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## s8n-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#batches 2:#points 3:repeat     |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sa-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:dataset 2:dataset size 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2 に比例                      |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEに従い https://github.com/gmzang/Parallel-Suffix-Array-on-GPU/blob/master/dc3\_gpu/genome.txt をダウンロードする。  |
+
+## sad-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:image 2:template image 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | image size に比例                 |
+ | 実行の容易さ   | A-                                |
+ | 備考           | data.tar.gz を事前に展開しておく。|
+
+## sampling-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 問題サイズはmain.cu内の inputs vectorで指定されている |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## saxpy-ompt-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 9                                 |
+ | 引数の説明     | -h , -n \<N\> , -r \<R\> など     |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | -n \<N\> でinput size指定可       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## scan-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#elements 2:repeat              |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## scan2-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:repeat 2:input length 3:block size |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## scan3-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:outer size 2:inner size         |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## scel-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:outer size 2:inner size 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## score-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int num\_classes = 1000; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sddmm-batch-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 7                                 |
+ | 引数の説明     | 1:#batch 2:M 3:K 4:N 5:#non-zero elements 6:repeat 7:vberify |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,5 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## seam-carving-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2+2                               |
+ | 引数の説明     | 1:image file 2:#seams to remove , -u, -a |
+ | 引数タイプ     | positional+keyword                |
+ | 問題サイズ     | 引数1,5 の積に比例                |
+ | 実行の容易さ   | A-                                |
+ | 備考           | image.tar.gz を展開しておく。     |
+
+## secp256k1-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## segment-reduce-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:multiplier 2:repeat数           |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## segsort-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main.cu内の index\_t num\_elements = 1UL << 25; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sheath-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main.cu内の NUM\_IONS, NUM\_ELECTRONS, NC の定義を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## shmembench-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の #define VECTOR\_SIZE (1024\*1024) を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## shuffle-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:repeat for broadcast 2:repeat for matrix transpose |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の  const int total = 1 << 27; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## si-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | --help , --input \<input file\> など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | input fileに依存                  |
+ | 実行の容易さ   | B-                                |
+ | 備考           | cmake,boostを使用。./generate\_dataset で事前に入力データを作成する。  |
+
+## simpleMultiDevice-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int DATA\_N = 1048576 \* 32; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## simpleSpmv-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#non-zero elements 2:#rows in square matrix 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## simplemoc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | -s \<segments\> -e \<e\_groups\> など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | segments, e\_groups などに比例    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## slit-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:transform size 2:repeat         |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 の2乗に比例                 |
+ | 実行の容易さ   | A-                                |
+ | 備考           | main.cu内の reference(inputdata\_ref,... 行をコメントアウトする。 |
+
+## slu-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | -i \<input file\> -p (-p:enable perturbation) |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | input fileに依存                  |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ビルド前に nicslu.tar.bz2 を事前に展開する。nvcc の他 clang を使用(nicslu/make.inc)。  |
+
+## snake-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:read length 2:ref.file 3:#reads 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数3に比例                       |
+ | 実行の容易さ   | A-                                |
+ | 備考           | 実行前に Datasets.tar.gz を事前に展開する。|
+
+## sobel-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:path to file 2:repeat           |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | input file に依存                 |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ../sobel-sycl/data.tar.gz を展開する。 |
+
+## sobol-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#vectors 2:#dimensions 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積などに比例            |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## softmax-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:#slices 2:slice size 3:implementations {0,1} 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## softmax-fused-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | 1:batch 2:head 3:query length 4:key length 5:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3,4 の積に比例            |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## softmax-online-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | kernel number                     |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の int B,T,V を修正)    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sort-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:problem size {1,2,3,4} 2:#passes |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の int probSizes[4]=... を修正)    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sortKV-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#keys 2:repeat                  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sosfil-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int numSamples = 100000; を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## sparkler-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | --num\_vector NV --num\_field NF --num\_iterations NI |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | NV に比例                         |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## spaxpby-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:M 2:N 3:#non-zero elements 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## spd2s-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:M 2:N 3:#non-zero elements 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+## spgeam-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | 1:M 2:K 3:#non-zero elements 4:repeat 5:verify |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 20082 20082 150616 1000 1
+ | test run | ./$(program) 20082 20082 150616 1000 1
+ | used Mem | 1022 MB = 0.763 [GB]
+
+## spgemm-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | 1:M 2:K 3:N 4:#non-zero elements 5:repeat 6:verify |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3 の積(MK,KN,MN)に比例    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1024 1024 1024 1024 1000 1
+              ./$(program) 4096 4096 4096 4096 1000 0
+ | test run | ./$(program) 87040 24576 24576 24576 1000 0
+ | used Mem | 11022 MB = 10.763 [GB]
+
+## sph-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (fluid.cu内の params-\>number\_fluid\_particles = 2048; を修正？)    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program)
+ | test run | ./$(program)
+ | used Mem | 556 MB = 0.542 [GB]
+
+## split-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#keys 2:repeat                  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 33554432 1000
+ | test run | ./$(program) 2147000000 1000
+ | used Mem | 24763 MB = 24.182 [GB]
+
+## spm-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:dimensions 2:repeat             |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 の3乗に比例                 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 256 1000
+ | test run | ./$(program) 1280 1000
+ | used Mem | 16629 MB = 16.239 [GB]
+
+## spmm-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 7                                 |
+ | 引数の説明     | 1:M 2:K 3:N 4:#non-zero elements for A 5:#non-zero elements for B 6:repeat 7:verify |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3 の積(MK,KN,MN)に比例    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1024 1024 1024 1024 1024 1000 1
+              ./$(program) 4096 4096 4096 4096 4096 1000 0
+ | test run | ./$(program) 30720 30720 30720 30720 30720 1000 0
+ | used Mem | 560 MB = 0.546 [GB]
+
+## spmv-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#non-zero elements 2:#rows in square matrix 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 などに比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 16777216 10240 100
+ | test run | ./$(program) 16777216 122880 100
+ | used Mem | 58156 MB = 56.792 [GB]
+
+## spnnz-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:M 2:N 3:#non-zero elements 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 20082 20082 150616 1000
+              ./$(program) 41490 41490 17590850 1000
+ | test run | ./$(program) 41490 41500 17590850 1000
+ | used Mem | 7157 MB = 6.989 [GB]
+
+## sps2d-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:M 2:N 3:#non-zero elements 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 20082 20082 150616 1000
+              ./$(program) 41490 41490 17590850 1000
+ | test run | ./$(program) 124470 41490 17590850 1000
+ | used Mem | 39959 MB = 39.022 [GB]
+
+## spsm-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | 1:M 2:N 3:#non-zero elements 4:repeat 5:verify |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 20082 128 150616 100 1
+ | test run | ./$(program) 20082 1024 250616 100 1
+ | used Mem | 884 MB = 0.863 [GB]
+
+## spsort-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:M 2:N 3:#non-zero elements 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数3 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 20082 20082 150616 1000
+              ./$(program) 41490 41490 17590850 1000
+ | test run | ./$(program) 41490 41490 967590850 1000
+ | used Mem | 37480 MB = 36.601 [GB]
+
+## sptrsv-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:matrix data file 2:repeat       |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | data fileに依存                   |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ../sptrsv-sycl/lp1.mtx.tgz を展開する。../sptrsv-sycl/以下にmain+αがある。 |
+
+ | default  | ./$(program) ../sptrsv-sycl/lp1.mtx 2000
+ | test run | ./$(program) ../sptrsv-sycl/lp1.mtx 2000
+ | used Mem | 592 MB = 0.578 [GB]
+
+## srad-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:repeat 2:lambda 3:#rows 4:#columns |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数 3,4 の積に比例               |
+ | 実行の容易さ   | B                                 |
+ | 備考           | main.cuに記述されているinput image file (image.pgm) は https://lava.cs.virginia.edu/Rodinia/download.htm からダウンロードできるrodinia\_3.1.tar.bz2 を展開すると得られるdata/sradディレクトリーに存在するので適宜コピーする。 |
+
+ | default  | ./$(program) 1000 0.5 502 458
+ | test run | ./$(program) 1000 0.5 11546 46258
+ | used Mem | 16860 MB = 16.464 [GB]
+
+## ss-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:input file 2:repeat             |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | input fileに依存                  |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ../ss-sycl/input.tar.gz を展開する。 |
+
+ | default  | ./$(program) ../ss-sycl/StringSearch_Input.txt clEnqueueNDRangeKernel 20000
+ | test run | ./$(program) ../ss-sycl/StringSearch_Input.txt clEnqueueNDRangeKernel 20000
+ | used Mem | 562 MB = 0.548 [GB]
+
+## ssim-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main.cu内の const vec3i dims を修正？)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program)
+ | test run | ./$(program)
+ | used Mem | 598 MB = 0.583 [GB]
+
+## sss-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | input file                        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | input fileに依存                  |
+ | 実行の容易さ   | C-                                |
+ | 備考           | HecBench GithubのReferenceにある、sssの参照先https://github.com/mukherjeec/DPmixGGM/からDATA/以下にあるファイルf9\_n150\_p50.txt,f9\_n150\_p50\_init1.txtなどを取得する。GSLライブラリのインストールが必要。 Makefile内の -lblas を -lgslcblas に変更。|
+ cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/local_gh
+ make CC=nvc FC=nvfortran
+
+## sssp-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 10                                |
+ | 引数の説明     | -h , -f \<input file\> -c \<comparison file\> など   |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | input fileに依存                  |
+ | 実行の容易さ   | A-                                |
+ | 備考           | data.tar.gz を展開する。          |
+
+ | default  | ./$(program) -g 120 -t 1 -w 10 -r 100
+ | test run | ./$(program) -g 120 -t 1 -w 10 -r 100 -f input/USA-road-d.BAY.gr.parboil -c output/BAY_bfs.out 
+ | used Mem | 576 MB = 0.562 [GB]
+
+## stddev-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:D(#columns) 2:N(#rows) 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | 引数1は32の倍数                   |
+
+ | default  | ./$(program) 65536 16384 100
+ | test run | ./$(program) 87040 24576 100 
+ | used Mem | 8716 MB = 8.511 [GB]
+
+## stencil1d-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:length 2:repeat                 |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 134217728 1000
+ | test run | ./$(program) 536800000 1000
+ | used Mem | 6698 MB = 6.541 [GB]
+
+## stencil3d-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:grid dimension 2:repeat         |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 の3乗に比例                 |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 512 100
+ | test run | ./$(program) 700 100
+ | used Mem | 55082 MB = 53.791 [GB]
+
+## streamCreateCopyDestroy-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main.cu内の #define BufSize 0x1000 を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 
+ | test run | ./$(program) 
+ | used Mem | 638 MB = 0.623 [GB]
+
+## streamOrderedAllocation-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main.cu内の nelem = 33554432; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 
+ | test run | ./$(program) 
+ | used Mem | 1066 MB = 1.041 [GB]
+
+## streamPriority-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (main.cu内の size\_t size = 1UL << 29; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 
+ | test run | ./$(program) 
+ | used Mem | 2604 MB = 2.542 [GB]
+
+## streamUM-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 9                                 |
+ | 引数の説明     | 1:#host threads 2:#tasks 3:verify |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 4 1000 1
+              ./$(program) 4 4000 0
+ | test run | ./$(program) 4 16000 0
+ | used Mem | 41629 MB = 40.653 [GB]
+
+## streamcluster-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 9                                 |
+ | 引数の説明     | 1:min.centers 2:max.centers 3:dimension 4:#datapoints 5:chunksize 6:clustersize 7:infile 8:outfile 9:#proc |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数4 などに比例                  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 10 20 256 65536 65536 1000 none output.txt 1
+ | test run | ./$(program) 10 200 256 196608 65536 1000 none output.txt 1
+ | used Mem | 717 MB = 0.700 [GB]
+
+## stsg-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | parameter file                    |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 入力データに依存                  |
+ | 実行の容易さ   | C-                                |
+ | 備考           | READMEの指定に従いhttps://github.com/HPSCIL/cuSTSG/tree/masterからTestData/一式をダウンロードする。example.txtのpathの記述に合わせる。SQLite3,proj,GDAL ライブラリなどのインストールが必要。 |
+
+## su3-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 6                                 |
+ | 引数の説明     | -l \<dims.\> -i \<iter.\> など    |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | dims. の4乗に比例?                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) -i 1000 -l 32 -t 128 -v 3 -w 1
+ | test run | ./$(program) -i 1000 -l 50 -t 128 -v 3 -w 1
+ | used Mem | 4371 MB = 4.268 [GB]
+
+## surfel-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:inputHeight 2:outputWidth 3:outputHeight 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3 などに比例              |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1024 2960 1440 100
+ | test run | ./$(program) 1024 29600 50400 100
+ | used Mem | 20091 MB = 19.620 [GB]
+
+## svd3x3-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:input file 2:repeat             |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 入力データに依存                  |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEの指定に従いhttps://github.com/kuiwuchn/3x3\_SVD\_CUDA/blob/master/svd3x3/svd3x3/Dataset\_1M.txtをダウンロードする。  |
+
+ | default  | ./$(program) Dataset_1M.txt 1000
+ | test run | ./$(program) Dataset_1M.txt 1000
+ | used Mem | 758 MB = 0.740 [GB]
+
+## sw4ck-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:input file 2:repeat             |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 入力データに依存                  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) sw4ck.in 100
+ | test run | ./$(program) sw4ck.in 100
+ | used Mem | 1900 MB = 1.855 [GB]
+
+## swish-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#elements 2:repeat              |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 10000000 1000
+ | test run | ./$(program) 2000000000 1000 
+ | used Mem | 31074 MB = 30.345 [GB]
+
+## tensorAccessor-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:#row 2:#columns 3:repeat        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 に比例                    |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 8192 8192 1000
+ | test run | ./$(program) 163840 81920 1000
+ | used Mem | 51756 MB = 50.542 [GB]
+
+## tensorT-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat数                          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内に static const int data\_size = の定義はあるが詳細不明) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 100
+ | test run | ./$(program) 100
+ | used Mem | 3616 MB = 3.531 [GB]
+
+## testSNAP-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | -h , --nsteps \<val\>             |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | includeする refdata\_\*\*\*.h で切り替え |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ../testSNAP-omp/refdata.tar.gz を展開する。 |
+
+ | default  | ./$(program) --nsteps 100 
+ | test run | ./$(program) --nsteps 100
+ | used Mem | 5182 MB = 5.060 [GB]
+
+## thomas-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:system size 2:#systems 3:thread block size 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1024 16384 64 100
+ | test run | ./$(program) 10240 163840 64 100
+ | used Mem | 51754 MB = 50.541 [GB]
+
+## threadfence-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:repeat 2:array length           |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数2 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 100 10000000
+ | test run | ./$(program) 100 10000000000
+ | used Mem | 5958 MB = 5.818 [GB]
+
+## tissue-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:dims. of 3D grid 2:repeat       |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | dims.の最大値は32                 |
+
+ | default  | ./$(program) 32 100
+ | test run | ./$(program) 32 100
+ | used Mem | 556 MB = 0.542 [GB]
+
+## tonemapping-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:path to image 2:repeat          |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | image file に依存                 |
+ | 実行の容易さ   | A-                                |
+ | 備考           | ../tonemapping-sycl/input.tar.gz を展開する。 |
+
+ | default  | ./$(program) ../tonemapping-sycl/input.hdr 10000
+ | test run | ./$(program) ../tonemapping-sycl/input.hdr 10000
+ | used Mem | 571 MB = 0.557 [GB]
+
+## tpacf-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 11                                |
+ | 引数の説明     | -d \<data file\> -p \<data point\> など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEの指定に従い https://users.ncsa.illinois.edu/kindr/projects/hpca/files/data.tgz をダウンロードし展開する。   |
+
+ | default  | ./$(program) $(DATAPARS) $(RANDPARS) $(ANALPARS) -o $(OUTFILE)
+ | test run | ./$(program) $(DATAPARS) $(RANDPARS) $(ANALPARS) -o $(OUTFILE)
+ | used Mem | 820 MB = 0.800 [GB]
+
+## tqs-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 11                                |
+ | 引数の説明     | -h , -s \<task pool size\> -q \<task queue size\> など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | task queue size に比例            |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) -f input/patternsNP100NB512FB25.txt
+ | test run | ./$(program) -f input/patternsNP100NB512FB25.txt
+ | used Mem | 555 MB = 0.541 [GB]
+
+## triad-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | -h -c \<config file\> -n \<#passes\> -v |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | (triad.cu内の const int blockSizes[] = ... の定義で調整可能？)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) --passes 100 -v
+ | test run | ./$(program) --passes 100 -v
+ | used Mem | 652 MB = 0.636 [GB]
+
+## tridiagonal-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | -num\_systems=\<N\> -system\_size=\<NS\> --lmem --vec4 など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | N と NS の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | NS は 128 に                      |
+
+ | default  | ./$(program) -num_systems=524288
+              ./$(program) --lmem -num_systems=524288
+              ./$(program) --vec4 -num_systems=524288 
+ | test run | ./$(program)  -num_systems=8388560 
+ | used Mem | 29225 MB = 28.540 [GB]
+
+## tsa-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:matrix width 2:matrix height 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1024 1024 100
+ | test run | ./$(program) 102400 10240 100
+ | used Mem | 32554 MB = 31.791 [GB]
+
+## tsne-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | D                                 |
+ | 備考           | ./data/points.txt がないため実行不可  |
+
+## tsp-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:input file 2:restart count 3:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 入力ファイルに依存                |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEの指定に従い http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/から入力ファイルをダウンロードし展開する。複数の問題サイズあり。main.cu内でサイズ制限あり？   |
+
+ | default  | ./$(program) d493.tsp 24 100
+ | test run | ./$(program) d493.tsp 24 100
+ | used Mem | 556 MB = 0.542 [GB]
+
+## unfold-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#elements 2:repeat              |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に比例                      |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 10000000 1000
+ | test run | ./$(program) 6000000000 1000
+ | used Mem | 19652 MB = 19.191 [GB]
+
+## urng-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:input file 2:blocksize X 3:blocksize Y 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | input fileの大きさに依存          |
+ | 実行の容易さ   | D                                 |
+ | 備考           | https://github.com/OpenCL/AMD\_APP\_samples/blob/master/include/SDKUtil をうまくmergeする必要がある。 |
+ | 備考           | ../urng-sycl/image.tar.gz を展開しておく。 https://github.com/OpenCL/AMD\_APP\_samples/blob/master/include/SDKUtil/SDKBitMap.hpp をダウンロードし include/SDKBitMap.h とリネームして配置する。SDKBitMap.h 行頭に #define SDK_SUCCESS 0; #define SDK_FAILURE 1 を追加。  |
+
+
+## vanGenuchten-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:dimX 2:dimY 3:dimZ 4:repeat     |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3 の積に比例              |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 256 256 256 1000
+ | test run | ./$(program) 512 512 512 1000
+ | used Mem | 7723 MB = 7.541 [GB]
+
+## vmc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (vmc2.cu内の const int Npoint = NBLOCK\*NTHR\_PER\_BLK; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program)
+ | test run | ./$(program)
+ | used Mem | 558 MB = 0.544 [GB]
+
+## vol2col-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内のmain routine入ってすぐのパラメータ群を修正) |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1000
+ | test run | ./$(program) 1000
+ | used Mem | 6448 MB = 6.296 [GB]
+
+## vote-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:warp size 2:repeat              |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 32 10000000
+ | test run | ./$(program) 32 10000000
+ | used Mem | 555 MB = 0.541 [GB]
+
+## voxelization-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:data folder path 2:repeat       |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 入力ファイルに依存                |
+ | 実行の容易さ   | B                                 |
+ | 備考           | HecBench GithubのReferenceにある、voxelizationの参照先https://github.com/NVIDIA-AI-IOT/Lidar_AI_Solution から CUDA-CenterPoint/data/test/ 以下のファイルを取得する。 |
+
+ | default  | ./$(program) data/test/ 100000
+ | test run | ./$(program) data/test/ 100000
+ | used Mem | 620 MB = 0.605 [GB]
+
+## warpexchange-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2 の積に比例                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | ../blockAccess-cude/\*.h をinclude |
+
+ | default  | ./$(program) 8192 8192 100
+ | test run | ./$(program) 81920 81920 100
+ | used Mem | 77354 MB = 75.541 [GB]
+
+## warpsort-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の test\_sortIn\*\*\* subroutineのfor loop size を修正？)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1000
+ | test run | ./$(program) 1000
+ | used Mem | 648 MB = 0.632 [GB]
+
+## wedford-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 4                                 |
+ | 引数の説明     | 1:batch size 2:spatial size 3:feature size 4:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3 の積に比例              |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 512 512 8192 100
+ | test run | ./$(program) 3072 512 8192 100
+ | used Mem | 49708 MB = 48.542 [GB]
+
+## winograd-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 0                                 |
+ | 引数の説明     | なし                              |
+ | 引数タイプ     | -                                 |
+ | 問題サイズ     | (utils.h内の #define MAP\_SIZE 1024 を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1000
+ | test run | ./$(program) 1000
+ | used Mem | 567 MB = 0.553 [GB]
+
+## wlcpow-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の int n = 1e6; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 1000
+ | test run | ./$(program) 1000
+ | used Mem | 700 MB = 0.683 [GB]
+
+## wmma-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | 1:M 2:N 3:K 4:repeat 5:verify     |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3 の各積に比例            |
+ | 実行の容易さ   | A                                 |
+ | 備考           | Makefile内の ARCH = sm\_70 に修正 |
+
+ | default  | ./$(program) 256 256 256 100 1
+              ./$(program) 512 512 512 100 1
+              ./$(program) 1024 1024 1024 100 0
+              ./$(program) 4096 4096 4096 100 0
+ | test run | ./$(program) 81920 81920 40960 100 0
+ | used Mem | 35755 MB = 34.916 [GB]
+
+## word2vec-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 17                                |
+ | 引数の説明     | -train \<file\> -size \<int\>  など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | 調整不可                          |
+ | 実行の容易さ   | B                                 |
+ | 備考           | READMEにある https://code.google.com/p/word2vec/ から demo-word.sh を入手し、そこに書かれている text8.gz をダウンロードし展開する。 |
+
+ | default  | ./$(program) -train text8 -output vectors.bin -cbow 1 -size 200 \
+        -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15
+ | test run | ./$(program) -train text8 -output vectors.bin -cbow 1 -size 200 \
+        -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15
+ | used Mem | 1064 MB = 1.039 [GB]
+
+## wordcount-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const char raw\_input[]="..." を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | main.cu は ../wordcount-sycl/ にある |
+
+ | default  | ./$(program) 10
+ | test run | ./$(program) 10
+ | used Mem | 1581 MB = 1.543 [GB]
+
+## wsm5-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の int ims,ime,... 周辺のパラメーターを修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 10
+ | test run | ./$(program) 10
+ | used Mem | 556 MB = 0.542 [GB]
+
+## wyllie-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 3                                 |
+ | 引数の説明     | 1:list size 2:0 or 1 (ordered or random list) 3:repeat     |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 8000000 1 100
+ | test run | ./$(program) 49300000000 1 100
+ | used Mem | 16236 MB = 15.855 [GB]
+
+## xlqc-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | {sp, dp, 6d, 5d}                  |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1 に依存                      |
+ | 実行の容易さ   | B-                                |
+ | 備考           | example.tar.gz を展開する。GSLライブラリのインストールが必要。 :
+ ./configure --prefix=/home/users/u0001622/local_gh CC=nvcc CXX=nvc++
+ make
+ make install |
+
+ | default  | ./$(program) sp
+              ./$(program) dp
+ | test run | ./$(program) sp
+              ./$(program) dp
+ | used Mem | 560 MB = 0.546 [GB]
+
+## xsbench-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 10                                |
+ | 引数の説明     | -s \<size\> -p \<particles\> など |
+ | 引数タイプ     | keyword                           |
+ | 問題サイズ     | -s {small,large,XL,XXL} で調整可  | XL,XXL : error
+ | 実行の容易さ   | A                                 |
+ | 備考           | example.tar.gz を展開する。       |
+
+ | default  | ./$(program) -s large -m event -r 10
+ | test run | ./$(program) -s large -m event -r 10
+ | used Mem | 6337 MB = 6.188 [GB]
+
+## zerocopy-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の for (nelem = 1024\*1024; ... を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 100
+ | test run | ./$(program) 100
+ | used Mem | 749 MB = 0.731 [GB]
+
+## zeropoint-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 2                                 |
+ | 引数の説明     | 1:#min/max values 2:repeat        |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1に比例                       |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 10000000 100
+ | test run | ./$(program) 2120000000 100
+ | used Mem | 49013 MB = 47.864 [GB]
+
+## zmddft-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 1                                 |
+ | 引数の説明     | repeat                            |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | (main.cu内の const int n = 256\*256\*256\*2; を修正)  |
+ | 実行の容易さ   | A                                 |
+ | 備考           | なし                              |
+
+ | default  | ./$(program) 100
+ | test run | ./$(program) 100
+ | used Mem | 1836 MB = 1.792 [GB]
+
+## zoom-cuda
+
+ | 項目           | 説明                              |
+ | ----           | ----                              |
+ | 引数の数       | 5                                 |
+ | 引数の説明     | 1:batch 2:channel 3:height 4:width 5:repeat |
+ | 引数タイプ     | positional                        |
+ | 問題サイズ     | 引数1,2,3,4 に依存                |
+ | 実行の容易さ   | A                                 |
+ | 備考           | max\_smem = 48 \* 1024; の制限値あり。  |
+
+ | default  | ./$(program) 1 3 2160 4096 1000
+ | test run | ./$(program) 2 5 2169 99000 1000
+ | used Mem | 16938 MB = 16.541 [GB]
