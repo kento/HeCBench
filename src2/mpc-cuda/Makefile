@@ -57,8 +57,6 @@ process: fpc.c
 	./fpc < msg_sp.trace.fpc > msg_sp.trace.out
 
 run: process $(program)
-        # compression
 	$(LAUNCHER) ./$(program) msg_sp.trace.out 1
-        # decompression
 	$(LAUNCHER) ./$(program) compression.txt
 	diff msg_sp.trace.out decompression.txt

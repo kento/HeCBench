@@ -52,8 +52,6 @@ clean:
 	rm -rf $(program) $(obj) *.txt fpc
 
 run: $(program)
-        # compression
 	$(LAUNCHER) ./$(program) ../mpc-cuda/msg_sp.trace.out 1
-        # decompression
 	$(LAUNCHER) ./$(program) compression.txt
 	diff ../mpc-cuda/msg_sp.trace.out decompression.txt
