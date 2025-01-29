@@ -34,11 +34,23 @@ error: redefinition of 'atomicMax'
 # linearprobing-omp_nvc
 failed to translate accelerator region
 
+# logic-resim-cuda
+ invalid narrowing conversion from "signed char" to "char
+ 
 # logic-rewrite-hipified
 no matching function for call to 'hipGetErrorString'
 
+# logic-rewrite-hip
+use of undeclared identifier '__activemask'
+
+# logprob-hip
+redefinition of 'HALF_FLT_MAX'
+
 # logprob-hipified
 use of undeclared identifier '__shfl_xor_sync'
+
+# lsqt-cuda
+identifier "__syncwrap" is undefined
 
 # lsqt-hipified
 use of undeclared identifier '__syncwrap'
@@ -57,3 +69,9 @@ use of undeclared identifier 'cublasGetStatusString'
 # mdh-hipified
 
 ./helper_math.h:1476:30: error: use of overloaded operator '/' is ambiguous
+
+# memcpy-omp_nvc
+expression must be a modifiable lvalue
+
+# memcpy-omp_aomp
+ non-object type 'time_t (time_t *) noexcept(true)' (aka 'long (long *) noexcept(true)') is not assignable
