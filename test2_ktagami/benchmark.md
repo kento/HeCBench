@@ -73,7 +73,7 @@
 | ludb | 6.93 | 9.73 | compile err | -- | -- |
 | lulesh | 13.37 | 15.84 | 13.93 | 14.09 | 566.69 |
 | lzss | | | | -- | -- |
-| mallocFree | 5.63 | 9.40 | compile err | compile err | 0.72 |
+| mallocFree | 5.60 | 9.40 | compile err | 4.62 | 0.72 |
 | mandelbrot | 7.37 | 16.41 | 15.85 | 5.63 | 13.34 |
 | marchingCubes | 12.32 | 7.75 | compile err | -- | -- |
 | mask | 168.00 | 90.46 | 90.48 | 242.76 | 93.65 |
