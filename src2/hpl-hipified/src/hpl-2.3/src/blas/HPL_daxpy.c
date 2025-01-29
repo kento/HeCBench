@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 /*
  * -- High Performance Computing Linpack Benchmark (HPL)
  *    HPL - 2.3 - December 2, 2018

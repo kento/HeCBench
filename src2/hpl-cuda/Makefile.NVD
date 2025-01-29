@@ -1,0 +1,21 @@
+LAUNCHER = bash -c
+
+program = main
+
+$(program):
+	cd src/hpl-2.3/; make 
+
+clean:
+	cd src/hpl-2.3/; make clean
+
+include ../include/hpl-NVIDIA
+
+run: $(program)
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: $(program)
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill nvidia-smi
+	../scripts/m.sh
+     
