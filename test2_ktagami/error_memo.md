@@ -16,6 +16,12 @@ use of undeclared identifier '__shfl_sync'
 # jacobi-hipified
 use of undeclared identifier '__shfl_down_sync'
 
+# langford-omp_nvc
+failed to translate accelerator region
+
+# lda-omp_nvc
+failed to translate accelerator region
+
 # layernorm-hipified
 
 cooperative_groups/reduce.h is not supported 
@@ -24,6 +30,9 @@ cooperative_groups/reduce.h is not supported
 
 # lebesgue-hipified
 error: redefinition of 'atomicMax'
+
+# linearprobing-omp_nvc
+failed to translate accelerator region
 
 # logic-rewrite-hipified
 no matching function for call to 'hipGetErrorString'
