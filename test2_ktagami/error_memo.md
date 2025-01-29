@@ -5,7 +5,12 @@ xmmintrin.h: No such file or directory
  expected ')'
  
 # hexciton-hipified
+
 use of overloaded operator '/' is ambiguous
+
+# hpl-hipified/
+
+"Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__";
 
 # intrinsics-simd-hipified
 use of undeclared identifier '__vabs2'
