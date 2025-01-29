@@ -37,8 +37,16 @@ verify:all
 %.o:%.c *.h
 	$(CC) $(CFLAGS) -c $<
 
+include ../../include/miniFE-NVIDIA
+
 run: miniFE.x
-	./miniFE.x -nx 128 -ny 128 -nz 128
+	bash -c "$(COMMAND)"
+
+run_mem: miniFE.x
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+	bash -c "$(COMMAND)"
+	pkill nvidia-smi
+	../../scripts/m.sh
 
 clean:
 	rm -f *.o *.a *.x *.linkinfo miniFE_info.hpp
