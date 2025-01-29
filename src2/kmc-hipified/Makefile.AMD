@@ -3,7 +3,7 @@
 #===============================================================================
 
 # Compiler can be set below, or via environment variable
-CC        = hipcc
+CC        = hipcc 
 OPTIMIZE  = yes
 DEBUG     = no
 ARCH      = sm_60
@@ -24,7 +24,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall  -Wno-unused-result 
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall  -Wno-unused-result -I/opt/rocm/include/hipblas
 
 # Linker Flags
 LDFLAGS = -lhipblas 
