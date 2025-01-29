@@ -8,7 +8,7 @@ xmmintrin.h: No such file or directory
 
 use of overloaded operator '/' is ambiguous
 
-# hpl-hipified/
+# hpl-hipified
 
 "Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__";
 
