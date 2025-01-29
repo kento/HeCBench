@@ -1,3 +1,9 @@
+# heat2d-cuda
+xmmintrin.h: No such file or directory
+
+# heat2d-hip
+ expected ')'
+ 
 # hexciton-hipified
 use of overloaded operator '/' is ambiguous
 
