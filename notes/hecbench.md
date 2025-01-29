@@ -3054,7 +3054,7 @@ Sycl版しかない。
  | 引数タイプ     | keyword+positional                |
  | 問題サイズ     | train\_file に依存                 |
  | 実行の容易さ   | B                                 |
- | 備考           | README.mdにあるgoogle driveからnetflix\_test.bin または netflix\_train.binを入手する。 |
+ | 備考           | README.mdにあるgoogle driveからnetflix\_test.bin または netflix\_train.binを入手する。ベンチマークディレクトリー直下にはMakefileはなくsrcディレクトリーに移動する必要がある。 |
 
 ## michalewicz-cuda
 
@@ -3076,7 +3076,7 @@ Sycl版しかない。
  | 引数タイプ     | positional                        |
  | 問題サイズ     | メッシュファイルに比例            |
  | 実行の容易さ   | A-                                |
- | 備考           | MPI(ParMETIS)必須（ソース同梱）, singleCPUは実行エラー(README情報)   |
+ | 備考           | MPI(ParMETIS)必須（ソース同梱）, singleCPUは実行エラー(README情報)  コンパイルに失敗する  |
 
 ## miniFE-cuda
 
@@ -4418,7 +4418,7 @@ Sycl版しかない。
  | 引数タイプ     | positional                        |
  | 問題サイズ     | 引数1 の2乗に比例                 |
  | 実行の容易さ   | A-                                |
- | 備考           | main.cu内の reference(inputdata\_ref,... 行をコメントアウトする。 |
+ | 備考           | main.cu内の include "reference.h", reference(inputdata\_ref,... 行をコメントアウトし，Makefileもreference.hを依存関係からはずす。するとコンパイルはできるがベンチマークを実行すると（参照データがないため）FAILする |
 
 ## slu-cuda
 
@@ -4429,7 +4429,7 @@ Sycl版しかない。
  | 引数タイプ     | keyword                           |
  | 問題サイズ     | input fileに依存                  |
  | 実行の容易さ   | A-                                |
- | 備考           | ビルド前に nicslu.tar.bz2 を事前に展開する。nvcc の他 clang を使用(nicslu/make.inc)。  |
+ | 備考           | ビルド前に nicslu.tar.bz2 を事前に展開する。nvcc の他 clang を使用(nicslu/make.inc)。ディレクトリー直下にMakefileはない。NVIDIAマシンでclangを使う方法が分からない  |
 
 ## snake-cuda
 
@@ -4573,10 +4573,9 @@ Sycl版しかない。
  | 問題サイズ     | 引数1,2 の積に比例                |
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
-
- | default  | ./$(program) 20082 20082 150616 1000 1
- | test run | ./$(program) 20082 20082 150616 1000 1
- | used Mem | 1022 MB = 0.763 [GB]
+ | default  | ./$(program) 20082 20082 150616 1000 1 |
+ | test run | ./$(program) 20082 20082 150616 1000 1 |
+ | used Mem | 1022 MB = 0.763 [GB] |
 
 ## spgemm-cuda
 
@@ -4588,11 +4587,10 @@ Sycl版しかない。
  | 問題サイズ     | 引数1,2,3 の積(MK,KN,MN)に比例    |
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
-
- | default  | ./$(program) 1024 1024 1024 1024 1000 1
-              ./$(program) 4096 4096 4096 4096 1000 0
- | test run | ./$(program) 87040 24576 24576 24576 1000 0
- | used Mem | 11022 MB = 10.763 [GB]
+ | default  | ./$(program) 1024 1024 1024 1024 1000 1 |
+ |          | ./$(program) 4096 4096 4096 4096 1000 0 |
+ | test run | ./$(program) 87040 24576 24576 24576 1000 0 |
+ | used Mem | 11022 MB = 10.763 [GB] |
 
 ## sph-cuda
 
@@ -4605,9 +4603,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program)
- | test run | ./$(program)
- | used Mem | 556 MB = 0.542 [GB]
+ | default  | ./$(program) |
+ | test run | ./$(program) |
+ | used Mem | 556 MB = 0.542 [GB] |
 
 ## split-cuda
 
@@ -4620,9 +4618,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 33554432 1000
- | test run | ./$(program) 2147000000 1000
- | used Mem | 24763 MB = 24.182 [GB]
+ | default  | ./$(program) 33554432 1000 |
+ | test run | ./$(program) 2147000000 1000 |
+ | used Mem | 24763 MB = 24.182 [GB] |
 
 ## spm-cuda
 
@@ -4635,9 +4633,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 256 1000
- | test run | ./$(program) 1280 1000
- | used Mem | 16629 MB = 16.239 [GB]
+ | default  | ./$(program) 256 1000  |
+ | test run | ./$(program) 1280 1000 |
+ | used Mem | 16629 MB = 16.239 [GB] |
 
 ## spmm-cuda
 
@@ -4650,10 +4648,10 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1024 1024 1024 1024 1024 1000 1
-              ./$(program) 4096 4096 4096 4096 4096 1000 0
- | test run | ./$(program) 30720 30720 30720 30720 30720 1000 0
- | used Mem | 560 MB = 0.546 [GB]
+ | default  | ./$(program) 1024 1024 1024 1024 1024 1000 1 |
+ |          | ./$(program) 4096 4096 4096 4096 4096 1000 0 |
+ | test run | ./$(program) 30720 30720 30720 30720 30720 1000 0 |
+ | used Mem | 560 MB = 0.546 [GB] |
 
 ## spmv-cuda
 
@@ -4666,9 +4664,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 16777216 10240 100
- | test run | ./$(program) 16777216 122880 100
- | used Mem | 58156 MB = 56.792 [GB]
+ | default  | ./$(program) 16777216 10240 100 |
+ | test run | ./$(program) 16777216 122880 100 |
+ | used Mem | 58156 MB = 56.792 [GB] |
 
 ## spnnz-cuda
 
@@ -4681,9 +4679,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 20082 20082 150616 1000
-              ./$(program) 41490 41490 17590850 1000
- | test run | ./$(program) 41490 41500 17590850 1000
+ | default  | ./$(program) 20082 20082 150616 1000 |
+              ./$(program) 41490 41490 17590850 1000 |
+ | test run | ./$(program) 41490 41500 17590850 1000 |
  | used Mem | 7157 MB = 6.989 [GB]
 
 ## sps2d-cuda
@@ -4697,9 +4695,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 20082 20082 150616 1000
-              ./$(program) 41490 41490 17590850 1000
- | test run | ./$(program) 124470 41490 17590850 1000
+ | default  | ./$(program) 20082 20082 150616 1000 |
+              ./$(program) 41490 41490 17590850 1000 |
+ | test run | ./$(program) 124470 41490 17590850 1000 |
  | used Mem | 39959 MB = 39.022 [GB]
 
 ## spsm-cuda
@@ -4713,8 +4711,8 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 20082 128 150616 100 1
- | test run | ./$(program) 20082 1024 250616 100 1
+ | default  | ./$(program) 20082 128 150616 100 1 |
+ | test run | ./$(program) 20082 1024 250616 100 1 |
  | used Mem | 884 MB = 0.863 [GB]
 
 ## spsort-cuda
@@ -4728,10 +4726,10 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 20082 20082 150616 1000
-              ./$(program) 41490 41490 17590850 1000
- | test run | ./$(program) 41490 41490 967590850 1000
- | used Mem | 37480 MB = 36.601 [GB]
+ | default  | ./$(program) 20082 20082 150616 1000 |
+ |          | ./$(program) 41490 41490 17590850 1000 |
+ | test run | ./$(program) 41490 41490 967590850 1000 |
+ | used Mem | 37480 MB = 36.601 [GB] |
 
 ## sptrsv-cuda
 
@@ -4744,9 +4742,9 @@ Sycl版しかない。
  | 実行の容易さ   | A-                                |
  | 備考           | ../sptrsv-sycl/lp1.mtx.tgz を展開する。../sptrsv-sycl/以下にmain+αがある。 |
 
- | default  | ./$(program) ../sptrsv-sycl/lp1.mtx 2000
- | test run | ./$(program) ../sptrsv-sycl/lp1.mtx 2000
- | used Mem | 592 MB = 0.578 [GB]
+ | default  | ./$(program) ../sptrsv-sycl/lp1.mtx 2000 |
+ | test run | ./$(program) ../sptrsv-sycl/lp1.mtx 2000 |
+ | used Mem | 592 MB = 0.578 [GB] |
 
 ## srad-cuda
 
@@ -4759,9 +4757,9 @@ Sycl版しかない。
  | 実行の容易さ   | B                                 |
  | 備考           | main.cuに記述されているinput image file (image.pgm) は https://lava.cs.virginia.edu/Rodinia/download.htm からダウンロードできるrodinia\_3.1.tar.bz2 を展開すると得られるdata/sradディレクトリーに存在するので適宜コピーする。 |
 
- | default  | ./$(program) 1000 0.5 502 458
- | test run | ./$(program) 1000 0.5 11546 46258
- | used Mem | 16860 MB = 16.464 [GB]
+ | default  | ./$(program) 1000 0.5 502 458 |
+ | test run | ./$(program) 1000 0.5 11546 46258 |
+ | used Mem | 16860 MB = 16.464 [GB] |
 
 ## ss-cuda
 
@@ -4774,9 +4772,9 @@ Sycl版しかない。
  | 実行の容易さ   | A-                                |
  | 備考           | ../ss-sycl/input.tar.gz を展開する。 |
 
- | default  | ./$(program) ../ss-sycl/StringSearch_Input.txt clEnqueueNDRangeKernel 20000
- | test run | ./$(program) ../ss-sycl/StringSearch_Input.txt clEnqueueNDRangeKernel 20000
- | used Mem | 562 MB = 0.548 [GB]
+ | default  | ./$(program) ../ss-sycl/StringSearch_Input.txt clEnqueueNDRangeKernel 20000 |
+ | test run | ./$(program) ../ss-sycl/StringSearch_Input.txt clEnqueueNDRangeKernel 20000 |
+ | used Mem | 562 MB = 0.548 [GB] |
 
 ## ssim-cuda
 
@@ -4789,8 +4787,8 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program)
- | test run | ./$(program)
+ | default  | ./$(program) |
+ | test run | ./$(program) |
  | used Mem | 598 MB = 0.583 [GB]
 
 ## sss-cuda
@@ -4803,6 +4801,7 @@ Sycl版しかない。
  | 問題サイズ     | input fileに依存                  |
  | 実行の容易さ   | C-                                |
  | 備考           | HecBench GithubのReferenceにある、sssの参照先https://github.com/mukherjeec/DPmixGGM/からDATA/以下にあるファイルf9\_n150\_p50.txt,f9\_n150\_p50\_init1.txtなどを取得する。GSLライブラリのインストールが必要。 Makefile内の -lblas を -lgslcblas に変更。|
+
  cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/local_gh
  make CC=nvc FC=nvfortran
 
@@ -4817,9 +4816,9 @@ Sycl版しかない。
  | 実行の容易さ   | A-                                |
  | 備考           | data.tar.gz を展開する。          |
 
- | default  | ./$(program) -g 120 -t 1 -w 10 -r 100
- | test run | ./$(program) -g 120 -t 1 -w 10 -r 100 -f input/USA-road-d.BAY.gr.parboil -c output/BAY_bfs.out 
- | used Mem | 576 MB = 0.562 [GB]
+ | default  | ./$(program) -g 120 -t 1 -w 10 -r 100 |
+ | test run | ./$(program) -g 120 -t 1 -w 10 -r 100 -f input/USA-road-d.BAY.gr.parboil -c output/BAY_bfs.out  |
+ | used Mem | 576 MB = 0.562 [GB] |
 
 ## stddev-cuda
 
@@ -4832,9 +4831,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | 引数1は32の倍数                   |
 
- | default  | ./$(program) 65536 16384 100
- | test run | ./$(program) 87040 24576 100 
- | used Mem | 8716 MB = 8.511 [GB]
+ | default  | ./$(program) 65536 16384 100 |
+ | test run | ./$(program) 87040 24576 100  |
+ | used Mem | 8716 MB = 8.511 [GB] |
 
 ## stencil1d-cuda
 
@@ -4847,9 +4846,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 134217728 1000
- | test run | ./$(program) 536800000 1000
- | used Mem | 6698 MB = 6.541 [GB]
+ | default  | ./$(program) 134217728 1000 |
+ | test run | ./$(program) 536800000 1000 |
+ | used Mem | 6698 MB = 6.541 [GB] |
 
 ## stencil3d-cuda
 
@@ -4862,9 +4861,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 512 100
- | test run | ./$(program) 700 100
- | used Mem | 55082 MB = 53.791 [GB]
+ | default  | ./$(program) 512 100 |
+ | test run | ./$(program) 700 100 |
+ | used Mem | 55082 MB = 53.791 [GB] |
 
 ## streamCreateCopyDestroy-cuda
 
@@ -4877,9 +4876,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 
- | test run | ./$(program) 
- | used Mem | 638 MB = 0.623 [GB]
+ | default  | ./$(program) |
+ | test run | ./$(program) |
+ | used Mem | 638 MB = 0.623 [GB] |
 
 ## streamOrderedAllocation-cuda
 
@@ -4892,9 +4891,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 
- | test run | ./$(program) 
- | used Mem | 1066 MB = 1.041 [GB]
+ | default  | ./$(program) |
+ | test run | ./$(program) |
+ | used Mem | 1066 MB = 1.041 [GB] |
 
 ## streamPriority-cuda
 
@@ -4922,10 +4921,10 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 4 1000 1
-              ./$(program) 4 4000 0
- | test run | ./$(program) 4 16000 0
- | used Mem | 41629 MB = 40.653 [GB]
+ | default  | ./$(program) 4 1000 1 |
+ |          | ./$(program) 4 4000 0 |
+ | test run | ./$(program) 4 16000 0 |
+ | used Mem | 41629 MB = 40.653 [GB] |
 
 ## streamcluster-cuda
 
@@ -4938,9 +4937,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 10 20 256 65536 65536 1000 none output.txt 1
- | test run | ./$(program) 10 200 256 196608 65536 1000 none output.txt 1
- | used Mem | 717 MB = 0.700 [GB]
+ | default  | ./$(program) 10 20 256 65536 65536 1000 none output.txt 1 |
+ | test run | ./$(program) 10 200 256 196608 65536 1000 none output.txt 1 |
+ | used Mem | 717 MB = 0.700 [GB] |
 
 ## stsg-cuda
 
@@ -4964,9 +4963,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) -i 1000 -l 32 -t 128 -v 3 -w 1
- | test run | ./$(program) -i 1000 -l 50 -t 128 -v 3 -w 1
- | used Mem | 4371 MB = 4.268 [GB]
+ | default  | ./$(program) -i 1000 -l 32 -t 128 -v 3 -w 1 |
+ | test run | ./$(program) -i 1000 -l 50 -t 128 -v 3 -w 1 |
+ | used Mem | 4371 MB = 4.268 [GB] |
 
 ## surfel-cuda
 
@@ -4979,9 +4978,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1024 2960 1440 100
- | test run | ./$(program) 1024 29600 50400 100
- | used Mem | 20091 MB = 19.620 [GB]
+ | default  | ./$(program) 1024 2960 1440 100 |
+ | test run | ./$(program) 1024 29600 50400 100 |
+ | used Mem | 20091 MB = 19.620 [GB] |
 
 ## svd3x3-cuda
 
@@ -4994,9 +4993,9 @@ Sycl版しかない。
  | 実行の容易さ   | B                                 |
  | 備考           | READMEの指定に従いhttps://github.com/kuiwuchn/3x3\_SVD\_CUDA/blob/master/svd3x3/svd3x3/Dataset\_1M.txtをダウンロードする。  |
 
- | default  | ./$(program) Dataset_1M.txt 1000
- | test run | ./$(program) Dataset_1M.txt 1000
- | used Mem | 758 MB = 0.740 [GB]
+ | default  | ./$(program) Dataset_1M.txt 1000 |
+ | test run | ./$(program) Dataset_1M.txt 1000 |
+ | used Mem | 758 MB = 0.740 [GB] |
 
 ## sw4ck-cuda
 
@@ -5009,9 +5008,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) sw4ck.in 100
- | test run | ./$(program) sw4ck.in 100
- | used Mem | 1900 MB = 1.855 [GB]
+ | default  | ./$(program) sw4ck.in 100 |
+ | test run | ./$(program) sw4ck.in 100 |
+ | used Mem | 1900 MB = 1.855 [GB] |
 
 ## swish-cuda
 
@@ -5024,9 +5023,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 10000000 1000
- | test run | ./$(program) 2000000000 1000 
- | used Mem | 31074 MB = 30.345 [GB]
+ | default  | ./$(program) 10000000 1000 |
+ | test run | ./$(program) 2000000000 1000  |
+ | used Mem | 31074 MB = 30.345 [GB] |
 
 ## tensorAccessor-cuda
 
@@ -5039,9 +5038,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 8192 8192 1000
- | test run | ./$(program) 163840 81920 1000
- | used Mem | 51756 MB = 50.542 [GB]
+ | default  | ./$(program) 8192 8192 1000 |
+ | test run | ./$(program) 163840 81920 1000 |
+ | used Mem | 51756 MB = 50.542 [GB] |
 
 ## tensorT-cuda
 
@@ -5054,9 +5053,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 100
- | test run | ./$(program) 100
- | used Mem | 3616 MB = 3.531 [GB]
+ | default  | ./$(program) 100 |
+ | test run | ./$(program) 100 |
+ | used Mem | 3616 MB = 3.531 [GB] |
 
 ## testSNAP-cuda
 
@@ -5069,9 +5068,9 @@ Sycl版しかない。
  | 実行の容易さ   | A-                                |
  | 備考           | ../testSNAP-omp/refdata.tar.gz を展開する。 |
 
- | default  | ./$(program) --nsteps 100 
- | test run | ./$(program) --nsteps 100
- | used Mem | 5182 MB = 5.060 [GB]
+ | default  | ./$(program) --nsteps 100  |
+ | test run | ./$(program) --nsteps 100 |
+ | used Mem | 5182 MB = 5.060 [GB] |
 
 ## thomas-cuda
 
@@ -5084,9 +5083,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1024 16384 64 100
- | test run | ./$(program) 10240 163840 64 100
- | used Mem | 51754 MB = 50.541 [GB]
+ | default  | ./$(program) 1024 16384 64 100 |
+ | test run | ./$(program) 10240 163840 64 100 |
+ | used Mem | 51754 MB = 50.541 [GB] |
 
 ## threadfence-cuda
 
@@ -5099,9 +5098,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 100 10000000
- | test run | ./$(program) 100 10000000000
- | used Mem | 5958 MB = 5.818 [GB]
+ | default  | ./$(program) 100 10000000 |
+ | test run | ./$(program) 100 10000000000 |
+ | used Mem | 5958 MB = 5.818 [GB] |
 
 ## tissue-cuda
 
@@ -5114,9 +5113,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | dims.の最大値は32                 |
 
- | default  | ./$(program) 32 100
- | test run | ./$(program) 32 100
- | used Mem | 556 MB = 0.542 [GB]
+ | default  | ./$(program) 32 100 |
+ | test run | ./$(program) 32 100 |
+ | used Mem | 556 MB = 0.542 [GB] |
 
 ## tonemapping-cuda
 
@@ -5129,9 +5128,9 @@ Sycl版しかない。
  | 実行の容易さ   | A-                                |
  | 備考           | ../tonemapping-sycl/input.tar.gz を展開する。 |
 
- | default  | ./$(program) ../tonemapping-sycl/input.hdr 10000
- | test run | ./$(program) ../tonemapping-sycl/input.hdr 10000
- | used Mem | 571 MB = 0.557 [GB]
+ | default  | ./$(program) ../tonemapping-sycl/input.hdr 10000 |
+ | test run | ./$(program) ../tonemapping-sycl/input.hdr 10000 |
+ | used Mem | 571 MB = 0.557 [GB] |
 
 ## tpacf-cuda
 
@@ -5144,9 +5143,9 @@ Sycl版しかない。
  | 実行の容易さ   | B                                 |
  | 備考           | READMEの指定に従い https://users.ncsa.illinois.edu/kindr/projects/hpca/files/data.tgz をダウンロードし展開する。   |
 
- | default  | ./$(program) $(DATAPARS) $(RANDPARS) $(ANALPARS) -o $(OUTFILE)
- | test run | ./$(program) $(DATAPARS) $(RANDPARS) $(ANALPARS) -o $(OUTFILE)
- | used Mem | 820 MB = 0.800 [GB]
+ | default  | ./$(program) $(DATAPARS) $(RANDPARS) $(ANALPARS) -o $(OUTFILE) |
+ | test run | ./$(program) $(DATAPARS) $(RANDPARS) $(ANALPARS) -o $(OUTFILE) |
+ | used Mem | 820 MB = 0.800 [GB] |
 
 ## tqs-cuda
 
@@ -5159,9 +5158,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) -f input/patternsNP100NB512FB25.txt
- | test run | ./$(program) -f input/patternsNP100NB512FB25.txt
- | used Mem | 555 MB = 0.541 [GB]
+ | default  | ./$(program) -f input/patternsNP100NB512FB25.txt |
+ | test run | ./$(program) -f input/patternsNP100NB512FB25.txt |
+ | used Mem | 555 MB = 0.541 [GB] |
 
 ## triad-cuda
 
@@ -5174,9 +5173,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) --passes 100 -v
- | test run | ./$(program) --passes 100 -v
- | used Mem | 652 MB = 0.636 [GB]
+ | default  | ./$(program) --passes 100 -v |
+ | test run | ./$(program) --passes 100 -v |
+ | used Mem | 652 MB = 0.636 [GB] |
 
 ## tridiagonal-cuda
 
@@ -5189,10 +5188,10 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | NS は 128 に                      |
 
- | default  | ./$(program) -num_systems=524288
-              ./$(program) --lmem -num_systems=524288
-              ./$(program) --vec4 -num_systems=524288 
- | test run | ./$(program)  -num_systems=8388560 
+ | default  | ./$(program) -num_systems=524288 |
+ |          | ./$(program) --lmem -num_systems=524288 |
+ |          | ./$(program) --vec4 -num_systems=524288  |
+ | test run | ./$(program)  -num_systems=8388560  |
  | used Mem | 29225 MB = 28.540 [GB]
 
 ## tsa-cuda
@@ -5206,9 +5205,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1024 1024 100
- | test run | ./$(program) 102400 10240 100
- | used Mem | 32554 MB = 31.791 [GB]
+ | default  | ./$(program) 1024 1024 100 |
+ | test run | ./$(program) 102400 10240 100 |
+ | used Mem | 32554 MB = 31.791 [GB] |
 
 ## tsne-cuda
 
@@ -5232,9 +5231,9 @@ Sycl版しかない。
  | 実行の容易さ   | B                                 |
  | 備考           | READMEの指定に従い http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/から入力ファイルをダウンロードし展開する。複数の問題サイズあり。main.cu内でサイズ制限あり？   |
 
- | default  | ./$(program) d493.tsp 24 100
- | test run | ./$(program) d493.tsp 24 100
- | used Mem | 556 MB = 0.542 [GB]
+ | default  | ./$(program) d493.tsp 24 100 |
+ | test run | ./$(program) d493.tsp 24 100 |
+ | used Mem | 556 MB = 0.542 [GB] |
 
 ## unfold-cuda
 
@@ -5247,9 +5246,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 10000000 1000
- | test run | ./$(program) 6000000000 1000
- | used Mem | 19652 MB = 19.191 [GB]
+ | default  | ./$(program) 10000000 1000 |
+ | test run | ./$(program) 6000000000 1000 |
+ | used Mem | 19652 MB = 19.191 [GB] |
 
 ## urng-cuda
 
@@ -5275,9 +5274,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 256 256 256 1000
- | test run | ./$(program) 512 512 512 1000
- | used Mem | 7723 MB = 7.541 [GB]
+ | default  | ./$(program) 256 256 256 1000 |
+ | test run | ./$(program) 512 512 512 1000 |
+ | used Mem | 7723 MB = 7.541 [GB] |
 
 ## vmc-cuda
 
@@ -5290,9 +5289,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program)
- | test run | ./$(program)
- | used Mem | 558 MB = 0.544 [GB]
+ | default  | ./$(program) |
+ | test run | ./$(program) |
+ | used Mem | 558 MB = 0.544 [GB] |
 
 ## vol2col-cuda
 
@@ -5305,9 +5304,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1000
- | test run | ./$(program) 1000
- | used Mem | 6448 MB = 6.296 [GB]
+ | default  | ./$(program) 1000 |
+ | test run | ./$(program) 1000 |
+ | used Mem | 6448 MB = 6.296 [GB] |
 
 ## vote-cuda
 
@@ -5320,9 +5319,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 32 10000000
- | test run | ./$(program) 32 10000000
- | used Mem | 555 MB = 0.541 [GB]
+ | default  | ./$(program) 32 10000000 |
+ | test run | ./$(program) 32 10000000 |
+ | used Mem | 555 MB = 0.541 [GB] |
 
 ## voxelization-cuda
 
@@ -5335,9 +5334,9 @@ Sycl版しかない。
  | 実行の容易さ   | B                                 |
  | 備考           | HecBench GithubのReferenceにある、voxelizationの参照先https://github.com/NVIDIA-AI-IOT/Lidar_AI_Solution から CUDA-CenterPoint/data/test/ 以下のファイルを取得する。 |
 
- | default  | ./$(program) data/test/ 100000
- | test run | ./$(program) data/test/ 100000
- | used Mem | 620 MB = 0.605 [GB]
+ | default  | ./$(program) data/test/ 100000 |
+ | test run | ./$(program) data/test/ 100000 |
+ | used Mem | 620 MB = 0.605 [GB] |
 
 ## warpexchange-cuda
 
@@ -5350,9 +5349,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | ../blockAccess-cude/\*.h をinclude |
 
- | default  | ./$(program) 8192 8192 100
- | test run | ./$(program) 81920 81920 100
- | used Mem | 77354 MB = 75.541 [GB]
+ | default  | ./$(program) 8192 8192 100 |
+ | test run | ./$(program) 81920 81920 100 |
+ | used Mem | 77354 MB = 75.541 [GB] |
 
 ## warpsort-cuda
 
@@ -5365,9 +5364,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1000
- | test run | ./$(program) 1000
- | used Mem | 648 MB = 0.632 [GB]
+ | default  | ./$(program) 1000 |
+ | test run | ./$(program) 1000 |
+ | used Mem | 648 MB = 0.632 [GB] |
 
 ## wedford-cuda
 
@@ -5380,9 +5379,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 512 512 8192 100
- | test run | ./$(program) 3072 512 8192 100
- | used Mem | 49708 MB = 48.542 [GB]
+ | default  | ./$(program) 512 512 8192 100 |
+ | test run | ./$(program) 3072 512 8192 100 |
+ | used Mem | 49708 MB = 48.542 [GB] |
 
 ## winograd-cuda
 
@@ -5395,9 +5394,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1000
- | test run | ./$(program) 1000
- | used Mem | 567 MB = 0.553 [GB]
+ | default  | ./$(program) 1000 |
+ | test run | ./$(program) 1000 |
+ | used Mem | 567 MB = 0.553 [GB] |
 
 ## wlcpow-cuda
 
@@ -5410,9 +5409,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 1000
- | test run | ./$(program) 1000
- | used Mem | 700 MB = 0.683 [GB]
+ | default  | ./$(program) 1000 |
+ | test run | ./$(program) 1000 |
+ | used Mem | 700 MB = 0.683 [GB] |
 
 ## wmma-cuda
 
@@ -5425,12 +5424,12 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | Makefile内の ARCH = sm\_70 に修正 |
 
- | default  | ./$(program) 256 256 256 100 1
-              ./$(program) 512 512 512 100 1
-              ./$(program) 1024 1024 1024 100 0
-              ./$(program) 4096 4096 4096 100 0
- | test run | ./$(program) 81920 81920 40960 100 0
- | used Mem | 35755 MB = 34.916 [GB]
+ | default  | ./$(program) 256 256 256 100 1 |
+ |          | ./$(program) 512 512 512 100 1 |
+ |          | ./$(program) 1024 1024 1024 100 0 |
+ |          | ./$(program) 4096 4096 4096 100 0 |
+ | test run | ./$(program) 81920 81920 40960 100 0 |
+ | used Mem | 35755 MB = 34.916 [GB] |
 
 ## word2vec-cuda
 
@@ -5443,10 +5442,10 @@ Sycl版しかない。
  | 実行の容易さ   | B                                 |
  | 備考           | READMEにある https://code.google.com/p/word2vec/ から demo-word.sh を入手し、そこに書かれている text8.gz をダウンロードし展開する。 |
 
- | default  | ./$(program) -train text8 -output vectors.bin -cbow 1 -size 200 \
-        -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15
- | test run | ./$(program) -train text8 -output vectors.bin -cbow 1 -size 200 \
-        -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15
+ | default  | ./$(program) -train text8 -output vectors.bin -cbow 1 -size 200 \ |
+ |    | -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15 |
+ | test run | ./$(program) -train text8 -output vectors.bin -cbow 1 -size 200 \ |
+ |    | -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15 |
  | used Mem | 1064 MB = 1.039 [GB]
 
 ## wordcount-cuda
@@ -5460,9 +5459,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | main.cu は ../wordcount-sycl/ にある |
 
- | default  | ./$(program) 10
- | test run | ./$(program) 10
- | used Mem | 1581 MB = 1.543 [GB]
+ | default  | ./$(program) 10 |
+ | test run | ./$(program) 10 |
+ | used Mem | 1581 MB = 1.543 [GB] |
 
 ## wsm5-cuda
 
@@ -5475,9 +5474,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 10
- | test run | ./$(program) 10
- | used Mem | 556 MB = 0.542 [GB]
+ | default  | ./$(program) 10 |
+ | test run | ./$(program) 10 |
+ | used Mem | 556 MB = 0.542 [GB] |
 
 ## wyllie-cuda
 
@@ -5490,9 +5489,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 8000000 1 100
- | test run | ./$(program) 49300000000 1 100
- | used Mem | 16236 MB = 15.855 [GB]
+ | default  | ./$(program) 8000000 1 100 |
+ | test run | ./$(program) 49300000000 1 100 |
+ | used Mem | 16236 MB = 15.855 [GB] |
 
 ## xlqc-cuda
 
@@ -5508,11 +5507,11 @@ Sycl版しかない。
  make
  make install |
 
- | default  | ./$(program) sp
-              ./$(program) dp
- | test run | ./$(program) sp
-              ./$(program) dp
- | used Mem | 560 MB = 0.546 [GB]
+ | default  | ./$(program) sp |
+ |          | ./$(program) dp |
+ | test run | ./$(program) sp |
+ |          | ./$(program) dp |
+ | used Mem | 560 MB = 0.546 [G |B]
 
 ## xsbench-cuda
 
@@ -5525,9 +5524,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | example.tar.gz を展開する。       |
 
- | default  | ./$(program) -s large -m event -r 10
- | test run | ./$(program) -s large -m event -r 10
- | used Mem | 6337 MB = 6.188 [GB]
+ | default  | ./$(program) -s large -m event -r 10 |
+ | test run | ./$(program) -s large -m event -r 10 |
+ | used Mem | 6337 MB = 6.188 [GB] |
 
 ## zerocopy-cuda
 
@@ -5540,9 +5539,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 100
- | test run | ./$(program) 100
- | used Mem | 749 MB = 0.731 [GB]
+ | default  | ./$(program) 100 |
+ | test run | ./$(program) 100 |
+ | used Mem | 749 MB = 0.731 [GB] |
 
 ## zeropoint-cuda
 
@@ -5555,9 +5554,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 10000000 100
- | test run | ./$(program) 2120000000 100
- | used Mem | 49013 MB = 47.864 [GB]
+ | default  | ./$(program) 10000000 100 |
+ | test run | ./$(program) 2120000000 100 |
+ | used Mem | 49013 MB = 47.864 [GB] |
 
 ## zmddft-cuda
 
@@ -5570,9 +5569,9 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | なし                              |
 
- | default  | ./$(program) 100
- | test run | ./$(program) 100
- | used Mem | 1836 MB = 1.792 [GB]
+ | default  | ./$(program) 100 |
+ | test run | ./$(program) 100 |
+ | used Mem | 1836 MB = 1.792 [GB] |
 
 ## zoom-cuda
 
@@ -5585,6 +5584,6 @@ Sycl版しかない。
  | 実行の容易さ   | A                                 |
  | 備考           | max\_smem = 48 \* 1024; の制限値あり。  |
 
- | default  | ./$(program) 1 3 2160 4096 1000
- | test run | ./$(program) 2 5 2169 99000 1000
- | used Mem | 16938 MB = 16.541 [GB]
+ | default  | ./$(program) 1 3 2160 4096 1000 |
+ | test run | ./$(program) 2 5 2169 99000 1000 |
+ | used Mem | 16938 MB = 16.541 [GB] |
