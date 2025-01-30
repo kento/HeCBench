@@ -68,7 +68,7 @@
 | logan | 10.75 | 15.29 | 15.64 | -- | -- |
 | logic-resim | build err | 7.53 | 7.52 | -- | -- |
 | logic-rewrite | 52.42 | build err | build err | -- | -- |
-| logprob | 18.96 | build err | build err | -- | -- |
+| logprob | 18.96 | 16.59 | build err | -- | -- |
 | lombscargle | 4.83 | 1.18 | 1.18 | 4.88 | 1.18 |
 | loopback | 7.82 | 10.90 | 10.88 | 10.54 | 11.34 |
 | lr | 8.53 | 6.75 | 6.73 | 33.47 | 48.47 |
