@@ -106,15 +106,19 @@ DEFINES = -DMPI
 
 LAPACK_dir=../../../../lapack_lib/include/
 
-SDKdir  = /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/
+#SDKdir  = /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/
 
-INCLUDE=-I$(LAPACK_dir) -I$(SDKdir)/cuda/include -I$(SDKdir)/math_libs/include -I/opt/rocm/include/hipblas -I/opt/rocm/include
+#INCLUDE=-I$(LAPACK_dir) -I$(SDKdir)/cuda/include -I$(SDKdir)/math_libs/include -I/opt/rocm/include/hipblas -I/opt/rocm/include
+#LIB=-L$(SDKdir)/cuda/lib64 -L$(SDKdir)/math_libs/lib64
 
-LIB=-L$(SDKdir)/cuda/lib64 -L$(SDKdir)/math_libs/lib64
+INCLUDE=-I$(LAPACK_dir)  -I/opt/rocm/include/hipblas -I/opt/rocm/include
+#INCLUDE=-I$(LAPACK_dir)  -I/opt/rocm/include/hip
+LIB=-L$(SDKdir)/cuda/lib64 
+
 
 %.o: %.cpp
 	mpic++ -O3 -c -fPIC $(DEFINES) $*.cpp -o $*.o \
-	$(INCLUDE)
+	$(INCLUDE)  -D__HIP_PLATFORM_AMD__  -fpermissive
 
 libdgemm.so.1.0.1: $(OBJS)
 	mpic++ -O3 -shared -Wl,-soname,libdgemm.so.1 -o libdgemm.so.1.0.1 $(OBJS) \
