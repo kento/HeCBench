@@ -1,12 +1,2 @@
 clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
-main.cpp:72:12: error: non-object type 'time_t (time_t *) noexcept(true)' (aka 'long (long *) noexcept(true)') is not assignable
-   72 |       time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
-      |       ~~~~ ^
-main.cpp:79:34: error: use of undeclared identifier 'timeH2D'
-   79 |               << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
-      |                                  ^
-main.cpp:79:44: error: use of undeclared identifier 'timeD2H'
-   79 |               << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
-      |                                            ^
-3 errors generated.
-make: *** [Makefile.AMD:58: main.o] Error 1
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o -o main 

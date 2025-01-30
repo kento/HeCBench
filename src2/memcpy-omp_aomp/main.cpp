@@ -28,6 +28,10 @@ int main(int argc, char* argv[]) {
 
   size_t size[NUM_SIZE];
 
+#if 1
+  time_t time, timeH2D, timeD2H;
+#endif  
+
   setup(size);
   for (int i = 0; i < NUM_SIZE; i++) {
     int* A = (int*)malloc(size[i]);
@@ -53,7 +57,11 @@ int main(int argc, char* argv[]) {
       }
 
       auto end = std::chrono::steady_clock::now();
+#if 0
       auto timeH2D = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+#else
+      timeH2D = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+#endif
       std::cout << "Copy " << size[i] << " bytes from host to device takes "
                 << (timeH2D * 1e-3f) / repeat <<  " us" << std::endl;
 
@@ -70,7 +78,11 @@ int main(int argc, char* argv[]) {
 
       end = std::chrono::steady_clock::now();
       time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+#if 0
       auto timeD2H = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+#else
+      timeD2H = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+#endif
       std::cout << "Copy " << size[i] << " bytes from device to host takes "
                 << (timeD2H * 1e-3f) / repeat <<  " us" << std::endl;
     }
