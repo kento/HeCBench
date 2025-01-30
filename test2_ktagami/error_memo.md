@@ -7,7 +7,7 @@ use of overloaded operator '/' is ambiguous
 
 # hpl-hipified
 
-"Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__";
+ too few arguments to function 'hipblasStatus_t hipblasDgemm(hipblasHandle_t, hipblasOperation_t, hipblasOperation_t, int, int, int, const double*, const double*, int, const double*, int, const double*, double*, int)'
 
 # intrinsics-simd-hipified
 use of undeclared identifier '__vabs2'
