@@ -11,16 +11,16 @@
 | hbc | 15.68 | 15.25 | 15.24 | -- | -- |
 | heartwall | 4.66 | 1.97 | 1.93 | exe err | 2.28 |
 | heat | 26.31 | 39.72 | 40.25 | 91.48 | 69.52 |
-| heat2d | compile err | compile err | 11.50 | 248.52 | 329.62 |
+| heat2d | build err | build err | 11.50 | 248.52 | 329.62 |
 | hellinger | 7.13 | 6.61 | 6.62 | 6.87 | 6.52 |
 | henry | 5.87 | 2.89 | 4.51 | 5.07 | 3.89 |
-| hexciton | 6.06 | 7.37 | compile err | 6.82 | 17.83 |
+| hexciton | 6.06 | 7.37 | build err | 6.82 | 17.83 |
 | histogram | 10.43 | 1.30 | 1.33 | 5.30 | 8.38 |
 | hmm | 7.18 | 3.94 | 3.97 | 17.31 | 7.21 |
 | hogbom | 5.19 | 1.03 | 0.93 | 5.20 | 0.99 |
 | hotspot | 4.71 | 0.60 | 0.59 | -- | -- |
 | hotspot3D | 22.97 | 23.21 | 23.24 | 19.42 | 27.55 |
-| hpl | 115.39 | 112.16 | compile error | -- | -- |
+| hpl | 115.39 | 112.16 | build err | -- | -- |
 | hungarian | 4.65 | 0.76 | 0.75 | -- | -- |
 | hwt1d | 6.12 | 3.39 | 3.38 | 6.37 | 3.49 |
 | hybridsort | 17.40 | 16.39 | 16.36 | 18.47 | 16.45 |
@@ -29,13 +29,13 @@
 | interleave | 6.02 | 3.46 | 3.47 | 5.30 | 3.39 |
 | interval | 13.69 | 46.97 | 47.13 | 17.43 | 55.60 |
 | intrinsics-cast | 69.54 | 9.21 | 9.22 | -- | -- |
-| intrinsics-simd | 27.93 | -- | compile err | -- | -- |
+| intrinsics-simd | 27.93 | -- | build err | -- | -- |
 | inversek2j | 4.57 | 0.60 | 0.60 | 11.78 | 24.34 |
 | is | 4.55 | 1.41 | 1.42 | -- | -- |
 | ising | 33.95 | 15.69 | 15.71 | 33.13 | 22.85 |
 | iso2dfd | 22.57 | 61.89 | 60.41 | 21.23 | 61.67 |
-| jaccard | 197.46 | 254.66 | compile err | -- | -- |
-| jacobi | 4.81 | 8.91 | compile err | 5.41 | 5.95 |
+| jaccard | 197.46 | 254.66 | build err | -- | -- |
+| jacobi | 4.81 | 8.91 | build err | 5.41 | 5.95 |
 | jenkins-hash | 9.50 | 5.10 | 5.11 | 9.52 | 5.57 |
 | kalman | 22.24 | 27.92 | 27.93 | 17.54 | 10.03 |
 | keccaktreehash | 11.89 | 10.72 | 10.73 | 12.56 | 10.70 |
@@ -47,39 +47,39 @@
 | kurtosis | 22.01 | 167.60 | 167.91 | -- | -- |
 | lanczos | 6.90 | 3.34 | 3.26 | 7.31 | 3.91 |
 | langevin | 73.86 | 10.60 | 12.36 | 74.80 | 16.99 |
-| langford | 4.89 | 2.58 | 2.59 | compile err | exe err |
+| langford | 4.89 | 2.58 | 2.59 | build err | exe err |
 | laplace | 5.84 | 4.45 | 4.45 | 9.40 | 21.52 |
 | laplace3d | 95.07 | 18.61 | 17.75 | 56.92 | 22.79 |
 | lavaMD | 104.12 | 61.88 | 61.77 | 194.21 | 55.93 |
-| layernorm | 9.80 | 4.11 | compile err | -- | -- |
+| layernorm | 9.80 | 4.11 | build err | -- | -- |
 | layout | 5.09 | 1.39 | 1.39 | 4.86 | 1.63 |
 | lci | 19.97 | 8.41 | 8.41 | 4.37 | 7.82 |
-| lda | 5.36 | 2.07 | 2.07 | compile err | 14.90 |
+| lda | 5.36 | 2.07 | 2.07 | build err | 14.90 |
 | ldpc | 7.08 | 5.98 | 5.98 | 12.12 | 17.04 |
-| lebesgue | 12.90 | 35.07 | compile err | 9.65 | 36.22 |
+| lebesgue | 12.90 | 35.07 | build err | 9.65 | 36.22 |
 | leukocyte | 4.76 | 1.16 | 1.02 | 6.07 | 1.15 |
 | lfib4 | 188.11 | 31.34 | 28.44 | -- | -- |
 | libor | 4.75 | 1.28 | 1.28 | 5.20 | 1.74 |
 | lid-driven-cavity | 12.87 | 14.53 | 14.57 | 26.01 | 48.17 |
 | lif | 133.75 | 76.25 | 76.29 | 150.82 | 80.63 |
-| linearprobing | 106.78 | 76.77 | 76.54 | compile err | exe err |
+| linearprobing | 106.78 | 76.77 | 76.54 | build err | exe err |
 | log2 | 6.85 | 1.27 | 1.28 | exe err | 1.78 |
 | logan | 10.75 | 15.29 | 15.64 | -- | -- |
-| logic-resim | compile err | 7.53 | 7.52 | -- | -- |
-| logic-rewrite | 52.42 | compile err | compile err | -- | -- |
-| logprob | 18.96 | compile err | compile err | -- | -- |
+| logic-resim | build err | 7.53 | 7.52 | -- | -- |
+| logic-rewrite | 52.42 | build err | build err | -- | -- |
+| logprob | 18.96 | build err | build err | -- | -- |
 | lombscargle | 4.83 | 1.18 | 1.18 | 4.88 | 1.18 |
 | loopback | 7.82 | 10.90 | 10.88 | 10.54 | 11.34 |
 | lr | 8.53 | 6.75 | 6.73 | 33.47 | 48.47 |
 | lrn | 121.77 | 49.70 | 50.15 | 127.24 | 63.45 |
-| lsqt | compile err | 60.44 | compile err | 59.87 | 3224.33 |
+| lsqt | build err | 60.46 | build err | 59.87 | 74.43 |
 | lud | 20.77 | 10.18 | 10.19 | 62.18 | 21.33 |
-| ludb | 6.93 | 9.73 | compile err | -- | -- |
+| ludb | 6.93 | 9.73 | build err | -- | -- |
 | lulesh | 13.37 | 15.84 | 13.93 | 14.09 | 566.69 |
 | lzss | | | | -- | -- |
-| mallocFree | 5.60 | 9.40 | compile err | 4.62 | 0.72 |
+| mallocFree | 5.60 | 9.40 | build err | 4.62 | 0.72 |
 | mandelbrot | 7.37 | 16.41 | 15.85 | 5.63 | 13.34 |
-| marchingCubes | 12.32 | 7.75 | compile err | -- | -- |
+| marchingCubes | 12.32 | 7.75 | build err | -- | -- |
 | mask | 168.00 | 90.46 | 90.48 | 242.76 | 93.65 |
 | match | 42.52 | 69.92 | 69.90 | 46.11 | 80.30 |
 | matern | 17.87 | 31.70 | 31.69 | 116.98 | 111.40 |
@@ -91,9 +91,9 @@
 | mcpr | 12.75 | 60.69 | 60.66 | 14.44 | 67.98 |
 | md | 18.53 | 19.47 | 19.51 | 18.97 | 18.84 |
 | md5hash | 17.24 | 33.47 | 33.46 | 17.22 | 41.39 |
-| mdh | 87.25 | 217.07 | compile err | 40.38 | 218.96 |
+| mdh | 87.25 | 217.07 | build err | 40.38 | 218.96 |
 | meanshift | 5.64 | 3.15 | 3.38 | 6.88 | 3.04 |
 | medianfilter | 6.10 | 15.03 | 15.32 | 7.23 | 4.27 |
-| memcpy | 7.45 | 19.46 | 19.69 | compile err | compile err |
+| memcpy | 7.45 | 19.46 | 19.69 | build err | build err |
 | memtest | 20.17 | 28.04 | 28.04 | 21.57 | 38.18 |
 | merge | 1657.99 | 1798.11 | 1799.55 | 1623.48 | 1814.24 |
