@@ -1,6 +1,7 @@
 # 計測結果: 時間 (単位: s)
 
 * time コマンドの出力 ( real time )
+* NVD は未更新
   
 | name | cuda | hip | hipified | omp_nvc | omp_aomp |
 | -- | -- | -- | -- | -- | -- |
