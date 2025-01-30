@@ -45,9 +45,6 @@ no matching function for call to 'hipGetErrorString'
 # logic-rewrite-hip
 use of undeclared identifier '__activemask'
 
-# logprob-hip
-redefinition of 'HALF_FLT_MAX'
-
 # logprob-hipified
 use of undeclared identifier '__shfl_xor_sync'
 
