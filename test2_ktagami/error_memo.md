@@ -66,6 +66,5 @@ use of undeclared identifier 'cublasGetStatusString'
 
 ./helper_math.h:1476:30: error: use of overloaded operator '/' is ambiguous
 
-# memcpy-omp_nvc
-expression must be a modifiable lvalue
+
 
