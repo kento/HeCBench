@@ -1,3 +1,7 @@
+# 計測結果: 時間 (単位: s)
+
+* time コマンドの出力 ( real time )
+  
 | name | cuda | hip | hipified | omp_nvc | omp_aomp |
 | -- | -- | -- | -- | -- | -- |
 | haccmk | 6.54 | 4.25 | 4.25 | 6.38 | 5.41 |
