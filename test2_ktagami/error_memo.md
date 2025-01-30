@@ -69,5 +69,3 @@ use of undeclared identifier 'cublasGetStatusString'
 # memcpy-omp_nvc
 expression must be a modifiable lvalue
 
-# memcpy-omp_aomp
- non-object type 'time_t (time_t *) noexcept(true)' (aka 'long (long *) noexcept(true)') is not assignable
