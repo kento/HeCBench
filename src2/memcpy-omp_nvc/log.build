@@ -1,15 +1,27 @@
 nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
-"main.cpp", line 72: error: expression must be a modifiable lvalue
-        time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
-        ^
+"main.cpp", line 32: warning: variable "time" was set but never used [set_but_not_used]
+    time_t time, timeH2D, timeD2H;
+           ^
 
-"main.cpp", line 79: error: identifier "timeH2D" is undefined
-                << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
-                                   ^
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
 
-"main.cpp", line 79: error: identifier "timeD2H" is undefined
-                << (float)std::abs(timeH2D - timeD2H) / (repeat * size[i]);
-                                             ^
-
-3 errors detected in the compilation of "main.cpp".
-make: *** [Makefile.NVD:58: main.o] Error 2
+setup(unsigned long*):
+     10, Generated vector simd code for the loop
+valSet(int*, int, unsigned long):
+     17, Recognized memory set idiom
+main:
+          10, Generated vector simd code for the loop
+          17, Recognized memory set idiom
+     47, Generating map(alloc:A[:len]) 
+     49, Loop not vectorized/parallelized: contains call
+     51, Generating update to(A[:len])
+     55, Loop not vectorized/parallelized: contains call
+     57, Generating update to(A[:len])
+     69, Loop not vectorized/parallelized: contains call
+     71, Generating update from(A[:len])
+     75, Loop not vectorized/parallelized: contains call
+     77, Generating update from(A[:len])
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      2, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 main.o -o main 
