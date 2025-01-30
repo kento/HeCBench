@@ -1,5 +1,5 @@
 CC   = hipcc
-ARCH = sm_60
+ARCH = sm_90
 LAUNCHER = bash -c
 
 program =  lsqt_gpu

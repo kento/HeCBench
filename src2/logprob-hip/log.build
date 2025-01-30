@@ -1,11 +1,2 @@
 hipcc  -std=c++14 -Wall -fopenmp -I../logprob-cuda/ -O3 -ffast-math -DWAVE64 -c main.cu -o main.o
-In file included from main.cu:26:
-../logprob-cuda/reference.h:1:20: error: redefinition of 'HALF_FLT_MAX'
-    1 | static const float HALF_FLT_MAX = 65504.F;
-      |                    ^
-./reduce.h:1:20: note: previous definition is here
-    1 | static const float HALF_FLT_MAX = 65504.F;
-      |                    ^
-1 error generated when compiling for gfx90a.
-failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -fopenmp -I../logprob-cuda/ -O3 -ffast-math -DWAVE64 -c -x hip main.cu -o "main.o"
-make: *** [Makefile.AMD:54: main.o] Error 1
+hipcc  -std=c++14 -Wall -fopenmp -I../logprob-cuda/ -O3 -ffast-math -DWAVE64 main.o -o main 

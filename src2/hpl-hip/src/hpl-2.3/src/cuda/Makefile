@@ -105,8 +105,12 @@ DEFINES = -DMPI -g
 #DEFINES += -DACML
 #DEFINES += -DGOTO
 
+LAPACK_dir=../../../../lapack_lib/include/
+
+INCLUDE=-I$(LAPACK_dir)
+
 %.o: %.cpp
-	mpicc -O3 -c -fPIC $(DEFINES) $*.cpp -o $*.o -I/opt/rocm/include -D__HIP_PLATFORM_AMD__
+	mpicc -O3 -c -fPIC $(DEFINES) $*.cpp -o $*.o -I/opt/rocm/include -D__HIP_PLATFORM_AMD__ $(INCLUDE)
 
 libdgemm.so.1.0.1: $(OBJS)
 

@@ -1,0 +1,7 @@
+ Ly,Lx = 8192,4096
+ niter = 1000
+ input file = ../heat2d-cuda/data.txt
+ iters =     1000, (Lx,Ly) =   4096,   8192, t =   9954.0 usec/iter, BW = 26.968 GB/s, P = 20.226 Gflop/s
+Device: iters =     1000, (Lx,Ly) =   4096,   8192, t =    457.4 usec/iter, BW = 586.840 GB/s, P = 440.130 Gflop/s
+Mismatch at 0 cpu=2966776535569103100147571865157632.000000 gpu=2966591463533229935796474446086144.000000
+FAIL

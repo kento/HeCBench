@@ -13,10 +13,10 @@ clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is
 clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a helper.c -c
 clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
 cd ./meschach_lib; make cleanup; make all CC=clang++; make clean
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_aomp/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2D/leukocyte-omp_aomp/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat *.a 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_aomp/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_aomp/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2D/leukocyte-omp_aomp/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2D/leukocyte-omp_aomp/meschach_lib'
 clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C copy.c
 clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
 clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C err.c
@@ -1848,8 +1848,8 @@ zschur.c:67:5: warning: ISO C++11 does not allow conversion from string literal 
       | ^
 1 warning generated.
 ar ru meschach.a zlufctr.o zsolve.o zmatlab.o zhsehldr.o zqrfctr.o zgivens.o  zhessen.o zschur.o; ranlib meschach.a
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_aomp/meschach_lib'
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_aomp/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2D/leukocyte-omp_aomp/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work6/src2D/leukocyte-omp_aomp/meschach_lib'
 /bin/rm -f *.o core asx5213a.mat iotort.dat 
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2/leukocyte-omp_aomp/meschach_lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work6/src2D/leukocyte-omp_aomp/meschach_lib'
 clang++   -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -o leukocyte avilib.o 		track_ellipse.o 		track_ellipse_gpu.o 		find_ellipse.o 		misc_math.o 		detect_main.o 		helper.o 		./meschach_lib/meschach.a -lm

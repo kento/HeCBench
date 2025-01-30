@@ -104,18 +104,21 @@ DEFINES = -DMPI
 #DEFINES += -DACML
 #DEFINES += -DGOTO
 
+LAPACK_dir=../../../../lapack_lib/include/
+
+SDKdir  = /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/
+
+INCLUDE=-I$(LAPACK_dir) -I$(SDKdir)/cuda/include -I$(SDKdir)/math_libs/include -I/opt/rocm/include/hipblas -I/opt/rocm/include
+
+LIB=-L$(SDKdir)/cuda/lib64 -L$(SDKdir)/math_libs/lib64
+
 %.o: %.cpp
-	#mpicc -O0 -c -fPIC $(DEFINES) $*.cpp -o $*.o -I/usr/local/cuda/include
-	mpicc -O3 -c -fPIC $(DEFINES) $*.cpp -o $*.o \
-	-I/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda/include \
-	-I/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/math_libs/include 
+	mpic++ -O3 -c -fPIC $(DEFINES) $*.cpp -o $*.o \
+	$(INCLUDE)
 
 libdgemm.so.1.0.1: $(OBJS)
-
-	#mpicc -O3 -shared -Wl,-soname,libdgemm.so.1 -o libdgemm.so.1.0.1 $(OBJS) -L/usr/local/cuda/lib64 -lcudart -lcuda -lhipblas
-	mpicc -O3 -shared -Wl,-soname,libdgemm.so.1 -o libdgemm.so.1.0.1 $(OBJS) \
-	-L/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda/lib64 -lcudart \
-	-L/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/math_libs/lib64 -lhipblas
+	mpic++ -O3 -shared -Wl,-soname,libdgemm.so.1 -o libdgemm.so.1.0.1 $(OBJS) \
+	$(LIB) -lcudart -lhipblas
 	ln -sf libdgemm.so.1.0.1 libdgemm.so.1.0
 	ln -sf libdgemm.so.1.0 libdgemm.so.1
 	ln -sf libdgemm.so.1 libdgemm.so

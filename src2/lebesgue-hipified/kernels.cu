@@ -3,6 +3,7 @@
 #include <math.h>
 #include <hip/hip_runtime.h>
 
+#if 0
 // double-precision atomic max
 __device__ __forceinline__
 double atomicMax(double *address, double val)
@@ -16,6 +17,7 @@ double atomicMax(double *address, double val)
   }
   return __longlong_as_double(ret);
 }
+#endif
 
 __global__
 void kernel (double *__restrict__ lmax,

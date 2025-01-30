@@ -8,7 +8,7 @@ OPTIMIZE  = yes
 DEBUG     = no
 VERIFY    = no
 DEVICE    = gpu
-SM        = cc70
+SM        = cc90
 LAUNCHER = bash -c
 
 #===============================================================================

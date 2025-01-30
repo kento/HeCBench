@@ -7,7 +7,7 @@ DEVICE    = gpu
 program = lsqt_gpu
 
 ifeq ($(DEVICE),gpu)
-  CFLAGS +=-O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906
+  CFLAGS +=-O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a
 else
   CFLAGS +=-O3 -DDEBUG -Wall -fopenmp
 endif

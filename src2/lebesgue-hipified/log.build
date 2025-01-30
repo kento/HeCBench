@@ -1,21 +1,4 @@
 hipcc  -std=c++14  -Wall  -O3 -c main.cpp -o main.o
 hipcc  -std=c++14  -Wall  -O3 -c utils.cpp -o utils.o
 hipcc  -std=c++14  -Wall  -O3 -c kernels.cu -o kernels.o
-kernels.cu:7:12: warning: attribute declaration must precede definition [-Wignored-attributes]
-    7 | __device__ __forceinline__
-      |            ^
-/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:156:47: note: expanded from macro '__forceinline__'
-  156 | #define __forceinline__ inline __attribute__((always_inline))
-      |                                               ^
-/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_atomic.h:920:8: note: previous definition is here
-  920 | double atomicMax(double* addr, double val) {
-      |        ^
-kernels.cu:8:8: error: redefinition of 'atomicMax'
-    8 | double atomicMax(double *address, double val)
-      |        ^
-/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_atomic.h:920:8: note: previous definition is here
-  920 | double atomicMax(double* addr, double val) {
-      |        ^
-1 warning and 1 error generated when compiling for gfx90a.
-failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip kernels.cu -o "kernels.o"
-make: *** [Makefile.AMD:49: kernels.o] Error 1
+hipcc  -std=c++14  -Wall  -O3 main.o utils.o kernels.o -o main 

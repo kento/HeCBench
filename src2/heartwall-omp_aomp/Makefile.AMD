@@ -3,7 +3,7 @@ OPTIMIZE  = yes
 DEBUG     = no
 DUMP      = yes
 DEVICE    = gpu
-ARCH      = gfx906
+ARCH      = gfx90a
 LAUNCHER = bash -c
 
 

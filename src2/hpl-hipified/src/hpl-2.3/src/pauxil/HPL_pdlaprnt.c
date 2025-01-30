@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
   /* 
  * -- High Performance Computing Linpack Benchmark (HPL)                
  *    Modifications Copyright (C) 2023 Intel Corporation​

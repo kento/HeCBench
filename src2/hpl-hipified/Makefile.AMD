@@ -1,0 +1,21 @@
+LAUNCHER = bash -c
+
+program = main
+
+$(program):
+	cd src/hpl-2.3/; make 
+
+clean:
+	cd src/hpl-2.3/; make clean
+
+include ../include/hpl-AMD
+
+run: $(program)
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: $(program)
+	../scripts/rocm-smi.sh > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill rocm-smi.sh
+	../scripts/rocm-m.sh
+     
