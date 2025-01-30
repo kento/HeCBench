@@ -25,9 +25,9 @@ failed to translate accelerator region
 failed to translate accelerator region
 
 # layernorm-hipified
+ 'cooperative_groups/reduce.h' file not found
 
-cooperative_groups/reduce.h is not supported 
-
+ 以下によれば、cooperative_groups/reduce.h は support されていない。
 [ https://rocm.docs.amd.com/projects/HIP/en/docs-6.2.0/how-to/cooperative_groups.html ]
 
 # linearprobing-omp_nvc
