@@ -33,9 +33,6 @@ failed to translate accelerator region
 # linearprobing-omp_nvc
 failed to translate accelerator region
 
-# logic-resim-cuda
- invalid narrowing conversion from "signed char" to "char
- 
 # logic-rewrite-hipified
 no matching function for call to 'hipGetErrorString'
 
