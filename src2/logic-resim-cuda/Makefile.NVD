@@ -3,10 +3,11 @@
 #===============================================================================
 
 # Compiler can be set below, or via environment variable
-CC        = nvcc
+CC        = nvc++
 OPTIMIZE  = yes
 DEBUG     = no
 ARCH      = sm_90
+SM        = cc90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -24,7 +25,8 @@ header = src/gate/*.h src/parser/*.h          src/sim/*.h src/util/*.h src/wave/
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)           -Isrc/gate -Isrc/parser -Isrc/sim -Isrc/util -Isrc/wave
+#CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)           -Isrc/gate -Isrc/parser -Isrc/sim -Isrc/util -Isrc/wave
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -gpu=$(SM) -Isrc/gate -Isrc/parser -Isrc/sim -Isrc/util -Isrc/wave
 
 # Linker Flags
 LDFLAGS = 

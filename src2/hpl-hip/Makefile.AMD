@@ -3,6 +3,7 @@ LAUNCHER = bash -c
 program = main
 
 $(program):
+	tar xf lapack_lib.tar.bz2
 	cd src/hpl-2.3/; make 
 
 clean:
