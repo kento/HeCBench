@@ -27,6 +27,7 @@ def parse_log_std(logstd, rexp):
     print(str(res))
     return res
 
+form='{:.2f}'
 def run():
     parser = optparse.OptionParser(usage="%prog [options]",description="collect data from benchmark log files")
     parser.add_option('-b', '--bench_names', type=str, dest='bench_names', default='bench_names')
@@ -52,7 +53,7 @@ def run():
                     row += ' |'
                     print('invalid Benchmark logfile under '+bDir)
                 else:
-                    row += str(res)+' |'
+                    row += form.format(res)+' |'
             else:
                 print('log.std file does not exist uner '+line+'-'+arch)
                 row += ' |'
