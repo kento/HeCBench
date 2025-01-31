@@ -13,6 +13,9 @@ do
     if [ -d $dir1 ]; then
 	c1=`grep Error $dir1/log.build | grep make`
 	if [ "$c1"  = "" ]; then
+	    c1=`grep Error $dir1/log_run_bench.err | grep make`
+	fi
+	if [ "$c1"  = "" ]; then
 	    c2=`grep -i error $dir1/log.err`
 	    if [ "$c2"  = "" ]; then
 		time1=`grep real $dir1/log.time | awk '{print $NF}'`
@@ -28,6 +31,9 @@ do
 
     if [ -d $dir2 ]; then
 	c1=`grep Error $dir2/log.build | grep make`
+	if [ "$c1"  = "" ]; then
+	    c1=`grep Error $dir2/log_run_bench.err | grep make`
+	fi
 	if [ "$c1" = "" ]; then
 	    c2=`grep -i error $dir2/log.err`
 	    if [ "$c2"  = "" ]; then
@@ -44,6 +50,9 @@ do
 
     if [ -d $dir3 ]; then
 	c1=`grep Error $dir3/log.build | grep make`
+	if [ "$c1"  = "" ]; then
+	    c1=`grep Error $dir3/log_run_bench.err | grep make`
+	fi
 	if [ "$c1" = "" ]; then
 	    c2=`grep -i error $dir3/log.err`
 	    if [ "$c2"  = "" ]; then
@@ -60,6 +69,9 @@ do
 
     if [ -d $dir4 ]; then
 	c1=`grep Error $dir4/log.build | grep make`
+	if [ "$c1"  = "" ]; then
+	    c1=`grep Error $dir4/log_run_bench.err | grep make`
+	fi
 	if [ "$c1" = "" ]; then
 	    c2=`grep -i error $dir4/log.err`
 	    if [ "$c2"  = "" ]; then
@@ -76,6 +88,9 @@ do
 
     if [ -d $dir5 ]; then
 	c1=`grep Error $dir5/log.build | grep make`
+	if [ "$c1"  = "" ]; then
+	    c1=`grep Error $dir5/log_run_bench.err | grep make`
+	fi
 	if [ "$c1" = "" ]; then
 	    c2=`grep -i error $dir5/log.err`
 	    if [ "$c2"  = "" ]; then
