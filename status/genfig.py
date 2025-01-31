@@ -5,7 +5,7 @@ import os
 import sys
 from matplotlib import pyplot as plt
 
-def extend_markdown(markd):
+def extend_markdown(markd, imagedir='SVGs'):
     f = open(markd)
     firstline = f.readline().strip()
     firstline += ' plot |'
@@ -16,11 +16,11 @@ def extend_markdown(markd):
     for line in f:
         line = line.strip()
         bname = line.split('|')[1].strip()
-        line += '!['+bname+'](SVGs/'+bname+'.svg) |'
+        line += '!['+bname+']('+imagedir+'/'+bname+'.svg) |'
         print(line)
     f.close()
 
-def gen_plt(x, line):
+def gen_plt(x, line, imagedir='SVGs'):
     words = line.strip().split('|')
     bname = words[1].strip()
     words = words[2:len(words)-1]
@@ -36,15 +36,16 @@ def gen_plt(x, line):
     fig, ax = plt.subplots()
     ax.set_ylabel('time (s)')
     plt.bar(x, y)
-
-    outf = 'SVGs/'+bname+'.svg'
+    os.makedirs(imagedir, exist_ok = True)
+    outf = imagedir+'/'+bname+'.svg'
     plt.savefig(outf)
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage="%prog [options]",description="generate bar graph from the markdown table")
     parser.add_option('-m', '--markdown', dest='markdown', default=None)
     parser.add_option('-e', '--extend', dest='extend', action='store_true', default=False)
-    parser.add_option('-n', '--noplot', dest='noplot', action='store_false', default=True)
+    parser.add_option('-n', '--noplot', dest='noplot', action='store_true', default=False)
+    parser.add_option('-i', '--imagedir', dest='imagedir', default='SVGs')
 
     (options, args) = parser.parse_args()
 
@@ -60,9 +61,9 @@ if __name__ == '__main__':
     if not options.noplot:
         for line in f:
             line = line.strip()
-            gen_plt(x,line)
+            gen_plt(x,line,imagedir=options.imagedir)
     f.close()
 
     if options.extend:
-        extend_markdown(options.markdown)
+        extend_markdown(options.markdown, imagedir=options.imagedir)
 
