@@ -1,0 +1,92 @@
+Device name: NVIDIA GH200 480GB
+Warning, only one device is detected.This program is supposed to execute with multiple devices.
+----------------------------------------------------------------
+Copy length = 1
+Average total exchange time: 1.836460 (us)
+Average exchange time per device: 1.836460 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 4
+Average total exchange time: 1.679340 (us)
+Average exchange time per device: 1.679340 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 16
+Average total exchange time: 1.629420 (us)
+Average exchange time per device: 1.629420 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 64
+Average total exchange time: 1.675180 (us)
+Average exchange time per device: 1.675180 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 256
+Average total exchange time: 1.701420 (us)
+Average exchange time per device: 1.701420 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 1024
+Average total exchange time: 1.645750 (us)
+Average exchange time per device: 1.645750 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 4096
+Average total exchange time: 1.700140 (us)
+Average exchange time per device: 1.700140 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 16384
+Average total exchange time: 1.601260 (us)
+Average exchange time per device: 1.601260 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 65536
+Average total exchange time: 1.605100 (us)
+Average exchange time per device: 1.605100 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 262144
+Average total exchange time: 1.673590 (us)
+Average exchange time per device: 1.673590 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 1048576
+Average total exchange time: 1.854700 (us)
+Average exchange time per device: 1.854700 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 4194304
+Average total exchange time: 1.741100 (us)
+Average exchange time per device: 1.741100 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 16777216
+Average total exchange time: 1.799340 (us)
+Average exchange time per device: 1.799340 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 67108864
+Average total exchange time: 1.900140 (us)
+Average exchange time per device: 1.900140 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 268435456
+Average total exchange time: 3.011810 (us)
+Average exchange time per device: 3.011810 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 1073741824
+Average total exchange time: 2.964130 (us)
+Average exchange time per device: 2.964130 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 4294967296
+Average total exchange time: 3.316440 (us)
+Average exchange time per device: 3.316440 (us)
+PASS
+----------------------------------------------------------------
+Copy length = 17179869184
+Average total exchange time: 3.900440 (us)
+Average exchange time per device: 3.900440 (us)
+PASS

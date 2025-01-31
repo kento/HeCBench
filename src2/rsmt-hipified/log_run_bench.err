@@ -1,0 +1,2 @@
+Makefile.AMD:55: ../include/rsmt-AMD: No such file or directory
+make: *** No rule to make target '../include/rsmt-AMD'.  Stop.

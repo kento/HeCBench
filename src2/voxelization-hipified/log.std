@@ -1,0 +1,17 @@
+Total 2
+
+<<<<<<<<<<<
+load file: ../voxelization-cuda/data/test/291e7331922541cea98122b607d24831.bin
+find points num: 239911
+Average execution time of the voxelization kernel: 44.389824 (us)
+valid_num: 85179
+Average execution time of the feature extraction kernel: 358.045410 (us)
+>>>>>>>>>>>
+
+<<<<<<<<<<<
+load file: ../voxelization-cuda/data/test/3615d82e7e8546fea5f181157f42e30b.bin
+find points num: 267057
+Average execution time of the voxelization kernel: 42.666656 (us)
+valid_num: 106004
+Average execution time of the feature extraction kernel: 490.694275 (us)
+>>>>>>>>>>>

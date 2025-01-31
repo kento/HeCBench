@@ -1,0 +1,2 @@
+terminate called after throwing an instance of 'thrust::THRUST_200500_600_NS::system::detail::bad_alloc'
+  what():  std::bad_alloc: cudaErrorMemoryAllocation: out of memory

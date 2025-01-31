@@ -1,0 +1,1 @@
+bash -c "time -p ( ./stencil_1d 134217728 1000 1>log.std 2>log.err ) 2> log.time"

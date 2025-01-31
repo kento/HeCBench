@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main 4 1000 1 1>log.std 2>log.err;./main 4 4000 0 1>>log.std 2>>log.err ) 2> log.time"

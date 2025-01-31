@@ -1,0 +1,1 @@
+hipcc  -std=c++14  -Wall  -O3 -c host_sc.cpp -o host_sc.o

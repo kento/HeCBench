@@ -1,0 +1,1 @@
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=hipblas -c saxpy.c -o saxpy.o

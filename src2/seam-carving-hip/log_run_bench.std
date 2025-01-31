@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main ../seam-carving-cuda/Broadway_tower.jpg 100 -u 1>log.std 2>log.err ) 2> log.time"

@@ -1,0 +1,23 @@
+
+Starting MTTKRP..
+Sort time : 0.228 sec 
+mm_partition & populate - time: 0.871 sec 
+Sort,createCSF,createFbrIND - time: 0.295 sec 
+Starting MM-CSF on a GPU
+Run the implemention: Fbr atomics
+Run the implemention: nnz atomics
+Run the implemention: Slc atomics
+Run the implemention: FbrS atomics
+Resource usage: 
+ nSlc:4096, nSFibers:1954262, nFibers:5546832, nnz:5637046
+Total GPU time: 2.800 sec 
+512 x 32 matrix
+-246.83	-246.83	-246.83	
+259.11	259.11	259.11	
+-82.15	-82.15	-82.15	
+Correctness check with COO on mode 3.
+512 x 32 matrix
+-246.83	-246.83	-246.83	
+259.11	259.11	259.11	
+-82.15	-82.15	-82.15	
+PASS!

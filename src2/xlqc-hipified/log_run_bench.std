@@ -1,0 +1,1 @@
+hipcc -c -o basis.o basis.cc  -std=c++14  -Wall -I/path/to/gsl/include  -O3

@@ -1,0 +1,1 @@
+hipcc  -DWARP_SIZE=32 -DHALF_WARP_SIZE=16           -std=c++14 -I.  -Wall  -O3 -c warpsort.cu -o warpsort.o

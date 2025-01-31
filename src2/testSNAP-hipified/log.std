@@ -1,0 +1,21 @@
+-----------------------
+Summary of TestSNAP run
+-----------------------
+natoms = 2000 
+nghostatoms = 2941 
+nsteps = 100 
+nneighs = 26 
+twojmax = 14 
+duration = 4.81983 [sec]
+step time = 48.1983 [msec/step]
+
+ Individual kernel timings for each step
+   compute_ui = 10.0144 [msec/step]
+   compute_yi = 16.9961 [msec/step]
+   compute_duidrj = 16.9834 [msec/step]
+   compute_deidrj = 2.11613 [msec/step]
+   Total kernel time = 46.11 [msec/step]
+   Percentage of step time = 95.6673%
+
+grind time = 0.0240991 [msec/atom-step]
+RMS |Fj| deviation 4.22507e-14 [eV/A]

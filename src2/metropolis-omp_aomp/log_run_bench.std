@@ -1,0 +1,5 @@
+clang++  -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c main.cpp -o main.o
+clang++  -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c utils.cpp -o utils.o
+clang++  -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c heap.cpp -o heap.o
+clang++  -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 main.o utils.o heap.o -o main 
+bash -c "time -p ( ./main -l 32 11 -t 4.7 0.1 -a 10 2 2000 10 -h 1.0 -z 7919 1>log.std 2>log.err ) 2> log.time"

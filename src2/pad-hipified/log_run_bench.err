@@ -1,0 +1,212 @@
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:573:
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:132:19: error: declaration of anonymous class must be a definition
+  132 | template <bool B, class T, class F> struct conditional { using type = T; };
+      |                   ^
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:132:35: error: non-type template parameter has incomplete type 'class F'
+  132 | template <bool B, class T, class F> struct conditional { using type = T; };
+      |                                   ^
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:132:34: note: forward declaration of '__hip_internal::F'
+  132 | template <bool B, class T, class F> struct conditional { using type = T; };
+      |                                  ^
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:133:11: error: declaration of anonymous class must be a definition
+  133 | template <class T, class F> struct conditional<false, T, F> { using type = F; };
+      |           ^
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:133:27: error: non-type template parameter has incomplete type 'class F'
+  133 | template <class T, class F> struct conditional<false, T, F> { using type = F; };
+      |                           ^
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:132:34: note: forward declaration of '__hip_internal::F'
+  132 | template <bool B, class T, class F> struct conditional { using type = T; };
+      |                                  ^
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:133:55: error: template argument for non-type template parameter must be an expression
+  133 | template <class T, class F> struct conditional<false, T, F> { using type = F; };
+      |                                                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/host_defines.h:132:35: note: template parameter is declared here
+  132 | template <bool B, class T, class F> struct conditional { using type = T; };
+      |                                   ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:145:23: error: expected a qualified name after 'typename'
+  145 |     template<typename T, unsigned int n> struct HIP_vector_base;
+      |                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:145:23: error: expected ',' or '>' in template-parameter-list
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:145:24: error: expected unqualified-id
+  145 |     template<typename T, unsigned int n> struct HIP_vector_base;
+      |                        ^
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:147:23: error: expected a qualified name after 'typename'
+  147 |     template<typename T>
+      |                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:147:23: error: expected ',' or '>' in template-parameter-list
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:148:12: error: explicit specialization of undeclared template struct 'HIP_vector_base'
+  148 |     struct HIP_vector_base<T, 1> {
+      |            ^              ~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:178:23: error: expected a qualified name after 'typename'
+  178 |     template<typename T>
+      |                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:178:23: error: expected ',' or '>' in template-parameter-list
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:179:28: error: template argument for non-type template parameter must be an expression
+  179 |     struct HIP_vector_base<T, 2> {
+      |                            ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:147:23: note: template parameter is declared here
+  147 |     template<typename T>
+      |                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:217:23: error: expected a qualified name after 'typename'
+  217 |     template<typename T>
+      |                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:217:23: error: expected ',' or '>' in template-parameter-list
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:218:28: error: template argument for non-type template parameter must be an expression
+  218 |     struct HIP_vector_base<T, 3> {
+      |                            ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:147:23: note: template parameter is declared here
+  147 |     template<typename T>
+      |                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:402:23: error: expected a qualified name after 'typename'
+  402 |     template<typename T>
+      |                       ^
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+In file included from host_task.cpp:41:
+In file included from ./support/partitioner.h:1:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_runtime.h:114:
+In file included from /opt/rocm-6.2.0/include/hip/hip_runtime_api.h:575:
+In file included from /opt/rocm-6.2.0/include/hip/texture_types.h:47:
+In file included from /opt/rocm-6.2.0/include/hip/channel_descriptor.h:32:
+In file included from /opt/rocm-6.2.0/include/hip/amd_detail/amd_channel_descriptor.h:29:
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:402:23: error: expected ',' or '>' in template-parameter-list
+./support/common.h:44:11: note: expanded from macro 'T'
+   44 | #define T double
+      |           ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip host_task.cpp -o "host_task.o"
+make: *** [Makefile.AMD:58: host_task.o] Error 1

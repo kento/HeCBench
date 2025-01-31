@@ -1,0 +1,5 @@
+Computing the reference SDDMM results (batch size = 32)..
+Done
+Average execution time of SDDMM: 216.537567 (us)
+@batch1 index0: 1.161574 != 2294.144043
+sddmm_csr_batched_example test FAILED: wrong result

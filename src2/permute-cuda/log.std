@@ -1,0 +1,11 @@
+Checking block size 32.
+Mismatch of q at 715667712: CPU_ref: 0.839463 vs GPU: -0.358410
+Mismatch of q at 715667713: CPU_ref: 0.455664 vs GPU: 0.904372
+Mismatch of q at 715667714: CPU_ref: -0.664712 vs GPU: -0.141949
+Mismatch of q at 715667715: CPU_ref: 0.699053 vs GPU: -0.786106
+Mismatch of q at 715667716: CPU_ref: 0.933059 vs GPU: -0.157921
+Mismatch of q at 715667717: CPU_ref: 0.542152 vs GPU: -0.098594
+Mismatch of q at 715667718: CPU_ref: -0.713692 vs GPU: 0.069216
+Mismatch of q at 715667719: CPU_ref: -0.352794 vs GPU: -0.078441
+Mismatch of q at 715667720: CPU_ref: 0.902702 vs GPU: 0.903964
+Mismatch of q at 715667721: CPU_ref: -0.494559 vs GPU: 0.234776

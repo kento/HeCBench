@@ -1,0 +1,7 @@
+hipcc  -std=c++17 -Wall -fgpu-rdc  -O3 -c main.cu -o main.o
+hipcc  -std=c++17 -Wall -fgpu-rdc  -O3 -c bench_merkle_tree.cu -o bench_merkle_tree.o
+hipcc  -std=c++17 -Wall -fgpu-rdc  -O3 -c merkle_tree.cu -o merkle_tree.o
+hipcc  -std=c++17 -Wall -fgpu-rdc  -O3 -c rescue_prime.cu -o rescue_prime.o
+hipcc  -std=c++17 -Wall -fgpu-rdc  -O3 -c ff_p.cu -o ff_p.o
+hipcc main.o bench_merkle_tree.o merkle_tree.o rescue_prime.o ff_p.o -o main -fgpu-rdc --hip-link
+bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"

@@ -1,0 +1,36 @@
+main.cu:295:7: warning: variable 'ierr' set but not used [-Wunused-but-set-variable]
+  295 |   int ierr;
+      |       ^
+main.cu:359:28: warning: variable 'ierr' set but not used [-Wunused-but-set-variable]
+  359 |   int    i, k, ii, kk, ll, ierr, inds, i_end;
+      |                            ^
+main.cu:493:7: warning: variable 'ierr' set but not used [-Wunused-but-set-variable]
+  493 |   int ierr;
+      |       ^
+main.cu:542:7: warning: unused variable 'ierr' [-Wunused-variable]
+  542 |   int ierr = MPI_Allreduce(loc,glob,2,MPI_DOUBLE,MPI_SUM,MPI_COMM_WORLD);
+      |       ^~~~
+main.cu:685:13: warning: unused variable 'state_size' [-Wunused-variable]
+  685 |   const int state_size = (nz+2*hs)*(nx+2*hs)*NUM_VARS;
+      |             ^~~~~~~~~~
+5 warnings generated when compiling for gfx90a.
+main.cu:295:7: warning: variable 'ierr' set but not used [-Wunused-but-set-variable]
+  295 |   int ierr;
+      |       ^
+main.cu:359:28: warning: variable 'ierr' set but not used [-Wunused-but-set-variable]
+  359 |   int    i, k, ii, kk, ll, ierr, inds, i_end;
+      |                            ^
+main.cu:493:7: warning: variable 'ierr' set but not used [-Wunused-but-set-variable]
+  493 |   int ierr;
+      |       ^
+main.cu:542:7: warning: unused variable 'ierr' [-Wunused-variable]
+  542 |   int ierr = MPI_Allreduce(loc,glob,2,MPI_DOUBLE,MPI_SUM,MPI_COMM_WORLD);
+      |       ^~~~
+main.cu:685:13: warning: unused variable 'state_size' [-Wunused-variable]
+  685 |   const int state_size = (nz+2*hs)*(nx+2*hs)*NUM_VARS;
+      |             ^~~~~~~~~~
+5 warnings generated when compiling for host.
+ld.lld: error: unable to find library -lmpi
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++ --driver-mode=g++ -Llib --hip-link  -DNX=400 -DNZ=200 -DSIM_TIME=600 -DDATA_SPEC=DATA_SPEC_THERMAL -I/usr/lib/x86_64-linux-gnu/openmpi/include -std=c++14 -Wall -O3 main.o -o "main" -L/usr/lib/x86_64-linux-gnu/openmpi/lib -lmpi
+make: *** [Makefile.AMD:49: main] Error 1

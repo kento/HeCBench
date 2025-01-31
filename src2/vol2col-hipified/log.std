@@ -1,0 +1,30 @@
+
+kernel size: 1
+Average execution time of vol2col kernel: 13.163913 (us)
+Checksum = 0.049222
+Average execution time of col2vol kernel: 24.866804 (us)
+Checksum = 0.458142
+
+kernel size: 3
+Average execution time of vol2col kernel: 90.723228 (us)
+Checksum = 0.040429
+Average execution time of col2vol kernel: 61.121059 (us)
+Checksum = 1.283804
+
+kernel size: 5
+Average execution time of vol2col kernel: 585.604004 (us)
+Checksum = 0.024100
+Average execution time of col2vol kernel: 121.736244 (us)
+Checksum = 2.805347
+
+kernel size: 7
+Average execution time of vol2col kernel: 1916.061646 (us)
+Checksum = 0.016979
+Average execution time of col2vol kernel: 182.497116 (us)
+Checksum = 5.035419
+
+kernel size: 9
+Average execution time of vol2col kernel: 4367.412109 (us)
+Checksum = 0.013007
+Average execution time of col2vol kernel: 277.573944 (us)
+Checksum = 7.938409

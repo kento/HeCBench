@@ -1,0 +1,40 @@
+=========== Data type is I8 ==========
+Average time for sum reduction: 82.063600 (us)
+Average time for write index operations: 134.518620 (us)
+PASS
+=========== Data type is I16 ==========
+Average time for sum reduction: 68.917570 (us)
+Average time for write index operations: 141.011600 (us)
+PASS
+=========== Data type is I32 ==========
+Average time for sum reduction: 71.427090 (us)
+Average time for write index operations: 137.314200 (us)
+PASS
+=========== Data type is FP32 ==========
+Average time for sum reduction: 71.665780 (us)
+Average time for write index operations: 136.927310 (us)
+PASS
+=========== Data type is FP64 ==========
+Average time for sum reduction: 82.089480 (us)
+Average time for write index operations: 149.454660 (us)
+PASS
+=========== Data type is I8 ==========
+Average time for sum reduction: 61.289210 (us)
+Average time for write index operations: 130.387000 (us)
+PASS
+=========== Data type is I16 ==========
+Average time for sum reduction: 66.382210 (us)
+Average time for write index operations: 147.017100 (us)
+PASS
+=========== Data type is I32 ==========
+Average time for sum reduction: 69.650670 (us)
+Average time for write index operations: 137.840570 (us)
+PASS
+=========== Data type is FP32 ==========
+Average time for sum reduction: 69.073630 (us)
+Average time for write index operations: 138.664600 (us)
+PASS
+=========== Data type is FP64 ==========
+Average time for sum reduction: 80.953830 (us)
+Average time for write index operations: 146.401610 (us)
+PASS

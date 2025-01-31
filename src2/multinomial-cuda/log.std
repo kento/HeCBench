@@ -1,0 +1,3 @@
+results mismatch: 41007 3680 3682
+FAIL
+Average execution time of sampleMultinomialOnce kernel: 1897.339355 (us)

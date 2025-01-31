@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main 100 0 ../urng-sycl/URNG_Input.bmp 1>log.std 2>log.err;./main 100 1 ../urng-sycl/URNG_Input.bmp 1>>log.std 2>>log.err ) 2> log.time"

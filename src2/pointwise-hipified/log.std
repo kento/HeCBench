@@ -1,0 +1,3 @@
+seqLength 100, numLayers 8, hiddenSize 512, miniBatch 64
+Average kernel execution time: 0.009150 (s)
+i checksum 2.849342E+06     c checksum 1.875297E+06     h checksum 2.283323E+05

@@ -1,0 +1,4 @@
+clang++: error: unknown argument: '--default-stream'
+clang++: error: no such file or directory: 'per-thread'
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  --default-stream per-thread -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

@@ -1,0 +1,1 @@
+hipcc  -fopenmp -std=c++14 -Wall -I../spaxpby-cuda -O3 -c main.cu -o main.o

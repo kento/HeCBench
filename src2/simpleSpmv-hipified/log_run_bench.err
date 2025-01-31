@@ -1,0 +1,6 @@
+kernels.cu:49:15: error: use of undeclared identifier '__shfl_down_sync'
+   49 |       temp += __shfl_down_sync(0xFFFFFFFF, temp, i, BS);
+      |               ^
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip kernels.cu -o "kernels.o"
+make: *** [Makefile.AMD:50: kernels.o] Error 1

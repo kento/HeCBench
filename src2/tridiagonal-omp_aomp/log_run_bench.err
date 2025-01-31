@@ -1,0 +1,42 @@
+In file included from main.cpp:37:
+./test_gen_result_check.h:216:9: warning: variable 'mean' set but not used [-Wunused-but-set-variable]
+  216 |   float mean = 0.0f; //mean error
+      |         ^
+1 warning generated.
+In file included from main.cpp:37:
+./test_gen_result_check.h:216:9: warning: variable 'mean' set but not used [-Wunused-but-set-variable]
+  216 |   float mean = 0.0f; //mean error
+      |         ^
+In file included from main.cpp:33:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<float *&>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<float *&>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2694:32: note: in instantiation of function template specialization 'std::declval<float *&>' requested here
+ 2694 |                = decltype(swap(std::declval<_Tp&>(), std::declval<_Tp&>()))>
+      |                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2695:26: note: in instantiation of default argument for '__test<float *>' required here
+ 2695 |         static true_type __test(int);
+      |                          ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2718:24: note: while substituting deduced template arguments into function template '__test' [with _Tp = float *, $1 = (no value)]
+ 2718 |       typedef decltype(__test<_Tp>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2730:14: note: in instantiation of template class 'std::__is_swappable_impl<float *>' requested here
+ 2730 |     : public __is_swappable_impl<_Tp>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/move.h:216:24: note: in instantiation of template class 'std::__is_swappable<float *>' requested here
+  216 |     typename enable_if<__is_swappable<_Tp>::value>::type
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2676:5: note: while substituting explicitly-specified template arguments into function template 'swap[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]' [with _Tp = float *]
+ 2676 |     swap(_Tp&, _Tp&)
+      |     ^
+./sweep_small_systems.h:138:5: note: in instantiation of function template specialization 'std::swap<float *>' requested here
+  138 |     std::swap(a, t);
+      |     ^
+1 warning and 1 error generated.
+make: *** [Makefile.AMD:59: main.o] Error 1

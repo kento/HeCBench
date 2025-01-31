@@ -1,10 +1,10 @@
 Image width and height: 512 512
 Executing kernel for 100 iterations
 -------------------------------------------
-Average kernel execution time 0.00017044 (s)
+Average kernel execution time 0.000169641 (s)
 Pass
 Image width and height: 512 512
 Executing kernel for 100 iterations
 -------------------------------------------
-Average kernel execution time 0.000167174 (s)
+Average kernel execution time 0.000169948 (s)
 Pass

@@ -1,0 +1,5 @@
+main.cpp:8:10: fatal error: 'reference.h' file not found
+    8 | #include "reference.h"
+      |          ^~~~~~~~~~~~~
+1 error generated.
+make: *** [Makefile.AMD:57: main.o] Error 1

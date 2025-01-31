@@ -1,0 +1,716 @@
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::thread::_State *>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::thread::_State *>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::thread::_State *>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::thread::_State *, std::thread::_State *>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::thread::_State *, _To1 = std::thread::_State *, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::thread::_State *, std::thread::_State *>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:148:14: note: (skipping 5 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  148 |     : public _B1
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1001:14: note: in instantiation of template class 'std::__is_constructible_impl<std::default_delete<std::thread::_State>, std::default_delete<std::thread::_State> &&>' requested here
+ 1001 |     : public __is_constructible_impl<_Tp, _Tp&&>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1008:14: note: in instantiation of template class 'std::__is_move_constructible_impl<std::default_delete<std::thread::_State>>' requested here
+ 1008 |     : public __is_move_constructible_impl<_Tp>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:206:13: note: in instantiation of template class 'std::is_move_constructible<std::default_delete<std::thread::_State>>' requested here
+  206 |             bool = is_move_constructible<_Dp>::value,
+      |                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:248:7: note: in instantiation of default argument for '__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>>' required here
+  248 |       __uniq_ptr_data<_Tp, _Dp> _M_t;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:18: note: in instantiation of template class 'std::unique_ptr<std::thread::_State>' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                         ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::thread::_State *const &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::thread::_State *const &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::thread::_State *const &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::thread::_State *const &, std::thread::_State *>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::thread::_State *const &, _To1 = std::thread::_State *, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::thread::_State *const &, std::thread::_State *>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 7 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/tuple:981:11: note: while substituting deduced template arguments into function template 'tuple' [with _U1 = std::thread::_State *, _U2 = std::default_delete<std::thread::_State>, $2 = (no value)]
+  981 |     class tuple<_T1, _T2> : public _Tuple_impl<0, _T1, _T2>
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:128:11: note: while declaring the implicit copy constructor for '__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>'
+  128 |     class __uniq_ptr_impl
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:208:30: note: in instantiation of template class 'std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>' requested here
+  208 |     struct __uniq_ptr_data : __uniq_ptr_impl<_Tp, _Dp>
+      |                              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:248:33: note: in instantiation of template class 'std::__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>>' requested here
+  248 |       __uniq_ptr_data<_Tp, _Dp> _M_t;
+      |                                 ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:18: note: in instantiation of template class 'std::unique_ptr<std::thread::_State>' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                         ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const std::default_delete<std::thread::_State> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const std::default_delete<std::thread::_State> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const std::default_delete<std::thread::_State> &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const std::default_delete<std::thread::_State> &, std::default_delete<std::thread::_State>>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const std::default_delete<std::thread::_State> &, _To1 = std::default_delete<std::thread::_State>, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const std::default_delete<std::thread::_State> &, std::default_delete<std::thread::_State>>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:14: note: (skipping 7 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/tuple:981:11: note: while substituting deduced template arguments into function template 'tuple' [with _U1 = std::thread::_State *, _U2 = std::default_delete<std::thread::_State>, $2 = (no value)]
+  981 |     class tuple<_T1, _T2> : public _Tuple_impl<0, _T1, _T2>
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:128:11: note: while declaring the implicit copy constructor for '__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>'
+  128 |     class __uniq_ptr_impl
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:208:30: note: in instantiation of template class 'std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>' requested here
+  208 |     struct __uniq_ptr_data : __uniq_ptr_impl<_Tp, _Dp>
+      |                              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:248:33: note: in instantiation of template class 'std::__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>>' requested here
+  248 |       __uniq_ptr_data<_Tp, _Dp> _M_t;
+      |                                 ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:18: note: in instantiation of template class 'std::unique_ptr<std::thread::_State>' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                         ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::default_delete<std::thread::_State>>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::default_delete<std::thread::_State>>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::default_delete<std::thread::_State>>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::default_delete<std::thread::_State>, std::default_delete<std::thread::_State>>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::default_delete<std::thread::_State>, _To1 = std::default_delete<std::thread::_State>, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::default_delete<std::thread::_State>, std::default_delete<std::thread::_State>>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:14: note: (skipping 7 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/tuple:981:11: note: while substituting deduced template arguments into function template 'tuple' [with _U1 = std::thread::_State *, _U2 = std::default_delete<std::thread::_State>, $2 = (no value)]
+  981 |     class tuple<_T1, _T2> : public _Tuple_impl<0, _T1, _T2>
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:128:11: note: while declaring the implicit copy constructor for '__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>'
+  128 |     class __uniq_ptr_impl
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:208:30: note: in instantiation of template class 'std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>' requested here
+  208 |     struct __uniq_ptr_data : __uniq_ptr_impl<_Tp, _Dp>
+      |                              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:248:33: note: in instantiation of template class 'std::__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>>' requested here
+  248 |       __uniq_ptr_data<_Tp, _Dp> _M_t;
+      |                                 ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:18: note: in instantiation of template class 'std::unique_ptr<std::thread::_State>' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                         ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::thread::id &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::thread::id &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2694:32: note: in instantiation of function template specialization 'std::declval<std::thread::id &>' requested here
+ 2694 |                = decltype(swap(std::declval<_Tp&>(), std::declval<_Tp&>()))>
+      |                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2695:26: note: in instantiation of default argument for '__test<std::thread::id>' required here
+ 2695 |         static true_type __test(int);
+      |                          ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2718:24: note: while substituting deduced template arguments into function template '__test' [with _Tp = std::thread::id, $1 = (no value)]
+ 2718 |       typedef decltype(__test<_Tp>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2730:14: note: in instantiation of template class 'std::__is_swappable_impl<std::thread::id>' requested here
+ 2730 |     : public __is_swappable_impl<_Tp>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/move.h:216:24: note: in instantiation of template class 'std::__is_swappable<std::thread::id>' requested here
+  216 |     typename enable_if<__is_swappable<_Tp>::value>::type
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2676:5: note: while substituting explicitly-specified template arguments into function template 'swap[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]' [with _Tp = std::thread::id]
+ 2676 |     swap(_Tp&, _Tp&)
+      |     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:172:7: note: in instantiation of function template specialization 'std::swap<std::thread::id>' requested here
+  172 |     { std::swap(_M_id, __t._M_id); }
+      |       ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<long>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2239:20: note: in instantiation of function template specialization 'std::declval<long>' requested here
+ 2239 |         = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+      |                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2244:14: note: in instantiation of template type alias '__cond_t' requested here
+ 2244 |       static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2291:29: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2291 |       using type = decltype(_S_test<_Tp1, _Tp2>(0));
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2297:14: note: in instantiation of template class 'std::__common_type_impl<long, long>' requested here
+ 2297 |     : public __common_type_impl<_Tp1, _Tp2>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2272:14: note: in instantiation of template class 'std::common_type<long, long>' requested here
+ 2272 |     : public common_type<_Tp0, _Tp0>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:542:30: note: in instantiation of template class 'std::common_type<long>' requested here
+  542 |         constexpr duration<typename common_type<rep>::type, period>
+      |                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1128:15: note: in instantiation of template class 'std::chrono::duration<long, std::ratio<1, 1000000000>>' requested here
+ 1128 |       typedef duration::rep                                     rep;
+      |               ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const long &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const long &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const long &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const long &, long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const long &, _To1 = long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const long &, long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<const long &, long>, std::__or_<std::chrono::treat_as_floating_point<long>, std::__not_<std::chrono::treat_as_floating_point<long>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<long>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:628:11: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = long, $1 = (no value)]
+  628 |         { return duration(duration_values<rep>::min()); }
+      |                  ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1132:45: note: in instantiation of member function 'std::chrono::duration<long, std::ratio<1, 1000000000>>::min' requested here
+ 1132 |       static_assert(system_clock::duration::min()
+      |                                             ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const std::chrono::duration<long, std::ratio<1, 1000000000>> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const std::chrono::duration<long, std::ratio<1, 1000000000>> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const std::chrono::duration<long, std::ratio<1, 1000000000>> &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const std::chrono::duration<long, std::ratio<1, 1000000000>> &, long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const std::chrono::duration<long, std::ratio<1, 1000000000>> &, _To1 = long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const std::chrono::duration<long, std::ratio<1, 1000000000>> &, long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<const std::chrono::duration<long, std::ratio<1, 1000000000>> &, long>, std::__or_<std::chrono::treat_as_floating_point<long>, std::__not_<std::chrono::treat_as_floating_point<std::chrono::duration<long, std::ratio<1, 1000000000>>>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<duration<long, ratio<1, 1000000000>>>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:778:9: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = duration<long, ratio<1, 1000000000>>, $1 = (no value)]
+  778 |         return __ct(__lhs).count() < __ct(__rhs).count();
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1133:7: note: in instantiation of function template specialization 'std::chrono::operator<<long, std::ratio<1, 1000000000>, long, std::ratio<1, 1000000000>>' requested here
+ 1133 |                     < system_clock::duration::zero(),
+      |                     ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const std::chrono::duration<long, std::ratio<1, 1>> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const std::chrono::duration<long> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const std::chrono::duration<long> &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const std::chrono::duration<long> &, long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const std::chrono::duration<long> &, _To1 = long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const std::chrono::duration<long> &, long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 2 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<std::chrono::duration<long>>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:459:14: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = std::chrono::duration<long>, $1 = (no value)]
+  459 |       struct duration
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:872:14: note: while declaring the implicit copy constructor for 'time_point<std::chrono::system_clock, std::chrono::duration<long>>'
+  872 |       struct time_point
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1154:10: note: in instantiation of template class 'std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<long>>' requested here
+ 1154 |                (__from(chrono::seconds(__t)));
+      |                 ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::chrono::duration<long, std::ratio<1, 1000000000>>>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::chrono::duration<long, std::ratio<1, 1000000000>>>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::chrono::duration<long, std::ratio<1, 1000000000>>>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::duration<long, std::ratio<1, 1000000000>>>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::chrono::duration<long, std::ratio<1, 1000000000>>, _To1 = std::chrono::duration<long, std::ratio<1, 1000000000>>, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::duration<long, std::ratio<1, 1000000000>>>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:148:14: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  148 |     : public _B1
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::duration<long, std::ratio<1, 1000000000>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:891:15: note: in instantiation of template type alias '_Require' requested here
+  891 |                  typename = _Require<is_convertible<_Dur2, _Dur>>>
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:892:14: note: in instantiation of default argument for 'time_point<std::chrono::duration<long, std::ratio<1, 1000000000>>>' required here
+  892 |           constexpr time_point(const time_point<clock, _Dur2>& __t)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  893 |           : __d(__t.time_since_epoch())
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  894 |           { }
+      |           ~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:960:9: note: while substituting deduced template arguments into function template 'time_point' [with _Dur2 = std::chrono::duration<long, std::ratio<1, 1000000000>>, $1 = (no value)]
+  960 |         return __time_point(duration_cast<_ToDur>(__t.time_since_epoch()));
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1153:9: note: in instantiation of function template specialization 'std::chrono::time_point_cast<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::system_clock, std::chrono::duration<long>>' requested here
+ 1153 |         return time_point_cast<system_clock::duration>
+      |                ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long double>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<long double>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2239:20: note: in instantiation of function template specialization 'std::declval<long double>' requested here
+ 2239 |         = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+      |                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2244:14: note: in instantiation of template type alias '__cond_t' requested here
+ 2244 |       static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2291:29: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2291 |       using type = decltype(_S_test<_Tp1, _Tp2>(0));
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2297:14: note: in instantiation of template class 'std::__common_type_impl<long double, long double>' requested here
+ 2297 |     : public __common_type_impl<_Tp1, _Tp2>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2272:14: note: in instantiation of template class 'std::common_type<long double, long double>' requested here
+ 2272 |     : public common_type<_Tp0, _Tp0>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:542:30: note: in instantiation of template class 'std::common_type<long double>' requested here
+  542 |         constexpr duration<typename common_type<rep>::type, period>
+      |                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:3224:5: note: in instantiation of template class 'std::chrono::duration<long double, std::ratio<3600>>' requested here
+ 3224 |     operator""h(long double __hours)
+      |     ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const long double &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const long double &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const long double &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const long double &, long double>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const long double &, _To1 = long double, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const long double &, long double>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: in instantiation of template class 'std::is_convertible<const long double &, long double>' requested here
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<const long double &, long double>, std::__or_<std::chrono::treat_as_floating_point<long double>, std::__not_<std::chrono::treat_as_floating_point<long double>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<long double>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:3225:14: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = long double, $1 = (no value)]
+ 3225 |     { return chrono::duration<long double, ratio<3600,1>>{__hours}; }
+      |              ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::thread &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::thread &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:844:48: note: in instantiation of function template specialization 'std::declval<std::thread &>' requested here
+  844 |     template<typename _Tp, typename = decltype(declval<_Tp&>().~_Tp())>
+      |                                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:845:24: note: in instantiation of default argument for '__test<std::thread>' required here
+  845 |       static true_type __test(int);
+      |                        ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:855:24: note: while substituting deduced template arguments into function template '__test' [with _Tp = std::thread, $1 = (no value)]
+  855 |       typedef decltype(__test<_Tp>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:867:14: note: in instantiation of template class 'std::__is_destructible_impl<std::thread>' requested here
+  867 |     : public __is_destructible_impl<typename
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:883:14: note: in instantiation of template class 'std::__is_destructible_safe<std::thread>' requested here
+  883 |     : public __is_destructible_safe<_Tp>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_construct.h:188:21: note: in instantiation of template class 'std::is_destructible<std::thread>' requested here
+  188 |       static_assert(is_destructible<_Value_type>::value,
+      |                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/alloc_traits.h:848:7: note: in instantiation of function template specialization 'std::_Destroy<std::thread *>' requested here
+  848 |       _Destroy(__first, __last);
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:680:7: note: in instantiation of function template specialization 'std::_Destroy<std::thread *, std::thread>' requested here
+  680 |         std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |              ^
+../rsc-cuda/model_fitting.cpp:72:28: note: in instantiation of member function 'std::vector<std::thread>::~vector' requested here
+   72 |   std::vector<std::thread> cpu_threads;
+      |                            ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2530:7: note: in instantiation of function template specialization 'std::declval<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+ 2530 |       std::declval<_Fn>()(std::declval<_Args>()...)
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2541:24: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2541 |       typedef decltype(_S_test<_Functor, _ArgTypes...>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2547:14: note: in instantiation of template class 'std::__result_of_impl<false, false, (lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+ 2547 |     : public __result_of_impl<
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2888:29: note: in instantiation of template class 'std::__invoke_result<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+ 2888 |                                __void_t<typename _Result::type>>
+      |                                                  ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2933:7: note: during template argument deduction for class template partial specialization '__is_invocable_impl<_Result, _Ret, true, __void_t<typename _Result::type>>' [with _Result = std::__invoke_result<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, _Ret = void]
+ 2933 |     : __is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, void>::type
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2933:7: note: in instantiation of template class 'std::__is_invocable_impl<std::__invoke_result<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, void>' requested here
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:129:17: note: in instantiation of template class 'std::__is_invocable<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+  129 |         static_assert( __is_invocable<typename decay<_Callable>::type,
+      |                        ^
+../rsc-cuda/model_fitting.cpp:74:27: note: in instantiation of function template specialization 'std::thread::thread<(lambda at ../rsc-cuda/model_fitting.cpp:74:39), void>' requested here
+   74 |     cpu_threads.push_back(std::thread([=]() {
+      |                           ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const (lambda at ../rsc-cuda/model_fitting.cpp:74:39) &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const (lambda at ../rsc-cuda/model_fitting.cpp:74:39) &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const (lambda at ../rsc-cuda/model_fitting.cpp:74:39) &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const (lambda at ../rsc-cuda/model_fitting.cpp:74:39) &, (lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const (lambda at ../rsc-cuda/model_fitting.cpp:74:39) &, _To1 = (lambda at ../rsc-cuda/model_fitting.cpp:74:39), $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const (lambda at ../rsc-cuda/model_fitting.cpp:74:39) &, (lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:14: note: (skipping 5 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/tuple:609:11: note: while substituting deduced template arguments into function template 'tuple' [with _NotEmpty = (no value), $1 = (no value)]
+  609 |     class tuple : public _Tuple_impl<0, _Elements...>
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:239:14: note: while declaring the implicit copy constructor for '_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>'
+  239 |       struct _Invoker
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:203:13: note: in instantiation of template class 'std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>' requested here
+  203 |         _Callable               _M_func;
+      |                                 ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:33: note: in instantiation of template class 'std::thread::_State_impl<std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>>' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                                        ^
+../rsc-cuda/model_fitting.cpp:74:27: note: in instantiation of function template specialization 'std::thread::thread<(lambda at ../rsc-cuda/model_fitting.cpp:74:39), void>' requested here
+   74 |     cpu_threads.push_back(std::thread([=]() {
+      |                           ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2965:20: error: '#pragma omp declare variant' does not support constexpr functions
+ 2965 |     constexpr bool __call_is_nt(__invoke_other)
+      |                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2973:2: note: in instantiation of function template specialization 'std::__call_is_nt<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+ 2973 |         std::__call_is_nt<_Fn, _Args...>(typename _Result::__invoke_type{})
+      |         ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:14: note: in instantiation of template class 'std::__call_is_nothrow<std::__invoke_result<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, (lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2984:7: note: in instantiation of template class 'std::__and_<std::__is_invocable<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, std::__call_is_nothrow<std::__invoke_result<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, (lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>' requested here
+ 2984 |     : __and_<__is_invocable<_Fn, _Args...>,
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/invoke.h:91:14: note: in instantiation of template class 'std::__is_nothrow_invocable<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+   91 |     noexcept(__is_nothrow_invocable<_Callable, _Args...>::value)
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/invoke.h:90:5: note: in instantiation of exception specification for '__invoke<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+   90 |     __invoke(_Callable&& __fn, _Args&&... __args)
+      |     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:259:18: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  259 |           { return std::__invoke(std::get<_Ind>(std::move(_M_t))...); }
+      |                         ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:266:11: note: in instantiation of function template specialization 'std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>::_M_invoke<0UL>' requested here
+  266 |           return _M_invoke(_Indices());
+      |                  ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:211:13: note: in instantiation of member function 'std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>::operator()' requested here
+  211 |         _M_run() { _M_func(); }
+      |                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:206:4: note: in instantiation of member function 'std::thread::_State_impl<std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>>::_M_run' requested here
+  206 |           _State_impl(_Args&&... __args)
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:33: note: in instantiation of function template specialization 'std::thread::_State_impl<std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>>::_State_impl<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                                        ^
+../rsc-cuda/model_fitting.cpp:74:27: note: in instantiation of function template specialization 'std::thread::thread<(lambda at ../rsc-cuda/model_fitting.cpp:74:39), void>' requested here
+   74 |     cpu_threads.push_back(std::thread([=]() {
+      |                           ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2973:2: error: non-type template argument is not a constant expression
+ 2973 |         std::__call_is_nt<_Fn, _Args...>(typename _Result::__invoke_type{})
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:14: note: in instantiation of template class 'std::__call_is_nothrow<std::__invoke_result<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, (lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2984:7: note: in instantiation of template class 'std::__and_<std::__is_invocable<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, std::__call_is_nothrow<std::__invoke_result<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>, (lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>' requested here
+ 2984 |     : __and_<__is_invocable<_Fn, _Args...>,
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/invoke.h:91:14: note: in instantiation of template class 'std::__is_nothrow_invocable<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+   91 |     noexcept(__is_nothrow_invocable<_Callable, _Args...>::value)
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/invoke.h:90:5: note: in instantiation of exception specification for '__invoke<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+   90 |     __invoke(_Callable&& __fn, _Args&&... __args)
+      |     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:259:18: note: in instantiation of function template specialization 'std::__invoke<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+  259 |           { return std::__invoke(std::get<_Ind>(std::move(_M_t))...); }
+      |                         ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:266:11: note: in instantiation of function template specialization 'std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>::_M_invoke<0UL>' requested here
+  266 |           return _M_invoke(_Indices());
+      |                  ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:211:13: note: in instantiation of member function 'std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>::operator()' requested here
+  211 |         _M_run() { _M_func(); }
+      |                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:206:4: note: in instantiation of member function 'std::thread::_State_impl<std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>>::_M_run' requested here
+  206 |           _State_impl(_Args&&... __args)
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:33: note: in instantiation of function template specialization 'std::thread::_State_impl<std::thread::_Invoker<std::tuple<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>>>::_State_impl<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                                        ^
+../rsc-cuda/model_fitting.cpp:74:27: note: in instantiation of function template specialization 'std::thread::thread<(lambda at ../rsc-cuda/model_fitting.cpp:74:39), void>' requested here
+   74 |     cpu_threads.push_back(std::thread([=]() {
+      |                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2973:2: note: undefined function '__call_is_nt<(lambda at ../rsc-cuda/model_fitting.cpp:74:39)>' cannot be used in a constant expression
+ 2973 |         std::__call_is_nt<_Fn, _Args...>(typename _Result::__invoke_type{})
+      |         ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2965:20: note: declared here
+ 2965 |     constexpr bool __call_is_nt(__invoke_other)
+      |                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::default_delete<std::thread::_State> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::default_delete<std::thread::_State> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2530:7: note: in instantiation of function template specialization 'std::declval<std::default_delete<std::thread::_State> &>' requested here
+ 2530 |       std::declval<_Fn>()(std::declval<_Args>()...)
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2541:24: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2541 |       typedef decltype(_S_test<_Functor, _ArgTypes...>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2547:14: note: in instantiation of template class 'std::__result_of_impl<false, false, std::default_delete<std::thread::_State> &, std::thread::_State *>' requested here
+ 2547 |     : public __result_of_impl<
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2888:29: note: in instantiation of template class 'std::__invoke_result<std::default_delete<std::thread::_State> &, std::thread::_State *>' requested here
+ 2888 |                                __void_t<typename _Result::type>>
+      |                                                  ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2933:7: note: during template argument deduction for class template partial specialization '__is_invocable_impl<_Result, _Ret, true, __void_t<typename _Result::type>>' [with _Result = std::__invoke_result<std::default_delete<std::thread::_State> &, std::thread::_State *>, _Ret = void]
+ 2933 |     : __is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, void>::type
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2933:7: note: in instantiation of template class 'std::__is_invocable_impl<std::__invoke_result<std::default_delete<std::thread::_State> &, std::thread::_State *>, void>' requested here
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/unique_ptr.h:357:16: note: in instantiation of template class 'std::__is_invocable<std::default_delete<std::thread::_State> &, std::thread::_State *>' requested here
+  357 |         static_assert(__is_invocable<deleter_type&, pointer>::value,
+      |                       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/std_thread.h:143:18: note: in instantiation of member function 'std::unique_ptr<std::thread::_State>::~unique_ptr' requested here
+  143 |         _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+      |                         ^
+../rsc-cuda/model_fitting.cpp:74:27: note: in instantiation of function template specialization 'std::thread::thread<(lambda at ../rsc-cuda/model_fitting.cpp:74:39), void>' requested here
+   74 |     cpu_threads.push_back(std::thread([=]() {
+      |                           ^
+In file included from ../rsc-cuda/model_fitting.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::thread *>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::thread *>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:433:36: note: in instantiation of function template specialization 'std::declval<std::thread *>' requested here
+  433 |         return noexcept(std::__relocate_a(std::declval<pointer>(),
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:449:9: note: in instantiation of member function 'std::vector<std::thread>::_S_nothrow_relocate' requested here
+  449 |         return _S_nothrow_relocate(__is_move_insertable<_Tp_alloc_type>{});
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:459:29: note: in instantiation of member function 'std::vector<std::thread>::_S_use_relocate' requested here
+  459 |           if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:121:4: note: in instantiation of function template specialization 'std::vector<std::thread>::_M_realloc_insert<std::thread>' requested here
+  121 |           _M_realloc_insert(end(), std::forward<_Args>(__args)...);
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:1204:9: note: in instantiation of function template specialization 'std::vector<std::thread>::emplace_back<std::thread>' requested here
+ 1204 |       { emplace_back(std::move(__x)); }
+      |         ^
+../rsc-cuda/model_fitting.cpp:74:17: note: in instantiation of member function 'std::vector<std::thread>::push_back' requested here
+   74 |     cpu_threads.push_back(std::thread([=]() {
+      |                 ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile.AMD:60: model_fitting.o] Error 1

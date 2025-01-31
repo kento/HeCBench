@@ -1,0 +1,71 @@
+[./main] - Starting...
+Checking for multiple GPUs...
+There are 8 GPUs
+
+Checking GPU(s) for support of peer to peer memory access...
+> Peer access from AMD Instinct MI250X/MI250 (GPU0) -> AMD Instinct MI250X/MI250 (GPU1) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU0) -> AMD Instinct MI250X/MI250 (GPU2) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU0) -> AMD Instinct MI250X/MI250 (GPU3) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU0) -> AMD Instinct MI250X/MI250 (GPU4) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU0) -> AMD Instinct MI250X/MI250 (GPU5) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU0) -> AMD Instinct MI250X/MI250 (GPU6) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU0) -> AMD Instinct MI250X/MI250 (GPU7) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU1) -> AMD Instinct MI250X/MI250 (GPU0) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU1) -> AMD Instinct MI250X/MI250 (GPU2) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU1) -> AMD Instinct MI250X/MI250 (GPU3) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU1) -> AMD Instinct MI250X/MI250 (GPU4) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU1) -> AMD Instinct MI250X/MI250 (GPU5) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU1) -> AMD Instinct MI250X/MI250 (GPU6) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU1) -> AMD Instinct MI250X/MI250 (GPU7) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU2) -> AMD Instinct MI250X/MI250 (GPU0) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU2) -> AMD Instinct MI250X/MI250 (GPU1) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU2) -> AMD Instinct MI250X/MI250 (GPU3) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU2) -> AMD Instinct MI250X/MI250 (GPU4) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU2) -> AMD Instinct MI250X/MI250 (GPU5) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU2) -> AMD Instinct MI250X/MI250 (GPU6) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU2) -> AMD Instinct MI250X/MI250 (GPU7) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU3) -> AMD Instinct MI250X/MI250 (GPU0) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU3) -> AMD Instinct MI250X/MI250 (GPU1) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU3) -> AMD Instinct MI250X/MI250 (GPU2) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU3) -> AMD Instinct MI250X/MI250 (GPU4) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU3) -> AMD Instinct MI250X/MI250 (GPU5) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU3) -> AMD Instinct MI250X/MI250 (GPU6) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU3) -> AMD Instinct MI250X/MI250 (GPU7) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU4) -> AMD Instinct MI250X/MI250 (GPU0) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU4) -> AMD Instinct MI250X/MI250 (GPU1) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU4) -> AMD Instinct MI250X/MI250 (GPU2) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU4) -> AMD Instinct MI250X/MI250 (GPU3) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU4) -> AMD Instinct MI250X/MI250 (GPU5) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU4) -> AMD Instinct MI250X/MI250 (GPU6) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU4) -> AMD Instinct MI250X/MI250 (GPU7) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU5) -> AMD Instinct MI250X/MI250 (GPU0) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU5) -> AMD Instinct MI250X/MI250 (GPU1) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU5) -> AMD Instinct MI250X/MI250 (GPU2) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU5) -> AMD Instinct MI250X/MI250 (GPU3) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU5) -> AMD Instinct MI250X/MI250 (GPU4) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU5) -> AMD Instinct MI250X/MI250 (GPU6) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU5) -> AMD Instinct MI250X/MI250 (GPU7) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU6) -> AMD Instinct MI250X/MI250 (GPU0) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU6) -> AMD Instinct MI250X/MI250 (GPU1) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU6) -> AMD Instinct MI250X/MI250 (GPU2) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU6) -> AMD Instinct MI250X/MI250 (GPU3) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU6) -> AMD Instinct MI250X/MI250 (GPU4) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU6) -> AMD Instinct MI250X/MI250 (GPU5) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU6) -> AMD Instinct MI250X/MI250 (GPU7) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU7) -> AMD Instinct MI250X/MI250 (GPU0) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU7) -> AMD Instinct MI250X/MI250 (GPU1) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU7) -> AMD Instinct MI250X/MI250 (GPU2) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU7) -> AMD Instinct MI250X/MI250 (GPU3) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU7) -> AMD Instinct MI250X/MI250 (GPU4) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU7) -> AMD Instinct MI250X/MI250 (GPU5) : Yes
+> Peer access from AMD Instinct MI250X/MI250 (GPU7) -> AMD Instinct MI250X/MI250 (GPU6) : Yes
+Enabling peer access between GPU0 and GPU1...
+Allocating buffers (64MB on GPU0, GPU1 and CPU Host)...
+Peer-to-peer copy between GPU0 and GPU1: 22.31GB/s
+Preparing host buffer and memcpy to GPU0...
+Run kernel on GPU1, taking source data from GPU0 and writing to GPU1...
+Run kernel on GPU0, taking source data from GPU1 and writing to GPU0...
+Copy data back to host from GPU0 and verify results...
+Disabling peer access...
+Shutting down...
+Test passed

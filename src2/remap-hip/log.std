@@ -1,0 +1,24 @@
+
+Run 0
+Percentage of unique elements: 63.2 %
+Average offload time: 0.011185 (s)
+Average execution time of memory allocation : 609.964966 (us)
+Average execution time of memory deallocation : 57.830429 (us)
+Average execution time of data copy : 6178.492188 (us)
+Average execution time of Thrust sequence : 132.263245 (us)
+Average execution time of Thrust sort-by-key : 1588.288330 (us)
+Average execution time of Thrust unique-by-key : 175.965469 (us)
+Average execution time of remap kernel: 2395.874268 (us)
+Checksum: 7250533 528441
+
+Run 1
+Percentage of unique elements: 63.2 %
+Average offload time: 0.010745 (s)
+Average execution time of memory allocation : 226.865387 (us)
+Average execution time of memory deallocation : 59.603638 (us)
+Average execution time of data copy : 6139.967773 (us)
+Average execution time of Thrust sequence : 131.164703 (us)
+Average execution time of Thrust sort-by-key : 1575.349854 (us)
+Average execution time of Thrust unique-by-key : 175.903717 (us)
+Average execution time of remap kernel: 2390.266357 (us)
+Checksum: 7250533 528441

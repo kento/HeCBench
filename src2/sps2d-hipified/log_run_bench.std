@@ -1,0 +1,1 @@
+hipcc  -std=c++14  -Wall            -I../spd2s-cuda -O3 -c main.cu -o main.o

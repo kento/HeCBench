@@ -1,0 +1,1 @@
+hipcc  -std=c++14 -I/home/users/u0001621/ompi_for_gpu/ompi/include -Wall -O3 main-mpi.o -o main-mpi -L/home/users/u0001621/ompi_for_gpu/ompi/lib -lmpi -lrccl

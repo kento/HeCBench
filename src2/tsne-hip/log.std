@@ -1,0 +1,10 @@
+Starting TSNE calculation with 60000 points.
+done.
+KNN Load...
+num_points: 60000
+num_dims: 50
+num_near_neighbors: 32
+done.
+Computing Pij matrix... 
+done.
+Initializing low dim points... Can't read points file

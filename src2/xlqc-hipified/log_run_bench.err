@@ -1,0 +1,6 @@
+basis.cc:28:10: fatal error: 'gsl/gsl_matrix.h' file not found
+   28 | #include <gsl/gsl_matrix.h>
+      |          ^~~~~~~~~~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -c -o "basis.o" -x hip basis.cc -std=c++14 -Wall -I/path/to/gsl/include -O3
+make: *** [Makefile.AMD:59: basis.o] Error 1

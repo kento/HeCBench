@@ -1,0 +1,6 @@
+Executing kernel for 1000 iterations
+-------------------------------------------
+Average execution time of CUDA Thrust exclusive scan: 241.835 (us)
+PASS
+Average execution time of CUDA CUB exclusive scan: 219.729 (us)
+PASS

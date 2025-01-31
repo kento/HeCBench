@@ -1,0 +1,7 @@
+./main Starting...
+
+
+Sorting 1778774528 32-bit float keys (only)
+
+Throughput = 34154.3648 MElements/s, Time = 0.05208 s
+PASS

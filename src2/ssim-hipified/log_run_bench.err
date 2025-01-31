@@ -1,0 +1,28 @@
+In file included from main.cu:10:
+In file included from ./gdt/math/vec.h:21:
+./gdt/math/constants.h:51:5: warning: 'device' attribute only applies to functions and variables [-Wignored-attributes]
+   51 |   } __gdt_device zero MAYBE_UNUSED;
+      |     ^
+./gdt/gdt.h:89:25: note: expanded from macro '__gdt_device'
+   89 | # define __gdt_device   __device__
+      |                         ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_runtime_wrapper.h:22:35: note: expanded from macro '__device__'
+   22 | #define __device__ __attribute__((device))
+      |                                   ^
+In file included from main.cu:10:
+In file included from ./gdt/math/vec.h:21:
+./gdt/math/constants.h:67:5: warning: 'device' attribute only applies to functions and variables [-Wignored-attributes]
+   67 |   } __gdt_device one MAYBE_UNUSED;
+      |     ^
+./gdt/gdt.h:89:25: note: expanded from macro '__gdt_device'
+   89 | # define __gdt_device   __device__
+      |                         ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_runtime_wrapper.h:22:35: note: expanded from macro '__device__'
+   22 | #define __device__ __attribute__((device))
+      |                                   ^
+main.cu:131:11: error: no member named 'trilinear_kernel' in namespace 'util'
+  131 |     util::trilinear_kernel(compute_ssim<win_size>, 0, 0, block.x, block.y, block.z, 
+      |     ~~~~~~^
+2 warnings and 1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -I. -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

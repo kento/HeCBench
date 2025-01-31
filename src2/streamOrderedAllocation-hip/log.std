@@ -1,0 +1,15 @@
+Starting basicAllocation()
+> Checking the results from vectorAddGPU() ...
+basicAllocation PASSED
+Starting basicStreamOrderedAllocation()
+> Checking the results from vectorAddGPU() ...
+basicStreamOrderedAllocation PASSED
+Starting streamOrderedAllocationPostSync()
+> Checking the results from vectorAddGPU() ...
+streamOrderedAllocationPostSync PASSED
+Starting basicAllocation()
+Total elapsed time: 2895817.000000 (us) over 100 iterations
+Starting basicStreamOrderedAllocation()
+Total elapsed time: 2930702.000000 (us) over 100 iterations
+Starting streamOrderedAllocationPostSync()
+Total elapsed time: 2915251.000000 (us) over 100 iterations

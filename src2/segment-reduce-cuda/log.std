@@ -1,0 +1,12 @@
+num_elements = 6225920000
+num_segments = 389120000 segment_size = 16 Throughput = 209.618240 (G/s)
+num_segments = 194560000 segment_size = 32 Throughput = 217.176865 (G/s)
+num_segments = 97280000 segment_size = 64 Throughput = 226.271622 (G/s)
+num_segments = 48640000 segment_size = 128 Throughput = 230.614746 (G/s)
+num_segments = 24320000 segment_size = 256 Throughput = 233.134048 (G/s)
+num_segments = 12160000 segment_size = 512 Throughput = 234.248810 (G/s)
+num_segments = 6080000 segment_size = 1024 Throughput = 234.627716 (G/s)
+num_segments = 3040000 segment_size = 2048 Throughput = 235.062622 (G/s)
+num_segments = 1520000 segment_size = 4096 Throughput = 235.332642 (G/s)
+num_segments = 760000 segment_size = 8192 Throughput = 235.355148 (G/s)
+num_segments = 380000 segment_size = 16384 Throughput = 235.823471 (G/s)

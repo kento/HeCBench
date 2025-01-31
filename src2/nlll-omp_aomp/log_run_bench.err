@@ -1,0 +1,497 @@
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<long>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2239:20: note: in instantiation of function template specialization 'std::declval<long>' requested here
+ 2239 |         = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+      |                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2244:14: note: in instantiation of template type alias '__cond_t' requested here
+ 2244 |       static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2291:29: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2291 |       using type = decltype(_S_test<_Tp1, _Tp2>(0));
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2297:14: note: in instantiation of template class 'std::__common_type_impl<long, long>' requested here
+ 2297 |     : public __common_type_impl<_Tp1, _Tp2>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2272:14: note: in instantiation of template class 'std::common_type<long, long>' requested here
+ 2272 |     : public common_type<_Tp0, _Tp0>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:542:30: note: in instantiation of template class 'std::common_type<long>' requested here
+  542 |         constexpr duration<typename common_type<rep>::type, period>
+      |                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1128:15: note: in instantiation of template class 'std::chrono::duration<long, std::ratio<1, 1000000000>>' requested here
+ 1128 |       typedef duration::rep                                     rep;
+      |               ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const long &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const long &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const long &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const long &, long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const long &, _To1 = long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const long &, long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<const long &, long>, std::__or_<std::chrono::treat_as_floating_point<long>, std::__not_<std::chrono::treat_as_floating_point<long>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<long>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:628:11: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = long, $1 = (no value)]
+  628 |         { return duration(duration_values<rep>::min()); }
+      |                  ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1132:45: note: in instantiation of member function 'std::chrono::duration<long, std::ratio<1, 1000000000>>::min' requested here
+ 1132 |       static_assert(system_clock::duration::min()
+      |                                             ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const std::chrono::duration<long, std::ratio<1, 1000000000>> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const std::chrono::duration<long, std::ratio<1, 1000000000>> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const std::chrono::duration<long, std::ratio<1, 1000000000>> &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const std::chrono::duration<long, std::ratio<1, 1000000000>> &, long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const std::chrono::duration<long, std::ratio<1, 1000000000>> &, _To1 = long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const std::chrono::duration<long, std::ratio<1, 1000000000>> &, long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<const std::chrono::duration<long, std::ratio<1, 1000000000>> &, long>, std::__or_<std::chrono::treat_as_floating_point<long>, std::__not_<std::chrono::treat_as_floating_point<std::chrono::duration<long, std::ratio<1, 1000000000>>>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<duration<long, ratio<1, 1000000000>>>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:778:9: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = duration<long, ratio<1, 1000000000>>, $1 = (no value)]
+  778 |         return __ct(__lhs).count() < __ct(__rhs).count();
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1133:7: note: in instantiation of function template specialization 'std::chrono::operator<<long, std::ratio<1, 1000000000>, long, std::ratio<1, 1000000000>>' requested here
+ 1133 |                     < system_clock::duration::zero(),
+      |                     ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const std::chrono::duration<long, std::ratio<1, 1>> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const std::chrono::duration<long> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const std::chrono::duration<long> &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const std::chrono::duration<long> &, long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const std::chrono::duration<long> &, _To1 = long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const std::chrono::duration<long> &, long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 2 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<std::chrono::duration<long>>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:459:14: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = std::chrono::duration<long>, $1 = (no value)]
+  459 |       struct duration
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:872:14: note: while declaring the implicit copy constructor for 'time_point<std::chrono::system_clock, std::chrono::duration<long>>'
+  872 |       struct time_point
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1154:10: note: in instantiation of template class 'std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<long>>' requested here
+ 1154 |                (__from(chrono::seconds(__t)));
+      |                 ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::chrono::duration<long, std::ratio<1, 1000000000>>>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::chrono::duration<long, std::ratio<1, 1000000000>>>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::chrono::duration<long, std::ratio<1, 1000000000>>>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::duration<long, std::ratio<1, 1000000000>>>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::chrono::duration<long, std::ratio<1, 1000000000>>, _To1 = std::chrono::duration<long, std::ratio<1, 1000000000>>, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::duration<long, std::ratio<1, 1000000000>>>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:148:14: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  148 |     : public _B1
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::duration<long, std::ratio<1, 1000000000>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:891:15: note: in instantiation of template type alias '_Require' requested here
+  891 |                  typename = _Require<is_convertible<_Dur2, _Dur>>>
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:892:14: note: in instantiation of default argument for 'time_point<std::chrono::duration<long, std::ratio<1, 1000000000>>>' required here
+  892 |           constexpr time_point(const time_point<clock, _Dur2>& __t)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  893 |           : __d(__t.time_since_epoch())
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  894 |           { }
+      |           ~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:960:9: note: while substituting deduced template arguments into function template 'time_point' [with _Dur2 = std::chrono::duration<long, std::ratio<1, 1000000000>>, $1 = (no value)]
+  960 |         return __time_point(duration_cast<_ToDur>(__t.time_since_epoch()));
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:1153:9: note: in instantiation of function template specialization 'std::chrono::time_point_cast<std::chrono::duration<long, std::ratio<1, 1000000000>>, std::chrono::system_clock, std::chrono::duration<long>>' requested here
+ 1153 |         return time_point_cast<system_clock::duration>
+      |                ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<long double>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<long double>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2239:20: note: in instantiation of function template specialization 'std::declval<long double>' requested here
+ 2239 |         = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+      |                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2244:14: note: in instantiation of template type alias '__cond_t' requested here
+ 2244 |       static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2291:29: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2291 |       using type = decltype(_S_test<_Tp1, _Tp2>(0));
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2297:14: note: in instantiation of template class 'std::__common_type_impl<long double, long double>' requested here
+ 2297 |     : public __common_type_impl<_Tp1, _Tp2>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2272:14: note: in instantiation of template class 'std::common_type<long double, long double>' requested here
+ 2272 |     : public common_type<_Tp0, _Tp0>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:542:30: note: in instantiation of template class 'std::common_type<long double>' requested here
+  542 |         constexpr duration<typename common_type<rep>::type, period>
+      |                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:3224:5: note: in instantiation of template class 'std::chrono::duration<long double, std::ratio<3600>>' requested here
+ 3224 |     operator""h(long double __hours)
+      |     ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const long double &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const long double &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const long double &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const long double &, long double>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const long double &, _To1 = long double, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const long double &, long double>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: in instantiation of template class 'std::is_convertible<const long double &, long double>' requested here
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2209:36: note: in instantiation of template class 'std::__and_<std::is_convertible<const long double &, long double>, std::__or_<std::chrono::treat_as_floating_point<long double>, std::__not_<std::chrono::treat_as_floating_point<long double>>>>' requested here
+ 2209 |     using _Require = __enable_if_t<__and_<_Cond...>::value>;
+      |                                    ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:518:38: note: in instantiation of template type alias '_Require' requested here
+  518 |         template<typename _Rep2, typename = _Require<
+      |                                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:521:23: note: in instantiation of default argument for 'duration<long double>' required here
+  521 |           constexpr explicit duration(const _Rep2& __rep)
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  522 |           : __r(static_cast<rep>(__rep)) { }
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/chrono:3225:14: note: while substituting deduced template arguments into function template 'duration' [with _Rep2 = long double, $1 = (no value)]
+ 3225 |     { return chrono::duration<long double, ratio<3600,1>>{__hours}; }
+      |              ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned int *>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned int *>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:36: note: in instantiation of function template specialization 'std::declval<unsigned int *>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |                                           ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:4: note: in instantiation of function template specialization 'std::declval<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:206:33: note: in instantiation of template type alias '__seed_seq_generate_t' requested here
+  206 |              typename _GenerateCheck = __seed_seq_generate_t<_Sseq>>
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:502:52: note: in instantiation of default argument for '__is_seed_seq<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, unsigned long>' required here
+  502 |         using _If_seed_seq = typename enable_if<__detail::__is_seed_seq<
+      |                                                           ^~~~~~~~~~~~~~
+  503 |           _Sseq, mersenne_twister_engine, _UIntType>::value>::type;
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:539:43: note: in instantiation of template type alias '_If_seed_seq' requested here
+  539 |       template<typename _Sseq, typename = _If_seed_seq<_Sseq>>
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:541:9: note: in instantiation of default argument for 'mersenne_twister_engine<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>>' required here
+  541 |         mersenne_twister_engine(_Sseq& __q)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  542 |         { seed(__q); }
+      |         ~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:472:11: note: while substituting deduced template arguments into function template 'mersenne_twister_engine' [with _Sseq = const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, $1 = (no value)]
+  472 |     class mersenne_twister_engine
+      |           ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::random_access_iterator_tag>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::random_access_iterator_tag>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::random_access_iterator_tag>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::random_access_iterator_tag, std::input_iterator_tag>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::random_access_iterator_tag, _To1 = std::input_iterator_tag, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::random_access_iterator_tag, std::input_iterator_tag>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_iterator_base_types.h:250:21: note: in instantiation of template class 'std::is_convertible<std::random_access_iterator_tag, std::input_iterator_tag>' requested here
+  250 |       __enable_if_t<is_convertible<__iterator_category_t<_InIter>,
+      |                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:652:25: note: in instantiation of template type alias '_RequireInputIter' requested here
+  652 |                typename = std::_RequireInputIter<_InputIterator>>
+      |                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:653:2: note: in instantiation of default argument for 'vector<const_iterator>' required here
+  653 |         vector(_InputIterator __first, _InputIterator __last,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  654 |                const allocator_type& __a = allocator_type())
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  655 |         : _Base(__a)
+      |         ~~~~~~~~~~~~
+  656 |         {
+      |         ~
+  657 |           _M_range_initialize(__first, __last,
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  658 |                               std::__iterator_category(__first));
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  659 |         }
+      |         ~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:5305:4: note: while substituting deduced template arguments into function template 'vector' [with _InputIterator = const_iterator, $1 = (no value)]
+ 5305 |         : _M_prob(__wil.begin(), __wil.end()), _M_cp()
+      |           ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<int &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<int &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:4: note: in instantiation of function template specialization 'std::declval<int &>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:206:33: note: in instantiation of template type alias '__seed_seq_generate_t' requested here
+  206 |              typename _GenerateCheck = __seed_seq_generate_t<_Sseq>>
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:263:52: note: in instantiation of default argument for '__is_seed_seq<int, linear_congruential_engine<unsigned long, 16807, 0, 2147483647>, unsigned long>' required here
+  263 |         using _If_seed_seq = typename enable_if<__detail::__is_seed_seq<
+      |                                                           ^~~~~~~~~~~~~~
+  264 |           _Sseq, linear_congruential_engine, _UIntType>::value>::type;
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:302:43: note: in instantiation of template type alias '_If_seed_seq' requested here
+  302 |       template<typename _Sseq, typename = _If_seed_seq<_Sseq>>
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:304:9: note: in instantiation of default argument for 'linear_congruential_engine<int>' required here
+  304 |         linear_congruential_engine(_Sseq& __q)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  305 |         { seed(__q); }
+      |         ~~~~~~~~~~~~~~
+main.cpp:145:30: note: while substituting deduced template arguments into function template 'linear_congruential_engine' [with _Sseq = int, $1 = (no value)]
+  145 |   std::default_random_engine g (123);
+      |                              ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned long &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned long &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:4: note: in instantiation of function template specialization 'std::declval<unsigned long &>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:206:33: note: in instantiation of template type alias '__seed_seq_generate_t' requested here
+  206 |              typename _GenerateCheck = __seed_seq_generate_t<_Sseq>>
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:263:52: note: in instantiation of default argument for '__is_seed_seq<unsigned long, linear_congruential_engine<unsigned long, 16807, 0, 2147483647>, unsigned long>' required here
+  263 |         using _If_seed_seq = typename enable_if<__detail::__is_seed_seq<
+      |                                                           ^~~~~~~~~~~~~~
+  264 |           _Sseq, linear_congruential_engine, _UIntType>::value>::type;
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:324:9: note: in instantiation of template type alias '_If_seed_seq' requested here
+  324 |         _If_seed_seq<_Sseq>
+      |         ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:294:9: note: while substituting deduced template arguments into function template 'seed' [with _Sseq = result_type]
+  294 |       { seed(__s); }
+      |         ^
+main.cpp:145:30: note: in instantiation of member function 'std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>::linear_congruential_engine' requested here
+  145 |   std::default_random_engine g (123);
+      |                              ^
+main.cpp:197:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  197 |   driver<float, int>(argv);
+      |   ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned long>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2239:20: note: in instantiation of function template specialization 'std::declval<unsigned long>' requested here
+ 2239 |         = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+      |                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2244:14: note: in instantiation of template type alias '__cond_t' requested here
+ 2244 |       static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2291:29: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2291 |       using type = decltype(_S_test<_Tp1, _Tp2>(0));
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2297:14: note: in instantiation of template class 'std::__common_type_impl<unsigned long, unsigned int>' requested here
+ 2297 |     : public __common_type_impl<_Tp1, _Tp2>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/uniform_int_dist.h:282:19: note: in instantiation of template class 'std::common_type<unsigned long, unsigned int>' requested here
+  282 |         typedef typename common_type<_Gresult_type, __utype>::type __uctype;
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/uniform_int_dist.h:193:24: note: in instantiation of function template specialization 'std::uniform_int_distribution<>::operator()<std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>>' requested here
+  193 |         { return this->operator()(__urng, _M_param); }
+      |                        ^
+main.cpp:157:19: note: in instantiation of function template specialization 'std::uniform_int_distribution<>::operator()<std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>>' requested here
+  157 |     h_target[i] = d2(g);
+      |                   ^
+main.cpp:197:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  197 |   driver<float, int>(argv);
+      |   ^
+In file included from main.cpp:3:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned int>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned int>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2239:42: note: in instantiation of function template specialization 'std::declval<unsigned int>' requested here
+ 2239 |         = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+      |                                                 ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2244:14: note: in instantiation of template type alias '__cond_t' requested here
+ 2244 |       static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2291:29: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2291 |       using type = decltype(_S_test<_Tp1, _Tp2>(0));
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2297:14: note: in instantiation of template class 'std::__common_type_impl<unsigned long, unsigned int>' requested here
+ 2297 |     : public __common_type_impl<_Tp1, _Tp2>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/uniform_int_dist.h:282:19: note: in instantiation of template class 'std::common_type<unsigned long, unsigned int>' requested here
+  282 |         typedef typename common_type<_Gresult_type, __utype>::type __uctype;
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/uniform_int_dist.h:193:24: note: in instantiation of function template specialization 'std::uniform_int_distribution<>::operator()<std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>>' requested here
+  193 |         { return this->operator()(__urng, _M_param); }
+      |                        ^
+main.cpp:157:19: note: in instantiation of function template specialization 'std::uniform_int_distribution<>::operator()<std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>>' requested here
+  157 |     h_target[i] = d2(g);
+      |                   ^
+main.cpp:197:3: note: in instantiation of function template specialization 'driver<float, int>' requested here
+  197 |   driver<float, int>(argv);
+      |   ^
+14 errors generated.
+make: *** [Makefile.AMD:57: main.o] Error 1

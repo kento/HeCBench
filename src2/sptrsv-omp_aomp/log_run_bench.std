@@ -1,0 +1,1 @@
+clang++  -std=c++14 -Wall -DVALUE_TYPE=double -I../sptrsv-sycl  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c sptrsv_syncfree.cpp -o sptrsv_syncfree.o

@@ -1,0 +1,20 @@
+
+Warmup and verify
+Number of keys is 1000000 and the size of each value in bytes is 1
+PASS
+Number of keys is 1000000 and the size of each value in bytes is 2
+PASS
+Number of keys is 1000000 and the size of each value in bytes is 4
+PASS
+Number of keys is 1000000 and the size of each value in bytes is 8
+PASS
+
+Performance evaluation
+Number of keys is 1000000 and the size of each value in bytes is 1
+Average sort time 4373.780550 (us)
+Number of keys is 1000000 and the size of each value in bytes is 2
+Average sort time 5124.263600 (us)
+Number of keys is 1000000 and the size of each value in bytes is 4
+Average sort time 5101.488960 (us)
+Number of keys is 1000000 and the size of each value in bytes is 8
+Average sort time 4873.739720 (us)

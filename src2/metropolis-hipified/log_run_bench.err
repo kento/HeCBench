@@ -1,0 +1,27 @@
+In file included from main.cu:30:
+./kernel_metropolis.h:160:9: warning: use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]
+  160 |     c = signbit(dh-EPSILON) | signbit(gpu_rand01(&lstate, &linc) - expf(dh * B));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             ||
+./kernel_metropolis.h:160:9: note: cast one or both operands to int to silence this warning
+./kernel_metropolis.h:170:9: warning: use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]
+  170 |     c = signbit(dh-EPSILON) | signbit(gpu_rand01(&lstate, &linc) - expf(dh * B));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             ||
+./kernel_metropolis.h:170:9: note: cast one or both operands to int to silence this warning
+In file included from main.cu:31:
+./kernel_reduction.h:32:12: error: use of undeclared identifier '__shfl_down_sync'
+   32 |     val += __shfl_down_sync(0xFFFFFFFF, val, offset);
+      |            ^
+./kernel_reduction.h:44:9: note: in instantiation of function template specialization 'warp_reduce<float>' requested here
+   44 |   val = warp_reduce<T>(val);
+      |         ^
+./kernel_reduction.h:76:9: note: in instantiation of function template specialization 'block_reduce<float>' requested here
+   76 |   sum = block_reduce<T>(sum); 
+      |         ^
+main.cu:246:9: note: in instantiation of function template specialization 'kernel_redenergy<float>' requested here
+  246 |         kernel_redenergy<float><<<grid, block>>>(mdlat[k], L, dE + k, dH, h);
+      |         ^
+2 warnings and 1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:55: main.o] Error 1

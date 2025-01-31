@@ -1,0 +1,12 @@
+main.cu:133:18: error: use of undeclared identifier '__shfl_down_sync'
+  133 |         auto n = __shfl_down_sync(0xFFFFFFFF, value, i);
+      |                  ^
+main.cu:243:5: note: in instantiation of function template specialization 'findTopK<float, 2048, 256>' requested here
+  243 |     findTopK<float, 2048, block_size> <<<grids, blocks>>> (
+      |     ^
+main.cu:141:38: error: use of undeclared identifier '__shfl_sync'
+  141 |       previous_group_first_element = __shfl_sync(0xFFFFFFFF, value, 0);
+      |                                      ^
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

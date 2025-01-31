@@ -1,0 +1,3 @@
+nvc++  -Wall -I../gpp-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -Wall -I../gpp-cuda -O3 -Minfo -mp=gpu -gpu=cc70 main.o -o main 
+bash -c "time -p ( ./main benchmark 1>log.std 2>log.err ) 2> log.time"

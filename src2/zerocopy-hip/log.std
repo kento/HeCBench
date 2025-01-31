@@ -1,0 +1,106 @@
+> Using Host Allocated (hipHostMalloc)
+Warmup...
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+Done.
+> Using Host Allocated (hipHostMalloc)
+
+vector length = 1048576
+Memory allocation (hipHostMalloc): 1.999434 ms
+hipHostGetDevicePointer: 0.001490 ms
+Average kernel execution time: 0.766991 ms
+Memory deallocation (hipHostFree): 0.310928 ms
+
+vector length = 2097152
+Memory allocation (hipHostMalloc): 3.233793 ms
+hipHostGetDevicePointer: 0.000570 ms
+Average kernel execution time: 1.489282 ms
+Memory deallocation (hipHostFree): 0.314087 ms
+
+vector length = 4194304
+Memory allocation (hipHostMalloc): 7.026443 ms
+hipHostGetDevicePointer: 0.002760 ms
+Average kernel execution time: 2.954506 ms
+Memory deallocation (hipHostFree): 0.428506 ms
+
+vector length = 8388608
+Memory allocation (hipHostMalloc): 14.720051 ms
+hipHostGetDevicePointer: 0.003850 ms
+Average kernel execution time: 5.050530 ms
+Memory deallocation (hipHostFree): 0.577796 ms
+
+vector length = 16777216
+Memory allocation (hipHostMalloc): 31.841951 ms
+hipHostGetDevicePointer: 0.005520 ms
+Average kernel execution time: 9.870032 ms
+Memory deallocation (hipHostFree): 0.837703 ms
+
+vector length = 33554432
+Memory allocation (hipHostMalloc): 65.259489 ms
+hipHostGetDevicePointer: 0.004520 ms
+Average kernel execution time: 19.758561 ms
+Memory deallocation (hipHostFree): 1.440568 ms
+
+vector length = 67108864
+Memory allocation (hipHostMalloc): 132.881934 ms
+hipHostGetDevicePointer: 0.006750 ms
+Average kernel execution time: 39.870866 ms
+Memory deallocation (hipHostFree): 4.791241 ms
+> Using Generic System Paged Memory (malloc)
+Warmup...
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+Done.
+> Using Generic System Paged Memory (malloc)
+
+vector length = 1048576
+Memory allocation (hipHostRegister): 18.270671 ms
+hipHostGetDevicePointer: 0.003490 ms
+Average kernel execution time: 4.933116 ms
+Memory deallocation (hipHostUnregister): 0.011840 ms
+
+vector length = 2097152
+Memory allocation (hipHostRegister): 15.400154 ms
+hipHostGetDevicePointer: 0.000720 ms
+Average kernel execution time: 9.974917 ms
+Memory deallocation (hipHostUnregister): 0.016369 ms
+
+vector length = 4194304
+Memory allocation (hipHostRegister): 24.047674 ms
+hipHostGetDevicePointer: 0.002470 ms
+Average kernel execution time: 12.102419 ms
+Memory deallocation (hipHostUnregister): 3.451894 ms
+
+vector length = 8388608
+Memory allocation (hipHostRegister): 30.079067 ms
+hipHostGetDevicePointer: 0.003710 ms
+Average kernel execution time: 29.068669 ms
+Memory deallocation (hipHostUnregister): 2.778350 ms
+
+vector length = 16777216
+Memory allocation (hipHostRegister): 55.977754 ms
+hipHostGetDevicePointer: 0.002840 ms
+Average kernel execution time: 55.085718 ms
+Memory deallocation (hipHostUnregister): 7.802242 ms
+
+vector length = 33554432
+Memory allocation (hipHostRegister): 108.730103 ms
+hipHostGetDevicePointer: 0.006300 ms
+Average kernel execution time: 75.686814 ms
+Memory deallocation (hipHostUnregister): 12.070530 ms
+
+vector length = 67108864
+Memory allocation (hipHostRegister): 217.393728 ms
+hipHostGetDevicePointer: 0.007300 ms
+Average kernel execution time: 175.763629 ms
+Memory deallocation (hipHostUnregister): 23.956657 ms

@@ -1,0 +1,9 @@
+main.cu:15:12: error: use of undeclared identifier '__shfl_xor_sync'
+   15 |     val += __shfl_xor_sync(FINAL_MASK, val, mask, 32);
+      |            ^
+main.cu:45:20: error: use of undeclared identifier '__shfl_xor_sync'
+   45 |     val = max(val, __shfl_xor_sync(FINAL_MASK, val, mask, 32));
+      |                    ^
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

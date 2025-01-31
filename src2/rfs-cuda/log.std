@@ -1,0 +1,4 @@
+Average kernel execution time (sumArray): 0.003876 (s)
+PASS
+Kernel execution time (sumArrays): 0.000002 (s)
+PASS

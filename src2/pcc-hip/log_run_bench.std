@@ -1,0 +1,1 @@
+hipcc  -std=c++14 -Wall -I../pcc-cuda -O3 -c device.cu -o device.o

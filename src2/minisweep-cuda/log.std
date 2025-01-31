@@ -1,0 +1,15 @@
+Normsq result: 7.72748083e+12  diff: 0.000e+00  verify: PASS  host time: 26.899 (s) kernel time: 25.508 (s)
+GF/s (host): 4.471
+GF/s (device): 4.715
+Normsq result: 1.54549617e+13  diff: 0.000e+00  verify: PASS  host time: 52.944 (s) kernel time: 50.155 (s)
+GF/s (host): 4.543
+GF/s (device): 4.796
+Normsq result: 8.21044838e+13  diff: 6.182e+13  verify: FAIL  host time: 271.545 (s) kernel time: 267.896 (s)
+GF/s (host): 4.705
+GF/s (device): 4.770
+Normsq result: 8.21044838e+13  diff: 6.182e+13  verify: FAIL  host time: 271.531 (s) kernel time: 267.858 (s)
+GF/s (host): 4.706
+GF/s (device): 4.770
+Normsq result: 1.30401239e+14  diff: 1.304e+14  verify: FAIL  host time: 9.546 (s) kernel time: 9.546 (s)
+GF/s (host): 212.588
+GF/s (device): 212.588

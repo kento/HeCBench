@@ -1,0 +1,1 @@
+hipcc  -std=c++17  -Wall   -O3 -dc main.cu -o main.o

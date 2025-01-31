@@ -1,0 +1,13 @@
+Running key only test
+seed: -278642091
+synthesized segments # 13349 (max_size: 5000, min_size: 0)
+GPU memory usage: used = 398.00 MB, free = 65122.00 MB, total = 65520.00 MB
+[PASSED] checking keys
+
+Running key-value test
+seed: -278642091
+synthesized segments # 13349 (max_size: 5000, min_size: 0)
+GPU memory usage: used = 658.00 MB, free = 64862.00 MB, total = 65520.00 MB
+Kernel execution time: 0.004810 (s)
+[PASSED] checking keys
+[PASSED] checking vals

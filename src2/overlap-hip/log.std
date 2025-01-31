@@ -1,0 +1,12 @@
+Length of the array = 4194304
+
+Average measured timings over 10 repetitions:
+ Avg. time when execution fully serialized	: 2.660544 ms
+ Avg. time when overlapped using 4 streams	: 1.753024 ms
+ Avg. speedup gained (serialized - overlapped)	: 0.907520
+
+Measured throughput:
+ Fully serialized execution		: 12.611868 GB/s
+ Overlapped using 4 streams		: 19.140880 GB/s
+
+PASS

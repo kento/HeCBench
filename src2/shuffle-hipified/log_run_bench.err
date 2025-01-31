@@ -1,0 +1,54 @@
+main.cu:94:15: error: use of undeclared identifier '__shfl_sync'
+   94 |   int out_v = __shfl( value, 0); 
+      |               ^
+main.cu:85:23: note: expanded from macro '__shfl'
+   85 | #define __shfl(v, d)  __shfl_sync(0xffffffff, v, d)
+      |                       ^
+main.cu:102:14: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  102 |     value += __shfl_xor(value, mask);
+      |              ^
+main.cu:86:27: note: expanded from macro '__shfl_xor'
+   86 | #define __shfl_xor(v, d)  __shfl_xor_sync(0xffffffff, v, d)
+      |                           ^
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:445:14: note: '__shfl_xor' declared here
+  445 | unsigned int __shfl_xor(unsigned int var, int lane_mask, int width = warpSize) {
+      |              ^
+main.cu:110:15: error: use of undeclared identifier '__shfl_sync'
+  110 |   int out_v = __shfl( value, 0); 
+      |               ^
+main.cu:85:23: note: expanded from macro '__shfl'
+   85 | #define __shfl(v, d)  __shfl_sync(0xffffffff, v, d)
+      |                       ^
+main.cu:118:14: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  118 |     value += __shfl_xor(value, mask);
+      |              ^
+main.cu:86:27: note: expanded from macro '__shfl_xor'
+   86 | #define __shfl_xor(v, d)  __shfl_xor_sync(0xffffffff, v, d)
+      |                           ^
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:445:14: note: '__shfl_xor' declared here
+  445 | unsigned int __shfl_xor(unsigned int var, int lane_mask, int width = warpSize) {
+      |              ^
+main.cu:125:15: error: use of undeclared identifier '__shfl_sync'
+  125 |   int out_v = __shfl( value, 0); 
+      |               ^
+main.cu:85:23: note: expanded from macro '__shfl'
+   85 | #define __shfl(v, d)  __shfl_sync(0xffffffff, v, d)
+      |                       ^
+main.cu:133:14: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  133 |     value += __shfl_xor(value, mask);
+      |              ^
+main.cu:86:27: note: expanded from macro '__shfl_xor'
+   86 | #define __shfl_xor(v, d)  __shfl_xor_sync(0xffffffff, v, d)
+      |                           ^
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:445:14: note: '__shfl_xor' declared here
+  445 | unsigned int __shfl_xor(unsigned int var, int lane_mask, int width = warpSize) {
+      |              ^
+main.cu:146:17: error: use of undeclared identifier '__shfl_sync'
+  146 |   out[b_offs] = __shfl(val, s_offs);
+      |                 ^
+main.cu:85:23: note: expanded from macro '__shfl'
+   85 | #define __shfl(v, d)  __shfl_sync(0xffffffff, v, d)
+      |                       ^
+7 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

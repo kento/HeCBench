@@ -1,0 +1,61 @@
+info: set device to 0
+Concurrent managed access with prefetch
+Average execution time: 15.949552 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 12.497602 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 14.398582 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 14.818098 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 14.290557 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 14.536266 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 14.726599 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 13.537471 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 11.819768 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 12.552540 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 42.930592 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 42.689659 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 43.448219 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 43.108490 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 42.939098 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 42.222164 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 42.505421 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 41.522911 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 42.150616 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 41.856033 (ms)
+PASS

@@ -1,0 +1,6 @@
+Initializing host matrices..
+Average execution time of hipsparseSnnz : 1332.480591 (us)
+sparse_nnz_example test PASSED
+Initializing host matrices..
+Average execution time of hipsparseSnnz : 5681.766602 (us)
+sparse_nnz_example test PASSED

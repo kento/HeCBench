@@ -1,0 +1,2 @@
+Creating directories
+bash -c "time -p ( build/bin/kernel-2d ../minimap2-sycl/in-1k.txt kernel-out.txt 1>log.std 2>log.err ) 2> log.time"

@@ -1,0 +1,665 @@
+main.cpp:167:10: warning: variable 'reset' set but not used [-Wunused-but-set-variable]
+  167 |     bool reset = true;
+      |          ^
+main.cpp:302:21: warning: unused variable 'quickSortTime' [-Wunused-variable]
+  302 |   double totalTime, quickSortTime, stdSortTime;
+      |                     ^~~~~~~~~~~~~
+main.cpp:302:36: warning: unused variable 'stdSortTime' [-Wunused-variable]
+  302 |   double totalTime, quickSortTime, stdSortTime;
+      |                                    ^~~~~~~~~~~
+In file included from main.cpp:50:
+./QuicksortKernels.h:94:19: warning: implicit conversion from 'unsigned int' to 'float' changes value from 4294967295 to 4294967296 [-Wimplicit-const-int-float-conversion]
+   94 |         temp[i] = UINT_MAX;
+      |                 ~ ^~~~~~~~
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/limits.h:60:37: note: expanded from macro 'UINT_MAX'
+   60 | #define UINT_MAX  (__INT_MAX__  *2U +1U)
+      |                    ~~~~~~~~~~~~~~~~~^~~
+./lqsort_kernel.h:146:9: note: in instantiation of function template specialization 'sort_threshold<float>' requested here
+  146 |         sort_threshold(sn, d+d_offset, start, start + ltsum, temp, localid);
+      |         ^
+main.cpp:375:5: note: in instantiation of function template specialization 'GPUQSort<float>' requested here
+  375 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cpp:441:3: note: in instantiation of function template specialization 'test<float>' requested here
+  441 |   test<float>(arraySize, NUM_ITERATIONS, "float");
+      |   ^
+4 warnings generated.
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned int *>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned int *>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:36: note: in instantiation of function template specialization 'std::declval<unsigned int *>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |                                           ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:4: note: in instantiation of function template specialization 'std::declval<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:206:33: note: in instantiation of template type alias '__seed_seq_generate_t' requested here
+  206 |              typename _GenerateCheck = __seed_seq_generate_t<_Sseq>>
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:502:52: note: in instantiation of default argument for '__is_seed_seq<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, unsigned long>' required here
+  502 |         using _If_seed_seq = typename enable_if<__detail::__is_seed_seq<
+      |                                                           ^~~~~~~~~~~~~~
+  503 |           _Sseq, mersenne_twister_engine, _UIntType>::value>::type;
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:539:43: note: in instantiation of template type alias '_If_seed_seq' requested here
+  539 |       template<typename _Sseq, typename = _If_seed_seq<_Sseq>>
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:541:9: note: in instantiation of default argument for 'mersenne_twister_engine<const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>>' required here
+  541 |         mersenne_twister_engine(_Sseq& __q)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  542 |         { seed(__q); }
+      |         ~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:472:11: note: while substituting deduced template arguments into function template 'mersenne_twister_engine' [with _Sseq = const std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, $1 = (no value)]
+  472 |     class mersenne_twister_engine
+      |           ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::random_access_iterator_tag>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::random_access_iterator_tag>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::random_access_iterator_tag>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::random_access_iterator_tag, std::input_iterator_tag>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::random_access_iterator_tag, _To1 = std::input_iterator_tag, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::random_access_iterator_tag, std::input_iterator_tag>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_iterator_base_types.h:250:21: note: in instantiation of template class 'std::is_convertible<std::random_access_iterator_tag, std::input_iterator_tag>' requested here
+  250 |       __enable_if_t<is_convertible<__iterator_category_t<_InIter>,
+      |                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:652:25: note: in instantiation of template type alias '_RequireInputIter' requested here
+  652 |                typename = std::_RequireInputIter<_InputIterator>>
+      |                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:653:2: note: in instantiation of default argument for 'vector<const_iterator>' required here
+  653 |         vector(_InputIterator __first, _InputIterator __last,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  654 |                const allocator_type& __a = allocator_type())
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  655 |         : _Base(__a)
+      |         ~~~~~~~~~~~~
+  656 |         {
+      |         ~
+  657 |           _M_range_initialize(__first, __last,
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  658 |                               std::__iterator_category(__first));
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  659 |         }
+      |         ~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:5305:4: note: while substituting deduced template arguments into function template 'vector' [with _InputIterator = const_iterator, $1 = (no value)]
+ 5305 |         : _M_prob(__wil.begin(), __wil.end()), _M_cp()
+      |           ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::_Rb_tree_node_base *const &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::_Rb_tree_node_base *const &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<std::_Rb_tree_node_base *const &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<std::_Rb_tree_node_base *const &, std::_Rb_tree_node_base *>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = std::_Rb_tree_node_base *const &, _To1 = std::_Rb_tree_node_base *, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<std::_Rb_tree_node_base *const &, std::_Rb_tree_node_base *>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: in instantiation of template class 'std::is_convertible<std::_Rb_tree_node_base *const &, std::_Rb_tree_node_base *>' requested here
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:113:9: note: in instantiation of template class 'std::__and_<std::is_convertible<std::_Rb_tree_node_base *const &, std::_Rb_tree_node_base *>, std::is_convertible<std::_Rb_tree_node_base *const &, std::_Rb_tree_node_base *>>' requested here
+  113 |         return __and_<is_convertible<const _U1&, _T1>,
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:264:7: note: in instantiation of function template specialization 'std::_PCC<true, std::_Rb_tree_node_base *, std::_Rb_tree_node_base *>::_ImplicitlyConvertiblePair<std::_Rb_tree_node_base *, std::_Rb_tree_node_base *>' requested here
+  264 |                            _ImplicitlyConvertiblePair<_U1, _U2>(),
+      |                            ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:266:17: note: while substituting prior template arguments into non-type template parameter [with _U1 = std::_Rb_tree_node_base *, _U2 = std::_Rb_tree_node_base *]
+  266 |       constexpr pair(const _T1& __a, const _T2& __b)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  267 |       : first(__a), second(__b) { }
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_tree.h:2294:13: note: while substituting deduced template arguments into function template 'pair' [with _U1 = (no value), _U2 = (no value), $2 = (no value)]
+ 2294 |             return _Res(0, 0);
+      |                    ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<int &&>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<int &&>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<int &&>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<int &&, std::_Rb_tree_node_base *>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = int &&, _To1 = std::_Rb_tree_node_base *, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<int &&, std::_Rb_tree_node_base *>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: in instantiation of template class 'std::is_convertible<int &&, std::_Rb_tree_node_base *>' requested here
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:127:9: note: in instantiation of template class 'std::__and_<std::is_convertible<int &&, std::_Rb_tree_node_base *>, std::is_convertible<int &&, std::_Rb_tree_node_base *>>' requested here
+  127 |         return __and_<is_convertible<_U1&&, _T1>,
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:350:7: note: in instantiation of function template specialization 'std::_PCC<true, std::_Rb_tree_node_base *, std::_Rb_tree_node_base *>::_ImplicitlyMoveConvertiblePair<int, int>' requested here
+  350 |                            _ImplicitlyMoveConvertiblePair<_U1, _U2>(),
+      |                            ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:352:12: note: while substituting prior template arguments into non-type template parameter [with _U1 = int, _U2 = int]
+  352 |         constexpr pair(_U1&& __x, _U2&& __y)
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  353 |         : first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_tree.h:2294:13: note: while substituting deduced template arguments into function template 'pair' [with _U1 = int, _U2 = int, $2 = (no value)]
+ 2294 |             return _Res(0, 0);
+      |                    ^
+main.cpp:167:10: warning: variable 'reset' set but not used [-Wunused-but-set-variable]
+  167 |     bool reset = true;
+      |          ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<int &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<int &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:4: note: in instantiation of function template specialization 'std::declval<int &>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:206:33: note: in instantiation of template type alias '__seed_seq_generate_t' requested here
+  206 |              typename _GenerateCheck = __seed_seq_generate_t<_Sseq>>
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:502:52: note: in instantiation of default argument for '__is_seed_seq<int, mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, unsigned long>' required here
+  502 |         using _If_seed_seq = typename enable_if<__detail::__is_seed_seq<
+      |                                                           ^~~~~~~~~~~~~~
+  503 |           _Sseq, mersenne_twister_engine, _UIntType>::value>::type;
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:539:43: note: in instantiation of template type alias '_If_seed_seq' requested here
+  539 |       template<typename _Sseq, typename = _If_seed_seq<_Sseq>>
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:541:9: note: in instantiation of default argument for 'mersenne_twister_engine<int>' required here
+  541 |         mersenne_twister_engine(_Sseq& __q)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  542 |         { seed(__q); }
+      |         ~~~~~~~~~~~~~~
+main.cpp:312:44: note: while substituting deduced template arguments into function template 'mersenne_twister_engine' [with _Sseq = int, $1 = (no value)]
+  312 |   std::shuffle(pArray, pArray + arraySize, std::mt19937(19937));
+      |                                            ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned long &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned long &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:200:4: note: in instantiation of function template specialization 'std::declval<unsigned long &>' requested here
+  200 |           std::declval<_Sseq&>().generate(std::declval<uint_least32_t*>(),
+      |           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:206:33: note: in instantiation of template type alias '__seed_seq_generate_t' requested here
+  206 |              typename _GenerateCheck = __seed_seq_generate_t<_Sseq>>
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:502:52: note: in instantiation of default argument for '__is_seed_seq<unsigned long, mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>, unsigned long>' required here
+  502 |         using _If_seed_seq = typename enable_if<__detail::__is_seed_seq<
+      |                                                           ^~~~~~~~~~~~~~
+  503 |           _Sseq, mersenne_twister_engine, _UIntType>::value>::type;
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:548:9: note: in instantiation of template type alias '_If_seed_seq' requested here
+  548 |         _If_seed_seq<_Sseq>
+      |         ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/random.h:531:9: note: while substituting deduced template arguments into function template 'seed' [with _Sseq = result_type]
+  531 |       { seed(__sd); }
+      |         ^
+main.cpp:312:44: note: in instantiation of member function 'std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>::mersenne_twister_engine' requested here
+  312 |   std::shuffle(pArray, pArray + arraySize, std::mt19937(19937));
+      |                                            ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned long>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned long>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2239:20: note: in instantiation of function template specialization 'std::declval<unsigned long>' requested here
+ 2239 |         = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+      |                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2244:14: note: in instantiation of template type alias '__cond_t' requested here
+ 2244 |       static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2291:29: note: while substituting explicitly-specified template arguments into function template '_S_test' 
+ 2291 |       using type = decltype(_S_test<_Tp1, _Tp2>(0));
+      |                             ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2297:14: note: in instantiation of template class 'std::__common_type_impl<unsigned long, unsigned long>' requested here
+ 2297 |     : public __common_type_impl<_Tp1, _Tp2>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_algo.h:3749:24: note: in instantiation of template class 'std::common_type<unsigned long, unsigned long>' requested here
+ 3749 |       typedef typename common_type<typename _Gen::result_type, __ud_type>::type
+      |                        ^
+main.cpp:312:8: note: in instantiation of function template specialization 'std::shuffle<unsigned int *, std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>>' requested here
+  312 |   std::shuffle(pArray, pArray + arraySize, std::mt19937(19937));
+      |        ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned int &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned int &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2694:32: note: in instantiation of function template specialization 'std::declval<unsigned int &>' requested here
+ 2694 |                = decltype(swap(std::declval<_Tp&>(), std::declval<_Tp&>()))>
+      |                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2695:26: note: in instantiation of default argument for '__test<unsigned int>' required here
+ 2695 |         static true_type __test(int);
+      |                          ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2718:24: note: while substituting deduced template arguments into function template '__test' [with _Tp = unsigned int, $1 = (no value)]
+ 2718 |       typedef decltype(__test<_Tp>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2730:14: note: in instantiation of template class 'std::__is_swappable_impl<unsigned int>' requested here
+ 2730 |     : public __is_swappable_impl<_Tp>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/move.h:216:24: note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  216 |     typename enable_if<__is_swappable<_Tp>::value>::type
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2676:5: note: while substituting explicitly-specified template arguments into function template 'swap[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]' [with _Tp = unsigned int]
+ 2676 |     swap(_Tp&, _Tp&)
+      |     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_algobase.h:182:7: note: in instantiation of function template specialization 'std::swap<unsigned int>' requested here
+  182 |       swap(*__a, *__b);
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_algo.h:3767:9: note: in instantiation of function template specialization 'std::iter_swap<unsigned int *, unsigned int *>' requested here
+ 3767 |           std::iter_swap(__i++, __first + __d(__g));
+      |                ^
+main.cpp:312:8: note: in instantiation of function template specialization 'std::shuffle<unsigned int *, std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>>' requested here
+  312 |   std::shuffle(pArray, pArray + arraySize, std::mt19937(19937));
+      |        ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<const unsigned long &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<const unsigned long &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<const unsigned long &>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<const unsigned long &, unsigned long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = const unsigned long &, _To1 = unsigned long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<const unsigned long &, unsigned long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 5 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:567:5: note: in instantiation of function template specialization 'std::make_pair[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned long, unsigned long>' requested here
+  567 |     make_pair(_T1&& __x, _T2&& __y)
+      |     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_algo.h:3711:14: note: in instantiation of function template specialization 'std::make_pair<unsigned long, unsigned long>' requested here
+ 3711 |       return std::make_pair(__x / __b1, __x % __b1);
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_algo.h:3779:6: note: in instantiation of function template specialization 'std::__gen_two_uniform_ints<unsigned long, std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>' requested here
+ 3779 |             __gen_two_uniform_ints(__swap_range, __swap_range + 1, __g);
+      |             ^
+main.cpp:312:8: note: in instantiation of function template specialization 'std::shuffle<unsigned int *, std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>>' requested here
+  312 |   std::shuffle(pArray, pArray + arraySize, std::mt19937(19937));
+      |        ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<unsigned long &&>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned long &&>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1442:46: note: in instantiation of function template specialization 'std::declval<unsigned long &&>' requested here
+ 1442 |                typename = decltype(__test_aux<_To1>(std::declval<_From1>()))>
+      |                                                     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1444:2: note: in instantiation of default argument for '__test<unsigned long &&, unsigned long>' required here
+ 1444 |         __test(int);
+      |         ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1451:24: note: while substituting deduced template arguments into function template '__test' [with _From1 = unsigned long &&, _To1 = unsigned long, $2 = (no value)]
+ 1451 |       typedef decltype(__test<_From, _To>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:1458:14: note: in instantiation of template class 'std::__is_convertible_helper<unsigned long &&, unsigned long>' requested here
+ 1458 |     : public __is_convertible_helper<_From, _To>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:153:26: note: (skipping 7 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  153 |     : public conditional<_B1::value, _B2, _B1>::type
+      |                          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_pair.h:567:5: note: in instantiation of function template specialization 'std::make_pair[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<unsigned long, unsigned long>' requested here
+  567 |     make_pair(_T1&& __x, _T2&& __y)
+      |     ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_algo.h:3711:14: note: in instantiation of function template specialization 'std::make_pair<unsigned long, unsigned long>' requested here
+ 3711 |       return std::make_pair(__x / __b1, __x % __b1);
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_algo.h:3779:6: note: in instantiation of function template specialization 'std::__gen_two_uniform_ints<unsigned long, std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253> &>' requested here
+ 3779 |             __gen_two_uniform_ints(__swap_range, __swap_range + 1, __g);
+      |             ^
+main.cpp:312:8: note: in instantiation of function template specialization 'std::shuffle<unsigned int *, std::mersenne_twister_engine<unsigned long, 32, 624, 397, 31, 2567483615, 11, 4294967295, 7, 2636928640, 15, 4022730752, 18, 1812433253>>' requested here
+  312 |   std::shuffle(pArray, pArray + arraySize, std::mt19937(19937));
+      |        ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<double *>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<double *>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:433:36: note: in instantiation of function template specialization 'std::declval<double *>' requested here
+  433 |         return noexcept(std::__relocate_a(std::declval<pointer>(),
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:449:9: note: in instantiation of member function 'std::vector<double>::_S_nothrow_relocate' requested here
+  449 |         return _S_nothrow_relocate(__is_move_insertable<_Tp_alloc_type>{});
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:636:33: note: in instantiation of member function 'std::vector<double>::_S_use_relocate' requested here
+  636 |               if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:940:4: note: in instantiation of member function 'std::vector<double>::_M_default_append' requested here
+  940 |           _M_default_append(__new_size - size());
+      |           ^
+main.cpp:366:9: note: in instantiation of member function 'std::vector<double>::resize' requested here
+  366 |   times.resize(NUM_ITERATIONS);
+      |         ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::allocator<double> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::allocator<double> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:436:8: note: in instantiation of function template specialization 'std::declval<std::allocator<double> &>' requested here
+  436 |                                           std::declval<_Tp_alloc_type&>()));
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:449:9: note: in instantiation of member function 'std::vector<double>::_S_nothrow_relocate' requested here
+  449 |         return _S_nothrow_relocate(__is_move_insertable<_Tp_alloc_type>{});
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:636:33: note: in instantiation of member function 'std::vector<double>::_S_use_relocate' requested here
+  636 |               if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+      |                                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:940:4: note: in instantiation of member function 'std::vector<double>::_M_default_append' requested here
+  940 |           _M_default_append(__new_size - size());
+      |           ^
+main.cpp:366:9: note: in instantiation of member function 'std::vector<double>::resize' requested here
+  366 |   times.resize(NUM_ITERATIONS);
+      |         ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<work_record<unsigned int> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<work_record<unsigned int> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:844:48: note: in instantiation of function template specialization 'std::declval<work_record<unsigned int> &>' requested here
+  844 |     template<typename _Tp, typename = decltype(declval<_Tp&>().~_Tp())>
+      |                                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:845:24: note: in instantiation of default argument for '__test<work_record<unsigned int>>' required here
+  845 |       static true_type __test(int);
+      |                        ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:855:24: note: while substituting deduced template arguments into function template '__test' [with _Tp = work_record<unsigned int>, $1 = (no value)]
+  855 |       typedef decltype(__test<_Tp>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:867:14: note: in instantiation of template class 'std::__is_destructible_impl<work_record<unsigned int>>' requested here
+  867 |     : public __is_destructible_impl<typename
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:883:14: note: (skipping 2 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  883 |     : public __is_destructible_safe<_Tp>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/alloc_traits.h:848:7: note: in instantiation of function template specialization 'std::_Destroy<work_record<unsigned int> *>' requested here
+  848 |       _Destroy(__first, __last);
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:680:7: note: in instantiation of function template specialization 'std::_Destroy<work_record<unsigned int> *, work_record<unsigned int>>' requested here
+  680 |         std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |              ^
+main.cpp:156:33: note: in instantiation of member function 'std::vector<work_record<unsigned int>>::~vector' requested here
+  156 |     std::vector<work_record<T>> work, done, news;
+      |                                 ^
+main.cpp:375:5: note: in instantiation of function template specialization 'GPUQSort<unsigned int>' requested here
+  375 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<work_record<unsigned int> *>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<work_record<unsigned int> *>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:433:36: note: in instantiation of function template specialization 'std::declval<work_record<unsigned int> *>' requested here
+  433 |         return noexcept(std::__relocate_a(std::declval<pointer>(),
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:449:9: note: in instantiation of member function 'std::vector<work_record<unsigned int>>::_S_nothrow_relocate' requested here
+  449 |         return _S_nothrow_relocate(__is_move_insertable<_Tp_alloc_type>{});
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:76:29: note: in instantiation of member function 'std::vector<work_record<unsigned int>>::_S_use_relocate' requested here
+   76 |           if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+      |                                    ^
+main.cpp:157:10: note: in instantiation of member function 'std::vector<work_record<unsigned int>>::reserve' requested here
+  157 |     work.reserve(MAX_SIZE);
+      |          ^
+main.cpp:375:5: note: in instantiation of function template specialization 'GPUQSort<unsigned int>' requested here
+  375 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::allocator<work_record<unsigned int>> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::allocator<work_record<unsigned int>> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:436:8: note: in instantiation of function template specialization 'std::declval<std::allocator<work_record<unsigned int>> &>' requested here
+  436 |                                           std::declval<_Tp_alloc_type&>()));
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:449:9: note: in instantiation of member function 'std::vector<work_record<unsigned int>>::_S_nothrow_relocate' requested here
+  449 |         return _S_nothrow_relocate(__is_move_insertable<_Tp_alloc_type>{});
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:76:29: note: in instantiation of member function 'std::vector<work_record<unsigned int>>::_S_use_relocate' requested here
+   76 |           if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+      |                                    ^
+main.cpp:157:10: note: in instantiation of member function 'std::vector<work_record<unsigned int>>::reserve' requested here
+  157 |     work.reserve(MAX_SIZE);
+      |          ^
+main.cpp:375:5: note: in instantiation of function template specialization 'GPUQSort<unsigned int>' requested here
+  375 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<parent_record &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<parent_record &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:844:48: note: in instantiation of function template specialization 'std::declval<parent_record &>' requested here
+  844 |     template<typename _Tp, typename = decltype(declval<_Tp&>().~_Tp())>
+      |                                                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:845:24: note: in instantiation of default argument for '__test<parent_record>' required here
+  845 |       static true_type __test(int);
+      |                        ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:855:24: note: while substituting deduced template arguments into function template '__test' [with _Tp = parent_record, $1 = (no value)]
+  855 |       typedef decltype(__test<_Tp>(0)) type;
+      |                        ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:867:14: note: in instantiation of template class 'std::__is_destructible_impl<parent_record>' requested here
+  867 |     : public __is_destructible_impl<typename
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:883:14: note: (skipping 2 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+  883 |     : public __is_destructible_safe<_Tp>::type
+      |              ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/alloc_traits.h:848:7: note: in instantiation of function template specialization 'std::_Destroy<parent_record *>' requested here
+  848 |       _Destroy(__first, __last);
+      |       ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:680:7: note: in instantiation of function template specialization 'std::_Destroy<parent_record *, parent_record>' requested here
+  680 |         std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+      |              ^
+main.cpp:160:32: note: in instantiation of member function 'std::vector<parent_record>::~vector' requested here
+  160 |     std::vector<parent_record> parent_records;
+      |                                ^
+main.cpp:375:5: note: in instantiation of function template specialization 'GPUQSort<unsigned int>' requested here
+  375 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<parent_record *>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<parent_record *>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:433:36: note: in instantiation of function template specialization 'std::declval<parent_record *>' requested here
+  433 |         return noexcept(std::__relocate_a(std::declval<pointer>(),
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:449:9: note: in instantiation of member function 'std::vector<parent_record>::_S_nothrow_relocate' requested here
+  449 |         return _S_nothrow_relocate(__is_move_insertable<_Tp_alloc_type>{});
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:76:29: note: in instantiation of member function 'std::vector<parent_record>::_S_use_relocate' requested here
+   76 |           if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+      |                                    ^
+main.cpp:161:20: note: in instantiation of member function 'std::vector<parent_record>::reserve' requested here
+  161 |     parent_records.reserve(MAX_SIZE);
+      |                    ^
+main.cpp:375:5: note: in instantiation of function template specialization 'GPUQSort<unsigned int>' requested here
+  375 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+In file included from main.cpp:36:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/math.h:20:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers/cmath:86:
+In file included from /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:20:
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:2360:21: error: static assertion failed due to requirement '__declval_protector<std::allocator<parent_record> &>::__stop': declval() must not be used!
+ 2360 |       static_assert(__declval_protector<_Tp>::__stop,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/type_traits:816:10: note: in instantiation of function template specialization 'std::declval[device={arch(amdgcn)}, implementation={extension(match_any, allow_templates)}]<std::allocator<parent_record> &>' requested here
+  816 |     auto declval() noexcept -> decltype(__declval<_Tp>(0));
+      |          ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:436:8: note: in instantiation of function template specialization 'std::declval<std::allocator<parent_record> &>' requested here
+  436 |                                           std::declval<_Tp_alloc_type&>()));
+      |                                           ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/stl_vector.h:449:9: note: in instantiation of member function 'std::vector<parent_record>::_S_nothrow_relocate' requested here
+  449 |         return _S_nothrow_relocate(__is_move_insertable<_Tp_alloc_type>{});
+      |                ^
+/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/bits/vector.tcc:76:29: note: in instantiation of member function 'std::vector<parent_record>::_S_use_relocate' requested here
+   76 |           if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
+      |                                    ^
+main.cpp:161:20: note: in instantiation of member function 'std::vector<parent_record>::reserve' requested here
+  161 |     parent_records.reserve(MAX_SIZE);
+      |                    ^
+main.cpp:375:5: note: in instantiation of function template specialization 'GPUQSort<unsigned int>' requested here
+  375 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cpp:440:3: note: in instantiation of function template specialization 'test<unsigned int>' requested here
+  440 |   test<uint>(arraySize, NUM_ITERATIONS, "uint");
+      |   ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated.
+make: *** [Makefile.AMD:58: main.o] Error 1

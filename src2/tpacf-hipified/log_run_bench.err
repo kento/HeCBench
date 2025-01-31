@@ -1,0 +1,23 @@
+In file included from compute.cu:32:
+./histogram_kernel.cu:93:10: error: no viable overloaded '='
+   93 |     grid = make_uint3(MAXBLOCKSEND, 1, 1);
+      |     ~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:1051:16: note: candidate function (the implicit copy assignment operator) not viable: no known conversion from 'uint3' (aka 'HIP_vector_type<unsigned int, 3>') to 'const dim3' for 1st argument
+ 1051 | typedef struct dim3 {
+      |                ^~~~
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:1051:16: note: candidate function (the implicit move assignment operator) not viable: no known conversion from 'uint3' (aka 'HIP_vector_type<unsigned int, 3>') to 'dim3' for 1st argument
+ 1051 | typedef struct dim3 {
+      |                ^~~~
+In file included from compute.cu:32:
+./histogram_kernel.cu:94:13: error: no viable overloaded '='
+   94 |     threads = make_uint3(NUMBINS, 1, 1);
+      |     ~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:1051:16: note: candidate function (the implicit copy assignment operator) not viable: no known conversion from 'uint3' (aka 'HIP_vector_type<unsigned int, 3>') to 'const dim3' for 1st argument
+ 1051 | typedef struct dim3 {
+      |                ^~~~
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:1051:16: note: candidate function (the implicit move assignment operator) not viable: no known conversion from 'uint3' (aka 'HIP_vector_type<unsigned int, 3>') to 'dim3' for 1st argument
+ 1051 | typedef struct dim3 {
+      |                ^~~~
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip compute.cu -o "compute.o"
+make: *** [Makefile.AMD:59: compute.o] Error 1

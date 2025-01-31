@@ -1,0 +1,5 @@
+VIDEO SEQUENCE TOOK 0.004250 (s)
+Average execution time of kernels: 0.532875 (s)
+Device offloading time: 4.795917 (s)
+PARTICLE FILTER TOOK 4.801307 (s)
+ENTIRE PROGRAM TOOK 4.805557 (s)

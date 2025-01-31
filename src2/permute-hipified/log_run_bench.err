@@ -1,0 +1,7 @@
+In file included from main.cu:9:
+../qkv-cuda/common.h:4:10: fatal error: 'cuda_runtime.h' file not found
+    4 | #include <cuda_runtime.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -I../qkv-cuda -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

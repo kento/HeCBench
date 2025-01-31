@@ -1,0 +1,9 @@
+
+Merklize ( approach 1 ) using Rescue Prime on F(2**64 - 2**32 + 1) elements
+
+     leaves		          total
+    1048576		         118.46 ms
+    2097152		        189.799 ms
+    4194304		         325.89 ms
+    8388608		        597.598 ms
+   16777216		        1136.72 ms

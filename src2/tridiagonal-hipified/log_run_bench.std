@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main -num_systems=524288 1>log.std 2>log.err;./main --lmem -num_systems=524288 1>>log.std 2>>log.err;./main --vec4 -num_systems=524288 1>>log.std 2>>log.err ) 2> log.time"

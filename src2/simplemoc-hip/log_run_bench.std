@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main -s 5000000 -e 128 -n 10 1>log.std 2>log.err ) 2> log.time"

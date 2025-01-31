@@ -1,0 +1,16 @@
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_aegraph.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_amd.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_analyze.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_check.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_cond.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_destroy.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_dumpa.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_dumplu.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_etree.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_flops.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_global.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_initialize.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_internal.o) is incompatible with elf64-x86-64
+ld.lld: error: ../slu-cuda/src/nicslu/lib/nicslu.a(nicslu_kernel.o) is incompatible with elf64-x86-64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile.AMD:61: main] Error 1

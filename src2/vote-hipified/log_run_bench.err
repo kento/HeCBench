@@ -1,0 +1,16 @@
+In file included from main.cu:6:
+./kernels.h:21:18: error: use of undeclared identifier '__any_sync'
+   21 |     result[tx] = __any_sync(MASK, input[tx]);
+      |                  ^
+./kernels.h:32:18: error: use of undeclared identifier '__all_sync'
+   32 |     result[tx] = __all_sync(MASK, input[tx]);
+      |                  ^
+./kernels.h:43:13: error: use of undeclared identifier '__any_sync'
+   43 |     *offs = __any_sync(MASK, (tx >= (warp_size * 3) / 2));
+      |             ^
+./kernels.h:50:9: error: use of undeclared identifier '__all_sync'
+   50 |     if (__all_sync(MASK, (tx >= (warp_size * 3) / 2))) {
+      |         ^
+4 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

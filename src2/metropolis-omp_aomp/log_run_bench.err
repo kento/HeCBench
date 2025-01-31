@@ -1,0 +1,25 @@
+In file included from main.cpp:28:
+./kernel_metropolis.h:177:13: warning: use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]
+  177 |         c = signbit(dh-EPSILON) | signbit(gpu_rand01(&lstate, &linc) - expf(dh * B));
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                 ||
+./kernel_metropolis.h:177:13: note: cast one or both operands to int to silence this warning
+./kernel_metropolis.h:187:13: warning: use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]
+  187 |         c = signbit(dh-EPSILON) | signbit(gpu_rand01(&lstate, &linc) - expf(dh * B));
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                 ||
+./kernel_metropolis.h:187:13: note: cast one or both operands to int to silence this warning
+2 warnings generated.
+In file included from main.cpp:28:
+./kernel_metropolis.h:177:13: warning: use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]
+  177 |         c = signbit(dh-EPSILON) | signbit(gpu_rand01(&lstate, &linc) - expf(dh * B));
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                 ||
+./kernel_metropolis.h:177:13: note: cast one or both operands to int to silence this warning
+./kernel_metropolis.h:187:13: warning: use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]
+  187 |         c = signbit(dh-EPSILON) | signbit(gpu_rand01(&lstate, &linc) - expf(dh * B));
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                 ||
+./kernel_metropolis.h:187:13: note: cast one or both operands to int to silence this warning
+2 warnings generated.
+make: *** [Makefile.AMD:72: run] Terminated

@@ -1,0 +1,4 @@
+ld.lld: error: unable to find library -lmpi
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++ --driver-mode=g++ -Llib --hip-link  -std=c++14 -I/home/users/u0001621/ompi_for_gpu/ompi/include -Wall -O3 main-mpi.o -o "main-mpi" -L/home/users/u0001621/ompi_for_gpu/ompi/lib -lmpi -lrccl
+make: *** [Makefile.AMD:52: main-mpi] Error 1

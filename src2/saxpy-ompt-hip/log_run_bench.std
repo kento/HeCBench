@@ -1,0 +1,1 @@
+clang++  -Wall -D__HIP_PLATFORM_AMD__ -I/opt/rocm/hipblas/include -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c asaxpy.c -o asaxpy.o

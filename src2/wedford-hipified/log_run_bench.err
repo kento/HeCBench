@@ -1,0 +1,25 @@
+main.cu:31:20: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   31 |     auto num_new = __shfl_down_sync(0xffffffff, num, i);
+      |                    ^~~~~~~~~~~~~~~~
+      |                    __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:32:21: error: use of undeclared identifier '__shfl_down_sync'
+   32 |     auto mean_new = __shfl_down_sync(0xffffffff, mean, i);
+      |                     ^
+main.cu:52:5: note: in instantiation of function template specialization 'warp_reduce_mean_m2n<float>' requested here
+   52 |     warp_reduce_mean_m2n(mean, m2n, num);
+      |     ^
+main.cu:101:3: note: in instantiation of function template specialization 'welford_reduce_mean_m2n<float>' requested here
+  101 |   welford_reduce_mean_m2n<accscalar_t>(s_mem_ac, s_mem, x_mean, m_2_n, count, block_size, thread_id);
+      |   ^
+main.cu:152:5: note: in instantiation of function template specialization 'welford_kernel<float, float, float>' requested here
+  152 |     welford_kernel<float, float, float><<<grid, block>>>(
+      |     ^
+main.cu:33:20: error: use of undeclared identifier '__shfl_down_sync'
+   33 |     auto m2n_new = __shfl_down_sync(0xffffffff, m2n, i);
+      |                    ^
+3 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

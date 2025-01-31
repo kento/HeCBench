@@ -1,0 +1,9 @@
+main.cu:62:39: error: no member named 'cuda' in namespace 'thrust'
+   62 |     auto nosync_exec_policy = thrust::cuda::par_nosync.on(s);
+      |                               ~~~~~~~~^
+main.cu:75:37: error: no member named 'cuda' in namespace 'thrust'
+   75 |     auto sync_exec_policy = thrust::cuda::par.on(s);
+      |                             ~~~~~~~~^
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -I./thrust -I./thrust/dependencies/cub/ -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:55: main.o] Error 1

@@ -1,0 +1,481 @@
+In file included from warpsort.cu:12:
+In file included from ./cuda/RegisterUtils.cuh:7:
+./cuda/ShuffleTypes.cuh:38:10: error: use of undeclared identifier '__shfl_xor_sync'
+   38 |   return __shfl_xor_sync(0xffffffff, val, laneMask, width);
+      |          ^
+./cuda/WarpBitonicSort.cuh:14:9: note: in instantiation of function template specialization 'facebook::cuda::shfl_xor<float>' requested here
+   14 |   T y = shfl_xor(x, mask);
+      |         ^
+./cuda/WarpBitonicSort.cuh:32:17: note: in instantiation of function template specialization 'facebook::cuda::detail::shflSwap<float, facebook::cuda::GreaterThan<float>>' requested here
+   32 |   val = detail::shflSwap<T, Comparator>(
+      |                 ^
+warpsort.cu:202:12: note: in instantiation of function template specialization 'facebook::cuda::warpBitonicSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  202 |     a[i] = warpBitonicSort<T, Comparator>(a[i]);
+      |            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 1>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:284:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 1>' requested here
+  284 |     warpSortRegisters<float, Comparator, 1>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+In file included from warpsort.cu:12:
+In file included from ./cuda/RegisterUtils.cuh:7:
+./cuda/ShuffleTypes.cuh:26:10: error: use of undeclared identifier '__shfl_up_sync'
+   26 |   return __shfl_up_sync(0xffffffff, val, delta, width);
+      |          ^
+warpsort.cu:94:11: note: in instantiation of function template specialization 'facebook::cuda::shfl_up<float>' requested here
+   94 |   T val = shfl_up(b[0], HALF_WARP_SIZE);
+      |           ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:287:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  287 |     warpSortRegisters<float, Comparator, 2>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+warpsort.cu:68:13: error: no matching function for call to 'shfl_up'
+   68 |   T shift = shfl_up(val, HALF_WARP_SIZE);
+      |             ^~~~~~~
+warpsort.cu:112:7: note: in instantiation of function template specialization 'facebook::cuda::scatterHalfWarp<2, float>' requested here
+  112 |       scatterHalfWarp<M + N>(dst, dstIndex, val);
+      |       ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:287:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  287 |     warpSortRegisters<float, Comparator, 2>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+./cuda/ShuffleTypes.cuh:25:1: note: candidate template ignored: substitution failure [with T = float]
+   25 | shfl_up(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:50:1: note: candidate template ignored: could not match 'Pair<K, V>' against 'float'
+   50 | shfl_up(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:32:10: error: use of undeclared identifier '__shfl_down_sync'
+   32 |   return __shfl_down_sync(0xffffffff, val, delta, width);
+      |          ^
+warpsort.cu:42:13: note: in instantiation of function template specialization 'facebook::cuda::shfl_down<float>' requested here
+   42 |   T shift = shfl_down(load, HALF_WARP_SIZE);
+      |             ^
+warpsort.cu:127:13: note: in instantiation of function template specialization 'facebook::cuda::getMulti<1, float>' requested here
+  127 |       val = getMulti<N>(b, bIndex, val);
+      |             ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:287:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  287 |     warpSortRegisters<float, Comparator, 2>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+In file included from warpsort.cu:12:
+In file included from ./cuda/RegisterUtils.cuh:7:
+./cuda/ShuffleTypes.cuh:20:10: error: use of undeclared identifier '__shfl_sync'
+   20 |   return __shfl_sync(0xffffffff, val, srcLane, width);
+      |          ^
+./cuda/RegisterUtils.cuh:180:12: note: in instantiation of function template specialization 'facebook::cuda::shfl<float>' requested here
+  180 |     return shfl(RegisterIndexUtils<T, N>::get(arr, bucket), lane);
+      |            ^
+warpsort.cu:135:48: note: in instantiation of member function 'facebook::cuda::WarpRegisterUtils<float, 1>::broadcast' requested here
+  135 |       const T compA = WarpRegisterUtils<T, M>::broadcast(a, aIndex - 1);
+      |                                                ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:287:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 2>' requested here
+  287 |     warpSortRegisters<float, Comparator, 2>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+warpsort.cu:94:11: error: no matching function for call to 'shfl_up'
+   94 |   T val = shfl_up(b[0], HALF_WARP_SIZE);
+      |           ^~~~~~~
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 3>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:290:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  290 |     warpSortRegisters<float, Comparator, 3>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+./cuda/ShuffleTypes.cuh:25:1: note: candidate template ignored: substitution failure [with T = float]
+   25 | shfl_up(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:50:1: note: candidate template ignored: could not match 'const Pair<K, V>' against 'const float'
+   50 | shfl_up(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+warpsort.cu:68:13: error: no matching function for call to 'shfl_up'
+   68 |   T shift = shfl_up(val, HALF_WARP_SIZE);
+      |             ^~~~~~~
+warpsort.cu:112:7: note: in instantiation of function template specialization 'facebook::cuda::scatterHalfWarp<3, float>' requested here
+  112 |       scatterHalfWarp<M + N>(dst, dstIndex, val);
+      |       ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 3>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:290:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  290 |     warpSortRegisters<float, Comparator, 3>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+./cuda/ShuffleTypes.cuh:25:1: note: candidate template ignored: substitution failure [with T = float]
+   25 | shfl_up(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:50:1: note: candidate template ignored: could not match 'Pair<K, V>' against 'float'
+   50 | shfl_up(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+warpsort.cu:42:13: error: no matching function for call to 'shfl_down'
+   42 |   T shift = shfl_down(load, HALF_WARP_SIZE);
+      |             ^~~~~~~~~
+warpsort.cu:127:13: note: in instantiation of function template specialization 'facebook::cuda::getMulti<2, float>' requested here
+  127 |       val = getMulti<N>(b, bIndex, val);
+      |             ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 3>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:290:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  290 |     warpSortRegisters<float, Comparator, 3>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+./cuda/ShuffleTypes.cuh:31:1: note: candidate template ignored: substitution failure [with T = float]
+   31 | shfl_down(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:57:1: note: candidate template ignored: could not match 'Pair<K, V>' against 'float'
+   57 | shfl_down(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+In file included from warpsort.cu:12:
+./cuda/RegisterUtils.cuh:180:12: error: no matching function for call to 'shfl'
+  180 |     return shfl(RegisterIndexUtils<T, N>::get(arr, bucket), lane);
+      |            ^~~~
+warpsort.cu:136:48: note: in instantiation of member function 'facebook::cuda::WarpRegisterUtils<float, 2>::broadcast' requested here
+  136 |       const T compB = WarpRegisterUtils<T, N>::broadcast(b, bIndex - 1);
+      |                                                ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 1, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 3>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:290:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 3>' requested here
+  290 |     warpSortRegisters<float, Comparator, 3>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+./cuda/ShuffleTypes.cuh:19:1: note: candidate template ignored: substitution failure [with T = float]
+   19 | shfl(const T val, int srcLane, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:43:1: note: candidate template ignored: could not match 'Pair<K, V>' against 'float'
+   43 | shfl(const Pair<K, V>& p, int srcLane, int width = WARP_SIZE) {
+      | ^
+warpsort.cu:94:11: error: no matching function for call to 'shfl_up'
+   94 |   T val = shfl_up(b[0], HALF_WARP_SIZE);
+      |           ^~~~~~~
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 2, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 4>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 4>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:293:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 4>' requested here
+  293 |     warpSortRegisters<float, Comparator, 4>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+./cuda/ShuffleTypes.cuh:25:1: note: candidate template ignored: substitution failure [with T = float]
+   25 | shfl_up(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:50:1: note: candidate template ignored: could not match 'const Pair<K, V>' against 'const float'
+   50 | shfl_up(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+warpsort.cu:68:13: error: no matching function for call to 'shfl_up'
+   68 |   T shift = shfl_up(val, HALF_WARP_SIZE);
+      |             ^~~~~~~
+warpsort.cu:112:7: note: in instantiation of function template specialization 'facebook::cuda::scatterHalfWarp<4, float>' requested here
+  112 |       scatterHalfWarp<M + N>(dst, dstIndex, val);
+      |       ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<float, facebook::cuda::GreaterThan<float>, 2, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<float, facebook::cuda::GreaterThan<float>, 4>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:222:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 4>' requested here
+  222 |   warpSortRegisters<T, Comparator, N>(val, sortedVal);
+      |   ^
+warpsort.cu:293:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, facebook::cuda::GreaterThan<float>, 4>' requested here
+  293 |     warpSortRegisters<float, Comparator, 4>(key, sortedKey);
+      |     ^
+warpsort.cu:370:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, facebook::cuda::GreaterThan<float>>' requested here
+  370 |   warpSort<float, GreaterThan<float> >(data, out);
+      |   ^
+./cuda/ShuffleTypes.cuh:25:1: note: candidate template ignored: substitution failure [with T = float]
+   25 | shfl_up(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:50:1: note: candidate template ignored: could not match 'Pair<K, V>' against 'float'
+   50 | shfl_up(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:65:21: error: use of undeclared identifier '__shfl_xor_sync'
+   65 |   return Pair<K, V>(__shfl_xor_sync(0xffffffff, p.k, laneMask, width),
+      |                     ^
+./cuda/WarpBitonicSort.cuh:14:9: note: in instantiation of function template specialization 'facebook::cuda::shfl_xor<float, int>' requested here
+   14 |   T y = shfl_xor(x, mask);
+      |         ^
+./cuda/WarpBitonicSort.cuh:32:17: note: in instantiation of function template specialization 'facebook::cuda::detail::shflSwap<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+   32 |   val = detail::shflSwap<T, Comparator>(
+      |                 ^
+warpsort.cu:202:12: note: in instantiation of function template specialization 'facebook::cuda::warpBitonicSort<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  202 |     a[i] = warpBitonicSort<T, Comparator>(a[i]);
+      |            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:312:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1>' requested here
+  312 |     warpSortRegisters<float, IndexType, Comparator, 1>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+In file included from warpsort.cu:12:
+In file included from ./cuda/RegisterUtils.cuh:7:
+./cuda/ShuffleTypes.cuh:51:21: error: use of undeclared identifier '__shfl_up_sync'
+   51 |   return Pair<K, V>(__shfl_up_sync(0xffffffff, p.k, delta, width),
+      |                     ^
+warpsort.cu:94:11: note: in instantiation of function template specialization 'facebook::cuda::shfl_up<float, int>' requested here
+   94 |   T val = shfl_up(b[0], HALF_WARP_SIZE);
+      |           ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:316:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  316 |     warpSortRegisters<float, IndexType, Comparator, 2>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+In file included from warpsort.cu:12:
+In file included from ./cuda/RegisterUtils.cuh:7:
+./cuda/ShuffleTypes.cuh:26:10: error: use of undeclared identifier '__shfl_up_sync'
+   26 |   return __shfl_up_sync(0xffffffff, val, delta, width);
+      |          ^
+warpsort.cu:68:13: note: in instantiation of function template specialization 'facebook::cuda::shfl_up<facebook::cuda::Pair<float, int>>' requested here
+   68 |   T shift = shfl_up(val, HALF_WARP_SIZE);
+      |             ^
+warpsort.cu:112:7: note: in instantiation of function template specialization 'facebook::cuda::scatterHalfWarp<2, facebook::cuda::Pair<float, int>>' requested here
+  112 |       scatterHalfWarp<M + N>(dst, dstIndex, val);
+      |       ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:316:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  316 |     warpSortRegisters<float, IndexType, Comparator, 2>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+In file included from warpsort.cu:12:
+In file included from ./cuda/RegisterUtils.cuh:7:
+./cuda/ShuffleTypes.cuh:58:21: error: use of undeclared identifier '__shfl_down_sync'
+   58 |   return Pair<K, V>(__shfl_down_sync(0xffffffff, p.k, delta, width),
+      |                     ^
+warpsort.cu:42:13: note: in instantiation of function template specialization 'facebook::cuda::shfl_down<float, int>' requested here
+   42 |   T shift = shfl_down(load, HALF_WARP_SIZE);
+      |             ^
+warpsort.cu:127:13: note: in instantiation of function template specialization 'facebook::cuda::getMulti<1, facebook::cuda::Pair<float, int>>' requested here
+  127 |       val = getMulti<N>(b, bIndex, val);
+      |             ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:316:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  316 |     warpSortRegisters<float, IndexType, Comparator, 2>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+In file included from warpsort.cu:12:
+In file included from ./cuda/RegisterUtils.cuh:7:
+./cuda/ShuffleTypes.cuh:44:21: error: use of undeclared identifier '__shfl_sync'
+   44 |   return Pair<K, V>(__shfl_sync(0xffffffff, p.k, srcLane, width),
+      |                     ^
+./cuda/RegisterUtils.cuh:180:12: note: in instantiation of function template specialization 'facebook::cuda::shfl<float, int>' requested here
+  180 |     return shfl(RegisterIndexUtils<T, N>::get(arr, bucket), lane);
+      |            ^
+warpsort.cu:135:48: note: in instantiation of member function 'facebook::cuda::WarpRegisterUtils<facebook::cuda::Pair<float, int>, 1>::broadcast' requested here
+  135 |       const T compA = WarpRegisterUtils<T, M>::broadcast(a, aIndex - 1);
+      |                                                ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1, 1>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:316:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 2>' requested here
+  316 |     warpSortRegisters<float, IndexType, Comparator, 2>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+warpsort.cu:94:11: error: no matching function for call to 'shfl_up'
+   94 |   T val = shfl_up(b[0], HALF_WARP_SIZE);
+      |           ^~~~~~~
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:320:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>' requested here
+  320 |     warpSortRegisters<float, IndexType, Comparator, 3>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+./cuda/ShuffleTypes.cuh:25:1: note: candidate template ignored: substitution failure [with T = facebook::cuda::Pair<float, int>]
+   25 | shfl_up(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:50:1: note: candidate template ignored: substitution failure [with K = float, V = int]
+   50 | shfl_up(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+warpsort.cu:68:13: error: no matching function for call to 'shfl_up'
+   68 |   T shift = shfl_up(val, HALF_WARP_SIZE);
+      |             ^~~~~~~
+warpsort.cu:112:7: note: in instantiation of function template specialization 'facebook::cuda::scatterHalfWarp<3, facebook::cuda::Pair<float, int>>' requested here
+  112 |       scatterHalfWarp<M + N>(dst, dstIndex, val);
+      |       ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:320:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>' requested here
+  320 |     warpSortRegisters<float, IndexType, Comparator, 3>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+./cuda/ShuffleTypes.cuh:25:1: note: candidate template ignored: substitution failure [with T = facebook::cuda::Pair<float, int>]
+   25 | shfl_up(const T val, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:50:1: note: candidate template ignored: substitution failure [with K = float, V = int]
+   50 | shfl_up(const Pair<K, V>& p, int delta, int width = WARP_SIZE) {
+      | ^
+./cuda/ShuffleTypes.cuh:32:10: error: use of undeclared identifier '__shfl_down_sync'
+   32 |   return __shfl_down_sync(0xffffffff, val, delta, width);
+      |          ^
+warpsort.cu:42:13: note: in instantiation of function template specialization 'facebook::cuda::shfl_down<facebook::cuda::Pair<float, int>>' requested here
+   42 |   T shift = shfl_down(load, HALF_WARP_SIZE);
+      |             ^
+warpsort.cu:127:13: note: in instantiation of function template specialization 'facebook::cuda::getMulti<2, facebook::cuda::Pair<float, int>>' requested here
+  127 |       val = getMulti<N>(b, bIndex, val);
+      |             ^
+warpsort.cu:180:5: note: in instantiation of function template specialization 'facebook::cuda::warpMergeMN<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 1, 2>' requested here
+  180 |     warpMergeMN<T, Comparator, STATIC_FLOOR(N, 2), STATIC_CEIL(N, 2)>(
+      |     ^
+warpsort.cu:206:28: note: in instantiation of member function 'facebook::cuda::Merge<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>::splitAndMerge' requested here
+  206 |   Merge<T, Comparator, N>::splitAndMerge(a, dst);
+      |                            ^
+warpsort.cu:246:3: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<facebook::cuda::Pair<float, int>, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>' requested here
+  246 |   warpSortRegisters<Pair<T, IndexType>, Comparator, N>(pairs, sortedPairs);
+      |   ^
+warpsort.cu:320:5: note: in instantiation of function template specialization 'facebook::cuda::warpSortRegisters<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>, 3>' requested here
+  320 |     warpSortRegisters<float, IndexType, Comparator, 3>(
+      |     ^
+warpsort.cu:377:3: note: in instantiation of function template specialization 'facebook::cuda::warpSort<float, int, facebook::cuda::GreaterThan<facebook::cuda::Pair<float, int>>>' requested here
+  377 |   warpSort<float, int, GreaterThan<Pair<float, int> > >(data, out, indices);
+      |   ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -DWARP_SIZE=32 -DHALF_WARP_SIZE=16 -std=c++14 -I. -Wall -O3 -c -x hip warpsort.cu -o "warpsort.o"
+make: *** [Makefile.AMD:53: warpsort.o] Error 1

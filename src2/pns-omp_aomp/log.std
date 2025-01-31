@@ -1,0 +1,5 @@
+Number of thread blocks: 154702
+Total device execution time: 0.07 s
+petri N=22 S=100000 T=1000000
+mean_vars: -nan    var_vars: nan
+mean_maxs: -411716.093750    var_maxs: -169510109184.000000

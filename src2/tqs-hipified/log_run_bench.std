@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main -f ../tqs-cuda/input/patternsNP100NB512FB25.txt 1>log.std 2>log.err ) 2> log.time"

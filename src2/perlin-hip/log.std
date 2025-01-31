@@ -1,0 +1,36 @@
+
+Using 1 streams.
+Each stream will calculate 2123366400 pixels.
+For each stream, block size = (16,16,1), grid size = (3840,2160,1), total threads = 2123366400
+Total kernel execution time 95.3682 (ms)
+checksum = 158
+
+Using 2 streams.
+Each stream will calculate 1061683200 pixels.
+For each stream, block size = (16,16,1), grid size = (3840,1080,1), total threads = 1061683200
+Total kernel execution time 97.8462 (ms)
+checksum = 158
+
+Using 4 streams.
+Each stream will calculate 530841600 pixels.
+For each stream, block size = (16,16,1), grid size = (3840,540,1), total threads = 530841600
+Total kernel execution time 94.9901 (ms)
+checksum = 158
+
+Using 8 streams.
+Each stream will calculate 265420800 pixels.
+For each stream, block size = (16,16,1), grid size = (3840,270,1), total threads = 265420800
+Total kernel execution time 95.0155 (ms)
+checksum = 158
+
+Using 16 streams.
+Each stream will calculate 132710400 pixels.
+For each stream, block size = (16,16,1), grid size = (3840,135,1), total threads = 132710400
+Total kernel execution time 95.1054 (ms)
+checksum = 158
+
+Using 32 streams.
+Each stream will calculate 66355200 pixels.
+For each stream, block size = (16,16,1), grid size = (3840,68,1), total threads = 66846720
+Total kernel execution time 95.3464 (ms)
+checksum = 158

@@ -1,0 +1,6 @@
+Executing kernel for 1000 iterations
+-------------------------------------------
+Average execution time of HIP Thrust exclusive scan: 245.361 (us)
+PASS
+Average execution time of HIP CUB exclusive scan: 219.669 (us)
+PASS

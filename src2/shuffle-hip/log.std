@@ -1,0 +1,22 @@
+Broadcast using shuffle functions
+Broadcast using the shuffle xor function (subgroup sizes 8, 16, and 32) 
+Average kernel time (subgroup size = 8): 2.51893 (us)
+PASS
+Average kernel time (subgroup size = 16): 2.37625 (us)
+PASS
+Average kernel time (subgroup size = 32): 2.42603 (us)
+PASS
+Broadcast using the shuffle function (subgroup sizes 8, 16, and 32) 
+Average kernel time (subgroup size = 8): 2.32091 (us)
+PASS
+Average kernel time (subgroup size = 16): 2.30677 (us)
+PASS
+Average kernel time (subgroup size = 32): 2.24084 (us)
+PASS
+matrix transpose using the shuffle function (subgroup sizes are 8, 16, and 32)
+Average kernel time (subgroup size = 8): 20524.9 (us)
+PASS
+Average kernel time (subgroup size = 16): 10342.7 (us)
+PASS
+Average kernel time (subgroup size = 32): 5170.53 (us)
+PASS

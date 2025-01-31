@@ -1,0 +1,19 @@
+Resize 512 images from (1920 x 1080) to (256 x 256)
+
+The size of each pixel is 1 byte
+Average kernel execution time: 192.400570 (us)    Perf: 5692.486420 (GB/s)
+
+Bilinear resizing
+Average kernel execution time: 376.576920 (us)    Perf: 2908.403500 (GB/s)
+
+The size of each pixel is 2 bytes
+Average kernel execution time: 221.766550 (us)    Perf: 9877.392528 (GB/s)
+
+Bilinear resizing
+Average kernel execution time: 525.301740 (us)    Perf: 4169.937195 (GB/s)
+
+The size of each pixel is 4 bytes
+Average kernel execution time: 500.466230 (us)    Perf: 8753.738545 (GB/s)
+
+Bilinear resizing
+Average kernel execution time: 834.434790 (us)    Perf: 5250.201191 (GB/s)

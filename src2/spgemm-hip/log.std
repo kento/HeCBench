@@ -1,0 +1,8 @@
+Average execution time of SPGEMM (COO) compute: 457.327667 (us)
+Computing the reference SPGEMM results..
+spgemm_example test PASSED
+Average execution time of SPGEMM (CSR) compute: 93.006134 (us)
+Computing the reference SPGEMM results..
+spgemm_example test PASSED
+Average execution time of SPGEMM (COO) compute: 2511.502930 (us)
+Average execution time of SPGEMM (CSR) compute: 298.266602 (us)

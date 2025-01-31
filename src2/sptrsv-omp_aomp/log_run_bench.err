@@ -1,0 +1,12 @@
+sptrsv_syncfree.cpp:14:3: error: the statement for 'atomic read' must be an expression statement of form 'v = x;', where v and x are both lvalue expressions with scalar type
+   14 |   const int value = *vaddr;
+      |   ^~~~~
+sptrsv_syncfree.cpp:14:3: note: expected an expression statement
+   14 |   const int value = *vaddr;
+      |   ^~~~~
+sptrsv_syncfree.cpp:19:10: error: use of undeclared identifier 'value'; did you mean 'false'?
+   19 |   return value; 
+      |          ^~~~~
+      |          false
+2 errors generated.
+make: *** [Makefile.AMD:60: sptrsv_syncfree.o] Error 1

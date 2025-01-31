@@ -1,0 +1,3 @@
+gcc -O3 fpc.c -o fpc
+./fpc < msg_sp.trace.fpc > msg_sp.trace.out
+bash -c "time -p ( ./main ../mpc-cuda/msg_sp.trace.out 1 1>log.std 2>log.err;./main compression.txt 1>>log.std 2>>log.err ) 2> log.time"

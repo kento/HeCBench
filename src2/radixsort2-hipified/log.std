@@ -1,0 +1,28 @@
+./main Starting...
+
+
+Sorting 536870912 32-bit float keys (only)
+
+Throughput = 13705.8797 MElements/s, Time = 0.03917 s
+PASS
+./main Starting...
+
+
+Sorting 536870912 32-bit float keys and values
+
+Throughput = 9316.7806 MElements/s, Time = 0.05762 s
+PASS
+./main Starting...
+
+
+Sorting 536870912 32-bit unsigned int keys (only)
+
+Throughput = 12619.9272 MElements/s, Time = 0.04254 s
+PASS
+./main Starting...
+
+
+Sorting 536870912 32-bit unsigned int keys and values
+
+Throughput = 7303.2074 MElements/s, Time = 0.07351 s
+PASS

@@ -1,0 +1,3 @@
+Creating directories
+Compiling: device/device_kernel.cu -> build/hip/device_kernel.o
+hipcc   -I include/ -I /usr/local/include -c device/device_kernel.cu -o build/hip/device_kernel.o

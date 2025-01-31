@@ -1,0 +1,10 @@
+Number of voxels: 200000  Length of time series: 165
+
+
+Computing correlations ...
+Total Kernel time (s)
+GEMM: 0.197324, Extract upper triangle: 0.159106
+
+Running time for computing correlations: 
+216.658 (s)
+Checksum: 2706.21
