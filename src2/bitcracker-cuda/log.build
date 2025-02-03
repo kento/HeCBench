@@ -1,0 +1,18 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -use_fast_math -c attack.cu -o attack.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -use_fast_math -c main.cu -o main.o
+main.cu: In function 'int main(int, char**)':
+main.cu:84:8: warning: 'char* strncpy(char*, const char*, size_t)' specified bound depends on the length of the source argument [-Wstringop-truncation]
+   84 |         strncpy(input_dictionary,optarg, strlen(optarg)+1);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:84:41: note: length computed here
+   84 |         strncpy(input_dictionary,optarg, strlen(optarg)+1);
+      |                                   ~~~~~~^~~~~~~~
+main.cu:74:8: warning: 'char* strncpy(char*, const char*, size_t)' specified bound depends on the length of the source argument [-Wstringop-truncation]
+   74 |         strncpy(input_hash, optarg, strlen(optarg)+1);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:35: note: length computed here
+   74 |         strncpy(input_hash, optarg, strlen(optarg)+1);
+      |                             ~~~~~~^~~~~~~~
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -use_fast_math -c utils.cu -o utils.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -use_fast_math -c w_blocks.cu -o w_blocks.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -use_fast_math attack.o main.o utils.o w_blocks.o -o main 

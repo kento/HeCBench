@@ -1,0 +1,61 @@
+hipcc  -std=c++14  -Wall  -O3  -c attack.cu -o attack.o
+attack.cu:897:15: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  897 |   CUDA_CHECK( hipHostAlloc((void **)&h_found, sizeof(int), hipHostMallocDefault) );
+      |               ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+attack.cu:898:15: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  898 |   CUDA_CHECK( hipHostAlloc((void **)&h_pswd_char, max_num_pswd_per_read * PSWD_NUM_CHAR * sizeof(char), hipHostMallocDefault) );
+      |               ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+attack.cu:899:15: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  899 |   CUDA_CHECK( hipHostAlloc((void **)&h_pswd_uint32, max_num_pswd_per_read * PSWD_NUM_UINT32 * sizeof(uint32_t), hipHostMallocDefault) );
+      |               ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+3 warnings generated when compiling for gfx90a.
+attack.cu:897:15: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  897 |   CUDA_CHECK( hipHostAlloc((void **)&h_found, sizeof(int), hipHostMallocDefault) );
+      |               ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+attack.cu:898:15: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  898 |   CUDA_CHECK( hipHostAlloc((void **)&h_pswd_char, max_num_pswd_per_read * PSWD_NUM_CHAR * sizeof(char), hipHostMallocDefault) );
+      |               ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+attack.cu:899:15: warning: 'hipHostAlloc' is deprecated: use hipHostMalloc instead [-Wdeprecated-declarations]
+  899 |   CUDA_CHECK( hipHostAlloc((void **)&h_pswd_uint32, max_num_pswd_per_read * PSWD_NUM_UINT32 * sizeof(uint32_t), hipHostMallocDefault) );
+      |               ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:3779:1: note: 'hipHostAlloc' has been explicitly marked deprecated here
+ 3779 | DEPRECATED("use hipHostMalloc instead")
+      | ^
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:580:41: note: expanded from macro 'DEPRECATED'
+  580 | #define DEPRECATED(msg) __attribute__ ((deprecated(msg)))
+      |                                         ^
+3 warnings generated when compiling for host.
+hipcc  -std=c++14  -Wall  -O3  -c main.cu -o main.o
+hipcc  -std=c++14  -Wall  -O3  -c utils.cu -o utils.o
+hipcc  -std=c++14  -Wall  -O3  -c w_blocks.cu -o w_blocks.o
+hipcc  -std=c++14  -Wall  -O3  attack.o main.o utils.o w_blocks.o -o main 

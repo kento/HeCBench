@@ -1,0 +1,5 @@
+hipcc  -std=c++14 -Wall -O3 -ffast-math -c attack.cu -o attack.o
+hipcc  -std=c++14 -Wall -O3 -ffast-math -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -O3 -ffast-math -c utils.cu -o utils.o
+hipcc  -std=c++14 -Wall -O3 -ffast-math -c w_blocks.cu -o w_blocks.o
+hipcc  -std=c++14 -Wall -O3 -ffast-math attack.o main.o utils.o w_blocks.o -o main 
