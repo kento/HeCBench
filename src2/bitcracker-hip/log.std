@@ -6,3 +6,24 @@
 Retrieving Info
 ==================================
 
+Reading hash file "../bitcracker-cuda/hash_pass/hash_user_pass.txt"
+kernel time (w_block) : 870.639 us
+
+================================================
+                  Attack
+================================================
+Type of attack: User Password
+Psw per thread: 1
+max_num_pswd_per_read: 73728
+Dictionary: ../bitcracker-cuda/hash_pass/user_passwords_large.txt
+MAC Comparison (-m): Yes
+
+
+Iter: 1, num passwords read: 73728
+Total kernel time (decrypt_vmk_with_mac): 23.6504 s
+
+================================================
+Bitcracker attack completed
+Total passwords evaluated: 73728
+Password not found!
+================================================
