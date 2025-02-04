@@ -1,0 +1,1 @@
+bash -c "time -p ( ./gerbil -i -g ../data/gerbil/ERR164407.fastq.gz tmp out 1>log.std 2>log.err ) 2> log.time"
