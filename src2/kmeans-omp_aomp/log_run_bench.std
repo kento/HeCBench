@@ -1,10 +1,5 @@
-clang++   -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a cluster.c -c
-clang++   -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a getopt.c -c
-clang++   -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a read_input.c -c
-clang++   -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a rmse.c -c
-clang++    -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a cluster.o getopt.o read_input.o rmse.o kmeans.c -o kmeans -lm
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "bunzip2 ../data/kmeans/kdd_cup.bz2; time -p ( ./kmeans -r -n 5 -m 15 -l 10 -o -i ../data/kmeans/kdd_cup 1>log.std 2>log.err ) 2> log.time"
+bash -c "../kmeans-cuda/prepare_data.sh; time -p ( ./kmeans -r -n 5 -m 15 -l 10 -o -i ../data/kmeans/kdd_cup 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 11.00 964.66 953.66
+min max diff memory in [MB] : 10.99 964.66 953.67
