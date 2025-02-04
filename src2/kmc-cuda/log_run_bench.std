@@ -1,8 +1,5 @@
-nvcc  -std=c++14 -Xcompiler -Wall -Xcompiler -Wno-unused-result -arch=sm_90 -O3 -c main.cpp -o main.o
-nvcc  -std=c++14 -Xcompiler -Wall -Xcompiler -Wno-unused-result -arch=sm_90 -O3 -c svm.cpp -o svm.o
-nvcc  -std=c++14 -Xcompiler -Wall -Xcompiler -Wno-unused-result -arch=sm_90 -O3 main.o svm.o -o main -lcublas 
 nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
-bash -c "bunzip2 ../kmc-cuda/gisette_scale.bz2; time -p ( ./main -v 10 ../kmc-cuda/gisette_scale 1>log.std 2>log.err ) 2> log.time"
+bash -c "../kmc-cuda/prepare_data.sh; time -p ( ./main -v 10 ../kmc-cuda/gisette_scale 1>log.std 2>log.err ) 2> log.time"
 pkill nvidia-smi
 ../scripts/m.sh
-min max diff memory in [MB] : 2 706 704
+min max diff memory in [MB] : 2 741 739
