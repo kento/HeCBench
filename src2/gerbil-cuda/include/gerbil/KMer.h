@@ -24,7 +24,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "types.h"
 #include <atomic>
+
+#ifdef ARM
+// #include <arm_neon.h>
+#else
 #include <xmmintrin.h>
+#endif
+
 #include <algorithm>
 
 namespace gerbil {
