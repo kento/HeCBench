@@ -1,0 +1,12 @@
+tar xf bzip2_lib.tar.bz2
+nvcc  -std=c++14 -Xcompiler -Wall -O3 -c src/cuda_ds/AddKernel.cu -o AddKernel.o
+nvcc  -std=c++14 -Xcompiler -Wall -O3 -c src/cuda_ds/CompressKernel.cu -o CompressKernel.o
+g++  -std=c++11 -Wall -fpermissive -DGPU 	  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK 	  -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK 	  -I/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda/include -I./bzip2_lib/include -O3 -c src/gerbil/FastParser.cpp -o FastParser.o
+In file included from src/gerbil/../../include/gerbil/Bundle.h:25,
+                 from src/gerbil/../../include/gerbil/FastParser.h:26,
+                 from src/gerbil/FastParser.cpp:8:
+src/gerbil/../../include/gerbil/KMer.h:27:10: fatal error: xmmintrin.h: No such file or directory
+   27 | #include <xmmintrin.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile.NVD:63: FastParser.o] Error 1
