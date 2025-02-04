@@ -1,0 +1,8 @@
+main.cu:154:8: warning: unused variable 'write' [-Wunused-variable]
+  154 |   bool write = false;
+      |        ^~~~~
+1 warning generated when compiling for gfx90a.
+main.cu:154:8: warning: unused variable 'write' [-Wunused-variable]
+  154 |   bool write = false;
+      |        ^~~~~
+1 warning generated when compiling for host.

@@ -1,0 +1,33 @@
+main.cu:59:12: error: use of undeclared identifier '__shfl_sync'
+   59 |     last = __shfl_sync(mask, sum, blockDim.x-1, blockDim.x);
+      |            ^
+main.cu:94:15: note: in instantiation of function template specialization 'parallel_prefix_sum<float>' requested here
+   94 |       T sum = parallel_prefix_sum(length, csrInd + start, w); 
+      |               ^
+main.cu:253:5: note: in instantiation of function template specialization 'jaccard_row_sum<true, float>' requested here
+  253 |     jaccard_row_sum<weighted,T><<<nblocks,nthreads>>>(n, d_csrPtr, d_csrInd, d_weight_j, d_work);
+      |     ^
+main.cu:415:3: note: in instantiation of function template specialization 'jaccard_weight<true, float>' requested here
+  415 |   jaccard_weight<true, vtype>(iteration, row, nnz, csr_ptr.data(), csr_ind.data(), csr_val.data());
+      |   ^
+main.cu:66:13: error: use of undeclared identifier '__shfl_up_sync'
+   66 |       T v = __shfl_up_sync(mask, sum, j, blockDim.x);
+      |             ^
+main.cu:74:10: error: use of undeclared identifier '__shfl_sync'
+   74 |   last = __shfl_sync(mask, sum, blockDim.x-1, blockDim.x);
+      |          ^
+main.cu:94:15: error: no matching function for call to 'parallel_prefix_sum'
+   94 |       T sum = parallel_prefix_sum(length, csrInd + start, w); 
+      |               ^~~~~~~~~~~~~~~~~~~
+main.cu:253:5: note: in instantiation of function template specialization 'jaccard_row_sum<false, float>' requested here
+  253 |     jaccard_row_sum<weighted,T><<<nblocks,nthreads>>>(n, d_csrPtr, d_csrInd, d_weight_j, d_work);
+      |     ^
+main.cu:416:3: note: in instantiation of function template specialization 'jaccard_weight<false, float>' requested here
+  416 |   jaccard_weight<false, vtype>(iteration, row, nnz, csr_ptr.data(), csr_ind.data(), csr_val.data());
+      |   ^
+main.cu:37:3: note: candidate template ignored: substitution failure [with T = float]
+   37 | T parallel_prefix_sum(const int n, const int *ind, const T *w) 
+      |   ^
+4 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

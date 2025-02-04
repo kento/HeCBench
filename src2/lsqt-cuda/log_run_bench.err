@@ -1,0 +1,6 @@
+vector.cu(251): error: identifier "__syncwrap" is undefined
+    v += s[t + 32]; __syncwrap();
+                    ^
+
+1 error detected in the compilation of "vector.cu".
+make: *** [Makefile.NVD:24: obj_gpu/vector.o] Error 2

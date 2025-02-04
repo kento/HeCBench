@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(program) -v 10 ../kmc-cuda/gisette_scale 1>log.std 2>log.err ) 2> log.time
+COMMAND = bunzip2 ../kmc-cuda/gisette_scale.bz2; time -p ( ./$(program) -v 10 ../kmc-cuda/gisette_scale 1>log.std 2>log.err ) 2> log.time

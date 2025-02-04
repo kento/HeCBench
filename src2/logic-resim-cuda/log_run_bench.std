@@ -1,0 +1,6 @@
+nvc++  -std=c++14 -Xcompiler -Wall -gpu=cc90 -Isrc/gate -Isrc/parser -Isrc/sim -Isrc/util -Isrc/wave -O3 src/gate/*.cpp src/main/*.cpp src/parser/*.cpp          src/sim/*.cu src/util/*.cpp src/wave/*.cpp -o main 
+nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+bash -c "time -p ( ./main toy/intermediate.file 	toy/NV_NVDLA_partition_o_dc_24x33x55_5x5x55x25_int8_input.vcd 	0 2972036001 	toy-result.saif 1>log.std 2>log.err ) 2> log.time"
+pkill nvidia-smi
+../scripts/m.sh
+min max diff memory in [MB] : 2 778 776

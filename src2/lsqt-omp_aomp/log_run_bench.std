@@ -1,0 +1,5 @@
+../scripts/rocm-smi.sh > log.mem &
+bash -c "tar xf ../lsqt-hip/examples.tar.gz; time -p ( ./lsqt_gpu ../lsqt-hip/examples/input.txt 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 2398.43 2387.44

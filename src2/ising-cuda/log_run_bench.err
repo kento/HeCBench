@@ -1,0 +1,6 @@
+main.cu(154): warning #177-D: variable "write" was declared but never referenced
+    bool write = false;
+         ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+

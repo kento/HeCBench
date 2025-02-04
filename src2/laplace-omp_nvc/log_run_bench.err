@@ -1,0 +1,41 @@
+fill_coeffs(int, int, float, float, float, float, float, float*, float*, float*, float*, float*, float*):
+     54, Invariant if transformation
+         Loop not fused: no successor loop
+     55, Invariant if transformation
+         Loop not fused: no successor loop
+         Loop not vectorized: data dependency
+main:
+          54, Loop not fused: different loop trip count
+          55, Invariant if transformation
+              Loop not fused: no successor loop
+              Loop not vectorized: data dependency
+    156, Loop not fused: function call before adjacent loop
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 8 times
+    167, Recognized memory zero idiom
+    181, Loop not vectorized/parallelized: potential early exits
+    183, #omp target teams distribute parallel for
+        183, Generating "nvkernel_main_F1L183_2" GPU kernel
+        186, Loop parallelized across teams and threads(128), schedule(static)
+    187, Loop not vectorized/parallelized: not countable
+    208, #omp target teams distribute parallel for
+        208, Generating "nvkernel_main_F1L208_4" GPU kernel
+             Loop parallelized across teams and threads(128), schedule(static)
+             Generating reduction(+:norm_L2)
+    208, Generating map(tofrom:norm_L2) 
+         Loop not vectorized/parallelized: not countable
+    210, #omp target teams distribute parallel for
+        210, Generating "nvkernel_main_F1L210_6" GPU kernel
+        213, Loop parallelized across teams and threads(128), schedule(static)
+    214, Loop not vectorized/parallelized: not countable
+    235, #omp target teams distribute parallel for
+        178, Generating map(to:aN[:size],aS[:size],aP[:size],aE[:size],aW[:size],b[:size]) 
+             Generating map(tofrom:temp_red[:size_temp],temp_black[:size_temp]) 
+             Generating map(to:bl_norm_L2[:size_norm]) 
+        235, Generating "nvkernel_main_F1L235_8" GPU kernel
+             Loop parallelized across teams and threads(128), schedule(static)
+             Generating reduction(+:norm_L2)
+    235, Generating map(tofrom:norm_L2) 
+         Loop not vectorized/parallelized: not countable
+    260, Loop not vectorized/parallelized: contains call

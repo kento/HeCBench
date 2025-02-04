@@ -1,0 +1,10 @@
+g++    -c -o lulesh.o lulesh.cc
+g++    -c -o lulesh-viz.o lulesh-viz.cc
+g++    -c -o lulesh-util.o lulesh-util.cc
+g++    -c -o lulesh-init.o lulesh-init.cc
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a lulesh.o lulesh-viz.o lulesh-util.o lulesh-init.o -o lulesh 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./lulesh -i 5 -s 384  -r 11 -b 1 -c 1 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 13032.65 13021.65

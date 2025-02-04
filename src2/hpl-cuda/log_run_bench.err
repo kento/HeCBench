@@ -1,0 +1,14 @@
+"cuda_dgemm.cpp", line 99: warning: incompatible redefinition of macro "_GNU_SOURCE" [bad_macro_redef]
+  #define _GNU_SOURCE
+          ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"cuda_dgemm.cpp", line 147: warning: variable "status" was declared but never referenced [declared_but_not_referenced]
+    int status;
+        ^
+
+"cuda_dgemm.cpp", line 180: warning: variable "status" was declared but never referenced [declared_but_not_referenced]
+    int status;
+        ^
+

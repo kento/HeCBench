@@ -1,0 +1,11 @@
+hipcc  -std=c++14  -Wall  -O3 -c KeccakF.cu -o KeccakF.o
+hipcc  -std=c++14  -Wall  -O3 -c KeccakTreeCPU.cu -o KeccakTreeCPU.o
+hipcc  -std=c++14  -Wall  -O3 -c KeccakTreeGPU.cu -o KeccakTreeGPU.o
+hipcc  -std=c++14  -Wall  -O3 -c Test.cu -o Test.o
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+hipcc  -std=c++14  -Wall  -O3 KeccakF.o KeccakTreeCPU.o KeccakTreeGPU.o Test.o main.o -o keccektree 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./keccektree 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 421.61 410.62

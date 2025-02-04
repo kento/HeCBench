@@ -1,0 +1,128 @@
+main:
+     76, Generating map(from:uiOutput[:szBuffWords]) 
+         Generating map(to:uc4Source[:szBuffWords]) 
+     84, Loop not vectorized/parallelized: contains call
+MedianFilterGPU(uchar4*, unsigned int*, int, int):
+    142, #omp target teams num_teams(iNumTeams) thread_limit(iNumThreads)
+        142, Generating "nvkernel__Z15MedianFilterGPUP6uchar4Pjii_F1L142_2" GPU kernel
+        145, #omp parallel
+          266, Barrier
+        151, Team private (uc4LocalData) located in CUDA shared memory
+    275, Loop not vectorized: data dependency
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     12, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+"shrUtils.cpp", line 86: warning: variable "szNumWritten" was set but never used [set_but_not_used]
+      size_t szNumWritten = 0;
+             ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+shrFillArray:
+     45, Loop not vectorized/parallelized: contains call
+shrPrintArray:
+     56, Loop not vectorized/parallelized: contains call
+shrFindFilePath:
+    560, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrReadFile<float>(char const*, float**, unsigned int*, bool):
+    633, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrReadFile<double>(char const*, double**, unsigned int*, bool):
+    633, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrReadFile<int>(char const*, int**, unsigned int*, bool):
+    633, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrReadFile<unsigned int>(char const*, unsigned int**, unsigned int*, bool):
+    633, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrReadFile<char>(char const*, char**, unsigned int*, bool):
+    633, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrReadFile<unsigned char>(char const*, unsigned char**, unsigned int*, bool):
+    633, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrWriteFile<float>(char const*, float const*, unsigned int, float, bool):
+    709, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrWriteFile<double>(char const*, double const*, unsigned int, double, bool):
+    709, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrWriteFile<int>(char const*, int const*, unsigned int, int, bool):
+    709, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrWriteFile<unsigned int>(char const*, unsigned int const*, unsigned int, unsigned int, bool):
+    709, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrWriteFile<char>(char const*, char const*, unsigned int, char, bool):
+    709, Loop not vectorized/parallelized: potential early exits
+shrBOOL shrWriteFile<unsigned char>(char const*, unsigned char const*, unsigned int, unsigned char, bool):
+    709, Loop not vectorized/parallelized: potential early exits
+loadPPM(char const*, unsigned char**, unsigned int*, unsigned int*, unsigned int*):
+    967, Loop not vectorized/parallelized: potential early exits
+savePPM(char const*, unsigned char*, unsigned int, unsigned int, unsigned int):
+   1074, Loop not vectorized/parallelized: potential early exits
+shrLoadPPM4ub:
+   1121, Loop not vectorized: data dependency
+         Loop unrolled 4 times
+shrSavePPM4ub:
+   1156, Loop not vectorized: data dependency
+         Loop unrolled 4 times
+shrComparef:
+        1214, Loop not vectorized: unknown
+shrBOOL compareData<float, float>(float const*, float const*, unsigned int, float, float):
+   1214, Loop not fused: complex flow graph
+         Loop not vectorized: unknown
+shrComparei:
+        1214, Loop not vectorized: unknown
+shrBOOL compareData<int, int>(int const*, int const*, unsigned int, int, float):
+   1214, Loop not fused: complex flow graph
+         Loop not vectorized: unknown
+shrCompareuit:
+        1302, Loop not fused: complex flow graph
+shrBOOL compareDataAsFloatThreshold<unsigned int, float>(unsigned int const*, unsigned int const*, unsigned int, float, float):
+   1302, Loop not fused: complex flow graph
+shrCompareub:
+        1214, Loop not vectorized: unknown
+shrBOOL compareData<unsigned char, int>(unsigned char const*, unsigned char const*, unsigned int, int, float):
+   1214, Loop not fused: complex flow graph
+         Loop not vectorized: unknown
+shrCompareubt:
+        1302, Loop not fused: complex flow graph
+shrBOOL compareDataAsFloatThreshold<unsigned char, float>(unsigned char const*, unsigned char const*, unsigned int, float, float):
+   1302, Loop not fused: complex flow graph
+shrComparefe:
+        1214, Loop not vectorized: unknown
+shrComparefet:
+        1302, Loop not fused: complex flow graph
+shrBOOL compareDataAsFloatThreshold<float, float>(float const*, float const*, unsigned int, float, float):
+   1302, Loop not fused: complex flow graph
+shrCompareL2fe:
+   1460, Generated vector simd code for the loop containing reductions
+shrComparePPM:
+        1121, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+              Loop unrolled 4 times
+        1121, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+              Loop unrolled 4 times
+        1398, Loop not fused: complex flow graph
+shrComparePGM:
+        1121, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+              Loop unrolled 4 times
+        1121, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+              Loop unrolled 4 times
+        1398, Loop not fused: complex flow graph
+_INTERNAL_12_shrUtils_cpp_shrFree::shrLogV(int, int, char const*, __va_list_tag):
+    255, Loop not vectorized/parallelized: potential early exits
+"MedianFilterHost.cpp", line 52: warning: pointless comparison of unsigned integer with zero [unsigned_compare_with_zero]
+            if ((x > 0) && ((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                                       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"MedianFilterHost.cpp", line 67: warning: pointless comparison of unsigned integer with zero [unsigned_compare_with_zero]
+            if (((y + iRow) >= 0) && ((y + iRow) < uiHeight)) 
+                            ^
+
+"MedianFilterHost.cpp", line 82: warning: pointless comparison of unsigned integer with zero [unsigned_compare_with_zero]
+            if ((x < (uiWidth - 1)) && ((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                                                   ^
+
+MedianFilterHost:
+     28, Loop not vectorized/parallelized: too deeply nested
+     46, Loop not fused: complex flow graph
+         Loop not vectorized/parallelized: loop count too small
+bunzip2: Can't open input file ../medianfilter-cuda/data.tar.bz2: No such file or directory.

@@ -1,0 +1,8 @@
+clang++   -I../mcmd-cuda           -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__           -DGPU -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ../mcmd-cuda/main.cpp -o main.o
+clang++   -I../mcmd-cuda           -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__           -DGPU -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c force_kernel.cpp -o force_kernel.o
+clang++   -I../mcmd-cuda           -D_MWAITXINTRIN_H_INCLUDED -D_FORCE_INLINES -D__STRICT_ANSI__           -DGPU -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o force_kernel.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "cd dataset; time -p ( ../main mcmd.inp 1> ../log.std 2> ../log.err ) 2> ../log.time; cd .."
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 894.69 883.69

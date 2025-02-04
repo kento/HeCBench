@@ -1,0 +1,1 @@
+hipcc -O3 -std=c++11   -DDEBUG -c vector.cu -o obj_gpu/vector.o

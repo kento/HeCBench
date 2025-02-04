@@ -1,0 +1,7 @@
+In file included from main.cu:10:
+./common.h:6:10: fatal error: 'cooperative_groups/reduce.h' file not found
+    6 | #include <cooperative_groups/reduce.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:55: main.o] Error 1

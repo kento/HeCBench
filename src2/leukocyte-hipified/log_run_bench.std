@@ -1,0 +1,85 @@
+hipcc   -std=c++14  -Wall  -I./meschach_lib -x hip -O3 detect_main.c -c
+hipcc   -std=c++14  -Wall  -I./meschach_lib -x hip -O3 avilib.c -c
+hipcc   -std=c++14  -Wall  -I./meschach_lib -x hip -O3 track_ellipse.c -c
+hipcc   -std=c++14  -Wall  -I./meschach_lib -x hip -O3 track_ellipse_gpu.c -c
+hipcc   -std=c++14  -Wall  -I./meschach_lib -x hip -O3 find_ellipse.c -c
+hipcc   -std=c++14  -Wall  -I./meschach_lib -x hip -O3 misc_math.c -c
+hipcc   -std=c++14  -Wall  -I./meschach_lib -x hip -O3 helper.c -c
+cd ./meschach_lib; make cleanup; make all CC=hipcc; make clean
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-hipified/meschach_lib'
+/bin/rm -f *.o core asx5213a.mat iotort.dat *.a 
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-hipified/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-hipified/meschach_lib'
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C copy.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C err.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C matrixio.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C memory.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C vecop.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C matop.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C pxop.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C submat.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C init.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C otherio.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C machine.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C matlab.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C ivecop.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C version.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C meminfo.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C memstat.c
+ar ru meschach.a copy.o err.o matrixio.o memory.o vecop.o matop.o pxop.o submat.o init.o otherio.o machine.o matlab.o ivecop.o version.o meminfo.o memstat.o; ranlib meschach.a
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C lufactor.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C bkpfacto.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C chfactor.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C qrfactor.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C solve.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C hsehldr.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C givens.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C update.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C norm.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C hessen.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C symmeig.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C schur.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C svd.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C fft.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C mfunc.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C bdfactor.c
+ar ru meschach.a lufactor.o bkpfacto.o chfactor.o qrfactor.o solve.o hsehldr.o givens.o update.o norm.o hessen.o symmeig.o schur.o svd.o fft.o mfunc.o bdfactor.o; ranlib meschach.a
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C sparse.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C sprow.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C sparseio.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C spchfctr.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C splufctr.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C spbkp.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C spswap.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C iter0.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C itersym.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C iternsym.c
+ar ru meschach.a sparse.o sprow.o sparseio.o spchfctr.o splufctr.o spbkp.o spswap.o iter0.o itersym.o iternsym.o; ranlib meschach.a
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zmachine.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zcopy.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zmatio.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zmemory.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zvecop.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zmatop.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C znorm.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zfunc.c
+ar ru meschach.a zmachine.o zcopy.o zmatio.o zmemory.o zvecop.o zmatop.o znorm.o zfunc.o ; ranlib meschach.a
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zlufctr.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zsolve.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zmatlab.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zhsehldr.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zqrfctr.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zgivens.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zhessen.c
+hipcc -c -O3 -x hip -DHAVE_CONFIG_H -DANSI_C zschur.c
+ar ru meschach.a zlufctr.o zsolve.o zmatlab.o zhsehldr.o zqrfctr.o zgivens.o  zhessen.o zschur.o; ranlib meschach.a
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-hipified/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-hipified/meschach_lib'
+/bin/rm -f *.o core asx5213a.mat iotort.dat 
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-hipified/meschach_lib'
+hipcc  -o leukocyte avilib.o 		track_ellipse.o 		track_ellipse_gpu.o 		find_ellipse.o 		misc_math.o 		detect_main.o 		helper.o 		./meschach_lib/meschach.a -lm
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../leukocyte-cuda/prepare_data.sh; time -p ( ./leukocyte ../data/leukocyte/testfile.avi 100 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 287.40 276.41

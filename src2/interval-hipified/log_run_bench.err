@@ -1,0 +1,10 @@
+In file included from main.cu:42:
+./cpu_interval.h:239:33: warning: unused typedef 'T' [-Wunused-local-typedef]
+  239 |   typedef typename I::base_type T;
+      |                                 ^
+1 warning generated when compiling for gfx90a.
+In file included from main.cu:42:
+./cpu_interval.h:239:33: warning: unused typedef 'T' [-Wunused-local-typedef]
+  239 |   typedef typename I::base_type T;
+      |                                 ^
+1 warning generated when compiling for host.

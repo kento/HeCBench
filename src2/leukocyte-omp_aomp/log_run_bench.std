@@ -1,0 +1,85 @@
+clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a detect_main.c -c
+clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a avilib.c -c
+clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a track_ellipse.c -c
+clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a track_ellipse_gpu.c -c
+clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a find_ellipse.c -c
+clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a misc_math.c -c
+clang++    -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a helper.c -c
+cd ./meschach_lib; make cleanup; make all CC=clang++; make clean
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-omp_aomp/meschach_lib'
+/bin/rm -f *.o core asx5213a.mat iotort.dat *.a 
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-omp_aomp/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-omp_aomp/meschach_lib'
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C copy.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C err.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C matrixio.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C memory.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C vecop.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C matop.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C pxop.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C submat.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C init.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C otherio.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C machine.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C matlab.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C ivecop.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C version.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C meminfo.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C memstat.c
+ar ru meschach.a copy.o err.o matrixio.o memory.o vecop.o matop.o pxop.o submat.o init.o otherio.o machine.o matlab.o ivecop.o version.o meminfo.o memstat.o; ranlib meschach.a
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C lufactor.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C bkpfacto.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C chfactor.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C qrfactor.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C solve.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C hsehldr.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C givens.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C update.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C norm.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C hessen.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C symmeig.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C schur.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C svd.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C fft.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C mfunc.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C bdfactor.c
+ar ru meschach.a lufactor.o bkpfacto.o chfactor.o qrfactor.o solve.o hsehldr.o givens.o update.o norm.o hessen.o symmeig.o schur.o svd.o fft.o mfunc.o bdfactor.o; ranlib meschach.a
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C sparse.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C sprow.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C sparseio.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C spchfctr.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C splufctr.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C spbkp.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C spswap.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C iter0.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C itersym.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C iternsym.c
+ar ru meschach.a sparse.o sprow.o sparseio.o spchfctr.o splufctr.o spbkp.o spswap.o iter0.o itersym.o iternsym.o; ranlib meschach.a
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zmachine.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zcopy.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zmatio.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zmemory.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zvecop.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zmatop.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C znorm.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zfunc.c
+ar ru meschach.a zmachine.o zcopy.o zmatio.o zmemory.o zvecop.o zmatop.o znorm.o zfunc.o ; ranlib meschach.a
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zlufctr.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zsolve.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zmatlab.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zhsehldr.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zqrfctr.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zgivens.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zhessen.c
+clang++ -c -O3 -DHAVE_CONFIG_H -DANSI_C zschur.c
+ar ru meschach.a zlufctr.o zsolve.o zmatlab.o zhsehldr.o zqrfctr.o zgivens.o  zhessen.o zschur.o; ranlib meschach.a
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-omp_aomp/meschach_lib'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-omp_aomp/meschach_lib'
+/bin/rm -f *.o core asx5213a.mat iotort.dat 
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work7/src2/leukocyte-omp_aomp/meschach_lib'
+clang++   -Wall -I./meschach_lib -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -o leukocyte avilib.o 		track_ellipse.o 		track_ellipse_gpu.o 		find_ellipse.o 		misc_math.o 		detect_main.o 		helper.o 		./meschach_lib/meschach.a -lm
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../leukocyte-cuda/prepare_data.sh; time -p ( ./leukocyte ../data/leukocyte/testfile.avi 100 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 894.77 883.78

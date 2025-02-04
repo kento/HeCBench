@@ -1,0 +1,8 @@
+hipcc   -std=c++14  -Wall  -Wno-unused-result -I/opt/rocm/include/hipblas -O3 -c main.cpp -o main.o
+hipcc   -std=c++14  -Wall  -Wno-unused-result -I/opt/rocm/include/hipblas -O3 -c svm.cpp -o svm.o
+hipcc   -std=c++14  -Wall  -Wno-unused-result -I/opt/rocm/include/hipblas -O3 main.o svm.o -o main -lhipblas 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "bunzip2 ../kmc-cuda/gisette_scale.bz2; time -p ( ./main -v 10 ../kmc-cuda/gisette_scale 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 445.91 434.92

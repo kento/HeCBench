@@ -1,0 +1,17 @@
+main.cu:102:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+  102 |     err += __shfl_down_sync(0xffffffff, err, offset);
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:122:14: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+  122 |       err += __shfl_down_sync(0xffffffff, err, offset);
+      |              ^~~~~~~~~~~~~~~~
+      |              __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:52: main.o] Error 1

@@ -1,0 +1,1 @@
+hipcc  -std=c++17  -Wall  -O3   -c aig_manager.cu -o aig_manager.o

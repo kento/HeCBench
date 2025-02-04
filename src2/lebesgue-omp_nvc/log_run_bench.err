@@ -1,0 +1,69 @@
+test01(int):
+     32, Loop not vectorized/parallelized: potential early exits
+test02(int):
+     81, Loop not vectorized/parallelized: potential early exits
+test03(int):
+    130, Loop not vectorized/parallelized: potential early exits
+test04(int):
+    179, Loop not vectorized/parallelized: potential early exits
+test05(int):
+    228, Loop not vectorized/parallelized: potential early exits
+test06(int):
+    277, Loop not vectorized/parallelized: potential early exits
+test07(int):
+    326, Loop not vectorized/parallelized: potential early exits
+test08(int):
+    375, Loop not vectorized/parallelized: potential early exits
+test09(int):
+    424, Loop not vectorized/parallelized: potential early exits
+main:
+          32, Loop not vectorized/parallelized: potential early exits
+          81, Loop not vectorized/parallelized: potential early exits
+         130, Loop not vectorized/parallelized: potential early exits
+         179, Loop not vectorized/parallelized: potential early exits
+         228, Loop not vectorized/parallelized: potential early exits
+         277, Loop not vectorized/parallelized: potential early exits
+         326, Loop not vectorized/parallelized: potential early exits
+         375, Loop not vectorized/parallelized: potential early exits
+         424, Loop not vectorized/parallelized: potential early exits
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      5, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+chebyshev1(int):
+     17, Generated vector simd code for the loop
+chebyshev2(int):
+     41, Generated vector simd code for the loop
+chebyshev3(int):
+     61, Generated vector simd code for the loop
+chebyshev4(int):
+     81, Generated vector simd code for the loop
+equidistant1(int):
+     99, Generated vector simd code for the loop
+equidistant2(int):
+    121, Generated vector simd code for the loop
+equidistant3(int):
+    138, Generated vector simd code for the loop
+fejer1(int):
+    156, Generated vector simd code for the loop
+fejer2(int):
+    175, Generated vector simd code for the loop
+r8vec_linspace_new(int, double, double):
+    240, Generated vector simd code for the loop
+r8vec_print(int, double*, char const*):
+    257, Loop not vectorized/parallelized: contains call
+lebesgue_function(int, double*, int, double*):
+     16, #omp target teams distribute parallel for thread_limit(256)
+         14, Generating map(alloc:linterp[:nfun*n]) 
+             Generating map(tofrom:lmax) 
+             Generating map(to:xfun[:nfun],x[:n]) 
+         16, Generating "nvkernel__Z17lebesgue_functioniPdiS__F1L16_2" GPU kernel
+             Loop parallelized across teams and threads(128), schedule(static)
+             Generating reduction(max:lmax)
+     16, Generating map(tofrom:lmax) 
+         Loop not vectorized/parallelized: not countable
+     17, Loop not vectorized: unprofitable for target
+         Loop unrolled 4 times
+     20, Zero trip check eliminated
+         Loop not vectorized: data dependency
+     25, Generated vector simd code for the loop containing reductions
+     29, Loop not vectorized/parallelized: not countable

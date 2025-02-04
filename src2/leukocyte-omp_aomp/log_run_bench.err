@@ -1,0 +1,1775 @@
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+err.c:62:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   62 | {         "unknown error",                          /* 0 */
+      |           ^
+err.c:63:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   63 |           "sizes of objects don't match",           /* 1 */
+      |           ^
+err.c:64:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   64 |           "index out of bounds",                    /* 2 */
+      |           ^
+err.c:65:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   65 |           "can't allocate memory",                  /* 3 */
+      |           ^
+err.c:66:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   66 |           "singular matrix",                        /* 4 */
+      |           ^
+err.c:67:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   67 |           "matrix not positive definite",           /* 5 */
+      |           ^
+err.c:68:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   68 |           "incorrect format input",                 /* 6 */
+      |           ^
+err.c:69:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   69 |           "bad input file/device",                  /* 7 */
+      |           ^
+err.c:70:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   70 |           "NULL objects passed",                    /* 8 */
+      |           ^
+err.c:71:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   71 |           "matrix not square",                      /* 9 */
+      |           ^
+err.c:72:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   72 |           "object out of range",                    /* 10 */
+      |           ^
+err.c:73:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   73 |           "can't do operation in situ for non-square matrix",   /* 11 */
+      |           ^
+err.c:74:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   74 |           "can't do operation in situ",             /* 12 */
+      |           ^
+err.c:75:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   75 |           "excessive number of iterations",         /* 13 */
+      |           ^
+err.c:76:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   76 |           "convergence criterion failed",           /* 14 */
+      |           ^
+err.c:77:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   77 |           "bad starting value",                     /* 15 */
+      |           ^
+err.c:78:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   78 |           "floating exception",                     /* 16 */
+      |           ^
+err.c:79:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   79 |           "internal inconsistency (data structure)",/* 17 */
+      |           ^
+err.c:80:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   80 |           "unexpected end-of-file",                 /* 18 */
+      |           ^
+err.c:81:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   81 |           "shared vectors (cannot release them)",   /* 19 */  
+      |           ^
+err.c:82:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   82 |           "negative argument",                      /* 20 */
+      |           ^
+err.c:83:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   83 |           "cannot overwrite object",                /* 21 */
+      |           ^
+err.c:84:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   84 |           "breakdown in iterative method"           /* 22 */
+      |           ^
+err.c:90:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   90 |    "unknown warning",                             /* 0 */
+      |    ^
+err.c:91:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   91 |    "wrong type number (use macro TYPE_*)",        /* 1 */
+      |    ^
+err.c:92:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   92 |    "no corresponding mem_stat_mark",              /* 2 */
+      |    ^
+err.c:93:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   93 |    "computed norm of a residual is less than 0",  /* 3 */
+      |    ^
+err.c:94:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   94 |    "resizing a shared vector"                     /* 4 */
+      |    ^
+28 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+memory.c:556:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  556 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~
+memory.c:556:15: note: place parentheses around the assignment to silence this warning
+  556 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |               ^                  
+      |           (                      )
+memory.c:556:15: note: use '==' to turn this assignment into an equality comparison
+  556 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:573:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  573 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+memory.c:573:15: note: place parentheses around the assignment to silence this warning
+  573 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+memory.c:573:15: note: use '==' to turn this assignment into an equality comparison
+  573 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:589:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  589 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~
+memory.c:589:15: note: place parentheses around the assignment to silence this warning
+  589 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |               ^                  
+      |           (                      )
+memory.c:589:15: note: use '==' to turn this assignment into an equality comparison
+  589 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:605:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  605 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+memory.c:605:15: note: place parentheses around the assignment to silence this warning
+  605 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+memory.c:605:15: note: use '==' to turn this assignment into an equality comparison
+  605 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:637:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  637 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~
+memory.c:637:15: note: place parentheses around the assignment to silence this warning
+  637 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |               ^                  
+      |           (                      )
+memory.c:637:15: note: use '==' to turn this assignment into an equality comparison
+  637 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:655:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  655 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+memory.c:655:15: note: place parentheses around the assignment to silence this warning
+  655 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+memory.c:655:15: note: use '==' to turn this assignment into an equality comparison
+  655 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:671:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  671 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~
+memory.c:671:15: note: place parentheses around the assignment to silence this warning
+  671 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |               ^                  
+      |           (                      )
+memory.c:671:15: note: use '==' to turn this assignment into an equality comparison
+  671 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:688:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  688 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+memory.c:688:15: note: place parentheses around the assignment to silence this warning
+  688 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+memory.c:688:15: note: use '==' to turn this assignment into an equality comparison
+  688 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:719:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  719 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~
+memory.c:719:15: note: place parentheses around the assignment to silence this warning
+  719 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |               ^                  
+      |           (                      )
+memory.c:719:15: note: use '==' to turn this assignment into an equality comparison
+  719 |    while (par = va_arg(ap,VEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:739:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  739 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+memory.c:739:15: note: place parentheses around the assignment to silence this warning
+  739 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+memory.c:739:15: note: use '==' to turn this assignment into an equality comparison
+  739 |    while (par = va_arg(ap,IVEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:759:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  759 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+memory.c:759:15: note: place parentheses around the assignment to silence this warning
+  759 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+memory.c:759:15: note: use '==' to turn this assignment into an equality comparison
+  759 |    while (par = va_arg(ap,PERM **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+memory.c:778:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  778 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~
+memory.c:778:15: note: place parentheses around the assignment to silence this warning
+  778 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |               ^                  
+      |           (                      )
+memory.c:778:15: note: use '==' to turn this assignment into an equality comparison
+  778 |    while (par = va_arg(ap,MAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+12 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+vecop.c:315:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  315 |    while (par = va_arg(ap,VEC *)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~
+vecop.c:315:15: note: place parentheses around the assignment to silence this warning
+  315 |    while (par = va_arg(ap,VEC *)) {   /* NULL ends the list*/
+      |               ^                 
+      |           (                     )
+vecop.c:315:15: note: use '==' to turn this assignment into an equality comparison
+  315 |    while (par = va_arg(ap,VEC *)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+machine.c:34:22: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   34 | static  char    *rcsid = "$Id: machine.c,v 1.4 1994/01/13 05:28:56 des Exp $";
+      |                          ^
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+meminfo.c:53:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   53 |    "MAT",
+      |    ^
+meminfo.c:54:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   54 |    "BAND",
+      |    ^
+meminfo.c:55:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   55 |    "PERM",
+      |    ^
+meminfo.c:56:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   56 |    "VEC",
+      |    ^
+meminfo.c:57:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   57 |    "IVEC"
+      |    ^
+meminfo.c:59:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   59 |      ,"ITER",
+      |       ^
+meminfo.c:60:6: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   60 |      "SPROW",
+      |      ^
+meminfo.c:61:6: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   61 |      "SPMAT"
+      |      ^
+meminfo.c:64:9: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   64 |        ,"ZVEC",
+      |         ^
+meminfo.c:65:8: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   65 |        "ZMAT"
+      |        ^
+10 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+memstat.c:379:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  379 |    while (par = va_arg(ap,void **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+memstat.c:379:15: note: place parentheses around the assignment to silence this warning
+  379 |    while (par = va_arg(ap,void **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+memstat.c:379:15: note: use '==' to turn this assignment into an equality comparison
+  379 |    while (par = va_arg(ap,void **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+1 warning generated.
+ar: creating meschach.a
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+lufactor.c:65:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   65 |         MEM_STAT_REG(scale,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:274:1: note: expanded from here
+  274 | "lufactor.c"
+      | ^
+lufactor.c:218:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  218 |         MEM_STAT_REG(A_cp,TYPE_MAT);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "lufactor.c"
+      | ^
+lufactor.c:219:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  219 |         MEM_STAT_REG(tmp, TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:290:1: note: expanded from here
+  290 | "lufactor.c"
+      | ^
+lufactor.c:220:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  220 |         MEM_STAT_REG(tmp2,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:292:1: note: expanded from here
+  292 | "lufactor.c"
+      | ^
+lufactor.c:221:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  221 |         MEM_STAT_REG(pivot,TYPE_PERM);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:294:1: note: expanded from here
+  294 | "lufactor.c"
+      | ^
+lufactor.c:265:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  265 |     MEM_STAT_REG(y,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:306:1: note: expanded from here
+  306 | "lufactor.c"
+      | ^
+lufactor.c:266:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  266 |     MEM_STAT_REG(z,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:308:1: note: expanded from here
+  308 | "lufactor.c"
+      | ^
+7 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+bkpfacto.c:253:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  253 |         MEM_STAT_REG(tmp,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:282:1: note: expanded from here
+  282 | "bkpfacto.c"
+      | ^
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+chfactor.c:132:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  132 |         MEM_STAT_REG(r,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:284:1: note: expanded from here
+  284 | "chfactor.c"
+      | ^
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+qrfactor.c:83:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   83 |     MEM_STAT_REG(hh,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:274:1: note: expanded from here
+  274 | "qrfactor.c"
+      | ^
+qrfactor.c:84:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   84 |     MEM_STAT_REG(w, TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:276:1: note: expanded from here
+  276 | "qrfactor.c"
+      | ^
+qrfactor.c:132:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  132 |     MEM_STAT_REG(tmp1,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:282:1: note: expanded from here
+  282 | "qrfactor.c"
+      | ^
+qrfactor.c:133:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  133 |     MEM_STAT_REG(tmp2,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:284:1: note: expanded from here
+  284 | "qrfactor.c"
+      | ^
+qrfactor.c:134:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  134 |     MEM_STAT_REG(gamma,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:286:1: note: expanded from here
+  286 | "qrfactor.c"
+      | ^
+qrfactor.c:135:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  135 |     MEM_STAT_REG(w,   TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "qrfactor.c"
+      | ^
+qrfactor.c:269:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  269 |     MEM_STAT_REG(tmp1,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:298:1: note: expanded from here
+  298 | "qrfactor.c"
+      | ^
+qrfactor.c:270:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  270 |     MEM_STAT_REG(tmp2,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:300:1: note: expanded from here
+  300 | "qrfactor.c"
+      | ^
+qrfactor.c:343:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  343 |     MEM_STAT_REG(tmp,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:308:1: note: expanded from here
+  308 | "qrfactor.c"
+      | ^
+qrfactor.c:378:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  378 |     MEM_STAT_REG(tmp,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:314:1: note: expanded from here
+  314 | "qrfactor.c"
+      | ^
+qrfactor.c:528:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  528 |     MEM_STAT_REG(y,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:330:1: note: expanded from here
+  330 | "qrfactor.c"
+      | ^
+11 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+hsehldr.c:190:3: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  190 |   MEM_STAT_REG(w,TYPE_VEC);
+      |   ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "hsehldr.c"
+      | ^
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+hessen.c:65:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   65 |         MEM_STAT_REG(hh,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:114:1: note: expanded from here
+  114 | "hessen.c"
+      | ^
+hessen.c:66:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   66 |         MEM_STAT_REG(w, TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:116:1: note: expanded from here
+  116 | "hessen.c"
+      | ^
+hessen.c:117:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  117 |         MEM_STAT_REG(tmp1,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:124:1: note: expanded from here
+  124 | "hessen.c"
+      | ^
+hessen.c:118:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  118 |         MEM_STAT_REG(tmp2,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:126:1: note: expanded from here
+  126 | "hessen.c"
+      | ^
+4 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+symmeig.c:201:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  201 |         MEM_STAT_REG(tmp,TYPE_MAT);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:280:1: note: expanded from here
+  280 | "symmeig.c"
+      | ^
+symmeig.c:202:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  202 |         MEM_STAT_REG(b,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:282:1: note: expanded from here
+  282 | "symmeig.c"
+      | ^
+symmeig.c:203:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  203 |         MEM_STAT_REG(diag,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:284:1: note: expanded from here
+  284 | "symmeig.c"
+      | ^
+symmeig.c:204:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  204 |         MEM_STAT_REG(beta,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:286:1: note: expanded from here
+  286 | "symmeig.c"
+      | ^
+4 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+schur.c:176:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  176 |     MEM_STAT_REG(diag,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:280:1: note: expanded from here
+  280 | "schur.c"
+      | ^
+schur.c:177:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  177 |     MEM_STAT_REG(beta,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:282:1: note: expanded from here
+  282 | "schur.c"
+      | ^
+schur.c:533:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  533 |         MEM_STAT_REG(tmp1_re,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:298:1: note: expanded from here
+  298 | "schur.c"
+      | ^
+schur.c:534:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  534 |         MEM_STAT_REG(tmp1_im,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:300:1: note: expanded from here
+  300 | "schur.c"
+      | ^
+schur.c:535:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  535 |         MEM_STAT_REG(tmp2_re,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:302:1: note: expanded from here
+  302 | "schur.c"
+      | ^
+schur.c:536:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  536 |         MEM_STAT_REG(tmp2_im,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:304:1: note: expanded from here
+  304 | "schur.c"
+      | ^
+6 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+svd.c:328:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  328 |         MEM_STAT_REG(tmp1,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:284:1: note: expanded from here
+  284 | "svd.c"
+      | ^
+svd.c:329:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  329 |         MEM_STAT_REG(tmp2,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:286:1: note: expanded from here
+  286 | "svd.c"
+      | ^
+svd.c:330:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  330 |         MEM_STAT_REG(w,   TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "svd.c"
+      | ^
+svd.c:402:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  402 |         MEM_STAT_REG(f,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:296:1: note: expanded from here
+  296 | "svd.c"
+      | ^
+4 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+mfunc.c:118:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  118 |    MEM_STAT_REG(wkspace,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:280:1: note: expanded from here
+  280 | "mfunc.c"
+      | ^
+mfunc.c:122:8: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  122 |        MEM_STAT_REG(tmp,TYPE_MAT);
+      |        ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:282:1: note: expanded from here
+  282 | "mfunc.c"
+      | ^
+mfunc.c:178:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  178 |    MEM_STAT_REG(N,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:294:1: note: expanded from here
+  294 | "mfunc.c"
+      | ^
+mfunc.c:179:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  179 |    MEM_STAT_REG(D,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:296:1: note: expanded from here
+  296 | "mfunc.c"
+      | ^
+mfunc.c:180:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  180 |    MEM_STAT_REG(Apow,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:298:1: note: expanded from here
+  298 | "mfunc.c"
+      | ^
+mfunc.c:209:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  209 |    MEM_STAT_REG(c1,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:300:1: note: expanded from here
+  300 | "mfunc.c"
+      | ^
+mfunc.c:215:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  215 |    MEM_STAT_REG(tmp,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:302:1: note: expanded from here
+  302 | "mfunc.c"
+      | ^
+mfunc.c:223:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  223 |    MEM_STAT_REG(Y,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:304:1: note: expanded from here
+  304 | "mfunc.c"
+      | ^
+mfunc.c:272:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  272 |    MEM_STAT_REG(pivot,TYPE_PERM);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:306:1: note: expanded from here
+  306 | "mfunc.c"
+      | ^
+mfunc.c:360:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  360 |    MEM_STAT_REG(Apow,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:314:1: note: expanded from here
+  314 | "mfunc.c"
+      | ^
+mfunc.c:362:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  362 |    MEM_STAT_REG(tmp,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:316:1: note: expanded from here
+  316 | "mfunc.c"
+      | ^
+mfunc.c:384:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  384 |    MEM_STAT_REG(Y,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:318:1: note: expanded from here
+  318 | "mfunc.c"
+      | ^
+12 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+sparse.c:534:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  534 |       MEM_STAT_REG(tmp,TYPE_SPROW);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:324:1: note: expanded from here
+  324 | "sparse.c"
+      | ^
+sparse.c:589:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  589 |       MEM_STAT_REG(tmp,TYPE_SPROW);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:332:1: note: expanded from here
+  332 | "sparse.c"
+      | ^
+sparse.c:645:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  645 |       MEM_STAT_REG(tmp,TYPE_SPROW);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:340:1: note: expanded from here
+  340 | "sparse.c"
+      | ^
+sparse.c:745:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  745 |       MEM_STAT_REG(scratch,TYPE_SPROW);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:350:1: note: expanded from here
+  350 | "sparse.c"
+      | ^
+sparse.c:996:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  996 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~~
+sparse.c:996:15: note: place parentheses around the assignment to silence this warning
+  996 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |               ^                    
+      |           (                        )
+sparse.c:996:15: note: use '==' to turn this assignment into an equality comparison
+  996 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+sparse.c:1026:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 1026 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~~
+sparse.c:1026:15: note: place parentheses around the assignment to silence this warning
+ 1026 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |               ^                    
+      |           (                        )
+sparse.c:1026:15: note: use '==' to turn this assignment into an equality comparison
+ 1026 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+sparse.c:1055:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 1055 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~~
+sparse.c:1055:15: note: place parentheses around the assignment to silence this warning
+ 1055 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |               ^                    
+      |           (                        )
+sparse.c:1055:15: note: use '==' to turn this assignment into an equality comparison
+ 1055 |    while (par = va_arg(ap,SPMAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+7 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+splufctr.c:71:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   71 |         MEM_STAT_REG(col_vals,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:274:1: note: expanded from here
+  274 | "splufctr.c"
+      | ^
+splufctr.c:81:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   81 |            MEM_STAT_REG(merge,TYPE_SPROW);
+      |            ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:276:1: note: expanded from here
+  276 | "splufctr.c"
+      | ^
+splufctr.c:249:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  249 |         MEM_STAT_REG(tmp,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "splufctr.c"
+      | ^
+3 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+spbkp.c:647:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  647 |     MEM_STAT_REG(deg_list,TYPE_IVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:324:1: note: expanded from here
+  324 | "spbkp.c"
+      | ^
+spbkp.c:648:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  648 |     MEM_STAT_REG(order,TYPE_PERM);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:326:1: note: expanded from here
+  326 | "spbkp.c"
+      | ^
+spbkp.c:656:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  656 |     MEM_STAT_REG(scan_row,TYPE_IVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:328:1: note: expanded from here
+  328 | "spbkp.c"
+      | ^
+spbkp.c:657:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  657 |     MEM_STAT_REG(scan_idx,TYPE_IVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:330:1: note: expanded from here
+  330 | "spbkp.c"
+      | ^
+spbkp.c:658:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  658 |     MEM_STAT_REG(col_list,TYPE_IVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:332:1: note: expanded from here
+  332 | "spbkp.c"
+      | ^
+spbkp.c:659:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  659 |     MEM_STAT_REG(orig_idx,TYPE_IVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:334:1: note: expanded from here
+  334 | "spbkp.c"
+      | ^
+spbkp.c:660:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  660 |     MEM_STAT_REG(orig1_idx,TYPE_IVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:336:1: note: expanded from here
+  336 | "spbkp.c"
+      | ^
+spbkp.c:661:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  661 |     MEM_STAT_REG(tmp_iv,TYPE_IVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:338:1: note: expanded from here
+  338 | "spbkp.c"
+      | ^
+spbkp.c:1332:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1332 |     MEM_STAT_REG(tmp,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:376:1: note: expanded from here
+  376 | "spbkp.c"
+      | ^
+9 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+itersym.c:126:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  126 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:278:1: note: expanded from here
+  278 | "itersym.c"
+      | ^
+itersym.c:127:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  127 |    MEM_STAT_REG(p,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:280:1: note: expanded from here
+  280 | "itersym.c"
+      | ^
+itersym.c:128:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  128 |    MEM_STAT_REG(q,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:282:1: note: expanded from here
+  282 | "itersym.c"
+      | ^
+itersym.c:132:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  132 |       MEM_STAT_REG(z,TYPE_VEC);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:284:1: note: expanded from here
+  284 | "itersym.c"
+      | ^
+itersym.c:223:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  223 |    MEM_STAT_REG(v,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:298:1: note: expanded from here
+  298 | "itersym.c"
+      | ^
+itersym.c:224:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  224 |    MEM_STAT_REG(w,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:300:1: note: expanded from here
+  300 | "itersym.c"
+      | ^
+itersym.c:225:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  225 |    MEM_STAT_REG(tmp,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:302:1: note: expanded from here
+  302 | "itersym.c"
+      | ^
+itersym.c:442:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  442 |    MEM_STAT_REG(b,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:316:1: note: expanded from here
+  316 | "itersym.c"
+      | ^
+itersym.c:458:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  458 |    MEM_STAT_REG(a2,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:318:1: note: expanded from here
+  318 | "itersym.c"
+      | ^
+itersym.c:459:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  459 |    MEM_STAT_REG(b2,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:320:1: note: expanded from here
+  320 | "itersym.c"
+      | ^
+itersym.c:580:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  580 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:330:1: note: expanded from here
+  330 | "itersym.c"
+      | ^
+itersym.c:581:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  581 |    MEM_STAT_REG(p,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:332:1: note: expanded from here
+  332 | "itersym.c"
+      | ^
+itersym.c:582:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  582 |    MEM_STAT_REG(q,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:334:1: note: expanded from here
+  334 | "itersym.c"
+      | ^
+itersym.c:586:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  586 |       MEM_STAT_REG(z,TYPE_VEC);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:336:1: note: expanded from here
+  336 | "itersym.c"
+      | ^
+14 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+iternsym.c:87:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   87 |    MEM_STAT_REG(p,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:280:1: note: expanded from here
+  280 | "iternsym.c"
+      | ^
+iternsym.c:88:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   88 |    MEM_STAT_REG(q,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:282:1: note: expanded from here
+  282 | "iternsym.c"
+      | ^
+iternsym.c:89:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   89 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:284:1: note: expanded from here
+  284 | "iternsym.c"
+      | ^
+iternsym.c:90:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   90 |    MEM_STAT_REG(u,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:286:1: note: expanded from here
+  286 | "iternsym.c"
+      | ^
+iternsym.c:91:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   91 |    MEM_STAT_REG(v,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "iternsym.c"
+      | ^
+iternsym.c:95:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   95 |       MEM_STAT_REG(z,TYPE_VEC); 
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:290:1: note: expanded from here
+  290 | "iternsym.c"
+      | ^
+iternsym.c:259:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  259 |    MEM_STAT_REG(u,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:304:1: note: expanded from here
+  304 | "iternsym.c"
+      | ^
+iternsym.c:260:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  260 |    MEM_STAT_REG(v,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:306:1: note: expanded from here
+  306 | "iternsym.c"
+      | ^
+iternsym.c:261:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  261 |    MEM_STAT_REG(w,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:308:1: note: expanded from here
+  308 | "iternsym.c"
+      | ^
+iternsym.c:262:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  262 |    MEM_STAT_REG(tmp,TYPE_VEC);  
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:310:1: note: expanded from here
+  310 | "iternsym.c"
+      | ^
+iternsym.c:404:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  404 |    MEM_STAT_REG(u,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:322:1: note: expanded from here
+  322 | "iternsym.c"
+      | ^
+iternsym.c:405:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  405 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:324:1: note: expanded from here
+  324 | "iternsym.c"
+      | ^
+iternsym.c:406:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  406 |    MEM_STAT_REG(s,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:326:1: note: expanded from here
+  326 | "iternsym.c"
+      | ^
+iternsym.c:407:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  407 |    MEM_STAT_REG(tmp,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:328:1: note: expanded from here
+  328 | "iternsym.c"
+      | ^
+iternsym.c:507:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  507 |    MEM_STAT_REG(u,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:338:1: note: expanded from here
+  338 | "iternsym.c"
+      | ^
+iternsym.c:508:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  508 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:340:1: note: expanded from here
+  340 | "iternsym.c"
+      | ^
+iternsym.c:607:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  607 |    MEM_STAT_REG(Q1,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:342:1: note: expanded from here
+  342 | "iternsym.c"
+      | ^
+iternsym.c:608:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  608 |    MEM_STAT_REG(R1,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:344:1: note: expanded from here
+  344 | "iternsym.c"
+      | ^
+iternsym.c:688:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  688 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:356:1: note: expanded from here
+  356 | "iternsym.c"
+      | ^
+iternsym.c:689:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  689 |    MEM_STAT_REG(u,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:358:1: note: expanded from here
+  358 | "iternsym.c"
+      | ^
+iternsym.c:690:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  690 |    MEM_STAT_REG(rhs,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:360:1: note: expanded from here
+  360 | "iternsym.c"
+      | ^
+iternsym.c:691:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  691 |    MEM_STAT_REG(givs,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:362:1: note: expanded from here
+  362 | "iternsym.c"
+      | ^
+iternsym.c:692:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  692 |    MEM_STAT_REG(givc,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:364:1: note: expanded from here
+  364 | "iternsym.c"
+      | ^
+iternsym.c:696:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  696 |    MEM_STAT_REG(R,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:366:1: note: expanded from here
+  366 | "iternsym.c"
+      | ^
+iternsym.c:697:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  697 |    MEM_STAT_REG(Q,TYPE_MAT);            
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:368:1: note: expanded from here
+  368 | "iternsym.c"
+      | ^
+iternsym.c:709:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  709 |       MEM_STAT_REG(z,TYPE_VEC);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:370:1: note: expanded from here
+  370 | "iternsym.c"
+      | ^
+iternsym.c:921:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  921 |    MEM_STAT_REG(R1,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:372:1: note: expanded from here
+  372 | "iternsym.c"
+      | ^
+iternsym.c:922:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  922 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:374:1: note: expanded from here
+  374 | "iternsym.c"
+      | ^
+iternsym.c:923:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  923 |    MEM_STAT_REG(r1,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:376:1: note: expanded from here
+  376 | "iternsym.c"
+      | ^
+iternsym.c:1005:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1005 |    MEM_STAT_REG(As,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:386:1: note: expanded from here
+  386 | "iternsym.c"
+      | ^
+iternsym.c:1006:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1006 |    MEM_STAT_REG(alpha,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:2:1: note: expanded from here
+    2 | "iternsym.c"
+      | ^
+iternsym.c:1007:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1007 |    MEM_STAT_REG(beta,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:4:1: note: expanded from here
+    4 | "iternsym.c"
+      | ^
+iternsym.c:1012:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1012 |    MEM_STAT_REG(H,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:6:1: note: expanded from here
+    6 | "iternsym.c"
+      | ^
+iternsym.c:1013:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1013 |    MEM_STAT_REG(N,TYPE_MAT);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:8:1: note: expanded from here
+    8 | "iternsym.c"
+      | ^
+iternsym.c:1018:7: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1018 |       MEM_STAT_REG(z,TYPE_VEC);
+      |       ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:10:1: note: expanded from here
+   10 | "iternsym.c"
+      | ^
+iternsym.c:1270:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1270 |    MEM_STAT_REG(r,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:20:1: note: expanded from here
+   20 | "iternsym.c"
+      | ^
+iternsym.c:1271:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1271 |    MEM_STAT_REG(p,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:22:1: note: expanded from here
+   22 | "iternsym.c"
+      | ^
+iternsym.c:1272:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1272 |    MEM_STAT_REG(q,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:24:1: note: expanded from here
+   24 | "iternsym.c"
+      | ^
+iternsym.c:1275:4: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ 1275 |    MEM_STAT_REG(z,TYPE_VEC);
+      |    ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:26:1: note: expanded from here
+   26 | "iternsym.c"
+      | ^
+39 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zmachine.c:34:22: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   34 | static  char    *rcsid = "$Id: zmachine.c,v 1.1 1994/01/13 04:25:41 des Exp $";
+      |                          ^
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zmemory.c:458:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  458 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+zmemory.c:458:15: note: place parentheses around the assignment to silence this warning
+  458 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+zmemory.c:458:15: note: use '==' to turn this assignment into an equality comparison
+  458 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+zmemory.c:476:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  476 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+zmemory.c:476:15: note: place parentheses around the assignment to silence this warning
+  476 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+zmemory.c:476:15: note: use '==' to turn this assignment into an equality comparison
+  476 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+zmemory.c:508:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  508 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+zmemory.c:508:15: note: place parentheses around the assignment to silence this warning
+  508 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+zmemory.c:508:15: note: use '==' to turn this assignment into an equality comparison
+  508 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+zmemory.c:526:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  526 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+zmemory.c:526:15: note: place parentheses around the assignment to silence this warning
+  526 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+zmemory.c:526:15: note: use '==' to turn this assignment into an equality comparison
+  526 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+zmemory.c:557:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  557 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+zmemory.c:557:15: note: place parentheses around the assignment to silence this warning
+  557 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+zmemory.c:557:15: note: use '==' to turn this assignment into an equality comparison
+  557 |    while (par = va_arg(ap,ZVEC **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+zmemory.c:578:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  578 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~~
+zmemory.c:578:15: note: place parentheses around the assignment to silence this warning
+  578 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |               ^                   
+      |           (                       )
+zmemory.c:578:15: note: use '==' to turn this assignment into an equality comparison
+  578 |    while (par = va_arg(ap,ZMAT **)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+6 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zvecop.c:280:15: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  280 |    while (par = va_arg(ap,ZVEC *)) {   /* NULL ends the list*/
+      |           ~~~~^~~~~~~~~~~~~~~~~~~
+zvecop.c:280:15: note: place parentheses around the assignment to silence this warning
+  280 |    while (par = va_arg(ap,ZVEC *)) {   /* NULL ends the list*/
+      |               ^                  
+      |           (                      )
+zvecop.c:280:15: note: use '==' to turn this assignment into an equality comparison
+  280 |    while (par = va_arg(ap,ZVEC *)) {   /* NULL ends the list*/
+      |               ^
+      |               ==
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zlufctr.c:59:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   59 |         MEM_STAT_REG(scale,TYPE_VEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:274:1: note: expanded from here
+  274 | "zlufctr.c"
+      | ^
+zlufctr.c:194:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  194 |         MEM_STAT_REG(A_cp,TYPE_ZMAT);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "zlufctr.c"
+      | ^
+zlufctr.c:195:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  195 |         MEM_STAT_REG(tmp, TYPE_ZVEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:290:1: note: expanded from here
+  290 | "zlufctr.c"
+      | ^
+zlufctr.c:196:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  196 |         MEM_STAT_REG(tmp2,TYPE_ZVEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:292:1: note: expanded from here
+  292 | "zlufctr.c"
+      | ^
+zlufctr.c:197:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  197 |         MEM_STAT_REG(pivot,TYPE_PERM);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:294:1: note: expanded from here
+  294 | "zlufctr.c"
+      | ^
+zlufctr.c:237:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  237 |     MEM_STAT_REG(y,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:306:1: note: expanded from here
+  306 | "zlufctr.c"
+      | ^
+zlufctr.c:238:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  238 |     MEM_STAT_REG(z,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:308:1: note: expanded from here
+  308 | "zlufctr.c"
+      | ^
+7 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zhsehldr.c:202:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  202 |         MEM_STAT_REG(w,TYPE_ZVEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:290:1: note: expanded from here
+  290 | "zhsehldr.c"
+      | ^
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zqrfctr.c:80:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   80 |     MEM_STAT_REG(tmp1,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:274:1: note: expanded from here
+  274 | "zqrfctr.c"
+      | ^
+zqrfctr.c:81:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   81 |     MEM_STAT_REG(w,   TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:276:1: note: expanded from here
+  276 | "zqrfctr.c"
+      | ^
+zqrfctr.c:126:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  126 |     MEM_STAT_REG(tmp1,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:284:1: note: expanded from here
+  284 | "zqrfctr.c"
+      | ^
+zqrfctr.c:127:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  127 |     MEM_STAT_REG(tmp2,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:286:1: note: expanded from here
+  286 | "zqrfctr.c"
+      | ^
+zqrfctr.c:128:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  128 |     MEM_STAT_REG(gamma,TYPE_VEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:288:1: note: expanded from here
+  288 | "zqrfctr.c"
+      | ^
+zqrfctr.c:129:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  129 |     MEM_STAT_REG(w,   TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:290:1: note: expanded from here
+  290 | "zqrfctr.c"
+      | ^
+zqrfctr.c:256:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  256 |     MEM_STAT_REG(tmp1,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:300:1: note: expanded from here
+  300 | "zqrfctr.c"
+      | ^
+zqrfctr.c:257:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  257 |     MEM_STAT_REG(tmp2,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:302:1: note: expanded from here
+  302 | "zqrfctr.c"
+      | ^
+zqrfctr.c:325:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  325 |     MEM_STAT_REG(tmp,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:310:1: note: expanded from here
+  310 | "zqrfctr.c"
+      | ^
+zqrfctr.c:363:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  363 |     MEM_STAT_REG(tmp,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:316:1: note: expanded from here
+  316 | "zqrfctr.c"
+      | ^
+zqrfctr.c:478:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  478 |     MEM_STAT_REG(y,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:330:1: note: expanded from here
+  330 | "zqrfctr.c"
+      | ^
+11 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zhessen.c:62:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   62 |         MEM_STAT_REG(tmp1,TYPE_ZVEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:114:1: note: expanded from here
+  114 | "zhessen.c"
+      | ^
+zhessen.c:63:2: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   63 |         MEM_STAT_REG(w,   TYPE_ZVEC);
+      |         ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:116:1: note: expanded from here
+  116 | "zhessen.c"
+      | ^
+zhessen.c:117:6: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  117 |             MEM_STAT_REG(tmp1,TYPE_ZVEC);
+      |             ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:126:1: note: expanded from here
+  126 | "zhessen.c"
+      | ^
+zhessen.c:118:6: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+  118 |             MEM_STAT_REG(tmp2,TYPE_ZVEC);
+      |             ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:128:1: note: expanded from here
+  128 | "zhessen.c"
+      | ^
+4 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+zschur.c:67:5: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+   67 |     MEM_STAT_REG(diag,TYPE_ZVEC);
+      |     ^
+./meminfo.h:137:74: note: expanded from macro 'MEM_STAT_REG'
+  137 | #define MEM_STAT_REG(var,type)  mem_stat_reg_list((void **)&(var),type,0,__FILE__,__LINE__)
+      |                                                                          ^
+<scratch space>:276:1: note: expanded from here
+  276 | "zschur.c"
+      | ^
+1 warning generated.

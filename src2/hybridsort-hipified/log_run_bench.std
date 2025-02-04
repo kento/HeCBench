@@ -1,0 +1,9 @@
+hipcc  -std=c++14  -Wall  -O3 -o hybridsort.o -c hybridsort.cu
+hipcc  -std=c++14  -Wall  -O3 -o bucketsort.o -c bucketsort.cu
+hipcc  -std=c++14  -Wall  -O3 -o mergesort.o -c mergesort.cu
+hipcc  -std=c++14  -Wall  -O3 -o hybridsort    		hybridsort.o bucketsort.o mergesort.o -lm
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./hybridsort r 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 690.10 679.11

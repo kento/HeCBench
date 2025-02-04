@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(program) ../medianfilter-cuda/data/SierrasRGB.ppm 10000 1>log.std 2>log.err ) 2> log.time
+COMMAND = bunzip2 ../medianfilter-cuda/data.tar.bz2; time -p ( ./$(program) ../medianfilter-cuda/data/SierrasRGB.ppm 10000 1>log.std 2>log.err ) 2> log.time

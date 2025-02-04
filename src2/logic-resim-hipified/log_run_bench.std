@@ -1,0 +1,6 @@
+hipcc  -std=c++14  -Wall            -Isrc/gate -Isrc/parser -Isrc/sim -Isrc/util -Isrc/wave -O3 src/gate/*.cpp src/main/*.cpp src/parser/*.cpp          src/sim/*.cu src/util/*.cpp src/wave/*.cpp -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main ../logic-resim-cuda/toy/intermediate.file 	../logic-resim-cuda/toy/NV_NVDLA_partition_o_dc_24x33x55_5x5x55x25_int8_input.vcd 	0 2972036001 	toy-result.saif 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 687.96 676.96

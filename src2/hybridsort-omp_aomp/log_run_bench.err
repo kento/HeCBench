@@ -1,0 +1,35 @@
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+hybridsort.c:80:39: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   80 |       cpu_idata[i] = (float) rand() / RAND_MAX;
+      |                                     ~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+1 warning generated.
+hybridsort.c:80:39: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   80 |       cpu_idata[i] = (float) rand() / RAND_MAX;
+      |                                     ~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:163:14: note: used here
+  163 |       return __make_mantissa_base16(__tagp);
+      |              ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:165:14: note: used here
+  165 |       return __make_mantissa_base8(__tagp);
+      |              ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:168:10: note: used here
+  168 |   return __make_mantissa_base10(__tagp);
+      |          ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:557:25: note: used here
+  557 |   __tmp.bits.mantissa = __make_mantissa(__tagp);
+      |                         ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:155:12: note: used here
+  155 |   return ::powif(__base, __iexp);
+      |            ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:158:12: note: used here
+  158 |   return ::powi(__base, __iexp);
+      |            ^
+1 warning generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]

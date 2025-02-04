@@ -1,0 +1,245 @@
+src/gate/DelayMgr.cpp:
+src/gate/Gate.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"src/gate/TruthTable.h", line 39: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const char get   (short& pos) const { return (array+(pos>>2))->get(pos&3); }
+                 ^
+
+"src/gate/TruthTable.h", line 40: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const size_t input_size() const { return isize; }
+                 ^
+
+"src/gate/Gate.h", line 23: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const dUnit getDelay (char, char) const;
+             ^
+
+"src/gate/Gate.h", line 29: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const size_t    getInputSize () const { return truthtable->input_size(); }
+             ^
+
+"src/gate/Gate.cpp", line 22: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  inline const dUnit 
+         ^
+
+src/gate/TruthTable.cpp:
+"src/gate/TruthTable.h", line 39: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const char get   (short& pos) const { return (array+(pos>>2))->get(pos&3); }
+                 ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"src/gate/TruthTable.h", line 40: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const size_t input_size() const { return isize; }
+                 ^
+
+src/main/main.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"src/gate/TruthTable.h", line 39: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const char get   (short& pos) const { return (array+(pos>>2))->get(pos&3); }
+                 ^
+
+"src/gate/TruthTable.h", line 40: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const size_t input_size() const { return isize; }
+                 ^
+
+"src/gate/Gate.h", line 23: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const dUnit getDelay (char, char) const;
+             ^
+
+"src/gate/Gate.h", line 29: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const size_t    getInputSize () const { return truthtable->input_size(); }
+             ^
+
+"src/parser/interParser.h", line 81: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const size_t getTransC() const { return TransC; }
+                 ^
+
+src/parser/SAIF.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+src/parser/VCD.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"src/parser/VCD.cpp", line 40: warning: integer conversion resulted in a change of sign [integer_sign_change]
+      tUnit currT = -1;
+                    ^
+
+"src/parser/VCD.cpp", line 110: warning: integer conversion resulted in a change of sign [integer_sign_change]
+      tUnit  currT = -1;
+                     ^
+
+src/parser/interParser.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"src/gate/TruthTable.h", line 39: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const char get   (short& pos) const { return (array+(pos>>2))->get(pos&3); }
+                 ^
+
+"src/gate/TruthTable.h", line 40: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const size_t input_size() const { return isize; }
+                 ^
+
+"src/gate/Gate.h", line 23: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const dUnit getDelay (char, char) const;
+             ^
+
+"src/gate/Gate.h", line 29: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const size_t    getInputSize () const { return truthtable->input_size(); }
+             ^
+
+"src/parser/interParser.h", line 81: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const size_t getTransC() const { return TransC; }
+                 ^
+
+"src/parser/interParser.cpp", line 9: warning: variable "begin" was declared but never referenced [declared_but_not_referenced]
+      char* begin = c;
+            ^
+
+src/parser/vcdParser.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+src/sim/Simulator.cu:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"src/gate/TruthTable.h", line 39: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const char get   (short& pos) const { return (array+(pos>>2))->get(pos&3); }
+                 ^
+
+"src/gate/TruthTable.h", line 40: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+          inline const size_t input_size() const { return isize; }
+                 ^
+
+"src/gate/Gate.h", line 23: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const dUnit getDelay (char, char) const;
+             ^
+
+"src/gate/Gate.h", line 29: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+      inline const size_t    getInputSize () const { return truthtable->input_size(); }
+             ^
+
+"src/sim/Simulator.cu", line 137: warning: integer conversion resulted in a change of sign [integer_sign_change]
+    tUnit currTime = -1, iTnext[MAX_INPUT_PORT] = {0};
+                     ^
+
+"src/sim/Simulator.cu", line 140: warning: integer conversion resulted in a change of sign [integer_sign_change]
+    dUnit delay = -1, d;
+                  ^
+
+"src/sim/Simulator.cu", line 254: warning: integer conversion resulted in a change of sign [integer_sign_change]
+      currTime = -1;
+                 ^
+
+"src/sim/Simulator.cu", line 255: warning: integer conversion resulted in a change of sign [integer_sign_change]
+      delay = -1;
+              ^
+
+"src/sim/Simulator.cu", line 295: warning: CUDA C++ compilation is unsupported in nvc++; nvcc is the recommended CUDA compiler [cuda_compile]
+      simulateParallel<<<gridSize, C_THREAD_LIMIT>>>(
+                      ^
+
+"src/sim/Simulator.cu", line 354: warning: integer conversion resulted in a change of sign [integer_sign_change]
+    tUnit currTime = -1, delay = -1, d;
+                     ^
+
+"src/sim/Simulator.cu", line 354: warning: integer conversion resulted in a change of sign [integer_sign_change]
+    tUnit currTime = -1, delay = -1, d;
+                                 ^
+
+"src/sim/Simulator.cu", line 434: warning: integer conversion resulted in a change of sign [integer_sign_change]
+      currTime = delay = -1;
+                         ^
+
+src/util/util.cpp:
+"src/util/util.cpp", line 7: warning: statement is unreachable [code_is_unreachable]
+  		case '0': return value0; break;
+  		                         ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"src/util/util.cpp", line 8: warning: statement is unreachable [code_is_unreachable]
+  		case '1': return value1; break;
+  		                         ^
+
+"src/util/util.cpp", line 9: warning: statement is unreachable [code_is_unreachable]
+  		case 'x': return valueX; break;
+  		                         ^
+
+"src/util/util.cpp", line 10: warning: statement is unreachable [code_is_unreachable]
+  		case 'z': return valueZ; break;
+  		                         ^
+
+"src/util/util.cpp", line 11: warning: statement is unreachable [code_is_unreachable]
+  		default : return valueZ; break;
+  		                         ^
+
+"src/util/util.cpp", line 19: warning: statement is unreachable [code_is_unreachable]
+  		case value0: return '0'; break;
+  		                         ^
+
+"src/util/util.cpp", line 20: warning: statement is unreachable [code_is_unreachable]
+  		case value1: return '1'; break;
+  		                         ^
+
+"src/util/util.cpp", line 21: warning: statement is unreachable [code_is_unreachable]
+  		case valueX: return 'x'; break;
+  		                         ^
+
+"src/util/util.cpp", line 22: warning: statement is unreachable [code_is_unreachable]
+  		case valueZ: return 'z'; break;
+  		                         ^
+
+"src/util/util.cpp", line 23: warning: statement is unreachable [code_is_unreachable]
+  		default    : return 'z'; break;
+  		                         ^
+
+src/wave/Signal.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+src/wave/Wire.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+src/wave/WireMgr.cpp:
+"src/wave/Signal.h", line 48: warning: type qualifier on return type is meaningless [useless_type_qualifier_on_return_type]
+  		inline const bool isDeleted()   { return deleted; }
+  		       ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+

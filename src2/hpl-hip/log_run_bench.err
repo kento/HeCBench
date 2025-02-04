@@ -1,0 +1,322 @@
+../HPL_packL.c: In function 'HPL_packL':
+../HPL_packL.c:204:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  204 |       for( i = 1; i < nbufs; i++ ) disp[i] -= disp[0]; disp[0] = 0;
+      |       ^~~
+../HPL_packL.c:204:56: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  204 |       for( i = 1; i < nbufs; i++ ) disp[i] -= disp[0]; disp[0] = 0;
+      |                                                        ^~~~
+../HPL_packL.c:206:43: warning: '*bufs' may be used uninitialized [-Wmaybe-uninitialized]
+  206 |       PANEL->buffers[IBUF] = (void *)(bufs[0]); PANEL->counts [IBUF] = 1;
+      |                                      ~~~~~^~~~
+cuda_dgemm.cpp:101: warning: "_GNU_SOURCE" redefined
+  101 | #define _GNU_SOURCE
+      | 
+<command-line>: note: this is the location of the previous definition
+cuda_dgemm.cpp: In function 'void dpcpp_dgemm(int, int, int, int, int, int, double, const double*, int, const double*, int, double, double*, int)':
+cuda_dgemm.cpp:174:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  174 |     hipMalloc((void **)&devPtrA, K * LDA *sizeof(double));
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3121:12: note: in call to 'hipError_t hipMalloc(void**, size_t)', declared here
+ 3121 | hipError_t hipMalloc(void** ptr, size_t size);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:175:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  175 |     hipMemcpy(devPtrA, &A[0], K * LDA *sizeof(double), hipMemcpyHostToDevice);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3961:12: note: in call to 'hipError_t hipMemcpy(void*, const void*, size_t, hipMemcpyKind)', declared here
+ 3961 | hipError_t hipMemcpy(void* dst, const void* src, size_t sizeBytes, hipMemcpyKind kind);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:177:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  177 |     hipMalloc((void **)&devPtrB, N *  LDB *sizeof(double));
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3121:12: note: in call to 'hipError_t hipMalloc(void**, size_t)', declared here
+ 3121 | hipError_t hipMalloc(void** ptr, size_t size);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:178:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  178 |     hipMemcpy(devPtrB, &B[0], N *  LDB *sizeof(double), hipMemcpyHostToDevice);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3961:12: note: in call to 'hipError_t hipMemcpy(void*, const void*, size_t, hipMemcpyKind)', declared here
+ 3961 | hipError_t hipMemcpy(void* dst, const void* src, size_t sizeBytes, hipMemcpyKind kind);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:180:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  180 |     hipMalloc((void **)&devPtrC, N * LDC *sizeof(double));
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3121:12: note: in call to 'hipError_t hipMalloc(void**, size_t)', declared here
+ 3121 | hipError_t hipMalloc(void** ptr, size_t size);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:181:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  181 |     hipMemcpy(devPtrC, &C[0], N * LDC *sizeof(double), hipMemcpyHostToDevice);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3961:12: note: in call to 'hipError_t hipMemcpy(void*, const void*, size_t, hipMemcpyKind)', declared here
+ 3961 | hipError_t hipMemcpy(void* dst, const void* src, size_t sizeBytes, hipMemcpyKind kind);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:184:25: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  184 |     hipDeviceSynchronize();
+      |     ~~~~~~~~~~~~~~~~~~~~^~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:1816:12: note: in call to 'hipError_t hipDeviceSynchronize()', declared here
+ 1816 | hipError_t hipDeviceSynchronize(void);
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:186:25: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  186 |     hipDeviceSynchronize();
+      |     ~~~~~~~~~~~~~~~~~~~~^~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:1816:12: note: in call to 'hipError_t hipDeviceSynchronize()', declared here
+ 1816 | hipError_t hipDeviceSynchronize(void);
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:187:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  187 |     hipMemcpy(&C[0], devPtrC, N * LDC *sizeof(double), hipMemcpyDeviceToHost);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3961:12: note: in call to 'hipError_t hipMemcpy(void*, const void*, size_t, hipMemcpyKind)', declared here
+ 3961 | hipError_t hipMemcpy(void* dst, const void* src, size_t sizeBytes, hipMemcpyKind kind);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:188:25: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  188 |     hipDeviceSynchronize();
+      |     ~~~~~~~~~~~~~~~~~~~~^~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:1816:12: note: in call to 'hipError_t hipDeviceSynchronize()', declared here
+ 1816 | hipError_t hipDeviceSynchronize(void);
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:189:12: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  189 |     hipFree(devPtrA);
+      |     ~~~~~~~^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3905:12: note: in call to 'hipError_t hipFree(void*)', declared here
+ 3905 | hipError_t hipFree(void* ptr);
+      |            ^~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:190:12: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  190 |     hipFree(devPtrB);
+      |     ~~~~~~~^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3905:12: note: in call to 'hipError_t hipFree(void*)', declared here
+ 3905 | hipError_t hipFree(void* ptr);
+      |            ^~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:191:12: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  191 |     hipFree(devPtrC);
+      |     ~~~~~~~^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3905:12: note: in call to 'hipError_t hipFree(void*)', declared here
+ 3905 | hipError_t hipFree(void* ptr);
+      |            ^~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp: In function 'void dpcpp_dtrsm(int, int, int, int, int, int, int, double, const double*, int, double*, int)':
+cuda_dgemm.cpp:230:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  230 |     hipMalloc((void **)&devPtrA, M * LDA * sizeof(double));
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3121:12: note: in call to 'hipError_t hipMalloc(void**, size_t)', declared here
+ 3121 | hipError_t hipMalloc(void** ptr, size_t size);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:231:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  231 |     hipMemcpy(devPtrA, A, M * LDA * sizeof(double), hipMemcpyHostToDevice);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3961:12: note: in call to 'hipError_t hipMemcpy(void*, const void*, size_t, hipMemcpyKind)', declared here
+ 3961 | hipError_t hipMemcpy(void* dst, const void* src, size_t sizeBytes, hipMemcpyKind kind);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:234:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  234 |     hipMalloc((void **)&devPtrB, N * LDB * sizeof(double));
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3121:12: note: in call to 'hipError_t hipMalloc(void**, size_t)', declared here
+ 3121 | hipError_t hipMalloc(void** ptr, size_t size);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:235:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  235 |     hipMemcpy(devPtrB, B, N * LDB * sizeof(double), hipMemcpyHostToDevice);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3961:12: note: in call to 'hipError_t hipMemcpy(void*, const void*, size_t, hipMemcpyKind)', declared here
+ 3961 | hipError_t hipMemcpy(void* dst, const void* src, size_t sizeBytes, hipMemcpyKind kind);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:236:25: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  236 |     hipDeviceSynchronize();
+      |     ~~~~~~~~~~~~~~~~~~~~^~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:1816:12: note: in call to 'hipError_t hipDeviceSynchronize()', declared here
+ 1816 | hipError_t hipDeviceSynchronize(void);
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:240:25: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  240 |     hipDeviceSynchronize();
+      |     ~~~~~~~~~~~~~~~~~~~~^~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:1816:12: note: in call to 'hipError_t hipDeviceSynchronize()', declared here
+ 1816 | hipError_t hipDeviceSynchronize(void);
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:241:14: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  241 |     hipMemcpy(B, devPtrB, N * LDB * sizeof(double), hipMemcpyDeviceToHost);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3961:12: note: in call to 'hipError_t hipMemcpy(void*, const void*, size_t, hipMemcpyKind)', declared here
+ 3961 | hipError_t hipMemcpy(void* dst, const void* src, size_t sizeBytes, hipMemcpyKind kind);
+      |            ^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:243:25: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  243 |     hipDeviceSynchronize();
+      |     ~~~~~~~~~~~~~~~~~~~~^~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:1816:12: note: in call to 'hipError_t hipDeviceSynchronize()', declared here
+ 1816 | hipError_t hipDeviceSynchronize(void);
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:244:12: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  244 |     hipFree(devPtrA);
+      |     ~~~~~~~^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3905:12: note: in call to 'hipError_t hipFree(void*)', declared here
+ 3905 | hipError_t hipFree(void* ptr);
+      |            ^~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+cuda_dgemm.cpp:245:12: warning: ignoring returned value of type 'hipError_t', declared with attribute 'nodiscard' [-Wunused-result]
+  245 |     hipFree(devPtrB);
+      |     ~~~~~~~^~~~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:3905:12: note: in call to 'hipError_t hipFree(void*)', declared here
+ 3905 | hipError_t hipFree(void* ptr);
+      |            ^~~~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from cuda_dgemm.cpp:106:
+/opt/rocm/include/hip/hip_runtime_api.h:399:3: note: 'hipError_t' declared here
+  399 | } hipError_t;
+      |   ^~~~~~~~~~
+../HPL_pdtest.c: In function 'HPL_pdtest':
+../HPL_pdtest.c:334:7: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  334 |       if( vptr ) free( vptr ); return;
+      |       ^~
+../HPL_pdtest.c:334:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  334 |       if( vptr ) free( vptr ); return;
+      |                                ^~~~~~

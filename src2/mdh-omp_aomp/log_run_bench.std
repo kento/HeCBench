@@ -1,0 +1,8 @@
+clang++  -Wall -fopenmp  -O3 -target x86_64-pc-linux-gnu           -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
+clang++  -Wall -fopenmp  -O3 -target x86_64-pc-linux-gnu           -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c WKFUtils.cpp -o WKFUtils.o
+clang++  -Wall -fopenmp  -O3 -target x86_64-pc-linux-gnu           -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o WKFUtils.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main -itmax 20 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 896.75 885.75
