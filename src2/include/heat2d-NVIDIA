@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(program) 4096 8192 1000 ../heat2d-cuda/data.txt 1>log.std 2>log.err ) 2> log.time
+COMMAND = bunzip2 ../heat2d-cuda/data.txt.bz2; time -p ( ./$(program) 4096 8192 1000 ../heat2d-cuda/data.txt 1>log.std 2>log.err ) 2> log.time

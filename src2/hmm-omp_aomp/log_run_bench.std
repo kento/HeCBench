@@ -1,0 +1,9 @@
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c HiddenMarkovModel.cpp -o HiddenMarkovModel.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ViterbiCPU.cpp -o ViterbiCPU.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ViterbiGPU.cpp -o ViterbiGPU.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a HiddenMarkovModel.o ViterbiCPU.o ViterbiGPU.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 966.75 955.75

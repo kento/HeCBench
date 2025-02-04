@@ -1,0 +1,8 @@
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc90 main.o -o main 
+python3 mkinit.py 4096 8192 data.txt
+nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+bash -c "bunzip2 ../heat2d-cuda/data.txt.bz2; time -p ( ./main 4096 8192 1000 ../heat2d-cuda/data.txt 1>log.std 2>log.err ) 2> log.time"
+pkill nvidia-smi
+../scripts/m.sh
+min max diff memory in [MB] : 1 816 815

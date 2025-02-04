@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(program) -i ../hbc-cuda/graphs/breast_coexpress.txt -v --printscores=output.txt 1>log.std 2>log.err ) 2> log.time
+COMMAND = tar xf ../hbc-cuda/test_graph.tar.gz; time -p ( ./$(program) -i ../hbc-cuda/graphs/breast_coexpress.txt -v --printscores=output.txt 1>log.std 2>log.err ) 2> log.time

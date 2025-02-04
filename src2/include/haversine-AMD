@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(program) ../haversine-cuda/locations.txt 100 1>log.std 2>log.err ) 2> log.time
+COMMAND = gunzip ../haversine-cuda/locations.txt.gz; time -p ( ./$(program) ../haversine-cuda/locations.txt 100 1>log.std 2>log.err ) 2> log.time

@@ -1,0 +1,8 @@
+hipcc  -std=c++14 -Wall -fopenmp -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -fopenmp -O3 main.o -o main 
+python3 mkinit.py 4096 8192 data.txt
+../scripts/rocm-smi.sh > log.mem &
+bash -c "bunzip2 ../heat2d-cuda/data.txt.bz2; time -p ( ./main 4096 8192 1000 ../heat2d-cuda/data.txt 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 553.72 542.73

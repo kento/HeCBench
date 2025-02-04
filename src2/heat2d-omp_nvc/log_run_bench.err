@@ -1,0 +1,13 @@
+main:
+     67, Loop not vectorized/parallelized: contains call
+     69, #omp parallel
+     70, Loop not vectorized: data dependency
+    104, #omp target teams distribute parallel for thread_limit(256)
+        102, Generating map(tofrom:in[:Lx*Ly]) 
+             Generating map(alloc:out[:Lx*Ly]) 
+        104, Generating "nvkernel_main_F1L104_3" GPU kernel
+        106, Loop parallelized across teams and threads(128), schedule(static)
+    104, Loop not vectorized/parallelized: contains call
+    107, Loop not vectorized/parallelized: not countable
+    131, Loop not vectorized/parallelized: potential early exits
+bunzip2: Can't open input file ../heat2d-cuda/data.txt.bz2: No such file or directory.

@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./heartwall 104 1>log.std 2>log.err ) 2> log.time
+COMMAND = bunzip2 ../data/heartwall/test.avi.bz2; time -p ( ./heartwall 104 1>log.std 2>log.err ) 2> log.time

@@ -1,0 +1,5 @@
+../scripts/rocm-smi.sh > log.mem &
+bash -c "gunzip ../haversine-cuda/locations.txt.gz; time -p ( ./main ../haversine-cuda/locations.txt 100 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 1397.97 1386.97

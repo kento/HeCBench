@@ -1,2 +1,2 @@
 #COMMAND = time -p ( ./$(program) $(src)/data/dirty_4096.img $(src)/data/psf_4096.img 1000 1>log.std 2>log.err ) 2> log.time
-COMMAND = time -p ( ./$(program) ../hogbom-cuda/data/dirty_4096.img ../hogbom-cuda/data/psf_4096.img 1000 1>log.std 2>log.err ) 2> log.time
+COMMAND =  bunzip2 ../hogbom-cuda/data/*4096*bz2; time -p ( ./$(program) ../hogbom-cuda/data/dirty_4096.img ../hogbom-cuda/data/psf_4096.img 1000 1>log.std 2>log.err ) 2> log.time
