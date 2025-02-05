@@ -7,12 +7,12 @@ CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
 VERIFY    = yes
-LAUNCHER  =
+LAUNCHER  = bash -c
 
 #===============================================================================
 # Program name & source code list
 #===============================================================================
-SLU_PATH = ../../slu-cuda/src
+SLU_PATH = ../slu-cuda/src
 
 SLU_LIBS = $(SLU_PATH)/nicslu/lib/nicslu.a \
            $(SLU_PATH)/nicslu/util/nicslu_util.a
@@ -83,5 +83,7 @@ clean:
 test: $(program)
 	$(LAUNCHER) ./$(program) -i $(SLU_PATH)/nicslu/test/add32.mtx
 
+include ../include/slu-AMD
+
 run: $(program)
-	$(LAUNCHER) ./$(program) -i $(SLU_PATH)/nicslu/demo/ASIC_100k.mtx
+	$(LAUNCHER) "$(COMMAND)"
