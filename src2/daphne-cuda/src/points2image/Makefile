@@ -7,7 +7,7 @@ CC        = nvcc
 OPTIMIZE  = yes
 DEBUG     = no
 ARCH      = sm_60
-LAUNCHER  =
+LAUNCHER  = bash -c
 
 #===============================================================================
 # Program name & source code list
@@ -64,6 +64,7 @@ endif
 clean:
 	rm -rf $(program) $(obj)
 
+include ../../../include/daphne-NVIDIA
 # TODO: when p > 1, results mismatch
 run: $(program)
-	$(LAUNCHER) ./$(program) -p 1
+	$(LAUNCHER) "$(COMMAND)"

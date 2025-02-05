@@ -1,9 +1,5 @@
 run_mem:
-	cd src/points2image
-	make run
-	cd ../..
+	cd src/points2image;make run_mem
 
 run:
-	cd src/points2image
-	make run
-	cd ../..
+	cd src/points2image;make run
