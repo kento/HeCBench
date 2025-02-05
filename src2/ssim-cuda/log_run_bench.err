@@ -1,0 +1,7 @@
+gdt/math/vec/functors.h: In function 'T gdt::rsqrt(const T&) [with T = float]':
+gdt/math/vec/functors.h:72:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   72 |     int i = *(int*)&x;
+      |          ~^~~~~~~~~~~~
+gdt/math/vec/functors.h:74:8: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   74 |     x = *(float*)&i;
+      |       ~^~~~~~~~~~~~~ 

@@ -1,5 +1,1 @@
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cu -o main.o
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c nfautil.cu -o nfautil.o
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c regex.cu -o regex.o
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 main.o nfautil.o regex.o -o nfa 
 bash -c "time -p ( ./runtests.sh 1>log.std 2>log.err ) 2> log.time"

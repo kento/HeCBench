@@ -1,4 +1,4 @@
-bash: line 1: 2054388 Aborted                 (core dumped) ./main noised-bufferfly-20.png denoised.png 20 color bufferfly.png > log.std 2> log.err
-real 0.32
+bash: line 1:  6062 Aborted                 (core dumped) ./main noised-bufferfly-20.png denoised.png 20 color bufferfly.png > log.std 2> log.err
+real 0.14
 user 0.01
 sys 0.00

@@ -1,0 +1,4 @@
+Average execution time of SPMM compute: 117.372429 (us)
+Computing the reference SPMM results..
+spgemm_example test PASSED
+Average execution time of SPMM compute: 120.420883 (us)

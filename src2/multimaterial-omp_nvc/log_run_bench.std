@@ -1,0 +1,4 @@
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 compact.cpp full_matrix.cpp multimat.cpp -o multimat 
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -DFUSED -DLINKED compact.cpp full_matrix.cpp multimat.cpp -o multimat_FL 
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -DFUSED compact.cpp full_matrix.cpp multimat.cpp -o multimat_F 
+bash -c "time -p ( ./multimat_FL 6000 6000 1>log.std 2>log.err ) 2> log.time"

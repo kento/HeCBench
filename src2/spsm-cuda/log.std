@@ -1,0 +1,6 @@
+Initializing host matrices..
+Done
+Average execution time of SpSM solve: 15161.509766 (us)
+Checking results..
+@8192 2.399682 != 0.000000
+spsm_csr_example test FAILED: wrong result

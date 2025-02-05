@@ -1,4 +1,4 @@
-Total task execution time for 1005 iterations: 41952.734375 (ms)
-Best model (test) 180363
-Best model (reference) 180363
+Total task execution time for 1005 iterations: 168.468765 (ms)
+Best model (test) 1494
+Best model (reference) 1494
 Test Passed

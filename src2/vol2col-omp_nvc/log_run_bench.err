@@ -1,0 +1,43 @@
+main:
+         169, Recognized memory set idiom
+         182, Loop not vectorized/parallelized: contains call
+         199, Generating update from(.inl_data_col_236[:])
+         200, Loop not fused: function call before adjacent loop
+              Generated vector simd code for the loop containing reductions
+              Loop unrolled 4 times
+         207, Loop not vectorized/parallelized: contains call
+         225, Generating update from(.inl_data_vol_235[:])
+         226, Loop not fused: function call before adjacent loop
+              Generated vector simd code for the loop containing reductions
+void eval<float>(int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int):
+    169, Recognized memory set idiom
+    179, Generating map(to:data_vol[:vol_size],data_col[:col_size]) 
+    182, Loop not vectorized/parallelized: contains call
+    199, Generating update from(data_col[:col_size])
+    200, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop containing reductions
+         Loop unrolled 4 times
+    207, Loop not vectorized/parallelized: contains call
+    225, Generating update from(data_vol[:vol_size])
+    226, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop containing reductions
+         Loop unrolled 4 times
+void vol2col_kernel<float>(float const*, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, float*):
+     34, #omp target teams distribute parallel for
+         34, Generating "nvkernel__Z14vol2col_kernelIfEvPKT_iiiiiiiiiiiiiiiiiiiPS0__F1L34_2" GPU kernel
+         37, Loop parallelized across teams and threads(128), schedule(static)
+     40, Loop not vectorized/parallelized: too deeply nested
+     50, Loop not vectorized: data dependency
+void col2vol_kernel<float, float>(float const*, unsigned long, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, float*):
+     88, #omp target teams distribute parallel for
+         88, Generating "nvkernel__Z14col2vol_kernelIffEvPKT_mjjjjjjjjjjjjjjjjjjPS0__F1L88_6" GPU kernel
+         90, Loop parallelized across teams and threads(128), schedule(static)
+     90, Loop not vectorized/parallelized: too deeply nested
+    112, Invariant if transformation
+         Loop not vectorized: recurrence
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      5, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+unsigned int const& std::min<unsigned int>(unsigned int const&, unsigned int const&):
+                   231, Generating implicit omp declare target routine
+                        Generating NVIDIA GPU code

@@ -1,0 +1,75 @@
+main:
+          73, Loop not vectorized/parallelized: contains call
+          85, Loop not vectorized/parallelized: contains call
+          93, Generating update from(.inl_h_dst_293[:h*w])
+              Loop not fused: complex flow graph
+              Loop not vectorized: may not be beneficial for target
+          94, Loop not fused: function call before adjacent loop
+              Loop not vectorized: may not be beneficial for target
+          73, Loop not vectorized/parallelized: contains call
+          85, Loop not vectorized/parallelized: contains call
+          93, Generating update from(.inl_h_dst_340[:h*w])
+              Loop not fused: complex flow graph
+              Loop not vectorized: may not be beneficial for target
+          94, Loop not fused: function call before adjacent loop
+              Loop not vectorized: may not be beneficial for target
+void surfelRenderTest<float>(int, int, int, int):
+     73, Loop not vectorized/parallelized: contains call
+     80, Generating map(to:h_src[:src_size]) 
+         Generating map(alloc:h_dst[:dst_size]) 
+     85, Loop not vectorized/parallelized: contains call
+        5648, Loop not fused: complex flow graph
+              Loop not vectorized: may not be beneficial for target
+     93, Generating update from(h_dst[:dst_size])
+        5712, Loop not fused: function call before adjacent loop
+              Loop not vectorized: may not be beneficial for target
+void surfelRenderTest<double>(int, int, int, int):
+     73, Loop not vectorized/parallelized: contains call
+     80, Generating map(to:h_src[:src_size]) 
+         Generating map(alloc:h_dst[:dst_size]) 
+     85, Loop not vectorized/parallelized: contains call
+        5648, Loop not fused: complex flow graph
+              Loop not vectorized: may not be beneficial for target
+     93, Generating update from(h_dst[:dst_size])
+        5712, Loop not fused: function call before adjacent loop
+              Loop not vectorized: may not be beneficial for target
+void surfel_render<float>(float const*, int, float, int, int, float*):
+     28, Loop not vectorized/parallelized: not countable
+     39, Loop not vectorized: data dependency
+void surfel_render<double>(double const*, int, double, int, int, double*):
+     25, #omp target teams distribute parallel for thread_limit(256)
+         25, Generating "nvkernel__Z13surfel_renderIdEvPKT_iS0_iiPS0__F1L25_6" GPU kernel
+         27, Loop parallelized across teams and threads(128), schedule(static)
+     28, Loop not vectorized/parallelized: not countable
+     39, Loop not vectorized: data dependency
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      4, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+float* std::min_element<float*>(float*, float*):
+        5623, Loop not vectorized: may not be beneficial for target
+float* std::__min_element<float*, __gnu_cxx::__ops::_Iter_less_iter>(float*, float*, __gnu_cxx::__ops::_Iter_less_iter):
+      3, include "algorithm"
+          10, include "algorithm"
+               62, include "stl_algo.h"
+                  5623, Loop not vectorized: may not be beneficial for target
+float* std::max_element<float*>(float*, float*):
+        5687, Loop not vectorized: may not be beneficial for target
+float* std::__max_element<float*, __gnu_cxx::__ops::_Iter_less_iter>(float*, float*, __gnu_cxx::__ops::_Iter_less_iter):
+      3, include "algorithm"
+          10, include "algorithm"
+               62, include "stl_algo.h"
+                  5687, Loop not vectorized: may not be beneficial for target
+double* std::min_element<double*>(double*, double*):
+        5623, Loop not vectorized: may not be beneficial for target
+double* std::__min_element<double*, __gnu_cxx::__ops::_Iter_less_iter>(double*, double*, __gnu_cxx::__ops::_Iter_less_iter):
+      3, include "algorithm"
+          10, include "algorithm"
+               62, include "stl_algo.h"
+                  5623, Loop not vectorized: may not be beneficial for target
+double* std::max_element<double*>(double*, double*):
+        5687, Loop not vectorized: may not be beneficial for target
+double* std::__max_element<double*, __gnu_cxx::__ops::_Iter_less_iter>(double*, double*, __gnu_cxx::__ops::_Iter_less_iter):
+      3, include "algorithm"
+          10, include "algorithm"
+               62, include "stl_algo.h"
+                  5687, Loop not vectorized: may not be beneficial for target

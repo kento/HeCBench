@@ -1,0 +1,14 @@
+main.cu: In function 'int basicStreamOrderedAllocation(int, const float*, const float*, float*, bool)':
+main.cu:197:31: warning: 'errorNorm' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  197 |   return (timing || errorNorm / refNorm < 1.e-6f) ? EXIT_SUCCESS : EXIT_FAILURE;
+      |                    ~~~~~~~~~~~^~~~~~~~~~
+main.cu:130:7: note: 'errorNorm' was declared here
+  130 |   float errorNorm, refNorm, ref, diff;
+      |       ^~~~~~~~~
+main.cu: In function 'int streamOrderedAllocationPostSync(int, const float*, const float*, float*, bool)':
+main.cu:276:31: warning: 'errorNorm' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  276 |   return (timing || errorNorm / refNorm < 1.e-6f) ? EXIT_SUCCESS : EXIT_FAILURE;
+      |                    ~~~~~~~~~~~^~~~~~~~~~
+main.cu:208:7: note: 'errorNorm' was declared here
+  208 |   float errorNorm, refNorm, ref, diff;
+      |       ^~~~~~~~~

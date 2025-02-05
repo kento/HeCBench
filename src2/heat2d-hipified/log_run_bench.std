@@ -1,0 +1,5 @@
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../heat2d-cuda/prepare_data.sh; time -p ( ./main 4096 8192 1000 ../heat2d-cuda/data.txt 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 553.72 542.73

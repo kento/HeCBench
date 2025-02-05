@@ -1,0 +1,1 @@
+hipcc ../frna-cuda/main.o ../frna-cuda/fbase.o ../frna-cuda/fparam.o ../frna-cuda/util.o frna.o  -o main 

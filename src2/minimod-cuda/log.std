@@ -1,13 +1,13 @@
 warm up iteration is enabled
 niters = 1
 nsteps = 1000
-ldimx: 1356, ldimy: 1348, ldimz: 1376
+ldimx: 356, ldimy: 348, ldimz: 352
 ndamp = 27 27 27
-grid = 1340 1340 1340
-Checksum: min_u,  max_u = -71.111748, 37.468636
-ldimx: 1356, ldimy: 1348, ldimz: 1376
+grid = 340 340 340
+Checksum: min_u,  max_u = -71.111732, 37.468666
+ldimx: 356, ldimy: 348, ldimz: 352
 ndamp = 27 27 27
-grid = 1340 1340 1340
-Checksum: min_u,  max_u = -71.111748, 37.468636
-Average kernel time per iteration: 36.8049 s
-Average modeling time per iteration: 37.0379 s
+grid = 340 340 340
+Checksum: min_u,  max_u = -71.111732, 37.468666
+Average kernel time per iteration: 0.730318 s
+Average modeling time per iteration: 0.735582 s

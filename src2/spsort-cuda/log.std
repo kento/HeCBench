@@ -1,0 +1,11 @@
+
+		Basic info of the sparse matrix:
+			A_nrows = A_ncols = 45000
+			A_nnz   = 967590850
+				min_nnz_per_row = 19292
+				ave_nnz_per_row = 21502
+				max_nnz_per_row = 24359
+
+Average execution time of CSR sort: 655271 us
+Error: column index arrays mismatch
+csrsort_example test FAILED: wrong result

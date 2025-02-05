@@ -1,0 +1,10 @@
+main.cu(154): warning #550-D: variable "botsum" was set but never used
+    float topsum, botsum;
+                  ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+main.cu: In function 'float NusseltCompute(cublasContext*&, float*, float*, float*, float*, float*, float*)':
+main.cu:154:15: warning: variable 'botsum' set but not used [-Wunused-but-set-variable]
+  154 |   float topsum, botsum;
+      |               ^~~~~~

@@ -1,0 +1,1 @@
+bash -c "time -p ( ./srad 1000 0.5 20000 46258 1>log.std 2>log.err ) 2> log.time"

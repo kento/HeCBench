@@ -1,0 +1,7 @@
+Number of non-zero elements: 16777216
+Number of rows in a square matrix: 112880
+Sparsity: 99.868330%
+Average kernel (CSR) execution time (ms): 0.168572
+Error rate: 0.000000
+Average kernel (COO) execution time (ms): 0.174163
+Error rate: 0.000000

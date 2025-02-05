@@ -1,0 +1,7 @@
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c Option.cpp -o Option.o
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c OptionParser.cpp -o OptionParser.o
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c triad.cpp -o triad.o
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c Timer.cpp -o Timer.o
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 main.o Option.o OptionParser.o triad.o Timer.o -o triad 
+bash -c "time -p ( ./triad --passes 100 -v 1>log.std 2>log.err ) 2> log.time"

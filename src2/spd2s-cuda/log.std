@@ -1,0 +1,3 @@
+Initializing host matrices..
+Average execution time of DenseToSparse_convert : 24899.451172 (us)
+dense2sparse_csr_example test PASSED

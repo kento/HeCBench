@@ -1,0 +1,4 @@
+nvc++   -Wall -Minfo -mp=gpu -gpu=cc70 -O3 ./main.c 		-c 		-o ./main.o 		-O3
+nvc++   -Wall -Minfo -mp=gpu -gpu=cc70 -O3	./kernel/kernel_wrapper.c 		-c 		-o ./kernel/kernel_wrapper.o 
+nvc++	./util/file/file.c 		-c 		-o ./util/file/file.o 		-O3
+nvc++	./util/num/num.c 		-c 		-o ./util/num/num.o 		-O3

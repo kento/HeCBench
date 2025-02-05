@@ -3,5 +3,5 @@ Copyright 2017-2020 Texas State University
 configuration: 124651 nodes and 387240 edges (internet.egr)
 average degree: 3.11 edges per node
 compute time: 0.000092 s
-throughput: 1362.066564 Mnodes/s
-throughput: 4231.387285 Medges/s
+throughput: 1359.281620 Mnodes/s
+throughput: 4222.735593 Medges/s

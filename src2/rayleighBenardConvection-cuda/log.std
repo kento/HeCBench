@@ -1,0 +1,11 @@
+M = 500. N = 1000. DX = 2.004008E-03. Ra = 1.000000E+08.
+
+Initialization
+Configuring host and device memory.
+Begin computation: 
+Nusselt number: 0.0
+Nusselt number: 0.3
+Nusselt number: 7.7
+Total compute time: 29.654970 (s)
+Average compute time per step: 0.029655 (s)
+Done.

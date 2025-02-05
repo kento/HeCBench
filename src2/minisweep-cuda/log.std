@@ -13,3 +13,6 @@ GF/s (device): 4.770
 Normsq result: 1.30401239e+14  diff: 1.304e+14  verify: FAIL  host time: 9.546 (s) kernel time: 9.546 (s)
 GF/s (host): 212.588
 GF/s (device): 212.588
+Normsq result: 1.30401239e+14  diff: 1.304e+14  verify: FAIL  host time: 0.366 (s) kernel time: 0.366 (s)
+GF/s (host): 5547.764
+GF/s (device): 5547.809

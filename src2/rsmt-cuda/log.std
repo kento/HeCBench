@@ -6,7 +6,7 @@ number of nets: 2635625
 max pins per net: 256
 truncated nets: 2
 launching 264 thread blocks with 768 threads per block
-compute time: 0.014271 s
-throughput: 184683974 nets/sec
+compute time: 0.066869 s
+throughput: 39414751 nets/sec
 total wirelength: 1437821603
 total pins: 10073726

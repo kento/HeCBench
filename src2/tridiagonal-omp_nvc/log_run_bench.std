@@ -1,0 +1,5 @@
+nvc++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++14 -Wall -O3 -Minfo=all -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++14 -Wall -O3 -Minfo=all -mp=gpu -gpu=cc70 -c shrUtils.cpp -o shrUtils.o
+nvc++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++14 -Wall -O3 -Minfo=all -mp=gpu -gpu=cc70 -c cmd_arg_reader.cpp -o cmd_arg_reader.o
+nvc++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++14 -Wall -O3 -Minfo=all -mp=gpu -gpu=cc70 main.o shrUtils.o cmd_arg_reader.o -o main 
+bash -c "time -p ( ./main -num_systems=8388560 1>log.std 2>log.err 1>>log.std 2>>log.err ) 2> log.time"

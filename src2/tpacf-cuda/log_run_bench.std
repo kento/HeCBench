@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main -d ./data/small/Datapnts.1 -p 97178 -r ./data/small/Randompnts -n 100 -q 97178 -b 5 -l 1 -u 10000 -a -j 10 -o ./small_results_test.dat 1>log.std 2>log.err ) 2> log.time"

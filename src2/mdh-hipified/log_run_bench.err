@@ -1,0 +1,180 @@
+In file included from main.cu:23:
+./helper_math.h:1476:30: error: use of overloaded operator '/' is ambiguous (with operand types 'float2' (aka 'HIP_vector_type<float, 2>') and 'float2')
+ 1476 |     float2 y = clamp((x - a) / (b - a), 0.0f, 1.0f);
+      |                      ~~~~~~~ ^ ~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:577:65: note: candidate function
+  577 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator/(
+      |                                                                 ^
+./helper_math.h:981:35: note: candidate function
+  981 | inline __host__ __device__ float2 operator/(float2 a, float2 b)
+      |                                   ^
+./helper_math.h:1477:14: error: use of overloaded operator '*' is ambiguous (with operand types 'float2' (aka 'HIP_vector_type<float, 2>') and 'float2')
+ 1477 |     return (y*y*(make_float2(3.0f) - (make_float2(2.0f)*y)));
+      |             ~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:752:35: note: candidate function
+  752 | inline __host__ __device__ float2 operator*(float2 a, float2 b)
+      |                                   ^
+./helper_math.h:1477:56: error: use of overloaded operator '*' is ambiguous (with operand types 'float2' (aka 'HIP_vector_type<float, 2>') and 'float2')
+ 1477 |     return (y*y*(make_float2(3.0f) - (make_float2(2.0f)*y)));
+      |                                       ~~~~~~~~~~~~~~~~~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:752:35: note: candidate function
+  752 | inline __host__ __device__ float2 operator*(float2 a, float2 b)
+      |                                   ^
+./helper_math.h:1481:30: error: use of overloaded operator '/' is ambiguous (with operand types 'float3' (aka 'HIP_vector_type<float, 3>') and 'float3')
+ 1481 |     float3 y = clamp((x - a) / (b - a), 0.0f, 1.0f);
+      |                      ~~~~~~~ ^ ~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:577:65: note: candidate function
+  577 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator/(
+      |                                                                 ^
+./helper_math.h:1004:35: note: candidate function
+ 1004 | inline __host__ __device__ float3 operator/(float3 a, float3 b)
+      |                                   ^
+./helper_math.h:1482:14: error: use of overloaded operator '*' is ambiguous (with operand types 'float3' (aka 'HIP_vector_type<float, 3>') and 'float3')
+ 1482 |     return (y*y*(make_float3(3.0f) - (make_float3(2.0f)*y)));
+      |             ~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:821:35: note: candidate function
+  821 | inline __host__ __device__ float3 operator*(float3 a, float3 b)
+      |                                   ^
+./helper_math.h:1482:56: error: use of overloaded operator '*' is ambiguous (with operand types 'float3' (aka 'HIP_vector_type<float, 3>') and 'float3')
+ 1482 |     return (y*y*(make_float3(3.0f) - (make_float3(2.0f)*y)));
+      |                                       ~~~~~~~~~~~~~~~~~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:821:35: note: candidate function
+  821 | inline __host__ __device__ float3 operator*(float3 a, float3 b)
+      |                                   ^
+./helper_math.h:1486:30: error: use of overloaded operator '/' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+ 1486 |     float4 y = clamp((x - a) / (b - a), 0.0f, 1.0f);
+      |                      ~~~~~~~ ^ ~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:577:65: note: candidate function
+  577 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator/(
+      |                                                                 ^
+./helper_math.h:1029:35: note: candidate function
+ 1029 | inline __host__ __device__ float4 operator/(float4 a, float4 b)
+      |                                   ^
+./helper_math.h:1487:14: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+ 1487 |     return (y*y*(make_float4(3.0f) - (make_float4(2.0f)*y)));
+      |             ~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+./helper_math.h:1487:56: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+ 1487 |     return (y*y*(make_float4(3.0f) - (make_float4(2.0f)*y)));
+      |                                       ~~~~~~~~~~~~~~~~~^~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:100:31: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  100 |       float4 dist = sqrtf( dx * dx + dy * dy + dz * dz );
+      |                            ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:100:41: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  100 |       float4 dist = sqrtf( dx * dx + dy * dy + dz * dz );
+      |                                      ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:100:51: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  100 |       float4 dist = sqrtf( dx * dx + dy * dy + dz * dz );
+      |                                                ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:101:47: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  101 |       v += pre1 * (shared[i * 5 + 3] / dist)  *
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ^
+  102 |            expf( -xkappa * (dist - shared[i * 5 + 4])) /
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:151:31: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  151 |       float4 dist = sqrtf( dx * dx + dy * dy + dz * dz );
+      |                            ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:151:41: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  151 |       float4 dist = sqrtf( dx * dx + dy * dy + dz * dz );
+      |                                      ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:151:51: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  151 |       float4 dist = sqrtf( dx * dx + dy * dy + dz * dz );
+      |                                                ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:152:51: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  152 |       v += pre1 * ( shared[i + 3*lsize] / dist )  *
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ^
+  153 |            expf( -xkappa * (dist - shared[i + 4*lsize])) /
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:202:36: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  202 |       float4 dist = fast_sqrtf( dx * dx + dy * dy + dz * dz );
+      |                                 ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+main.cu:202:46: error: use of overloaded operator '*' is ambiguous (with operand types 'float4' (aka 'HIP_vector_type<float, 4>') and 'float4')
+  202 |       float4 dist = fast_sqrtf( dx * dx + dy * dy + dz * dz );
+      |                                           ~~ ^ ~~
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_hip_vector_types.h:561:65: note: candidate function
+  561 |         friend __HOST_DEVICE__ inline constexpr HIP_vector_type operator*(
+      |                                                                 ^
+./helper_math.h:896:35: note: candidate function
+  896 | inline __host__ __device__ float4 operator*(float4 a, float4 b)
+      |                                   ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -fopenmp -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:52: main.o] Error 1

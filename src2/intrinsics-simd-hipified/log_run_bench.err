@@ -1,0 +1,159 @@
+main.cu:21:8: error: use of undeclared identifier '__vabs2'
+   21 |   r  = __vabs2(a);
+      |        ^
+main.cu:22:8: error: use of undeclared identifier '__vabs4'
+   22 |   r ^= __vabs4(a);
+      |        ^
+main.cu:24:8: error: use of undeclared identifier '__vabsdiffs2'
+   24 |   r ^= __vabsdiffs2(a, b);
+      |        ^
+main.cu:25:8: error: use of undeclared identifier '__vabsdiffs4'
+   25 |   r ^= __vabsdiffs4(a, b);
+      |        ^
+main.cu:26:8: error: use of undeclared identifier '__vabsdiffu2'
+   26 |   r ^= __vabsdiffu2(a, b);
+      |        ^
+main.cu:27:8: error: use of undeclared identifier '__vabsdiffu4'
+   27 |   r ^= __vabsdiffu4(a, b);
+      |        ^
+main.cu:29:8: error: use of undeclared identifier '__vabsss2'; did you mean '__fabsf32'?
+   29 |   r ^= __vabsss2(a);
+      |        ^~~~~~~~~
+      |        __fabsf32
+/usr/include/bits/mathcalls.h:162:1: note: '__fabsf32' declared here
+  162 | __MATHCALLX (fabs,, (_Mdouble_ __x), (__const__));
+      | ^
+/usr/include/math.h:292:3: note: expanded from macro '__MATHCALLX'
+  292 |   __MATHDECLX (_Mdouble_,function,suffix, args, attrib)
+      |   ^
+/usr/include/math.h:295:3: note: expanded from macro '__MATHDECLX'
+  295 |   __MATHDECL_1(type, __CONCAT(__,function),suffix, args) __attribute__ (attrib)
+      |   ^
+/usr/include/math.h:299:3: note: expanded from macro '__MATHDECL_1'
+  299 |   __MATHDECL_1_IMPL(type, function, suffix, args)
+      |   ^
+/usr/include/math.h:297:15: note: expanded from macro '__MATHDECL_1_IMPL'
+  297 |   extern type __MATH_PRECNAME(function,suffix) args __THROW
+      |               ^
+/usr/include/math.h:443:34: note: expanded from macro '__MATH_PRECNAME'
+  443 | # define __MATH_PRECNAME(name,r) name##f32##r
+      |                                  ^
+<scratch space>:64:1: note: expanded from here
+   64 | __fabsf32
+      | ^
+main.cu:29:8: error: reference to __host__ function '__fabsf32' in __global__ function
+   29 |   r ^= __vabsss2(a);
+      |        ^
+/usr/include/bits/mathcalls.h:162:1: note: '__fabsf32' declared here
+  162 | __MATHCALLX (fabs,, (_Mdouble_ __x), (__const__));
+      | ^
+/usr/include/math.h:292:3: note: expanded from macro '__MATHCALLX'
+  292 |   __MATHDECLX (_Mdouble_,function,suffix, args, attrib)
+      |   ^
+/usr/include/math.h:295:3: note: expanded from macro '__MATHDECLX'
+  295 |   __MATHDECL_1(type, __CONCAT(__,function),suffix, args) __attribute__ (attrib)
+      |   ^
+/usr/include/math.h:299:3: note: expanded from macro '__MATHDECL_1'
+  299 |   __MATHDECL_1_IMPL(type, function, suffix, args)
+      |   ^
+/usr/include/math.h:297:15: note: expanded from macro '__MATHDECL_1_IMPL'
+  297 |   extern type __MATH_PRECNAME(function,suffix) args __THROW
+      |               ^
+/usr/include/math.h:443:34: note: expanded from macro '__MATH_PRECNAME'
+  443 | # define __MATH_PRECNAME(name,r) name##f32##r
+      |                                  ^
+<scratch space>:64:1: note: expanded from here
+   64 | __fabsf32
+      | ^
+main.cu:30:8: error: use of undeclared identifier '__vabsss4'; did you mean '__fabsf64'?
+   30 |   r ^= __vabsss4(a);
+      |        ^~~~~~~~~
+      |        __fabsf64
+/usr/include/bits/mathcalls.h:162:1: note: '__fabsf64' declared here
+  162 | __MATHCALLX (fabs,, (_Mdouble_ __x), (__const__));
+      | ^
+/usr/include/math.h:292:3: note: expanded from macro '__MATHCALLX'
+  292 |   __MATHDECLX (_Mdouble_,function,suffix, args, attrib)
+      |   ^
+/usr/include/math.h:295:3: note: expanded from macro '__MATHDECLX'
+  295 |   __MATHDECL_1(type, __CONCAT(__,function),suffix, args) __attribute__ (attrib)
+      |   ^
+/usr/include/math.h:299:3: note: expanded from macro '__MATHDECL_1'
+  299 |   __MATHDECL_1_IMPL(type, function, suffix, args)
+      |   ^
+/usr/include/math.h:297:15: note: expanded from macro '__MATHDECL_1_IMPL'
+  297 |   extern type __MATH_PRECNAME(function,suffix) args __THROW
+      |               ^
+/usr/include/math.h:460:34: note: expanded from macro '__MATH_PRECNAME'
+  460 | # define __MATH_PRECNAME(name,r) name##f64##r
+      |                                  ^
+<scratch space>:319:1: note: expanded from here
+  319 | __fabsf64
+      | ^
+main.cu:30:8: error: reference to __host__ function '__fabsf64' in __global__ function
+   30 |   r ^= __vabsss4(a);
+      |        ^
+/usr/include/bits/mathcalls.h:162:1: note: '__fabsf64' declared here
+  162 | __MATHCALLX (fabs,, (_Mdouble_ __x), (__const__));
+      | ^
+/usr/include/math.h:292:3: note: expanded from macro '__MATHCALLX'
+  292 |   __MATHDECLX (_Mdouble_,function,suffix, args, attrib)
+      |   ^
+/usr/include/math.h:295:3: note: expanded from macro '__MATHDECLX'
+  295 |   __MATHDECL_1(type, __CONCAT(__,function),suffix, args) __attribute__ (attrib)
+      |   ^
+/usr/include/math.h:299:3: note: expanded from macro '__MATHDECL_1'
+  299 |   __MATHDECL_1_IMPL(type, function, suffix, args)
+      |   ^
+/usr/include/math.h:297:15: note: expanded from macro '__MATHDECL_1_IMPL'
+  297 |   extern type __MATH_PRECNAME(function,suffix) args __THROW
+      |               ^
+/usr/include/math.h:460:34: note: expanded from macro '__MATH_PRECNAME'
+  460 | # define __MATH_PRECNAME(name,r) name##f64##r
+      |                                  ^
+<scratch space>:319:1: note: expanded from here
+  319 | __fabsf64
+      | ^
+main.cu:32:8: warning: implicitly declaring library function '__ud2' with type 'void () __attribute__((noreturn)) noexcept' [-Wimplicit-function-declaration]
+   32 |   r ^= __vadd2(a, b);
+      |        ^
+main.cu:32:8: note: include the header <intrin.h> or explicitly provide a declaration for '__ud2'
+main.cu:32:8: error: use of undeclared identifier '__vadd2'; did you mean '__hadd'?
+   32 |   r ^= __vadd2(a, b);
+      |        ^~~~~~~
+      |        __hadd
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_device_functions.h:257:39: note: '__hadd' declared here
+  257 | __device__ static inline unsigned int __hadd(int x, int y) {
+      |                                       ^
+main.cu:33:8: error: use of undeclared identifier '__vadd4'; did you mean '__hadd'?
+   33 |   r ^= __vadd4(a, b);
+      |        ^~~~~~~
+      |        __hadd
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_device_functions.h:257:39: note: '__hadd' declared here
+  257 | __device__ static inline unsigned int __hadd(int x, int y) {
+      |                                       ^
+main.cu:35:8: error: use of undeclared identifier '__vaddss2'
+   35 |   r ^= __vaddss2(a, b);
+      |        ^
+main.cu:36:8: error: use of undeclared identifier '__vaddss4'
+   36 |   r ^= __vaddss4(a, b);
+      |        ^
+main.cu:37:8: error: use of undeclared identifier '__vaddus2'
+   37 |   r ^= __vaddus2(a, b);
+      |        ^
+main.cu:38:8: error: use of undeclared identifier '__vaddus4'
+   38 |   r ^= __vaddus4(a, b);
+      |        ^
+main.cu:40:8: error: use of undeclared identifier '__vavgs2'
+   40 |   r ^= __vavgs2(a, b);
+      |        ^
+main.cu:41:8: error: use of undeclared identifier '__vavgs4'
+   41 |   r ^= __vavgs4(a, b);
+      |        ^
+main.cu:42:8: error: use of undeclared identifier '__vavgu2'
+   42 |   r ^= __vavgu2(a, b);
+      |        ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

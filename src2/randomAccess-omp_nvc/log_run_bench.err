@@ -1,0 +1,35 @@
+HPCC_starts(long long):
+     18, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+     30, Loop not vectorized: unknown
+     36, Loop not vectorized/parallelized: potential early exits
+     44, Generated vector simd code for the loop containing reductions
+main:
+     77, Loop not vectorized/parallelized: not countable
+     98, Generating target enter data map(create: ran[:],Table[:TableSize])
+    101, Loop not vectorized/parallelized: contains call
+    104, #omp target teams distribute parallel for thread_limit(256)
+        104, Generating "nvkernel_main_F1L104_2" GPU kernel
+             Loop parallelized across teams and threads(128), schedule(static)
+    104, Generating implicit map(tofrom:ran[:]) 
+         Loop not vectorized/parallelized: not countable
+    106, #omp target teams distribute parallel for num_teams(1) thread_limit(128)
+        106, Generating "nvkernel_main_F1L106_4" GPU kernel
+        108, Loop parallelized across teams and threads(128), schedule(static)
+    106, Generating implicit map(tofrom:ran[:]) 
+          30, Loop not vectorized: unknown
+          36, Loop not vectorized/parallelized: potential early exits
+          44, Generated vector simd code for the loop containing reductions
+    109, #omp target teams distribute parallel for num_teams(1) thread_limit(128)
+        109, Generating "nvkernel_main_F1L109_6" GPU kernel
+        112, Loop parallelized across teams and threads(128), schedule(static)
+    109, Generating implicit map(tofrom:ran[:]) 
+    116, Loop not vectorized/parallelized: contains a parallel region
+    129, Generating target exit data map(from: Table[:TableSize])
+         Generating target exit data map(delete: ran[:]) finalize
+    130, Loop not vectorized/parallelized: not countable
+    136, Loop not fused: function call before adjacent loop
+         Loop not vectorized: recurrence
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      3, include "chrono"
+         472, Loop not vectorized/parallelized: not countable

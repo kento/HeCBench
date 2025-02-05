@@ -1,0 +1,69 @@
+main.cu:82:10: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   82 |     t0 = __shfl_down_sync(0xffffffffu, minV, c0);
+      |          ^~~~~~~~~~~~~~~~
+      |          __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:83:10: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   83 |     t1 = __shfl_down_sync(0xffffffffu, maxV, c0);
+      |          ^~~~~~~~~~~~~~~~
+      |          __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:101:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+  101 |       t0 = __shfl_down_sync(0xffffffffu, minV, c0);
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:102:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+  102 |       t1 = __shfl_down_sync(0xffffffffu, maxV, c0);
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:133:21: error: use of undeclared identifier '__shfl_up_sync'
+  133 |     unsigned int tp(__shfl_up_sync(0xffffffffu, testSum, c0));
+      |                     ^
+main.cu:144:23: error: use of undeclared identifier '__shfl_up_sync'
+  144 |       unsigned int tp(__shfl_up_sync(0xffffffffu, warpSum, c0));
+      |                       ^
+main.cu:186:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+  186 |       t0 = __shfl_down_sync(0xffffffffu, minV, c1);
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:187:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+  187 |       t1 = __shfl_down_sync(0xffffffffu, maxV, c1);
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+main.cu:231:21: error: use of undeclared identifier '__shfl_up_sync'
+  231 |     unsigned int tp(__shfl_up_sync(0xffffffffu, testSum, c0));
+      |                     ^
+main.cu:242:23: error: use of undeclared identifier '__shfl_up_sync'
+  242 |       unsigned int tp(__shfl_up_sync(0xffffffffu, warpSum, c0));
+      |                       ^
+main.cu:347:22: error: use of undeclared identifier '__shfl_up_sync'
+  347 |     unsigned int tp0(__shfl_up_sync(0xffffffffu, sumVertices, c0));
+      |                      ^
+main.cu:348:22: error: use of undeclared identifier '__shfl_up_sync'
+  348 |     unsigned int tp1(__shfl_up_sync(0xffffffffu, sumTriangles, c0));
+      |                      ^
+main.cu:368:24: error: use of undeclared identifier '__shfl_up_sync'
+  368 |       unsigned int tp0(__shfl_up_sync(0xffffffffu, warpSumVertices, c0));
+      |                        ^
+main.cu:369:24: error: use of undeclared identifier '__shfl_up_sync'
+  369 |       unsigned int tp1(__shfl_up_sync(0xffffffffu, warpSumTriangles, c0));
+      |                        ^
+14 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:52: main.o] Error 1

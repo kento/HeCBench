@@ -1,0 +1,20 @@
+
+Warmup and verify
+Number of keys is 5000000 and the size of each value in bytes is 1
+PASS
+Number of keys is 5000000 and the size of each value in bytes is 2
+PASS
+Number of keys is 5000000 and the size of each value in bytes is 4
+PASS
+Number of keys is 5000000 and the size of each value in bytes is 8
+PASS
+
+Performance evaluation
+Number of keys is 5000000 and the size of each value in bytes is 1
+Average sort time 670.068300 (us)
+Number of keys is 5000000 and the size of each value in bytes is 2
+Average sort time 712.960030 (us)
+Number of keys is 5000000 and the size of each value in bytes is 4
+Average sort time 809.932720 (us)
+Number of keys is 5000000 and the size of each value in bytes is 8
+Average sort time 1029.918540 (us)

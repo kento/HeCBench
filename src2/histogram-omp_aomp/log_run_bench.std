@@ -1,0 +1,7 @@
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c histogram_compare_base.cpp -o histogram_compare_base.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a histogram_compare_base.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main --i=1000 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 980.98 969.98

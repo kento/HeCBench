@@ -1,0 +1,12 @@
+Checking block size 32.
+Checking block size 64.
+Checking block size 128.
+Checking block size 256.
+Checking block size 512.
+All results match. Starting benchmarks.
+
+block_size   32 | time 3.797718 ms
+block_size   64 | time 1.915451 ms
+block_size  128 | time 1.817940 ms
+block_size  256 | time 1.895603 ms
+block_size  512 | time 2.029426 ms

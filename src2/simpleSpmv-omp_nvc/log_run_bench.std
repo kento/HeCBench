@@ -1,0 +1,5 @@
+nvc++  -Wall -I../simpleSpmv-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../simpleSpmv-cuda/main.cpp -o main.o
+nvc++  -Wall -I../simpleSpmv-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c kernels.cpp -o kernels.o
+nvc++  -Wall -I../simpleSpmv-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../simpleSpmv-cuda/utils.cpp -o utils.o
+nvc++  -Wall -I../simpleSpmv-cuda -O3 -Minfo -mp=gpu -gpu=cc70 main.o kernels.o utils.o -o main 
+bash -c "time -p ( ./main 16777216 102400 100 1>log.std 2>log.err ) 2> log.time"

@@ -1,0 +1,8 @@
+nvc++ -x c++  -Wall -I../xsbench-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../xsbench-cuda/Main.cu -o Main.o
+nvc++ -x c++  -Wall -I../xsbench-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../xsbench-cuda/io.cu -o io.o
+nvc++ -x c++  -Wall -I../xsbench-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c Simulation.cpp -o Simulation.o
+nvc++ -x c++  -Wall -I../xsbench-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../xsbench-cuda/GridInit.cu -o GridInit.o
+nvc++ -x c++  -Wall -I../xsbench-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../xsbench-cuda/XSutils.cu -o XSutils.o
+nvc++ -x c++  -Wall -I../xsbench-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../xsbench-cuda/Materials.cu -o Materials.o
+nvc++  -Wall -I../xsbench-cuda -O3 -Minfo -mp=gpu -gpu=cc70 Main.o io.o Simulation.o GridInit.o XSutils.o Materials.o -o XSBench -lm
+bash -c "time -p ( ./XSBench -s large -m event -r 10 1>log.std 2>log.err ) 2> log.time"

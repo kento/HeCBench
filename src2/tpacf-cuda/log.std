@@ -35,11 +35,11 @@ Bin boundaries:
 19 105.159557413365505 6309.573444801930236 -0.261507950414561
 20 166.666666666666657 10000.000000000000000 -0.973044870579824
 ================================================
-Time to compute DD: 0.0131 sec
-Time to compute RRS: 1.8424 sec
-Time to compute DRS: 3.5201 sec
-Time to load data files: 2.7070 sec
-Time to compute DD, RRS, & DRS: 5.3756 sec
-TOTAL time (DD+RRS+DRS+IO): 8.0826 sec
+Time to compute DD: 0.0130 sec
+Time to compute RRS: 1.8227 sec
+Time to compute DRS: 3.5182 sec
+Time to load data files: 2.9874 sec
+Time to compute DD, RRS, & DRS: 5.3539 sec
+TOTAL time (DD+RRS+DRS+IO): 8.3412 sec
 ================================================
-DONE! after 11.764608
+DONE! after 10.700104

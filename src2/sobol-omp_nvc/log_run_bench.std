@@ -1,0 +1,6 @@
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c sobol.cpp -o sobol.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c sobol_gold.cpp -o sobol_gold.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c sobol_gpu.cpp -o sobol_gpu.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c sobol_primitives.cpp -o sobol_primitives.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 sobol.o sobol_gold.o sobol_gpu.o sobol_primitives.o -o SobolQRNG 
+bash -c "time -p ( ./SobolQRNG 1000000 1000 100 1>log.std 2>log.err ) 2> log.time"

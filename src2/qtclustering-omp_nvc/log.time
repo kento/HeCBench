@@ -1,0 +1,4 @@
+bash: line 1: 1648213 Aborted                 (core dumped) ./qtc --size 5 --Verbose > log.std 2> log.err
+real 7.92
+user 3.87
+sys 2.38

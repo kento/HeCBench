@@ -1,0 +1,10 @@
+Number of sites = 50^4
+Executing 1000 iterations with 1 warmups
+Threads per group = 128
+Number of blocks set to 6250000
+Threads per block set to 128
+Total kernel execution time = 3.847907 (s)
+Total GFLOP/s = 1403.360
+Total GByte/s (GPU memory)  = 1039.526
+Total allocation for matrices = 3814.698 MiB
+Approximate memory usage = 3928.938 MiB

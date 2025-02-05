@@ -1,0 +1,3 @@
+main.cu:231: warning: ignoring '#pragma unroll ' [-Wunknown-pragmas]
+  231 |     for (int arg = 0; arg < NARGS; arg++) {
+      | 

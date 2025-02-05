@@ -1,0 +1,4 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c noise.cu -o noise.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 main.o noise.o -o main 
+bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"

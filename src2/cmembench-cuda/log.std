@@ -1,0 +1,3 @@
+PASS	Average kernel execution time (memory access width = 4 bytes): 0.345796 ms
+PASS	Average kernel execution time (memory access width = 8 bytes): 0.418105 ms
+PASS	Average kernel execution time (memory access width = 16 bytes): 0.281263 ms

@@ -1,0 +1,7 @@
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=cublas -c saxpy.c -o saxpy.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=cublas -c hsaxpy.c -o hsaxpy.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=cublas -c asaxpy.c -o asaxpy.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=cublas -c check1ns.c -o check1ns.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=cublas -c wtcalc.c -o wtcalc.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=cublas saxpy.o hsaxpy.o asaxpy.o check1ns.o wtcalc.o -o main 
+bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"

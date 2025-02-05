@@ -1,0 +1,4 @@
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c kernel.cpp -o kernel.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 main.o kernel.o -o main 
+bash -c "time -p ( ./main --deck ../minibude-sycl/data/bm1  --wgsize 256 --iterations 100 1>log.std 2>log.err ) 2> log.time"

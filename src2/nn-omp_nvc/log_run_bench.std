@@ -1,0 +1,4 @@
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c nearestNeighbor.cpp -o nearestNeighbor.o
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c utils.cpp -o utils.o
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 nearestNeighbor.o utils.o -o main 
+bash -c "time -p ( ./main filelist.txt -r 5 -lat 30 -lng 90 -i 10000 -t 1>log.std 2>log.err ) 2> log.time"

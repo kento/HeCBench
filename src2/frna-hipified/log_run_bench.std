@@ -1,0 +1,1 @@
+hipcc  -DINT -std=c++14  -Wall  -O3  -c main.c -o main.o

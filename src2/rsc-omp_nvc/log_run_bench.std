@@ -1,0 +1,5 @@
+nvc++  -Wall  -I../rsc-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -Wall  -I../rsc-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c model_eval.cpp -o model_eval.o
+nvc++  -Wall  -I../rsc-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c ../rsc-cuda/model_fitting.cpp -o model_fitting.o
+nvc++  -Wall  -I../rsc-cuda -O3 -Minfo -mp=gpu -gpu=cc70 main.o model_eval.o model_fitting.o  -o main -lpthread 
+bash -c "time -p ( ./main -m 2000 -f input/vectors.csv -g 512 1>log.std 2>log.err ) 2> log.time"

@@ -1,0 +1,8 @@
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c init.c -o init.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c io.c -o io.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c main.c -o main.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c material.c -o material.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c simulation.c -o simulation.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c utils.c -o utils.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 init.o io.o main.o material.o simulation.o utils.o -o rsbench 
+bash -c "time -p ( ./rsbench -s large -m event 1>log.std 2>log.err ) 2> log.time"

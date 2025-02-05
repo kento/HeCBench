@@ -1,0 +1,4 @@
+bash: line 1: 909444 Segmentation fault      (core dumped) ./main sw4ck.in 100 > log.std 2> log.err
+real 4.96
+user 0.41
+sys 2.33

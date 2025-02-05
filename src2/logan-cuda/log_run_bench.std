@@ -1,0 +1,10 @@
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/main.cu -o src/main.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/seed.cu -o src/seed.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/score.cu -o src/score.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE -c -dc src/logan_functions.cu -o src/logan_functions.o
+nvcc  -std=c++14           -Xcompiler -Wall -Xcompiler -fopenmp           -arch=sm_90 -Isrc  -O3 -maxrregcount=32 -DADAPTABLE src/main.o src/seed.o src/score.o src/logan_functions.o -o main 
+nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+bash -c "../logan-cuda/prepare_data.sh; time -p ( ./main ../logan-cuda/inputs/100k.txt 17 100 1 1>log.std 2>log.err ) 2> log.time"
+pkill nvidia-smi
+../scripts/m.sh
+min max diff memory in [MB] : 2 2732 2730

@@ -1,0 +1,12 @@
+Out of memory allocating 18446744068877682432 bytes of device memory
+Failing in Thread:1
+total/free CUDA memory: 102005473280/100045553664
+Present table dump for device[1]: NVIDIA Tesla GPU 0, compute capability 9.0, threadid=1
+Hint: specify 0x800 bit in NV_ACC_DEBUG for verbose info.
+host:0xffff406e0010 device:0xfff920000000 size:1372000000 presentcount:0+1 line:184 name:h_Vm[:vol]
+allocated block device:0xfff920000000 size:1372000256 thread:1
+Accelerator Fatal Error: call to cuMemAlloc returned error 2 (CUDA_ERROR_OUT_OF_MEMORY): Out of memory
+ File: /hs/work0/home/users/u0001621/git/HeCBench/src2/stencil3d-omp_nvc/main.cpp
+ Function: main:147
+ Line: 184
+

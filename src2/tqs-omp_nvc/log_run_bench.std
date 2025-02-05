@@ -1,0 +1,5 @@
+nvc++  -Wall -I../tqs-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -Wall -I../tqs-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c kernel.cpp -o kernel.o
+nvc++  -Wall -I../tqs-cuda -O3 -Minfo -mp=gpu -gpu=cc70 -c host_task.cpp -o host_task.o
+nvc++  -Wall -I../tqs-cuda -O3 -Minfo -mp=gpu -gpu=cc70 main.o kernel.o host_task.o -o main 
+bash -c "time -p ( ./main -f input/patternsNP100NB512FB25.txt -q 3200 1>log.std 2>log.err ) 2> log.time"

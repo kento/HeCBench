@@ -1,0 +1,12 @@
+reference.h:13: warning: ignoring '#pragma omp parallel' [-Wunknown-pragmas]
+   13 | #pragma omp parallel for
+      | 
+reference.h:23: warning: ignoring '#pragma omp parallel' [-Wunknown-pragmas]
+   23 | #pragma omp parallel for
+      | 
+reference.h:86: warning: ignoring '#pragma omp parallel' [-Wunknown-pragmas]
+   86 | #pragma omp parallel for
+      | 
+reference.h:107: warning: ignoring '#pragma omp parallel' [-Wunknown-pragmas]
+  107 | #pragma omp parallel for
+      | 

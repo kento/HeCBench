@@ -1,0 +1,3 @@
+nvc++  -std=c++11 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
+nvc++  -std=c++11 -Wall -O3 -Minfo -mp=gpu -gpu=cc70 main.o -o main 
+bash -c "time -p ( ./main 10240 163840 64 100 1>log.std 2>log.err ) 2> log.time"

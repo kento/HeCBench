@@ -1,0 +1,6 @@
+"main.cpp", line 681: error: identifier "atoi" is undefined
+    const int repeat = atoi(argv[1]);
+                       ^
+
+1 error detected in the compilation of "main.cpp".
+make: *** [Makefile.NVD:57: main.o] Error 2

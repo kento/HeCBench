@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main -num_systems=8388560 1>log.std 2>log.err 1>>log.std 2>>log.err ) 2> log.time"

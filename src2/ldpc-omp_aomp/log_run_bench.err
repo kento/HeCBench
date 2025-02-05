@@ -1,0 +1,14 @@
+main.cpp:112:7: warning: unused variable 'memorySize_h_compact1' [-Wunused-variable]
+  112 |   int memorySize_h_compact1 = wordSize_h_compact1 * sizeof(h_element);
+      |       ^~~~~~~~~~~~~~~~~~~~~
+main.cpp:113:7: warning: unused variable 'memorySize_h_compact2' [-Wunused-variable]
+  113 |   int memorySize_h_compact2 = wordSize_h_compact2 * sizeof(h_element);
+      |       ^~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+main.cpp:112:7: warning: unused variable 'memorySize_h_compact1' [-Wunused-variable]
+  112 |   int memorySize_h_compact1 = wordSize_h_compact1 * sizeof(h_element);
+      |       ^~~~~~~~~~~~~~~~~~~~~
+main.cpp:113:7: warning: unused variable 'memorySize_h_compact2' [-Wunused-variable]
+  113 |   int memorySize_h_compact2 = wordSize_h_compact2 * sizeof(h_element);
+      |       ^~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.

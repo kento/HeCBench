@@ -1,0 +1,4 @@
+nvc++  -std=c++14 -Wall -I../mriQ-cuda -O3 -Minfo -mp=gpu -gpu=cc70,fastmath -c main.cpp -o main.o
+nvc++  -std=c++14 -Wall -I../mriQ-cuda -O3 -Minfo -mp=gpu -gpu=cc70,fastmath -c ../mriQ-cuda/file.cc -o file.o
+nvc++  -std=c++14 -Wall -I../mriQ-cuda -O3 -Minfo -mp=gpu -gpu=cc70,fastmath main.o file.o -o main 
+bash -c "time -p ( ./main datasets/128x128x128/input/128x128x128.bin output_128 1>log.std 2>log.err ) 2> log.time"

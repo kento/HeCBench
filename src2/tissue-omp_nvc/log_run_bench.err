@@ -1,0 +1,30 @@
+reference(int const*, float const*, float const*, float*, float const*, float const*, int, int, int, int):
+     35, Loop not vectorized/parallelized: not countable
+     45, Loop not vectorized: data dependency
+tissue(int const*, float const*, float const*, float*, float const*, float const*, int, int, int, int):
+     58, #omp target teams distribute parallel for thread_limit(256)
+         58, Generating "nvkernel__Z6tissuePKiPKfS2_PfS2_S2_iiii_F1L58_2" GPU kernel
+         60, Loop parallelized across teams and threads(128), schedule(static)
+     71, Loop not vectorized/parallelized: not countable
+     81, Loop not vectorized: data dependency
+main:
+    112, Loop not vectorized/parallelized: contains call
+    115, Loop not vectorized/parallelized: contains call
+    119, Loop not vectorized/parallelized: contains call
+    133, Generating map(to:h_tisspoints[:98304],h_qt[:32768],h_gbartt[:65536],h_ctprev[:32768],h_ct[:32768],h_gtt[:65536]) 
+    135, Loop not vectorized/parallelized: contains call
+    141, Loop not fused: function call before adjacent loop
+         Loop not vectorized/parallelized: loop count too small
+          24, 2 loops fused
+          35, Loop not fused: complex flow graph
+              Loop not vectorized: unprofitable for target
+          45, Loop unrolled 3 times (completely unrolled)
+          35, Loop not fused: complex flow graph
+              Loop not vectorized: unprofitable for target
+          45, Loop unrolled 3 times (completely unrolled)
+    146, Generating update from(h_ct[:32768])
+    148, Loop not vectorized/parallelized: potential early exits
+    161, Loop not vectorized/parallelized: contains call
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     12, include "chrono"
+         472, Loop not vectorized/parallelized: not countable

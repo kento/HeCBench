@@ -1,0 +1,1 @@
+bash -c "time -p ( ./multimat_FL 6000 6000 1>log.std 2>log.err ) 2> log.time"

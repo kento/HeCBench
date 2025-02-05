@@ -1,0 +1,1 @@
+/opt/nvidia/hpc_sdk/Linux_aarch64/25.1/compilers/bin/nvc++    -c -o main.o main.cpp

@@ -1,0 +1,82 @@
+In file included from main.cpp:43:
+./system_functions.cpp:53:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   53 |   double xtemp[size];
+      |                ^~~~
+./system_functions.cpp:53:16: note: read of non-const variable 'size' is not allowed in a constant expression
+./system_functions.cpp:51:7: note: declared here
+   51 |   int size = system.constants.total_atoms;
+      |       ^
+./system_functions.cpp:54:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   54 |   double ytemp[size];
+      |                ^~~~
+./system_functions.cpp:54:16: note: read of non-const variable 'size' is not allowed in a constant expression
+./system_functions.cpp:51:7: note: declared here
+   51 |   int size = system.constants.total_atoms;
+      |       ^
+./system_functions.cpp:55:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   55 |   double ztemp[size];
+      |                ^~~~
+./system_functions.cpp:55:16: note: read of non-const variable 'size' is not allowed in a constant expression
+./system_functions.cpp:51:7: note: declared here
+   51 |   int size = system.constants.total_atoms;
+      |       ^
+In file included from main.cpp:48:
+./kernels.cpp:52:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   52 |   d_atom H[N]; // host atoms
+      |            ^
+./kernels.cpp:52:12: note: initializer of 'N' is not a constant expression
+./kernels.cpp:34:13: note: declared here
+   34 |   const int N = (int)system.constants.total_atoms;
+      |             ^
+In file included from main.cpp:58:
+./averages.cpp:602:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  602 |     double D[(int)system.proto.size()];
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+./averages.cpp:602:19: note: function parameter 'system' with unknown value cannot be used in a constant expression
+  602 |     double D[(int)system.proto.size()];
+      |                   ^
+./averages.cpp:416:37: note: declared here
+  416 | void calculateObservablesMD(System &system) { 
+      |                                     ^
+5 warnings generated when compiling for gfx90a.
+In file included from main.cpp:43:
+./system_functions.cpp:53:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   53 |   double xtemp[size];
+      |                ^~~~
+./system_functions.cpp:53:16: note: read of non-const variable 'size' is not allowed in a constant expression
+./system_functions.cpp:51:7: note: declared here
+   51 |   int size = system.constants.total_atoms;
+      |       ^
+./system_functions.cpp:54:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   54 |   double ytemp[size];
+      |                ^~~~
+./system_functions.cpp:54:16: note: read of non-const variable 'size' is not allowed in a constant expression
+./system_functions.cpp:51:7: note: declared here
+   51 |   int size = system.constants.total_atoms;
+      |       ^
+./system_functions.cpp:55:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   55 |   double ztemp[size];
+      |                ^~~~
+./system_functions.cpp:55:16: note: read of non-const variable 'size' is not allowed in a constant expression
+./system_functions.cpp:51:7: note: declared here
+   51 |   int size = system.constants.total_atoms;
+      |       ^
+In file included from main.cpp:48:
+./kernels.cpp:52:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   52 |   d_atom H[N]; // host atoms
+      |            ^
+./kernels.cpp:52:12: note: initializer of 'N' is not a constant expression
+./kernels.cpp:34:13: note: declared here
+   34 |   const int N = (int)system.constants.total_atoms;
+      |             ^
+In file included from main.cpp:58:
+./averages.cpp:602:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  602 |     double D[(int)system.proto.size()];
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+./averages.cpp:602:19: note: function parameter 'system' with unknown value cannot be used in a constant expression
+  602 |     double D[(int)system.proto.size()];
+      |                   ^
+./averages.cpp:416:37: note: declared here
+  416 | void calculateObservablesMD(System &system) { 
+      |                                     ^
+5 warnings generated when compiling for host.

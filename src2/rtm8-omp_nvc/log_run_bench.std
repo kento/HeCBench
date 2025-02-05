@@ -1,0 +1,3 @@
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c rtm8.cpp -o rtm8.o
+nvc++  -std=c++14 -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 rtm8.o -o rtm8 
+bash -c "time -p ( ./rtm8 100 1>log.std 2>log.err ) 2> log.time"

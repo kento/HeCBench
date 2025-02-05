@@ -2,7 +2,7 @@
 Copyright (c) 2014-2020, Texas State University. All rights reserved.
 configuration: 493 cities, 24 restarts, d493.tsp input
 thread block size: 128
-Average kernel time: 0.0253 s
-65.738 Gmoves/s
+Average kernel time: 0.0252 s
+65.966 Gmoves/s
 Best found tour length is 37041 with 13747 climbers
 PASS

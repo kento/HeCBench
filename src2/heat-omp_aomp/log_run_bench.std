@@ -1,0 +1,7 @@
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c heat.cpp -o heat.o
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a heat.o -o heat 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./heat 32768 1000 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 18074.60 18063.60

@@ -1,0 +1,2 @@
+Average suffix array construct time (input size = 1000000000): 1.269918 (s)
+checksum = 0x18abcca9fd863d9

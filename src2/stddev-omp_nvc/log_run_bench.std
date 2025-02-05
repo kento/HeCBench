@@ -1,0 +1,3 @@
+nvc++  -Wall -I../stddev-cuda -O3 -Minfo -mp=gpu -gpu=cc70,fastmath -c main.cpp -o main.o
+nvc++  -Wall -I../stddev-cuda -O3 -Minfo -mp=gpu -gpu=cc70,fastmath main.o -o main 
+bash -c "time -p ( ./main 87040 24576 100 1>log.std 2>log.err ) 2> log.time"

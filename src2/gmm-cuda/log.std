@@ -1,0 +1,47 @@
+Parsing input file...File Extension: ata
+Number of events removed to ensure memory alignment 7
+Number of events: 992
+Number of dimensions: 1
+
+Starting with 2000000 cluster(s), will stop at 1 cluster(s).
+Gaussian.cu: epsilon = 0.020699
+Performing EM algorithm on 2000000 clusters.
+
+Likelihood: 1.007849e+03
+
+Rissanen Score: 2.069816e+07
+
+Minimum distance between (0,1). Combining clusters
+
+Final rissanen Score was: 20698158.000000, with 2000000 clusters.
+Summary filename: result.summary
+Results filename: result.results
+Cluster #0
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #1
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+
+Cluster #2
+Probability: 0.000000
+N: 0.000000
+Means: 0.000000 
+
+R Matrix:
+1.000000 
+
+...
+
+Execution time of the cluster function 10.882546 (s)

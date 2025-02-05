@@ -1,0 +1,7 @@
+clang++   -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c MD5Hash.cpp -o MD5Hash.o
+clang++   -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a MD5Hash.o -o MD5Hash 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./MD5Hash 1 500 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 894.65 883.66

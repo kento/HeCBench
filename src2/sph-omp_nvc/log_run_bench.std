@@ -1,0 +1,5 @@
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc70 -c fileio.cpp -o fileio.o
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc70 -c fluid.cpp -o fluid.o
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc70 -c geometry.cpp -o geometry.o
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc70 fileio.o fluid.o geometry.o -o sph 
+bash -c "time -p ( ./sph 1>log.std 2>log.err ) 2> log.time"

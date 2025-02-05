@@ -6,16 +6,16 @@ nghostatoms = 2941
 nsteps = 100 
 nneighs = 26 
 twojmax = 14 
-duration = 1.30316 [sec]
-step time = 13.0316 [msec/step]
+duration = 1.30435 [sec]
+step time = 13.0435 [msec/step]
 
  Individual kernel timings for each step
-   compute_ui = 3.21278 [msec/step]
-   compute_yi = 5.24288 [msec/step]
-   compute_duidrj = 3.34266 [msec/step]
-   compute_deidrj = 0.675995 [msec/step]
-   Total kernel time = 12.4743 [msec/step]
-   Percentage of step time = 95.7235%
+   compute_ui = 3.31667 [msec/step]
+   compute_yi = 5.24439 [msec/step]
+   compute_duidrj = 3.31954 [msec/step]
+   compute_deidrj = 0.669836 [msec/step]
+   Total kernel time = 12.5504 [msec/step]
+   Percentage of step time = 96.2199%
 
-grind time = 0.0065158 [msec/atom-step]
-RMS |Fj| deviation 4.2243e-14 [eV/A]
+grind time = 0.00652174 [msec/atom-step]
+RMS |Fj| deviation 4.22462e-14 [eV/A]

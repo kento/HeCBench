@@ -1,0 +1,4 @@
+nvcc  -DWARP_SIZE=32 -DHALF_WARP_SIZE=16           -std=c++14 -I. -Xcompiler -Wall -arch=sm_60 -O3 -c main.cpp -o main.o
+nvcc  -DWARP_SIZE=32 -DHALF_WARP_SIZE=16           -std=c++14 -I. -Xcompiler -Wall -arch=sm_60 -O3 -c warpsort.cu -o warpsort.o
+nvcc  -DWARP_SIZE=32 -DHALF_WARP_SIZE=16           -std=c++14 -I. -Xcompiler -Wall -arch=sm_60 -O3 main.o warpsort.o -o main 
+bash -c "time -p ( ./main 1000 1>log.std 2>log.err ) 2> log.time"

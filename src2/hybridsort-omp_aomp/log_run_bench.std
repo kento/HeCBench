@@ -1,0 +1,9 @@
+clang++  -std=c++11 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -o hybridsort.o -c hybridsort.c 
+clang++  -std=c++11 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -o bucketsort.o -c bucketsort.c 
+clang++  -std=c++11 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -o mergesort.o -c mergesort.c 
+clang++  -std=c++11 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -o hybridsort    		hybridsort.o 		bucketsort.o                 mergesort.o 		-lm
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./hybridsort r 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 1549.02 1538.02

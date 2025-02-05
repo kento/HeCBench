@@ -1,0 +1,10 @@
+./main -p 1
+Invoking kernel 1 time(s) per measure/checking step
+Open testcase and reference data streams
+the total number of testcases = 5
+Done
+
+Elapsed time: 0.0280677 seconds, average time per testcase (#5): 0.00561354 seconds
+checking output 
+max delta: 0
+PASS

@@ -1,0 +1,1 @@
+nvcc -O3 -std=c++11 -arch=sm_90 -use_fast_math -DDEBUG -c vector.cu -o obj_gpu/vector.o

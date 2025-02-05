@@ -1,0 +1,14 @@
+The number of elements is 33554432
+Running key only test
+seed: -278642091
+synthesized segments # 13349 (max_size: 5000, min_size: 0)
+GPU memory usage: used = 686.19 MB, free = 96593.81 MB, total = 97280.00 MB
+[PASSED] checking keys
+
+Running key-value test
+seed: -278642091
+synthesized segments # 13349 (max_size: 5000, min_size: 0)
+GPU memory usage: used = 942.19 MB, free = 96337.81 MB, total = 97280.00 MB
+Kernel execution time: 0.001975 (s)
+[PASSED] checking keys
+[PASSED] checking vals

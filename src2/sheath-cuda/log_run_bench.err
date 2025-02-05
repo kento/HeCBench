@@ -1,0 +1,4 @@
+main.cu: In function 'bool SolvePotential(double*, double*)':
+main.cu:459:7: warning: 'L2' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  459 |   printf("Gauss-Seidel solver failed to converge, L2=%.3g!\n", L2);
+      |   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

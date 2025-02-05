@@ -1,0 +1,32 @@
+sigmoid(float):
+     26, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+postprocess(float const*, float*, float const*, float const*, float const*, float*, int*, float, float, float, float, int, int, int, int, int, float, float):
+     47, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+     62, Loop not fused: complex flow graph
+         Loop not vectorized: unknown
+main:
+    176, Loop not vectorized/parallelized: contains call
+    177, Loop not vectorized/parallelized: contains call
+    178, Loop not vectorized/parallelized: contains call
+    190, Loop not vectorized/parallelized: contains call
+    193, Generating update to(box_input[:box_size])
+    196, Generating update to(object_counter[:])
+    199, #omp target teams num_teams(feature_size) thread_limit(6)
+        186, Generating map(alloc:box_input[:box_size]) 
+             Generating map(to:cls_input[:cls_size],anchor_bottom_heights[:3]) 
+             Generating map(from:bndbox_output[:bndbox_size]) 
+             Generating map(to:dir_cls_input[:dir_cls_size]) 
+             Generating map(alloc:object_counter[1]) 
+             Generating map(to:anchors[:24]) 
+        199, Generating "nvkernel_main_F1L199_2" GPU kernel
+        201, #omp parallel
+    199, Generating implicit map(tofrom:object_counter[:]) 
+          62, Loop unrolled 2 times (completely unrolled)
+         107, Loop not vectorized/parallelized: contains a parallel region
+    232, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop containing reductions
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     18, include "chrono"
+         472, Loop not vectorized/parallelized: not countable

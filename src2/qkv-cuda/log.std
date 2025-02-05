@@ -1,0 +1,24 @@
+Device 0: NVIDIA GH200 480GB
+enable_tf32: 0
+Using kernel 1
+All results match. Starting benchmarks.
+
+time 16.0272 ms | tflops 0.90
+Device 0: NVIDIA GH200 480GB
+enable_tf32: 0
+Using kernel 2
+All results match. Starting benchmarks.
+
+time 0.4276 ms | tflops 33.90
+Device 0: NVIDIA GH200 480GB
+enable_tf32: 0
+Using kernel 3
+All results match. Starting benchmarks.
+
+time 0.3926 ms | tflops 36.92
+Device 0: NVIDIA GH200 480GB
+enable_tf32: 0
+Using kernel 4
+All results match. Starting benchmarks.
+
+time 0.4642 ms | tflops 31.23

@@ -1,0 +1,17 @@
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c aig_manager.cu -o aig_manager.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c balance.cu -o balance.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c print.cu -o print.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c refactor_core.cu -o refactor_core.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c refactor.cu -o refactor.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c refactor_mffc.cu -o refactor_mffc.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c rewrite.cu -o rewrite.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c strash.cu -o strash.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c truth.cu -o truth.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c command_manager.cu -o command_manager.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  -c main.cu -o main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 -O3 --use_fast_math  aig_manager.o balance.o print.o refactor_core.o refactor.o refactor_mffc.o rewrite.o strash.o truth.o command_manager.o main.o -o main 
+nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+bash -c "tar xf ../logic-rewrite-cuda/benchmarks.tar.bz2; time -p ( ./main -c \"read ../logic-rewrite-cuda/benchmarks/arithmetic/hyp.aig; resyn2; write hyp_resyn2.aig\" 1>log.std 2>log.err ) 2> log.time"
+pkill nvidia-smi
+../scripts/m.sh
+min max diff memory in [MB] : 2 19434 19432

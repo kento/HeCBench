@@ -1,0 +1,7 @@
+ld.lld: error: ../frna-cuda/main.o is incompatible with elf64-x86-64
+ld.lld: error: ../frna-cuda/fbase.o is incompatible with elf64-x86-64
+ld.lld: error: ../frna-cuda/fparam.o is incompatible with elf64-x86-64
+ld.lld: error: ../frna-cuda/util.o is incompatible with elf64-x86-64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++ --driver-mode=g++ -O3 -Llib --hip-link  ../frna-cuda/main.o ../frna-cuda/fbase.o ../frna-cuda/fparam.o ../frna-cuda/util.o frna.o -o "main"
+make: *** [Makefile.AMD:49: main] Error 1

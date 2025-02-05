@@ -1,0 +1,10 @@
+main.cu: In function 'int main(int, char**)':
+main.cu:244:144: warning: passing argument 2 to 'restrict'-qualified parameter aliases with argument 1 [-Wrestrict]
+  244 |     rank_gpu_kernel_4<<<blocks_per_grid_on_rank_4,
+      |                                                                                                                                                ^                                                                                                    
+main.cu:252:144: warning: passing argument 2 to 'restrict'-qualified parameter aliases with argument 1 [-Wrestrict]
+  252 |     rank_gpu_kernel_5<<<blocks_per_grid_on_rank_5,
+      |                                                                                                                                                ^                                                                            
+main.cu:259:116: warning: passing argument 2 to 'restrict'-qualified parameter aliases with argument 1 [-Wrestrict]
+  259 |     rank_gpu_kernel_6<<<blocks_per_grid_on_rank_6,
+      |                                                                                                                    ^                                                                                                    

@@ -1,0 +1,7 @@
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+hipcc  -std=c++14  -Wall  -O3 main.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 0 100000 1>log.std 2>log.err;./main 1 100000 1>>log.std 2>>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 556.88 545.89

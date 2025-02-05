@@ -1,0 +1,4 @@
+Starting [./main]...
+Stream priority range: low: 0 to high: -5
+Elapsed time of kernel launched to high priority stream: 6.829 ms
+Elapsed time of kernel launched to no-priority stream: 6.838 ms

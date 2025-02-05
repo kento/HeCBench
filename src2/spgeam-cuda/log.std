@@ -1,0 +1,3 @@
+Average execution time of cuSparse csr2cscEx2 : 91.582237 (us)
+Computing the reference results..
+spgeam_example test PASSED

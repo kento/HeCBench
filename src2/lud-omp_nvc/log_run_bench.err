@@ -1,0 +1,88 @@
+lud.cpp:
+main:
+     41, Loop not vectorized/parallelized: contains call
+    112, Loop not vectorized/parallelized: contains call
+    115, #omp target teams num_teams(1) thread_limit(16)
+        115, Generating "nvkernel_main_F1L115_2" GPU kernel
+        118, #omp parallel
+          128, Barrier
+          138, Barrier
+          145, Barrier
+        120, Team private (shadow) located in CUDA shared memory
+    123, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    130, Loop not vectorized/parallelized: contains call
+    133, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    141, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    149, Loop not vectorized: data dependency
+         Loop unrolled 8 times
+    157, #omp target teams num_teams(((matrix_dim-i)/16)-1) thread_limit(32)
+        157, Generating "nvkernel_main_F1L157_4" GPU kernel
+        162, #omp parallel
+          198, Barrier
+          215, Barrier
+        167, Team private (peri_row,peri_col,dia) located in CUDA shared memory
+    172, Loop not vectorized: data dependency
+         Loop unrolled 8 times (completely unrolled)
+    178, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    187, Loop not vectorized: data dependency
+         Loop unrolled 8 times (completely unrolled)
+    193, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    203, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    209, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    219, Loop not vectorized: data dependency
+         Loop unrolled 8 times
+    226, Loop not vectorized: data dependency
+    236, #omp target teams num_teams((((matrix_dim-i)/16)-1)*(((matrix_dim-i)/16)-1)) thread_limit(256)
+        236, Generating "nvkernel_main_F1L236_6" GPU kernel
+        240, #omp parallel
+          256, Barrier
+        245, Team private (peri_row,peri_col) located in CUDA shared memory
+    259, Generated vector simd code for the loop containing reductions
+    268, #omp target teams num_teams(1) thread_limit(16)
+        106, Generating map(tofrom:m[:matrix_dim*matrix_dim]) 
+        268, Generating "nvkernel_main_F1L268_8" GPU kernel
+        271, #omp parallel
+          281, Barrier
+          290, Barrier
+          296, Barrier
+        273, Team private (shadow) located in CUDA shared memory
+    276, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    283, Loop not vectorized/parallelized: contains call
+    285, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    292, Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    300, Loop not vectorized: data dependency
+         Loop unrolled 8 times
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      8, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+./common/common.c:
+create_matrix_from_file(float**, char const*, int*):
+     60, Loop not vectorized/parallelized: contains call
+matrix_multiply(float*, float*, float*, int):
+     79, Zero trip check eliminated
+     80, Zero trip check eliminated
+         Loop versioned for possible aliasing
+         Generated vector simd code for the loop
+         Loop unrolled 8 times
+lud_verify(float*, float*, int):
+     94, Generated vector simd code for the loop containing reductions
+    127, Zero trip check eliminated
+         Loop not vectorized/parallelized: contains call
+print_matrix(float*, int):
+    147, Zero trip check eliminated
+         Loop not vectorized/parallelized: contains call
+create_matrix(float**, int):
+    164, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+         Loop unrolled 2 times
+    179, Recognized memory copy idiom

@@ -1,0 +1,5 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -I../include -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -I../include -O3 -c RecursiveGaussianHost.cu -o RecursiveGaussianHost.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -I../include -O3 -c shrUtils.cu -o shrUtils.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -I../include -O3 main.o RecursiveGaussianHost.o shrUtils.o -o main 
+bash -c "time -p ( ./main StoneRGB.ppm 1000 1>log.std 2>log.err ) 2> log.time"

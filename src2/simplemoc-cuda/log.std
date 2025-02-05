@@ -32,7 +32,7 @@ Simulation Complete.
 ================================================================================
                                  RESULTS SUMMARY
 ================================================================================
-Total kernel time:       156.638 seconds
-Device offload time:     156.913 seconds
-Time per Intersection:   0.006 ns
+Total kernel time:       172.036 seconds
+Device offload time:     174.356 seconds
+Time per Intersection:   0.007 ns
 ================================================================================

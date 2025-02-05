@@ -1,0 +1,5 @@
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../haversine-cuda/prepare_data.sh; time -p ( ./main ../haversine-cuda/locations.txt 100 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 788.64 777.65

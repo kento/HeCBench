@@ -1,0 +1,36 @@
+GpuParallel(std::vector<Projectile, std::allocator<Projectile>>&, std::vector<Projectile, std::allocator<Projectile>>&, int):
+     36, #omp target teams distribute parallel for thread_limit(256)
+         33, Generating map(to:obj[:10000000]) 
+             Generating map(from:pObj[:10000000]) 
+         36, Generating "nvkernel__Z11GpuParallelRSt6vectorI10ProjectileSaIS0_EES3_i_F1L36_2" GPU kernel
+         38, Loop parallelized across teams and threads(128), schedule(static)
+     36, Loop not vectorized/parallelized: contains call
+     38, Loop not vectorized/parallelized: not countable
+main:
+     70, Loop not vectorized/parallelized: potential early exits
+Projectile::getangle() const:
+          39, Generating implicit omp declare target routine
+              Generating NVIDIA GPU code
+Projectile::getvelocity() const:
+          40, Generating implicit omp declare target routine
+              Generating NVIDIA GPU code
+Projectile::setRangeandTime(float, float, float, float, float):
+          43, Generating implicit omp declare target routine
+              Generating NVIDIA GPU code
+std::vector<Projectile, std::allocator<Projectile>>::_S_do_relocate(Projectile*, Projectile*, Projectile*, std::allocator<Projectile>&, std::integral_constant<bool, true>):
+        1046, Loop not vectorized: data dependency
+              Loop unrolled 2 times
+std::vector<Projectile, std::allocator<Projectile>>::_S_relocate(Projectile*, Projectile*, Projectile*, std::allocator<Projectile>&):
+         456, Loop not vectorized: data dependency
+              Loop unrolled 2 times
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      7, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+Projectile* std::__relocate_a<Projectile*, Projectile*, std::allocator<Projectile>>(Projectile*, Projectile*, Projectile*, std::allocator<Projectile>&):
+        1031, Loop not vectorized: data dependency
+              Loop unrolled 2 times
+Projectile* std::__relocate_a_1<Projectile*, Projectile*, std::allocator<Projectile>>(Projectile*, Projectile*, Projectile*, std::allocator<Projectile>&):
+      8, include "vector"
+          66, include "stl_uninitialized.h"
+             1031, Loop not vectorized: data dependency
+                   Loop unrolled 2 times

@@ -1,0 +1,106 @@
+> Using Host Allocated (cudaHostAlloc)
+Warmup...
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+Done.
+> Using Host Allocated (cudaHostAlloc)
+
+vector length = 1048576
+Memory allocation (cudaHostAlloc): 0.523419 ms
+cudaHostGetDevicePointer: 0.001984 ms
+Average kernel execution time: 0.037307 ms
+Memory deallocation (cudaFreeHost): 0.185086 ms
+
+vector length = 2097152
+Memory allocation (cudaHostAlloc): 0.933528 ms
+cudaHostGetDevicePointer: 0.002560 ms
+Average kernel execution time: 0.071837 ms
+Memory deallocation (cudaFreeHost): 0.277918 ms
+
+vector length = 4194304
+Memory allocation (cudaHostAlloc): 1.774832 ms
+cudaHostGetDevicePointer: 0.002432 ms
+Average kernel execution time: 0.140746 ms
+Memory deallocation (cudaFreeHost): 0.432124 ms
+
+vector length = 8388608
+Memory allocation (cudaHostAlloc): 3.492768 ms
+cudaHostGetDevicePointer: 0.002464 ms
+Average kernel execution time: 0.279860 ms
+Memory deallocation (cudaFreeHost): 0.771641 ms
+
+vector length = 16777216
+Memory allocation (cudaHostAlloc): 6.952322 ms
+cudaHostGetDevicePointer: 0.010016 ms
+Average kernel execution time: 0.556913 ms
+Memory deallocation (cudaFreeHost): 1.738481 ms
+
+vector length = 33554432
+Memory allocation (cudaHostAlloc): 14.287743 ms
+cudaHostGetDevicePointer: 0.008768 ms
+Average kernel execution time: 1.114156 ms
+Memory deallocation (cudaFreeHost): 2.974309 ms
+
+vector length = 67108864
+Memory allocation (cudaHostAlloc): 29.739701 ms
+cudaHostGetDevicePointer: 0.010816 ms
+Average kernel execution time: 2.238385 ms
+Memory deallocation (cudaFreeHost): 5.202193 ms
+> Using Generic System Paged Memory (malloc)
+Warmup...
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+SUCCESS
+Done.
+> Using Generic System Paged Memory (malloc)
+
+vector length = 1048576
+Memory allocation (cudaHostRegister): 0.491868 ms
+cudaHostGetDevicePointer: 0.002240 ms
+Average kernel execution time: 0.037075 ms
+Memory deallocation (cudaHostUnregister): 0.042624 ms
+
+vector length = 2097152
+Memory allocation (cudaHostRegister): 0.526427 ms
+cudaHostGetDevicePointer: 0.002528 ms
+Average kernel execution time: 0.071735 ms
+Memory deallocation (cudaHostUnregister): 0.040192 ms
+
+vector length = 4194304
+Memory allocation (cudaHostRegister): 1.006743 ms
+cudaHostGetDevicePointer: 0.003040 ms
+Average kernel execution time: 0.142512 ms
+Memory deallocation (cudaHostUnregister): 0.286397 ms
+
+vector length = 8388608
+Memory allocation (cudaHostRegister): 3.251427 ms
+cudaHostGetDevicePointer: 0.004160 ms
+Average kernel execution time: 0.284205 ms
+Memory deallocation (cudaHostUnregister): 0.469212 ms
+
+vector length = 16777216
+Memory allocation (cudaHostRegister): 6.591941 ms
+cudaHostGetDevicePointer: 0.007200 ms
+Average kernel execution time: 0.560888 ms
+Memory deallocation (cudaHostUnregister): 1.098966 ms
+
+vector length = 33554432
+Memory allocation (cudaHostRegister): 13.321992 ms
+cudaHostGetDevicePointer: 0.008864 ms
+Average kernel execution time: 1.112074 ms
+Memory deallocation (cudaHostUnregister): 1.798959 ms
+
+vector length = 67108864
+Memory allocation (cudaHostRegister): 28.168835 ms
+cudaHostGetDevicePointer: 0.010048 ms
+Average kernel execution time: 2.235866 ms
+Memory deallocation (cudaHostUnregister): 2.932550 ms

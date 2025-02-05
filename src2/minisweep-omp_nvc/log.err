@@ -1,0 +1,6 @@
+Failing in Thread:1
+Accelerator Fatal Error: call to cuMemcpyDtoHAsync returned error 700 (CUDA_ERROR_ILLEGAL_ADDRESS): Illegal address during kernel execution
+ File: /hs/work0/home/users/u0001621/git/HeCBench/src2/minisweep-omp_nvc/main.cpp
+ Function: main:15
+ Line: 340
+

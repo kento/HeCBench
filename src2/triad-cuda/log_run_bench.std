@@ -1,0 +1,7 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cpp -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c Option.cpp -o Option.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c OptionParser.cpp -o OptionParser.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c Timer.cpp -o Timer.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c triad.cu -o triad.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 main.o Option.o OptionParser.o Timer.o triad.o -o triad 
+bash -c "time -p ( ./triad --passes 100 -v 1>log.std 2>log.err ) 2> log.time"

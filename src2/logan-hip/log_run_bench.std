@@ -1,0 +1,10 @@
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/main.cu -o src/main.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/seed.cu -o src/seed.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/score.cu -o src/score.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE -c -fgpu-rdc src/logan_functions.cu -o src/logan_functions.o
+hipcc  -std=c++14           -Wall -fopenmp -Isrc  -O3 -DADAPTABLE src/main.o src/seed.o src/score.o src/logan_functions.o -o main -fgpu-rdc --hip-link 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../logan-cuda/prepare_data.sh; time -p ( ./main ../logan-cuda/inputs/100k.txt 17 100 1 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 2532.11 2521.12

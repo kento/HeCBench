@@ -1,0 +1,7 @@
+nvc++  -DFLOAT -Wall -O3 -DOMP_TARGET -Minfo -mp=gpu -gpu=cc70,fastmath -c main.c -o main.o
+nvc++  -DFLOAT -Wall -O3 -DOMP_TARGET -Minfo -mp=gpu -gpu=cc70,fastmath -c base.c -o base.o
+nvc++  -DFLOAT -Wall -O3 -DOMP_TARGET -Minfo -mp=gpu -gpu=cc70,fastmath -c param.c -o param.o
+nvc++  -DFLOAT -Wall -O3 -DOMP_TARGET -Minfo -mp=gpu -gpu=cc70,fastmath -c util.c -o util.o
+nvc++  -DFLOAT -Wall -O3 -DOMP_TARGET -Minfo -mp=gpu -gpu=cc70,fastmath -c prna.cpp -o prna.o
+nvc++  -DFLOAT -Wall -O3 -DOMP_TARGET -Minfo -mp=gpu -gpu=cc70,fastmath main.o base.o param.o util.o prna.o  -o main 
+bash -c "time -p ( ./main ./HIV1-NL43.seq 1>log.std 2>log.err ) 2> log.time"

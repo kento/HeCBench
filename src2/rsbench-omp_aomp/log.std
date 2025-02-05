@@ -36,16 +36,16 @@ Initialization Complete. (0.01 seconds)
                                    SIMULATION
 ================================================================================
 Beginning event based simulation ...
-Kernel initialization, compilation, and execution took 2.53 seconds.
+Kernel initialization, compilation, and execution took 2.54 seconds.
 Simulation Complete.
 ================================================================================
                                      RESULTS
 ================================================================================
 Total Time Statistics (OpenMP Init / JIT Compilation + Simulation Kernel)
-Runtime:               2.525 seconds
+Runtime:               2.536 seconds
 Lookups:               10,200,000
-Lookups/s:             4,039,184
+Lookups/s:             4,022,238
 Simulation Kernel Only Statistics
-Lookups/s:             4,039,237
+Lookups/s:             4,022,315
 Verification checksum: 358389 (Valid)
 ================================================================================

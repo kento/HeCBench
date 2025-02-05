@@ -1,0 +1,7 @@
+hipcc  -std=c++14  -Wall  -O3 -c simulation.cu -o simulation.o
+hipcc  -std=c++14  -Wall  -O3 -c io.cu -o io.o
+hipcc  -std=c++14  -Wall  -O3 -c init.cu -o init.o
+hipcc  -std=c++14  -Wall  -O3 -c material.cu -o material.o
+hipcc  -std=c++14  -Wall  -O3 -c utils.cu -o utils.o
+hipcc  -std=c++14  -Wall  -O3 main.o simulation.o io.o init.o material.o utils.o -o rsbench -lm
+bash -c "time -p ( ./rsbench -s large -m event 1>log.std 2>log.err ) 2> log.time"

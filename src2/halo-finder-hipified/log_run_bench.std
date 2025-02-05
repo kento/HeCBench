@@ -1,0 +1,57 @@
+mkdir -p objs
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/ForceTreeTest.o ForceTreeTest.cxx
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/ParticleDistribute.o ParticleDistribute.cxx
+ar rv objs/libparticle.a objs/ParticleDistribute.o
+a - objs/ParticleDistribute.o
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/ParticleExchange.o ParticleExchange.cxx
+ar rv objs/libparticle.a objs/ParticleExchange.o
+a - objs/ParticleExchange.o
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/InitialExchange.o InitialExchange.cxx
+ar rv objs/libparticle.a objs/InitialExchange.o
+a - objs/InitialExchange.o
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/Message.o Message.cxx
+ar rv objs/libparticle.a objs/Message.o
+a - objs/Message.o
+ranlib objs/libparticle.a
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/ForceLaw.o ForceLaw.cxx
+ar rv objs/libBHForceTree.a objs/ForceLaw.o
+a - objs/ForceLaw.o
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/BHForceTree.o BHForceTree.cxx
+ar rv objs/libBHForceTree.a objs/BHForceTree.o
+a - objs/BHForceTree.o
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/RCOForceTree.o RCOForceTree.cxx
+ar rv objs/libBHForceTree.a objs/RCOForceTree.o
+a - objs/RCOForceTree.o
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/RCBForceTree.o RCBForceTree.cxx
+ar rv objs/libBHForceTree.a objs/RCBForceTree.o
+a - objs/RCBForceTree.o
+hipcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o objs/BGQStep16.o BGQStep16.c
+ar rv objs/libBHForceTree.a objs/BGQStep16.o
+a - objs/BGQStep16.o
+hipcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o objs/BGQCM.o BGQCM.c
+ar rv objs/libBHForceTree.a objs/BGQCM.o
+a - objs/BGQCM.o
+ranlib objs/libBHForceTree.a
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/Partition.o Partition.cxx
+ar rv objs/libpartition.a objs/Partition.o
+a - objs/Partition.o
+ranlib objs/libpartition.a
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/Timings.o Timings.cxx
+ar rv objs/libhalotime.a objs/Timings.o
+a - objs/Timings.o
+hipcc -Idfft -DPENCIL=1 -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -DID_64 -DPOSVEL_32 -DGRID_32 -DLONG_INTEGER  -I. -x hip -Idfft -c -o objs/Timer.o Timer.cxx
+ar rv objs/libhalotime.a objs/Timer.o
+a - objs/Timer.o
+ranlib objs/libhalotime.a
+hipcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o objs/bigchunk.o bigchunk.c
+ar rv objs/libbigchunk.a objs/bigchunk.o
+a - objs/bigchunk.o
+ranlib objs/libbigchunk.a
+hipcc -x c -O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO  -I/usr/include/openmpi-x86_64/ -Idfft -c -o objs/dims-local.o dims-local.c
+hipcc -o objs/ForceTreeTest objs/ForceTreeTest.o objs/libparticle.a objs/libBHForceTree.a objs/libpartition.a objs/libhalotime.a objs/libbigchunk.a objs/dims-local.o -lm -lrt -DUSE_SERIAL_COSMO=1
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./objs/ForceTreeTest 0.5 0.1 10000 0.1 10 N 12 rcb 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 319.37 308.37
+rm objs/Partition.o objs/Message.o objs/Timer.o objs/ForceLaw.o objs/BGQCM.o objs/bigchunk.o objs/RCBForceTree.o objs/BHForceTree.o objs/ParticleExchange.o objs/BGQStep16.o objs/Timings.o objs/ParticleDistribute.o objs/InitialExchange.o objs/RCOForceTree.o

@@ -1,0 +1,25 @@
+motion_device(float*, float*, float*, float*, int**, unsigned long, unsigned long, int, float, unsigned long*, int):
+     79, Loop not vectorized/parallelized: contains call
+     97, Loop not vectorized/parallelized: contains call
+    103, #omp target teams distribute parallel for simd thread_limit(256)
+         91, Generating map(tofrom:particleY[:n_particles]) 
+             Generating map(to:randomY[:?],randomX[:?]) 
+             Generating map(tofrom:map[:MAP_SIZE],particleX[:n_particles]) 
+        103, Generating "nvkernel__Z13motion_devicePfS_S_S_PPimmifPmi_F1L103_2" GPU kernel
+        106, Loop parallelized across teams and threads(128), schedule(static)
+    103, Generating update to(map[:MAP_SIZE],particleY[:n_particles],particleX[:n_particles])
+    106, Loop not vectorized/parallelized: not countable
+    118, Loop not vectorized: data dependency
+    175, Zero trip check eliminated
+         Loop not vectorized: data dependency
+main:
+    201, Loop not vectorized/parallelized: potential early exits
+    222, Recognized memory zero idiom
+    229, Recognized memory zero idiom
+          51, Loop not vectorized/parallelized: potential early exits
+    254, Loop not vectorized/parallelized: contains call
+void print_matrix<int>(int**, unsigned long, unsigned long):
+     51, Loop not vectorized/parallelized: potential early exits
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     30, include "chrono"
+         472, Loop not vectorized/parallelized: not countable

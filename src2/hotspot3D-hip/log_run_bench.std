@@ -1,0 +1,5 @@
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../hotspot3D-cuda/prepare_data.sh; time -p ( ./main 512 8 5000 ../data/hotspot3D/power_512x8 ../data/hotspot3D/temp_512x8 output.out 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 310.46 299.47

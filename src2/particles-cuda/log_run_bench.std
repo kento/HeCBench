@@ -1,0 +1,5 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c bitonicSort.cu -o bitonicSort.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c particles.cu -o particles.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 main.o bitonicSort.o particles.o -o main 
+bash -c "time -p ( ./main 10000 1>log.std 2>log.err ) 2> log.time"

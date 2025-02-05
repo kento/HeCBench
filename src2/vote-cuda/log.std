@@ -1,0 +1,9 @@
+	Running <<Vote.Any>> kernel1 ...
+	kernel execution time: 0.312598 (s)
+	OK
+	Running <<Vote.All>> kernel2 ...
+	kernel execution time: 0.312606 (s)
+	OK
+	Running <<Vote.Any>> kernel3 ...
+	kernel execution time: 0.120306 (s)
+	OK

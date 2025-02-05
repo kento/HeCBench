@@ -1,0 +1,15 @@
+Size =  14 | average kernel execution time: 518.074441 (us)
+test_sort: PASS
+
+Size =  16 | average kernel execution time: 9.278415 (us)
+Size =  32 | average kernel execution time: 9.319819 (us)
+Size =  64 | average kernel execution time: 10.595942 (us)
+Size = 128 | average kernel execution time: 15.523386 (us)
+test_sortInRegisters: PASS
+
+Size =  16 | average kernel execution time: 10.296356 (us)
+Size =  32 | average kernel execution time: 10.299913 (us)
+Size =  64 | average kernel execution time: 14.207920 (us)
+Size = 128 | average kernel execution time: 26.131521 (us)
+test_sortIndicesInRegisters: PASS
+

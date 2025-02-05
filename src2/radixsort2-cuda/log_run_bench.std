@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main -float -keysonly -n=10368709120 1>log.std 2>log.err ) 2> log.time"

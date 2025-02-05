@@ -1,0 +1,49 @@
+random_pages(int, unsigned int*, int):
+     54, Loop not vectorized/parallelized: contains call
+     63, Loop not vectorized/parallelized: contains call
+init_array(float*, int, float):
+     73, Recognized memory set idiom
+maximum_dif(float*, int):
+     96, Generated vector simd code for the loop containing reductions
+         Loop unrolled 8 times
+main:
+    118, Loop not vectorized/parallelized: contains call
+    143, Loop not vectorized/parallelized: not countable
+          54, Loop not vectorized/parallelized: contains call
+          62, Loop not vectorized/parallelized: contains call
+          73, Recognized memory set idiom
+    150, Loop unrolled 1 times (completely unrolled)
+    151, Zero trip check eliminated
+    158, Recognized memory zero idiom
+    172, Loop not vectorized/parallelized: potential early exits
+    173, #omp target teams distribute parallel for thread_limit(block_size)
+        173, Generating "nvkernel_main_F1L173_2" GPU kernel
+        176, Loop parallelized across teams and threads, schedule(static)
+    176, Loop not vectorized/parallelized: not countable
+    178, Generated vector simd code for the loop
+    179, #omp target teams distribute parallel for thread_limit(block_size)
+        179, Generating "nvkernel_main_F1L179_4" GPU kernel
+        182, Loop parallelized across teams and threads, schedule(static)
+    182, Loop not vectorized/parallelized: not countable
+    187, Loop not vectorized: unprofitable for target
+         Loop unrolled 4 times
+          96, Loop not fused: function call before adjacent loop
+              Generated vector simd code for the loop containing reductions
+              Loop unrolled 8 times
+         151, Loop nest collapsed
+    197, #omp target teams distribute parallel for thread_limit(block_size)
+        171, Generating map(to:pages[:n*n],page_ranks[:n],noutlinks[:n]) 
+             Generating map(alloc:maps[:n*n],diffs[:n]) 
+        197, Generating "nvkernel_main_F1L197_6" GPU kernel
+        200, Loop parallelized across teams and threads, schedule(static)
+    197, Generating update from(diffs[:n])
+    200, Loop not vectorized/parallelized: not countable
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     31, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+std::chrono::duration<long, std::ratio<1l, 1l>>::_S_gcd(long, long):
+     31, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+std::chrono::duration<double, std::ratio<1l, 1l>>::_S_gcd(long, long):
+     31, include "chrono"
+         472, Loop not vectorized/parallelized: not countable

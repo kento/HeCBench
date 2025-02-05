@@ -3,15 +3,15 @@ Total 2
 <<<<<<<<<<<
 load file: data/test/291e7331922541cea98122b607d24831.bin
 find points num: 239911
-Average execution time of the voxelization kernel: 28.021940 (us)
+Average execution time of the voxelization kernel: 26.074827 (us)
 valid_num: 85179
-Average execution time of the feature extraction kernel: 15.085644 (us)
+Average execution time of the feature extraction kernel: 14.795636 (us)
 >>>>>>>>>>>
 
 <<<<<<<<<<<
 load file: data/test/3615d82e7e8546fea5f181157f42e30b.bin
 find points num: 267057
-Average execution time of the voxelization kernel: 18.941706 (us)
+Average execution time of the voxelization kernel: 18.305931 (us)
 valid_num: 106004
-Average execution time of the feature extraction kernel: 20.032635 (us)
+Average execution time of the feature extraction kernel: 19.721508 (us)
 >>>>>>>>>>>

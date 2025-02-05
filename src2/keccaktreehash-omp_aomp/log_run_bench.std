@@ -1,0 +1,11 @@
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c KeccakTreeCPU.cpp -o KeccakTreeCPU.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c KeccakTreeGPU.cpp -o KeccakTreeGPU.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c Test.cpp -o Test.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c KeccakF.cpp -o KeccakF.o
+clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a KeccakF.o KeccakTreeCPU.o KeccakTreeGPU.o Test.o main.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 1028.85 1017.86
