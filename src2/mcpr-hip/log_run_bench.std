@@ -1,7 +1,5 @@
-hipcc  -std=c++14 -Wall -I../mcpr-cuda -O3 -c main.cu -o main.o
-hipcc  -std=c++14 -Wall -I../mcpr-cuda -O3 main.o -o main 
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "bunzip2 ../mcpr-cuda/alphas.csv.bz2; time -p ( ./main ../mcpr-cuda/alphas.csv 100  1>log.std 2>log.err ) 2> log.time"
+bash -c "../mcpr-cuda/prepare_data.sh; time -p ( ./main ../mcpr-cuda/alphas.csv 100  1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 340.89 329.90
+min max diff memory in [MB] : 11.00 340.89 329.89
