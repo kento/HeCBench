@@ -1,6 +1,1 @@
-hipcc  -std=c++17 -Wall  -O3 -ffast-math -c aig_manager.cu -o aig_manager.o
-hipcc  -std=c++17 -Wall  -O3 -ffast-math -c balance.cu -o balance.o
-hipcc  -std=c++17 -Wall  -O3 -ffast-math -c print.cu -o print.o
-hipcc  -std=c++17 -Wall  -O3 -ffast-math -c refactor_core.cu -o refactor_core.o
-hipcc  -std=c++17 -Wall  -O3 -ffast-math -c refactor.cu -o refactor.o
 hipcc  -std=c++17 -Wall  -O3 -ffast-math -c refactor_mffc.cu -o refactor_mffc.o

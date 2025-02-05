@@ -1,5 +1,16 @@
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o obj_gpu/main.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c lsqt.cpp -o obj_gpu/lsqt.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c sigma.cpp -o obj_gpu/sigma.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c vector.cpp -o obj_gpu/vector.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c hamiltonian.cpp -o obj_gpu/hamiltonian.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c model.cpp -o obj_gpu/model.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c model_general.cpp -o obj_gpu/model_general.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c model_lattice.cpp -o obj_gpu/model_lattice.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c anderson.cpp -o obj_gpu/anderson.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c charge.cpp -o obj_gpu/charge.o
+clang++ -O3 -DDEBUG -Wall -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a obj_gpu/main.o obj_gpu/lsqt.o obj_gpu/sigma.o obj_gpu/vector.o obj_gpu/hamiltonian.o obj_gpu/model.o obj_gpu/model_general.o obj_gpu/model_lattice.o obj_gpu/anderson.o obj_gpu/charge.o -o lsqt_gpu
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "tar xf ../lsqt-hip/examples.tar.gz; time -p ( ./lsqt_gpu ../lsqt-hip/examples/input.txt 1>log.std 2>log.err ) 2> log.time"
+bash -c "../lsqt-hip/prepare_data.sh; time -p ( ./lsqt_gpu ../lsqt-hip/examples/input.txt 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 2398.43 2387.44
+min max diff memory in [MB] : 10.98 2289.36 2278.38

@@ -1,1 +1,1 @@
-../scripts/m.sh: line 5: warning: command substitution: ignored null byte in input
+cp: '../lr-cuda/assets.tar.gz' and './assets.tar.gz' are the same file

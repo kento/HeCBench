@@ -1,1 +1,4 @@
+hipcc -O3 -std=c++11   -DDEBUG -c main.cu -o obj_gpu/main.o
+hipcc -O3 -std=c++11   -DDEBUG -c lsqt.cu -o obj_gpu/lsqt.o
+hipcc -O3 -std=c++11   -DDEBUG -c sigma.cu -o obj_gpu/sigma.o
 hipcc -O3 -std=c++11   -DDEBUG -c vector.cu -o obj_gpu/vector.o

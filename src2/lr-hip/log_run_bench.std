@@ -1,5 +1,5 @@
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "tar xf ../lr-cuda/assets.tar.gz; time -p ( ./main 500000 0  1>log.std 2>log.err ) 2> log.time"
+bash -c "../lr-cuda/prepare_data.sh; time -p ( ./main 500000 0  1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 287.38 276.39
+min max diff memory in [MB] : 10.98 287.38 276.40

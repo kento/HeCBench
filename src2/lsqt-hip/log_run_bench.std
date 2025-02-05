@@ -1,5 +1,16 @@
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c main.cu -o obj_gpu/main.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c lsqt.cu -o obj_gpu/lsqt.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c sigma.cu -o obj_gpu/sigma.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c vector.cu -o obj_gpu/vector.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c hamiltonian.cu -o obj_gpu/hamiltonian.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c model.cu -o obj_gpu/model.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c model_general.cu -o obj_gpu/model_general.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c model_lattice.cu -o obj_gpu/model_lattice.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c anderson.cu -o obj_gpu/anderson.o
+hipcc -O3 -std=c++11 -ffast-math -DDEBUG -c charge.cu -o obj_gpu/charge.o
+hipcc obj_gpu/main.o obj_gpu/lsqt.o obj_gpu/sigma.o obj_gpu/vector.o obj_gpu/hamiltonian.o obj_gpu/model.o obj_gpu/model_general.o obj_gpu/model_lattice.o obj_gpu/anderson.o obj_gpu/charge.o -o lsqt_gpu
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "tar xf ../lsqt-hip/examples.tar.gz; time -p ( ./lsqt_gpu ../lsqt-hip/examples/input.txt 1>log.std 2>log.err ) 2> log.time"
+bash -c "../lsqt-hip/prepare_data.sh; time -p ( ./lsqt_gpu ../lsqt-hip/examples/input.txt 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 1715.63 1704.64
+min max diff memory in [MB] : 10.98 1791.11 1780.13
