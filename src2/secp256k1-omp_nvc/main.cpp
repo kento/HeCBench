@@ -3,6 +3,7 @@
 #include <string.h>
 #include <chrono>
 #include <omp.h>
+#include <stdlib.h>
 
 
 typedef struct {
