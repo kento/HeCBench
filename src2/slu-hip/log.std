@@ -1,0 +1,14 @@
+Reading matrix...
+Preprocessing matrix...
+Preprocessing time: 72.704193 ms
+Matrix Row: 99340
+Original nonzero: 954163
+Symbolic nonzero: 4008604
+Symbolic time: 17130.9 ms
+CSR time: 44.446 ms
+PredictLU time: 1857.87 ms
+Number of levels: 1492
+Leveling time: 3.727 ms
+Total LU kernel execution time: 130.588 ms
+LU device offload time: 366.036 ms
+Results passed ABFT check.
