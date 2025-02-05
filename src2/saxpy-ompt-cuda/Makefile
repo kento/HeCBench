@@ -7,7 +7,7 @@ CC        = nvc++
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
-SM        = cc70
+SM        = cc90
 LAUNCHER  =
 
 #===============================================================================
@@ -25,7 +25,7 @@ obj = $(source:.c=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -Wall 
+CFLAGS := $(EXTRA_CFLAGS) #-Wall 
 
 # Linker Flags
 LDFLAGS = 
