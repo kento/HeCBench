@@ -1,5 +1,9 @@
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c shrUtils.cpp -o shrUtils.o
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c MedianFilterHost.cpp -o MedianFilterHost.o
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o shrUtils.o MedianFilterHost.o -o main 
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "tar xf ../medianfilter-cuda/data.tar.bz2; time -p ( ./main ../medianfilter-cuda/data/SierrasRGB.ppm 10000 1>log.std 2>log.err ) 2> log.time"
+bash -c "../medianfilter-cuda/prepare_data.sh; time -p ( ./main ../medianfilter-cuda/data/SierrasRGB.ppm 10000 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 911.42 900.43
+min max diff memory in [MB] : 10.98 911.41 900.43

@@ -1,0 +1,38 @@
+shrUtils.cu(86): warning #550-D: variable "szNumWritten" was set but never used
+      size_t szNumWritten = 0;
+             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+shrUtils.cu: In function 'int shrLogV(int, int, const char*, va_list)':
+shrUtils.cu:86:10: warning: variable 'szNumWritten' set but not used [-Wunused-but-set-variable]
+   86 |     size_t szNumWritten = 0;
+      |          ^~~~~~~~~~~~
+MedianFilterHost.cu(52): warning #186-D: pointless comparison of unsigned integer with zero
+            if ((x > 0) && ((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                                       ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+MedianFilterHost.cu(67): warning #186-D: pointless comparison of unsigned integer with zero
+            if (((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                            ^
+
+MedianFilterHost.cu(82): warning #186-D: pointless comparison of unsigned integer with zero
+            if ((x < (uiWidth - 1)) && ((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                                                   ^
+
+MedianFilterHost.cu(52): warning #186-D: pointless comparison of unsigned integer with zero
+            if ((x > 0) && ((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                                       ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+MedianFilterHost.cu(67): warning #186-D: pointless comparison of unsigned integer with zero
+            if (((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                            ^
+
+MedianFilterHost.cu(82): warning #186-D: pointless comparison of unsigned integer with zero
+            if ((x < (uiWidth - 1)) && ((y + iRow) >= 0) && ((y + iRow) < uiHeight))
+                                                   ^
+

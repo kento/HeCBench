@@ -1,5 +1,9 @@
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+hipcc  -std=c++14  -Wall  -O3 -c shrUtils.cu -o shrUtils.o
+hipcc  -std=c++14  -Wall  -O3 -c MedianFilterHost.cu -o MedianFilterHost.o
+hipcc  -std=c++14  -Wall  -O3 main.o shrUtils.o MedianFilterHost.o -o main 
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "tar xf ../medianfilter-cuda/data.tar.bz2; time -p ( ./main ../medianfilter-cuda/data/SierrasRGB.ppm 10000 1>log.std 2>log.err ) 2> log.time"
+bash -c "../medianfilter-cuda/prepare_data.sh; time -p ( ./main ../medianfilter-cuda/data/SierrasRGB.ppm 10000 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 302.07 291.08
+min max diff memory in [MB] : 10.98 302.06 291.08
