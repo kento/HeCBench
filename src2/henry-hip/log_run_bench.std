@@ -1,5 +1,7 @@
+hipcc  -std=c++14 -Wall -O3 -ffast-math -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -O3 -ffast-math main.o -o main 
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "tar xf ../henry-cuda/data.tar.gz; time -p ( ./main ../henry-cuda/IRMOF-1.cssr 1000 1>log.std 2>log.err ) 2> log.time"
+bash -c "../henry-cuda/prepare_data.sh; time -p ( ./main ../henry-cuda/IRMOF-1.cssr 1000 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 289.51 278.52
+min max diff memory in [MB] : 10.98 289.50 278.52
