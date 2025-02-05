@@ -35,7 +35,7 @@
 | jaccard | 2.9 | 4.2 | build err | -- | -- |
 | jacobi | 0.6 | 0.3 | build err | 0.6 | 0.9 |
 | jenkins-hash | 10.0 | 10.2 | 10.2 | 10.0 | 10.8 |
-| kalman | 10.8 | 11.2 | 11.2 | | 11.4 |
+| kalman | 10.8 | 11.2 | 11.2 | exe err | 11.4 |
 | keccaktreehash | 0.7 | 0.4 | 0.4 | 0.7 | 1.0 |
 | keogh | 3.6 | 3.5 | 3.5 | 5.8 | 5.7 |
 | kernelLaunch | 0.6 | 0.3 | 0.3 | 0.6 | 0.8 |

@@ -22,7 +22,8 @@ do
 	    fi
 	    if [ "$c1"  = "" ]; then
 		c2=`grep -i error $dir/log.err`
-		if [ "$c2"  = "" ]; then
+                c3=`grep "core dumped" $dir/log.time`
+                if [ "$c2"  = "" -a "$c3" = "" ]; then
 		    time=`grep real $dir/log.time | awk '{print $NF}'`
 		else
 		    time="exe err"

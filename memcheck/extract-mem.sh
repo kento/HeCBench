@@ -25,7 +25,8 @@ do
 	    fi
 	    if [ "$c1"  = "" ]; then
 		c2=`grep -i error $dir/log.err`
-		if [ "$c2"  = "" ]; then
+                c3=`grep "core dumped" $dir/log.time`
+                if [ "$c2"  = "" -a "$c3" = "" ]; then
 		    if [ -e $dir/log_run_bench.mem ]; then
 			mem=`cat $dir/log_run_bench.mem | awk '{printf("%5.1f\n",$(NF-1)/1E3)}'`
 		    else
