@@ -1,3 +1,2 @@
-Usage: ./main <number of slices> <slice size> <implementations> <repeat>
-implementation 0: naive
-implementation 1: optimized
+Average kernel execution time: 44.270844 (ms)
+PASS
