@@ -175,10 +175,10 @@
 | gelu | 57.17 | 58.40 | 57.65 | -- | -- |
 | gemv | 9.81 | 78.16 | | -- | -- |
 | geodesic | 6.50 | 3.86 | 3.89 | 6.75 | 33.38 |
-| gerbil | build err | 3.07 | build err | -- | -- |
+| gerbil | 8.27 | 3.07 | build err | -- | -- |
 | gibbs | 4.53 | 0.71 | 0.70 | -- | -- |
 | glu | 156.41 | 47.28 | 118.35 | 1593.95 | |
-| gmm | 286.01 | 1.92 | 1.03 | 341.15 | |
+| gmm | 299.98 | 1.92 | 1.03 | 341.15 | |
 | goulash | 142.59 | 11.60 | 11.66 | 147.07 | 20.07 |
 | gpp | 6.83 | 238.43 | 234.16 | 6.99 | 29.99 |
 | graphB+ | 7.21 | | | -- | -- |
@@ -191,7 +191,7 @@
 | hausdorff | 32.73 | 14.40 | 14.40 | 33.92 | 15.64 |
 | haversine | 6.46 | 1.82 | 2.05 | 6.52 | 2.09 |
 | hbc | 15.68 | 15.25 | 15.24 | -- | -- |
-| heartwall | 4.66 | 1.97 | 1.93 | exe err | 2.28 |
+| heartwall | 4.66 | 1.97 | 1.93 | build err | build err |
 | heat | 26.31 | 39.72 | 40.25 | 91.48 | 69.52 |
 | heat2d | build err | 11.03 | 11.50 | 248.52 | 329.62 |
 | hellinger | 7.13 | 6.61 | 6.62 | 6.87 | 6.52 |
@@ -207,7 +207,7 @@
 | hwt1d | 6.12 | 3.39 | 3.38 | 6.37 | 3.49 |
 | hybridsort | 17.40 | 16.39 | 16.36 | 18.47 | 16.45 |
 | hypterm | 10.92 | 15.09 | 15.05 | 18.92 | 20.58 |
-| idivide | 7.92 | 6.23 | 6.23 | 11.15 | exe err |
+| idivide | 7.92 | 6.23 | 6.23 | 11.15 | build err |
 | interleave | 6.02 | 3.46 | 3.47 | 5.30 | 3.39 |
 | interval | 13.69 | 46.97 | 47.13 | 17.43 | 55.60 |
 | intrinsics-cast | 69.54 | 9.21 | 9.22 | -- | -- |
@@ -219,7 +219,7 @@
 | jaccard | 197.46 | 254.66 | build err | -- | -- |
 | jacobi | 4.81 | 8.91 | build err | 5.41 | 5.95 |
 | jenkins-hash | 9.50 | 5.10 | 5.11 | 9.52 | 5.57 |
-| kalman | 22.24 | 27.92 | 27.93 | 17.54 | 10.03 |
+| kalman | 22.24 | 27.92 | 27.93 | build err | 10.03 |
 | keccaktreehash | 11.89 | 10.72 | 10.73 | 12.56 | 10.70 |
 | keogh | 215.35 | 85.25 | 85.27 | 50.03 | 87.04 |
 | kernelLaunch | 16.18 | 19.08 | 19.23 | 75.33 | 104.50 |
@@ -229,7 +229,7 @@
 | kurtosis | 22.01 | 167.60 | 167.91 | -- | -- |
 | lanczos | 6.90 | 3.34 | 3.26 | 7.31 | 3.91 |
 | langevin | 73.86 | 10.60 | 12.36 | 74.80 | 16.99 |
-| langford | 4.89 | 2.58 | 2.59 | build err | exe err |
+| langford | 4.89 | 2.58 | 2.59 | build err | build err |
 | laplace | 5.84 | 4.45 | 4.45 | 9.40 | 21.52 |
 | laplace3d | 95.07 | 18.61 | 17.75 | 56.92 | 22.79 |
 | lavaMD | 104.12 | 61.88 | 61.77 | 194.21 | 55.93 |
@@ -238,14 +238,14 @@
 | lci | 19.97 | 8.41 | 8.41 | 4.37 | 7.82 |
 | lda | 5.36 | 2.07 | 2.07 | build err | 14.90 |
 | ldpc | 7.08 | 5.98 | 5.98 | 12.12 | 17.04 |
-| lebesgue | 8.34 | 35.07 | | 6.62 | 36.22 |
+| lebesgue | 8.34 | 35.07 | 18.50 | 6.62 | 36.22 |
 | leukocyte | 4.76 | 1.16 | 1.02 | 6.07 | 1.15 |
 | lfib4 | 188.11 | 31.34 | 28.44 | -- | -- |
 | libor | 4.75 | 1.28 | 1.28 | 5.20 | 1.74 |
 | lid-driven-cavity | 12.87 | 14.53 | 14.57 | 26.01 | 48.17 |
 | lif | 133.75 | 76.25 | 76.29 | 150.82 | 80.63 |
-| linearprobing | 106.78 | 76.77 | 76.54 | build err | exe err |
-| log2 | 6.85 | 1.27 | 1.28 | exe err | 1.78 |
+| linearprobing | 106.78 | 76.77 | 76.54 | build err | build err |
+| log2 | 6.85 | 1.27 | 1.28 | build err | 1.78 |
 | logan | 10.75 | 15.29 | 15.64 | -- | -- |
 | logic-resim | 8.50 | 7.53 | 7.52 | -- | -- |
 | logic-rewrite | 52.42 | build err | build err | -- | -- |
@@ -376,7 +376,7 @@
 | romberg | 4.41 | 1.13 | 1.10 | 4.76 | build err |
 | rotary | 4.32 | 0.75 | build err | -- | -- |
 | rowwiseMoments | build err | 2.43 | 2.43 | -- | -- |
-| rsbench | 4.66 | | | build err | 2.70 |
+| rsbench | 4.66 | 3.73 | 3.74 | build err | 2.71 |
 | rsc | 4.57 | 0.83 | 0.81 | build err | build err |
 | rsmt | 9.23 | -- | | -- | -- |
 | rtm8 | 6.17 | 3.83 | 3.96 | 6.15 | 4.58 |
@@ -425,65 +425,65 @@
 | split | 54.90 | 1.25 | 1.25 | 200.12 | build err |
 | spm | 181.14 | 2.14 | 2.14 | 177.96 | build err |
 | spmm | 12.19 | 7.19 | build err | -- | -- |
-| spmv | | 6.13 | build err | -- | -- |
-| spnnz | | 107.65 | build err | -- | -- |
-| sps2d | | 118.14 | build err | -- | -- |
-| spsm | 1498.82 | 117.88 | build err | -- | -- |
-| spsort | | 104.18 | build err | -- | -- |
-| sptrsv | 4.83 | 1.67 | 1.70 | | build err |
-| srad | 4.51 | 0.54 | 0.54 | | build err |
-| ss | 9.15 | 6.31 | 6.31 | | 922.90 |
-| ssim | | 6.72 | build err | -- | -- |
-| sss | 34.06 | build err | build err | -- | -- |
-| sssp | 11.50 | 13.96 | 14.11 | -- | -- |
-| stddev | | 24.36 | 33.47 | | build err |
-| stencil1d | | 1.99 | 1.99 | | |
-| stencil3d | | 6.76 | 6.70 | | 1.32 |
-| streamCreateCopyDestroy | | 17.13 | 17.18 | -- | -- |
-| streamOrderedAllocation | | 18.78 | 19.47 | -- | -- |
-| streamPriority | | 2.84 | 1.44 | -- | -- |
-| streamUM | | 24.85 | build err | -- | -- |
-| streamcluster | | 4.05 | 4.03 | | build err |
-| stsg | | build err | build err | -- | -- |
-| su3 | | 2.28 | 2.28 | | build err |
-| surfel | | 10.46 | 10.46 | | 179.57 |
-| svd3x3 | 6.47 | 2.76 | 2.86 | 6.41 | 10.93 |
-| sw4ck | | 25.07 | 24.92 | | 193.21 |
-| swish | | 2.86 | 2.15 | | build err |
-| tensorAccessor | | 17.51 | 17.51 | -- | -- |
-| tensorT | | 1.81 | 1.82 | | 7.44 |
-| testSNAP | 12.34 | 5.85 | 5.72 | 11.41 | 0.50 |
-| thomas | | 17.48 | 17.45 | | 23.93 |
-| threadfence | | 0.87 | 0.85 | | build err |
-| tissue | | 21.07 | 21.06 | | build err |
-| tonemapping | | 11.44 | 11.67 | | 3.98 |
-| tpacf | 13.75 | 15.83 | build err | -- | -- |
-| tqs | | 1.64 | 1.66 | | build err |
-| triad | | 1.42 | 1.42 | | build err |
-| tridiagonal | | 27.51 | 27.29 | | build err |
-| tsa | | 1.95 | 1.78 | | build err |
-| tsne | | build err | build err | -- | -- |
-| tsp | 6.97 | 10.86 | 14.42 | | build err |
-| unfold | | 0.62 | build err | -- | -- |
-| urng | 4.68 | 0.45 | 0.45 | 4.57 | 0.79 |
-| vanGenuchten | | 5.64 | 5.62 | | build err |
-| vmc | | 1.85 | 1.85 | | build err |
-| vol2col | | 10.06 | 10.03 | | build err |
-| vote | | 12.21 | build err | -- | -- |
-| voxelization | 12.44 | 94.03 | 94.03 | -- | -- |
-| warpexchange | 5.47 | 0.66 | build err | -- | -- |
-| warpsort | | 1.20 | build err | -- | -- |
-| wedford | | 15.38 | build err | -- | -- |
-| winograd | | 0.96 | 0.96 | | 3.51 |
-| wlcpow | | 8.22 | 7.90 | | build err |
-| wmma | 18.97 | 5.04 | build err | -- | -- |
-| word2vec | 15.05 | build err | build err | -- | -- |
-| wordcount | | 9.01 | 9.01 | 21.18 | 8.53 |
-| wsm5 | | 9.75 | 9.73 | | build err |
-| wyllie | 759.88 | 3.43 | 3.42 | | 3.09 |
-| xlqc | | build err | build err | | build err |
-| xsbench | 51.69 | 55.05 | 43.60 | | 27.78 |
-| zerocopy | | 114.24 | 988.62 | -- | -- |
-| zeropoint | | 1.96 | 1.97 | | build err |
-| zmddft | | 3.77 | 3.78 | | 3.10 |
-| zoom | | 8.17 | 8.14 | -- | -- |
+| spmv | 2523.57 | 6.13 | build err | -- | -- |
+| spnnz | 337.97 | 107.65 | build err | -- | -- |
+| sps2d | 1636.62 | 118.14 | build err | -- | -- |
+| spsm | 1589.51 | 117.88 | build err | -- | -- |
+| spsort | 492.54 | 104.18 | build err | -- | -- |
+| sptrsv | 4.80 | 1.67 | 1.70 | 4.78 | build err |
+| srad | 49.28 | 0.54 | 0.54 | build err | build err |
+| ss | 8.94 | 6.31 | 6.31 | 20.59 | 922.90 |
+| ssim | 6.04 | 6.72 | build err | -- | -- |
+| sss | build err | build err | build err | -- | -- |
+| sssp | 11.17 | 13.96 | 14.11 | -- | -- |
+| stddev | 49.52 | 24.36 | 33.47 | 52.98 | build err |
+| stencil1d | 7.50 | 1.99 | 1.99 | build err | |
+| stencil3d | 20.34 | 6.76 | 6.70 | build err | 1.32 |
+| streamCreateCopyDestroy | 5.74 | 17.13 | 17.18 | -- | -- |
+| streamOrderedAllocation | 6.60 | 18.78 | 19.47 | -- | -- |
+| streamPriority | 4.65 | 2.84 | 1.44 | -- | -- |
+| streamUM | 43.61 | 24.85 | build err | -- | -- |
+| streamcluster | 20.98 | 4.05 | 4.03 | | build err |
+| stsg | build err | build err | build err | -- | -- |
+| su3 | 9.93 | 2.28 | 2.28 | 25.95 | build err |
+| surfel | 2178.24 | 10.46 | 10.46 | 2425.75 | 179.57 |
+| svd3x3 | 6.07 | 2.76 | 2.86 | 6.07 | 10.93 |
+| sw4ck | 6.43 | 25.07 | 24.92 | build err | 193.21 |
+| swish | 31.77 | 2.86 | 2.15 | 2873.54 | build err |
+| tensorAccessor | 435.84 | 17.51 | 17.51 | -- | -- |
+| tensorT | 4.64 | 1.81 | 1.82 | 4.84 | 7.44 |
+| testSNAP | 5.77 | 5.85 | 5.72 | 6.07 | 0.50 |
+| thomas | 1573.13 | 17.48 | 17.45 | 1390.69 | 23.93 |
+| threadfence | 34.79 | 0.87 | 0.85 | 37.17 | build err |
+| tissue | 13.77 | 21.07 | 21.06 | 15.19 | build err |
+| tonemapping | 5.15 | 11.44 | 11.67 | 5.03 | 3.98 |
+| tpacf | 12.33 | 15.83 | build err | -- | -- |
+| tqs | 4.38 | 1.64 | 1.66 | build err | build err |
+| triad | 4.45 | 1.42 | 1.42 | 4.53 | build err |
+| tridiagonal | 91.46 | 27.51 | 27.29 | 161.09 | build err |
+| tsa | build err | 1.95 | 1.78 | build err | build err |
+| tsne | build err | build err | build err | -- | -- |
+| tsp | 6.72 | 10.86 | 14.42 | build err | build err |
+| unfold | 39.14 | 0.62 | build err | -- | -- |
+| urng | 4.21 | 0.45 | 0.45 | 4.36 | 0.79 |
+| vanGenuchten | 31.55 | 5.64 | 5.62 | 44.96 | build err |
+| vmc | 4.60 | 1.85 | 1.85 | build err | build err |
+| vol2col | 8.24 | 10.06 | 10.03 | 7.95 | build err |
+| vote | 5.56 | 12.21 | build err | -- | -- |
+| voxelization | 11.93 | 94.03 | 94.03 | -- | -- |
+| warpexchange | 234.40 | 0.66 | build err | -- | -- |
+| warpsort | 5.79 | 1.20 | build err | -- | -- |
+| wedford | 198.58 | 15.38 | build err | -- | -- |
+| winograd | 4.70 | 0.96 | 0.96 | 4.82 | 3.51 |
+| wlcpow | 6.25 | 8.22 | 7.90 | 16.99 | build err |
+| wmma | 103.29 | 5.04 | build err | -- | -- |
+| word2vec | 13.15 | build err | build err | -- | -- |
+| wordcount | 21.50 | 9.01 | 9.01 | 20.92 | 8.53 |
+| wsm5 | 7.28 | 9.75 | 9.73 | 9.99 | build err |
+| wyllie | 778.67 | 3.43 | 3.42 | | 3.09 |
+| xlqc | build err | build err | build err | build err | build err |
+| xsbench | 48.31 | 55.05 | 43.60 | 6.98 | 27.78 |
+| zerocopy | 21.70 | 114.24 | 988.62 | -- | -- |
+| zeropoint | 46.11 | 1.96 | 1.97 | 3035.48 | build err |
+| zmddft | 4.46 | 3.77 | 3.78 | 18.94 | 3.10 |
+| zoom | 40.79 | 8.17 | 8.14 | -- | -- |

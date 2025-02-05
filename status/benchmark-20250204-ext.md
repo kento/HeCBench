@@ -175,10 +175,10 @@
 | gelu | 57.17 | 58.40 | 57.65 | -- | -- |![gelu](SVGs/gelu.svg) |
 | gemv | 9.81 | 78.16 | | -- | -- |![gemv](SVGs/gemv.svg) |
 | geodesic | 6.50 | 3.86 | 3.89 | 6.75 | 33.38 |![geodesic](SVGs/geodesic.svg) |
-| gerbil | build err | 3.07 | build err | -- | -- |![gerbil](SVGs/gerbil.svg) |
+| gerbil | 8.27 | 3.07 | build err | -- | -- |![gerbil](SVGs/gerbil.svg) |
 | gibbs | 4.53 | 0.71 | 0.70 | -- | -- |![gibbs](SVGs/gibbs.svg) |
 | glu | 156.41 | 47.28 | 118.35 | 1593.95 | |![glu](SVGs/glu.svg) |
-| gmm | 286.01 | 1.92 | 1.03 | 341.15 | |![gmm](SVGs/gmm.svg) |
+| gmm | 299.98 | 1.92 | 1.03 | 341.15 | |![gmm](SVGs/gmm.svg) |
 | goulash | 142.59 | 11.60 | 11.66 | 147.07 | 20.07 |![goulash](SVGs/goulash.svg) |
 | gpp | 6.83 | 238.43 | 234.16 | 6.99 | 29.99 |![gpp](SVGs/gpp.svg) |
 | graphB+ | 7.21 | | | -- | -- |![graphB+](SVGs/graphB+.svg) |
@@ -191,7 +191,7 @@
 | hausdorff | 32.73 | 14.40 | 14.40 | 33.92 | 15.64 |![hausdorff](SVGs/hausdorff.svg) |
 | haversine | 6.46 | 1.82 | 2.05 | 6.52 | 2.09 |![haversine](SVGs/haversine.svg) |
 | hbc | 15.68 | 15.25 | 15.24 | -- | -- |![hbc](SVGs/hbc.svg) |
-| heartwall | 4.66 | 1.97 | 1.93 | exe err | 2.28 |![heartwall](SVGs/heartwall.svg) |
+| heartwall | 4.66 | 1.97 | 1.93 | build err | build err |![heartwall](SVGs/heartwall.svg) |
 | heat | 26.31 | 39.72 | 40.25 | 91.48 | 69.52 |![heat](SVGs/heat.svg) |
 | heat2d | build err | 11.03 | 11.50 | 248.52 | 329.62 |![heat2d](SVGs/heat2d.svg) |
 | hellinger | 7.13 | 6.61 | 6.62 | 6.87 | 6.52 |![hellinger](SVGs/hellinger.svg) |
@@ -207,7 +207,7 @@
 | hwt1d | 6.12 | 3.39 | 3.38 | 6.37 | 3.49 |![hwt1d](SVGs/hwt1d.svg) |
 | hybridsort | 17.40 | 16.39 | 16.36 | 18.47 | 16.45 |![hybridsort](SVGs/hybridsort.svg) |
 | hypterm | 10.92 | 15.09 | 15.05 | 18.92 | 20.58 |![hypterm](SVGs/hypterm.svg) |
-| idivide | 7.92 | 6.23 | 6.23 | 11.15 | exe err |![idivide](SVGs/idivide.svg) |
+| idivide | 7.92 | 6.23 | 6.23 | 11.15 | build err |![idivide](SVGs/idivide.svg) |
 | interleave | 6.02 | 3.46 | 3.47 | 5.30 | 3.39 |![interleave](SVGs/interleave.svg) |
 | interval | 13.69 | 46.97 | 47.13 | 17.43 | 55.60 |![interval](SVGs/interval.svg) |
 | intrinsics-cast | 69.54 | 9.21 | 9.22 | -- | -- |![intrinsics-cast](SVGs/intrinsics-cast.svg) |
@@ -219,7 +219,7 @@
 | jaccard | 197.46 | 254.66 | build err | -- | -- |![jaccard](SVGs/jaccard.svg) |
 | jacobi | 4.81 | 8.91 | build err | 5.41 | 5.95 |![jacobi](SVGs/jacobi.svg) |
 | jenkins-hash | 9.50 | 5.10 | 5.11 | 9.52 | 5.57 |![jenkins-hash](SVGs/jenkins-hash.svg) |
-| kalman | 22.24 | 27.92 | 27.93 | 17.54 | 10.03 |![kalman](SVGs/kalman.svg) |
+| kalman | 22.24 | 27.92 | 27.93 | build err | 10.03 |![kalman](SVGs/kalman.svg) |
 | keccaktreehash | 11.89 | 10.72 | 10.73 | 12.56 | 10.70 |![keccaktreehash](SVGs/keccaktreehash.svg) |
 | keogh | 215.35 | 85.25 | 85.27 | 50.03 | 87.04 |![keogh](SVGs/keogh.svg) |
 | kernelLaunch | 16.18 | 19.08 | 19.23 | 75.33 | 104.50 |![kernelLaunch](SVGs/kernelLaunch.svg) |
@@ -229,7 +229,7 @@
 | kurtosis | 22.01 | 167.60 | 167.91 | -- | -- |![kurtosis](SVGs/kurtosis.svg) |
 | lanczos | 6.90 | 3.34 | 3.26 | 7.31 | 3.91 |![lanczos](SVGs/lanczos.svg) |
 | langevin | 73.86 | 10.60 | 12.36 | 74.80 | 16.99 |![langevin](SVGs/langevin.svg) |
-| langford | 4.89 | 2.58 | 2.59 | build err | exe err |![langford](SVGs/langford.svg) |
+| langford | 4.89 | 2.58 | 2.59 | build err | build err |![langford](SVGs/langford.svg) |
 | laplace | 5.84 | 4.45 | 4.45 | 9.40 | 21.52 |![laplace](SVGs/laplace.svg) |
 | laplace3d | 95.07 | 18.61 | 17.75 | 56.92 | 22.79 |![laplace3d](SVGs/laplace3d.svg) |
 | lavaMD | 104.12 | 61.88 | 61.77 | 194.21 | 55.93 |![lavaMD](SVGs/lavaMD.svg) |
@@ -238,14 +238,14 @@
 | lci | 19.97 | 8.41 | 8.41 | 4.37 | 7.82 |![lci](SVGs/lci.svg) |
 | lda | 5.36 | 2.07 | 2.07 | build err | 14.90 |![lda](SVGs/lda.svg) |
 | ldpc | 7.08 | 5.98 | 5.98 | 12.12 | 17.04 |![ldpc](SVGs/ldpc.svg) |
-| lebesgue | 8.34 | 35.07 | | 6.62 | 36.22 |![lebesgue](SVGs/lebesgue.svg) |
+| lebesgue | 8.34 | 35.07 | 18.50 | 6.62 | 36.22 |![lebesgue](SVGs/lebesgue.svg) |
 | leukocyte | 4.76 | 1.16 | 1.02 | 6.07 | 1.15 |![leukocyte](SVGs/leukocyte.svg) |
 | lfib4 | 188.11 | 31.34 | 28.44 | -- | -- |![lfib4](SVGs/lfib4.svg) |
 | libor | 4.75 | 1.28 | 1.28 | 5.20 | 1.74 |![libor](SVGs/libor.svg) |
 | lid-driven-cavity | 12.87 | 14.53 | 14.57 | 26.01 | 48.17 |![lid-driven-cavity](SVGs/lid-driven-cavity.svg) |
 | lif | 133.75 | 76.25 | 76.29 | 150.82 | 80.63 |![lif](SVGs/lif.svg) |
-| linearprobing | 106.78 | 76.77 | 76.54 | build err | exe err |![linearprobing](SVGs/linearprobing.svg) |
-| log2 | 6.85 | 1.27 | 1.28 | exe err | 1.78 |![log2](SVGs/log2.svg) |
+| linearprobing | 106.78 | 76.77 | 76.54 | build err | build err |![linearprobing](SVGs/linearprobing.svg) |
+| log2 | 6.85 | 1.27 | 1.28 | build err | 1.78 |![log2](SVGs/log2.svg) |
 | logan | 10.75 | 15.29 | 15.64 | -- | -- |![logan](SVGs/logan.svg) |
 | logic-resim | 8.50 | 7.53 | 7.52 | -- | -- |![logic-resim](SVGs/logic-resim.svg) |
 | logic-rewrite | 52.42 | build err | build err | -- | -- |![logic-rewrite](SVGs/logic-rewrite.svg) |
@@ -376,7 +376,7 @@
 | romberg | 4.41 | 1.13 | 1.10 | 4.76 | build err |![romberg](SVGs/romberg.svg) |
 | rotary | 4.32 | 0.75 | build err | -- | -- |![rotary](SVGs/rotary.svg) |
 | rowwiseMoments | build err | 2.43 | 2.43 | -- | -- |![rowwiseMoments](SVGs/rowwiseMoments.svg) |
-| rsbench | 4.66 | | | build err | 2.70 |![rsbench](SVGs/rsbench.svg) |
+| rsbench | 4.66 | 3.73 | 3.74 | build err | 2.71 |![rsbench](SVGs/rsbench.svg) |
 | rsc | 4.57 | 0.83 | 0.81 | build err | build err |![rsc](SVGs/rsc.svg) |
 | rsmt | 9.23 | -- | | -- | -- |![rsmt](SVGs/rsmt.svg) |
 | rtm8 | 6.17 | 3.83 | 3.96 | 6.15 | 4.58 |![rtm8](SVGs/rtm8.svg) |
@@ -425,65 +425,65 @@
 | split | 54.90 | 1.25 | 1.25 | 200.12 | build err |![split](SVGs/split.svg) |
 | spm | 181.14 | 2.14 | 2.14 | 177.96 | build err |![spm](SVGs/spm.svg) |
 | spmm | 12.19 | 7.19 | build err | -- | -- |![spmm](SVGs/spmm.svg) |
-| spmv | | 6.13 | build err | -- | -- |![spmv](SVGs/spmv.svg) |
-| spnnz | | 107.65 | build err | -- | -- |![spnnz](SVGs/spnnz.svg) |
-| sps2d | | 118.14 | build err | -- | -- |![sps2d](SVGs/sps2d.svg) |
-| spsm | 1498.82 | 117.88 | build err | -- | -- |![spsm](SVGs/spsm.svg) |
-| spsort | | 104.18 | build err | -- | -- |![spsort](SVGs/spsort.svg) |
-| sptrsv | 4.83 | 1.67 | 1.70 | | build err |![sptrsv](SVGs/sptrsv.svg) |
-| srad | 4.51 | 0.54 | 0.54 | | build err |![srad](SVGs/srad.svg) |
-| ss | 9.15 | 6.31 | 6.31 | | 922.90 |![ss](SVGs/ss.svg) |
-| ssim | | 6.72 | build err | -- | -- |![ssim](SVGs/ssim.svg) |
-| sss | 34.06 | build err | build err | -- | -- |![sss](SVGs/sss.svg) |
-| sssp | 11.50 | 13.96 | 14.11 | -- | -- |![sssp](SVGs/sssp.svg) |
-| stddev | | 24.36 | 33.47 | | build err |![stddev](SVGs/stddev.svg) |
-| stencil1d | | 1.99 | 1.99 | | |![stencil1d](SVGs/stencil1d.svg) |
-| stencil3d | | 6.76 | 6.70 | | 1.32 |![stencil3d](SVGs/stencil3d.svg) |
-| streamCreateCopyDestroy | | 17.13 | 17.18 | -- | -- |![streamCreateCopyDestroy](SVGs/streamCreateCopyDestroy.svg) |
-| streamOrderedAllocation | | 18.78 | 19.47 | -- | -- |![streamOrderedAllocation](SVGs/streamOrderedAllocation.svg) |
-| streamPriority | | 2.84 | 1.44 | -- | -- |![streamPriority](SVGs/streamPriority.svg) |
-| streamUM | | 24.85 | build err | -- | -- |![streamUM](SVGs/streamUM.svg) |
-| streamcluster | | 4.05 | 4.03 | | build err |![streamcluster](SVGs/streamcluster.svg) |
-| stsg | | build err | build err | -- | -- |![stsg](SVGs/stsg.svg) |
-| su3 | | 2.28 | 2.28 | | build err |![su3](SVGs/su3.svg) |
-| surfel | | 10.46 | 10.46 | | 179.57 |![surfel](SVGs/surfel.svg) |
-| svd3x3 | 6.47 | 2.76 | 2.86 | 6.41 | 10.93 |![svd3x3](SVGs/svd3x3.svg) |
-| sw4ck | | 25.07 | 24.92 | | 193.21 |![sw4ck](SVGs/sw4ck.svg) |
-| swish | | 2.86 | 2.15 | | build err |![swish](SVGs/swish.svg) |
-| tensorAccessor | | 17.51 | 17.51 | -- | -- |![tensorAccessor](SVGs/tensorAccessor.svg) |
-| tensorT | | 1.81 | 1.82 | | 7.44 |![tensorT](SVGs/tensorT.svg) |
-| testSNAP | 12.34 | 5.85 | 5.72 | 11.41 | 0.50 |![testSNAP](SVGs/testSNAP.svg) |
-| thomas | | 17.48 | 17.45 | | 23.93 |![thomas](SVGs/thomas.svg) |
-| threadfence | | 0.87 | 0.85 | | build err |![threadfence](SVGs/threadfence.svg) |
-| tissue | | 21.07 | 21.06 | | build err |![tissue](SVGs/tissue.svg) |
-| tonemapping | | 11.44 | 11.67 | | 3.98 |![tonemapping](SVGs/tonemapping.svg) |
-| tpacf | 13.75 | 15.83 | build err | -- | -- |![tpacf](SVGs/tpacf.svg) |
-| tqs | | 1.64 | 1.66 | | build err |![tqs](SVGs/tqs.svg) |
-| triad | | 1.42 | 1.42 | | build err |![triad](SVGs/triad.svg) |
-| tridiagonal | | 27.51 | 27.29 | | build err |![tridiagonal](SVGs/tridiagonal.svg) |
-| tsa | | 1.95 | 1.78 | | build err |![tsa](SVGs/tsa.svg) |
-| tsne | | build err | build err | -- | -- |![tsne](SVGs/tsne.svg) |
-| tsp | 6.97 | 10.86 | 14.42 | | build err |![tsp](SVGs/tsp.svg) |
-| unfold | | 0.62 | build err | -- | -- |![unfold](SVGs/unfold.svg) |
-| urng | 4.68 | 0.45 | 0.45 | 4.57 | 0.79 |![urng](SVGs/urng.svg) |
-| vanGenuchten | | 5.64 | 5.62 | | build err |![vanGenuchten](SVGs/vanGenuchten.svg) |
-| vmc | | 1.85 | 1.85 | | build err |![vmc](SVGs/vmc.svg) |
-| vol2col | | 10.06 | 10.03 | | build err |![vol2col](SVGs/vol2col.svg) |
-| vote | | 12.21 | build err | -- | -- |![vote](SVGs/vote.svg) |
-| voxelization | 12.44 | 94.03 | 94.03 | -- | -- |![voxelization](SVGs/voxelization.svg) |
-| warpexchange | 5.47 | 0.66 | build err | -- | -- |![warpexchange](SVGs/warpexchange.svg) |
-| warpsort | | 1.20 | build err | -- | -- |![warpsort](SVGs/warpsort.svg) |
-| wedford | | 15.38 | build err | -- | -- |![wedford](SVGs/wedford.svg) |
-| winograd | | 0.96 | 0.96 | | 3.51 |![winograd](SVGs/winograd.svg) |
-| wlcpow | | 8.22 | 7.90 | | build err |![wlcpow](SVGs/wlcpow.svg) |
-| wmma | 18.97 | 5.04 | build err | -- | -- |![wmma](SVGs/wmma.svg) |
-| word2vec | 15.05 | build err | build err | -- | -- |![word2vec](SVGs/word2vec.svg) |
-| wordcount | | 9.01 | 9.01 | 21.18 | 8.53 |![wordcount](SVGs/wordcount.svg) |
-| wsm5 | | 9.75 | 9.73 | | build err |![wsm5](SVGs/wsm5.svg) |
-| wyllie | 759.88 | 3.43 | 3.42 | | 3.09 |![wyllie](SVGs/wyllie.svg) |
-| xlqc | | build err | build err | | build err |![xlqc](SVGs/xlqc.svg) |
-| xsbench | 51.69 | 55.05 | 43.60 | | 27.78 |![xsbench](SVGs/xsbench.svg) |
-| zerocopy | | 114.24 | 988.62 | -- | -- |![zerocopy](SVGs/zerocopy.svg) |
-| zeropoint | | 1.96 | 1.97 | | build err |![zeropoint](SVGs/zeropoint.svg) |
-| zmddft | | 3.77 | 3.78 | | 3.10 |![zmddft](SVGs/zmddft.svg) |
-| zoom | | 8.17 | 8.14 | -- | -- |![zoom](SVGs/zoom.svg) |
+| spmv | 2523.57 | 6.13 | build err | -- | -- |![spmv](SVGs/spmv.svg) |
+| spnnz | 337.97 | 107.65 | build err | -- | -- |![spnnz](SVGs/spnnz.svg) |
+| sps2d | 1636.62 | 118.14 | build err | -- | -- |![sps2d](SVGs/sps2d.svg) |
+| spsm | 1589.51 | 117.88 | build err | -- | -- |![spsm](SVGs/spsm.svg) |
+| spsort | 492.54 | 104.18 | build err | -- | -- |![spsort](SVGs/spsort.svg) |
+| sptrsv | 4.80 | 1.67 | 1.70 | 4.78 | build err |![sptrsv](SVGs/sptrsv.svg) |
+| srad | 49.28 | 0.54 | 0.54 | build err | build err |![srad](SVGs/srad.svg) |
+| ss | 8.94 | 6.31 | 6.31 | 20.59 | 922.90 |![ss](SVGs/ss.svg) |
+| ssim | 6.04 | 6.72 | build err | -- | -- |![ssim](SVGs/ssim.svg) |
+| sss | build err | build err | build err | -- | -- |![sss](SVGs/sss.svg) |
+| sssp | 11.17 | 13.96 | 14.11 | -- | -- |![sssp](SVGs/sssp.svg) |
+| stddev | 49.52 | 24.36 | 33.47 | 52.98 | build err |![stddev](SVGs/stddev.svg) |
+| stencil1d | 7.50 | 1.99 | 1.99 | build err | |![stencil1d](SVGs/stencil1d.svg) |
+| stencil3d | 20.34 | 6.76 | 6.70 | build err | 1.32 |![stencil3d](SVGs/stencil3d.svg) |
+| streamCreateCopyDestroy | 5.74 | 17.13 | 17.18 | -- | -- |![streamCreateCopyDestroy](SVGs/streamCreateCopyDestroy.svg) |
+| streamOrderedAllocation | 6.60 | 18.78 | 19.47 | -- | -- |![streamOrderedAllocation](SVGs/streamOrderedAllocation.svg) |
+| streamPriority | 4.65 | 2.84 | 1.44 | -- | -- |![streamPriority](SVGs/streamPriority.svg) |
+| streamUM | 43.61 | 24.85 | build err | -- | -- |![streamUM](SVGs/streamUM.svg) |
+| streamcluster | 20.98 | 4.05 | 4.03 | | build err |![streamcluster](SVGs/streamcluster.svg) |
+| stsg | build err | build err | build err | -- | -- |![stsg](SVGs/stsg.svg) |
+| su3 | 9.93 | 2.28 | 2.28 | 25.95 | build err |![su3](SVGs/su3.svg) |
+| surfel | 2178.24 | 10.46 | 10.46 | 2425.75 | 179.57 |![surfel](SVGs/surfel.svg) |
+| svd3x3 | 6.07 | 2.76 | 2.86 | 6.07 | 10.93 |![svd3x3](SVGs/svd3x3.svg) |
+| sw4ck | 6.43 | 25.07 | 24.92 | build err | 193.21 |![sw4ck](SVGs/sw4ck.svg) |
+| swish | 31.77 | 2.86 | 2.15 | 2873.54 | build err |![swish](SVGs/swish.svg) |
+| tensorAccessor | 435.84 | 17.51 | 17.51 | -- | -- |![tensorAccessor](SVGs/tensorAccessor.svg) |
+| tensorT | 4.64 | 1.81 | 1.82 | 4.84 | 7.44 |![tensorT](SVGs/tensorT.svg) |
+| testSNAP | 5.77 | 5.85 | 5.72 | 6.07 | 0.50 |![testSNAP](SVGs/testSNAP.svg) |
+| thomas | 1573.13 | 17.48 | 17.45 | 1390.69 | 23.93 |![thomas](SVGs/thomas.svg) |
+| threadfence | 34.79 | 0.87 | 0.85 | 37.17 | build err |![threadfence](SVGs/threadfence.svg) |
+| tissue | 13.77 | 21.07 | 21.06 | 15.19 | build err |![tissue](SVGs/tissue.svg) |
+| tonemapping | 5.15 | 11.44 | 11.67 | 5.03 | 3.98 |![tonemapping](SVGs/tonemapping.svg) |
+| tpacf | 12.33 | 15.83 | build err | -- | -- |![tpacf](SVGs/tpacf.svg) |
+| tqs | 4.38 | 1.64 | 1.66 | build err | build err |![tqs](SVGs/tqs.svg) |
+| triad | 4.45 | 1.42 | 1.42 | 4.53 | build err |![triad](SVGs/triad.svg) |
+| tridiagonal | 91.46 | 27.51 | 27.29 | 161.09 | build err |![tridiagonal](SVGs/tridiagonal.svg) |
+| tsa | build err | 1.95 | 1.78 | build err | build err |![tsa](SVGs/tsa.svg) |
+| tsne | build err | build err | build err | -- | -- |![tsne](SVGs/tsne.svg) |
+| tsp | 6.72 | 10.86 | 14.42 | build err | build err |![tsp](SVGs/tsp.svg) |
+| unfold | 39.14 | 0.62 | build err | -- | -- |![unfold](SVGs/unfold.svg) |
+| urng | 4.21 | 0.45 | 0.45 | 4.36 | 0.79 |![urng](SVGs/urng.svg) |
+| vanGenuchten | 31.55 | 5.64 | 5.62 | 44.96 | build err |![vanGenuchten](SVGs/vanGenuchten.svg) |
+| vmc | 4.60 | 1.85 | 1.85 | build err | build err |![vmc](SVGs/vmc.svg) |
+| vol2col | 8.24 | 10.06 | 10.03 | 7.95 | build err |![vol2col](SVGs/vol2col.svg) |
+| vote | 5.56 | 12.21 | build err | -- | -- |![vote](SVGs/vote.svg) |
+| voxelization | 11.93 | 94.03 | 94.03 | -- | -- |![voxelization](SVGs/voxelization.svg) |
+| warpexchange | 234.40 | 0.66 | build err | -- | -- |![warpexchange](SVGs/warpexchange.svg) |
+| warpsort | 5.79 | 1.20 | build err | -- | -- |![warpsort](SVGs/warpsort.svg) |
+| wedford | 198.58 | 15.38 | build err | -- | -- |![wedford](SVGs/wedford.svg) |
+| winograd | 4.70 | 0.96 | 0.96 | 4.82 | 3.51 |![winograd](SVGs/winograd.svg) |
+| wlcpow | 6.25 | 8.22 | 7.90 | 16.99 | build err |![wlcpow](SVGs/wlcpow.svg) |
+| wmma | 103.29 | 5.04 | build err | -- | -- |![wmma](SVGs/wmma.svg) |
+| word2vec | 13.15 | build err | build err | -- | -- |![word2vec](SVGs/word2vec.svg) |
+| wordcount | 21.50 | 9.01 | 9.01 | 20.92 | 8.53 |![wordcount](SVGs/wordcount.svg) |
+| wsm5 | 7.28 | 9.75 | 9.73 | 9.99 | build err |![wsm5](SVGs/wsm5.svg) |
+| wyllie | 778.67 | 3.43 | 3.42 | | 3.09 |![wyllie](SVGs/wyllie.svg) |
+| xlqc | build err | build err | build err | build err | build err |![xlqc](SVGs/xlqc.svg) |
+| xsbench | 48.31 | 55.05 | 43.60 | 6.98 | 27.78 |![xsbench](SVGs/xsbench.svg) |
+| zerocopy | 21.70 | 114.24 | 988.62 | -- | -- |![zerocopy](SVGs/zerocopy.svg) |
+| zeropoint | 46.11 | 1.96 | 1.97 | 3035.48 | build err |![zeropoint](SVGs/zeropoint.svg) |
+| zmddft | 4.46 | 3.77 | 3.78 | 18.94 | 3.10 |![zmddft](SVGs/zmddft.svg) |
+| zoom | 40.79 | 8.17 | 8.14 | -- | -- |![zoom](SVGs/zoom.svg) |
