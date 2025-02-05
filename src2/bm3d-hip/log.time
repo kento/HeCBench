@@ -1,4 +1,3 @@
-bash: line 1: 3096333 Aborted                 (core dumped) ./main ../bm3d-cuda/noised-bufferfly-20.png denoised.png 20 color ../bm3d-cuda/bufferfly.png > log.std 2> log.err
-real 0.06
-user 0.02
-sys 0.02
+real 6.96
+user 6.65
+sys 0.27
