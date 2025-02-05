@@ -1,10 +1,5 @@
-clang++  -std=c++14 -Wall -I../hogbom-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ../hogbom-cuda/main.cpp -o main.o
-clang++  -std=c++14 -Wall -I../hogbom-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c kernels.cpp -o kernels.o
-clang++  -std=c++14 -Wall -I../hogbom-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ../hogbom-cuda/reference.cpp -o reference.o
-clang++  -std=c++14 -Wall -I../hogbom-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c ../hogbom-cuda/timer.cpp -o timer.o
-clang++  -std=c++14 -Wall -I../hogbom-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o kernels.o reference.o timer.o -o main 
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "bunzip2 ../hogbom-cuda/data/*4096*bz2; time -p ( ./main ../hogbom-cuda/data/dirty_4096.img ../hogbom-cuda/data/psf_4096.img 1000 1>log.std 2>log.err ) 2> log.time"
+bash -c "../hogbom-cuda/prepare_data.sh; time -p ( ./main ../hogbom-cuda/data/dirty_4096.img ../hogbom-cuda/data/psf_4096.img 1000 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 11.00 1028.87 1017.87
+min max diff memory in [MB] : 11.00 1028.89 1017.89
