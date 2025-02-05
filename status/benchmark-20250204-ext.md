@@ -12,12 +12,12 @@
 | all-pairs-distance | 6.19 | 22.04 | 21.94 | 20.97 | 3.41 |![all-pairs-distance](SVGs/all-pairs-distance.svg) |
 | allreduce | | | | -- | -- |![allreduce](SVGs/allreduce.svg) |
 | amgmk | 4.53 | 0.75 | 0.74 | 4.52 | 0.80 |![amgmk](SVGs/amgmk.svg) |
-| ans | 7.25 | | | 6.10 | |![ans](SVGs/ans.svg) |
+| ans | 7.25 | | | exe err | |![ans](SVGs/ans.svg) |
 | aobench | 4.48 | 0.48 | 0.48 | 7.60 | 1.53 |![aobench](SVGs/aobench.svg) |
-| aop | 8.77 | 34.59 | | 306.19 | 0.86 |![aop](SVGs/aop.svg) |
+| aop | 8.77 | 34.59 | | 306.19 | exe err |![aop](SVGs/aop.svg) |
 | asmooth | 18.28 | 12.71 | 13.61 | 13.83 | |![asmooth](SVGs/asmooth.svg) |
 | assert | 4.36 | exe err | exe err | -- | -- |![assert](SVGs/assert.svg) |
-| asta | 6.24 | 3.67 | 3.69 | 12.83 | 0.34 |![asta](SVGs/asta.svg) |
+| asta | 6.24 | 3.67 | 3.69 | 12.83 | exe err |![asta](SVGs/asta.svg) |
 | atan2 | 5.30 | 0.76 | 0.76 | 5.37 | |![atan2](SVGs/atan2.svg) |
 | atomicAggregate | 7.63 | 5.48 | | -- | -- |![atomicAggregate](SVGs/atomicAggregate.svg) |
 | atomicCAS | 17.72 | 14.55 | 15.02 | -- | -- |![atomicCAS](SVGs/atomicCAS.svg) |
@@ -54,18 +54,18 @@
 | blas-gemmStridedBatched | 20.18 | 21.54 | | -- | -- |![blas-gemmStridedBatched](SVGs/blas-gemmStridedBatched.svg) |
 | blockAccess | 5.76 | 8.15 | 8.13 | -- | -- |![blockAccess](SVGs/blockAccess.svg) |
 | blockexchange | 33.67 | | | -- | -- |![blockexchange](SVGs/blockexchange.svg) |
-| bm3d | 0.14 | 0.06 | 0.04 | -- | -- |![bm3d](SVGs/bm3d.svg) |
+| bm3d | exe err | exe err | exe err | -- | -- |![bm3d](SVGs/bm3d.svg) |
 | bmf | 5.99 | 7.26 | | -- | -- |![bmf](SVGs/bmf.svg) |
-| bn | 6.33 | 10.18 | 10.23 | 6.72 | |![bn](SVGs/bn.svg) |
+| bn | 6.33 | exe err | exe err | exe err | |![bn](SVGs/bn.svg) |
 | bonds | 14.44 | 19.26 | 19.28 | 16.35 | 15.18 |![bonds](SVGs/bonds.svg) |
 | boxfilter | 8.75 | 9.19 | | 11.78 | 37.43 |![boxfilter](SVGs/boxfilter.svg) |
 | bscan | 9.54 | 1.78 | 0.44 | -- | -- |![bscan](SVGs/bscan.svg) |
-| bsearch | 743.47 | 4.61 | 4.61 | 72.35 | 34.57 |![bsearch](SVGs/bsearch.svg) |
+| bsearch | 743.47 | 4.61 | 4.61 | exe err | 34.57 |![bsearch](SVGs/bsearch.svg) |
 | bspline-vgh | 14.11 | 10.08 | 10.08 | 9.98 | 11.30 |![bspline-vgh](SVGs/bspline-vgh.svg) |
 | bsw | 4.56 | 0.56 | | -- | -- |![bsw](SVGs/bsw.svg) |
 | btree | 5.43 | -- | | -- | -- |![btree](SVGs/btree.svg) |
 | burger | 110.83 | 21.49 | 21.50 | 75.83 | |![burger](SVGs/burger.svg) |
-| bwt | 5904.43 | 13.38 | 13.66 | 5837.90 | 15.18 |![bwt](SVGs/bwt.svg) |
+| bwt | 5904.43 | 13.38 | 13.66 | exe err | 15.18 |![bwt](SVGs/bwt.svg) |
 | car | 11.59 | 20.00 | 20.00 | 11.59 | |![car](SVGs/car.svg) |
 | cbsfil | 43.47 | 5.94 | 5.94 | 42.67 | |![cbsfil](SVGs/cbsfil.svg) |
 | cc | 3.49 | 2.48 | build err | -- | -- |![cc](SVGs/cc.svg) |
@@ -104,7 +104,7 @@
 | coordinates | 510.74 | 3.35 | 3.34 | -- | -- |![coordinates](SVGs/coordinates.svg) |
 | copy | 30.88 | 24.36 | | -- | -- |![copy](SVGs/copy.svg) |
 | crc64 | 159.62 | 4.06 | 4.05 | 168.38 | 4.52 |![crc64](SVGs/crc64.svg) |
-| cross | 12.96 | 11.32 | 11.43 | 387.76 | |![cross](SVGs/cross.svg) |
+| cross | exe err | 11.32 | 11.43 | exe err | |![cross](SVGs/cross.svg) |
 | crossEntropy | 11.71 | 10.41 | 10.40 | -- | -- |![crossEntropy](SVGs/crossEntropy.svg) |
 | crs | 1259.70 | 10.30 | 10.30 | | 11.64 |![crs](SVGs/crs.svg) |
 | d2q9-bgk | 5.74 | 1.48 | 1.48 | 7.58 | |![d2q9-bgk](SVGs/d2q9-bgk.svg) |
@@ -131,7 +131,7 @@
 | dwconv | 81.64 | 23.33 | 23.22 | -- | -- |![dwconv](SVGs/dwconv.svg) |
 | dwconv1d | | | | -- | -- |![dwconv1d](SVGs/dwconv1d.svg) |
 | dxtc1 | 4.42 | 0.62 | 0.63 | -- | -- |![dxtc1](SVGs/dxtc1.svg) |
-| dxtc2 | 4.53 | 0.66 | | 6.69 | 0.60 |![dxtc2](SVGs/dxtc2.svg) |
+| dxtc2 | 4.53 | 0.66 | | 6.69 | exe err |![dxtc2](SVGs/dxtc2.svg) |
 | easyWave | 7.11 | 2.48 | 2.46 | 7.25 | 3.17 |![easyWave](SVGs/easyWave.svg) |
 | ecdh | 37.30 | 2.97 | 2.98 | 40.94 | 43.45 |![ecdh](SVGs/ecdh.svg) |
 | egs | 4.91 | 1.98 | | -- | -- |![egs](SVGs/egs.svg) |
@@ -145,7 +145,7 @@
 | extrema | 8.83 | 6.38 | 6.40 | 9.40 | 20.70 |![extrema](SVGs/extrema.svg) |
 | f16max | 25.83 | 35.51 | 35.49 | -- | -- |![f16max](SVGs/f16max.svg) |
 | f16sp | 33.71 | 30.75 | | -- | -- |![f16sp](SVGs/f16sp.svg) |
-| face | 4.79 | 1.05 | 1.05 | | 0.69 |![face](SVGs/face.svg) |
+| face | 4.79 | 1.05 | 1.05 | | exe err |![face](SVGs/face.svg) |
 | fdtd3d | 35.55 | 4.92 | 4.67 | 49.94 | 4.43 |![fdtd3d](SVGs/fdtd3d.svg) |
 | feynman-kac | 84.36 | 113.98 | 115.15 | 24.12 | |![feynman-kac](SVGs/feynman-kac.svg) |
 | fft | 6.52 | 2.18 | 2.18 | 7.49 | 0.49 |![fft](SVGs/fft.svg) |
@@ -156,9 +156,9 @@
 | floydwarshall | 78.88 | 1.92 | 1.95 | 97.80 | 5.67 |![floydwarshall](SVGs/floydwarshall.svg) |
 | floydwarshall2 | 10.25 | 6.22 | | -- | -- |![floydwarshall2](SVGs/floydwarshall2.svg) |
 | fluidSim | 22.99 | 25.92 | 25.54 | 21.98 | 30.36 |![fluidSim](SVGs/fluidSim.svg) |
-| fpc | 70.35 | 1.40 | 1.40 | 30.19 | 0.80 |![fpc](SVGs/fpc.svg) |
-| fpdc | 6.16 | 2.98 | 2.96 | | 2.19 |![fpdc](SVGs/fpdc.svg) |
-| frechet | 15.26 | 1.11 | 1.11 | 144.67 | |![frechet](SVGs/frechet.svg) |
+| fpc | 70.35 | 1.40 | 1.40 | exe err | 0.80 |![fpc](SVGs/fpc.svg) |
+| fpdc | 6.16 | 2.98 | 2.96 | | exe err |![fpdc](SVGs/fpdc.svg) |
+| frechet | 15.26 | 1.11 | 1.11 | exe err | |![frechet](SVGs/frechet.svg) |
 | fresnel | 8.65 | 6.64 | | | |![fresnel](SVGs/fresnel.svg) |
 | frna | 108.32 | build err | build err | build err | build err |![frna](SVGs/frna.svg) |
 | fsm | 5.75 | 6.99 | 7.00 | | 0.34 |![fsm](SVGs/fsm.svg) |
@@ -167,7 +167,7 @@
 | gabor | 120.39 | 4.97 | 8.04 | exe err | |![gabor](SVGs/gabor.svg) |
 | gamma-correction | 2178.54 | 19.22 | 19.21 | 3350.52 | 16.87 |![gamma-correction](SVGs/gamma-correction.svg) |
 | gaussian | 20.74 | 5.89 | 5.67 | 9.21 | |![gaussian](SVGs/gaussian.svg) |
-| gc | 4.56 | 0.51 | | | 0.14 |![gc](SVGs/gc.svg) |
+| gc | 4.56 | exe err | | | 0.14 |![gc](SVGs/gc.svg) |
 | gd | 13.68 | 12.99 | 28.99 | 14.83 | 12.90 |![gd](SVGs/gd.svg) |
 | ge-spmm | 7.54 | 8.63 | 8.59 | -- | -- |![ge-spmm](SVGs/ge-spmm.svg) |
 | geam | 127.40 | | | -- | -- |![geam](SVGs/geam.svg) |
@@ -191,7 +191,7 @@
 | hausdorff | 32.73 | 14.40 | 14.40 | 33.92 | 15.64 |![hausdorff](SVGs/hausdorff.svg) |
 | haversine | 6.46 | 1.82 | 2.05 | 6.52 | 2.09 |![haversine](SVGs/haversine.svg) |
 | hbc | 15.68 | 15.25 | 15.24 | -- | -- |![hbc](SVGs/hbc.svg) |
-| heartwall | 4.66 | 1.97 | 1.93 | build err | build err |![heartwall](SVGs/heartwall.svg) |
+| heartwall | 4.66 | 1.97 | 1.93 | exe err | 2.28 |![heartwall](SVGs/heartwall.svg) |
 | heat | 26.31 | 39.72 | 40.25 | 91.48 | 69.52 |![heat](SVGs/heat.svg) |
 | heat2d | build err | 11.03 | 11.50 | 248.52 | 329.62 |![heat2d](SVGs/heat2d.svg) |
 | hellinger | 7.13 | 6.61 | 6.62 | 6.87 | 6.52 |![hellinger](SVGs/hellinger.svg) |
@@ -207,7 +207,7 @@
 | hwt1d | 6.12 | 3.39 | 3.38 | 6.37 | 3.49 |![hwt1d](SVGs/hwt1d.svg) |
 | hybridsort | 17.40 | 16.39 | 16.36 | 18.47 | 16.45 |![hybridsort](SVGs/hybridsort.svg) |
 | hypterm | 10.92 | 15.09 | 15.05 | 18.92 | 20.58 |![hypterm](SVGs/hypterm.svg) |
-| idivide | 7.92 | 6.23 | 6.23 | 11.15 | build err |![idivide](SVGs/idivide.svg) |
+| idivide | 7.92 | 6.23 | 6.23 | 11.15 | exe err |![idivide](SVGs/idivide.svg) |
 | interleave | 6.02 | 3.46 | 3.47 | 5.30 | 3.39 |![interleave](SVGs/interleave.svg) |
 | interval | 13.69 | 46.97 | 47.13 | 17.43 | 55.60 |![interval](SVGs/interval.svg) |
 | intrinsics-cast | 69.54 | 9.21 | 9.22 | -- | -- |![intrinsics-cast](SVGs/intrinsics-cast.svg) |
@@ -219,7 +219,7 @@
 | jaccard | 197.46 | 254.66 | build err | -- | -- |![jaccard](SVGs/jaccard.svg) |
 | jacobi | 4.81 | 8.91 | build err | 5.41 | 5.95 |![jacobi](SVGs/jacobi.svg) |
 | jenkins-hash | 9.50 | 5.10 | 5.11 | 9.52 | 5.57 |![jenkins-hash](SVGs/jenkins-hash.svg) |
-| kalman | 22.24 | 27.92 | 27.93 | build err | 10.03 |![kalman](SVGs/kalman.svg) |
+| kalman | 22.24 | 27.92 | 27.93 | exe err | 10.03 |![kalman](SVGs/kalman.svg) |
 | keccaktreehash | 11.89 | 10.72 | 10.73 | 12.56 | 10.70 |![keccaktreehash](SVGs/keccaktreehash.svg) |
 | keogh | 215.35 | 85.25 | 85.27 | 50.03 | 87.04 |![keogh](SVGs/keogh.svg) |
 | kernelLaunch | 16.18 | 19.08 | 19.23 | 75.33 | 104.50 |![kernelLaunch](SVGs/kernelLaunch.svg) |
@@ -229,7 +229,7 @@
 | kurtosis | 22.01 | 167.60 | 167.91 | -- | -- |![kurtosis](SVGs/kurtosis.svg) |
 | lanczos | 6.90 | 3.34 | 3.26 | 7.31 | 3.91 |![lanczos](SVGs/lanczos.svg) |
 | langevin | 73.86 | 10.60 | 12.36 | 74.80 | 16.99 |![langevin](SVGs/langevin.svg) |
-| langford | 4.89 | 2.58 | 2.59 | build err | build err |![langford](SVGs/langford.svg) |
+| langford | 4.89 | 2.58 | 2.59 | build err | exe err |![langford](SVGs/langford.svg) |
 | laplace | 5.84 | 4.45 | 4.45 | 9.40 | 21.52 |![laplace](SVGs/laplace.svg) |
 | laplace3d | 95.07 | 18.61 | 17.75 | 56.92 | 22.79 |![laplace3d](SVGs/laplace3d.svg) |
 | lavaMD | 104.12 | 61.88 | 61.77 | 194.21 | 55.93 |![lavaMD](SVGs/lavaMD.svg) |
@@ -244,8 +244,8 @@
 | libor | 4.75 | 1.28 | 1.28 | 5.20 | 1.74 |![libor](SVGs/libor.svg) |
 | lid-driven-cavity | 12.87 | 14.53 | 14.57 | 26.01 | 48.17 |![lid-driven-cavity](SVGs/lid-driven-cavity.svg) |
 | lif | 133.75 | 76.25 | 76.29 | 150.82 | 80.63 |![lif](SVGs/lif.svg) |
-| linearprobing | 106.78 | 76.77 | 76.54 | build err | build err |![linearprobing](SVGs/linearprobing.svg) |
-| log2 | 6.85 | 1.27 | 1.28 | build err | 1.78 |![log2](SVGs/log2.svg) |
+| linearprobing | 106.78 | 76.77 | 76.54 | build err | exe err |![linearprobing](SVGs/linearprobing.svg) |
+| log2 | 6.85 | 1.27 | 1.28 | exe err | 1.78 |![log2](SVGs/log2.svg) |
 | logan | 10.75 | 15.29 | 15.64 | -- | -- |![logan](SVGs/logan.svg) |
 | logic-resim | 8.50 | 7.53 | 7.52 | -- | -- |![logic-resim](SVGs/logic-resim.svg) |
 | logic-rewrite | 52.42 | build err | build err | -- | -- |![logic-rewrite](SVGs/logic-rewrite.svg) |
@@ -389,13 +389,13 @@
 | saxpy-ompt | build err | build err | build err | -- | -- |![saxpy-ompt](SVGs/saxpy-ompt.svg) |
 | sc | 0.92 | 1.14 | build err | -- | -- |![sc](SVGs/sc.svg) |
 | scan | 620.44 | 111.13 | 110.57 | 762.38 | 104.33 |![scan](SVGs/scan.svg) |
-| scan2 | 18.30 | 1.37 | 1.38 | 81.18 | 4.09 |![scan2](SVGs/scan2.svg) |
-| scan3 | 17.42 | 1.30 | 1.27 | -- | -- |![scan3](SVGs/scan3.svg) |
+| scan2 | 3.33 | 1.37 | 1.38 | 81.18 | 4.09 |![scan2](SVGs/scan2.svg) |
+| scan3 | 2.91 | 1.30 | 1.27 | -- | -- |![scan3](SVGs/scan3.svg) |
 | scel | 25.08 | 12.28 | 23.28 | 916.59 | build err |![scel](SVGs/scel.svg) |
 | score | 12.04 | 4.75 | build err | -- | -- |![score](SVGs/score.svg) |
 | sddmm-batch | 207.90 | 212.57 | build err | -- | -- |![sddmm-batch](SVGs/sddmm-batch.svg) |
-| seam-carving | 4.22 | 0.48 | | -- | -- |![seam-carving](SVGs/seam-carving.svg) |
-| secp256k1 | 5.19 | 1.28 | 1.28 | build err | 0.18 |![secp256k1](SVGs/secp256k1.svg) |
+| seam-carving | 4.22 | 0.48 | 0.48 | -- | -- |![seam-carving](SVGs/seam-carving.svg) |
+| secp256k1 | 4.62 | 1.28 | 1.28 | 4.42 | 0.18 |![secp256k1](SVGs/secp256k1.svg) |
 | segment-reduce | 149.02 | 8.57 | 8.60 | -- | -- |![segment-reduce](SVGs/segment-reduce.svg) |
 | segsort | 9.35 | 6.37 | build err | -- | -- |![segsort](SVGs/segsort.svg) |
 | sheath | 7.26 | 4.93 | 486.06 | 7.54 | build err |![sheath](SVGs/sheath.svg) |
@@ -410,7 +410,7 @@
 | snake | 9.76 | 13.53 | 13.51 | 12.22 | 28.38 |![snake](SVGs/snake.svg) |
 | sobel | 4.68 | 1.32 | 1.36 | 5.05 | 24.62 |![sobel](SVGs/sobel.svg) |
 | sobol | 6.27 | 3.27 | 3.27 | 6.32 | 3.07 |![sobol](SVGs/sobol.svg) |
-| softmax | 44.15 | build err | build err | build err | 2.64 |![softmax](SVGs/softmax.svg) |
+| softmax | 44.15 | 29.45 | build err | build err | build err |![softmax](SVGs/softmax.svg) |
 | softmax-fused | 4.55 | 9.19 | build err | -- | -- |![softmax-fused](SVGs/softmax-fused.svg) |
 | softmax-online | 30.85 | 20.58 | build err | -- | -- |![softmax-online](SVGs/softmax-online.svg) |
 | sort | 7.01 | 6.06 | 6.05 | 39.25 | build err |![sort](SVGs/sort.svg) |
@@ -420,7 +420,7 @@
 | spaxpby | 1172.55 | build err | build err | -- | -- |![spaxpby](SVGs/spaxpby.svg) |
 | spd2s | 2649.11 | 111.03 | build err | -- | -- |![spd2s](SVGs/spd2s.svg) |
 | spgeam | 71.22 | 19.13 | build err | -- | -- |![spgeam](SVGs/spgeam.svg) |
-| spgemm | 1051.90 | 16.67 | build err | -- | -- |![spgemm](SVGs/spgemm.svg) |
+| spgemm | 1046.42 | 16.67 | build err | -- | -- |![spgemm](SVGs/spgemm.svg) |
 | sph | 7.19 | 3.06 | 3.06 | 7.28 | build err |![sph](SVGs/sph.svg) |
 | split | 54.90 | 1.25 | 1.25 | 200.12 | build err |![split](SVGs/split.svg) |
 | spm | 181.14 | 2.14 | 2.14 | 177.96 | build err |![spm](SVGs/spm.svg) |
@@ -461,7 +461,7 @@
 | tqs | 4.38 | 1.64 | 1.66 | build err | build err |![tqs](SVGs/tqs.svg) |
 | triad | 4.45 | 1.42 | 1.42 | 4.53 | build err |![triad](SVGs/triad.svg) |
 | tridiagonal | 91.46 | 27.51 | 27.29 | 161.09 | build err |![tridiagonal](SVGs/tridiagonal.svg) |
-| tsa | build err | 1.95 | 1.78 | build err | build err |![tsa](SVGs/tsa.svg) |
+| tsa | 1266.41 | 1.95 | 1.78 | 1484.54 | build err |![tsa](SVGs/tsa.svg) |
 | tsne | build err | build err | build err | -- | -- |![tsne](SVGs/tsne.svg) |
 | tsp | 6.72 | 10.86 | 14.42 | build err | build err |![tsp](SVGs/tsp.svg) |
 | unfold | 39.14 | 0.62 | build err | -- | -- |![unfold](SVGs/unfold.svg) |
@@ -477,7 +477,7 @@
 | winograd | 4.70 | 0.96 | 0.96 | 4.82 | 3.51 |![winograd](SVGs/winograd.svg) |
 | wlcpow | 6.25 | 8.22 | 7.90 | 16.99 | build err |![wlcpow](SVGs/wlcpow.svg) |
 | wmma | 103.29 | 5.04 | build err | -- | -- |![wmma](SVGs/wmma.svg) |
-| word2vec | 13.15 | build err | build err | -- | -- |![word2vec](SVGs/word2vec.svg) |
+| word2vec | 13.15 | 23.95 | 23.96 | -- | -- |![word2vec](SVGs/word2vec.svg) |
 | wordcount | 21.50 | 9.01 | 9.01 | 20.92 | 8.53 |![wordcount](SVGs/wordcount.svg) |
 | wsm5 | 7.28 | 9.75 | 9.73 | 9.99 | build err |![wsm5](SVGs/wsm5.svg) |
 | wyllie | 778.67 | 3.43 | 3.42 | | 3.09 |![wyllie](SVGs/wyllie.svg) |
