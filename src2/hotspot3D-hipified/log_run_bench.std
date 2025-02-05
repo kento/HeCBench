@@ -1,8 +1,5 @@
-hipcc  -std=c++14  -Wall  -O3 -c 3D.cu -o 3D.o
-hipcc  -std=c++14  -Wall  -O3 -c 3D_helper.cu -o 3D_helper.o
-hipcc  -std=c++14  -Wall  -O3 3D.o 3D_helper.o -o main 
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "bunzip2 ../data/hotspot3D/*512x8.bz2; time -p ( ./main 512 8 5000 ../data/hotspot3D/power_512x8 ../data/hotspot3D/temp_512x8 output.out 1>log.std 2>log.err ) 2> log.time"
+bash -c "../hotspot3D-cuda/prepare_data.sh; time -p ( ./main 512 8 5000 ../data/hotspot3D/power_512x8 ../data/hotspot3D/temp_512x8 output.out 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.99 310.47 299.48
+min max diff memory in [MB] : 10.99 310.46 299.47

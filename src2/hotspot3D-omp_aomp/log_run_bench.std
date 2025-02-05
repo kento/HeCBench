@@ -1,8 +1,5 @@
-clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c 3D.cpp -o 3D.o
-clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c 3D_helper.cpp -o 3D_helper.o
-clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a 3D.o 3D_helper.o -o main 
 ../scripts/rocm-smi.sh > log.mem &
-bash -c "bunzip2 ../data/hotspot3D/*512x8.bz2; time -p ( ./main 512 8 5000 ../data/hotspot3D/power_512x8 ../data/hotspot3D/temp_512x8 output.out 1>log.std 2>log.err ) 2> log.time"
+bash -c "../hotspot3D-cuda/prepare_data.sh; time -p ( ./main 512 8 5000 ../data/hotspot3D/power_512x8 ../data/hotspot3D/temp_512x8 output.out 1>log.std 2>log.err ) 2> log.time"
 pkill rocm-smi.sh
 ../scripts/rocm-m.sh
-min max diff memory in [MB] : 11.00 849.31 838.31
+min max diff memory in [MB] : 11.00 849.32 838.32
