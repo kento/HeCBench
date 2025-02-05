@@ -7,8 +7,8 @@ CC        = nvcc
 OPTIMIZE  = yes
 DEBUG     = no
 ARCH      = sm_60
-GSL_INC   =-I/path/to/gsl/include
-GSL_LIB   =-L/path/to/gsl/lib -lgsl -lgslcblas 
+GSL_INC   =-I$(HOME)/gsl_cuda/include
+GSL_LIB   =-L$(HOME)/gsl_cuda/lib -lgsl -lgslcblas 
 LAUNCHER = bash -c
 
 
