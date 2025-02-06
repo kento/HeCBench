@@ -53,7 +53,7 @@
 
 | ベンチマーク名 | コメント |
 | -- | -- |
-| cmp | データセットをいただいたので試す；AMDでは実行はできたがステータスはfail. |
+| cmp | データセットをいただいたので試す；AMDでは実行はできたがステータスはfail. NVIDIAでは問題なく実行できた。 |
 | diamond | Please contact me for the dataset. Meってだれ？|
 
 ソフト/ライブラリーが必要なベンチマーク
@@ -81,5 +81,5 @@
 なぜかCUDA未着手
 | ベンチマーク名 | コメント |
 | -- | -- |
-| d3q19-bgk |  |
+| d3q19-bgk | static const char dirs を static const signed char dirs に変えると実行できた。  |
 
