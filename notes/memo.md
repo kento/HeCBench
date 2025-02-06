@@ -1,5 +1,7 @@
 ログファイルにおいてFAILとなるベンチマーク
 
+| ベンチマーク名 | コメント |
+| -- | -- |
 | bscan | cuda版 hipified版はverify = FAIL となる。 |
 | bwt | cuda版 FAIL パラメーターの問題かもしれない |
 | extend2 | cuda版に限りError: がたくさんでる パラメーターの変更はしていない|
@@ -21,6 +23,8 @@
 
 現時点で(まともな)ログが存在しないベンチマーク
 
+| ベンチマーク名 | コメント |
+| -- | -- |
 | allreduce | MPI |
 | ccl | MPI |
 | mf-sgd | 構成が特殊。特段難しくない可能性もある。 |
@@ -41,29 +45,41 @@
 
 ログに何も出力されないベンチマーク
 
+| ベンチマーク名 | コメント |
+| -- | -- |
 | grep | |
 
 データセットがないベンチマーク
 
+| ベンチマーク名 | コメント |
+| -- | -- |
 | cmp | データセットをいただいたので試す；AMDでは実行はできたがステータスはfail. |
 | diamond | Please contact me for the dataset. Meってだれ？|
 
 ソフト/ライブラリーが必要なベンチマーク
 
+| ベンチマーク名 | コメント |
+| -- | -- |
 | convolutionDeformable | torchが必要 |
 | dwconv1d | torchが必要 |
 | stsg | SQliteなどが必要。|
 
 構成が特殊なベンチマーク
 
+| ベンチマーク名 | コメント |
+| -- | -- |
 | convolutionDeformable | pythonで駆動する。torchが必要。 |
 | dwconv1d | pythonで駆動する。torchが必要 |
 | mf-sgd | Makefileが最上位ディレクトリーに存在しない。データセットもなく，READMEのリポジトリをダウンロードしてもよく分からない。 |
 | minFE | srcディレクトリーでmakeすればよいのだろうか。|
 
 ログが標準エラー出力
-| fpdc | |
+| ベンチマーク名 | コメント |
+| -- | -- |
+| fpdc |  |
 
 なぜかCUDA未着手
+| ベンチマーク名 | コメント |
+| -- | -- |
 | d3q19-bgk |  |
 
