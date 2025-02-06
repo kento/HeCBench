@@ -1,1 +1,1 @@
-hipcc -c -o basis.o ../xlqc-cuda/basis.cc  -std=c++14 -Wall -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/path/to/gsl/include -O3
+bash -c "time -p ( ./main sp 1>log.std 2>log.err;./main dp 1>>log.std 2>>log.err ) 2> log.time"
