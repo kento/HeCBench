@@ -1,0 +1,22 @@
+The system supports 1 ns time resolution
+total size of x and y is     512.0 MB
+tests are averaged over 32 loops
+saxpy on host:   49155.4 MB/s   49156.4 MB/s maxabserr =       0.0
+saxpy on accl (impl. 0)
+total:   11748.0 MB/s kernel:  129323.8 MB/s maxabserr =       0.0
+
+saxpy on accl (impl. 1)
+total:   12883.8 MB/s kernel:  426450.0 MB/s maxabserr =       0.0
+
+saxpy on accl (impl. 2)
+total:   13214.0 MB/s kernel:  959641.5 MB/s maxabserr =       0.0
+
+saxpy on accl (impl. 3)
+total:   13091.1 MB/s kernel:  911042.5 MB/s maxabserr =       0.0
+
+saxpy on accl (impl. 4)
+total:   13120.8 MB/s kernel:  895611.8 MB/s maxabserr =       0.0
+
+saxpy on accl (impl. 5)
+total:   12932.4 MB/s kernel: 1044504.0 MB/s maxabserr =       0.0
+

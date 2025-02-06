@@ -1,0 +1,85 @@
+clang++  -Wall -D__HIP_PLATFORM_AMD__ -I/opt/rocm/include -I/opt/rocm/include/hipblas -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c saxpy.c -o saxpy.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++  -Wall -D__HIP_PLATFORM_AMD__ -I/opt/rocm/include -I/opt/rocm/include/hipblas -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c hsaxpy.c -o hsaxpy.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++  -Wall -D__HIP_PLATFORM_AMD__ -I/opt/rocm/include -I/opt/rocm/include/hipblas -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c asaxpy.c -o asaxpy.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+asaxpy.c:173:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  173 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:173:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  173 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:180:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  180 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:180:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  180 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:187:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  187 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:187:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  187 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:193:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  193 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:193:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  193 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:200:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  200 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:200:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  200 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:204:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  204 |   hipFree(x_dev); hipFree(y_dev);
+      |   ^~~~~~~ ~~~~~
+asaxpy.c:204:19: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  204 |   hipFree(x_dev); hipFree(y_dev);
+      |                   ^~~~~~~ ~~~~~
+12 warnings generated.
+asaxpy.c:173:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  173 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:173:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  173 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:180:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  180 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:180:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  180 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:187:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  187 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:187:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  187 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:193:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  193 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:193:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  193 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:200:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  200 |     hipFree(x_dev); hipFree(y_dev);
+      |     ^~~~~~~ ~~~~~
+asaxpy.c:200:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  200 |     hipFree(x_dev); hipFree(y_dev);
+      |                     ^~~~~~~ ~~~~~
+asaxpy.c:204:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  204 |   hipFree(x_dev); hipFree(y_dev);
+      |   ^~~~~~~ ~~~~~
+asaxpy.c:204:19: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  204 |   hipFree(x_dev); hipFree(y_dev);
+      |                   ^~~~~~~ ~~~~~
+12 warnings generated.
+clang++  -Wall -D__HIP_PLATFORM_AMD__ -I/opt/rocm/include -I/opt/rocm/include/hipblas -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c check1ns.c -o check1ns.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++  -Wall -D__HIP_PLATFORM_AMD__ -I/opt/rocm/include -I/opt/rocm/include/hipblas -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c wtcalc.c -o wtcalc.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++  -Wall -D__HIP_PLATFORM_AMD__ -I/opt/rocm/include -I/opt/rocm/include/hipblas -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a saxpy.o hsaxpy.o asaxpy.o check1ns.o wtcalc.o -o main -L/opt/rocm/lib -lhipblas -lamdhip64
