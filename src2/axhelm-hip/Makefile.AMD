@@ -44,7 +44,7 @@ endif
 $(program): $(obj) BlasLapack/libBlasLapack.a 
 	$(CC) $(CFLAGS) $+ -o $@ $(LDFLAGS)
 
-main.o : main.cu axhelmKernel.cpp axhelmReference.cpp
+main.o : main.cpp axhelmKernel.cpp axhelmReference.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 	
 meshBasis.o : meshBasis.cpp meshBasis.hpp
