@@ -27,21 +27,22 @@
 | -- | -- |
 | allreduce | MPI |
 | ccl | MPI |
-| mf-sgd | 構成が特殊。特段難しくない可能性もある。 |
+| graphB+ | hip版は12h以上終わらない。|
+| mf-sgd | 構成が特殊。特段難しくない可能性もある。対処できた |
 | miniDGS | MPI |
-| miniFE | 構成が特殊。 |
+| miniFE | 構成が特殊。対処したがomp版は動作していない。 |
 | miniWeather | MPI |
 | pingpong | MPI |
-| prna | DATAPATHの設定忘れ |
-| rowwiseMoments | cuda版がコンパイルできない；namespace "thrust" has no member "pair" |
+| prna | DATAPATHの設定忘れ；対処済み |
+| rowwiseMoments | cuda版がコンパイルできない；namespace "thrust" has no member "pair" --> thrust::pairをcuda::std::pairに書き換えるとコンパイルできるようになった。|
 | saxpy-ompt | どの環境でもコンパイルに成功していない AMDのマシンではasaxpy.c:24:10: fatal error: 'hip/hip_runtime.h' file not found --> AMD では実行可能になった。NVIDIAでは実行時にエラー。 |
-| si | cmakeを使うベンチマーク。まだ試していない。 |
+| si | cmakeを使うベンチマーク。cuda版は問題なく実行できた。HIP版はhipblasがないと言われコンパイルできなかった。 |
 | slu | cuda版がコンパイルできなかった (hip, hipifiedはコンパイルはできたが非常に低速であった) |
 | sparkler | MPI |
-| sss | DPmixGGM_SSSmoves.cpp:1024:10: note: 'j' was declared here |
+| sss | ソース, Makefileを微修正。GSLが必要。-lblas->-lgslcblas などで実行できた。しかしhipified版は実行エラー。 |
 | stsg | GDAL, SQlite3, projなどの外部ライブラリーが必要。|
 | tsne | 必要なデータセットファイルの入手方法が分からない |
-| xlqc | gslにリンクし，LD_LIBRARY_PATHを通せば問題なく実行できる。|
+| xlqc | gslにリンクし，LD_LIBRARY_PATHを通せば問題なく実行できた。|
 
 ログに何も出力されないベンチマーク
 
@@ -60,6 +61,7 @@
 
 | ベンチマーク名 | コメント |
 | -- | -- |
+| bm3d | ImageMagick, GraphicsMagickが必要。HIP版は実行できたがCUDA版は [CImg] \*\*\* CImgIOException \*\*\* [instance(0,0,0,0,(nil),non-shared)] CImg<unsigned char>::load(): Failed to recognize format of file 'noised-bufferfly-20.png'. というエラーで実行できなかった。 |
 | convolutionDeformable | torchが必要 |
 | dwconv1d | torchが必要 |
 | stsg | SQliteなどが必要。|
@@ -70,8 +72,8 @@
 | -- | -- |
 | convolutionDeformable | pythonで駆動する。torchが必要。 |
 | dwconv1d | pythonで駆動する。torchが必要 |
-| mf-sgd | Makefileが最上位ディレクトリーに存在しない。データセットもなく，READMEのリポジトリをダウンロードしてもよく分からない。 |
-| minFE | srcディレクトリーでmakeすればよいのだろうか。|
+| mf-sgd | ~~Makefileが最上位ディレクトリーに存在しない。データセットもなく，READMEのリポジトリをダウンロードしてもよく分からない。~~ 対処できた |
+| minFE | ~~srcディレクトリーでmakeすればよいのだろうか。~~ 対処できた |
 
 ログが標準エラー出力
 | ベンチマーク名 | コメント |
