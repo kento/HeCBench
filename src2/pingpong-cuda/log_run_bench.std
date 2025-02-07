@@ -1,1 +1,1 @@
-nvcc  -std=c++14 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include           -Xcompiler -Wall -arch=sm_60 -O3 -c main-mpi.cu -o main-mpi.o
+bash -c "time -p ( python ../scripts/genhostfile.py ; mpirun --hostfile hosts -n 2 ./main-mpi 1>log.std 2>log.err; mpirun --hostfile hosts -n 2 ./main-nccl 1>>log.std 2>>log.err ) 2> log.time"

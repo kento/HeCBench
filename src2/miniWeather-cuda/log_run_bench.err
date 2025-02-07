@@ -1,2 +1,0 @@
-/bin/sh: line 1: /opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/mpi/bin/mpirun: No such file or directory
-make: *** [Makefile.NVD:61: run] Error 127

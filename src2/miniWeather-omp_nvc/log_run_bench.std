@@ -1,3 +1,1 @@
-mpic++  -std=c++14 -Wall 	-DNX=400        	-DNZ=200 	-DSIM_TIME=600 	-DDATA_SPEC=DATA_SPEC_THERMAL -O3 -Minfo -mp=gpu -gpu=cc70 -c main.cpp -o main.o
-mpic++  -std=c++14 -Wall 	-DNX=400        	-DNZ=200 	-DSIM_TIME=600 	-DDATA_SPEC=DATA_SPEC_THERMAL -O3 -Minfo -mp=gpu -gpu=cc70 main.o -o main 
-bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"
+bash -c "time -p ( python ../scripts/genhostfile.py ; mpiexec --hostfile hosts -n 2 ./main 1>log.std 2>log.err ) 2> log.time"

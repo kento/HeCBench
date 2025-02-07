@@ -1,5 +1,0 @@
-main-mpi.cu:4:10: fatal error: mpi.h: No such file or directory
-    4 | #include <mpi.h>
-      |          ^~~~~~~
-compilation terminated.
-make: *** [Makefile.NVD:60: main-mpi.o] Error 1
