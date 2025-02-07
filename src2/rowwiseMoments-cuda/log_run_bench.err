@@ -1,14 +1,1 @@
-main.cu(22): error: namespace "thrust" has no member "pair"
-      WelfordOps<T_ACC, T_ACC, int64_t, thrust::pair<T_ACC, T_ACC>>;
-                                                ^
-
-main.cu(22): error: expected a ">"
-      WelfordOps<T_ACC, T_ACC, int64_t, thrust::pair<T_ACC, T_ACC>>;
-                                                    ^
-
-main.cu(22): error: expected a ";"
-      WelfordOps<T_ACC, T_ACC, int64_t, thrust::pair<T_ACC, T_ACC>>;
-                                                                 ^
-
-3 errors detected in the compilation of "main.cu".
-make: *** [Makefile.NVD:50: main.o] Error 2
+make: *** [Makefile.NVD:58: run] Error 126

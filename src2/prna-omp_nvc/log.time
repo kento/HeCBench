@@ -1,3 +1,4 @@
-real 0.00
-user 0.00
-sys 0.00
+bash: line 1: 437042 Aborted                 (core dumped) ./main ./HIV1-NL43.seq > log.std 2> log.err
+real 1.33
+user 0.71
+sys 0.55
