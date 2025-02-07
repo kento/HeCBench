@@ -7,16 +7,19 @@ VPATH   = ./
 HDRDIR  = ./include
 
 # adjust this for your system
-CUDADIR=/auto/software/nvidia/x86_64/cuda-11.0
+CUDADIR=/opt/nvidia/hpc_sdk/Linux_aarch64/25.1/cuda/12.6
 OPENMPI_BINDIR=/usr/lib64/openmpi3/bin
 
 # set options for this machine
 # specify which compilers to use for c, fortran and linking
-CC	= $(OPENMPI_BINDIR)/mpicc
-LD	= $(OPENMPI_BINDIR)/mpicc
-NVCC	= $(CUDADIR)/bin/nvcc
+#CC	= mpicc
+#LD	= mpicc
+#NVCC	= $(CUDADIR)/bin/nvcc
+CC	= mpic++
+LD	= mpic++
+NVCC	= nvc++
 #DEBUG   = -g -G -DDEBUG
-FAST    = -O3 --use_fast_math 
+FAST    = -O3 #--use_fast_math 
 LAUNCHER = bash -c
 
 # compiler flags to be used (set to compile with debugging on)
@@ -51,6 +54,8 @@ veryclean :
 	make clean
 	cd 3rdParty/ParMetis-3.1 && make clean
 
+include ../include/miniDGS-NVIDIA
+
 run :
-	mpiexec -n $(NP) ./MaxwellsGPU3d  Meshes/FS_K01022.neu
+	$(LAUNCHER) "$(COMMAND)"
 

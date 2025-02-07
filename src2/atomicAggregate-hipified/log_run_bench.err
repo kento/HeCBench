@@ -1,0 +1,12 @@
+main.cu:19:31: error: use of undeclared identifier '__shfl_sync'
+   19 |     unsigned long long tptr = __shfl_sync(tmask, (unsigned long long)ptr, i);
+      |                               ^
+main.cu:20:24: error: use of undeclared identifier '__ballot_sync'
+   20 |     unsigned my_mask = __ballot_sync(tmask, (tptr == (unsigned long long)ptr));
+      |                        ^
+main.cu:30:9: error: use of undeclared identifier '__shfl_sync'
+   30 |   res = __shfl_sync(mask, res, leader);    // get leader’s old value
+      |         ^
+3 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

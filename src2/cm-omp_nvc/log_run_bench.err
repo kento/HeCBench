@@ -1,0 +1,18 @@
+"process.cpp", line 110: error: argument of type "int *" is incompatible with parameter of type "int"
+      double cumulativeSetScore = computeDotProduct(refRegValues, qIndex, dotProductResult,
+                                                                          ^
+
+"process.cpp", line 111: error: too many arguments in function call
+                                  nGenesTotal, blocksPerGrid_Gene, threadsPerBlock) / UCmax;
+                                                                   ^
+
+"process.cpp", line 124: error: argument of type "double" is incompatible with parameter of type "const float *"
+                                    setSize, signatureByRNGs, UCmax, 
+                                                              ^
+
+"process.cpp", line 126: error: too many arguments in function call
+                                    randomValues, refRegValues, arraysAdded);
+                                                  ^
+
+4 errors detected in the compilation of "process.cpp".
+make: *** [Makefile.NVD:63: process.o] Error 2
