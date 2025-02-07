@@ -1,24 +1,24 @@
-MPI : Transfer size (B):     524288, Transfer Time (s):     0.000428468, Bandwidth (GB/s):     1.223634941
-MPI : Transfer size (B):    1048576, Transfer Time (s):     0.000870342, Bandwidth (GB/s):     1.204785832
-MPI : Transfer size (B):    2097152, Transfer Time (s):     0.001748256, Bandwidth (GB/s):     1.199568308
-MPI : Transfer size (B):    4194304, Transfer Time (s):     0.003487608, Bandwidth (GB/s):     1.202630492
-MPI : Transfer size (B):    8388608, Transfer Time (s):     0.007042723, Bandwidth (GB/s):     1.191102927
-MPI : Transfer size (B):   16777216, Transfer Time (s):     0.014067399, Bandwidth (GB/s):     1.192631001
-MPI : Transfer size (B):   33554432, Transfer Time (s):     0.028099366, Bandwidth (GB/s):     1.194134854
-MPI : Transfer size (B):   67108864, Transfer Time (s):     0.056157037, Bandwidth (GB/s):     1.195021451
-MPI : Transfer size (B):  134217728, Transfer Time (s):     0.112138440, Bandwidth (GB/s):     1.196893125
-MPI : Transfer size (B):  268435456, Transfer Time (s):     0.224018950, Bandwidth (GB/s):     1.198271200
-MPI : Transfer size (B):  536870912, Transfer Time (s):     0.447676137, Bandwidth (GB/s):     1.199239511
-MPI : Transfer size (B): 1073741824, Transfer Time (s):     0.894637065, Bandwidth (GB/s):     1.200198232
-NCCL: Transfer size (B):     524288, Transfer Time (s):     0.000220170, Bandwidth (GB/s):     2.381289675
-NCCL: Transfer size (B):    1048576, Transfer Time (s):     0.000266350, Bandwidth (GB/s):     3.936827897
-NCCL: Transfer size (B):    2097152, Transfer Time (s):     0.000316866, Bandwidth (GB/s):     6.618409326
-NCCL: Transfer size (B):    4194304, Transfer Time (s):     0.000581717, Bandwidth (GB/s):     7.210212414
-NCCL: Transfer size (B):    8388608, Transfer Time (s):     0.001514198, Bandwidth (GB/s):     5.539967802
-NCCL: Transfer size (B):   16777216, Transfer Time (s):     0.002728391, Bandwidth (GB/s):     6.149124340
-NCCL: Transfer size (B):   33554432, Transfer Time (s):     0.005279617, Bandwidth (GB/s):     6.355466579
-NCCL: Transfer size (B):   67108864, Transfer Time (s):     0.011347348, Bandwidth (GB/s):     5.914057230
-NCCL: Transfer size (B):  134217728, Transfer Time (s):     0.022867640, Bandwidth (GB/s):     5.869330082
-NCCL: Transfer size (B):  268435456, Transfer Time (s):     0.044577849, Bandwidth (GB/s):     6.021722921
-NCCL: Transfer size (B):  536870912, Transfer Time (s):     0.088665265, Bandwidth (GB/s):     6.055030808
-NCCL: Transfer size (B): 1073741824, Transfer Time (s):     0.169653017, Bandwidth (GB/s):     6.329046435
+MPI : Transfer size (B):     524288, Transfer Time (s):     0.000427520, Bandwidth (GB/s):     1.226348539
+MPI : Transfer size (B):    1048576, Transfer Time (s):     0.000868640, Bandwidth (GB/s):     1.207147332
+MPI : Transfer size (B):    2097152, Transfer Time (s):     0.001748786, Bandwidth (GB/s):     1.199204477
+MPI : Transfer size (B):    4194304, Transfer Time (s):     0.003484728, Bandwidth (GB/s):     1.203624397
+MPI : Transfer size (B):    8388608, Transfer Time (s):     0.007040406, Bandwidth (GB/s):     1.191494839
+MPI : Transfer size (B):   16777216, Transfer Time (s):     0.014078726, Bandwidth (GB/s):     1.191671490
+MPI : Transfer size (B):   33554432, Transfer Time (s):     0.028135511, Bandwidth (GB/s):     1.192600776
+MPI : Transfer size (B):   67108864, Transfer Time (s):     0.056093914, Bandwidth (GB/s):     1.196366219
+MPI : Transfer size (B):  134217728, Transfer Time (s):     0.112131291, Bandwidth (GB/s):     1.196969438
+MPI : Transfer size (B):  268435456, Transfer Time (s):     0.224058235, Bandwidth (GB/s):     1.198061103
+MPI : Transfer size (B):  536870912, Transfer Time (s):     0.447689774, Bandwidth (GB/s):     1.199202981
+MPI : Transfer size (B): 1073741824, Transfer Time (s):     0.894631029, Bandwidth (GB/s):     1.200206330
+NCCL: Transfer size (B):     524288, Transfer Time (s):     0.000050186, Bandwidth (GB/s):    10.446966236
+NCCL: Transfer size (B):    1048576, Transfer Time (s):     0.000263174, Bandwidth (GB/s):     3.984345866
+NCCL: Transfer size (B):    2097152, Transfer Time (s):     0.000278689, Bandwidth (GB/s):     7.525054426
+NCCL: Transfer size (B):    4194304, Transfer Time (s):     0.000530902, Bandwidth (GB/s):     7.900339524
+NCCL: Transfer size (B):    8388608, Transfer Time (s):     0.001339385, Bandwidth (GB/s):     6.263028412
+NCCL: Transfer size (B):   16777216, Transfer Time (s):     0.008570576, Bandwidth (GB/s):     1.957536613
+NCCL: Transfer size (B):   33554432, Transfer Time (s):     0.006604435, Bandwidth (GB/s):     5.080590684
+NCCL: Transfer size (B):   67108864, Transfer Time (s):     0.012016407, Bandwidth (GB/s):     5.584769557
+NCCL: Transfer size (B):  134217728, Transfer Time (s):     0.018944748, Bandwidth (GB/s):     7.084693377
+NCCL: Transfer size (B):  268435456, Transfer Time (s):     0.053047660, Bandwidth (GB/s):     5.060269528
+NCCL: Transfer size (B):  536870912, Transfer Time (s):     0.103770967, Bandwidth (GB/s):     5.173613869
+NCCL: Transfer size (B): 1073741824, Transfer Time (s):     0.203269265, Bandwidth (GB/s):     5.282361928
