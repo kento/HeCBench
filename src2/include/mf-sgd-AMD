@@ -1,0 +1,1 @@
+COMMAND = time -p ( ./main ../../mf-sgd-cuda/src/netflix_test.bin 1> ../log.std 2> ../log.err ; ./main ../../mf-sgd-cuda/src/netflix_train.bin 1>> ../log.std 2>> ../log.err ) 2> ../log.time
