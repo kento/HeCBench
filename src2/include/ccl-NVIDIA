@@ -1,2 +1,2 @@
 #COMMAND = time -p ( ./$(program) 50 1>log.std 2>log.err ) 2> log.time
-COMMAND = time -p ( $(NVHPC_SDK)/comm_libs/mpi/bin/mpirun -n 2 $(program) 50 1>log.std 2>log.err ) 2> log.time
+COMMAND = time -p ( python ../scripts/genhosfile.py ; mpiexec --hostfile hosts -n 2 ./main 50 1>log.std 2>log.err ) 2> log.time

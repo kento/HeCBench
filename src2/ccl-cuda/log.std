@@ -1,0 +1,12 @@
+Transfer size (B):    8388608, Average Transfer Time (s):     0.001198976, Bandwidth (GB/s):     6.515974684
+MPI Rank 0: PASS
+MPI Rank 1: PASS
+Transfer size (B):   83886080, Average Transfer Time (s):     0.008334553, Bandwidth (GB/s):     9.373627626
+MPI Rank 0: PASS
+MPI Rank 1: PASS
+Transfer size (B):  838860800, Average Transfer Time (s):     0.084376759, Bandwidth (GB/s):     9.259066247
+MPI Rank 0: PASS
+MPI Rank 1: PASS
+Transfer size (B): 8388608000, Average Transfer Time (s):     0.626919418, Bandwidth (GB/s):    12.461729174
+MPI Rank 1: PASS
+MPI Rank 0: PASS
