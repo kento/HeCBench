@@ -1,1 +1,1 @@
-nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -cudalib=hipblas -c saxpy.c -o saxpy.o
+bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"

@@ -1,6 +1,0 @@
-clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
-asaxpy.c:24:10: fatal error: 'hip/hip_runtime.h' file not found
-   24 | #include <hip/hip_runtime.h>
-      |          ^~~~~~~~~~~~~~~~~~~
-1 error generated.
-make: *** [Makefile.AMD:57: asaxpy.o] Error 1
