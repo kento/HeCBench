@@ -1,0 +1,120 @@
+k          :80
+num_workers:12
+u_grid     :1
+v_grid     :1
+x_grid     :1
+y_grid     :1
+ux         :1
+vy         :1
+num_iters  :30
+gpu        :0
+lambda_p   :0.05000
+lambda_q   :0.05000
+lrate      :0.00000
+alpha      :0.0100
+beta       :0.0100
+tr_path    :netflix_test.bin
+va_path    :
+model_path :netflix_test.bin.model
+read problem called
+prob.nnz = 1408395
+m:480094, n:17771, nnz:1408395
+time elapsed:0.09016653s
+
+
+sgd_train called
+grid problem ...
+time elapsed:0.00860861s
+
+
+init model ...
+state_size (a multiple of 256):480256
+	number of thread blocks:150030
+	arraysize:38407520
+grid:0
+state_size (a multiple of 256):17920
+	number of thread blocks:5554
+	arraysize:1421680
+grid:0
+time elapsed:0.01144333s
+
+
+sgd_update_k128 ...
+time elapsed:2.26946759s
+
+
+scale model ...
+time elapsed:0.00789540s
+
+
+shuffle model ...
+time elapsed:0.07698984s
+
+
+save_model ...
+saving feature p(480094)...
+saving feature q(17771)...
+
+training application finished...
+
+
+k          :80
+num_workers:12
+u_grid     :1
+v_grid     :1
+x_grid     :1
+y_grid     :1
+ux         :1
+vy         :1
+num_iters  :30
+gpu        :0
+lambda_p   :0.05000
+lambda_q   :0.05000
+lrate      :0.00000
+alpha      :0.0100
+beta       :0.0100
+tr_path    :netflix_train.bin
+va_path    :
+model_path :netflix_train.bin.model
+read problem called
+prob.nnz = 99072112
+m:480190, n:17771, nnz:99072112
+time elapsed:5.98633697s
+
+
+sgd_train called
+grid problem ...
+time elapsed:0.59804455s
+
+
+init model ...
+state_size (a multiple of 256):480256
+	number of thread blocks:150060
+	arraysize:38415200
+grid:0
+state_size (a multiple of 256):17920
+	number of thread blocks:5554
+	arraysize:1421680
+grid:0
+time elapsed:0.01116723s
+
+
+sgd_update_k128 ...
+time elapsed:149.98290777s
+
+
+scale model ...
+time elapsed:0.00794461s
+
+
+shuffle model ...
+time elapsed:0.07969471s
+
+
+save_model ...
+saving feature p(480190)...
+saving feature q(17771)...
+
+training application finished...
+
+

@@ -53,3 +53,8 @@ sgd.o: sgd.cu sgd.h sgd_k128_kernel_hogwild_warp32.h
 
 clean:
 	rm -rf $(program) $(obj)
+
+include ../../include/mf-sgd-AMD
+
+run: $(program)
+	bash -c "$(COMMAND)"

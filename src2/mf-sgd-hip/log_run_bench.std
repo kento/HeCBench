@@ -1,0 +1,6 @@
+cd src;make run
+make[1]: Entering directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/mf-sgd-hip/src'
+hipcc  -std=c++14 -Wall -O3 -c main.cpp -o main.o
+hipcc  -std=c++14 -Wall -O3 main.o sgd.o -o main -lpthread
+bash -c "time -p ( ./main ../../mf-sgd-cuda/src/netflix_test.bin 1> ../log.std 2> ../log.err ; ./main ../../mf-sgd-cuda/src/netflix_train.bin 1>> ../log.std 2>> ../log.err ) 2> ../log.time"
+make[1]: Leaving directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/mf-sgd-hip/src'
