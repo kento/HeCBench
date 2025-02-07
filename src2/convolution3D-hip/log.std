@@ -4,20 +4,20 @@
 input dimensions: C=1 Win=32 Hin=32
 output dimensions: M=6 Wout=28 Hout=28
 3D grid dimensions: N=32 M=6 Z=4
-Average kernel execution time of conv3d_s1 kernel: 9.204706 (us)
-Average kernel execution time of conv3d_s2 kernel: 8.667382 (us)
-Average kernel execution time of conv3d_s3 kernel: 8.779571 (us)
-Average kernel execution time of conv3d_s4 kernel: 14.487364 (us)
+Average kernel execution time of conv3d_s1 kernel: 8.830022 (us)
+Average kernel execution time of conv3d_s2 kernel: 8.551120 (us)
+Average kernel execution time of conv3d_s3 kernel: 8.664172 (us)
+Average kernel execution time of conv3d_s4 kernel: 19.255316 (us)
 PASS
 
 ========== Warmup done ==========
 input dimensions: C=1 Win=32 Hin=32
 output dimensions: M=6 Wout=28 Hout=28
 3D grid dimensions: N=32 M=6 Z=4
-Average kernel execution time of conv3d_s1 kernel: 9.009030 (us)
-Average kernel execution time of conv3d_s2 kernel: 8.800631 (us)
-Average kernel execution time of conv3d_s3 kernel: 8.960831 (us)
-Average kernel execution time of conv3d_s4 kernel: 14.654791 (us)
+Average kernel execution time of conv3d_s1 kernel: 8.690051 (us)
+Average kernel execution time of conv3d_s2 kernel: 8.639441 (us)
+Average kernel execution time of conv3d_s3 kernel: 8.784850 (us)
+Average kernel execution time of conv3d_s4 kernel: 19.706711 (us)
 PASS
 3D convolution (FP32)
 
@@ -25,20 +25,20 @@ PASS
 input dimensions: C=6 Win=14 Hin=14
 output dimensions: M=16 Wout=10 Hout=10
 3D grid dimensions: N=32 M=16 Z=1
-Average kernel execution time of conv3d_s1 kernel: 24.334108 (us)
-Average kernel execution time of conv3d_s2 kernel: 24.382587 (us)
-Average kernel execution time of conv3d_s3 kernel: 23.460043 (us)
-Average kernel execution time of conv3d_s4 kernel: 20.378117 (us)
+Average kernel execution time of conv3d_s1 kernel: 23.770992 (us)
+Average kernel execution time of conv3d_s2 kernel: 24.208965 (us)
+Average kernel execution time of conv3d_s3 kernel: 23.254030 (us)
+Average kernel execution time of conv3d_s4 kernel: 20.079473 (us)
 PASS
 
 ========== Warmup done ==========
 input dimensions: C=6 Win=14 Hin=14
 output dimensions: M=16 Wout=10 Hout=10
 3D grid dimensions: N=32 M=16 Z=1
-Average kernel execution time of conv3d_s1 kernel: 23.878010 (us)
-Average kernel execution time of conv3d_s2 kernel: 24.560410 (us)
-Average kernel execution time of conv3d_s3 kernel: 23.611111 (us)
-Average kernel execution time of conv3d_s4 kernel: 20.668030 (us)
+Average kernel execution time of conv3d_s1 kernel: 23.608730 (us)
+Average kernel execution time of conv3d_s2 kernel: 24.279840 (us)
+Average kernel execution time of conv3d_s3 kernel: 23.296532 (us)
+Average kernel execution time of conv3d_s4 kernel: 20.403711 (us)
 PASS
 3D convolution (FP32)
 
@@ -46,18 +46,18 @@ PASS
 input dimensions: C=96 Win=26 Hin=26
 output dimensions: M=256 Wout=22 Hout=22
 3D grid dimensions: N=32 M=256 Z=4
-Average kernel execution time of conv3d_s1 kernel: 15113.635742 (us)
-Average kernel execution time of conv3d_s2 kernel: 15231.338867 (us)
-Average kernel execution time of conv3d_s3 kernel: 21208.062500 (us)
-Average kernel execution time of conv3d_s4 kernel: 613.375305 (us)
+Average kernel execution time of conv3d_s1 kernel: 14962.195312 (us)
+Average kernel execution time of conv3d_s2 kernel: 15091.642578 (us)
+Average kernel execution time of conv3d_s3 kernel: 21048.906250 (us)
+Average kernel execution time of conv3d_s4 kernel: 607.976379 (us)
 PASS
 
 ========== Warmup done ==========
 input dimensions: C=96 Win=26 Hin=26
 output dimensions: M=256 Wout=22 Hout=22
 3D grid dimensions: N=32 M=256 Z=4
-Average kernel execution time of conv3d_s1 kernel: 15098.174805 (us)
-Average kernel execution time of conv3d_s2 kernel: 15225.884766 (us)
-Average kernel execution time of conv3d_s3 kernel: 21163.251953 (us)
-Average kernel execution time of conv3d_s4 kernel: 614.767639 (us)
+Average kernel execution time of conv3d_s1 kernel: 14955.718750 (us)
+Average kernel execution time of conv3d_s2 kernel: 15092.681641 (us)
+Average kernel execution time of conv3d_s3 kernel: 21010.363281 (us)
+Average kernel execution time of conv3d_s4 kernel: 608.895813 (us)
 PASS

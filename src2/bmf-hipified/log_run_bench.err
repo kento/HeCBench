@@ -1,0 +1,5 @@
+clang++: error: unknown argument: '--default-stream'
+clang++: error: no such file or directory: 'per-thread'
+clang++: error: no such file or directory: '=-fopenmp'; did you mean '-fopenmp'?
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -O3 -DUSE_GPU --default-stream per-thread -Wall =-fopenmp -c -x hip src/main.cu -o "main.o"
+make: *** [Makefile.AMD:60: main.o] Error 1

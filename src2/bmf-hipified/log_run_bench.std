@@ -1,0 +1,1 @@
+hipcc  -std=c++14 -O3  -DUSE_GPU --default-stream per-thread             -Wall ="-fopenmp"  -c src/main.cu -o main.o

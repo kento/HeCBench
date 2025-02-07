@@ -1,0 +1,7 @@
+In file included from main.cu:2:
+./helper.h:37:10: fatal error: 'hipblaslt.h' file not found
+   37 | #include <hipblaslt.h>
+      |          ^~~~~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:52: main.o] Error 1

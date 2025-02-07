@@ -1,0 +1,8 @@
+In file included from main.cu:9:
+In file included from ./block_exchange.h:43:
+../warpexchange-cuda/warp_exchange.h:77:5: error: use of undeclared identifier '__syncwarp'
+   77 |     __syncwarp(member_mask);
+      |     ^
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -I../blockAccess-cuda -I../warpexchange-cuda/ -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:49: main.o] Error 1

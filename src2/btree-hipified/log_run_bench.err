@@ -1,0 +1,66 @@
+In file included from main.cu:34:
+In file included from ./GpuBTree.h:31:
+./map/kernels/map_warps.cu:67:16: error: use of undeclared identifier '__shfl_sync'
+   67 |     isLocked = __shfl_sync(WARP_MASK, isLocked, 1);
+      |                ^
+./map/kernels/map_warps.cu:81:16: error: use of undeclared identifier '__shfl_sync'
+   81 |     isLocked = __shfl_sync(WARP_MASK, isLocked, 1);
+      |                ^
+./map/kernels/map_warps.cu:108:7: error: use of undeclared identifier '__ballot_sync'
+  108 |       __ballot_sync(WARP_MASK, (src_key > src_unit_data) && (src_unit_data != 0)) &
+      |       ^
+./map/kernels/map_warps.cu:119:7: error: use of undeclared identifier '__shfl_down_sync'
+  119 |       __shfl_down_sync(WARP_MASK, src_unit_data, 2, 32);  // move everything up two spaces
+      |       ^
+./map/kernels/map_warps.cu:134:24: error: use of undeclared identifier '__ballot_sync'
+  134 |   int valid_location = __ballot_sync(WARP_MASK, src_unit_data != 0);
+      |                        ^
+./map/kernels/map_warps.cu:153:24: error: use of undeclared identifier '__shfl_up_sync'
+  153 |   uint32_t rightData = __shfl_up_sync(0x0000FFFF, mydata, 16);
+      |                        ^
+./map/kernels/map_warps.cu:160:27: error: use of undeclared identifier '__shfl_sync'
+  160 |   uint32_t rightDataMin = __shfl_sync(WARP_MASK, rightData, 31) & 0x7FFFFFFF;
+      |                           ^
+./map/kernels/map_warps.cu:165:30: error: use of undeclared identifier '__shfl_sync'
+  165 |   uint32_t parent_last_key = __shfl_sync(WARP_MASK, parent_data, 3, 32);  // get last key
+      |                              ^
+./map/kernels/map_warps.cu:176:7: error: use of undeclared identifier '__ballot_sync'
+  176 |       __ballot_sync(WARP_MASK, (parent_data & 0x7FFFFFFF) == nodeIdx) & PIVOT_KEY_MASK;
+      |       ^
+./map/kernels/map_warps.cu:190:14: error: use of undeclared identifier '__shfl_sync'
+  190 |   rightIdx = __shfl_sync(WARP_MASK, rightIdx, 0);
+      |              ^
+./map/kernels/map_warps.cu:244:13: error: use of undeclared identifier '__shfl_sync'
+  244 |   leftIdx = __shfl_sync(WARP_MASK, leftIdx, 0);
+      |             ^
+./map/kernels/map_warps.cu:245:14: error: use of undeclared identifier '__shfl_sync'
+  245 |   rightIdx = __shfl_sync(WARP_MASK, rightIdx, 0);
+      |              ^
+./map/kernels/map_warps.cu:252:14: error: use of undeclared identifier '__shfl_sync'
+  252 |   rootData = __shfl_sync(WARP_MASK, mydata, 15) | 0x80000000;
+      |              ^
+./map/kernels/map_warps.cu:260:14: warning: explicitly assigning value of variable of type 'uint32_t' (aka 'unsigned int') to itself [-Wself-assign]
+  260 |     rootData = rootData;
+      |     ~~~~~~~~ ^ ~~~~~~~~
+./map/kernels/map_warps.cu:267:27: error: use of undeclared identifier '__shfl_sync'
+  267 |   uint32_t rightDataMin = __shfl_sync(WARP_MASK, rootData, 29) & 0x7fffffff;
+      |                           ^
+./map/kernels/map_warps.cu:296:13: error: use of undeclared identifier '__shfl_sync'
+  296 |   goRight = __shfl_sync(WARP_MASK, goRight, 29, 32);
+      |             ^
+./map/kernels/map_warps.cu:302:14: error: use of undeclared identifier '__shfl_up_sync'
+  302 |     mydata = __shfl_up_sync(0x0000FFFF, mydata, 16);
+      |              ^
+./map/kernels/map_warps.cu:326:24: error: use of undeclared identifier '__ballot_sync'
+  326 |   while ((work_queue = __ballot_sync(WARP_MASK, to_be_inserted))) {
+      |                        ^
+./map/kernels/map_warps.cu:338:9: error: use of undeclared identifier '__shfl_sync'
+  338 |         __shfl_sync(WARP_MASK, src_unit_data, 1, 32) & 0x7FFFFFFF;  // get link min
+      |         ^
+./map/kernels/map_warps.cu:342:14: error: use of undeclared identifier '__shfl_sync'
+  342 |       next = __shfl_sync(WARP_MASK, src_unit_data, 0, 32) & 0x7FFFFFFF;  // get link min
+      |              ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

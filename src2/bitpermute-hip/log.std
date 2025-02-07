@@ -1,20 +1,20 @@
 Domain size is 1024
 PASS
-Average execution time of the kernel: 5.085160 (us)
+Average execution time of the kernel: 5.669310 (us)
 
 Domain size is 2048
 PASS
-Average execution time of the kernel: 19.439642 (us)
+Average execution time of the kernel: 19.806311 (us)
 
 Domain size is 32768
 PASS
-Average execution time of the kernel: 29.525461 (us)
+Average execution time of the kernel: 29.611822 (us)
 
 Domain size is 134217728
 PASS
-Average execution time of the kernel: 15006.866211 (us)
+Average execution time of the kernel: 16291.525391 (us)
 
 Domain size is 268435456
 PASS
-Average execution time of the kernel: 30980.457031 (us)
+Average execution time of the kernel: 30913.230469 (us)
 

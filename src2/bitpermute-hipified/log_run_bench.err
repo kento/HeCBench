@@ -1,0 +1,32 @@
+In file included from main.cu:10:
+./kernels.h:107:49: error: use of undeclared identifier '__syncwarp'; did you mean '__sync_swap'?
+  107 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ^~~~~~~~~~
+      |                                                 __sync_swap
+./kernels.h:107:49: note: '__sync_swap' declared here
+./kernels.h:107:60: error: too few arguments to function call, expected at least 1, have 0
+  107 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ~~~~~~~~~~ ^
+./kernels.h:116:49: error: use of undeclared identifier '__syncwarp'; did you mean '__sync_swap'?
+  116 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ^~~~~~~~~~
+      |                                                 __sync_swap
+./kernels.h:107:49: note: '__sync_swap' declared here
+  107 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ^
+./kernels.h:116:60: error: too few arguments to function call, expected at least 1, have 0
+  116 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ~~~~~~~~~~ ^
+./kernels.h:122:49: error: use of undeclared identifier '__syncwarp'; did you mean '__sync_swap'?
+  122 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ^~~~~~~~~~
+      |                                                 __sync_swap
+./kernels.h:107:49: note: '__sync_swap' declared here
+  107 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ^
+./kernels.h:122:60: error: too few arguments to function call, expected at least 1, have 0
+  122 |         (Z_COUNT > WARP_SZ) ? __syncthreads() : __syncwarp();
+      |                                                 ~~~~~~~~~~ ^
+6 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -fopenmp -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

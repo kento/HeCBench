@@ -1,0 +1,66 @@
+main.cu:152:11: error: use of undeclared identifier '__any_sync'
+  152 |   return (__any_sync(MASK, dup) != 0);
+      |           ^
+main.cu:186:10: error: use of undeclared identifier '__ballot_sync'
+  186 |   return __ballot_sync(MASK, dup.v);
+      |          ^
+main.cu:147:19: error: use of undeclared identifier '__shfl_up_sync'
+  147 |   const T lower = __shfl_up_sync(MASK, val, 1);
+      |                   ^
+main.cu:192:37: note: in instantiation of function template specialization 'warpHasCollision<int>' requested here
+  192 |   hasDuplicate[threadIdx.x] = (int) warpHasCollision(v[threadIdx.x]);
+      |                                     ^
+main.cu:83:10: error: use of undeclared identifier '__shfl_xor_sync'
+   83 |   return __shfl_xor_sync(MASK, val, laneMask, width);
+      |          ^
+main.cu:95:9: note: in instantiation of function template specialization 'shfl_xor<int>' requested here
+   95 |   T y = shfl_xor(x, mask);
+      |         ^
+main.cu:111:9: note: in instantiation of function template specialization 'shflSwap<int, LessThan<int>>' requested here
+  111 |   val = shflSwap<T, Comparator>(val, 0x01, getBit(laneId, 1) ^ getBit(laneId, 0));
+      |         ^
+main.cu:146:9: note: in instantiation of function template specialization 'warpBitonicSort<int, LessThan<int>>' requested here
+  146 |   val = warpBitonicSort<T, LessThan<T>>(val);
+      |         ^
+main.cu:192:37: note: in instantiation of function template specialization 'warpHasCollision<int>' requested here
+  192 |   hasDuplicate[threadIdx.x] = (int) warpHasCollision(v[threadIdx.x]);
+      |                                     ^
+main.cu:179:31: error: use of undeclared identifier '__shfl_up_sync'
+  179 |   const unsigned long lower = __shfl_up_sync(MASK, pVal.k, 1);
+      |                               ^
+main.cu:198:23: note: in instantiation of function template specialization 'warpCollisionMask<int>' requested here
+  198 |   unsigned int mask = warpCollisionMask(v[threadIdx.x]);
+      |                       ^
+main.cu:89:21: error: use of undeclared identifier '__shfl_xor_sync'
+   89 |   return Pair<K, V>(__shfl_xor_sync(MASK, p.k, laneMask, width),
+      |                     ^
+main.cu:95:9: note: in instantiation of function template specialization 'shfl_xor<int, int>' requested here
+   95 |   T y = shfl_xor(x, mask);
+      |         ^
+main.cu:111:9: note: in instantiation of function template specialization 'shflSwap<Pair<int, int>, LessThan<Pair<int, int>>>' requested here
+  111 |   val = shflSwap<T, Comparator>(val, 0x01, getBit(laneId, 1) ^ getBit(laneId, 0));
+      |         ^
+main.cu:173:10: note: in instantiation of function template specialization 'warpBitonicSort<Pair<int, int>, LessThan<Pair<int, int>>>' requested here
+  173 |   pVal = warpBitonicSort<Pair<T, int>, LessThan<Pair<T, int> > >(pVal);
+      |          ^
+main.cu:198:23: note: in instantiation of function template specialization 'warpCollisionMask<int>' requested here
+  198 |   unsigned int mask = warpCollisionMask(v[threadIdx.x]);
+      |                       ^
+main.cu:89:21: error: use of undeclared identifier '__shfl_xor_sync'
+   89 |   return Pair<K, V>(__shfl_xor_sync(MASK, p.k, laneMask, width),
+      |                     ^
+main.cu:95:9: note: in instantiation of function template specialization 'shfl_xor<int, bool>' requested here
+   95 |   T y = shfl_xor(x, mask);
+      |         ^
+main.cu:111:9: note: in instantiation of function template specialization 'shflSwap<Pair<int, bool>, LessThan<Pair<int, bool>>>' requested here
+  111 |   val = shflSwap<T, Comparator>(val, 0x01, getBit(laneId, 1) ^ getBit(laneId, 0));
+      |         ^
+main.cu:184:9: note: in instantiation of function template specialization 'warpBitonicSort<Pair<int, bool>, LessThan<Pair<int, bool>>>' requested here
+  184 |   dup = warpBitonicSort<Pair<int, bool>,
+      |         ^
+main.cu:198:23: note: in instantiation of function template specialization 'warpCollisionMask<int>' requested here
+  198 |   unsigned int mask = warpCollisionMask(v[threadIdx.x]);
+      |                       ^
+7 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

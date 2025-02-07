@@ -1,0 +1,4 @@
+ld.lld: error: unable to find library -lhipblasLt
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++ --driver-mode=g++ -Llib --hip-link  -std=c++14 -Wall -O3 main.o -o "main" -lhipblasLt
+make: *** [Makefile.AMD:48: main] Error 1

@@ -1,0 +1,6 @@
+main.cu:24:10: fatal error: 'hipDNN.h' file not found
+   24 | #include <hipDNN.h>
+      |          ^~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -DCUDNN_CONV -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:57: main.o] Error 1

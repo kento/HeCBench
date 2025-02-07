@@ -1,0 +1,103 @@
+main.cu:239:26: error: no matching function for call to 'hipsparseSpSV_solve'
+  239 |         CHECK_HIPSPARSE( hipsparseSpSV_solve(hipsparseHandle,
+      |                          ^~~~~~~~~~~~~~~~~~~
+main.cu:86:29: note: expanded from macro 'CHECK_HIPSPARSE'
+   86 |         auto local_error = (error);                                                       \
+      |                             ^~~~~
+/opt/rocm-6.2.0/lib/llvm/bin/../../../include/hipsparse/hipsparse.h:13977:19: note: candidate function not viable: requires 9 arguments, but 10 were provided
+ 13977 | hipsparseStatus_t hipsparseSpSV_solve(hipsparseHandle_t           handle,
+       |                   ^                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13978 |                                       hipsparseOperation_t        opA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13979 |                                       const void*                 alpha,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13980 |                                       hipsparseConstSpMatDescr_t  matA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13981 |                                       hipsparseConstDnVecDescr_t  x,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13982 |                                       const hipsparseDnVecDescr_t y,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13983 |                                       hipDataType                 computeType,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13984 |                                       hipsparseSpSVAlg_t          alg,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13985 |                                       hipsparseSpSVDescr_t        spsvDescr);
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:246:26: error: no matching function for call to 'hipsparseSpSV_solve'
+  246 |         CHECK_HIPSPARSE( hipsparseSpSV_solve(hipsparseHandle,
+      |                          ^~~~~~~~~~~~~~~~~~~
+main.cu:86:29: note: expanded from macro 'CHECK_HIPSPARSE'
+   86 |         auto local_error = (error);                                                       \
+      |                             ^~~~~
+/opt/rocm-6.2.0/lib/llvm/bin/../../../include/hipsparse/hipsparse.h:13977:19: note: candidate function not viable: requires 9 arguments, but 10 were provided
+ 13977 | hipsparseStatus_t hipsparseSpSV_solve(hipsparseHandle_t           handle,
+       |                   ^                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13978 |                                       hipsparseOperation_t        opA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13979 |                                       const void*                 alpha,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13980 |                                       hipsparseConstSpMatDescr_t  matA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13981 |                                       hipsparseConstDnVecDescr_t  x,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13982 |                                       const hipsparseDnVecDescr_t y,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13983 |                                       hipDataType                 computeType,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13984 |                                       hipsparseSpSVAlg_t          alg,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13985 |                                       hipsparseSpSVDescr_t        spsvDescr);
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:292:26: error: no matching function for call to 'hipsparseSpSV_solve'
+  292 |         CHECK_HIPSPARSE( hipsparseSpSV_solve(hipsparseHandle,
+      |                          ^~~~~~~~~~~~~~~~~~~
+main.cu:86:29: note: expanded from macro 'CHECK_HIPSPARSE'
+   86 |         auto local_error = (error);                                                       \
+      |                             ^~~~~
+/opt/rocm-6.2.0/lib/llvm/bin/../../../include/hipsparse/hipsparse.h:13977:19: note: candidate function not viable: requires 9 arguments, but 10 were provided
+ 13977 | hipsparseStatus_t hipsparseSpSV_solve(hipsparseHandle_t           handle,
+       |                   ^                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13978 |                                       hipsparseOperation_t        opA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13979 |                                       const void*                 alpha,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13980 |                                       hipsparseConstSpMatDescr_t  matA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13981 |                                       hipsparseConstDnVecDescr_t  x,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13982 |                                       const hipsparseDnVecDescr_t y,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13983 |                                       hipDataType                 computeType,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13984 |                                       hipsparseSpSVAlg_t          alg,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13985 |                                       hipsparseSpSVDescr_t        spsvDescr);
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:299:26: error: no matching function for call to 'hipsparseSpSV_solve'
+  299 |         CHECK_HIPSPARSE( hipsparseSpSV_solve(hipsparseHandle,
+      |                          ^~~~~~~~~~~~~~~~~~~
+main.cu:86:29: note: expanded from macro 'CHECK_HIPSPARSE'
+   86 |         auto local_error = (error);                                                       \
+      |                             ^~~~~
+/opt/rocm-6.2.0/lib/llvm/bin/../../../include/hipsparse/hipsparse.h:13977:19: note: candidate function not viable: requires 9 arguments, but 10 were provided
+ 13977 | hipsparseStatus_t hipsparseSpSV_solve(hipsparseHandle_t           handle,
+       |                   ^                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13978 |                                       hipsparseOperation_t        opA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13979 |                                       const void*                 alpha,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13980 |                                       hipsparseConstSpMatDescr_t  matA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13981 |                                       hipsparseConstDnVecDescr_t  x,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13982 |                                       const hipsparseDnVecDescr_t y,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13983 |                                       hipDataType                 computeType,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13984 |                                       hipsparseSpSVAlg_t          alg,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 13985 |                                       hipsparseSpSVDescr_t        spsvDescr);
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -I../bicgstab-cuda -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:49: main.o] Error 1

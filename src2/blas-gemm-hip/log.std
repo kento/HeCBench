@@ -1,18 +1,18 @@
 	Running with half precision data type:
 Checking BLAS GEMM.. PASS
-Average GEMM execution time: 19.026 (us), 63.068 GFLOP/s
+Average GEMM execution time: 18.97 (us), 63.2541 GFLOP/s
 	Running with single precision data type:
 Checking BLAS GEMM.. PASS
-Average GEMM execution time: 6.417 (us), 186.993 GFLOP/s
+Average GEMM execution time: 6.385 (us), 187.93 GFLOP/s
 	Running with double precision data type:
 Checking BLAS GEMM.. PASS
-Average GEMM execution time: 5.735 (us), 209.229 GFLOP/s
+Average GEMM execution time: 5.71 (us), 210.146 GFLOP/s
 	Running with half precision data type:
 Checking BLAS GEMM.. PASS
-Average GEMM execution time: 3841.29 (us), 35.7838 TFLOP/s
+Average GEMM execution time: 3791.59 (us), 36.2528 TFLOP/s
 	Running with single precision data type:
 Checking BLAS GEMM.. PASS
-Average GEMM execution time: 3573.06 (us), 38.4701 TFLOP/s
+Average GEMM execution time: 3530.1 (us), 38.9382 TFLOP/s
 	Running with double precision data type:
 Checking BLAS GEMM.. PASS
-Average GEMM execution time: 3895.62 (us), 35.2847 TFLOP/s
+Average GEMM execution time: 3855.15 (us), 35.6551 TFLOP/s
