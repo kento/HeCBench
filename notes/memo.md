@@ -33,8 +33,8 @@
 | miniWeather | MPI |
 | pingpong | MPI |
 | prna | DATAPATHの設定忘れ |
-| rowwiseMoments | cuda版がコンパイルできない；ソース修正による対応が可能 |
-| saxpy-ompt | どの環境でもコンパイルに成功していない AMDのマシンではasaxpy.c:24:10: fatal error: 'hip/hip_runtime.h' file not found |
+| rowwiseMoments | cuda版がコンパイルできない；namespace "thrust" has no member "pair" |
+| saxpy-ompt | どの環境でもコンパイルに成功していない AMDのマシンではasaxpy.c:24:10: fatal error: 'hip/hip_runtime.h' file not found --> AMD では実行可能になった。NVIDIAでは実行時にエラー。 |
 | si | cmakeを使うベンチマーク。まだ試していない。 |
 | slu | cuda版がコンパイルできなかった (hip, hipifiedはコンパイルはできたが非常に低速であった) |
 | sparkler | MPI |
@@ -54,7 +54,7 @@
 | ベンチマーク名 | コメント |
 | -- | -- |
 | cmp | データセットをいただいたので試す；AMDでは実行はできたがステータスはfail. NVIDIAでは問題なく実行できた。 |
-| diamond | Please contact me for the dataset. Meってだれ？|
+| diamond | Please contact me for the dataset. |
 
 ソフト/ライブラリーが必要なベンチマーク
 
