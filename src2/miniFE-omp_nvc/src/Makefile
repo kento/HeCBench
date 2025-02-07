@@ -3,33 +3,31 @@
 # compile chain.
 
 MINIFE_TYPES =  \
-        -DMINIFE_SCALAR=float   \
+        -DMINIFE_SCALAR=double   \
         -DMINIFE_LOCAL_ORDINAL=int      \
         -DMINIFE_GLOBAL_ORDINAL=int \
 	-DMINIFE_RESTRICT=__restrict__
 
 MINIFE_MATRIX_TYPE = -DMINIFE_CSR_MATRIX
-#MINIFE_MATRIX_TYPE = -DMINIFE_ELL_MATRIX
 
 #-----------------------------------------------------------------------
 
-CFLAGS = -v -O3 
+#CFLAGS = -v -O3 -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__\
+	-ffp-contract=fast 
 #	-S -emit-llvm
 #\
 #	-S -emit-llvm
 #-mllvm -regalloc=pbqp
 #CFLAGS = -qreport -O3 -fopenmp -mcpu=power8 -mtune=power8
 
-CXXFLAGS = -I. -I../utils -I../fem $(MINIFE_TYPES) -O3 -x hip \
-	$(MINIFE_MATRIX_TYPE) \
-        -std=c++14 -Wall -pthread -fPIE `hipcl_config -C`
+CXXFLAGS = $(CFLAGS)
 
-#            -DMINIFE_DEBUG \
+CPPFLAGS = -I. -I../utils -I../fem $(MINIFE_TYPES) \
+	$(MINIFE_MATRIX_TYPE) #\
 #	-DHAVE_MPI -DMPICH_IGNORE_CXX_SEEK \
 #	-DMINIFE_REPORT_RUSAGE
 
-#LDFLAGS=-O3
-LDFLAGS = -Wl,-rpath,$(HIPCL)/lib -L$(HIPCL)/lib -lhipcl 
+LDFLAGS=$(CFLAGS)
 LIBS=
 
 # The MPICH_IGNORE_CXX_SEEK macro is required for some mpich versions,
@@ -41,13 +39,14 @@ LIBS=
 #CXX=g++
 #CC=g++
 
-#CXX=icpc
+#CXX=icpx
 #CC=icc
+CXX=nvcc
+CC=nvcc
+LAUNCHER  =
 
-#CXX       = $(HIPCL_LLVM)/bin/clang++
-#CC        = $(HIPCL_LLVM)/bin/clang++
-CXX       = clang++
-CC        = clang++
+#CXX=clang++
+#CC=clang
 
 #CXX=xlC
 #CC=xlc

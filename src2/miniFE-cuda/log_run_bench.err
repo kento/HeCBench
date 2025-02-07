@@ -1,1 +1,39 @@
-make: *** No rule to make target 'run'.  Stop.
+./perform_element_loop.hpp(75): warning #177-D: variable "t_gn" was declared but never referenced
+    timer_type t_gn = 0, t_ce = 0, t_si = 0;
+               ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of ./driver.hpp
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of main.cpp
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+./perform_element_loop.hpp(75): warning #177-D: variable "t_ce" was declared but never referenced
+    timer_type t_gn = 0, t_ce = 0, t_si = 0;
+                         ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of ./driver.hpp
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of main.cpp
+
+./perform_element_loop.hpp(75): warning #177-D: variable "t_si" was declared but never referenced
+    timer_type t_gn = 0, t_ce = 0, t_si = 0;
+                                   ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of ./driver.hpp
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of main.cpp
+
+./perform_element_loop.hpp(76): warning #177-D: variable "t0" was declared but never referenced
+    timer_type t0 = 0;
+               ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of ./driver.hpp
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of main.cpp
+
+./SparseMatrix_functions.hpp(195): warning #177-D: variable "flag" was declared but never referenced
+        bool flag = false;
+             ^
+          detected during:
+            instantiation of "void miniFE::sum_into_global_linear_system(miniFE::ElemData<GlobalOrdinal, Scalar> &, MatrixType &, VectorType &) [with GlobalOrdinal=int, Scalar=double, MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 87 of ./perform_element_loop.hpp
+            instantiation of "void miniFE::perform_element_loop(const miniFE::simple_mesh_description<GlobalOrdinal> &, const Box &, MatrixType &, VectorType &, miniFE::Parameters &) [with GlobalOrdinal=int, MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 72 of ./assemble_FE_data.hpp
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of ./driver.hpp
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of main.cpp
+

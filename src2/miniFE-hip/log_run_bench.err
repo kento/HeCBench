@@ -1,1 +1,498 @@
-make: *** No rule to make target 'run'.  Stop.
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:371:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  371 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:409:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:264:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  264 |         hipFree(d_r);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:265:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  265 |         hipFree(d_p);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:266:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  266 |         hipFree(d_Ap);
+      |         ^~~~~~~ ~~~~
+./cg_solve.hpp:267:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  267 |         hipFree(d_x);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:268:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  268 |         hipFree(d_b);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:271:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |         hipFree(d_Acoefs);
+      |         ^~~~~~~ ~~~~~~~~
+./cg_solve.hpp:142:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  142 |         hipMalloc((void**)&d_r, sizeof(MINIFE_SCALAR) * r.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./driver.hpp:281:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  281 |     cg_solve(A, b, x, matvec_overlap<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:143:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  143 |         hipMalloc((void**)&d_p, sizeof(MINIFE_SCALAR) * p.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:144:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |         hipMalloc((void**)&d_Ap, sizeof(MINIFE_SCALAR) * Ap.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:145:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  145 |         hipMalloc((void**)&d_x, sizeof(MINIFE_SCALAR) * x.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:146:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  146 |         hipMalloc((void**)&d_b, sizeof(MINIFE_SCALAR) * b.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:147:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  147 |         hipMalloc((void**)&d_Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:148:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  148 |         hipMalloc((void**)&d_Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:149:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  149 |         hipMalloc((void**)&d_Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:150:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  150 |         hipMemcpy(d_r, r_ptr, sizeof(MINIFE_SCALAR) * r.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:151:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  151 |         hipMemcpy(d_p, p_ptr, sizeof(MINIFE_SCALAR) * p.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:152:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  152 |         hipMemcpy(d_Ap, Ap_ptr, sizeof(MINIFE_SCALAR) * Ap.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:153:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  153 |         hipMemcpy(d_x, x_ptr, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipMemcpy(d_b, b_ptr, sizeof(MINIFE_SCALAR) * b.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:155:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  155 |         hipMemcpy(d_Arowoffsets, Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:156:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  156 |         hipMemcpy(d_Acols, Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:157:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  157 |         hipMemcpy(d_Acoefs, Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:256:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  256 |         hipMemcpy(x_ptr, d_x, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyDeviceToHost);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:264:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  264 |         hipFree(d_r);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:265:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  265 |         hipFree(d_p);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:266:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  266 |         hipFree(d_Ap);
+      |         ^~~~~~~ ~~~~
+./cg_solve.hpp:267:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  267 |         hipFree(d_x);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:268:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  268 |         hipFree(d_b);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:269:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |         hipFree(d_Arowoffsets);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+./cg_solve.hpp:270:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |         hipFree(d_Acols);
+      |         ^~~~~~~ ~~~~~~~
+./cg_solve.hpp:271:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |         hipFree(d_Acoefs);
+      |         ^~~~~~~ ~~~~~~~~
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:409:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:173:26: note: in instantiation of function template specialization 'miniFE::dot_r2<miniFE::Vector<double, int, int>>' requested here
+  173 |         TICK(); rtrans = dot_r2(r, d_r); TOCK(tDOT);
+      |                          ^
+./driver.hpp:281:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  281 |     cg_solve(A, b, x, matvec_overlap<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:410:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |       hipMemset(d, 0, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:413:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |       hipMemcpy(&result, d, sizeof(Scalar), hipMemcpyDeviceToHost);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:414:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |       hipFree(d);
+      |       ^~~~~~~ ~
+./Vector_functions.hpp:371:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  371 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:222:30: note: in instantiation of function template specialization 'miniFE::dot<miniFE::Vector<double, int, int>>' requested here
+  222 |           TICK(); p_ap_dot = dot(Ap, p, d_Ap, d_p); TOCK(tDOT);
+      |                              ^
+./driver.hpp:281:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  281 |     cg_solve(A, b, x, matvec_overlap<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:372:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  372 |       hipMemset(d, 0, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:375:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |       hipMemcpy(&result, d, sizeof(Scalar), hipMemcpyDeviceToHost);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:376:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  376 |       hipFree(d);
+      |       ^~~~~~~ ~
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:142:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  142 |         hipMalloc((void**)&d_r, sizeof(MINIFE_SCALAR) * r.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./driver.hpp:288:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_std<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  288 |     cg_solve(A, b, x, matvec_std<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:143:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  143 |         hipMalloc((void**)&d_p, sizeof(MINIFE_SCALAR) * p.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:144:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |         hipMalloc((void**)&d_Ap, sizeof(MINIFE_SCALAR) * Ap.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:145:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  145 |         hipMalloc((void**)&d_x, sizeof(MINIFE_SCALAR) * x.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:146:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  146 |         hipMalloc((void**)&d_b, sizeof(MINIFE_SCALAR) * b.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:147:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  147 |         hipMalloc((void**)&d_Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:148:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  148 |         hipMalloc((void**)&d_Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:149:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  149 |         hipMalloc((void**)&d_Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:150:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  150 |         hipMemcpy(d_r, r_ptr, sizeof(MINIFE_SCALAR) * r.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:151:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  151 |         hipMemcpy(d_p, p_ptr, sizeof(MINIFE_SCALAR) * p.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:152:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  152 |         hipMemcpy(d_Ap, Ap_ptr, sizeof(MINIFE_SCALAR) * Ap.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:153:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  153 |         hipMemcpy(d_x, x_ptr, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipMemcpy(d_b, b_ptr, sizeof(MINIFE_SCALAR) * b.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:155:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  155 |         hipMemcpy(d_Arowoffsets, Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:156:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  156 |         hipMemcpy(d_Acols, Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:157:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  157 |         hipMemcpy(d_Acoefs, Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:256:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  256 |         hipMemcpy(x_ptr, d_x, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyDeviceToHost);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:264:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  264 |         hipFree(d_r);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:265:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  265 |         hipFree(d_p);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:266:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  266 |         hipFree(d_Ap);
+      |         ^~~~~~~ ~~~~
+./cg_solve.hpp:267:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  267 |         hipFree(d_x);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:268:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  268 |         hipFree(d_b);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:269:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |         hipFree(d_Arowoffsets);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+./cg_solve.hpp:270:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |         hipFree(d_Acols);
+      |         ^~~~~~~ ~~~~~~~
+./cg_solve.hpp:271:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |         hipFree(d_Acoefs);
+      |         ^~~~~~~ ~~~~~~~~
+66 warnings generated when compiling for gfx90a.
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:371:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  371 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:409:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:264:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  264 |         hipFree(d_r);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:265:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  265 |         hipFree(d_p);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:266:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  266 |         hipFree(d_Ap);
+      |         ^~~~~~~ ~~~~
+./cg_solve.hpp:267:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  267 |         hipFree(d_x);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:268:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  268 |         hipFree(d_b);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:271:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |         hipFree(d_Acoefs);
+      |         ^~~~~~~ ~~~~~~~~
+./cg_solve.hpp:142:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  142 |         hipMalloc((void**)&d_r, sizeof(MINIFE_SCALAR) * r.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./driver.hpp:281:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  281 |     cg_solve(A, b, x, matvec_overlap<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:143:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  143 |         hipMalloc((void**)&d_p, sizeof(MINIFE_SCALAR) * p.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:144:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |         hipMalloc((void**)&d_Ap, sizeof(MINIFE_SCALAR) * Ap.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:145:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  145 |         hipMalloc((void**)&d_x, sizeof(MINIFE_SCALAR) * x.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:146:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  146 |         hipMalloc((void**)&d_b, sizeof(MINIFE_SCALAR) * b.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:147:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  147 |         hipMalloc((void**)&d_Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:148:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  148 |         hipMalloc((void**)&d_Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:149:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  149 |         hipMalloc((void**)&d_Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:150:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  150 |         hipMemcpy(d_r, r_ptr, sizeof(MINIFE_SCALAR) * r.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:151:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  151 |         hipMemcpy(d_p, p_ptr, sizeof(MINIFE_SCALAR) * p.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:152:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  152 |         hipMemcpy(d_Ap, Ap_ptr, sizeof(MINIFE_SCALAR) * Ap.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:153:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  153 |         hipMemcpy(d_x, x_ptr, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipMemcpy(d_b, b_ptr, sizeof(MINIFE_SCALAR) * b.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:155:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  155 |         hipMemcpy(d_Arowoffsets, Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:156:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  156 |         hipMemcpy(d_Acols, Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:157:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  157 |         hipMemcpy(d_Acoefs, Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:256:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  256 |         hipMemcpy(x_ptr, d_x, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyDeviceToHost);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:264:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  264 |         hipFree(d_r);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:265:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  265 |         hipFree(d_p);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:266:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  266 |         hipFree(d_Ap);
+      |         ^~~~~~~ ~~~~
+./cg_solve.hpp:267:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  267 |         hipFree(d_x);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:268:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  268 |         hipFree(d_b);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:269:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |         hipFree(d_Arowoffsets);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+./cg_solve.hpp:270:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |         hipFree(d_Acols);
+      |         ^~~~~~~ ~~~~~~~
+./cg_solve.hpp:271:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |         hipFree(d_Acoefs);
+      |         ^~~~~~~ ~~~~~~~~
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:409:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  409 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:173:26: note: in instantiation of function template specialization 'miniFE::dot_r2<miniFE::Vector<double, int, int>>' requested here
+  173 |         TICK(); rtrans = dot_r2(r, d_r); TOCK(tDOT);
+      |                          ^
+./driver.hpp:281:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  281 |     cg_solve(A, b, x, matvec_overlap<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:410:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  410 |       hipMemset(d, 0, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:413:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  413 |       hipMemcpy(&result, d, sizeof(Scalar), hipMemcpyDeviceToHost);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:414:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |       hipFree(d);
+      |       ^~~~~~~ ~
+./Vector_functions.hpp:371:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  371 |       hipMalloc((void**)&d, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:222:30: note: in instantiation of function template specialization 'miniFE::dot<miniFE::Vector<double, int, int>>' requested here
+  222 |           TICK(); p_ap_dot = dot(Ap, p, d_Ap, d_p); TOCK(tDOT);
+      |                              ^
+./driver.hpp:281:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  281 |     cg_solve(A, b, x, matvec_overlap<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:51:
+In file included from ./SparseMatrix_functions.hpp:40:
+./Vector_functions.hpp:372:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  372 |       hipMemset(d, 0, sizeof(Scalar)*1024);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:375:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  375 |       hipMemcpy(&result, d, sizeof(Scalar), hipMemcpyDeviceToHost);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Vector_functions.hpp:376:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  376 |       hipFree(d);
+      |       ^~~~~~~ ~
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:142:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  142 |         hipMalloc((void**)&d_r, sizeof(MINIFE_SCALAR) * r.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./driver.hpp:288:5: note: in instantiation of function template specialization 'miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_std<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>' requested here
+  288 |     cg_solve(A, b, x, matvec_std<MatrixType,VectorType>(), max_iters, tol,
+      |     ^
+main.cpp:178:14: note: in instantiation of function template specialization 'miniFE::driver<double, int, int>' requested here
+  178 |      miniFE::driver< MINIFE_SCALAR, MINIFE_LOCAL_ORDINAL, MINIFE_GLOBAL_ORDINAL>(global_box, my_box, params, doc);
+      |              ^
+In file included from main.cpp:56:
+In file included from ./driver.hpp:61:
+./cg_solve.hpp:143:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  143 |         hipMalloc((void**)&d_p, sizeof(MINIFE_SCALAR) * p.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:144:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |         hipMalloc((void**)&d_Ap, sizeof(MINIFE_SCALAR) * Ap.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:145:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  145 |         hipMalloc((void**)&d_x, sizeof(MINIFE_SCALAR) * x.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:146:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  146 |         hipMalloc((void**)&d_b, sizeof(MINIFE_SCALAR) * b.coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:147:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  147 |         hipMalloc((void**)&d_Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:148:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  148 |         hipMalloc((void**)&d_Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:149:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  149 |         hipMalloc((void**)&d_Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size());
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:150:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  150 |         hipMemcpy(d_r, r_ptr, sizeof(MINIFE_SCALAR) * r.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:151:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  151 |         hipMemcpy(d_p, p_ptr, sizeof(MINIFE_SCALAR) * p.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:152:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  152 |         hipMemcpy(d_Ap, Ap_ptr, sizeof(MINIFE_SCALAR) * Ap.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:153:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  153 |         hipMemcpy(d_x, x_ptr, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipMemcpy(d_b, b_ptr, sizeof(MINIFE_SCALAR) * b.coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:155:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  155 |         hipMemcpy(d_Arowoffsets, Arowoffsets, sizeof(LocalOrdinalType) * A.row_offsets.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:156:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  156 |         hipMemcpy(d_Acols, Acols, sizeof(GlobalOrdinalType) * A.packed_cols.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:157:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  157 |         hipMemcpy(d_Acoefs, Acoefs, sizeof(MINIFE_SCALAR) * A.packed_coefs.size(), hipMemcpyHostToDevice);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:256:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  256 |         hipMemcpy(x_ptr, d_x, sizeof(MINIFE_SCALAR) * x.coefs.size(), hipMemcpyDeviceToHost);
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./cg_solve.hpp:264:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  264 |         hipFree(d_r);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:265:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  265 |         hipFree(d_p);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:266:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  266 |         hipFree(d_Ap);
+      |         ^~~~~~~ ~~~~
+./cg_solve.hpp:267:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  267 |         hipFree(d_x);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:268:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  268 |         hipFree(d_b);
+      |         ^~~~~~~ ~~~
+./cg_solve.hpp:269:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |         hipFree(d_Arowoffsets);
+      |         ^~~~~~~ ~~~~~~~~~~~~~
+./cg_solve.hpp:270:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |         hipFree(d_Acols);
+      |         ^~~~~~~ ~~~~~~~
+./cg_solve.hpp:271:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  271 |         hipFree(d_Acoefs);
+      |         ^~~~~~~ ~~~~~~~~
+66 warnings generated when compiling for host.

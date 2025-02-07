@@ -1,0 +1,8 @@
+cd src;make -f Makefile run
+make[1]: Entering directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-omp_aomp/src'
+./get_common_files
+./generate_info_header "icpx" "-v -O3 -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__ -ffp-contract=fast " "miniFE" "MINIFE"
+CXX: unknown
+Compiler version: unknown
+icpx -v -O3 -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__ -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c main.cpp
+make[1]: Leaving directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-omp_aomp/src'

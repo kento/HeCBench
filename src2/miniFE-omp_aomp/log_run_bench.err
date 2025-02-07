@@ -1,2 +1,4 @@
-make: Makefile.AMD: No such file or directory
-make: *** No rule to make target 'Makefile.AMD'.  Stop.
+/usr/bin/which: no icpx in (/opt/rocm-6.2.0/bin:/opt/rocm-6.2.0/llvm/bin:/home/users/u0001621/ImageMagick/bin:/home/users/u0001621/git/HIPIFY/bin:/home/users/u0001621/gnuplot/bin:/home/users/u0001621/ImageMagick/bin:/home/users/u0001621/git/HIPIFY/bin:/home/users/u0001621/gnuplot/bin:/home/users/u0001621/git/HIPIFY/bin:/home/users/u0001621/.local/bin:/home/users/u0001621/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin)
+make[1]: icpx: No such file or directory
+make[1]: *** [make_targets:35: main.o] Error 127
+make: *** [Makefile.AMD:2: run] Error 2

@@ -1,2 +1,6 @@
-make: Makefile.NVD: No such file or directory
-make: *** No rule to make target 'Makefile.NVD'.  Stop.
+main.cpp: In function 'int main(int, char**)':
+main.cpp:108:28: error: 'omp_get_max_threads' was not declared in this scope
+  108 |   const int thread_count = omp_get_max_threads();
+      |                            ^~~~~~~~~~~~~~~~~~~
+make[1]: *** [make_targets:35: main.o] Error 1
+make: *** [Makefile.NVD:2: run] Error 2
