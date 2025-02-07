@@ -1,0 +1,4 @@
+bash: line 1: 2676943 Aborted                 (core dumped) GSL_RNG_SEED=123 ./main f9_n150_p50 > log.std 2> log.err
+real 24.75
+user 22.82
+sys 1.78

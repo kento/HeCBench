@@ -1,3 +1,1 @@
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60           -I/home/users/u0001621/gsl_cuda/include -O3 -c main.cu -o main.o
-nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60           -I/home/users/u0001621/gsl_cuda/include -O3 main.o -o main -L/home/users/u0001621/gsl_cuda/lib -lgsl -lgslcblas
 bash -c "time -p ( GSL_RNG_SEED=123 ./main f9_n150_p50 1>log.std 2>log.err ) 2> log.time"

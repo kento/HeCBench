@@ -1,1 +1,1 @@
-hipcc  -std=c++14  -Wall            -I/path/to/GSL/include -O3 -c main.cu -o main.o
+bash -c "time -p ( GSL_RNG_SEED=123 ./main f9_n150_p50 1>log.std 2>log.err ) 2> log.time"
