@@ -4,9 +4,9 @@ Ligands   : 26
 Proteins  : 938
 Deck      : ../minibude-sycl/data/bm1
 WG        : 256
-- Total kernel time:    2003.586 ms
-- Average kernel time:   20.036 ms
-- Interactions/s: 79.772 billion
-- GFLOP/s:        3272.511
+- Total kernel time:    2008.785 ms
+- Average kernel time:   20.088 ms
+- Interactions/s: 79.565 billion
+- GFLOP/s:        3264.043
 Largest difference was 0.003%.
 
