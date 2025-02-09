@@ -7,7 +7,7 @@ CC        = clang++
 OPTIMIZE  = no
 DEBUG     = yes
 DEVICE    = gpu
-ARCH      = gfx906
+ARCH      = gfx90a
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -20,12 +20,17 @@ source = device/device_kernel_wrapper.cpp src/host_data_io.cpp   src/host_kernel
 
 obj = $(source:.cpp=.o)
 
+# =======================
+BIN_PATH = ./
+BIN_NAME= $(program)
+
 #===============================================================================
 # Sets Flags
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I./include
+#CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I./include
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I./include
 
 # Linker Flags
 LDFLAGS = 

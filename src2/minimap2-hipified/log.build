@@ -1,0 +1,10 @@
+Creating directories
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP7/minimap2-hipified'
+Compiling: device/device_kernel.cu -> build/cuda/device_kernel.o
+hipcc  -std=c++11  -g -O3  -I include/ -I /usr/local/include -c device/device_kernel.cu -o build/cuda/device_kernel.o
+Compiling: device/device_kernel_wrapper.cu -> build/cuda/device_kernel_wrapper.o
+hipcc  -std=c++11  -g -O3  -I include/ -I /usr/local/include -c device/device_kernel_wrapper.cu -o build/cuda/device_kernel_wrapper.o
+Linking: build/bin/kernel-2d
+hipcc build/host_data_io.o build/host_kernel.o build/main.o build/memory_scheduler.o build/cuda/device_kernel.o build/cuda/device_kernel_wrapper.o -o build/bin/kernel-2d
+Making symlink: kernel-2d -> build/bin/kernel-2d
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP7/minimap2-hipified'
