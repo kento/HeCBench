@@ -1,1 +1,5 @@
-clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c main.cpp -o main.o
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../minibude-cuda/prepare_data.sh; time -p ( ./main --deck ../minibude-sycl/data/bm1  --wgsize 256 --iterations 100 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 894.65 883.66
