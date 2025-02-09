@@ -2,7 +2,8 @@
 echo "|" name "|" cuda "|" hip  "|" hipified "|" omp_nvc "|" omp_aomp "|"
 echo "|" "--" "|" "--" "|" "--" "|" "--"     "|" "--"   "|" -- "|"
 #
-for n in `cat List_full`
+#for n in `cat List_full`
+for n in `cat List_a`
 do
     num=0
     while [ $num -lt 5 ];
@@ -17,19 +18,38 @@ do
 
 	if [ -d $dir ]; then
 	    c1=`grep Error $dir/log_run_bench.err | grep make`
+	    c1a=`echo $c1 | awk '{print $NF}'`
 	    if [ -e $dir/log.build ]; then
 		c1=`grep Error $dir/log.build | grep make`
 	    fi
+
 	    if [ "$c1"  = "" ]; then
 		c2=`grep -i error $dir/log.err`
                 c3=`grep "core dumped" $dir/log.time`
-                if [ "$c2"  = "" -a "$c3" = "" ]; then
-		    time=`grep real $dir/log.time | awk '{print $NF}'`
+
+		c4=`grep Terminated $dir/log_run_bench.err`
+		c5=`grep "timeout was set" $dir/log_run_bench.err`
+
+		if [ "$c4" != "" ]; then
+		    if [ "$c5" != "" ]; then
+			tmp1=`echo $c5 | awk '{print $NF}'`
+			time="over "$tmp1
+		    else
+			time="TLE error"
+		    fi
 		else
-		    time="exe err"
+                    if [ "$c2"  = "" -a "$c3" = "" ]; then
+			time=`grep real $dir/log.time | awk '{print $NF}'`
+		    else
+			time="exe err"
+		    fi
 		fi
 	    else
-		time="build err"
+		if [ $c1a == 255 ]; then
+		    time="exe err"
+		else
+		    time="build err"
+		fi
 	    fi
 	else
 	    time="--"
