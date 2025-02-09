@@ -1,0 +1,6 @@
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 --expt-relaxed-constexpr -O3 -dc main.cu -o main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 --expt-relaxed-constexpr -O3 -dc bench_merkle_tree.cu -o bench_merkle_tree.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 --expt-relaxed-constexpr -O3 -dc merkle_tree.cu -o merkle_tree.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 --expt-relaxed-constexpr -O3 -dc rescue_prime.cu -o rescue_prime.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 --expt-relaxed-constexpr -O3 -dc ff_p.cu -o ff_p.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_90 --expt-relaxed-constexpr -O3 main.o bench_merkle_tree.o merkle_tree.o rescue_prime.o ff_p.o -o main 
