@@ -1,10 +1,10 @@
 N = 1999999
 generating data...
 ####################### Reference #############
-Execution time (ms): 48.610630
+Execution time (ms): 48.487968
 ####################### GPU (no streams) #############
-Execution time (ms): 2.447357
+Execution time (ms): 2.049716
 PASS
 ####################### GPU (streams) #############
-Execution time (ms): 2.008782
+Execution time (ms): 1.947158
 PASS

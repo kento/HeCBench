@@ -6,7 +6,7 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+ARCH      = sm_90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) --default-stream per-thread           -std=c++14  -Wall 
+CFLAGS := $(EXTRA_CFLAGS)    -std=c++14  -Wall 
 
 # Linker Flags
 LDFLAGS = 

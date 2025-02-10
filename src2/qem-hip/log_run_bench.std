@@ -1,1 +1,8 @@
+hipcc  -std=c++14 -Wall -I../qem-cuda -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -I../qem-cuda -O3 -c gpu_solver.cu -o gpu_solver.o
+hipcc  -std=c++14 -Wall -I../qem-cuda -O3 main.o gpu_solver.o -o main 
+../scripts/rocm-smi.sh > log.mem &
 bash -c "time -p ( ./main 100 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.98 7650.51 7639.53
