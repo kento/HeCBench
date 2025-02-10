@@ -1,3 +1,30 @@
-clang++: error: unknown argument: '--extended-lambda'
-failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall --extended-lambda -O3 -c -x hip main.cu -o "main.o"
-make: *** [Makefile.AMD:50: main.o] Error 1
+main.cu:64:26: warning: template template parameter using 'typename' is a C++17 extension [-Wc++17-extensions]
+   64 | template<template<int i> typename func, int end, int current=0>
+      |                          ^~~~~~~~
+      |                          class
+main.cu:73:26: warning: template template parameter using 'typename' is a C++17 extension [-Wc++17-extensions]
+   73 | template<template<int i> typename func, int end>
+      |                          ^~~~~~~~
+      |                          class
+main.cu:89:47: warning: 'static_assert' with no message is a C++17 extension [-Wc++17-extensions]
+   89 |     static_assert(sizeof(bool) == sizeof(char));
+      |                                               ^
+      |                                               , ""
+main.cu:210:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+  210 | __global__ void unrolled_elementwise_kernel_for_multi_outputs(int N, func_t f, array_t data, inp_calc_t ic, out_calc_t oc) {
+      |                 ^
+main.cu:210:17: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+5 warnings generated when compiling for gfx90a.
+main.cu:64:26: warning: template template parameter using 'typename' is a C++17 extension [-Wc++17-extensions]
+   64 | template<template<int i> typename func, int end, int current=0>
+      |                          ^~~~~~~~
+      |                          class
+main.cu:73:26: warning: template template parameter using 'typename' is a C++17 extension [-Wc++17-extensions]
+   73 | template<template<int i> typename func, int end>
+      |                          ^~~~~~~~
+      |                          class
+main.cu:89:47: warning: 'static_assert' with no message is a C++17 extension [-Wc++17-extensions]
+   89 |     static_assert(sizeof(bool) == sizeof(char));
+      |                                               ^
+      |                                               , ""
+3 warnings generated when compiling for host.
