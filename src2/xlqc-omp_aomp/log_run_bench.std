@@ -1,1 +1,1 @@
-clang++ -c -o basis.o ../xlqc-cuda/basis.cc  -std=c++14 -Wall -I../xlqc-cuda -I../xlqc-cuda/int_lib -I/home/users/u0001621/gsl_hip/include -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906
+bash -c "time -p ( ./main sp 1>log.std 2>log.err;./main dp 1>>log.std 2>>log.err ) 2> log.time"
