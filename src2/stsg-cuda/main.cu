@@ -15,7 +15,8 @@
 #include <fstream>
 #include <chrono>
 #include <cuda.h>
-#include <gdal/gdal_priv.h>
+//#include <gdal/gdal_priv.h>
+#include <gdal_priv.h>
 #include "Filter.h"
 
 using namespace std;

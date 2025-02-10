@@ -1,0 +1,45 @@
+Device name:NVIDIA GH200 480GB
+Device global memory used: 4096 MB
+Execution start 
+Number of loops: 20
+Loop 1
+Total kernel time: 1.30547 s
+Loop 2
+Total kernel time: 0.874144 s
+Loop 3
+Total kernel time: 0.899556 s
+Loop 4
+Total kernel time: 0.928727 s
+Loop 5
+Total kernel time: 0.982864 s
+Loop 6
+Total kernel time: 0.961542 s
+Loop 7
+Total kernel time: 0.950384 s
+Loop 8
+Total kernel time: 0.922109 s
+Loop 9
+Total kernel time: 0.932084 s
+Loop 10
+Total kernel time: 0.955848 s
+Loop 11
+Total kernel time: 0.980465 s
+Loop 12
+Total kernel time: 1.02003 s
+Loop 13
+Total kernel time: 1.05828 s
+Loop 14
+Total kernel time: 1.09415 s
+Loop 15
+Total kernel time: 1.04274 s
+Loop 16
+Total kernel time: 1.02995 s
+Loop 17
+Total kernel time: 1.02043 s
+Loop 18
+Total kernel time: 1.02773 s
+Loop 19
+Total kernel time: 1.07578 s
+Loop 20
+Total kernel time: 0.895136 s
+Checksum: 2.94423e+08 596160000 0.493866
