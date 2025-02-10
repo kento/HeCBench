@@ -1,1 +1,8 @@
-hipcc  -std=c++14 -Wall -I../pcc-cuda -O3 -c device.cu -o device.o
+hipcc  -std=c++14 -Wall -I../pcc-cuda -I/opt/rocm/include/hipblas -O3 -c ../pcc-cuda/main.cpp -o main.o
+hipcc  -std=c++14 -Wall -I../pcc-cuda -I/opt/rocm/include/hipblas -O3 -c device.cu -o device.o
+hipcc  -std=c++14 -Wall -I../pcc-cuda -I/opt/rocm/include/hipblas -O3 main.o device.o -o main -lhipblas
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 90112 165 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.98 8712.43 8701.45
