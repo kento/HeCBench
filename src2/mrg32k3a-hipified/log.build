@@ -1,0 +1,1 @@
+hipcc  -std=c++14  -Wall -I/opt/rocm/include/hiprand -O3 main.o -o main -lhiprand
