@@ -1,0 +1,12 @@
+#elements = 0.50 M: average hipblasSnrm2 execution time = 59.428242 (us), performance = 17.644423 (Gop/s)
+#elements = 1.00 M: average hipblasSnrm2 execution time = 46.415161 (us), performance = 45.182499 (Gop/s)
+#elements = 2.00 M: average hipblasSnrm2 execution time = 55.697155 (us), performance = 75.305557 (Gop/s)
+#elements = 4.00 M: average hipblasSnrm2 execution time = 71.687332 (us), performance = 117.016624 (Gop/s)
+#elements = 8.00 M: average hipblasSnrm2 execution time = 108.177391 (us), performance = 155.089859 (Gop/s)
+#elements = 16.00 M: average hipblasSnrm2 execution time = 182.548416 (us), performance = 183.811157 (Gop/s)
+#elements = 32.00 M: average hipblasSnrm2 execution time = 335.544495 (us), performance = 199.999908 (Gop/s)
+#elements = 64.00 M: average hipblasSnrm2 execution time = 639.486511 (us), performance = 209.883621 (Gop/s)
+#elements = 128.00 M: average hipblasSnrm2 execution time = 1251.261230 (us), performance = 214.531906 (Gop/s)
+#elements = 256.00 M: average hipblasSnrm2 execution time = 2578.748047 (us), performance = 208.190536 (Gop/s)
+#elements = 512.00 M: average hipblasSnrm2 execution time = 5411.548828 (us), performance = 198.416733 (Gop/s)
+PASS
