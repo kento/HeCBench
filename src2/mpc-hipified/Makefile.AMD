@@ -6,7 +6,8 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+#ARCH      = sm_90
+ARCH      = gfx90a
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -54,7 +55,7 @@ clean:
 
 process: fpc.c
 	gcc -O3 fpc.c -o fpc
-	./fpc < msg_sp.trace.fpc > msg_sp.trace.out
+	./fpc < ../mpc-cuda/msg_sp.trace.fpc > msg_sp.trace.out
 
 include ../include/mpc-AMD
 

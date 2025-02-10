@@ -1,0 +1,100 @@
+hipcc  -std=c++17 -Wall -I../mpc-cuda -O3 -c main.cu -o main.o
+main.cu:367:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  367 |   hipGetDeviceProperties(&deviceProp, 0);
+      |   ^~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:91:32: note: expanded from macro 'hipGetDeviceProperties'
+   91 | #define hipGetDeviceProperties hipGetDevicePropertiesR0600
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:393:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  393 |   hipMalloc(&d_in, insize * sizeof(long));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:394:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  394 |   hipMalloc(&d_out, outsize * sizeof(long));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipMalloc(&d_offs, blocks * sizeof(int));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipMemcpy(d_in, input, insize * sizeof(long), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:401:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  401 |     hipMemset(d_offs, -1, blocks * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:403:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  403 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:406:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  406 |     hipMemcpy(output, d_out, sizeof(long), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:414:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |     hipMemcpy(output, d_out, outsize * sizeof(long), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:422:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  422 |     hipMemset(d_offs, -1, blocks * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:424:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  424 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:427:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |     hipMemcpy(output, d_out, outsize * sizeof(long), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:441:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  441 |   hipFree(d_offs);
+      |   ^~~~~~~ ~~~~~~
+main.cu:442:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |   hipFree(d_out);
+      |   ^~~~~~~ ~~~~~
+main.cu:443:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |   hipFree(d_in);
+      |   ^~~~~~~ ~~~~
+15 warnings generated when compiling for gfx90a.
+main.cu:367:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  367 |   hipGetDeviceProperties(&deviceProp, 0);
+      |   ^~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~
+/opt/rocm-6.2.0/include/hip/hip_runtime_api.h:91:32: note: expanded from macro 'hipGetDeviceProperties'
+   91 | #define hipGetDeviceProperties hipGetDevicePropertiesR0600
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:393:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  393 |   hipMalloc(&d_in, insize * sizeof(long));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:394:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  394 |   hipMalloc(&d_out, outsize * sizeof(long));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:395:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  395 |   hipMalloc(&d_offs, blocks * sizeof(int));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:396:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  396 |   hipMemcpy(d_in, input, insize * sizeof(long), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:401:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  401 |     hipMemset(d_offs, -1, blocks * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:403:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  403 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:406:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  406 |     hipMemcpy(output, d_out, sizeof(long), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:414:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  414 |     hipMemcpy(output, d_out, outsize * sizeof(long), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:422:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  422 |     hipMemset(d_offs, -1, blocks * sizeof(int));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:424:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  424 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:427:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  427 |     hipMemcpy(output, d_out, outsize * sizeof(long), hipMemcpyDeviceToHost);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:441:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  441 |   hipFree(d_offs);
+      |   ^~~~~~~ ~~~~~~
+main.cu:442:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  442 |   hipFree(d_out);
+      |   ^~~~~~~ ~~~~~
+main.cu:443:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  443 |   hipFree(d_in);
+      |   ^~~~~~~ ~~~~
+15 warnings generated when compiling for host.
+hipcc  -std=c++17 -Wall -I../mpc-cuda -O3 main.o -o main 
