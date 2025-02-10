@@ -1,1 +1,5 @@
-clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c MT.cpp -o MT.o
+../scripts/rocm-smi.sh > log.mem &
+bash -c "tar xf data.tar.gz; time -p ( ./main 1000 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 1004.75 993.76
