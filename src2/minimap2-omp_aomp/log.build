@@ -1,0 +1,14 @@
+clang++  -std=c++17 -Wall -I./include -g -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c device/device_kernel_wrapper.cpp -o device/device_kernel_wrapper.o
+device/device_kernel_wrapper.cpp:82:26: warning: unused variable 'end' [-Wunused-variable]
+   82 |   struct timespec start, end;
+      |                          ^~~
+1 warning generated.
+device/device_kernel_wrapper.cpp:82:26: warning: unused variable 'end' [-Wunused-variable]
+   82 |   struct timespec start, end;
+      |                          ^~~
+1 warning generated.
+clang++  -std=c++17 -Wall -I./include -g -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c src/host_data_io.cpp -o src/host_data_io.o
+clang++  -std=c++17 -Wall -I./include -g -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c src/host_kernel.cpp -o src/host_kernel.o
+clang++  -std=c++17 -Wall -I./include -g -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c src/main.cpp -o src/main.o
+clang++  -std=c++17 -Wall -I./include -g -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c src/memory_scheduler.cpp -o src/memory_scheduler.o
+clang++  -std=c++17 -Wall -I./include -g -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a device/device_kernel_wrapper.o src/host_data_io.o src/host_kernel.o src/main.o src/memory_scheduler.o -o main -g

@@ -1,7 +1,7 @@
 LAUNCHER = bash -c
 CXX = g++
 NVCC = nvcc
-ARCH = sm_60
+ARCH = sm_90
 
 # path #
 SRC_PATH = src

@@ -1,1 +1,5 @@
-bash -c "time -p ( ./main --deck ../minibude-sycl/data/bm1  --wgsize 256 --iterations 100 1>log.std 2>log.err ) 2> log.time"
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../minibude-cuda/prepare_data.sh; time -p ( ./main --deck ../minibude-sycl/data/bm1  --wgsize 256 --iterations 100 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 287.37 276.38

@@ -5,9 +5,9 @@ Proteins  : 938
 Deck      : ../minibude-sycl/data/bm1
 Types     : 34
 WG        : 256
-- Total kernel time:    765.877 ms
-- Average kernel time:   7.659 ms
-- Interactions/s: 208.688 billion
-- GFLOP/s:        8561.111
+- Total kernel time:    769.967 ms
+- Average kernel time:   7.700 ms
+- Interactions/s: 207.579 billion
+- GFLOP/s:        8515.634
 Largest difference was 0.002%.
 

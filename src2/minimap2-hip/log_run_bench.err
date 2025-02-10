@@ -1,6 +1,0 @@
-device/device_kernel.cu:1:10: fatal error: 'hip/hip_runtime.h' file not found
-    1 | #include <hip/hip_runtime.h>
-      |          ^~~~~~~~~~~~~~~~~~~
-1 error generated when compiling for gfx90a.
-failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a -O3  -I include/ -I /usr/local/include -c -x hip device/device_kernel.cu -o "build/hip/device_kernel.o"
-make: *** [Makefile.AMD:86: build/hip/device_kernel.o] Error 1

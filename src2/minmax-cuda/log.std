@@ -1,4 +1,4 @@
 Total number of points: 6617795578
-Average execution time of thrust:min() and thrust:max(): 29571.542969 (us)
-Average execution time of thrust:min_max(): 19059.292969 (us)
+Average execution time of thrust:min() and thrust:max(): 28085.652344 (us)
+Average execution time of thrust:min_max(): 19006.382812 (us)
 PASS
