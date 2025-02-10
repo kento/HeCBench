@@ -15,9 +15,9 @@ OPENMPI_BINDIR=/usr/lib64/openmpi3/bin
 #CC	= mpicc
 #LD	= mpicc
 #NVCC	= $(CUDADIR)/bin/nvcc
-CC	= mpic++
-LD	= mpic++
-NVCC	= nvc++
+CC	= mpicc
+LD	= mpicc
+NVCC	= $(CUDADIR)/bin/nvcc
 #DEBUG   = -g -G -DDEBUG
 FAST    = -O3 #--use_fast_math 
 LAUNCHER = bash -c
@@ -56,6 +56,6 @@ veryclean :
 
 include ../include/miniDGS-NVIDIA
 
-run :
+run : $(MaxwellsRun3d)
 	$(LAUNCHER) "$(COMMAND)"
 
