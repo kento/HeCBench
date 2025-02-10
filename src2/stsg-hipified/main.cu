@@ -17,7 +17,8 @@
 #include <fstream>
 #include <chrono>
 #include <hip/hip_runtime.h>
-#include <gdal/gdal_priv.h>
+//#include <gdal/gdal_priv.h>
+#include <gdal_priv.h>
 #include "Filter.h"
 
 using namespace std;

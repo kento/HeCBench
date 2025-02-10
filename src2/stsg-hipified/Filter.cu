@@ -1,6 +1,6 @@
 #include "hip/hip_runtime.h"
 #include "hip/hip_runtime.h"
-﻿#ifdef __HIPCC__
+#ifdef __HIPCC__
 #include <hip/hip_runtime.h>
 #endif
 #ifdef __HIPCC__

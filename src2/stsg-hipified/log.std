@@ -1,0 +1,45 @@
+Device name:AMD Instinct MI250X/MI250
+Device global memory used: 4096 MB
+Execution start 
+Number of loops: 20
+Loop 1
+Total kernel time: 6.48858 s
+Loop 2
+Total kernel time: 7.49514 s
+Loop 3
+Total kernel time: 8.71809 s
+Loop 4
+Total kernel time: 9.21826 s
+Loop 5
+Total kernel time: 10.3084 s
+Loop 6
+Total kernel time: 10.1847 s
+Loop 7
+Total kernel time: 10.0534 s
+Loop 8
+Total kernel time: 10.0531 s
+Loop 9
+Total kernel time: 10.6993 s
+Loop 10
+Total kernel time: 9.66008 s
+Loop 11
+Total kernel time: 10.8794 s
+Loop 12
+Total kernel time: 11.138 s
+Loop 13
+Total kernel time: 11.1794 s
+Loop 14
+Total kernel time: 11.7177 s
+Loop 15
+Total kernel time: 11.2774 s
+Loop 16
+Total kernel time: 10.7662 s
+Loop 17
+Total kernel time: 10.8947 s
+Loop 18
+Total kernel time: 10.6719 s
+Loop 19
+Total kernel time: 11.3511 s
+Loop 20
+Total kernel time: 7.24692 s
+Checksum: 2.79908e+08 596160000 0.469519

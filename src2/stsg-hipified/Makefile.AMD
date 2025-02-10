@@ -24,10 +24,10 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall  -I../stsg-cuda -I$(HOME)/gdal_mi/include
 
 # Linker Flags
-LDFLAGS = -lgdal 
+LDFLAGS = -L$(HOME)/gdal_mi/lib -lgdal 
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
