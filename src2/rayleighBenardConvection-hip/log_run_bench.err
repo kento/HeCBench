@@ -1,0 +1,8 @@
+main.cu:155:17: warning: variable 'botsum' set but not used [-Wunused-but-set-variable]
+  155 |   float topsum, botsum;
+      |                 ^
+1 warning generated when compiling for gfx90a.
+main.cu:155:17: warning: variable 'botsum' set but not used [-Wunused-but-set-variable]
+  155 |   float topsum, botsum;
+      |                 ^
+1 warning generated when compiling for host.

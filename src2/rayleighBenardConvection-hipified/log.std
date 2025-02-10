@@ -6,6 +6,6 @@ Begin computation:
 Nusselt number: 0.0
 Nusselt number: 0.3
 Nusselt number: 7.7
-Total compute time: 42.318264 (s)
-Average compute time per step: 0.042318 (s)
+Total compute time: 45.830738 (s)
+Average compute time per step: 0.045831 (s)
 Done.
