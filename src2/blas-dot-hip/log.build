@@ -1,0 +1,292 @@
+hipcc  -std=c++17 -Wall -O3 -c main.cu -o main.o
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:102:3: note: in instantiation of function template specialization 'dot<double>' requested here
+  102 |   dot<double>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:104:3: note: in instantiation of function template specialization 'dot<float>' requested here
+  104 |   dot<float>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:106:3: note: in instantiation of function template specialization 'dot<__half>' requested here
+  106 |   dot<__half>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:108:3: note: in instantiation of function template specialization 'dot<__hip_bfloat16>' requested here
+  108 |   dot<__hip_bfloat16>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+44 warnings generated when compiling for gfx90a.
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:102:3: note: in instantiation of function template specialization 'dot<double>' requested here
+  102 |   dot<double>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:104:3: note: in instantiation of function template specialization 'dot<float>' requested here
+  104 |   dot<float>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:106:3: note: in instantiation of function template specialization 'dot<__half>' requested here
+  106 |   dot<__half>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+main.cu:41:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |   hipMalloc((void**)&d_srcA, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:108:3: note: in instantiation of function template specialization 'dot<__hip_bfloat16>' requested here
+  108 |   dot<__hip_bfloat16>(iNumElements, iNumIterations);
+      |   ^
+main.cu:42:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   42 |   hipMemcpy(d_srcA, srcA, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:44:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   44 |   hipMalloc((void**)&d_srcB, src_size_bytes);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:45:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   45 |   hipMemcpy(d_srcB, srcB, src_size_bytes, hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:47:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |   hipMalloc((void**)&d_dst, sizeof(T));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:74:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   74 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+main.cu:79:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   79 |   hipMemcpy(&dst, d_dst, sizeof(T), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipFree(d_dst);
+      |   ^~~~~~~ ~~~~~
+main.cu:84:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   84 |   hipFree(d_srcA);
+      |   ^~~~~~~ ~~~~~~
+main.cu:85:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |   hipFree(d_srcB);
+      |   ^~~~~~~ ~~~~~~
+44 warnings generated when compiling for host.
+hipcc  -std=c++17 -Wall -O3 main.o -o main -lhipblas

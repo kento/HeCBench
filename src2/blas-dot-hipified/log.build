@@ -1,3 +1,4 @@
+hipcc  -std=c++17  -Wall -I/opt/rocm/include/hipblas -O3 -c main.cu -o main.o
 main.cu:49:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
    49 |   hipMalloc((void**)&d_srcA, src_size_bytes);
       |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -288,3 +289,4 @@ main.cu:93:3: warning: ignoring return value of function declared with 'nodiscar
    93 |   hipFree(d_srcB);
       |   ^~~~~~~ ~~~~~~
 44 warnings generated when compiling for host.
+hipcc  -std=c++17  -Wall -I/opt/rocm/include/hipblas -O3 main.o -o main -lhipblas
