@@ -1,10 +1,10 @@
-Average kernel execution time (pnpoly_base): 0.010332 (s)
-Average kernel execution time (pnpoly_opt<1>): 0.008813 (s)
-Average kernel execution time (pnpoly_opt<2>): 0.006254 (s)
-Average kernel execution time (pnpoly_opt<4>): 0.005032 (s)
-Average kernel execution time (pnpoly_opt<8>): 0.004585 (s)
-Average kernel execution time (pnpoly_opt<16>): 0.004055 (s)
-Average kernel execution time (pnpoly_opt<32>): 0.004138 (s)
+Average kernel execution time (pnpoly_base): 0.008294 (s)
+Average kernel execution time (pnpoly_opt<1>): 0.008306 (s)
+Average kernel execution time (pnpoly_opt<2>): 0.006258 (s)
+Average kernel execution time (pnpoly_opt<4>): 0.005033 (s)
+Average kernel execution time (pnpoly_opt<8>): 0.004609 (s)
+Average kernel execution time (pnpoly_opt<16>): 0.004143 (s)
+Average kernel execution time (pnpoly_opt<32>): 0.004139 (s)
 Average kernel execution time (pnpoly_opt<64>): 0.004259 (s)
 Checksum: 3904695
 PASS
