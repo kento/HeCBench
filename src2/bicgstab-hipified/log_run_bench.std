@@ -1,1 +1,2 @@
-hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../bicgstab-cuda/prepare_data.sh; time -p ( ./main ../bicgstab-cuda/TEM27623/TEM27623_M.mtx 100 0 1>log.std 2>log.err ) 2> log.time"

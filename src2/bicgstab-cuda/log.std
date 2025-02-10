@@ -1,5 +1,5 @@
 
-matrix name: TEM27623/TEM27623_M.mtx
+matrix name: ../bicgstab-cuda/TEM27623/TEM27623_M.mtx
 num. rows:   27623
 num. cols:   27623
 nnz:         467092
@@ -8,5 +8,5 @@ structure:   symmetric
 Matrix parsing...
 Testing BiCGStab
 BiCGStab loop:
-Total execution time of BiCGStab: 0.616647 (s)
+Total execution time of BiCGStab: 0.611216 (s)
 Final error norm = 1.045477e-08

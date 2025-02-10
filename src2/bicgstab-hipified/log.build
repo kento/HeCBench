@@ -1,0 +1,16 @@
+hipcc  -std=c++17  -Wall -I/opt/rocm/include/hipblas -I/opt/rocm/include/hipsparse -O3 -c main.cu -o main.o
+main.cu:269:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |         hipMemset(d_tmp.ptr, 0x0, m * sizeof(double));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:270:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |         hipMemset(d_S_aux.ptr, 0x0, m * sizeof(double));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated when compiling for gfx90a.
+main.cu:269:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  269 |         hipMemset(d_tmp.ptr, 0x0, m * sizeof(double));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:270:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  270 |         hipMemset(d_S_aux.ptr, 0x0, m * sizeof(double));
+      |         ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated when compiling for host.
+hipcc  -std=c++17  -Wall -I/opt/rocm/include/hipblas -I/opt/rocm/include/hipsparse -O3 main.o -o main -lhipblas -lhipsparse
