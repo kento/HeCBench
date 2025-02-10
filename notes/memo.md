@@ -1,4 +1,6 @@
-ログファイルにおいてFAILとなるベンチマーク
+# 問題のあるベンチマーク
+
+## ログファイルにおいてFAILとなるベンチマーク
 
 | ベンチマーク名 | コメント |
 | -- | -- |
@@ -21,52 +23,56 @@
 | tensorAccessor | cuda版ログの最後がFAIL. パラメーターの問題かもしれない |
 | warpexchange | cuda版ログの最後がFAIL. パラメーターの問題かもしれない |
 
-現時点で(まともな)ログが存在しないベンチマーク
+## 現時点で(まともな)ログが存在しないベンチマーク
 
 | ベンチマーク名 | コメント |
 | -- | -- |
-| allreduce | MPI |
-| ccl | MPI |
+| allreduce | MPI CUDA版は実行できた |
+| ccl | MPI CUDA版は実行できた |
 | graphB+ | hip版は12h以上終わらない。|
 | mf-sgd | 構成が特殊。特段難しくない可能性もある。対処できた |
 | miniDGS | MPI |
+|       | src/MaxwellsKernel3d.cu(6): error: texture is not a template |
+|        | texture<float4, 1, cudaReadModeElementType> t_LIFT;
+|        | コンパイル時このような感じのエラーが大量に発生する。cuda11以下が必要？ |
 | miniFE | 構成が特殊。対処したがomp版は動作していない。 |
-| miniWeather | MPI |
-| pingpong | MPI |
+| miniWeather | MPI CUDA版は実行できた |
+| p2p | CUDA版は Two or more GPUs with Peer-to-Peer access capability are required for ./main. というメッセージ. 2ノードのジョブを実行しても同様のエラー。HIP版 HIPIFIED版は問題なく動作した。 |
+| pingpong | MPI CUDA版は実行できた |
 | prna | DATAPATHの設定忘れ；対処済み |
 | rowwiseMoments | cuda版がコンパイルできない；namespace "thrust" has no member "pair" --> thrust::pairをcuda::std::pairに書き換えるとコンパイルできるようになった。|
 | saxpy-ompt | どの環境でもコンパイルに成功していない AMDのマシンではasaxpy.c:24:10: fatal error: 'hip/hip_runtime.h' file not found --> AMD では実行可能になった。NVIDIAでは実行時にエラー。 |
 | si | cmakeを使うベンチマーク。cuda版は問題なく実行できた。HIP版はhipblasがないと言われコンパイルできなかった。 |
 | slu | cuda版がコンパイルできなかった (hip, hipifiedはコンパイルはできたが非常に低速であった) |
-| sparkler | MPI |
+| sparkler | MPI CUDA版は実行できた |
 | sss | ソース, Makefileを微修正。GSLが必要。-lblas->-lgslcblas などで実行できた。しかしhipified版は実行エラー。 |
-| stsg | GDAL, SQlite3, projなどの外部ライブラリーが必要。|
+| stsg | GDAL, SQlite3, projなどの外部ライブラリーが必要。インストールしたところ実行できた。 |
 | tsne | 必要なデータセットファイルの入手方法が分からない |
-| xlqc | gslにリンクし，LD_LIBRARY_PATHを通せば問題なく実行できた。|
+| xlqc | gslにリンクし，LD_LIBRARY_PATHを通せば問題なく実行できた。omp_amd版はコンパイルできなかったが，-std=c++20 とするとコンパイルできた。 |
 
-ログに何も出力されないベンチマーク
+## ログに何も出力されないベンチマーク
 
 | ベンチマーク名 | コメント |
 | -- | -- |
 | grep | |
 
-データセットがないベンチマーク
+## データセットがないベンチマーク
 
 | ベンチマーク名 | コメント |
 | -- | -- |
 | cmp | データセットをいただいたので試す；AMDでは実行はできたがステータスはfail. NVIDIAでは問題なく実行できた。 |
 | diamond | Please contact me for the dataset. |
 
-ソフト/ライブラリーが必要なベンチマーク
+## ソフト/ライブラリーが必要なベンチマーク
 
 | ベンチマーク名 | コメント |
 | -- | -- |
 | bm3d | ImageMagick, GraphicsMagickが必要。HIP版は実行できたがCUDA版は [CImg] \*\*\* CImgIOException \*\*\* [instance(0,0,0,0,(nil),non-shared)] CImg<unsigned char>::load(): Failed to recognize format of file 'noised-bufferfly-20.png'. というエラーで実行できなかった。 |
 | convolutionDeformable | torchが必要 |
 | dwconv1d | torchが必要 |
-| stsg | SQliteなどが必要。|
+| stsg | SQliteなどが必要。対応できた。 |
 
-構成が特殊なベンチマーク
+## 構成が特殊なベンチマーク
 
 | ベンチマーク名 | コメント |
 | -- | -- |
@@ -75,13 +81,77 @@
 | mf-sgd | ~~Makefileが最上位ディレクトリーに存在しない。データセットもなく，READMEのリポジトリをダウンロードしてもよく分からない。~~ 対処できた |
 | minFE | ~~srcディレクトリーでmakeすればよいのだろうか。~~ 対処できた |
 
-ログが標準エラー出力
+## ログが標準エラー出力
+
 | ベンチマーク名 | コメント |
 | -- | -- |
 | fpdc |  |
+| hungarian |  |
 
-なぜかCUDA未着手
+## なぜかCUDA未着手
+
 | ベンチマーク名 | コメント |
 | -- | -- |
 | d3q19-bgk | static const char dirs を static const signed char dirs に変えると実行できた。  |
+
+## 正規表現を設定していないベンチマーク ##
+| ベンチマーク名 | コメント |
+| -- | -- |
+| convolutionDeformable | 実行できていない (torch) |
+| deq19-bgk | 標準出力には時間ではなく性能が出力される。 |
+| diamond | 実行できていない (データセットがない)|
+| dwconv1d | 実行できていない (torch) |
+| grep | 標準出力に何もでてこない |
+| miniDGS | 実行できていない (古いCUDAが必要?) |
+| p2p | 標準出力には時間でなく性能が出力される |
+| prna | 標準出力に時間など環境ごとに異なる情報は記録されない |
+| saxpy-ompt | 標準出力には時間ではなく性能が出力される |
+| si | 正規表現で標準出力からどうデータを抽出してよいか分からない |
+| srad | 正規表現で標準出力からどうデータを抽出してよいか分からない ; Total time:という行の次の行に数値 |
+| tsne | 実行できていない。実行に必要なファイルが入手できない。 |
+| wmma | 標準出力には時間ではなく性能が出力される |
+
+## MPIベンチマークについて
+
+- hp.. をmodule loadする。
+- 必要に応じてMakefileを書き換える（パスなどが直に書いてある場合など）
+- python ../scripts/genhostfile.py > hosts ; mpiexec --hostfile hosts -n 2 ./$(program) ... で実行できる。
+
+## stsgベンチマークについて
+
+GDALというソフトをインストールする必要がある。GDALはproj6というソフトとsqlite3というソフトに依存するためこれらもインストールする必要がある。
+
+### sqlite3のインストール
+./configure --prefix=$HOME/sqlite_gh
+make
+make install
+
+### proj6のインストール
+export PKG_CONFIG_PATH=$HOME/sqlite_gh/lib/pkgconfig
+export PATH=$HOME/sqlite_gh/bin:$PATH
+を設定後
+./configure --prefix=$HOME/proj6_gh
+make
+make install
+
+### gdalのインストール
+./configure --with-proj=$HOME/proj6_gh --with-sqlite3=$HOME/sqlite_gh --prefix=$HOME/gdal_gh
+make
+make install
+
+### stsgソース/Makefile書き換え
+
+main.cu
+gdal/gdal_priv.hをgdal_priv.hに書き換え
+
+Makefile.NVD
+-I$(HOME)/gdal_gh/include 
+LDFLAGS = -L$(HOME)/gdal_gh/lib -lgdal
+
+コンパイル・実行時環境変数設定
+export LD_LIBRARY_PATH=$HOME/sqlite_gh/lib:$HOME/gdal_gh/lib:$LD_LIBRARY_PATH
+
+make -f Makefile.NVD run
+で無事ベンチマークを実行することができた。
+HIP版, HIPIFIED版も同様の手続きで実行できた。
 
