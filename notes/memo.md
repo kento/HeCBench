@@ -122,35 +122,56 @@
 GDALというソフトをインストールする必要がある。GDALはproj6というソフトとsqlite3というソフトに依存するためこれらもインストールする必要がある。
 
 ### sqlite3のインストール
+
+https://www.sqlite.org/download.html からソースコードをダウンロード・展開し，トップディレクトリーにcdしたあと以下のコマンドを実行する。
+
+```
 ./configure --prefix=$HOME/sqlite_gh
 make
 make install
+```
 
 ### proj6のインストール
+
+https://proj-tmp.readthedocs.io/en/6.2/download.html からアーカイブをダウンロード・展開し，トップディレクトリーにcdしたあと以下のようなコマンドを実行する。
+
+```
 export PKG_CONFIG_PATH=$HOME/sqlite_gh/lib/pkgconfig
 export PATH=$HOME/sqlite_gh/bin:$PATH
 を設定後
 ./configure --prefix=$HOME/proj6_gh
 make
 make install
+```
 
 ### gdalのインストール
+https://gdal.org/en/stable/download.html#source-code からソースコードのアーカイブをダウンロード・展開し，トップディレクトリーにcdしたあと以下のようなコマンドを実行する。
+
+```
 ./configure --with-proj=$HOME/proj6_gh --with-sqlite3=$HOME/sqlite_gh --prefix=$HOME/gdal_gh
 make
 make install
+```
 
 ### stsgソース/Makefile書き換え
 
 main.cu
+```
 gdal/gdal_priv.hをgdal_priv.hに書き換え
+```
 
 Makefile.NVD
+```
 -I$(HOME)/gdal_gh/include 
 LDFLAGS = -L$(HOME)/gdal_gh/lib -lgdal
+```
 
 コンパイル・実行時環境変数設定
+```
 export LD_LIBRARY_PATH=$HOME/sqlite_gh/lib:$HOME/gdal_gh/lib:$LD_LIBRARY_PATH
+```
 
+以上の修正を施すと
 make -f Makefile.NVD run
 で無事ベンチマークを実行することができた。
 HIP版, HIPIFIED版も同様の手続きで実行できた。
