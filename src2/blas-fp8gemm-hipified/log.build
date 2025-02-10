@@ -1,3 +1,4 @@
+hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipblas -I/opt/rocm/include/hipblaslt -O3 -c main.cu -o main.o
 In file included from main.cu:2:
 In file included from ./helper.h:37:
 In file included from /opt/rocm/include/hipblaslt/hipblaslt.h:60:
