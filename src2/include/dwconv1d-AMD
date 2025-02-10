@@ -1,0 +1,1 @@
+COMMAND=time -p ( export PATH=$(HOME)/miniconda3_mi/bin:$(PATH) ;  python run.py 1>log.std 2>log.err  ) 2>log.time

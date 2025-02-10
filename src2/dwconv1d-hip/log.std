@@ -1,0 +1,78 @@
+/hs/work0/home/users/u0001621/git/HeCBench/src2/dwconv1d-hip/src/timex_op.cpp -> /hs/work0/home/users/u0001621/git/HeCBench/src2/dwconv1d-hip/src/timex_op.cpp [skipped, no changes]
+/hs/work0/home/users/u0001621/git/HeCBench/src2/dwconv1d-hip/src/timex.cu -> /hs/work0/home/users/u0001621/git/HeCBench/src2/dwconv1d-hip/src/timex.hip [skipped, already hipified]
+Total number of unsupported CUDA function calls: 0
+
+
+Total number of replaced kernel launches: 2
+[1/3] /opt/rocm-6.2.0/bin/hipcc  -DWITH_HIP -DTORCH_EXTENSION_NAME=timex -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1016\" -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/TH -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THC -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THH -isystem /opt/rocm-6.2.0/include -isystem /home/users/u0001621/miniconda3_mi/include/python3.12 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -ffast-math -DTmax=768 -DBF=8 -DBB=2 --offload-arch=gfx900 --offload-arch=gfx906 --offload-arch=gfx908 --offload-arch=gfx90a --offload-arch=gfx942 --offload-arch=gfx1030 --offload-arch=gfx1100 --offload-arch=gfx1101 -fno-gpu-rdc -c /hs/work0/home/users/u0001621/git/HeCBench/src2/dwconv1d-hip/src/timex.hip -o timex.cuda.o 
+[2/3] c++ -MMD -MF timex_op.o.d -DTORCH_EXTENSION_NAME=timex -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1016\" -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/TH -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THC -isystem /home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THH -isystem /opt/rocm-6.2.0/include -isystem /home/users/u0001621/miniconda3_mi/include/python3.12 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -c /hs/work0/home/users/u0001621/git/HeCBench/src2/dwconv1d-hip/src/timex_op.cpp -o timex_op.o -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2
+[3/3] c++ timex_op.o timex.cuda.o -shared -L/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/lib -lc10 -lc10_hip -ltorch_cpu -ltorch_hip -ltorch -ltorch_python -L/opt/rocm-6.2.0/lib -lamdhip64 -o timex.so
+
+
+Verify pytorch...
+--> pytorch correct = True , err ratio = 6.51372147449566e-08
+
+
+GPU warmup...
+--> fwd correct = True , err ratio = 3.622384549230514e-07
+--> bwd gradW correct = True , err ratio = 7.619382234392974e-08
+--> bwd gradK correct = True , err ratio = 4.0031732738605466e-07
+--> fwd correct = True , err ratio = 3.622384549230514e-07
+--> bwd gradW correct = True , err ratio = 7.619382234392974e-08
+--> bwd gradK correct = True , err ratio = 4.0031732738605466e-07
+
+
+GPU benchmark...
+pytorch forward
+ --------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                  Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+--------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+    aten::miopen_depthwise_convolution        20.92%      62.330us        21.21%      63.200us      63.200us      22.973ms        97.41%      22.982ms      22.982ms             1  
+                           aten::copy_         3.72%      11.069us         3.72%      11.069us      11.069us     170.000us         0.72%     170.000us     170.000us             1  
+                           aten::fill_         3.39%      10.110us         3.39%      10.110us      10.110us     121.000us         0.51%     121.000us     121.000us             1  
+                             aten::add         5.34%      15.900us         5.34%      15.900us      15.900us     119.000us         0.50%     119.000us     119.000us             1  
+                       aten::unsqueeze        10.38%      30.930us        11.09%      33.040us      11.013us      36.000us         0.15%      51.000us      17.000us             3  
+--------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 297.946us
+Self CUDA time total: 23.583ms
+
+GPU forward
+ ---------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+           Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+---------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+          TimeX        88.64%      54.460us        97.79%      60.079us      60.079us       2.351ms        99.20%       2.360ms       2.360ms             1  
+       aten::to         2.21%       1.360us         2.21%       1.360us       0.680us      10.000us         0.42%      10.000us       5.000us             2  
+    aten::empty         9.15%       5.619us         9.15%       5.619us       5.619us       9.000us         0.38%       9.000us       9.000us             1  
+---------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 61.439us
+Self CUDA time total: 2.370ms
+
+--> fwd correct = True , err ratio = 3.622384549230514e-07
+pytorch backward
+ -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             aten::convolution_backward        28.28%     326.236us        37.14%     428.476us     428.476us     137.880ms        98.82%     137.991ms     137.991ms             1  
+                                             aten::add_         2.15%      24.830us         2.15%      24.830us      12.415us     377.000us         0.27%     377.000us     188.500us             2  
+                                              aten::mul         3.09%      35.639us         3.09%      35.639us      17.820us     274.000us         0.20%     274.000us     137.000us             2  
+                                    aten::tanh_backward         1.80%      20.709us         1.80%      20.709us      20.709us     188.000us         0.13%     188.000us     188.000us             1  
+                                            aten::copy_         1.22%      14.110us         1.22%      14.110us      14.110us     156.000us         0.11%     156.000us     156.000us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 1.154ms
+Self CUDA time total: 139.533ms
+
+GPU backward
+ -------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                          TimeXBackward        15.62%      95.838us        21.29%     130.618us     130.618us       9.327ms        85.34%       9.491ms       9.491ms             1  
+                                             aten::add_         5.09%      31.240us         5.09%      31.240us       7.810us     586.000us         5.36%     586.000us     146.500us             4  
+                                              aten::mul         5.46%      33.480us         5.46%      33.480us      16.740us     273.000us         2.50%     273.000us     136.500us             2  
+                                    aten::tanh_backward         3.62%      22.190us         3.62%      22.190us      22.190us     189.000us         1.73%     189.000us     189.000us             1  
+                                              aten::sum         4.54%      27.870us         4.73%      29.000us      29.000us     148.000us         1.35%     153.000us     153.000us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 613.442us
+Self CUDA time total: 10.929ms
+
+--> bwd gradW correct = True , err ratio = 7.619382234392974e-08
+--> bwd gradK correct = True , err ratio = 4.0031732738605466e-07
