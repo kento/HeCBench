@@ -1,1 +1,8 @@
-bash -c "time -p ( ./main ../mriQ-cuda/datasets/128x128x128/input/128x128x128.bin output_128 1>log.std 2>log.err ) 2> log.time"
+hipcc  -std=c++14 -Wall -I../mriQ-cuda -O3 -ffast-math -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -I../mriQ-cuda -O3 -ffast-math -c ../mriQ-cuda/file.cc -o file.o
+hipcc  -std=c++14 -Wall -I../mriQ-cuda -O3 -ffast-math main.o file.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../mriQ-cuda/prepare_data.sh; time -p ( ./main ../mriQ-cuda/mri-q/datasets/128x128x128/input/128x128x128.bin output_128 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 327.29 316.30
