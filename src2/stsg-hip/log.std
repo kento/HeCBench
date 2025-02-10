@@ -3,43 +3,43 @@ Device global memory used: 4096 MB
 Execution start 
 Number of loops: 20
 Loops 1
-Total kernel time: 6.56768 s
+Total kernel time: 6.63301 s
 Loops 2
-Total kernel time: 7.83761 s
+Total kernel time: 7.89884 s
 Loops 3
-Total kernel time: 8.54513 s
+Total kernel time: 8.46776 s
 Loops 4
-Total kernel time: 9.4758 s
+Total kernel time: 9.36495 s
 Loops 5
-Total kernel time: 10.0122 s
+Total kernel time: 10.064 s
 Loops 6
-Total kernel time: 10.1716 s
+Total kernel time: 10.0254 s
 Loops 7
-Total kernel time: 10.0229 s
+Total kernel time: 9.8881 s
 Loops 8
-Total kernel time: 10.0231 s
+Total kernel time: 10.16 s
 Loops 9
-Total kernel time: 10.4561 s
+Total kernel time: 10.4843 s
 Loops 10
-Total kernel time: 10.3747 s
+Total kernel time: 10.3811 s
 Loops 11
-Total kernel time: 10.922 s
+Total kernel time: 10.902 s
 Loops 12
-Total kernel time: 11.2942 s
+Total kernel time: 11.316 s
 Loops 13
-Total kernel time: 11.2657 s
+Total kernel time: 11.1673 s
 Loops 14
-Total kernel time: 11.6266 s
+Total kernel time: 11.7038 s
 Loops 15
-Total kernel time: 11.2805 s
+Total kernel time: 11.3657 s
 Loops 16
-Total kernel time: 10.6765 s
+Total kernel time: 10.8764 s
 Loops 17
-Total kernel time: 10.8921 s
+Total kernel time: 11.1209 s
 Loops 18
-Total kernel time: 10.6667 s
+Total kernel time: 10.8386 s
 Loops 19
-Total kernel time: 11.3829 s
+Total kernel time: 11.3969 s
 Loops 20
-Total kernel time: 7.20596 s
-Checksum: 2.79908e+08 596160000 0.469519
+Total kernel time: 7.20099 s
+Checksum: 2.79906e+08 596160000 0.469514

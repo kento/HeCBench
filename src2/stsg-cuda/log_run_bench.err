@@ -1,5 +1,0 @@
-main.cu:18:10: fatal error: gdal/gdal_priv.h: No such file or directory
-   18 | #include <gdal/gdal_priv.h>
-      |          ^~~~~~~~~~~~~~~~~~
-compilation terminated.
-make: *** [Makefile.NVD:50: main.o] Error 1
