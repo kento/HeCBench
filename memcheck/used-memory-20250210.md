@@ -8,7 +8,7 @@
 | addBiasResidualLayerNorm | | | exe err | -- | -- |
 | adv | | | | | |
 | aes | | | | | |
-| affine | | | | | build err |
+| affine | | 0.3 | 0.3 | | 0.9 |
 | aidw | | | | | |
 | aligned-types | | | | | |
 | all-pairs-distance | | | | | |
@@ -38,7 +38,7 @@
 | bezier-surface | | | | | |
 | bfs | | | | | |
 | bh | | | | -- | -- |
-| bicgstab | | build err | build err | -- | -- |
+| bicgstab | 0.7 | build err | | -- | -- |
 | bilateral | | | | | |
 | bincount | | | | -- | -- |
 | binomial | | | | -- | |
@@ -47,8 +47,8 @@
 | bitpacking | | | | -- | -- |
 | bitpermute | | | build err | -- | -- |
 | black-scholes | | | | | |
-| blas-dot | | | build err | -- | -- |
-| blas-fp8gemm | | build err | build err | -- | -- |
+| blas-dot | 4.7 | 4.6 | 4.6 | -- | -- |
+| blas-fp8gemm | | 1.1 | build err | -- | -- |
 | blas-gemm | | | build err | -- | -- |
 | blas-gemmBatched | | | build err | -- | -- |
 | blas-gemmEx | | | | -- | -- |
@@ -88,7 +88,7 @@
 | cm | | | | build err | build err |
 | cmembench | | | | -- | -- |
 | cmp | | | | | build err |
-| cobahh | | | | | build err |
+| cobahh | 55.9 | 58.3 | 58.3 | 55.9 | 58.9 |
 | collision | | | build err | -- | -- |
 | colorwheel | | | | | |
 | columnarSolver | | build err | build err | | build err |
@@ -299,16 +299,16 @@
 | mmcsf | | | | -- | -- |
 | mnist | | | | -- | -- |
 | morphology | | | | | |
-| mpc | | build err | build err | -- | -- |
+| mpc | 1.1 | | exe err | -- | -- |
 | mr | | | | build err | |
 | mrc | | | | | build err |
-| mrg32k3a | | | build err | -- | -- |
-| mriQ | | | | build err | build err |
-| mt | | | | | build err |
+| mrg32k3a | 6.0 | 11.6 | 11.6 | -- | -- |
+| mriQ | 0.6 | 0.3 | 0.3 | 0.6 | 0.9 |
+| mt | 0.7 | 0.4 | 0.4 | 0.7 | 1.0 |
 | mtf | | | | -- | -- |
-| multimaterial | | | | | build err |
+| multimaterial | 3.1 | 2.9 | 2.9 | 3.1 | 3.5 |
 | multinomial | | | | -- | -- |
-| murmurhash3 | | | | build err | |
+| murmurhash3 | 2.6 | 2.4 | 2.4 | 2.6 | 0.0 |
 | myocyte | | | | | build err |
 | nbnxm | | | | -- | -- |
 | nbody | | | | | |
@@ -483,7 +483,7 @@
 | wordcount | | | | | |
 | wsm5 | | | | | build err |
 | wyllie | | | | | |
-| xlqc | build err | | | build err | build err |
+| xlqc | build err | | | build err | |
 | xsbench | | | | | |
 | zerocopy | | | | -- | -- |
 | zeropoint | 15.8 | 16.3 | 16.3 | 22.4 | 16.9 |

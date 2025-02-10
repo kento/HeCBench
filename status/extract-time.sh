@@ -2,8 +2,8 @@
 echo "|" name "|" cuda "|" hip  "|" hipified "|" omp_nvc "|" omp_aomp "|"
 echo "|" "--" "|" "--" "|" "--" "|" "--"     "|" "--"   "|" -- "|"
 #
-#for n in `cat List_full`
-for n in `cat List_a`
+for n in `cat List_full`
+#for n in `cat List_a`
 do
     num=0
     while [ $num -lt 5 ];
