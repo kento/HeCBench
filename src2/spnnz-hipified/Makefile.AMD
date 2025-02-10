@@ -6,7 +6,7 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+ARCH      = sm_90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -24,10 +24,10 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall            -I../spd2s-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall            -I../spd2s-cuda -I/opt/rocm/include/hipsparse
 
 # Linker Flags
-LDFLAGS = -lcusparse
+LDFLAGS = -lhipsparse
 
 # Debug Flags
 ifeq ($(DEBUG),yes)

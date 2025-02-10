@@ -1,0 +1,33 @@
+hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipsparse -O3 -c main.cu -o main.o
+main.cu:217:21: error: no matching function for call to 'hipsparseSpSM_solve'
+  217 |     CHECK_CUSPARSE( hipsparseSpSM_solve(handle, HIPSPARSE_OPERATION_NON_TRANSPOSE,
+      |                     ^~~~~~~~~~~~~~~~~~~
+main.cu:71:33: note: expanded from macro 'CHECK_CUSPARSE'
+   71 |     hipsparseStatus_t status = (func);                                          \
+      |                                 ^~~~
+/opt/rocm/include/hipsparse/hipsparse.h:14128:19: note: candidate function not viable: requires 11 arguments, but 10 were provided
+ 14128 | hipsparseStatus_t hipsparseSpSM_solve(hipsparseHandle_t           handle,
+       |                   ^                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14129 |                                       hipsparseOperation_t        opA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14130 |                                       hipsparseOperation_t        opB,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14131 |                                       const void*                 alpha,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14132 |                                       hipsparseConstSpMatDescr_t  matA,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14133 |                                       hipsparseConstDnMatDescr_t  matB,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14134 |                                       const hipsparseDnMatDescr_t matC,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14135 |                                       hipDataType                 computeType,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14136 |                                       hipsparseSpSMAlg_t          alg,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14137 |                                       hipsparseSpSMDescr_t        spsmDescr,
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 14138 |                                       void*                       externalBuffer);
+       |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -I/opt/rocm/include/hipsparse -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1
