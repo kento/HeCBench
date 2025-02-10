@@ -1,0 +1,4 @@
+include ../include/dwconv1d-NVIDIA
+
+run:
+	bash -c "$(COMMAND)"
