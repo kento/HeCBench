@@ -4,7 +4,7 @@ LAUNCHER = bash -c
 #===============================================================================
 
 build: setup.py
-	python setup.py build develop
+	python setup.py build
 
 clean:
 	rm -rf *.egg-info *.so build __pycache__

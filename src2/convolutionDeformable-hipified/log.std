@@ -1,0 +1,2 @@
+Mean error:  tensor(1.7597e-05, device='cuda:0', grad_fn=<MeanBackward0>)
+Total kernel execution time in the backward phase: 112.805401 (ms)

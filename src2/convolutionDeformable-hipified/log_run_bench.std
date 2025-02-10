@@ -1,0 +1,87 @@
+python setup.py build
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/cuda/vision.h -> /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/vision.h [ok]
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/dcn_v2.h -> /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/dcn_v2_hip.h [ok]
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/vision.cpp -> /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/vision_hip.cpp [ok]
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/cuda/dcn_v2_im2col_cuda.h -> /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_im2col_hip.h [ok]
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/cuda/dcn_v2_im2col_cuda.cu -> /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_im2col_hip.hip [ok]
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/cuda/dcn_v2_cuda.cu -> /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip [ok]
+Total number of unsupported CUDA function calls: 0
+
+
+Total number of replaced kernel launches: 3
+running build
+running build_ext
+building '_ext' extension
+creating /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build
+creating /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312
+creating /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src
+creating /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/hip
+[1/3] /opt/rocm-6.2.0/bin/hipcc  -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/TH -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THC -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THH -I/opt/rocm-6.2.0/include -I/home/users/u0001621/miniconda3_mi/include/python3.12 -c -c /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_im2col_hip.hip -o /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/hip/dcn_v2_im2col_hip.o -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=_ext -D_GLIBCXX_USE_CXX11_ABI=1 --offload-arch=gfx900 --offload-arch=gfx906 --offload-arch=gfx908 --offload-arch=gfx90a --offload-arch=gfx942 --offload-arch=gfx1030 --offload-arch=gfx1100 --offload-arch=gfx1101 -fno-gpu-rdc -std=c++17
+[2/3] c++ -MMD -MF /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/vision_hip.o.d -pthread -B /home/users/u0001621/miniconda3_mi/compiler_compat -fno-strict-overflow -Wsign-compare -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /home/users/u0001621/miniconda3_mi/include -fPIC -O2 -isystem /home/users/u0001621/miniconda3_mi/include -fPIC -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/TH -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THC -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THH -I/opt/rocm-6.2.0/include -I/home/users/u0001621/miniconda3_mi/include/python3.12 -c -c /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/vision_hip.cpp -o /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/vision_hip.o -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=_ext -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++17
+[3/3] /opt/rocm-6.2.0/bin/hipcc  -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/TH -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THC -I/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/include/THH -I/opt/rocm-6.2.0/include -I/home/users/u0001621/miniconda3_mi/include/python3.12 -c -c /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip -o /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/hip/dcn_v2_hip.o -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=_ext -D_GLIBCXX_USE_CXX11_ABI=1 --offload-arch=gfx900 --offload-arch=gfx906 --offload-arch=gfx908 --offload-arch=gfx90a --offload-arch=gfx942 --offload-arch=gfx1030 --offload-arch=gfx1100 --offload-arch=gfx1101 -fno-gpu-rdc -std=c++17
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx1030.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx1100.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx1101.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx900.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx906.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx908.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx90a.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for gfx942.
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:154:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  154 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+/hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/src/hip/dcn_v2_hip.hip:192:9: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  192 |         hipStreamSynchronize(stream);
+      |         ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
+2 warnings generated when compiling for host.
+creating build/lib.linux-x86_64-cpython-312
+g++ -pthread -B /home/users/u0001621/miniconda3_mi/compiler_compat -shared -Wl,-rpath,/home/users/u0001621/miniconda3_mi/lib -Wl,-rpath-link,/home/users/u0001621/miniconda3_mi/lib -L/home/users/u0001621/miniconda3_mi/lib -Wl,-rpath,/home/users/u0001621/miniconda3_mi/lib -Wl,-rpath-link,/home/users/u0001621/miniconda3_mi/lib -L/home/users/u0001621/miniconda3_mi/lib /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/hip/dcn_v2_hip.o /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/hip/dcn_v2_im2col_hip.o /hs/work0/home/users/u0001621/git/HeCBench/src2/convolutionDeformable-hipified/build/temp.linux-x86_64-cpython-312/src/vision_hip.o -L/home/users/u0001621/miniconda3_mi/lib/python3.12/site-packages/torch/lib -L/opt/rocm-6.2.0/lib -L/opt/rocm-6.2.0/hip/lib -lc10 -ltorch -ltorch_cpu -ltorch_python -lamdhip64 -lc10_hip -ltorch_hip -o build/lib.linux-x86_64-cpython-312/_ext.cpython-312-x86_64-linux-gnu.so
+bash -c "time -p ( python main.py 1>log.std 2>log.err ) 2> log.time"
