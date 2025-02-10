@@ -1,1 +1,5 @@
-clang++  -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 compact.cpp full_matrix.cpp multimat.cpp -o multimat 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "../multimaterial-cuda/prepare_data.sh; time -p ( ./multimat_FL 6000 6000 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.98 3485.56 3474.58

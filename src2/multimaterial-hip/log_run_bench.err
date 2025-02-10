@@ -1,0 +1,160 @@
+multimat.cu:485:11: warning: unused variable 'f' [-Wunused-variable]
+  485 |     FILE *f = fopen("map.txt","w");
+      |           ^
+multimat.cu:623:10: warning: unused variable 'a1' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |          ^~
+multimat.cu:623:13: warning: unused variable 'a2' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |             ^~
+multimat.cu:623:16: warning: unused variable 'a3' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |                ^~
+multimat.cu:630:10: warning: variable 'alg1' set but not used [-Wunused-but-set-variable]
+  630 |   size_t alg1 = 0;
+      |          ^
+multimat.cu:663:10: warning: variable 'alg2' set but not used [-Wunused-but-set-variable]
+  663 |   size_t alg2 = 0;
+      |          ^
+multimat.cu:702:10: warning: variable 'alg3' set but not used [-Wunused-but-set-variable]
+  702 |   size_t alg3 = 0;
+      |          ^
+7 warnings generated when compiling for gfx90a.
+multimat.cu:485:11: warning: unused variable 'f' [-Wunused-variable]
+  485 |     FILE *f = fopen("map.txt","w");
+      |           ^
+multimat.cu:623:10: warning: unused variable 'a1' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |          ^~
+multimat.cu:623:13: warning: unused variable 'a2' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |             ^~
+multimat.cu:623:16: warning: unused variable 'a3' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |                ^~
+multimat.cu:630:10: warning: variable 'alg1' set but not used [-Wunused-but-set-variable]
+  630 |   size_t alg1 = 0;
+      |          ^
+multimat.cu:663:10: warning: variable 'alg2' set but not used [-Wunused-but-set-variable]
+  663 |   size_t alg2 = 0;
+      |          ^
+multimat.cu:702:10: warning: variable 'alg3' set but not used [-Wunused-but-set-variable]
+  702 |   size_t alg3 = 0;
+      |          ^
+7 warnings generated when compiling for host.
+compact.cu:357:17: warning: unused variable 'd_mmc_i' [-Wunused-variable]
+  357 |         int    *d_mmc_i = (int *)cp_to_device((char*)ccc.mmc_i, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+compact.cu:358:17: warning: unused variable 'd_mmc_j' [-Wunused-variable]
+  358 |         int    *d_mmc_j = (int *)cp_to_device((char*)ccc.mmc_j, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+2 warnings generated when compiling for gfx90a.
+compact.cu:357:17: warning: unused variable 'd_mmc_i' [-Wunused-variable]
+  357 |         int    *d_mmc_i = (int *)cp_to_device((char*)ccc.mmc_i, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+compact.cu:358:17: warning: unused variable 'd_mmc_j' [-Wunused-variable]
+  358 |         int    *d_mmc_j = (int *)cp_to_device((char*)ccc.mmc_j, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+2 warnings generated when compiling for host.
+multimat.cu:485:11: warning: unused variable 'f' [-Wunused-variable]
+  485 |     FILE *f = fopen("map.txt","w");
+      |           ^
+multimat.cu:623:10: warning: unused variable 'a1' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |          ^~
+multimat.cu:623:13: warning: unused variable 'a2' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |             ^~
+multimat.cu:623:16: warning: unused variable 'a3' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |                ^~
+multimat.cu:630:10: warning: variable 'alg1' set but not used [-Wunused-but-set-variable]
+  630 |   size_t alg1 = 0;
+      |          ^
+multimat.cu:663:10: warning: variable 'alg2' set but not used [-Wunused-but-set-variable]
+  663 |   size_t alg2 = 0;
+      |          ^
+multimat.cu:702:10: warning: variable 'alg3' set but not used [-Wunused-but-set-variable]
+  702 |   size_t alg3 = 0;
+      |          ^
+7 warnings generated when compiling for gfx90a.
+multimat.cu:485:11: warning: unused variable 'f' [-Wunused-variable]
+  485 |     FILE *f = fopen("map.txt","w");
+      |           ^
+multimat.cu:623:10: warning: unused variable 'a1' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |          ^~
+multimat.cu:623:13: warning: unused variable 'a2' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |             ^~
+multimat.cu:623:16: warning: unused variable 'a3' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |                ^~
+multimat.cu:630:10: warning: variable 'alg1' set but not used [-Wunused-but-set-variable]
+  630 |   size_t alg1 = 0;
+      |          ^
+multimat.cu:663:10: warning: variable 'alg2' set but not used [-Wunused-but-set-variable]
+  663 |   size_t alg2 = 0;
+      |          ^
+multimat.cu:702:10: warning: variable 'alg3' set but not used [-Wunused-but-set-variable]
+  702 |   size_t alg3 = 0;
+      |          ^
+7 warnings generated when compiling for host.
+compact.cu:357:17: warning: unused variable 'd_mmc_i' [-Wunused-variable]
+  357 |         int    *d_mmc_i = (int *)cp_to_device((char*)ccc.mmc_i, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+compact.cu:358:17: warning: unused variable 'd_mmc_j' [-Wunused-variable]
+  358 |         int    *d_mmc_j = (int *)cp_to_device((char*)ccc.mmc_j, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+2 warnings generated when compiling for gfx90a.
+compact.cu:357:17: warning: unused variable 'd_mmc_i' [-Wunused-variable]
+  357 |         int    *d_mmc_i = (int *)cp_to_device((char*)ccc.mmc_i, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+compact.cu:358:17: warning: unused variable 'd_mmc_j' [-Wunused-variable]
+  358 |         int    *d_mmc_j = (int *)cp_to_device((char*)ccc.mmc_j, (mmc_cells)*sizeof(int));
+      |                 ^~~~~~~
+2 warnings generated when compiling for host.
+multimat.cu:485:11: warning: unused variable 'f' [-Wunused-variable]
+  485 |     FILE *f = fopen("map.txt","w");
+      |           ^
+multimat.cu:623:10: warning: unused variable 'a1' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |          ^~
+multimat.cu:623:13: warning: unused variable 'a2' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |             ^~
+multimat.cu:623:16: warning: unused variable 'a3' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |                ^~
+multimat.cu:630:10: warning: variable 'alg1' set but not used [-Wunused-but-set-variable]
+  630 |   size_t alg1 = 0;
+      |          ^
+multimat.cu:663:10: warning: variable 'alg2' set but not used [-Wunused-but-set-variable]
+  663 |   size_t alg2 = 0;
+      |          ^
+multimat.cu:702:10: warning: variable 'alg3' set but not used [-Wunused-but-set-variable]
+  702 |   size_t alg3 = 0;
+      |          ^
+7 warnings generated when compiling for gfx90a.
+multimat.cu:485:11: warning: unused variable 'f' [-Wunused-variable]
+  485 |     FILE *f = fopen("map.txt","w");
+      |           ^
+multimat.cu:623:10: warning: unused variable 'a1' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |          ^~
+multimat.cu:623:13: warning: unused variable 'a2' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |             ^~
+multimat.cu:623:16: warning: unused variable 'a3' [-Wunused-variable]
+  623 |   double a1,a2,a3;
+      |                ^~
+multimat.cu:630:10: warning: variable 'alg1' set but not used [-Wunused-but-set-variable]
+  630 |   size_t alg1 = 0;
+      |          ^
+multimat.cu:663:10: warning: variable 'alg2' set but not used [-Wunused-but-set-variable]
+  663 |   size_t alg2 = 0;
+      |          ^
+multimat.cu:702:10: warning: variable 'alg3' set but not used [-Wunused-but-set-variable]
+  702 |   size_t alg3 = 0;
+      |          ^
+7 warnings generated when compiling for host.
