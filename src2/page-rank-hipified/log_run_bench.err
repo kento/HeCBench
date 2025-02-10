@@ -1,0 +1,8 @@
+main.cu:162:7: warning: variable 'nb_links' set but not used [-Wunused-but-set-variable]
+  162 |   int nb_links = 0;
+      |       ^
+1 warning generated when compiling for gfx90a.
+main.cu:162:7: warning: variable 'nb_links' set but not used [-Wunused-but-set-variable]
+  162 |   int nb_links = 0;
+      |       ^
+1 warning generated when compiling for host.
