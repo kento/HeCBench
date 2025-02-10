@@ -24,6 +24,7 @@ obj = $(source:.cu=.o)
 
 # Standard Flags
 CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../mpc-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../mpc-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -51,9 +52,13 @@ $(program): $(obj) Makefile
 clean:
 	rm -rf $(program) $(obj) *.txt fpc
 
+process: fpc.c
+	 gcc -O3 fpc.c -o fpc
+	 ./fpc < ../mpc-cuda/msg_sp.trace.fpc > msg_sp.trace.out
+
 include ../include/mpc-AMD
 
-run: $(program)
+run: process $(program)
 	$(LAUNCHER) "$(COMMAND)"
 
 run_mem: $(program)
