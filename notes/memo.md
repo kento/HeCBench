@@ -9,7 +9,7 @@
 | extend2 | cuda版に限りError: がたくさんでる パラメーターの変更はしていない|
 | minisweep | CUDA版のみverify : FAIL とでる。パラメーターの問題かもしれない|
 | multinomial | CUDA版のみFAIL とでる。パラメーターの問題かもしれない|
-| p2p | GPUを二枚使う必要があるベンチマークのよう |
+| p2p | GPUを二枚使う必要があるベンチマークのよう。HIP, HIPIFIEDは問題なく動作，CUDA版は動作していない |
 | pcc | Error in performing the multiplication |
 | pso | cuda版のログの最後がFAIL. パラメーターの問題かもしれない |
 | randomAccess | cuda版ログの最後がFAIL. パラメーターは変えていない |
@@ -42,13 +42,13 @@
 | prna | DATAPATHの設定忘れ；対処済み |
 | rowwiseMoments | cuda版がコンパイルできない；namespace "thrust" has no member "pair" --> thrust::pairをcuda::std::pairに書き換えるとコンパイルできるようになった。|
 | saxpy-ompt | どの環境でもコンパイルに成功していない AMDのマシンではasaxpy.c:24:10: fatal error: 'hip/hip_runtime.h' file not found --> AMD では実行可能になった。NVIDIAでは実行時にエラー。 |
-| si | cmakeを使うベンチマーク。cuda版は問題なく実行できた。HIP版はhipblasがないと言われコンパイルできなかった。 |
+| si | cmakeを使うベンチマーク。cuda版は問題なく実行できた。HIP版はhipblasがないと言われコンパイルできなかった。https://github.com/ROCm/hipBLAS の情報をもとにコンパイルを試みたができていない。  |
 | slu | cuda版がコンパイルできなかった (hip, hipifiedはコンパイルはできたが非常に低速であった) |
 | sparkler | MPI CUDA版は実行できた |
 | sss | ソース, Makefileを微修正。GSLが必要。-lblas->-lgslcblas などで実行できた。しかしhipified版は実行エラー。 |
 | stsg | GDAL, SQlite3, projなどの外部ライブラリーが必要。インストールしたところ実行できた。 |
 | tsne | 必要なデータセットファイルの入手方法が分からない |
-| xlqc | gslにリンクし，LD_LIBRARY_PATHを通せば問題なく実行できた。omp_amd版はコンパイルできなかったが，-std=c++20 とするとコンパイルできた。 |
+| xlqc | gslにリンクし，LD_LIBRARY_PATHを通せば問題なく実行できた。omp_amd版はコンパイルできなかったが，-std=c++17 とするとコンパイルできた。しかしomp_aomp版は実行するとnanがでた。 |
 
 ## ログに何も出力されないベンチマーク
 
@@ -113,9 +113,12 @@
 
 ## MPIベンチマークについて
 
-- hp.. をmodule loadする。
-- 必要に応じてMakefileを書き換える（パスなどが直に書いてある場合など）
+CUDA版の実行の仕方
+- 2ノード確保する
+- nvhpc-hpcx-cuda12 をmodule loadする。
+- 必要に応じてMakefileを書き換える（パスが直に書いてある場合など）
 - python ../scripts/genhostfile.py > hosts ; mpiexec --hostfile hosts -n 2 ./$(program) ... で実行できる。
+- mi250ではmpiexec -n 2 --oversubscribe のようにover subscribeさせないとうまく動作しなかった。
 
 ## stsgベンチマークについて
 
@@ -145,6 +148,7 @@ make install
 ```
 
 ### gdalのインストール
+
 https://gdal.org/en/stable/download.html#source-code からソースコードのアーカイブをダウンロード・展開し，トップディレクトリーにcdしたあと以下のようなコマンドを実行する。
 
 ```
