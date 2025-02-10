@@ -1,1 +1,5 @@
-clang++  -std=c++14 -Wall -I../scel-cuda  -O3 -ffast-math -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c main.cpp -o main.o
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 8000 50176 20 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 4107.49 4096.50

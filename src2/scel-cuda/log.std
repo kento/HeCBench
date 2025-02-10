@@ -1,4 +1,4 @@
-Average execution time of SigmoidCrossEntropyWithLogits kernel: 1346.727051 (us)
-Average execution time of SigmoidCrossEntropyWithLogits kernel: 1216.296631 (us)
-Average execution time of SigmoidCrossEntropyWithLogits kernel: 1207.294800 (us)
+Average execution time of SigmoidCrossEntropyWithLogits kernel: 979.333374 (us)
+Average execution time of SigmoidCrossEntropyWithLogits kernel: 973.883911 (us)
+Average execution time of SigmoidCrossEntropyWithLogits kernel: 967.467957 (us)
 PASS
