@@ -289,7 +289,7 @@
 | minibude | 3.33 | 2.44 | 2.46 | 5.55 | 3.06 |
 | minimap2 | 1.33 | build err | 1.85 | 4.37 | 13.93 |
 | minimod | 5.82 | 2.85 | 2.86 | -- | -- |
-| minisweep | 5.98 | 91.70 | 92.92 | build err | 2.97 |
+| minisweep | 5.98 | 91.70 | 92.92 | exe err | 2.97 |
 | minkowski | 25.36 | 24.16 | 31.66 | 23.81 | 89.66 |
 | minmax | 221.71 | 231.56 | 230.54 | -- | -- |
 | mis | 95.76 | 0.47 | 0.47 | exe err | TLE error |
@@ -334,7 +334,7 @@
 | pathfinder | 53.00 | 1.35 | 1.35 | exe err | 0.97 |
 | pcc | 5.21 | 8.05 | 8.06 | -- | -- |
 | perlin | 10.29 | 13.10 | 13.06 | -- | -- |
-| permutate | 28.73 | 34.46 | 34.64 | build err | 35.64 |
+| permutate | 28.73 | 34.46 | 34.64 | 0.00 | 35.64 |
 | permute | 40.01 | 1.06 | build err | 41.56 | 1.78 |
 | perplexity | 279.74 | 2.46 | 2.43 | 214.51 | |
 | phmm | 5.37 | 93.71 | 93.71 | 9.49 | 19.23 |
@@ -368,7 +368,7 @@
 | resnet-kernels | 26.28 | 3.98 | 1.03 | -- | -- |
 | reverse | 3.39 | 1.61 | 1.70 | 7.93 | 10.46 |
 | reverse2D | 33.68 | 1.45 | 2.66 | -- | -- |
-| rfs | 357.77 | 13.29 | 13.14 | build err | |
+| rfs | 357.77 | 13.29 | 13.14 | exe err | |
 | ring | 9.13 | 5.73 | 5.72 | -- | -- |
 | rle | 108.12 | 0.68 | build err | -- | -- |
 | rng-wallace | 4.78 | 1.61 | 1.60 | 5.70 | |
@@ -376,7 +376,7 @@
 | romberg | 2.68 | 1.11 | 1.10 | 4.57 | 0.94 |
 | rotary | 2.43 | 0.75 | 0.73 | -- | -- |
 | rowwiseMoments | 203.27 | 2.43 | 2.43 | -- | -- |
-| rsbench | 4.66 | 3.73 | 3.74 | build err | 2.71 |
+| rsbench | 4.66 | 3.73 | 3.74 | exe err | 2.71 |
 | rsc | 4.57 | 0.83 | 0.81 | exe err | |
 | rsmt | 9.23 | -- | | -- | -- |
 | rtm8 | 6.17 | 3.83 | 3.96 | 6.15 | 4.58 |
@@ -410,7 +410,7 @@
 | snake | 9.76 | 13.53 | 13.51 | 12.22 | 28.38 |
 | sobel | 4.68 | 1.32 | 1.36 | 5.05 | 24.62 |
 | sobol | 6.27 | 3.27 | 3.27 | 6.32 | 3.07 |
-| softmax | 44.15 | 29.45 | build err | build err | build err |
+| softmax | 44.15 | 29.45 | build err | 0.00 | build err |
 | softmax-fused | 4.55 | 9.19 | build err | -- | -- |
 | softmax-online | 30.85 | 20.58 | build err | -- | -- |
 | sort | 7.01 | 6.06 | 6.05 | 39.25 | |
@@ -437,8 +437,8 @@
 | sss | 29.77 | 7.14 | exe err | -- | -- |
 | sssp | 11.17 | 13.96 | 14.11 | -- | -- |
 | stddev | 49.52 | 24.36 | 33.47 | 52.98 | |
-| stencil1d | 7.50 | 1.99 | 1.99 | build err | TLE error |
-| stencil3d | 20.34 | 6.76 | 6.70 | build err | 1.32 |
+| stencil1d | 7.50 | 1.99 | 1.99 | | TLE error |
+| stencil3d | 20.34 | 6.76 | 6.70 | exe err | 1.32 |
 | streamCreateCopyDestroy | 5.74 | 17.13 | 17.18 | -- | -- |
 | streamOrderedAllocation | 6.60 | 18.78 | 19.47 | -- | -- |
 | streamPriority | 4.65 | 2.84 | 1.44 | -- | -- |
@@ -467,7 +467,7 @@
 | unfold | 39.14 | 0.62 | | -- | -- |
 | urng | 4.21 | 0.45 | 0.45 | 4.36 | 0.79 |
 | vanGenuchten | 31.55 | 5.64 | 5.62 | 44.96 | |
-| vmc | 4.60 | 1.85 | 1.85 | build err | build err |
+| vmc | 4.60 | 1.85 | 1.85 | 0.00 | build err |
 | vol2col | 8.24 | 10.06 | 10.03 | 7.95 | exe err |
 | vote | 5.56 | 12.21 | build err | -- | -- |
 | voxelization | 11.93 | 94.03 | 94.03 | -- | -- |
