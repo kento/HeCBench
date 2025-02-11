@@ -1,0 +1,28 @@
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc90 -c stencil_1d.cpp -o stencil_1d.o
+main:
+     32, Loop not fused: function call before adjacent loop
+         Generated vector simd code for the loop
+     36, #omp target teams distribute
+         36, Generating "nvkernel_main_F1L36_2" GPU kernel
+         41, Loop parallelized across teams, schedule(static)
+         45, #omp parallel
+           45, Loop parallelized across threads, schedule(static)
+         55, Team private (temp,i) located in CUDA shared memory
+             #omp parallel
+           55, Loop parallelized across threads, schedule(static)
+     36, Generating map(to:a[:pad_size]) 
+         Generating map(from:b[:size]) 
+         Loop not vectorized/parallelized: contains call
+     41, Loop not vectorized/parallelized: contains structure move
+     45, Loop not vectorized/parallelized: not countable
+     55, Loop not vectorized/parallelized: not countable
+     57, Generated vector simd code for the loop containing reductions
+     70, Loop not vectorized/parallelized: potential early exits
+     72, Generated vector simd code for the loop containing reductions
+     81, Loop not vectorized/parallelized: potential early exits
+     83, Generated vector simd code for the loop containing reductions
+         Loop unrolled 2 times
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     10, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+nvc++  -std=c++14 -Wall -O3 -Minfo -mp=gpu -gpu=cc90 stencil_1d.o -o stencil_1d 
