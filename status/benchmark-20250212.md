@@ -442,7 +442,7 @@
 | streamCreateCopyDestroy | 5.74 | 17.13 | 17.18 | -- | -- |
 | streamOrderedAllocation | 6.60 | 18.78 | 19.47 | -- | -- |
 | streamPriority | 4.65 | 2.84 | 1.44 | -- | -- |
-| streamUM | 43.61 | 24.85 | build err | -- | -- |
+| streamUM | 43.61 | 24.85 | | -- | -- |
 | streamcluster | 20.98 | 4.05 | 4.03 | TLE error | build err |
 | stsg | 25.65 | 208.03 | 207.85 | -- | -- |
 | su3 | 9.93 | 2.28 | 2.28 | 25.95 | |
