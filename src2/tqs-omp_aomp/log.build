@@ -1,0 +1,4 @@
+clang++  -std=c++17 -Wall -I../tqs-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
+clang++  -std=c++17 -Wall -I../tqs-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c kernel.cpp -o kernel.o
+clang++  -std=c++17 -Wall -I../tqs-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c host_task.cpp -o host_task.o
+clang++  -std=c++17 -Wall -I../tqs-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o kernel.o host_task.o -o main 

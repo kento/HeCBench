@@ -1,0 +1,10 @@
+clang++  -std=c++17 -Wall  -O3 -ffast-math -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
+main.cpp:348:15: warning: variable 't' set but not used [-Wunused-but-set-variable]
+  348 |           int t;
+      |               ^
+1 warning generated.
+main.cpp:348:15: warning: variable 't' set but not used [-Wunused-but-set-variable]
+  348 |           int t;
+      |               ^
+1 warning generated.
+clang++  -std=c++17 -Wall  -O3 -ffast-math -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o -o main 
