@@ -2,17 +2,19 @@
 echo "|" name "|" cuda "|" hip  "|" hipified "|" omp_nvc "|" omp_aomp "|"
 echo "|" "--" "|" "--" "|" "--" "|" "--"     "|" "--"   "|" -- "|"
 #
+SRCDIR=../src2
+#
 for n in `cat List_full`
 #for n in `cat List_a`
 do
     num=0
     while [ $num -lt 5 ];
     do
-	if [ $num = 0 ]; then dir=$n-cuda; fi
-	if [ $num = 1 ]; then dir=$n-hip; fi
-	if [ $num = 2 ]; then dir=$n-hipified; fi
-	if [ $num = 3 ]; then dir=$n-omp_nvc; fi
-	if [ $num = 4 ]; then dir=$n-omp_aomp; fi
+	if [ $num = 0 ]; then dir=$SRCDIR/$n-cuda; fi
+	if [ $num = 1 ]; then dir=$SRCDIR/$n-hip; fi
+	if [ $num = 2 ]; then dir=$SRCDIR/$n-hipified; fi
+	if [ $num = 3 ]; then dir=$SRCDIR/$n-omp_nvc; fi
+	if [ $num = 4 ]; then dir=$SRCDIR/$n-omp_aomp; fi
 	
 	if [ $num = 0 ]; then comment="| "$n" |"; fi
 
@@ -45,7 +47,7 @@ do
 		    fi
 		fi
 	    else
-		if [ $c1a == 255 ]; then
+		if [ $c1a -gt 100 ]; then
 		    time="exe err"
 		else
 		    time="build err"
