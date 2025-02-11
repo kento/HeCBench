@@ -10,7 +10,7 @@ CC        = hipcc
 LD        = mpiCC #$(MPI_ROOT)/bin/mpiCC
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+ARCH      = sm_90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -28,10 +28,12 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -I$(MPI_ROOT)/include -std=c++11  -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -I$(MPI_ROOT)/include -std=c++11  -Wall -I/opt/rocm/include/hipblas
 
 # Linker Flags
 LDFLAGS = -L$(CUBLAS_ROOT)/targets/x86_64-linux/lib/ -lhipblas 	  -L$(CUDART_ROOT)/targets/x86_64-linux/lib/ -lcudart
+
+LDFLAGS = -L/opt/rocm/lib -lhipblas -lamdhip64
 
 # Debug Flags
 ifeq ($(DEBUG),yes)

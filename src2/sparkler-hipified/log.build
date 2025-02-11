@@ -1,0 +1,22 @@
+hipcc  -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.3/comm_libs/mpi/include -std=c++11  -Wall -I/opt/rocm/include/hipblas -O3 -c main.cu -o main.o
+main.cu:447:26: warning: unused variable 'value' [-Wunused-variable]
+  447 |             const size_t value = c_buf.elt(r,c);
+      |                          ^~~~~
+main.cu:348:19: warning: unused variable 'zero' [-Wunused-variable]
+  348 |   const GemmOut_t zero = TCBufTypes<GemmOut_t>::zero();
+      |                   ^~~~
+main.cu:541:3: note: in instantiation of function template specialization 'perform_run<3>' requested here
+  541 |   perform_run<TC_METHOD_FLOAT32>(num_vector, num_field, num_iterations);
+      |   ^
+2 warnings generated when compiling for gfx90a.
+main.cu:447:26: warning: unused variable 'value' [-Wunused-variable]
+  447 |             const size_t value = c_buf.elt(r,c);
+      |                          ^~~~~
+main.cu:348:19: warning: unused variable 'zero' [-Wunused-variable]
+  348 |   const GemmOut_t zero = TCBufTypes<GemmOut_t>::zero();
+      |                   ^~~~
+main.cu:541:3: note: in instantiation of function template specialization 'perform_run<3>' requested here
+  541 |   perform_run<TC_METHOD_FLOAT32>(num_vector, num_field, num_iterations);
+      |   ^
+2 warnings generated when compiling for host.
+mpiCC  main.o -o main -L/opt/rocm/lib -lhipblas -lamdhip64

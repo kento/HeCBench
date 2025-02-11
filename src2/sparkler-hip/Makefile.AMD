@@ -1,13 +1,14 @@
 #===============================================================================
 # User Options
 #===============================================================================
-MPI_ROOT=$(HOME)/openmpi-4.1.0-install/
-HIPBLAS_ROOT=/opt/rocm/hipblas
-HIPRT_ROOT=/opt/rocm/hip
+#MPI_ROOT=$(HOME)/openmpi-4.1.0-install/
+#HIPBLAS_ROOT=/opt/rocm/hipblas
+#HIPRT_ROOT=/opt/rocm/hip
 
 # Compiler can be set below, or via environment variable
 CC        = hipcc
-LD        = $(MPI_ROOT)/bin/mpiCC
+#LD        = $(MPI_ROOT)/bin/mpiCC
+LD        = mpiCC
 OPTIMIZE  = yes
 DEBUG     = no
 LAUNCHER = bash -c
@@ -27,10 +28,11 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -I$(MPI_ROOT)/include -std=c++11 -Wall -fPIE
+CFLAGS := $(EXTRA_CFLAGS) -I$(MPI_ROOT)/include -std=c++11 -Wall -fPIE -I/opt/rocm/include/hipblas
 
 # Linker Flags
-LDFLAGS = -L$(HIPBLAS_ROOT)/lib -lhipblas 	  -L$(HIPRT_ROOT)/lib -lamdhip64 
+#LDFLAGS = -L$(HIPBLAS_ROOT)/lib -lhipblas 	  -L$(HIPRT_ROOT)/lib -lamdhip64 
+LDFLAGS = -L/opt/rocm/lib -lhipblas  -lamdhip64 
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
