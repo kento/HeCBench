@@ -6,7 +6,7 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+ARCH      = sm_90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -25,7 +25,8 @@ obj = $(c_source:.c=.o) $(cuda_source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -DFLOAT -std=c++14  -Wall 
+#CFLAGS := $(EXTRA_CFLAGS) -DFLOAT -std=c++14  -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -DFLOAT  -Wall -I/opt/rocm/include -D__HIP_PLATFORM_AMD__
 
 # Linker Flags
 LDFLAGS = 

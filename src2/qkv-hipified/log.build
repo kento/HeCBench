@@ -1,0 +1,40 @@
+hipcc  -std=c++14  -fopenmp            -Wall  -I/opt/rocm/include/hipblas -I/opt/rocm/include/hipblaslt -O3 -c main.cu -o main.o
+In file included from main.cu:10:
+In file included from ./common.h:7:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt.h:60:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt-types.h:35:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt_float8.h:62:
+/opt/rocm/include/hipblaslt/hipblaslt_hip_f8_impl.h:95:18: warning: unused variable 'y' [-Wunused-variable]
+   95 |         uint32_t y, head, mantissa;
+      |                  ^
+In file included from main.cu:10:
+./common.h:12:35: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+   12 |         arr[i] = ((float)rand() / RAND_MAX) * 2.0 - 1.0; // range -1..1
+      |                                 ~ ^~~~~~~~
+/usr/include/stdlib.h:86:18: note: expanded from macro 'RAND_MAX'
+   86 | #define RAND_MAX        2147483647
+      |                         ^~~~~~~~~~
+In file included from main.cu:10:
+./common.h:64:13: error: no matching function for call to 'isfinite'
+   64 |         if(!isfinite(cpu_reference[i]))
+      |             ^~~~~~~~
+main.cu:390:5: note: in instantiation of function template specialization 'validate_result<float, float>' requested here
+  390 |     validate_result(d_out, out, "out", B * T * OC, 1e-1f);
+      |     ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:511:23: note: candidate template ignored: substitution failure [with __T = float]: no type named 'type' in '__hip_enable_if<false, bool>'
+  511 | __HIP_OVERLOAD1(bool, isfinite)
+      | ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:454:7: note: expanded from macro '__HIP_OVERLOAD1'
+  453 |       typename __hip_enable_if<__hip::is_integral<__T>::value, __retty>::type  \
+      |                                                                          ~~~~
+  454 |       __fn(__T __x) {                                                          \
+      |       ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:100:31: note: candidate function not viable: call to __device__ function from __host__ function
+  100 | __DEVICE__ __CONSTEXPR__ bool isfinite(float __x) { return ::__finitef(__x); }
+      |                               ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:101:31: note: candidate function not viable: call to __device__ function from __host__ function
+  101 | __DEVICE__ __CONSTEXPR__ bool isfinite(double __x) { return ::__finite(__x); }
+      |                               ^
+2 warnings and 1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -fopenmp -Wall -I/opt/rocm/include/hipblas -I/opt/rocm/include/hipblaslt -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

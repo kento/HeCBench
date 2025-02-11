@@ -1,0 +1,14 @@
+hipcc  -DFLOAT  -Wall -I/opt/rocm/include -D__HIP_PLATFORM_AMD__ -O3  -c main.c -o main.o
+main.c:37:19: warning: unused function 'can_pair' [-Wunused-function]
+   37 | inline static int can_pair(int i, int j, int n, const base_t *s, const char *seq)
+      |                   ^~~~~~~~
+1 warning generated.
+hipcc  -DFLOAT  -Wall -I/opt/rocm/include -D__HIP_PLATFORM_AMD__ -O3  -c base.c -o base.o
+hipcc  -DFLOAT  -Wall -I/opt/rocm/include -D__HIP_PLATFORM_AMD__ -O3  -c param.c -o param.o
+param.c:882:11: warning: floating-point comparison is always true; constant cannot be represented exactly in type 'float' [-Wliteral-range]
+  882 |   if (chk != CHK)
+      |       ~~~ ^  ~~~
+1 warning generated.
+hipcc  -DFLOAT  -Wall -I/opt/rocm/include -D__HIP_PLATFORM_AMD__ -O3  -c util.c -o util.o
+hipcc  -DFLOAT  -Wall -I/opt/rocm/include -D__HIP_PLATFORM_AMD__ -O3  -c prna.cu -o prna.o
+hipcc  -DFLOAT  -Wall -I/opt/rocm/include -D__HIP_PLATFORM_AMD__ -O3  main.o base.o param.o util.o prna.o  -o main 

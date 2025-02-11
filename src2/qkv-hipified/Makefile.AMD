@@ -6,7 +6,7 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+ARCH      = sm_90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -24,10 +24,10 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -fopenmp            -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -fopenmp            -Wall  -I/opt/rocm/include/hipblas -I/opt/rocm/include/hipblaslt
 
 # Linker Flags
-LDFLAGS = -lhipblas -lhipblasLt
+LDFLAGS = -lhipblas -lhipblaslt
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
