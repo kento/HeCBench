@@ -130,7 +130,7 @@ void findTopK(int*__restrict__ indices_,
 
       for (int i = 1; i < WARP_SIZE; i *= 2)
       {
-        auto n = __shfl_down_sync(0xFFFFFFFF, value, i);
+        auto n = __shfl_down(0xFFFFFFFF, value, i);
         if (inverse_lane_id >= i)
           value += n;
       }
@@ -138,7 +138,7 @@ void findTopK(int*__restrict__ indices_,
       value += previous_group_first_element;
       bins[idx] = value;
 
-      previous_group_first_element = __shfl_sync(0xFFFFFFFF, value, 0);
+      previous_group_first_element = __shfl(0xFFFFFFFF, value, 0);
     }
   }
 
