@@ -5,7 +5,7 @@ nodes: 1899
 edges: 20296
 GPU matrix size: 14.1 MB
 Average kernel (initialization) time:   0.000166 s
-Average kernel (compute) time:   0.003371 s
-CPU init time:   0.002029 s
-CPU comp time:   2.216092 s
-results match
+Average kernel (compute) time:   0.003548 s
+CPU init time:   0.002256 s
+CPU comp time:   2.215590 s
+ERROR: results differ in 3606201 places!

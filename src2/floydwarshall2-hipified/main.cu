@@ -122,11 +122,11 @@ void FW0_64(
 
     mtype ik_a, ik_b;
     if (k < ws) {
-      ik_a = __shfl_sync(~0, ij_aa, k);
-      ik_b = __shfl_sync(~0, ij_ba, k);
+      ik_a = __shfl(~0, ij_aa, k);
+      ik_b = __shfl(~0, ij_ba, k);
     } else {
-      ik_a = __shfl_sync(~0, ij_ab, k - ws);
-      ik_b = __shfl_sync(~0, ij_bb, k - ws);
+      ik_a = __shfl(~0, ij_ab, k - ws);
+      ik_b = __shfl(~0, ij_bb, k - ws);
     }
 
     const mtype kr_a = krow[idx2_a];
@@ -282,12 +282,12 @@ void FWrowcol_64(
     for (int k = 0; k < tile; k++) {
       mtype ik_a, ik_b;
       if (k < ws) {
-        ik_a = __shfl_sync(~0, ij_aa, k);
-        ik_b = __shfl_sync(~0, ij_ba, k);
+        ik_a = __shfl(~0, ij_aa, k);
+        ik_b = __shfl(~0, ij_ba, k);
       }
       if (k >= ws) {
-        ik_a = __shfl_sync(~0, ij_ab, k - ws);
-        ik_b = __shfl_sync(~0, ij_bb, k - ws);
+        ik_a = __shfl(~0, ij_ab, k - ws);
+        ik_b = __shfl(~0, ij_bb, k - ws);
       }
       const mtype kr_a = krows[idx2_a];
       const mtype kr_b = krows[idx2_b];
@@ -415,12 +415,12 @@ void FWrem_64(
 
       mtype ik_a, ik_b;
       if (k < ws) {
-        ik_a = __shfl_sync(~0, ij_aa, k);
-        ik_b = __shfl_sync(~0, ij_ba, k);
+        ik_a = __shfl(~0, ij_aa, k);
+        ik_b = __shfl(~0, ij_ba, k);
       }
       else {
-        ik_a = __shfl_sync(~0, ij_ab, k - ws);
-        ik_b = __shfl_sync(~0, ij_bb, k - ws);
+        ik_a = __shfl(~0, ij_ab, k - ws);
+        ik_b = __shfl(~0, ij_bb, k - ws);
       }
 
       const mtype sk_a = s_kj[idx2_a];
