@@ -180,3 +180,20 @@ make -f Makefile.NVD run
 で無事ベンチマークを実行することができた。
 HIP版, HIPIFIED版も同様の手続きで実行できた。
 
+# dwconv1d
+Pythonから駆動するベンチマーク。minicondaなどを用いた方がいいかもしれない。
+conda create -n torch
+conda install anaconda::numpy
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126 (NOTE: Conda packages are no longer available. Please use pip instead.)
+
+python run.py -> sm_90aがひっかかって異常終了。これをadhocに回避すると80近いエラーメッセージとともに終了。
+以下の要領でextentionをコンパイルするコンパイラーを切り替える。
+export CC=gcc
+export CPP=g++
+すると無事終了。
+
+hip版は同様の手続きで簡単に実行できた。
+hipified版はrun.pyの64行目の
+'--use_fast_math', '--extra-device-vectorization'
+の二つのオプションを削るとコンパイル・実行ができた。
+
