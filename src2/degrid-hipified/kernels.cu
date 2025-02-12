@@ -42,8 +42,10 @@ degrid_kernel(CmplxType* __restrict out,
         }
 
       for(int s = blockDim_x < 16 ? blockDim_x : 16; s>0;s/=2) {
-        sum.x += __shfl_down_sync(0xFFFFFFFF,sum.x,s);
-        sum.y += __shfl_down_sync(0xFFFFFFFF,sum.y,s);
+        //sum.x += __shfl_down_sync(0xFFFFFFFF,sum.x,s);
+        //sum.y += __shfl_down_sync(0xFFFFFFFF,sum.y,s);
+        sum.x += __shfl_down(0xFFFFFFFF,sum.x,s);
+        sum.y += __shfl_down(0xFFFFFFFF,sum.y,s);
       }
       if (threadIdx_x == 0) {
         out[n+q] = sum;

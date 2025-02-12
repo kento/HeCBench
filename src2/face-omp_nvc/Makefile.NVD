@@ -6,7 +6,7 @@
 CC        = nvc++
 OPTIMIZE  = yes
 DEBUG     = no
-SM        = cc70
+SM        = cc90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -20,7 +20,7 @@ program = vj-cpu vj-gpu
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -Wall -I../face-sycl
+CFLAGS := $(EXTRA_CFLAGS) -Wall -I../face-sycl -std=c++11
 
 # Linker Flags
 LDFLAGS = 

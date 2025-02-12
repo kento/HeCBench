@@ -1,5 +1,5 @@
-#include "hip/hip_runtime.h"
-#include "hip/hip_runtime.h"
+//#include "hip/hip_runtime.h"
+//#include "hip/hip_runtime.h"
 #ifndef UTIL_HPP
 #define UTIL_HPP
 

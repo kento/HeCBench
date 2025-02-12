@@ -163,4 +163,12 @@ double computeDotProduct(
     const int blockSize,
     const int nThreads);
 
+double computeDotProduct(
+    const int *device_v1,
+    const int *device_v2,
+    const int *result,
+    const int vLength,
+    const int blockSize,
+    const int nThreads);
+
 #endif

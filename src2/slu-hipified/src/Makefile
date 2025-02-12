@@ -83,5 +83,7 @@ clean:
 test: $(program)
 	$(LAUNCHER) ./$(program) -i $(SLU_PATH)/nicslu/test/add32.mtx
 
+include ../../include/slu-AMD
+
 run: $(program)
-	$(LAUNCHER) ./$(program) -i $(SLU_PATH)/nicslu/demo/ASIC_100k.mtx
+	$(LAUNCHER) "$(COMMAND)"

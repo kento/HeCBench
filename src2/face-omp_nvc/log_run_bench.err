@@ -1,0 +1,2 @@
+/usr/bin/ld: haar-gpu.o:(.init_array+0x8): undefined reference to `__acc_compiled'
+make: *** [Makefile.NVD:67: vj-gpu] Error 2

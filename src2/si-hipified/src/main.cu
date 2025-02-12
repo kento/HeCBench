@@ -4,6 +4,7 @@
 #include <fmt/core.h>
 #include <hip/hip_runtime.h>
 #include <hipblas.h>
+#include <thrust/execution_policy.h>
 #include <thrust/scan.h>
 #include "io.hpp"
 #include "helpers.cuh"

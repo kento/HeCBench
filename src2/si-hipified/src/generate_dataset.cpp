@@ -1,4 +1,4 @@
-#include "hip/hip_runtime.h"
+//#include "hip/hip_runtime.h"
 #include <string>
 #include <vector>
 #include <random>

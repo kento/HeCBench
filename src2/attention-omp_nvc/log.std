@@ -1,6 +1,2 @@
-Usage: ./main <rows> <columns> <repeat>
-Usage: ./main <rows> <columns> <repeat>
-Usage: ./main <rows> <columns> <repeat>
-Usage: ./main <rows> <columns> <repeat>
-Usage: ./main <rows> <columns> <repeat>
-Usage: ./main <rows> <columns> <repeat>
+Average execution time of kernels 0.935443 (ms)
+RMSE = 0.000000

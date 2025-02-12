@@ -1,0 +1,1 @@
+nvc++  -Wall -I../face-sycl -std=c++11 -O3 -o vj-gpu main.o haar-gpu.o image.o stdio-wrapper.o rectangles.o

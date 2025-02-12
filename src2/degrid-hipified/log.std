@@ -1,0 +1,9 @@
+img size in bytes: 1140858880
+out size in bytes: 640000
+Computing on GPU...
+Average kernel execution time 0.0550544 (s)
+Computing on CPU...
+Checking results against CPU:
+Error bound: 1e-07
+0: F(6679.06, 2575.1) = 2.14748e+10, 2.14748e+10 vs. -7701.08, 19723.4
+FAIL
