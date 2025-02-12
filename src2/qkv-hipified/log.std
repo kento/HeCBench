@@ -3,22 +3,22 @@ enable_tf32: 0
 Using kernel 1
 All results match. Starting benchmarks.
 
-time 47.9048 ms | tflops 0.30
+time 47.9008 ms | tflops 0.30
 Device 0: AMD Instinct MI250X/MI250
 enable_tf32: 0
 Using kernel 2
 All results match. Starting benchmarks.
 
-time 0.5486 ms | tflops 26.42
+time 0.5479 ms | tflops 26.46
 Device 0: AMD Instinct MI250X/MI250
 enable_tf32: 0
 Using kernel 3
 All results match. Starting benchmarks.
 
-time 0.4692 ms | tflops 30.89
+time 0.4686 ms | tflops 30.94
 Device 0: AMD Instinct MI250X/MI250
 enable_tf32: 0
 Using kernel 4
 All results match. Starting benchmarks.
 
-time 1.1765 ms | tflops 12.32
+time 1.0990 ms | tflops 13.19
