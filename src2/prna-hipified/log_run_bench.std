@@ -1,1 +1,1 @@
-hipcc  -DFLOAT -std=c++14  -Wall  -O3  -c main.c -o main.o
+bash -c "time -p ( ./main ../prna-cuda/HIV1-NL43.seq 1>log.std 2>log.err ) 2> log.time"

@@ -1,3 +1,1 @@
-error: invalid argument '-std=c++14' not allowed with 'C'
-failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++   -DFLOAT -std=c++14 -Wall -O3 -c -x c main.c -o "main.o"
-make: *** [Makefile.AMD:56: main.o] Error 1
+timeout was set to  3000
