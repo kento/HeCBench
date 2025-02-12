@@ -55,7 +55,8 @@ namespace util {
 
   constexpr uint32_t n_threads_trilinear = 8;
 
-#ifdef __NVCC__
+//#ifdef __NVCC__
+#ifdef __HIPCC__
 
   //. ======================================================================== //
   // trilinear version 
