@@ -98,9 +98,9 @@ int main(int argc, char **argv) {
 
   // move to GPU
   float *d_inp, *d_out;
-  cudaCheck(hipMalloc(&d_inp, S * 3 * sizeof(float)));
-  cudaCheck(hipMemcpy(d_inp, inp, S * 3 * sizeof(float), hipMemcpyHostToDevice));
-  cudaCheck(hipMalloc(&d_out, S * 3 * sizeof(float)));
+  hipCheck(hipMalloc(&d_inp, S * 3 * sizeof(float)));
+  hipCheck(hipMemcpy(d_inp, inp, S * 3 * sizeof(float), hipMemcpyHostToDevice));
+  hipCheck(hipMalloc(&d_out, S * 3 * sizeof(float)));
 
   int block_sizes[] = {32, 64, 128, 256, 512};
 
@@ -129,8 +129,8 @@ int main(int argc, char **argv) {
   free(k);
   free(v);
   free(out);
-  cudaCheck(hipFree(d_inp));
-  cudaCheck(hipFree(d_out));
+  hipCheck(hipFree(d_inp));
+  hipCheck(hipFree(d_out));
 
   return 0;
 }
