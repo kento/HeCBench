@@ -16,7 +16,7 @@
 #include <iostream>
 #include <hip/hip_runtime.h>
 #include "shrUtils.h"
-#include "helper_math.h"
+//#include "helper_math.h"
 
 extern void BoxFilterHost(unsigned int* uiInputImage, unsigned int* uiTempImage, unsigned int* uiOutputImage, 
                           unsigned int uiWidth, unsigned int uiHeight, int iRadius, float fScale );
