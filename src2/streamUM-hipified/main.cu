@@ -41,7 +41,7 @@
 #include <stdlib.h>
 
 // cuBLAS
-#include <hipblas.h>
+#include <hipblas/hipblas.h>
 
 // utilities
 #include "reference.h"
