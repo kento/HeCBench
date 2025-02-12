@@ -1,4 +1,3 @@
-bash: line 1: 2424391 Segmentation fault      (core dumped) ./main 90000000 100 > log.std 2> log.err
-real 387.76
-user 382.85
-sys 2.69
+real 681.38
+user 676.93
+sys 2.71
