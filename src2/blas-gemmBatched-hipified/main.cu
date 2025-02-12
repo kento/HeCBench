@@ -9,7 +9,7 @@
 #include <type_traits> // is_same
 #include <hip/hip_fp16.h>
 #include <hip/hip_runtime.h>
-#include <hipblas.h>
+#include <hipblas/hipblas.h>
 #include "reference.h"
 
 using namespace std;
