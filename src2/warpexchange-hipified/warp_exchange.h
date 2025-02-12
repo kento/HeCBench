@@ -75,7 +75,7 @@ __device__ __forceinline__ unsigned int LaneId()
 
 __device__  __forceinline__ void WARP_SYNC(unsigned int member_mask)
 {
-    __syncwarp(member_mask);
+//    __syncwarp(member_mask);
 }
 
 /**

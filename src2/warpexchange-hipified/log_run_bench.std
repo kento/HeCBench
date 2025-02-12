@@ -1,1 +1,1 @@
-hipcc  -std=c++14  -Wall           -I../blockAccess-cuda -O3 -c main.cu -o main.o
+bash -c "time -p ( ./main 8192 8192 100 1>log.std 2>log.err ) 2> log.time"
