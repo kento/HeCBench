@@ -11,7 +11,7 @@
 #include <cassert>
 #include <chrono>
 #include <hip/hip_runtime.h>
-#include "helper_math.h"
+//#include "helper_math.h"
 #include "main.h"
 #include "shrUtils.h"
 
