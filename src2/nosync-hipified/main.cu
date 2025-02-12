@@ -15,11 +15,11 @@
 //
 // Thrust provides two execution policies that accept CUDA streams that differ
 // in when/if they synchronize the stream:
-// 1. thrust::cuda::par.on(stream)
+// 1. thrust::hip::par.on(stream)
 //      - `stream` will *always* be synchronized before an algorithm returns.
 //      - This is the default `thrust::device` policy when compiling with the
 //        CUDA device backend.
-// 2. thrust::cuda::par_nosync.on(stream)
+// 2. thrust::hip::par_nosync.on(stream)
 //      - `stream` will only be synchronized when necessary for correctness
 //        (e.g., returning a result from `thrust::reduce`). This is a hint that
 //        may be ignored by an algorithm's implementation.
@@ -57,9 +57,9 @@ int main(int argc, char* argv[])
     // par_nosync execution policy was added in Thrust 1.16
     // https://github.com/NVIDIA/thrust/blob/main/CHANGELOG.md#thrust-1160
 #if THRUST_VERSION < 101700
-    auto nosync_exec_policy = thrust::cuda::par.on(s);
+    auto nosync_exec_policy = thrust::hip::par.on(s);
 #else
-    auto nosync_exec_policy = thrust::cuda::par_nosync.on(s);
+    auto nosync_exec_policy = thrust::hip::par_nosync.on(s);
 #endif
 
     // Fill the vector with sequential data.
@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
     thrust::sequence(nosync_exec_policy, d_vec.begin(), d_vec.end());
 
     // Construct a new *synchronous* execution policy with the same custom stream
-    auto sync_exec_policy = thrust::cuda::par.on(s);
+    auto sync_exec_policy = thrust::hip::par.on(s);
 
     auto begin = d_vec.begin();
     auto end = d_vec.end();
