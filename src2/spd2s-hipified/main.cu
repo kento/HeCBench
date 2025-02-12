@@ -51,7 +51,7 @@
 #include <algorithm>
 #include <chrono>
 #include <hip/hip_runtime_api.h> // hipMalloc, hipMemcpy, etc.
-#include <hipsparse.h>         // hipsparseSparseToDense
+#include <hipsparse/hipsparse.h>         // hipsparseSparseToDense
 #include "utils.h"
 
 #define CHECK_CUDA(func)                                                       \
