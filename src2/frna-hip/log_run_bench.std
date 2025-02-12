@@ -1,1 +1,5 @@
+hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I. -I../frna-cuda -O3 -ffast-math -c ../frna-cuda/../frna-cuda/fbase.c -o ../frna-cuda/fbase.o
+hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I. -I../frna-cuda -O3 -ffast-math -c ../frna-cuda/../frna-cuda/fparam.c -o ../frna-cuda/fparam.o
+hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I. -I../frna-cuda -O3 -ffast-math -c ../frna-cuda/../frna-cuda/util.c -o ../frna-cuda/util.o
 hipcc ../frna-cuda/main.o ../frna-cuda/fbase.o ../frna-cuda/fparam.o ../frna-cuda/util.o frna.o  -o main 
+bash -c "time -p ( ./main ../prna-cuda/HIV1-NL43.seq  hiv1-nl43.out 1>log.std 2>log.err ) 2> log.time"
