@@ -5,9 +5,9 @@ Running DXT Compression on 512 x 512 image...
 
 16384 Workgroups, 64 Work Items per Workgroup, 1048576 Work Items in NDRange...
 
-Average kernel execution time 0.002636 (s)
+Average kernel execution time 0.002824 (s)
 
 Comparing against Host/C++ computation...
-RMS(reference, result) = 8994.881836
+RMS(reference, result) = 8995.333008
 
 FAIL

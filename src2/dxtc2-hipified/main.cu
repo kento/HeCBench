@@ -38,7 +38,7 @@ namespace cg = cooperative_groups;
 #include <float.h>  // for FLT_MAX
 #include <chrono>
 
-#include "helper_math.h"
+//#include "helper_math.h"
 #include "dds.h"
 #include "permutations.h"
 #include "shrUtils.h"
