@@ -7,7 +7,7 @@
 #include <type_traits>
 #include <hip/hip_runtime.h>
 #include <hip/hip_fp16.h>
-#include <hipblas.h>
+#include <hipblas/hipblas.h>
 #include "utils.h"
 
 #define TILE_X 16
