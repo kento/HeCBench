@@ -9,8 +9,4 @@ nvc++ -O3 -DDEBUG -Wall -Minfo -mp=gpu -gpu=cc90,fastmath -c model_lattice.cpp -
 nvc++ -O3 -DDEBUG -Wall -Minfo -mp=gpu -gpu=cc90,fastmath -c anderson.cpp -o obj_gpu/anderson.o
 nvc++ -O3 -DDEBUG -Wall -Minfo -mp=gpu -gpu=cc90,fastmath -c charge.cpp -o obj_gpu/charge.o
 nvc++ -O3 -DDEBUG -Wall -Minfo -mp=gpu -gpu=cc90,fastmath obj_gpu/main.o obj_gpu/lsqt.o obj_gpu/sigma.o obj_gpu/vector.o obj_gpu/hamiltonian.o obj_gpu/model.o obj_gpu/model_general.o obj_gpu/model_lattice.o obj_gpu/anderson.o obj_gpu/charge.o -o lsqt_gpu
-nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
 bash -c "../lsqt-hip/prepare_data.sh; time -p ( ./lsqt_gpu ../lsqt-hip/examples/input.txt 1>log.std 2>log.err ) 2> log.time"
-pkill nvidia-smi
-../scripts/m.sh
-min max diff memory in [MB] : 2 2042 2040
