@@ -53,10 +53,10 @@ void LtFp8Matmul(const int repeat,
 
     // create matrix descriptors, we are good with the details here so no need to set any extra attributes
     // table of supported type combinations can be found in the documentation: https://docs.nvidia.com/cuda/cublas/index.html#cublasltmatmul
-    checkCublasStatus(hipblasLtMatrixLayoutCreate(&Adesc, CUDA_R_8F_E4M3, transa == HIPBLAS_OP_N ? m : k, transa == HIPBLAS_OP_N ? k : m, lda));
-    checkCublasStatus(hipblasLtMatrixLayoutCreate(&Bdesc, CUDA_R_8F_E4M3, transb == HIPBLAS_OP_N ? k : n, transb == HIPBLAS_OP_N ? n : k, ldb));
+    checkCublasStatus(hipblasLtMatrixLayoutCreate(&Adesc, HIP_R_8F_E4M3_FNUZ, transa == HIPBLAS_OP_N ? m : k, transa == HIPBLAS_OP_N ? k : m, lda));
+    checkCublasStatus(hipblasLtMatrixLayoutCreate(&Bdesc, HIP_R_8F_E4M3_FNUZ, transb == HIPBLAS_OP_N ? k : n, transb == HIPBLAS_OP_N ? n : k, ldb));
     checkCublasStatus(hipblasLtMatrixLayoutCreate(&Cdesc, HIP_R_16BF, m, n, ldc));
-    checkCublasStatus(hipblasLtMatrixLayoutCreate(&Ddesc, CUDA_R_8F_E4M3, m, n, ldc));
+    checkCublasStatus(hipblasLtMatrixLayoutCreate(&Ddesc, HIP_R_8F_E4M3_FNUZ, m, n, ldc));
 
     // create preference handle; here we could use extra attributes to disable tensor ops or to make sure algo selected
     // will work with badly aligned A, B, C; here for simplicity we just assume A,B,C are always well aligned (e.g.

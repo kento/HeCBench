@@ -1,1 +1,1 @@
-hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipblas -I/opt/rocm/include/hipblaslt -O3 -c main.cu -o main.o
+bash -c "time -p ( ./main 100 1>log.std 2>log.err ) 2> log.time"
