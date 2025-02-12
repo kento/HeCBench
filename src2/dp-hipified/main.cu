@@ -26,7 +26,7 @@
 #include <execution>
 #include <hip/hip_runtime.h>
 #include <hipcub/hipcub.hpp>
-#include <hipblas.h>
+#include <hipblas/hipblas.h>
 #include "shrUtils.h"
 
 template <typename T>

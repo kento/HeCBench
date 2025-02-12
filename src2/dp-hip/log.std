@@ -1,0 +1,22 @@
+Global Work Size 		= 268435456
+Local Work Size 		= 256
+Average kernel execution time 1.551871 (ms)
+PASS
+
+Average hipblasDot execution time 1.688387 (ms)
+PASS
+
+Average std::transform_reduce execution time 1.521712 (ms)
+PASS
+
+Global Work Size 		= 268435456
+Local Work Size 		= 256
+Average kernel execution time 3.002363 (ms)
+PASS
+
+Average hipblasDot execution time 3.195888 (ms)
+PASS
+
+Average std::transform_reduce execution time 2.977239 (ms)
+PASS
+
