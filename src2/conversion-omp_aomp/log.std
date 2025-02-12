@@ -1,32 +1,32 @@
 float -> float
-size(GB):2.15, average time(sec):0.023612, BW:90.948825
+size(GB):2.15, average time(sec):0.019896, BW:107.935447
 float -> int
-size(GB):2.15, average time(sec):0.021449, BW:100.120455
+size(GB):2.15, average time(sec):0.019440, BW:110.467266
 float -> char
-size(GB):1.34, average time(sec):0.003465, BW:387.352750
+size(GB):1.34, average time(sec):0.002708, BW:495.634151
 float -> uchar
-size(GB):1.34, average time(sec):0.002045, BW:656.321408
+size(GB):1.34, average time(sec):0.002233, BW:601.064613
 int -> int
-size(GB):2.15, average time(sec):0.021341, BW:100.627133
+size(GB):2.15, average time(sec):0.016553, BW:129.733803
 int -> float
-size(GB):2.15, average time(sec):0.017588, BW:122.099366
+size(GB):2.15, average time(sec):0.013762, BW:156.044445
 int -> char
-size(GB):1.34, average time(sec):0.002249, BW:596.788475
+size(GB):1.34, average time(sec):0.001701, BW:789.051899
 int -> uchar
-size(GB):1.34, average time(sec):0.001718, BW:781.244051
+size(GB):1.34, average time(sec):0.001187, BW:1130.730649
 char -> int
-size(GB):1.34, average time(sec):0.018320, BW:73.262952
+size(GB):1.34, average time(sec):0.009929, BW:135.177488
 char -> float
-size(GB):1.34, average time(sec):0.012668, BW:105.950212
+size(GB):1.34, average time(sec):0.005299, BW:253.288787
 char -> char
-size(GB):0.54, average time(sec):0.001311, BW:409.512519
+size(GB):0.54, average time(sec):0.000734, BW:731.431760
 char -> uchar
-size(GB):0.54, average time(sec):0.001015, BW:528.936859
+size(GB):0.54, average time(sec):0.000601, BW:893.296027
 uchar -> int
-size(GB):1.34, average time(sec):0.006877, BW:195.169010
+size(GB):1.34, average time(sec):0.005094, BW:263.481995
 uchar -> float
-size(GB):1.34, average time(sec):0.009480, BW:141.579882
+size(GB):1.34, average time(sec):0.005059, BW:265.304859
 uchar -> char
-size(GB):0.54, average time(sec):0.001076, BW:498.950662
+size(GB):0.54, average time(sec):0.000710, BW:756.156214
 uchar -> uchar
-size(GB):0.54, average time(sec):0.000911, BW:589.320430
+size(GB):0.54, average time(sec):0.000549, BW:977.906944

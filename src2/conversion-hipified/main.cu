@@ -4,7 +4,8 @@
 #include <chrono>
 #include <cstdio>
 #include <hip/hip_runtime.h>
-#include <cuda_bf16.h>
+//#include <cuda_bf16.h>
+#include <hip/hip_bfloat16.h>
 #include <hip/hip_fp16.h>
 
 typedef unsigned char uchar;
@@ -62,15 +63,15 @@ int main(int argc, char* argv[]) {
   const int niters = atoi(argv[2]);
 
   printf("bfloat16 -> half\n");
-  convert<half, __hip_bfloat16>(nelems, niters); 
+  convert<half, hip_bfloat16>(nelems, niters); 
   printf("bfloat16 -> float\n");
-  convert<float, __hip_bfloat16>(nelems, niters); 
+  convert<float, hip_bfloat16>(nelems, niters); 
   printf("bfloat16 -> int\n");
-  convert<int, __hip_bfloat16>(nelems, niters); 
+  convert<int, hip_bfloat16>(nelems, niters); 
   printf("bfloat16 -> char\n");
-  convert<char, __hip_bfloat16>(nelems, niters); 
+  convert<char, hip_bfloat16>(nelems, niters); 
   printf("bfloat16 -> uchar\n");
-  convert<uchar, __hip_bfloat16>(nelems, niters); 
+  convert<uchar, hip_bfloat16>(nelems, niters); 
 
   printf("half -> half\n");
   convert<half, half>(nelems, niters); 

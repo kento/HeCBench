@@ -1,60 +1,60 @@
 bfloat16 -> half
-size(GB):1.07, average time(sec):0.001369, BW:784.325657
+size(GB):1.07, average time(sec):0.001368, BW:784.898994
 bfloat16 -> float
-size(GB):1.61, average time(sec):0.001592, BW:1011.691417
+size(GB):1.61, average time(sec):0.001591, BW:1012.327301
 bfloat16 -> int
 size(GB):1.61, average time(sec):0.001593, BW:1011.056331
 bfloat16 -> char
-size(GB):0.81, average time(sec):0.001342, BW:600.079261
+size(GB):0.81, average time(sec):0.001343, BW:599.632441
 bfloat16 -> uchar
 size(GB):0.81, average time(sec):0.001343, BW:599.632441
 half -> half
-size(GB):1.07, average time(sec):0.001375, BW:780.903145
+size(GB):1.07, average time(sec):0.001374, BW:781.471488
 half -> float
-size(GB):1.61, average time(sec):0.001592, BW:1011.691417
+size(GB):1.61, average time(sec):0.001591, BW:1012.327301
 half -> int
-size(GB):1.61, average time(sec):0.001594, BW:1010.422043
+size(GB):1.61, average time(sec):0.001593, BW:1011.056331
 half -> char
 size(GB):0.81, average time(sec):0.001341, BW:600.526747
 half -> uchar
 size(GB):0.81, average time(sec):0.001341, BW:600.526747
 float -> float
-size(GB):2.15, average time(sec):0.001787, BW:1201.725600
-float -> half
-size(GB):1.61, average time(sec):0.001517, BW:1061.709121
-float -> int
 size(GB):2.15, average time(sec):0.001786, BW:1202.398459
+float -> half
+size(GB):1.61, average time(sec):0.001520, BW:1059.613642
+float -> int
+size(GB):2.15, average time(sec):0.001785, BW:1203.072072
 float -> char
 size(GB):1.34, average time(sec):0.001420, BW:945.195268
 float -> uchar
 size(GB):1.34, average time(sec):0.001420, BW:945.195268
 int -> int
-size(GB):2.15, average time(sec):0.001789, BW:1200.382140
+size(GB):2.15, average time(sec):0.001785, BW:1203.072072
 int -> float
-size(GB):2.15, average time(sec):0.001789, BW:1200.382140
+size(GB):2.15, average time(sec):0.001791, BW:1199.041680
 int -> half
 size(GB):1.61, average time(sec):0.001521, BW:1058.916986
 int -> char
-size(GB):1.34, average time(sec):0.001415, BW:948.535180
+size(GB):1.34, average time(sec):0.001414, BW:949.205997
 int -> uchar
 size(GB):1.34, average time(sec):0.001415, BW:948.535180
 char -> int
-size(GB):1.34, average time(sec):0.001586, BW:846.265624
+size(GB):1.34, average time(sec):0.001591, BW:843.606084
 char -> float
 size(GB):1.34, average time(sec):0.001590, BW:844.136654
 char -> half
 size(GB):0.81, average time(sec):0.001366, BW:589.536141
 char -> char
-size(GB):0.54, average time(sec):0.001320, BW:406.720388
+size(GB):0.54, average time(sec):0.001319, BW:407.028743
 char -> uchar
-size(GB):0.54, average time(sec):0.001320, BW:406.720388
+size(GB):0.54, average time(sec):0.001319, BW:407.028743
 uchar -> int
 size(GB):1.34, average time(sec):0.001586, BW:846.265624
 uchar -> float
-size(GB):1.34, average time(sec):0.001590, BW:844.136654
+size(GB):1.34, average time(sec):0.001589, BW:844.667892
 uchar -> half
 size(GB):0.81, average time(sec):0.001366, BW:589.536141
 uchar -> char
-size(GB):0.54, average time(sec):0.001321, BW:406.412500
+size(GB):0.54, average time(sec):0.001319, BW:407.028743
 uchar -> uchar
-size(GB):0.54, average time(sec):0.001320, BW:406.720388
+size(GB):0.54, average time(sec):0.001319, BW:407.028743
