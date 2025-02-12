@@ -3,8 +3,8 @@
 #include <chrono>
 #include <cmath>
 #include <hip/hip_runtime.h>
-#include <hipblas.h>
-#include <hipblaslt.h>
+#include <hipblas/hipblas.h>
+#include <hipblaslt/hipblaslt.h>
 
 float* make_random_float(size_t N) {
     float* arr = (float*)malloc(N * sizeof(float));
@@ -61,7 +61,8 @@ void validate_result(D* device_result, const T* cpu_reference, const char* name,
 #endif
     for (std::size_t i = 0; i < num_elements; i++) {
         // Skip masked elements
-        if(!isfinite(cpu_reference[i]))
+        //if(!isfinite(cpu_reference[i]))
+        if(!std::isfinite(cpu_reference[i]))
             continue;
 
         // print the first few comparisons
