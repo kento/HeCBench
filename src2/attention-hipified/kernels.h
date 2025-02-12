@@ -1,7 +1,7 @@
 #include "hip/hip_runtime.h"
 #include <hipcub/hipcub.hpp>
 #include <hip/hip_cooperative_groups.h>
-#include <cooperative_groups/reduce.h>
+//#include <cooperative_groups/reduce.h>
 
 __global__
 void kernel1 (
@@ -75,6 +75,13 @@ void kernel1_blockReduce (
   }
 }
 
+__device__ inline float warpReduceSum(cooperative_groups::thread_block_tile<32> &warp, float val) {
+    for (int offset = 16; offset > 0; offset /= 2) {
+        val += warp.shfl_xor(val, offset);
+    }
+    return val;
+}
+
 __global__
 void kernel1_warpReduce (
     const float*__restrict__ key,
@@ -95,7 +102,8 @@ void kernel1_warpReduce (
     for (int j = warp.thread_rank(); j < d; j += warp.size()) {
       sum += key[i * d + j] * query[j];
     }
-    sum = cg::reduce(warp, sum, cg::plus<float>{});
+    //sum = cg::reduce(warp, sum, cg::plus<float>{});
+    sum = warpReduceSum(warp, sum);
     if (warp.thread_rank() == 0) {
       dot_product[i] = sum;
       atomicAdd(exp_sum, expf(sum));
