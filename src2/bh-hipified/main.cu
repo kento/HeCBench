@@ -615,7 +615,8 @@ void ForceCalculationKernel(
           dy = pn.y - pi.y;
           dz = pn.z - pi.z;
           tmp = dx*dx + (dy*dy + (dz*dz + epssqd));  // compute distance squared (plus softening)
-          if ((n < nbodiesd) || __all_sync(0xffffffff, tmp >= dq[depth])) {  
+//          if ((n < nbodiesd) || __all_sync(0xffffffff, tmp >= dq[depth])) {  
+          if ((n < nbodiesd) || __all(tmp >= dq[depth])) {  
           // check if all threads agree that cell is far enough away (or is a body)
             tmp = rsqrtf(tmp);  // compute distance
             tmp = pn.w * tmp * tmp * tmp;
