@@ -1,1 +1,1 @@
-bash -c "time -p ( ./main genome.txt 1000000000 100 1>log.std 2>log.err ) 2> log.time"
+bash -c "time -p ( ./main ../sa-cuda/genome.txt 1000000000 50 1>log.std 2>log.err ) 2> log.time"
