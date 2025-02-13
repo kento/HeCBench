@@ -4,39 +4,39 @@
 --------------------------------------------------------------------
 Allocating array size of 16777216 (data type: uint)
 Sorting the regular way...
-Time to sort: 800.467 ms
+Time to sort: 804.757 ms
 quicksort on the cpu: 
-Time to sort: 945.295 ms
+Time to sort: 947.456 ms
 verifying: true
 Sorting with GPU quicksort: 
-Time to sort: 120.895 ms
+Time to sort: 2404.91 ms
 verifying: true
-Time to sort: 13.7855 ms
+Time to sort: 14.0783 ms
 verifying: true
-Time to sort: 14.4688 ms
+Time to sort: 13.9194 ms
 verifying: true
-Time to sort: 13.9835 ms
+Time to sort: 14.8332 ms
 verifying: true
-Time to sort: 14.54 ms
+Time to sort: 14.2446 ms
 verifying: true
-Time to sort: 13.8646 ms
+Time to sort: 14.2031 ms
 verifying: true
-Time to sort: 13.6113 ms
+Time to sort: 14.0187 ms
 verifying: true
-Time to sort: 14.1564 ms
+Time to sort: 14.4984 ms
 verifying: true
-Time to sort: 13.5908 ms
+Time to sort: 15.1589 ms
 verifying: true
-Time to sort: 13.7577 ms
+Time to sort: 13.856 ms
 verifying: true
  Number of failures: 0 out of 10
-Average Time: 24.6653 ms
-Standard Deviation: 33.8131
-%error (3*stdDev)/Average: 411.263%
-min time: 13.5908 ms
-max time: 120.895 ms
-Average speedup over CPU quicksort: 38.3249
-Average speedup over CPU std::sort: 32.4532
+Average Time: 253.372 ms
+Standard Deviation: 755.974
+%error (3*stdDev)/Average: 895.095%
+min time: 13.856 ms
+max time: 2404.91 ms
+Average speedup over CPU quicksort: 3.73939
+Average speedup over CPU std::sort: 3.17618
 -------done--------------------------------------------------------
 
 
@@ -44,39 +44,39 @@ Average speedup over CPU std::sort: 32.4532
 --------------------------------------------------------------------
 Allocating array size of 16777216 (data type: float)
 Sorting the regular way...
-Time to sort: 1040.36 ms
+Time to sort: 1041.19 ms
 quicksort on the cpu: 
-Time to sort: 1188.44 ms
+Time to sort: 1188.58 ms
 verifying: true
 Sorting with GPU quicksort: 
-Time to sort: 13.1331 ms
+Time to sort: 13.5162 ms
 verifying: true
-Time to sort: 12.7357 ms
-verifying: true
-Time to sort: 13.2286 ms
-verifying: true
-Time to sort: 13.1809 ms
-verifying: true
-Time to sort: 13.1645 ms
-verifying: true
-Time to sort: 13.1124 ms
-verifying: true
-Time to sort: 13.4601 ms
-verifying: true
-Time to sort: 13.2873 ms
+Time to sort: 13.3332 ms
 verifying: true
 Time to sort: 13.0892 ms
 verifying: true
-Time to sort: 13.1913 ms
+Time to sort: 13.4993 ms
+verifying: true
+Time to sort: 13.6052 ms
+verifying: true
+Time to sort: 13.2418 ms
+verifying: true
+Time to sort: 13.4031 ms
+verifying: true
+Time to sort: 13.0355 ms
+verifying: true
+Time to sort: 12.9476 ms
+verifying: true
+Time to sort: 13.5578 ms
 verifying: true
  Number of failures: 0 out of 10
-Average Time: 13.1583 ms
-Standard Deviation: 0.182702
-%error (3*stdDev)/Average: 4.16548%
-min time: 12.7357 ms
-max time: 13.4601 ms
-Average speedup over CPU quicksort: 90.3182
-Average speedup over CPU std::sort: 79.0647
+Average Time: 13.3229 ms
+Standard Deviation: 0.23441
+%error (3*stdDev)/Average: 5.27836%
+min time: 12.9476 ms
+max time: 13.6052 ms
+Average speedup over CPU quicksort: 89.2133
+Average speedup over CPU std::sort: 78.1504
 -------done--------------------------------------------------------
 
 
@@ -86,35 +86,35 @@ Allocating array size of 16777216 (data type: double)
 Sorting the regular way...
 Time to sort: 1047.47 ms
 quicksort on the cpu: 
-Time to sort: 1189.53 ms
+Time to sort: 1194.78 ms
 verifying: true
 Sorting with GPU quicksort: 
-Time to sort: 17.7149 ms
+Time to sort: 18.3444 ms
 verifying: true
-Time to sort: 17.8383 ms
+Time to sort: 18.6431 ms
 verifying: true
-Time to sort: 17.7737 ms
+Time to sort: 18.5725 ms
 verifying: true
-Time to sort: 18.1412 ms
+Time to sort: 18.4543 ms
 verifying: true
-Time to sort: 17.9309 ms
+Time to sort: 19.4003 ms
 verifying: true
-Time to sort: 17.7629 ms
+Time to sort: 18.5109 ms
 verifying: true
-Time to sort: 18.0929 ms
+Time to sort: 18.3156 ms
 verifying: true
-Time to sort: 17.7267 ms
+Time to sort: 18.1657 ms
 verifying: true
-Time to sort: 17.9003 ms
+Time to sort: 18.4827 ms
 verifying: true
-Time to sort: 18.0388 ms
+Time to sort: 18.2682 ms
 verifying: true
  Number of failures: 0 out of 10
-Average Time: 17.8921 ms
-Standard Deviation: 0.155575
-%error (3*stdDev)/Average: 2.60855%
-min time: 17.7149 ms
-max time: 18.1412 ms
-Average speedup over CPU quicksort: 66.4834
-Average speedup over CPU std::sort: 58.5436
+Average Time: 18.5158 ms
+Standard Deviation: 0.343188
+%error (3*stdDev)/Average: 5.56047%
+min time: 18.1657 ms
+max time: 19.4003 ms
+Average speedup over CPU quicksort: 64.5275
+Average speedup over CPU std::sort: 56.5717
 -------done--------------------------------------------------------
