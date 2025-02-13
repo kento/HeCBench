@@ -1,33 +1,6 @@
 Workspace size: 3.0625MB
-MIOpen(HIP): Warning [GetAllConfigs] ConvBinWinogradRxSf3x2: Searching the best solution among 104...
-MIOpen(HIP): Warning [GenericSearch] Done: 104/0/104, best #0 0.0426882 78
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.27811 (default time 0.05456)
-MIOpen(HIP): Warning [GetAllConfigs] ConvAsmImplicitGemmGTCDynamicFwdXdlopsNHWC: Searching the best solution among 9 (spare)...
-MIOpen(HIP): Warning [GenericSearch] Done: 9/0/9, best #0 0.025056 fwd,nhwc,fp32,0,1,128,128,8,32,32,2,1,1,2,2,0,0,0,1,0,1,1,4,1,1,8,1,32,1,1,4,1,1,8,1,32,19
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.59642 (default time 0.04)
-MIOpen(HIP): Warning [GetAllConfigs] ConvHipImplicitGemmGroupFwdXdlops: Searching the best solution among 2...
-MIOpen(HIP): Warning [GenericSearch] Done: 2/0/2, best #1 0.118369 DeviceGroupedConvFwdMultipleABD_Xdl_CShuffle<64, 64, 64, 16, Default, 32, 32, 2, 2, 1, 1, 1, 1, 1>
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.19627 (default time 0.141601)
 Workspace size: 3.0625MB
 Workspace size: 0.448608MB
-MIOpen(HIP): Warning [GetAllConfigs] ConvBinWinogradRxSf3x2: Searching the best solution among 104...
-MIOpen(HIP): Warning [GenericSearch] Done: 104/0/104, best #0 0.049056 39
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.3177 (default time 0.064641)
-MIOpen(HIP): Warning [GetAllConfigs] ConvAsmImplicitGemmGTCDynamicFwdXdlopsNHWC: Searching the best solution among 9 (spare)...
-MIOpen(HIP): Warning [GenericSearch] Done: 9/0/9, best #2 0.0395522 fwd,nhwc,fp32,0,1,128,32,8,32,32,2,1,1,1,1,0,0,0,1,0,1,1,4,1,1,8,1,32,1,1,1,1,1,8,1,32,43
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.17313 (default time 0.0464)
-MIOpen(HIP): Warning [GetAllConfigs] ConvHipImplicitGemmGroupFwdXdlops: Searching the best solution among 4...
-MIOpen(HIP): Warning [GenericSearch] Done: 4/0/4, best #3 0.143552 DeviceGroupedConvFwdMultipleABD_Xdl_CShuffle<256, 128, 128, 16, Default, 32, 32, 2, 2, 1, 1, 4, 1, 1>
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.05439 (default time 0.15136)
 Workspace size: 0.448608MB
 Workspace size: 186.719MB
-MIOpen(HIP): Warning [GetAllConfigs] ConvBinWinogradRxSf3x2: Searching the best solution among 104...
-MIOpen(HIP): Warning [GenericSearch] Done: 104/0/104, best #80 1.2072 103
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.02081 (default time 1.23232)
-MIOpen(HIP): Warning [GetAllConfigs] ConvAsmImplicitGemmGTCDynamicFwdXdlopsNHWC: Searching the best solution among 36 (spare)...
-MIOpen(HIP): Warning [GenericSearch] Done: 36/0/36, best #23 0.607586 fwd,nhwc,fp32,0,1,128,64,16,32,32,2,1,1,1,2,0,0,0,0,1,1,8,1,1,1,2,4,32,1,4,1,1,1,4,1,64,25
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.03782 (default time 0.630562)
-MIOpen(HIP): Warning [GetAllConfigs] ConvHipImplicitGemmGroupFwdXdlops: Searching the best solution among 104...
-MIOpen(HIP): Warning [GenericSearch] Done: 104/0/104, best #99 0.758979 DeviceGroupedConvFwdMultipleABD_Xdl_CShuffle<256, 128, 64, 16, OddC, 32, 32, 2, 1, 4, 4, 4, 1, 1>
-MIOpen(HIP): Warning [GenericSearch] ...Score: 1.0218 (default time 0.775523)
 Workspace size: 186.719MB
