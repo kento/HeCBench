@@ -1,1 +1,35 @@
-make: *** [Makefile.AMD:65: run] Error 1
+main.cpp:43:7: warning: unused variable 'kernel' [-Wunused-variable]
+   43 |   int kernel = atoi(argv[3]);
+      |       ^~~~~~
+1 warning generated.
+main.cpp:43:7: warning: unused variable 'kernel' [-Wunused-variable]
+   43 |   int kernel = atoi(argv[3]);
+      |       ^~~~~~
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:163:14: note: used here
+  163 |       return __make_mantissa_base16(__tagp);
+      |              ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:165:14: note: used here
+  165 |       return __make_mantissa_base8(__tagp);
+      |              ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:168:10: note: used here
+  168 |   return __make_mantissa_base10(__tagp);
+      |          ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_math.h:557:25: note: used here
+  557 |   __tmp.bits.mantissa = __make_mantissa(__tagp);
+      |                         ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:155:12: note: used here
+  155 |   return ::powif(__base, __iexp);
+      |            ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_hip_cmath.h:158:12: note: used here
+  158 |   return ::powi(__base, __iexp);
+      |            ^
+warning: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+3 warnings generated.
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+2 warnings generated.
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering
