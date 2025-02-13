@@ -1,0 +1,4 @@
+Average kernel execution time (3x3) 58.227509 (ms)
+Average kernel execution time (6x6) 206.568100 (ms)
+Average kernel execution time (9x9) 282.970673 (ms)
+PASS
