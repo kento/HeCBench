@@ -1,0 +1,7 @@
+clang++: warning: argument unused during compilation: '-dc' [-Wunused-command-line-argument]
+lld: error: undefined hidden symbol: Fresnel_Sine_Integral(double)
+>>> referenced by /tmp/main-gfx90a-b7c433.o:(kernel(double const*, double*, int))
+>>> referenced by /tmp/main-gfx90a-b7c433.o:(kernel(double const*, double*, int))
+clang++: error: amdgcn-link command failed with exit code 1 (use -v to see invocation)
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --driver-mode=g++ -Llib --hip-link  -std=c++14 -Wall -O3 -dc -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:52: main.o] Error 1
