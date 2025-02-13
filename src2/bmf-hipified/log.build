@@ -1,0 +1,71 @@
+hipcc  -std=c++14 -O3  -DUSE_GPU     -Wall -fopenmp  -c src/main.cu -o main.o
+In file included from src/main.cu:7:
+src/helper/clipp.h:1410:13: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+ 1410 |         int i = 0;
+      |             ^
+In file included from src/main.cu:12:
+src/cuBool_gpu.cuh:214:16: warning: unused variable 'lineBytes_padded' [-Wunused-variable]
+  214 |         size_t lineBytes_padded = sizeof(factor_t) * lineSize_padded_;
+      |                ^~~~~~~~~~~~~~~~
+In file included from src/main.cu:12:
+In file included from src/cuBool_gpu.cuh:18:
+src/bit_vector_kernels.cuh:10:12: error: use of undeclared identifier '__shfl_down_sync'
+   10 |     val += __shfl_down_sync(FULLMASK, val, offset);
+      |            ^
+src/bit_vector_kernels.cuh:19:9: note: in instantiation of function template specialization 'warpReduceSum<float>' requested here
+   19 |   val = warpReduceSum(val);
+      |         ^
+src/bit_vector_kernels.cuh:149:31: note: in instantiation of function template specialization 'blockReduceSum<float>' requested here
+  149 |   const error_t error_block = blockReduceSum(error_thread, reductionArray);
+      |                               ^
+src/cuBool_gpu.cuh:170:7: note: in instantiation of function template specialization 'computeDistanceRowsShared<unsigned int, unsigned int, unsigned int, float>' requested here
+  170 |       computeDistanceRowsShared <<< SDIV(height_, WARPSPERBLOCK), WARPSPERBLOCK*32, 0, stream >>>
+      |       ^
+src/cuBool_gpu.cuh:425:7: note: in instantiation of member function 'cuBool<>::calculateDistance' requested here
+  425 |       calculateDistance(handler, config.weight, stream);
+      |       ^
+src/cuBool_gpu.cuh:406:29: note: in instantiation of member function 'cuBool<>::run' requested here
+  406 |         finalDistances[i] = run(id, config_i);
+      |                             ^
+src/main.cu:93:10: note: in instantiation of member function 'cuBool<>::runMultiple' requested here
+   93 |   cuBool.runMultiple(numRuns, config);
+      |          ^
+In file included from src/main.cu:12:
+In file included from src/cuBool_gpu.cuh:18:
+src/bit_vector_kernels.cuh:222:32: error: no matching function for call to 'warpReduceSum'
+  222 |     const error_t error_warp = warpReduceSum(error_thread);
+      |                                ^~~~~~~~~~~~~
+src/cuBool_gpu.cuh:474:9: note: in instantiation of function template specialization 'vectorMatrixMultCompareRowWarpShared<unsigned int, unsigned int, unsigned int, float>' requested here
+  474 |         vectorMatrixMultCompareRowWarpShared
+      |         ^
+src/cuBool_gpu.cuh:406:29: note: in instantiation of member function 'cuBool<>::run' requested here
+  406 |         finalDistances[i] = run(id, config_i);
+      |                             ^
+src/main.cu:93:10: note: in instantiation of member function 'cuBool<>::runMultiple' requested here
+   93 |   cuBool.runMultiple(numRuns, config);
+      |          ^
+src/bit_vector_kernels.cuh:8:3: note: candidate template ignored: substitution failure [with T = float]
+    8 | T warpReduceSum(T val, const unsigned width = warpSize) {
+      |   ^
+src/bit_vector_kernels.cuh:302:32: error: no matching function for call to 'warpReduceSum'
+  302 |     const error_t error_warp = warpReduceSum(error_thread);
+      |                                ^~~~~~~~~~~~~
+src/cuBool_gpu.cuh:485:9: note: in instantiation of function template specialization 'vectorMatrixMultCompareColWarpShared<unsigned int, unsigned int, unsigned int, float>' requested here
+  485 |         vectorMatrixMultCompareColWarpShared
+      |         ^
+src/cuBool_gpu.cuh:406:29: note: in instantiation of member function 'cuBool<>::run' requested here
+  406 |         finalDistances[i] = run(id, config_i);
+      |                             ^
+src/main.cu:93:10: note: in instantiation of member function 'cuBool<>::runMultiple' requested here
+   93 |   cuBool.runMultiple(numRuns, config);
+      |          ^
+src/bit_vector_kernels.cuh:8:3: note: candidate template ignored: substitution failure [with T = float]
+    8 | T warpReduceSum(T val, const unsigned width = warpSize) {
+      |   ^
+In file included from src/main.cu:7:
+src/helper/clipp.h:5208:9: warning: private field 'exclusive_' is not used [-Wunused-private-field]
+ 5208 |     tri exclusive_  = tri::either;
+      |         ^
+3 warnings and 3 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -O3 -DUSE_GPU -Wall -fopenmp -c -x hip src/main.cu -o "main.o"
+make: *** [Makefile.AMD:60: main.o] Error 1

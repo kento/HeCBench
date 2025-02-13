@@ -1,7 +1,8 @@
 LAUNCHER = bash -c
-ARCH = cc70
+ARCH = cc90
 NVCC = nvc++
-NVCC_FLAGS = -Wall --std=c++14 -O3 -Minfo -mp=gpu -gpu=$(ARCH) -pthread 
+#NVCC_FLAGS = -Wall --std=c++14 -O3 -Minfo -mp=gpu -gpu=$(ARCH) -pthread 
+NVCC_FLAGS = -Wall --std=c++17 -O3 -Minfo -mp=gpu -gpu=$(ARCH)
 
 INC_DIR = include
 SRC_DIR = src

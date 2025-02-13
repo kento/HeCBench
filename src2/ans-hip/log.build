@@ -1,0 +1,25 @@
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/ans_encoder.o src/ans_encoder.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/ans_table_generator.o src/ans_table_generator.cc
+src/ans_table_generator.cc:141:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  141 |     SYMBOL_TYPE symbols[num_states];
+      |                         ^~~~~~~~~~
+src/ans_table_generator.cc:141:25: note: function parameter 'num_states' with unknown value cannot be used in a constant expression
+src/ans_table_generator.cc:137:12: note: declared here
+  137 |     size_t num_states,
+      |            ^
+1 warning generated when compiling for gfx90a.
+src/ans_table_generator.cc:141:25: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  141 |     SYMBOL_TYPE symbols[num_states];
+      |                         ^~~~~~~~~~
+src/ans_table_generator.cc:141:25: note: function parameter 'num_states' with unknown value cannot be used in a constant expression
+src/ans_table_generator.cc:137:12: note: declared here
+  137 |     size_t num_states,
+      |            ^
+1 warning generated when compiling for host.
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/multians_codetable.o src/multians_codetable.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/multians_input_buffer.o src/multians_input_buffer.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/multians_output_buffer.o src/multians_output_buffer.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/multians_util.o src/multians_util.cc
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/main.obj src/main.cu
+hipcc  --std=c++14 -O3 --offload-arch=gfx90a -pthread -I include -c -o bin/multians_gpu_decoder.obj src/multians_gpu_decoder.cu
+hipcc bin/ans_encoder.o bin/ans_table_generator.o bin/multians_codetable.o bin/multians_input_buffer.o bin/multians_output_buffer.o bin/multians_util.o bin/main.obj bin/multians_gpu_decoder.obj -o bin/demo

@@ -6,7 +6,7 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+ARCH      = sm_90
 GPU       = yes
 LAUNCHER = bash -c
 
@@ -44,7 +44,7 @@ ifeq ($(OPTIMIZE),yes)
 endif
 
 ifeq ($(GPU),yes)
-  CFLAGS +=-DUSE_GPU --default-stream per-thread             -Wall ="-fopenmp" 
+  CFLAGS +=-DUSE_GPU     -Wall -fopenmp 
 else
   CFLAGS += -x c++ -Wall -fopenmp
 endif

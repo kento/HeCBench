@@ -1,9 +1,12 @@
 LAUNCHER = bash -c
-ARCH = 60
+#ARCH = 60
+ARCH = gfx90a
 
 NVCC = hipcc
-NVCC_ARCH = -gencode arch=compute_$(ARCH),code=sm_$(ARCH)
-NVCC_FLAGS = --std=c++14 -O3 -arch=sm_$(ARCH) ="-pthread" 
+#NVCC_ARCH = -gencode arch=compute_$(ARCH),code=sm_$(ARCH)
+#NVCC_FLAGS = --std=c++14 -O3 -arch=sm_$(ARCH) ="-pthread" 
+
+NVCC_FLAGS = --std=c++14 -O3 --offload-arch=$(ARCH) -pthread
 
 INC_DIR = include
 SRC_DIR = src
