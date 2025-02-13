@@ -1,1 +1,5 @@
-bash -c "time -p ( ./main -f ../rsc-cuda/input/vectors.csv -g 512 1>log.std 2>log.err ) 2> log.time"
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+hipcc  -std=c++14  -Wall  -O3 -c model_eval.cu -o model_eval.o
+hipcc  -std=c++14  -Wall  -O3 -c model_fitting.cpp -o model_fitting.o
+hipcc  -std=c++14  -Wall  -O3 main.o model_eval.o model_fitting.o  -o main -lpthread
+bash -c "time -p ( ./main -m 2000 -f ../rsc-cuda/input/vectors.csv -g 512 1>log.std 2>log.err ) 2> log.time"
