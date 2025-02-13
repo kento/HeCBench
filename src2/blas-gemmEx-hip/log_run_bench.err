@@ -1,1 +1,2 @@
-make: *** [Makefile.AMD:57: run] Interrupt
+make: *** [Makefile.AMD:57: run] Terminated
+timeout was set to  300
