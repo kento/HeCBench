@@ -1,5 +1,5 @@
-cd src;make -f Makefile run
-make[1]: Entering directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-hip/src'
+cd src; make -f Makefile
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-hip/src'
 ./get_common_files
 ./generate_info_header "hipcc" "-I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x hip -DMINIFE_CSR_MATRIX " "miniFE" "MINIFE"
 CXX: /opt/rocm-6.2.0/bin/hipcc
@@ -12,5 +12,5 @@ hipcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int 
 hipcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x hip -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/utils.cpp
 hipcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x hip -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/mytimer.cpp
 hipcc main.o BoxPartition.o YAML_Doc.o YAML_Element.o param_utils.o utils.o mytimer.o  -o miniFE.x -O3  
-bash -c "time -p ( ./miniFE.x -nx 128 -ny 128 -nz 128 1>../log.std 2>../log.err ) 2> ../log.time"
-make[1]: Leaving directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-hip/src'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-hip/src'
+bash -c "time -p ( ./src/miniFE.x -nx 128 -ny 128 -nz 128 1>./log.std 2>./log.err ) 2> ./log.time"

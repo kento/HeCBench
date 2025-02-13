@@ -13,7 +13,7 @@ MINIFE_MATRIX_TYPE = -DMINIFE_CSR_MATRIX
 
 #-----------------------------------------------------------------------
 
-ARCH   = sm_60
+ARCH   = sm_90
 CFLAGS = -v -O3 
 #	-S -emit-llvm
 #\

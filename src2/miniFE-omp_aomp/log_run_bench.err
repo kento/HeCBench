@@ -1,4 +1,614 @@
-/usr/bin/which: no icpx in (/opt/rocm-6.2.0/bin:/opt/rocm-6.2.0/llvm/bin:/home/users/u0001621/ImageMagick/bin:/home/users/u0001621/git/HIPIFY/bin:/home/users/u0001621/gnuplot/bin:/home/users/u0001621/ImageMagick/bin:/home/users/u0001621/git/HIPIFY/bin:/home/users/u0001621/gnuplot/bin:/home/users/u0001621/git/HIPIFY/bin:/home/users/u0001621/.local/bin:/home/users/u0001621/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin)
-make[1]: icpx: No such file or directory
-make[1]: *** [make_targets:35: main.o] Error 127
-make: *** [Makefile.AMD:2: run] Error 2
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name main.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -O3 -fdeprecated-macro -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -disable-llvm-passes -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/main-4bb40e.bc -x c++ main.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple amdgcn-amd-amdhsa -aux-triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name main.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -target-cpu gfx90a -fcuda-is-device -fcuda-allow-variadic-functions -target-cpu gfx90a -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers -include __clang_openmp_device_functions.h -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -fdeprecated-macro -ferror-limit 19 -fvisibility=protected -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -fopenmp-is-target-device -fopenmp-host-ir-file-path /tmp/main-4bb40e.bc -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/main-gfx90a-f8d841.bc -x c++ main.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" -o /tmp/main-34f78c.out --image=file=/tmp/main-gfx90a-f8d841.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name main.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -O3 -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -fembed-offload-object=/tmp/main-34f78c.out -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o main.o -x ir /tmp/main-4bb40e.bc
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+warning: <unknown>:0:0: loop not vectorized: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+8 warnings generated.
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name BoxPartition.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -O3 -fdeprecated-macro -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -disable-llvm-passes -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/BoxPartition-208a00.bc -x c++ ../utils/BoxPartition.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple amdgcn-amd-amdhsa -aux-triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name BoxPartition.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -target-cpu gfx90a -fcuda-is-device -fcuda-allow-variadic-functions -target-cpu gfx90a -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers -include __clang_openmp_device_functions.h -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -fdeprecated-macro -ferror-limit 19 -fvisibility=protected -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -fopenmp-is-target-device -fopenmp-host-ir-file-path /tmp/BoxPartition-208a00.bc -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/BoxPartition-gfx90a-3e8374.bc -x c++ ../utils/BoxPartition.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" -o /tmp/BoxPartition-c10374.out --image=file=/tmp/BoxPartition-gfx90a-3e8374.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name BoxPartition.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -O3 -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -fembed-offload-object=/tmp/BoxPartition-c10374.out -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o BoxPartition.o -x ir /tmp/BoxPartition-208a00.bc
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name YAML_Doc.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -O3 -fdeprecated-macro -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -disable-llvm-passes -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/YAML_Doc-0aa526.bc -x c++ YAML_Doc.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple amdgcn-amd-amdhsa -aux-triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name YAML_Doc.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -target-cpu gfx90a -fcuda-is-device -fcuda-allow-variadic-functions -target-cpu gfx90a -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers -include __clang_openmp_device_functions.h -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -fdeprecated-macro -ferror-limit 19 -fvisibility=protected -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -fopenmp-is-target-device -fopenmp-host-ir-file-path /tmp/YAML_Doc-0aa526.bc -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/YAML_Doc-gfx90a-541df1.bc -x c++ YAML_Doc.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" -o /tmp/YAML_Doc-087f55.out --image=file=/tmp/YAML_Doc-gfx90a-541df1.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name YAML_Doc.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -O3 -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -fembed-offload-object=/tmp/YAML_Doc-087f55.out -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o YAML_Doc.o -x ir /tmp/YAML_Doc-0aa526.bc
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name YAML_Element.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -O3 -fdeprecated-macro -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -disable-llvm-passes -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/YAML_Element-3d0136.bc -x c++ YAML_Element.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple amdgcn-amd-amdhsa -aux-triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name YAML_Element.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -target-cpu gfx90a -fcuda-is-device -fcuda-allow-variadic-functions -target-cpu gfx90a -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers -include __clang_openmp_device_functions.h -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -fdeprecated-macro -ferror-limit 19 -fvisibility=protected -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -fopenmp-is-target-device -fopenmp-host-ir-file-path /tmp/YAML_Element-3d0136.bc -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/YAML_Element-gfx90a-028fd5.bc -x c++ YAML_Element.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" -o /tmp/YAML_Element-8a8495.out --image=file=/tmp/YAML_Element-gfx90a-028fd5.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name YAML_Element.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -O3 -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -fembed-offload-object=/tmp/YAML_Element-8a8495.out -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o YAML_Element.o -x ir /tmp/YAML_Element-3d0136.bc
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name param_utils.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -O3 -fdeprecated-macro -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -disable-llvm-passes -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/param_utils-cb7152.bc -x c++ ../utils/param_utils.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple amdgcn-amd-amdhsa -aux-triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name param_utils.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -target-cpu gfx90a -fcuda-is-device -fcuda-allow-variadic-functions -target-cpu gfx90a -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers -include __clang_openmp_device_functions.h -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -fdeprecated-macro -ferror-limit 19 -fvisibility=protected -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -fopenmp-is-target-device -fopenmp-host-ir-file-path /tmp/param_utils-cb7152.bc -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/param_utils-gfx90a-7e17cb.bc -x c++ ../utils/param_utils.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" -o /tmp/param_utils-e2be1c.out --image=file=/tmp/param_utils-gfx90a-7e17cb.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name param_utils.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -O3 -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -fembed-offload-object=/tmp/param_utils-e2be1c.out -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o param_utils.o -x ir /tmp/param_utils-cb7152.bc
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name utils.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -O3 -fdeprecated-macro -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -disable-llvm-passes -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/utils-dfa021.bc -x c++ ../utils/utils.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple amdgcn-amd-amdhsa -aux-triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name utils.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -target-cpu gfx90a -fcuda-is-device -fcuda-allow-variadic-functions -target-cpu gfx90a -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers -include __clang_openmp_device_functions.h -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -fdeprecated-macro -ferror-limit 19 -fvisibility=protected -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -fopenmp-is-target-device -fopenmp-host-ir-file-path /tmp/utils-dfa021.bc -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/utils-gfx90a-6d364f.bc -x c++ ../utils/utils.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" -o /tmp/utils-94d6b4.out --image=file=/tmp/utils-gfx90a-6d364f.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name utils.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -O3 -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -fembed-offload-object=/tmp/utils-94d6b4.out -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o utils.o -x ir /tmp/utils-dfa021.bc
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name mytimer.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -O3 -fdeprecated-macro -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -disable-llvm-passes -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/mytimer-1c4968.bc -x c++ ../utils/mytimer.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple amdgcn-amd-amdhsa -aux-triple x86_64-pc-linux-gnu -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name mytimer.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -target-cpu gfx90a -fcuda-is-device -fcuda-allow-variadic-functions -target-cpu gfx90a -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers -include __clang_openmp_device_functions.h -I /opt/rocm-6.2.0/lib/llvm/bin/../include -I . -I ../utils -I ../fem -D MINIFE_SCALAR=double -D MINIFE_LOCAL_ORDINAL=int -D MINIFE_GLOBAL_ORDINAL=int -D MINIFE_RESTRICT=__restrict__ -D MINIFE_CSR_MATRIX -D MINIFE_INFO=1 -D MINIFE_KERNELS=0 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers -internal-isystem /opt/rocm-6.2.0/lib/llvm/bin/../include -internal-isystem /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -fdeprecated-macro -ferror-limit 19 -fvisibility=protected -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -fopenmp-is-target-device -fopenmp-host-ir-file-path /tmp/mytimer-1c4968.bc -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /tmp/mytimer-gfx90a-03d196.bc -x c++ ../utils/mytimer.cpp
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/opt/rocm-6.2.0/lib/llvm/bin/../../include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/bin/../include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ ../utils
+ ../fem
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/llvm_libc_wrappers
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/openmp_wrappers
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+ /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+ /opt/rocm-6.2.0/lib/llvm/bin/../include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+ /opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/cuda_wrappers
+End of search list.
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" -o /tmp/mytimer-35e0a9.out --image=file=/tmp/mytimer-gfx90a-03d196.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp
+ "/opt/rocm-6.2.0/lib/llvm/bin/clang-18" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name mytimer.cpp -mrelocation-model static -mframe-pointer=none -fmath-errno -ffp-contract=fast -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -v -fcoverage-compilation-dir=/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src -resource-dir /opt/rocm-6.2.0/lib/llvm/lib/clang/18 -O3 -ferror-limit 19 -fopenmp -fno-openmp-target-fast -fno-openmp-target-ignore-env-vars -fopenmp-target-big-jump-loop -fopenmp-target-no-loop -fopenmp-target-xteam-reduction -fno-openmp-target-fast-reduction -fopenmp-target-new-runtime -fno-openmp-assume-no-thread-state -fno-openmp-assume-no-nested-parallelism --offload-new-driver -fgnuc-version=4.2.1 -vectorize-loops -vectorize-slp -fembed-offload-object=/tmp/mytimer-35e0a9.out -fopenmp-targets=amdgcn-amd-amdhsa -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o mytimer.o -x ir /tmp/mytimer-1c4968.bc
+clang -cc1 version 18.0.0git based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm-6.2.0/llvm/bin
+Configuration file: /opt/rocm-6.2.0/lib/llvm/bin/clang++.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Selected GCC installation: /usr/lib/gcc/x86_64-redhat-linux/11
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Selected multilib: .;@m64
+Found HIP installation: /opt/rocm-6.2.0, version 6.2.41133
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" main.o --image=file=/tmp/main-openmp-amdgcn-amd-amdhsa-unpackaged-5a2adb.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" BoxPartition.o --image=file=/tmp/BoxPartition-openmp-amdgcn-amd-amdhsa-unpackaged-b16b1f.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" YAML_Doc.o --image=file=/tmp/YAML_Doc-openmp-amdgcn-amd-amdhsa-unpackaged-72fb6e.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" YAML_Element.o --image=file=/tmp/YAML_Element-openmp-amdgcn-amd-amdhsa-unpackaged-0d948c.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" param_utils.o --image=file=/tmp/param_utils-openmp-amdgcn-amd-amdhsa-unpackaged-487a33.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" utils.o --image=file=/tmp/utils-openmp-amdgcn-amd-amdhsa-unpackaged-a8dc2a.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" mytimer.o --image=file=/tmp/mytimer-openmp-amdgcn-amd-amdhsa-unpackaged-7ebd9c.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-build-select-link" /tmp/main-openmp-amdgcn-amd-amdhsa-unpackaged-5a2adb.bc /tmp/BoxPartition-openmp-amdgcn-amd-amdhsa-unpackaged-b16b1f.bc /tmp/YAML_Doc-openmp-amdgcn-amd-amdhsa-unpackaged-72fb6e.bc /tmp/YAML_Element-openmp-amdgcn-amd-amdhsa-unpackaged-0d948c.bc /tmp/param_utils-openmp-amdgcn-amd-amdhsa-unpackaged-487a33.bc /tmp/utils-openmp-amdgcn-amd-amdhsa-unpackaged-a8dc2a.bc /tmp/mytimer-openmp-amdgcn-amd-amdhsa-unpackaged-7ebd9c.bc -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-prelinked-c0ebb4.bc
+ "/opt/rocm-6.2.0/llvm/bin/llvm-link" /tmp/mytimer-openmp-amdgcn-amd-amdhsa-prelinked-c0ebb4.bc --internalize --only-needed /opt/rocm-6.2.0/lib/llvm/bin/../lib/libomptarget-amdgpu-gfx90a.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/ocml.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_daz_opt_off.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_unsafe_math_off.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_finite_only_off.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_correctly_rounded_sqrt_on.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_wavefrontsize64_on.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_isa_version_90a.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_abi_version_500.bc -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-linked-9c220a.bc
+ "/opt/rocm-6.2.0/llvm/bin/opt" --amdhsa-code-object-version=5 -O3 -mtriple=amdgcn-amd-amdhsa -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-optimized-e435f6.bc /tmp/mytimer-openmp-amdgcn-amd-amdhsa-linked-9c220a.bc -mcpu=gfx90a
+ "/opt/rocm-6.2.0/llvm/bin/llc" --amdhsa-code-object-version=5 -O3 -mtriple=amdgcn-amd-amdhsa -filetype=obj -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-89e550.o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-optimized-e435f6.bc -mcpu=gfx90a
+ "/opt/rocm-6.2.0/llvm/bin/lld" -flavor gnu --no-undefined -shared /tmp/mytimer-openmp-amdgcn-amd-amdhsa-89e550.o -plugin-opt=mcpu=gfx90a -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-fcea97.out
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" main.o --image=file=/tmp/main-openmp-amdgcn-amd-amdhsa-unpackaged-657503.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" BoxPartition.o --image=file=/tmp/BoxPartition-openmp-amdgcn-amd-amdhsa-unpackaged-99fbcf.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" YAML_Doc.o --image=file=/tmp/YAML_Doc-openmp-amdgcn-amd-amdhsa-unpackaged-6a3902.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" YAML_Element.o --image=file=/tmp/YAML_Element-openmp-amdgcn-amd-amdhsa-unpackaged-f8bde0.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" param_utils.o --image=file=/tmp/param_utils-openmp-amdgcn-amd-amdhsa-unpackaged-ddcc85.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" utils.o --image=file=/tmp/utils-openmp-amdgcn-amd-amdhsa-unpackaged-3eab3a.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-packager" mytimer.o --image=file=/tmp/mytimer-openmp-amdgcn-amd-amdhsa-unpackaged-ed4d80.bc,triple=amdgcn-amd-amdhsa,arch=gfx90a,kind=openmp --allow-missing-packages
+ "/opt/rocm-6.2.0/llvm/bin/clang-build-select-link" /tmp/main-openmp-amdgcn-amd-amdhsa-unpackaged-657503.bc /tmp/BoxPartition-openmp-amdgcn-amd-amdhsa-unpackaged-99fbcf.bc /tmp/YAML_Doc-openmp-amdgcn-amd-amdhsa-unpackaged-6a3902.bc /tmp/YAML_Element-openmp-amdgcn-amd-amdhsa-unpackaged-f8bde0.bc /tmp/param_utils-openmp-amdgcn-amd-amdhsa-unpackaged-ddcc85.bc /tmp/utils-openmp-amdgcn-amd-amdhsa-unpackaged-3eab3a.bc /tmp/mytimer-openmp-amdgcn-amd-amdhsa-unpackaged-ed4d80.bc -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-prelinked-ceaf7a.bc
+ "/opt/rocm-6.2.0/llvm/bin/llvm-link" /tmp/mytimer-openmp-amdgcn-amd-amdhsa-prelinked-ceaf7a.bc --internalize --only-needed /opt/rocm-6.2.0/lib/llvm/bin/../lib/libomptarget-amdgpu-gfx90a.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/ocml.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_daz_opt_off.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_unsafe_math_off.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_finite_only_off.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_correctly_rounded_sqrt_on.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_wavefrontsize64_on.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_isa_version_90a.bc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/amdgcn/bitcode/oclc_abi_version_500.bc -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-linked-263d31.bc
+ "/opt/rocm-6.2.0/llvm/bin/opt" --amdhsa-code-object-version=5 -O3 -mtriple=amdgcn-amd-amdhsa -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-optimized-e1ead6.bc /tmp/mytimer-openmp-amdgcn-amd-amdhsa-linked-263d31.bc -mcpu=gfx90a
+ "/opt/rocm-6.2.0/llvm/bin/llc" --amdhsa-code-object-version=5 -O3 -mtriple=amdgcn-amd-amdhsa -filetype=obj -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-005ab8.o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-optimized-e1ead6.bc -mcpu=gfx90a
+ "/opt/rocm-6.2.0/llvm/bin/lld" -flavor gnu --no-undefined -shared /tmp/mytimer-openmp-amdgcn-amd-amdhsa-005ab8.o -plugin-opt=mcpu=gfx90a -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-59596e.out
+ "/opt/rocm-6.2.0/llvm/bin/clang-offload-wrapper" -target x86_64-pc-linux-gnu -o /tmp/mytimer-wrapped-92c324.bc --offload-arch=gfx90a /tmp/mytimer-openmp-amdgcn-amd-amdhsa-fcea97.out --offload-arch=gfx90a /tmp/mytimer-openmp-amdgcn-amd-amdhsa-59596e.out
+ "/opt/rocm-6.2.0/llvm/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-hbe-e4a11e.o -x ir /tmp/mytimer-wrapped-92c324.bc
+ "/opt/rocm-6.2.0/llvm/bin/ld.lld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o miniFE.x /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/linux/clang_rt.crtbegin-x86_64.o -L/usr/local//lib64 -L/opt/rocm-6.2.0/lib/llvm/bin/../lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -L/usr/local//lib64 --enable-new-dtags main.o BoxPartition.o YAML_Doc.o YAML_Element.o param_utils.o utils.o mytimer.o /tmp/mytimer-openmp-amdgcn-amd-amdhsa-hbe-e4a11e.o -lstdc++ -lm -lomp -lomptarget -lomptarget.devicertl -rpath /opt/rocm-6.2.0/lib/llvm/bin/../lib -L/opt/rocm-6.2.0/lib/llvm/lib /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/linux/libclang_rt.builtins-x86_64.a -lgcc_s -lpthread -lc /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/linux/libclang_rt.builtins-x86_64.a -lgcc_s /opt/rocm-6.2.0/lib/llvm/lib/clang/18/lib/linux/clang_rt.crtend-x86_64.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o

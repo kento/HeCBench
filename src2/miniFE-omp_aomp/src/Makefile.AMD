@@ -2,6 +2,8 @@
 # This file compiles for OpenMP and MPI hybrid operations using the GNU
 # compile chain.
 
+ARCH  = gfx90a
+
 MINIFE_TYPES =  \
         -DMINIFE_SCALAR=double   \
         -DMINIFE_LOCAL_ORDINAL=int      \
