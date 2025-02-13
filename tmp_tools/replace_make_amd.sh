@@ -15,7 +15,7 @@ do
 
     dir=$n-omp_aomp
     pushd $dir
-    cat Makefile.AMD | sed -e 's/gfx906/gfx90a/g'  > uuu2uuu
+    cat Makefile.AMD | sed -e 's/gfx906/gfx90a/g' | sed -e 's/gfx907/gfx90a/g' | sed -e 's/gfx908/gfx90a/g' > uuu2uuu
     mv uuu2uuu Makefile.AMD
     popd
 done
