@@ -1,0 +1,5 @@
+Average kernel execution time 0.000605 (s)
+Comparing against Host/C++ computation...
+Relative L2 norm: inf
+
+FAIL
