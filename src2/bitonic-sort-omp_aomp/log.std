@@ -1,6 +1,6 @@
 
 Array size: 33554432, seed: 2
 Bitonic sort (parallel)..
-Total kernel execution time: 86.474838 (ms)
+Total kernel execution time: 1484.605103 (ms)
 Bitonic sort (serial)..
 PASS
