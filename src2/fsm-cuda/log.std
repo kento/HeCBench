@@ -5,8 +5,8 @@
 1024	#blocks
 256	#threads
 1	#cutoff
-0.119993	#runtime [s]
-286.348316	#throughput [Gtr/s]
+0.124956	#runtime [s]
+274.974033	#throughput [Gtr/s]
 32676	#sudcnt hits
 32826	#GAfsm hits
 49.860%	#sudcnt hits

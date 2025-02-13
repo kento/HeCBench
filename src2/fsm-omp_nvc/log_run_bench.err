@@ -1,0 +1,9 @@
+LCG_random(unsigned int*):
+           2, Generating implicit omp declare target routine
+              Generating NVIDIA GPU code
+LCG_random_init(unsigned int*):
+          10, Generating implicit omp declare target routine
+              Generating NVIDIA GPU code
+NVC++-F-1196-OpenMP - omp critical is not supported in GPU region (main.cpp: 91)
+NVC++/arm Linux 25.1-0: compilation aborted
+make: *** [Makefile.NVD:57: main.o] Error 2
