@@ -54,6 +54,7 @@ clean:
 
 process: fpc.c
 	 gcc -O3 fpc.c -o fpc
+	 ../mpc-cuda/prepare_data.sh
 	 ./fpc < ../mpc-cuda/msg_sp.trace.fpc > msg_sp.trace.out
 
 include ../include/mpc-AMD
@@ -61,7 +62,7 @@ include ../include/mpc-AMD
 run: process $(program)
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: $(program)
+run_mem: process $(program)
 	../scripts/rocm-smi.sh > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill rocm-smi.sh

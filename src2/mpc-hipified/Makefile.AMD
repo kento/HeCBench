@@ -55,6 +55,7 @@ clean:
 
 process: fpc.c
 	gcc -O3 fpc.c -o fpc
+	../mpc-cuda/prepare_data.sh    
 	./fpc < ../mpc-cuda/msg_sp.trace.fpc > msg_sp.trace.out
 
 include ../include/mpc-AMD
