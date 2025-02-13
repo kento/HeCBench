@@ -1,3 +1,11 @@
 Creating directories
+Compiling: src/host_data_io.cpp -> build/host_data_io.o
+g++  -I include/ -I /usr/local/include -MP -MMD -c src/host_data_io.cpp -o build/host_data_io.o
+Compiling: src/host_kernel.cpp -> build/host_kernel.o
+g++  -I include/ -I /usr/local/include -MP -MMD -c src/host_kernel.cpp -o build/host_kernel.o
+Compiling: src/main.cpp -> build/main.o
+g++  -I include/ -I /usr/local/include -MP -MMD -c src/main.cpp -o build/main.o
+Compiling: src/memory_scheduler.cpp -> build/memory_scheduler.o
+g++  -I include/ -I /usr/local/include -MP -MMD -c src/memory_scheduler.cpp -o build/memory_scheduler.o
 Compiling: device/device_kernel.cu -> build/hip/device_kernel.o
 hipcc   -I include/ -I /usr/local/include -c device/device_kernel.cu -o build/hip/device_kernel.o

@@ -1,5 +1,5 @@
 Creating directories
-make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP7/minimap2-hip'
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP22/minimap2-hip'
 Compiling: device/device_kernel.cu -> build/hip/device_kernel.o
 hipcc   -std=c++17 -g -O3 -I/opt/rocm/include -I include/ -I /usr/local/include -c device/device_kernel.cu -o build/hip/device_kernel.o
 In file included from device/device_kernel.cu:1:
@@ -29,5 +29,5 @@ In file included from /opt/rocm/include/hip/amd_detail/amd_hip_runtime.h:389:
 2 errors generated when compiling for gfx90a.
 failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++17 -g -O3 -I/opt/rocm/include -I include/ -I /usr/local/include -c -x hip device/device_kernel.cu -o "build/hip/device_kernel.o"
 make[1]: *** [Makefile:85: build/hip/device_kernel.o] Error 1
-make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP7/minimap2-hip'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP22/minimap2-hip'
 make: *** [Makefile.AMD:46: release] Error 2

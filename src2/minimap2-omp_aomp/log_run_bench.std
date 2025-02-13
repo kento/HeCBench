@@ -1,5 +1,1 @@
-../scripts/rocm-smi.sh > log.mem &
 bash -c "../minimap2-cuda/prepare_data.sh; time -p ( .//main ../minimap2-sycl/in-1k.txt kernel-out.txt 1>log.std 2>log.err ) 2> log.time"
-pkill rocm-smi.sh
-../scripts/rocm-m.sh
-min max diff memory in [MB] : 10.98 1574.22 1563.24
