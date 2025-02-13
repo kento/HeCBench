@@ -46,7 +46,7 @@ endif
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu ../sad-cuda/bitmap_image.hpp Makefile
+%.o: %.cu ./bitmap_image.hpp Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
