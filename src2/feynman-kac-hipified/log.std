@@ -22,7 +22,7 @@ FEYNMAN_KAC_2D:
 
   X coordinate marked by 255 points
   Y coordinate marked by 128 points
-Average kernel time: 11.471191 (s)
+Average kernel time: 11.471176 (s)
 
   RMS absolute error in solution = 2.271622e-02
 
