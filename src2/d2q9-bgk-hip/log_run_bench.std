@@ -1,0 +1,1 @@
+bash -c "time -p ( ./main Inputs/input_256x256.params Obstacles/obstacles_256x256.dat 1>log.std 2>log.err ) 2> log.time"
