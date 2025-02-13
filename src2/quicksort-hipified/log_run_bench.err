@@ -1,0 +1,46 @@
+In file included from main.cu:100:
+./QuicksortKernels.cuh:98:19: warning: implicit conversion from 'unsigned int' to 'float' changes value from 4294967295 to 4294967296 [-Wimplicit-const-int-float-conversion]
+   98 |         temp[i] = UINT_MAX;
+      |                 ~ ^~~~~~~~
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/limits.h:60:37: note: expanded from macro 'UINT_MAX'
+   60 | #define UINT_MAX  (__INT_MAX__  *2U +1U)
+      |                    ~~~~~~~~~~~~~~~~~^~~
+./QuicksortKernels.cuh:431:7: note: in instantiation of function template specialization 'sort_threshold<float>' requested here
+  431 |       sort_threshold(sn, d+d_offset, start, start + ltsum, temp, localid);
+      |       ^
+main.cu:223:3: note: in instantiation of function template specialization 'lqsort_kernel<float>' requested here
+  223 |   lqsort_kernel<<<dim3(done.size()), dim3(LQSORT_LOCAL_WORKGROUP_SIZE)>>>(db, dnb, doneb);
+      |   ^
+main.cu:316:5: note: in instantiation of function template specialization 'lqsort<float>' requested here
+  316 |     lqsort<T>(db, dnb, done);
+      |     ^
+main.cu:399:5: note: in instantiation of function template specialization 'GPUQSort<float>' requested here
+  399 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cu:467:3: note: in instantiation of function template specialization 'test<float>' requested here
+  467 |   test<float>(arraySize, NUM_ITERATIONS, "float");
+      |   ^
+1 warning generated when compiling for gfx90a.
+In file included from main.cu:100:
+./QuicksortKernels.cuh:98:19: warning: implicit conversion from 'unsigned int' to 'float' changes value from 4294967295 to 4294967296 [-Wimplicit-const-int-float-conversion]
+   98 |         temp[i] = UINT_MAX;
+      |                 ~ ^~~~~~~~
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/limits.h:60:37: note: expanded from macro 'UINT_MAX'
+   60 | #define UINT_MAX  (__INT_MAX__  *2U +1U)
+      |                    ~~~~~~~~~~~~~~~~~^~~
+./QuicksortKernels.cuh:431:7: note: in instantiation of function template specialization 'sort_threshold<float>' requested here
+  431 |       sort_threshold(sn, d+d_offset, start, start + ltsum, temp, localid);
+      |       ^
+main.cu:223:3: note: in instantiation of function template specialization 'lqsort_kernel<float>' requested here
+  223 |   lqsort_kernel<<<dim3(done.size()), dim3(LQSORT_LOCAL_WORKGROUP_SIZE)>>>(db, dnb, doneb);
+      |   ^
+main.cu:316:5: note: in instantiation of function template specialization 'lqsort<float>' requested here
+  316 |     lqsort<T>(db, dnb, done);
+      |     ^
+main.cu:399:5: note: in instantiation of function template specialization 'GPUQSort<float>' requested here
+  399 |     GPUQSort(arraySize, pArray, pArrayCopy);
+      |     ^
+main.cu:467:3: note: in instantiation of function template specialization 'test<float>' requested here
+  467 |   test<float>(arraySize, NUM_ITERATIONS, "float");
+      |   ^
+1 warning generated when compiling for host.
