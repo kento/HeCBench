@@ -1,6 +1,27 @@
-device/device_kernel.cu:1:10: fatal error: 'hip/hip_runtime.h' file not found
-    1 | #include <hip/hip_runtime.h>
-      |          ^~~~~~~~~~~~~~~~~~~
-1 error generated when compiling for gfx90a.
-failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a -O3  -I include/ -I /usr/local/include -c -x hip device/device_kernel.cu -o "build/hip/device_kernel.o"
+In file included from device/device_kernel.cu:1:
+In file included from /opt/rocm/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm/include/hip/amd_detail/amd_hip_runtime.h:389:
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_cuda_complex_builtins.h:194:27: error: use of undeclared identifier 'max'; did you mean 'fmax'?
+  194 |   double __logbw = _LOGBd(_fmaxd(_ABSd(__c), _ABSd(__d)));
+      |                           ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_cuda_complex_builtins.h:45:16: note: expanded from macro '_fmaxd'
+   45 | #define _fmaxd max
+      |                ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_cuda_math_forward_declares.h:73:19: note: 'fmax' declared here
+   73 | __DEVICE__ double fmax(double, double);
+      |                   ^
+In file included from device/device_kernel.cu:1:
+In file included from /opt/rocm/include/hip/hip_runtime.h:62:
+In file included from /opt/rocm/include/hip/amd_detail/amd_hip_runtime.h:389:
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_cuda_complex_builtins.h:227:26: error: use of undeclared identifier 'max'; did you mean 'fmax'?
+  227 |   float __logbw = _LOGBf(_fmaxf(_ABSf(__c), _ABSf(__d)));
+      |                          ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_cuda_complex_builtins.h:46:16: note: expanded from macro '_fmaxf'
+   46 | #define _fmaxf max
+      |                ^
+/opt/rocm-6.2.0/lib/llvm/lib/clang/18/include/__clang_cuda_math_forward_declares.h:74:18: note: 'fmax' declared here
+   74 | __DEVICE__ float fmax(float, float);
+      |                  ^
+2 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a -O3  -I/opt/rocm/include -I include/ -I /usr/local/include -c -x hip device/device_kernel.cu -o "build/hip/device_kernel.o"
 make: *** [Makefile.AMD:87: build/hip/device_kernel.o] Error 1
