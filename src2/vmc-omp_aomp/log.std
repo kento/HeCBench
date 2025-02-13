@@ -1,1 +1,5 @@
-Usage: ./main <number of blocks to sample>
+ <r1>  = 0.843311 +- 0.000016
+ <r2>  = 0.843361 +- 0.000016
+ <r12> = 1.299820 +- 0.000022
+ acceptance ratio=19.3%
+Average execution time of kernels: 0.010632 (s)

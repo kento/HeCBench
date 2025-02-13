@@ -1,3 +1,3 @@
-nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 -c vmc.cpp -o vmc.o
-nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc70 vmc.o -o main 
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 -c vmc.cpp -o vmc.o
+nvc++  -Wall  -O3 -Minfo -mp=gpu -gpu=cc90 vmc.o -o main 
 bash -c "time -p ( ./main 1>log.std 2>log.err ) 2> log.time"
