@@ -1,8 +1,16 @@
-cd src;make -f Makefile run
-make[1]: Entering directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-omp_aomp/src'
+cd src; make -f Makefile.AMD
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src'
 ./get_common_files
-./generate_info_header "icpx" "-v -O3 -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__ -ffp-contract=fast " "miniFE" "MINIFE"
-CXX: unknown
-Compiler version: unknown
-icpx -v -O3 -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__ -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c main.cpp
-make[1]: Leaving directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-omp_aomp/src'
+./generate_info_header "clang++" "-v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast " "miniFE" "MINIFE"
+CXX: /opt/rocm-6.2.0/llvm/bin/clang++
+Compiler version: AMD clang version 18.0.0git (https://github.com/RadeonOpenCompute/llvm-project roc-6.2.0 24292 26466ce804ac523b398608f17388eb6d605a3f09)
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c main.cpp
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/BoxPartition.cpp
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Doc.cpp
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Element.cpp
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/param_utils.cpp
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/utils.cpp
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/mytimer.cpp
+clang++ -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  main.o BoxPartition.o YAML_Doc.o YAML_Element.o param_utils.o utils.o mytimer.o  -o miniFE.x -v -O3 -target x86_64-pc-linux-gnu -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa -Xopenmp-target=amdgcn-amd-amdhsa -march=gfx90a -ffp-contract=fast   
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-omp_aomp/src'
+bash -c "time -p ( ./src/miniFE.x -nx 128 -ny 128 -nz 128 1>./log.std 2>./log.err ) 2> ./log.time"

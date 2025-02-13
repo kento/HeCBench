@@ -2,12 +2,12 @@ MiniFE Mini-App, OpenMP Peer Implementation
 Creating OpenMP Thread Pool...
 Counted: 8 threads.
 Running MiniFE Mini-App...
-      creating/filling mesh...0.017633s, total time: 0.0176349
-generating matrix structure...0.524357s, total time: 0.541992
-         assembling FE data...2.74846s, total time: 3.29045
-      imposing Dirichlet BC...1.30442s, total time: 4.59487
-      imposing Dirichlet BC...1.06914s, total time: 5.66402
-making matrix indices local...0s, total time: 5.66402
+      creating/filling mesh...0.0170259s, total time: 0.0170269
+generating matrix structure...0.525883s, total time: 0.54291
+         assembling FE data...2.75579s, total time: 3.2987
+      imposing Dirichlet BC...1.28612s, total time: 4.58482
+      imposing Dirichlet BC...1.07272s, total time: 5.65754
+making matrix indices local...0s, total time: 5.65754
 Starting CG solver ... 
 Initial Residual = 66.7026
 Iteration = 20   Residual = 0.0308755

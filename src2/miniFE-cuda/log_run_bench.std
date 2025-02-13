@@ -1,16 +1,16 @@
-cd src;make -f Makefile run
-make[1]: Entering directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-cuda/src'
+cd src; make -f Makefile
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-cuda/src'
 ./get_common_files
-./generate_info_header "nvcc" "-I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX " "miniFE" "MINIFE"
-CXX: /opt/nvidia/hpc_sdk/Linux_aarch64/25.1/compilers/bin/nvcc
+./generate_info_header "nvcc" "-I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX " "miniFE" "MINIFE"
+CXX: /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/nvcc
 Compiler version: nvcc: NVIDIA (R) Cuda compiler driver
-nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c main.cpp
-nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/BoxPartition.cpp
-nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Doc.cpp
-nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Element.cpp
-nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/param_utils.cpp
-nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/utils.cpp
-nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_60 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/mytimer.cpp
+nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c main.cpp
+nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/BoxPartition.cpp
+nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Doc.cpp
+nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Element.cpp
+nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/param_utils.cpp
+nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/utils.cpp
+nvcc -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -O3 -x cu -arch=sm_90 -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/mytimer.cpp
 nvcc main.o BoxPartition.o YAML_Doc.o YAML_Element.o param_utils.o utils.o mytimer.o  -o miniFE.x -O3  
-bash -c "time -p ( ./miniFE.x -nx 128 -ny 128 -nz 128 1>../log.std 2>../log.err ) 2> ../log.time"
-make[1]: Leaving directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-cuda/src'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-cuda/src'
+bash -c "time -p ( ./src/miniFE.x -nx 128 -ny 128 -nz 128 1>./log.std 2>./log.err ) 2> ./log.time"

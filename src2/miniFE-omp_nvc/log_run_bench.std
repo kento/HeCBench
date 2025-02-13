@@ -1,8 +1,16 @@
-cd src;make -f Makefile run
-make[1]: Entering directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-omp_nvc/src'
+cd src; make -f Makefile.NVD
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-omp_nvc/src'
 ./get_common_files
-./generate_info_header "nvcc" "" "miniFE" "MINIFE"
-CXX: /opt/nvidia/hpc_sdk/Linux_aarch64/25.1/compilers/bin/nvcc
-Compiler version: nvcc: NVIDIA (R) Cuda compiler driver
-nvcc  -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c main.cpp
-make[1]: Leaving directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/miniFE-omp_nvc/src'
+./generate_info_header "nvc++" "-v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath" "miniFE" "MINIFE"
+CXX: /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/nvc++
+Compiler version: nvc++ 24.9-0 linuxarm64 target on aarch64 Linux -tp neoverse-v2 
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c main.cpp
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/BoxPartition.cpp
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Doc.cpp
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c YAML_Element.cpp
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/param_utils.cpp
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/utils.cpp
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c ../utils/mytimer.cpp
+nvc++ -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX  main.o BoxPartition.o YAML_Doc.o YAML_Element.o param_utils.o utils.o mytimer.o  -o miniFE.x -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath  
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP21/miniFE-omp_nvc/src'
+bash -c "time -p ( ./src/miniFE.x -nx 128 -ny 128 -nz 128 1>./log.std 2>./log.err ) 2> ./log.time"

@@ -1,4 +1,20 @@
-run:
-	cd src;make -f Makefile run
-run_mem:
-	cd src;make -f Makefile run_mem
+LAUNCHER = bash -c
+
+program = main
+
+$(program):
+	cd src; make -f Makefile
+
+clean:
+	cd src; make -f Makefile clean
+
+include ../include/miniFE-AMD
+
+run: $(program)
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: $(program)
+	../scripts/rocm-smi.sh > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill rocm-smi.sh
+	../scripts/rocm-m.sh

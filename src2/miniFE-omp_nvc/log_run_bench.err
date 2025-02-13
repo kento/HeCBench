@@ -1,6 +1,1296 @@
-main.cpp: In function 'int main(int, char**)':
-main.cpp:108:28: error: 'omp_get_max_threads' was not declared in this scope
-  108 |   const int thread_count = omp_get_max_threads();
-      |                            ^~~~~~~~~~~~~~~~~~~
-make[1]: *** [make_targets:35: main.o] Error 1
-make: *** [Makefile.NVD:2: run] Error 2
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvcpfe -- -D__GNUC__=11 -D__GNUC_MINOR__=4 -D__GNUC_PATCHLEVEL__=1 -D__STDC_HOSTED__ -I- -I. -I../utils -I../fem -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include-stdexec --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11 --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/aarch64-redhat-linux --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/backward --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/include --sys_include /usr/local/include --sys_include /usr/include -D__PGLLVM__ -D__NVCOMPILER_LLVM__ -D__extension__= -D__linux__ -D__linux -D__ELF__ -D__LITTLE_ENDIAN__ -Dlinux -Dunix -D__arm64__ -D__aarch64__ -D__LP64__ -D__ARM_ARCH_8__ -D__AARCH64EL__ -D__ARM_ARCH_PROFILE='A' -D__ARM_64BIT_STATE -D__ARM_PCS_AAPCS64 -D__ARM_ARCH_ISA_A64 -D__ARM_FEATURE_CLZ -D__ARM_FEATURE_FMA -D__ARM_FEATURE_LDREX=0xF -D__ARM_FEATURE_DIV -D__ARM_FEATURE_NUMERIC_MAXMIN -D__ARM_FEATURE_IDIV -D__ARM_FEATURE_DIRECTED_ROUNDING -D__ARM_ALIGN_MAX_STACK_PWR=4 -D__ARM_STATE_ZA -D__ARM_STATE_ZT0 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FP=0xC -D__ARM_SIZEOF_WCHAR_T=4 -D__ARM_SIZEOF_MINIMAL_ENUM=4 -D__ARM_NEON -D__ARM_NEON_FP=0xC -D__FP_FAST_FMA -D__FP_FAST_FMAF -D__AARCH64_CMODEL_SMALL__ -D__ARM_ARCH=9 -D__ARM_FEATURE_QRDMX -D__ARM_FEATURE_JCVT -D__ARM_FEATURE_FRINT -D__ARM_FEATURE_BTI -D__ARM_FEATURE_ATOMICS -D__ARM_FEATURE_COMPLEX -D__ARM_FEATURE_SVE -D__ARM_FEATURE_SVE_VECTOR_OPERATORS=2 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FEATURE_SVE_BITS=128 -D__ARM_FEATURE_CRC32 -D__ARM_FEATURE_RCPC=1 -D__ARM_FEATURE_CRYPTO -D__ARM_FEATURE_AES -D__ARM_FEATURE_SHA2 -D__ARM_FEATURE_SHA3 -D__ARM_FEATURE_SHA512 -D__ARM_FEATURE_SM3 -D__ARM_FEATURE_SM4 -D__ARM_FEATURE_UNALIGNED -D__ARM_FEATURE_DOTPROD -D__ARM_FEATURE_MATMUL_INT8 -D__ARM_FEATURE_SVE_MATMUL_INT8 -D__arm64__ -D__aarch64__ -D__PGI -D__NVCOMPILER -D__NVCOMPILER_OPENMP_GPU -D__NVCOMPILER_OPENMP_MULTICORE -D_OPENMP=202011 -DCUDA_VERSION=12060 -DPGI_TESLA_TARGET -D_PGI_HX -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 --preinclude _cplus_preinclude.h --preinclude_macros _cplus_macros.h --float128 --gnu_version=110401 -D__pgnu_vsn=110401 --target_gpu --mp -D_OPENMP=202011 -D_NVHPC_RDC -q -o /tmp/nvc++ZtxDmzHa8buFm.il main.cpp -- main.cpp -opt 3 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 28 0x40000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -vect 56 -y 34 16 -x 37 0x480000 -x 34 0x8 -y 19 8 -y 35 0 -x 42 0x30 -x 42 0x20000 -x 39 0x80 -x 34 0x400000 -x 149 1 -x 150 1 -tp neoverse-v2 -x 120 0x1000 -x 119 0x8000000 -astype 0 -x 121 1 -fn main.cpp -il /tmp/nvc++ZtxDmzHa8buFm.il -x 117 0x200 -x 123 0x80000000 -x 123 4 -x 122 0x10 -x 70 0x40000000 -x 183 4 -x 121 0x800 -x 122 0x1 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -x 249 170 -x 8 0x40000000 -x 164 0x800000 -x 68 0x1 -x 56 0x10 -x 26 0x10 -x 26 1 -x 49 0x40000000 -x 56 0x4000 -x 71 0x2000 -x 71 0x4000 -x 34 0x40000000 -x 77 0x04 -x 206 0x02 -x 120 0x1000000 -x 73 0x04 -x 231 0x800 -accel tesla -x 197 0 -x 175 0 -x 203 0 -x 204 0 -x 227 0xFFFF -x 180 0x4000400 -x 121 0xc00 -x 186 0x80 -x 163 0x1 -x 186 0x80000 -cudaver 12060 -x 194 0x40000 -x 176 0x100 -cudacap 90 -x 163 0x200 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 176 0x100 -cudacap 90 -x 189 0x8000 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 187 0x40000 -x 187 0x8000000 -x 60 512 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 129 2 -x 129 4 -y 129 0x400 -y 129 0x8000 -quad -x 119 0x10000000 -x 56 0x2 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 0 0x1000000 -x 2 0x100000 -x 0 0x2000000 -x 161 0x6CFF6 -x 162 0x6CFF6 -mp -x 69 0x200 -x 69 0x400 -x 69 2 -x 183 0x2000000 -gnuvsn 110401 -x 123 0x400 -x 180 0x4000000 -x 194 0x20000000 -x 251 0x2 -x 233 0x1 -x 205 2 -x 233 0x100 -x 233 0x400 -cmdline '+nvc++ main.cpp -v -O3 -Mvect=simd -Mflushz -Mcache_align -Mfactorize -Mno-signed-zeros -Minline_cpu_f -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c' -asm /tmp/nvc++JtxDmPqQFLbaV.ll
+"./perform_element_loop.hpp", line 75: warning: variable "t_gn" was declared but never referenced [declared_but_not_referenced]
+    timer_type t_gn = 0, t_ce = 0, t_si = 0;
+               ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of "./driver.hpp"
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of "main.cpp"
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"./perform_element_loop.hpp", line 75: warning: variable "t_ce" was declared but never referenced [declared_but_not_referenced]
+    timer_type t_gn = 0, t_ce = 0, t_si = 0;
+                         ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of "./driver.hpp"
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of "main.cpp"
+
+"./perform_element_loop.hpp", line 75: warning: variable "t_si" was declared but never referenced [declared_but_not_referenced]
+    timer_type t_gn = 0, t_ce = 0, t_si = 0;
+                                   ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of "./driver.hpp"
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of "main.cpp"
+
+"./perform_element_loop.hpp", line 76: warning: variable "t0" was declared but never referenced [declared_but_not_referenced]
+    timer_type t0 = 0;
+               ^
+          detected during:
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of "./driver.hpp"
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of "main.cpp"
+
+"./SparseMatrix_functions.hpp", line 200: warning: variable "flag" was declared but never referenced [declared_but_not_referenced]
+    bool flag = false;
+         ^
+          detected during:
+            instantiation of "void miniFE::sum_into_global_linear_system(miniFE::ElemData<GlobalOrdinal, Scalar> &, MatrixType &, VectorType &) [with GlobalOrdinal=int, Scalar=double, MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 87 of "./perform_element_loop.hpp"
+            instantiation of "void miniFE::perform_element_loop(const miniFE::simple_mesh_description<GlobalOrdinal> &, const Box &, MatrixType &, VectorType &, miniFE::Parameters &) [with GlobalOrdinal=int, MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 72 of "./assemble_FE_data.hpp"
+            instantiation of "void miniFE::assemble_FE_data(const miniFE::simple_mesh_description<MatrixType::GlobalOrdinalType> &, MatrixType &, VectorType &, miniFE::Parameters &) [with MatrixType=miniFE::CSRMatrix<double, int, int>, VectorType=miniFE::Vector<double, int, int>]" at line 195 of "./driver.hpp"
+            instantiation of "int miniFE::driver<Scalar,LocalOrdinal,GlobalOrdinal>(const Box &, Box &, miniFE::Parameters &, YAML_Doc &) [with Scalar=double, LocalOrdinal=int, GlobalOrdinal=int]" at line 178 of "main.cpp"
+
+void sort_if_needed<int>(int*, int):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+               41, include "MatrixInitOp.hpp"
+                    45, Loop not vectorized/parallelized: potential early exits
+main:
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+    110, #omp parallel
+        110, Generating reduction(+:value)
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+add_params_to_yaml(YAML_Doc&, miniFE::Parameters&):
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+add_configuration_to_yaml(YAML_Doc&, int, int):
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+add_timestring_to_yaml(YAML_Doc&):
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+MatrixInitOp<miniFE::CSRMatrix<double, int, int>>::MatrixInitOp(std::vector<int, std::allocator<int>> const&, std::vector<int, std::allocator<int>> const&, std::vector<int, std::allocator<int>> const&, int, int, int, int, miniFE::simple_mesh_description<int> const&, miniFE::CSRMatrix<double, int, int>&):
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+MatrixInitOp<miniFE::CSRMatrix<double, int, int>>::operator()(int):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+               41, include "MatrixInitOp.hpp"
+                   133, Loop not vectorized/parallelized: potential early exits
+          45, Loop not vectorized/parallelized: potential early exits
+std::char_traits<char>::length(char const*):
+         171, Loop not vectorized/parallelized: not countable
+NVC++-I-0162-Not equal test of loop control variable .0000.TRP replaced with < or > test. (main.cpp: 1149)
+int* std::__uninitialized_fill_n<true>::__uninit_fill_n<int*, unsigned long, int>(int*, unsigned long, int const&):
+        1149, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0001.TRP replaced with < or > test. (main.cpp: 1149)
+double* std::__uninitialized_fill_n<true>::__uninit_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&):
+        1149, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0002.TRP replaced with < or > test. (main.cpp: 1149)
+int* std::__uninitialized_default_n_1<true>::__uninit_default_n<int*, unsigned long>(int*, unsigned long):
+        1149, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0003.TRP replaced with < or > test. (main.cpp: 1149)
+double* std::__uninitialized_default_n_1<true>::__uninit_default_n<double*, unsigned long>(double*, unsigned long):
+        1149, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+NVC++-I-0162-Not equal test of loop control variable .0004.TRP replaced with < or > test. (main.cpp: 1149)
+Box* std::__uninitialized_default_n_1<true>::__uninit_default_n<Box*, unsigned long>(Box*, unsigned long):
+        1149, Loop not vectorized/parallelized: contains structure move
+              Loop unrolled 4 times
+NVC++-I-0162-Not equal test of loop control variable .0005.TRP replaced with < or > test. (main.cpp: 410)
+std::vector<int, std::allocator<int>>::_M_fill_initialize(unsigned long, int const&):
+         410, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0006.TRP replaced with < or > test. (main.cpp: 704)
+std::vector<int, std::allocator<int>>::_M_default_initialize(unsigned long):
+         704, Recognized memory set idiom
+std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_get_insert_unique_pos(int const&):
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+                  2068, Loop not vectorized/parallelized: not countable
+std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_erase(std::_Rb_tree_node<int>*):
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+                  1887, Loop not vectorized/parallelized: potential early exits
+std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_lower_bound(std::_Rb_tree_node<int> const*, std::_Rb_tree_node_base const*, int const&) const:
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+                  1920, Loop not vectorized/parallelized: not countable
+std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::~_Rb_tree():
+        1887, Loop not vectorized/parallelized: potential early exits
+std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::find(int const&) const:
+        1920, Loop not vectorized/parallelized: not countable
+std::pair<std::_Rb_tree_iterator<int>, bool> std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_insert_unique<int>(int&&):
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+        2068, Loop not vectorized/parallelized: not countable
+std::pair<std::_Rb_tree_iterator<int>, bool> std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_insert_unique<int const&>(int const&):
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+        2068, Loop not vectorized/parallelized: not countable
+std::set<int, std::less<int>, std::allocator<int>>::insert(int const&):
+     53, include "box_utils.hpp"
+          32, include "set"
+std::set<int, std::less<int>, std::allocator<int>>::insert(int&&):
+     53, include "box_utils.hpp"
+          32, include "set"
+std::set<int, std::less<int>, std::allocator<int>>::find(int const&) const:
+        2536, Loop not vectorized/parallelized: not countable
+std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_get_insert_unique_pos(int const&):
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+                  2068, Loop not vectorized/parallelized: not countable
+std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<int const, int>>*):
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+                  1887, Loop not vectorized/parallelized: potential early exits
+std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_lower_bound(std::_Rb_tree_node<std::pair<int const, int>> const*, std::_Rb_tree_node_base const*, int const&) const:
+     53, include "box_utils.hpp"
+          32, include "set"
+               60, include "stl_tree.h"
+                  1920, Loop not vectorized/parallelized: not countable
+std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::~_Rb_tree():
+        1887, Loop not vectorized/parallelized: potential early exits
+std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::lower_bound(int const&) const:
+        1920, Loop not vectorized/parallelized: not countable
+std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int>>>::lower_bound(int const&) const:
+        1274, Loop not vectorized/parallelized: not countable
+std::vector<double, std::allocator<double>>::vector(unsigned long, std::allocator<double> const&):
+     53, include "box_utils.hpp"
+std::vector<double, std::allocator<double>>::vector(unsigned long, double const&, std::allocator<double> const&):
+     53, include "box_utils.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0007.TRP replaced with < or > test. (main.cpp: 410)
+std::vector<double, std::allocator<double>>::_M_fill_initialize(unsigned long, double const&):
+         410, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0008.TRP replaced with < or > test. (main.cpp: 704)
+std::vector<double, std::allocator<double>>::_M_default_initialize(unsigned long):
+         704, Recognized memory set idiom
+void std::vector<double, std::allocator<double>>::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double>>>, double const&):
+     53, include "box_utils.hpp"
+std::vector<Box, std::allocator<Box>>::vector(unsigned long, std::allocator<Box> const&):
+     53, include "box_utils.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+NVC++-I-0162-Not equal test of loop control variable .0009.TRP replaced with < or > test. (main.cpp: 704)
+std::vector<Box, std::allocator<Box>>::_M_default_initialize(unsigned long):
+         704, Loop not vectorized/parallelized: contains structure move
+              Loop unrolled 4 times
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::replace(unsigned long, unsigned long, char const*, unsigned long):
+     53, include "box_utils.hpp"
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::replace(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, char*, char*):
+     53, include "box_utils.hpp"
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         536, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>& std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign<char*, void>(char*, char*):
+     53, include "box_utils.hpp"
+std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char>>::str() const:
+     53, include "box_utils.hpp"
+__gnu_cxx::char_traits<char>::length(char const*):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                        171, Loop not vectorized/parallelized: not countable
+     53, include "box_utils.hpp"
+miniFE::simple_mesh_description<int>::simple_mesh_description(Box const&, Box const&):
+     56, include "driver.hpp"
+          49, include "simple_mesh_description.hpp"
+               44, Loop unrolled 3 times (completely unrolled)
+               90, Loop not vectorized/parallelized: potential early exits
+              142, Loop not vectorized/parallelized: potential early exits
+              166, Loop not vectorized/parallelized: potential early exits
+              191, Loop not vectorized/parallelized: potential early exits
+              215, Loop not vectorized/parallelized: potential early exits
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+miniFE::simple_mesh_description<int>::map_id_to_row(int const&) const:
+     56, include "driver.hpp"
+          49, include "simple_mesh_description.hpp"
+miniFE::CSRMatrix<double, int, int>::reserve_space(unsigned int, unsigned int):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+               96, Loop not vectorized: data dependency
+                   Loop unrolled 8 times
+              102, Generated vector simd code for the loop
+          51, include "SparseMatrix_functions.hpp"
+               96, #omp parallel
+              102, #omp parallel
+miniFE::CSRMatrix<double, int, int>::get_row_pointers(int, unsigned long&, int*&, double*&):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+          51, include "SparseMatrix_functions.hpp"
+        1499, Loop not vectorized/parallelized: contains structure move
+miniFE::Vector<double, int, int>::Vector(int, int):
+     56, include "driver.hpp"
+          39, include "Vector.hpp"
+               50, Loop not vectorized: may not be beneficial for target
+                   Loop unrolled 4 times
+          49, include "simple_mesh_description.hpp"
+NVC++-I-0162-Not equal test of loop control variable .ndk0002 replaced with < or > test. (main.cpp: 611)
+NVC++-I-0162-Not equal test of loop control variable .ndk0002 replaced with < or > test. (main.cpp: 611)
+NVC++-I-0162-Not equal test of loop control variable .ndk0002 replaced with < or > test. (main.cpp: 611)
+miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>::operator()(miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&, miniFE::Vector<double, int, int>&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+              611, Generated vector simd code for the loop containing reductions
+miniFE::matvec_std<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>::operator()(miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&, miniFE::Vector<double, int, int>&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+              522, #omp target teams distribute parallel for
+                  522, Generating "nvkernel__ZN6miniFE10matvec_stdINS_9CSRMatrixIdiiEENS_6VectorIdiiEEEclERS2_RS4_S7__F385L522_6" GPU kernel
+                       Loop parallelized across teams and threads(128), schedule(static)
+              522, Loop not vectorized/parallelized: not countable
+              529, Generated vector simd code for the loop containing reductions
+std::basic_ostream<char, std::char_traits<char>>& std::operator<<<char, std::char_traits<char>, std::allocator<char>>(std::basic_ostream<char, std::char_traits<char>>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+     53, include "box_utils.hpp"
+std::basic_ostream<char, std::char_traits<char>>& std::operator<<<std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*):
+         397, Loop not vectorized/parallelized: not countable
+NVC++-I-0162-Not equal test of loop control variable .0012.TRP replaced with < or > test. (main.cpp: 638)
+int* std::__uninitialized_default_n_a<int*, unsigned long, int>(int*, unsigned long, std::allocator<int>&):
+         638, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0013.TRP replaced with < or > test. (main.cpp: 603)
+int* std::__uninitialized_default_n<int*, unsigned long>(int*, unsigned long):
+         603, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0014.TRP replaced with < or > test. (main.cpp: 1120)
+int* std::fill_n<int*, unsigned long, int>(int*, unsigned long, int const&):
+        1120, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0015.TRP replaced with < or > test. (main.cpp: 969)
+int* std::__fill_n_a<int*, unsigned long, int>(int*, unsigned long, int const&, std::random_access_iterator_tag):
+         969, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0016.TRP replaced with < or > test. (main.cpp: 923)
+void std::__fill_a<int*, int>(int*, int*, int const&):
+         923, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0017.TRP replaced with < or > test. (main.cpp: 923)
+__gnu_cxx::__enable_if<std::__is_scalar<int>::__value, void>::__type std::__fill_a1<int*, int>(int*, int*, int const&):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                         39, include "stl_algobase.h"
+                             923, Recognized memory set idiom
+     53, include "box_utils.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0018.TRP replaced with < or > test. (main.cpp: 638)
+double* std::__uninitialized_default_n_a<double*, unsigned long, double>(double*, unsigned long, std::allocator<double>&):
+         638, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0019.TRP replaced with < or > test. (main.cpp: 603)
+double* std::__uninitialized_default_n<double*, unsigned long>(double*, unsigned long):
+         603, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0020.TRP replaced with < or > test. (main.cpp: 1120)
+double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&):
+        1120, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0021.TRP replaced with < or > test. (main.cpp: 969)
+double* std::__fill_n_a<double*, unsigned long, double>(double*, unsigned long, double const&, std::random_access_iterator_tag):
+         969, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0022.TRP replaced with < or > test. (main.cpp: 923)
+void std::__fill_a<double*, double>(double*, double*, double const&):
+         923, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0023.TRP replaced with < or > test. (main.cpp: 923)
+__gnu_cxx::__enable_if<std::__is_scalar<double>::__value, void>::__type std::__fill_a1<double*, double>(double*, double*, double const&):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                         39, include "stl_algobase.h"
+                             923, Recognized memory set idiom
+     53, include "box_utils.hpp"
+void std::__sort<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+          51, include "SparseMatrix_functions.hpp"
+        1937, Loop not vectorized/parallelized: not countable
+void std::__introsort_loop<int*, long, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, long, __gnu_cxx::__ops::_Iter_less_iter):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+          51, include "SparseMatrix_functions.hpp"
+        1906, Loop not vectorized/parallelized: not countable
+void std::__partial_sort<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+        1646, Loop not vectorized/parallelized: not countable
+              Loop not vectorized/parallelized: potential early exits
+        1649, Loop not vectorized/parallelized: not countable
+              Loop not vectorized/parallelized: potential early exits
+         424, Loop not vectorized/parallelized: not countable
+              Loop not vectorized/parallelized: potential early exits
+void std::__heap_select<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+         355, Loop not vectorized/parallelized: not countable
+              Loop not vectorized/parallelized: potential early exits
+         263, Loop not vectorized/parallelized: not countable
+              Loop not vectorized/parallelized: potential early exits
+void std::__make_heap<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, __gnu_cxx::__ops::_Iter_less_iter&):
+         228, Loop not vectorized/parallelized: not countable
+         246, Loop not vectorized/parallelized: potential early exits
+void std::__adjust_heap<int*, long, int, __gnu_cxx::__ops::_Iter_less_iter>(int*, long, long, int, __gnu_cxx::__ops::_Iter_less_iter):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+               33, include "algorithm"
+                    10, include "algorithm"
+                         62, include "stl_algo.h"
+                              61, include "stl_heap.h"
+                                  228, Loop not vectorized/parallelized: not countable
+          51, include "SparseMatrix_functions.hpp"
+         139, Loop not vectorized/parallelized: potential early exits
+void std::__push_heap<int*, long, int, __gnu_cxx::__ops::_Iter_less_val>(int*, long, long, int, __gnu_cxx::__ops::_Iter_less_val&):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+               33, include "algorithm"
+                    10, include "algorithm"
+                         62, include "stl_algo.h"
+                              61, include "stl_heap.h"
+                                  139, Loop not vectorized/parallelized: potential early exits
+          51, include "SparseMatrix_functions.hpp"
+void std::__pop_heap<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, int*, __gnu_cxx::__ops::_Iter_less_iter&):
+         228, Loop not vectorized/parallelized: not countable
+         246, Loop not vectorized/parallelized: potential early exits
+void std::__sort_heap<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, __gnu_cxx::__ops::_Iter_less_iter&):
+         263, Loop not vectorized/parallelized: not countable
+              Loop not vectorized/parallelized: potential early exits
+int* std::__unguarded_partition_pivot<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+        1884, Loop not vectorized/parallelized: not countable
+        1887, Loop not vectorized/parallelized: not countable
+int* std::__unguarded_partition<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+               33, include "algorithm"
+                    10, include "algorithm"
+                         62, include "stl_algo.h"
+                            1884, Loop not vectorized/parallelized: not countable
+                            1887, Loop not vectorized/parallelized: not countable
+          51, include "SparseMatrix_functions.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0026.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0026.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0026.TRP replaced with < or > test. (main.cpp: 1847)
+NVC++-I-0162-Not equal test of loop control variable .0026.TRP replaced with < or > test. (main.cpp: 1824)
+NVC++-I-0162-Not equal test of loop control variable .0026.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0026.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0026.TRP replaced with < or > test. (main.cpp: 1846)
+void std::__final_insertion_sort<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+        1834, Loop not vectorized/parallelized: not countable
+        1847, Loop not vectorized/parallelized: not countable
+        1834, Loop not vectorized/parallelized: not countable
+void std::__insertion_sort<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+        1806, Loop not vectorized/parallelized: not countable
+int* std::__copy_move_backward_a<true, int*, int*>(int*, int*, int*):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                         39, include "stl_algobase.h"
+     53, include "box_utils.hpp"
+void std::__unguarded_linear_insert<int*, __gnu_cxx::__ops::_Val_less_iter>(int*, __gnu_cxx::__ops::_Val_less_iter):
+     56, include "driver.hpp"
+          42, include "CSRMatrix.hpp"
+               33, include "algorithm"
+                    10, include "algorithm"
+                         62, include "stl_algo.h"
+                            1806, Loop not vectorized/parallelized: not countable
+          51, include "SparseMatrix_functions.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0027.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0027.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0027.TRP replaced with < or > test. (main.cpp: 1806)
+NVC++-I-0162-Not equal test of loop control variable .0027.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0027.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0027.TRP replaced with < or > test. (main.cpp: 1846)
+NVC++-I-0162-Not equal test of loop control variable .0027.TRP replaced with < or > test. (main.cpp: 1846)
+void std::__unguarded_insertion_sort<int*, __gnu_cxx::__ops::_Iter_less_iter>(int*, int*, __gnu_cxx::__ops::_Iter_less_iter):
+        1806, Loop not vectorized/parallelized: not countable
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+NVC++-I-0162-Not equal test of loop control variable .0028.TRP replaced with < or > test. (main.cpp: 638)
+Box* std::__uninitialized_default_n_a<Box*, unsigned long, Box>(Box*, unsigned long, std::allocator<Box>&):
+         638, Loop not vectorized/parallelized: contains structure move
+              Loop unrolled 4 times
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+NVC++-I-0162-Not equal test of loop control variable .0029.TRP replaced with < or > test. (main.cpp: 603)
+Box* std::__uninitialized_default_n<Box*, unsigned long>(Box*, unsigned long):
+         603, Loop not vectorized/parallelized: contains structure move
+              Loop unrolled 4 times
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+NVC++-I-0162-Not equal test of loop control variable .0030.TRP replaced with < or > test. (main.cpp: 1120)
+Box* std::fill_n<Box*, unsigned long, Box>(Box*, unsigned long, Box const&):
+        1120, Loop not vectorized/parallelized: contains structure move
+              Loop unrolled 4 times
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+NVC++-I-0162-Not equal test of loop control variable .0031.TRP replaced with < or > test. (main.cpp: 969)
+Box* std::__fill_n_a<Box*, unsigned long, Box>(Box*, unsigned long, Box const&, std::random_access_iterator_tag):
+         969, Loop not vectorized/parallelized: contains structure move
+              Loop unrolled 4 times
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0032.TRP replaced with < or > test. (main.cpp: 911)
+void std::__fill_a<Box*, Box>(Box*, Box*, Box const&):
+         911, Loop not vectorized/parallelized: contains structure move
+              Loop unrolled 4 times
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+NVC++-I-0162-Not equal test of loop control variable .0033.TRP replaced with < or > test. (main.cpp: 911)
+__gnu_cxx::__enable_if<!std::__is_scalar<Box>::__value, void>::__type std::__fill_a1<Box*, Box>(Box*, Box*, Box const&):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                         39, include "stl_algobase.h"
+                             911, Loop not vectorized/parallelized: contains structure move
+                                  Loop unrolled 4 times
+     53, include "box_utils.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0034.TRP replaced with < or > test. (main.cpp: 296)
+int* std::__uninitialized_fill_n_a<int*, unsigned long, int, int>(int*, unsigned long, int const&, std::allocator<int>&):
+         296, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0035.TRP replaced with < or > test. (main.cpp: 255)
+int* std::uninitialized_fill_n<int*, unsigned long, int>(int*, unsigned long, int const&):
+         255, Recognized memory set idiom
+__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>> std::lower_bound<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>>, int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>>, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>>, int const&):
+        1459, Loop not vectorized/parallelized: contains structure move
+__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>> std::__lower_bound<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>>, int, __gnu_cxx::__ops::_Iter_less_val>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>>, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int>>>, int const&, __gnu_cxx::__ops::_Iter_less_val):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                         39, include "stl_algobase.h"
+                            1459, Loop not vectorized/parallelized: contains structure move
+     53, include "box_utils.hpp"
+int* std::lower_bound<int*, int>(int*, int*, int const&):
+        1459, Loop not vectorized/parallelized: contains structure move
+int* std::__lower_bound<int*, int, __gnu_cxx::__ops::_Iter_less_val>(int*, int*, int const&, __gnu_cxx::__ops::_Iter_less_val):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                         39, include "stl_algobase.h"
+                            1459, Loop not vectorized/parallelized: contains structure move
+     53, include "box_utils.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0036.TRP replaced with < or > test. (main.cpp: 296)
+double* std::__uninitialized_fill_n_a<double*, unsigned long, double, double>(double*, unsigned long, double const&, std::allocator<double>&):
+         296, Recognized memory set idiom
+NVC++-I-0162-Not equal test of loop control variable .0037.TRP replaced with < or > test. (main.cpp: 255)
+double* std::uninitialized_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&):
+         255, Recognized memory set idiom
+int* std::lower_bound<int*, unsigned long>(int*, int*, unsigned long const&):
+        1459, Loop not vectorized/parallelized: contains structure move
+int* std::__lower_bound<int*, unsigned long, __gnu_cxx::__ops::_Iter_less_val>(int*, int*, unsigned long const&, __gnu_cxx::__ops::_Iter_less_val):
+     29, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                         39, include "stl_algobase.h"
+                            1459, Loop not vectorized/parallelized: contains structure move
+     53, include "box_utils.hpp"
+NVC++-I-0162-Not equal test of loop control variable .0038.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .ndi0028 replaced with < or > test. (main.cpp: 335)
+NVC++-I-0162-Not equal test of loop control variable .ndk0010 replaced with < or > test. (main.cpp: 211)
+NVC++-I-0162-Not equal test of loop control variable .ndi0028 replaced with < or > test. (main.cpp: 335)
+NVC++-I-0162-Not equal test of loop control variable .ndk0010 replaced with < or > test. (main.cpp: 211)
+NVC++-I-0162-Not equal test of loop control variable .ndi0028 replaced with < or > test. (main.cpp: 335)
+NVC++-I-0162-Not equal test of loop control variable .ndk0010 replaced with < or > test. (main.cpp: 211)
+void miniFE::Hex8::diffusionMatrix_symm<double>(double const*, double const*, double*):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    35, include "Hex8_box_utils.hpp"
+                         36, include "Hex8.hpp"
+                             292, Loop not vectorized/parallelized: too deeply nested
+                             295, Loop not vectorized/parallelized: too deeply nested
+                             298, Loop not vectorized/parallelized: loop count too small
+                             310, Loop not fused: enclosed in different number of nests
+                                  Loop not vectorized: data dependency
+                             335, Loop versioned for possible aliasing
+                                  Generated vector simd code for the loop
+          43, Recognized memory zero idiom
+         211, Loop not fused: different loop trip count
+              Generated vector simd code for the loop containing reductions
+NVC++-I-0162-Not equal test of loop control variable .ndk0014 replaced with < or > test. (main.cpp: 211)
+NVC++-I-0162-Not equal test of loop control variable .ndk0014 replaced with < or > test. (main.cpp: 211)
+NVC++-I-0162-Not equal test of loop control variable .ndk0014 replaced with < or > test. (main.cpp: 211)
+void miniFE::Hex8::gradients_and_invJ_and_detJ<double>(double const*, double const*, double*, double&):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    35, include "Hex8_box_utils.hpp"
+                         36, include "Hex8.hpp"
+                             211, Generated vector simd code for the loop containing reductions
+NVC++-I-0162-Not equal test of loop control variable .0039.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .ndi0040 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0020 replaced with < or > test. (main.cpp: 143)
+NVC++-I-0162-Not equal test of loop control variable .ndi0036 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0018 replaced with < or > test. (main.cpp: 143)
+NVC++-I-0162-Not equal test of loop control variable .ndi0040 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0020 replaced with < or > test. (main.cpp: 143)
+NVC++-I-0162-Not equal test of loop control variable .ndi0036 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0018 replaced with < or > test. (main.cpp: 143)
+NVC++-I-0162-Not equal test of loop control variable .ndi0040 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0020 replaced with < or > test. (main.cpp: 143)
+NVC++-I-0162-Not equal test of loop control variable .ndi0036 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0018 replaced with < or > test. (main.cpp: 143)
+void miniFE::Hex8::sourceVector<double>(double const*, double const*, double*):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    35, include "Hex8_box_utils.hpp"
+                         36, include "Hex8.hpp"
+                             388, Loop not vectorized/parallelized: loop count too small
+                             392, Outer loop unrolled 2 times (completely unrolled)
+                             404, Loop not fused: different loop trip count
+                                  Loop versioned for possible aliasing
+                                  Generated vector simd code for the loop
+                                  Loop unrolled 2 times
+          43, Recognized memory zero idiom
+         143, Loop not fused: different loop trip count
+              Generated vector simd code for the loop containing reductions
+NVC++-I-0162-Not equal test of loop control variable .ndk0024 replaced with < or > test. (main.cpp: 143)
+NVC++-I-0162-Not equal test of loop control variable .ndk0024 replaced with < or > test. (main.cpp: 143)
+NVC++-I-0162-Not equal test of loop control variable .ndk0024 replaced with < or > test. (main.cpp: 143)
+void miniFE::Hex8::gradients_and_detJ<double>(double const*, double const*, double&):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    35, include "Hex8_box_utils.hpp"
+                         36, include "Hex8.hpp"
+                             143, Generated vector simd code for the loop containing reductions
+miniFE::copy_box(Box const&, Box&):
+     53, include "box_utils.hpp"
+          46, Loop not vectorized: unprofitable for target
+              Loop unrolled 3 times (completely unrolled)
+miniFE::soln(double, double, double, int, int):
+     56, include "driver.hpp"
+          56, include "verify_solution.hpp"
+               37, include "analytic_soln.hpp"
+                    86, Loop not vectorized/parallelized: potential early exits
+int miniFE::driver<double, int, int>(Box const&, Box&, miniFE::Parameters&, YAML_Doc&):
+     56, include "driver.hpp"
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+          53, Loop not fused: complex flow graph
+              Loop not vectorized: data dependency
+              Loop unrolled 3 times (completely unrolled)
+         616, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+int miniFE::find_row_for_id<int>(int, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int>>> const&):
+        1284, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+void miniFE::add_imbalance<int>(Box const&, Box&, float, YAML_Doc&):
+     56, include "driver.hpp"
+void miniFE::compute_imbalance<int>(Box const&, Box const&, float&, float&, YAML_Doc&, bool):
+     56, include "driver.hpp"
+         105, Loop unrolled 1 times (completely unrolled)
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+void miniFE::get_global_min_max<int>(int, int&, int&, int&, int&, int&):
+     55, include "utils.hpp"
+         105, Loop unrolled 1 times (completely unrolled)
+void miniFE::create_map_id_to_row<int>(int, int, int, Box const&, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int>>>&):
+     53, include "box_utils.hpp"
+         273, Loop not vectorized/parallelized: potential early exits
+         283, Loop not fused: function call before adjacent loop
+              Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+              Loop unrolled 6 times (completely unrolled)
+         303, Loop not vectorized/parallelized: potential early exits
+     55, include "utils.hpp"
+void miniFE::get_ids<int>(int, int, int, Box const&, std::vector<int, std::allocator<int>>&, bool):
+     53, include "box_utils.hpp"
+         141, Loop not vectorized/parallelized: potential early exits
+     55, include "utils.hpp"
+int miniFE::generate_matrix_structure<miniFE::CSRMatrix<double, int, int>>(miniFE::simple_mesh_description<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType> const&, miniFE::CSRMatrix<double, int, int>&):
+     56, include "driver.hpp"
+          53, include "generate_matrix_structure.hpp"
+              107, #omp parallel
+                   Loop not vectorized/parallelized: too deeply nested
+              123, Loop not vectorized/parallelized: loop count too small
+              139, Loop not vectorized/parallelized: not countable
+          56, include "verify_solution.hpp"
+          46, Loop not fused: complex flow graph
+              Loop not vectorized: data dependency
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+          71, Loop not vectorized/parallelized: too deeply nested
+          72, Loop not vectorized/parallelized: potential early exits
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+void miniFE::init_matrix<miniFE::CSRMatrix<double, int, int>>(miniFE::CSRMatrix<double, int, int>&, std::vector<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType, std::allocator<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType>> const&, std::vector<miniFE::CSRMatrix<double, int, int>::LocalOrdinalType, std::allocator<miniFE::CSRMatrix<double, int, int>::LocalOrdinalType>> const&, std::vector<int, std::allocator<int>> const&, int, int, int, miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType, miniFE::simple_mesh_description<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType> const&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+          54, include "assemble_FE_data.hpp"
+          71, Loop not vectorized/parallelized: too deeply nested
+         133, Loop not vectorized/parallelized: potential early exits
+         147, Loop not vectorized/parallelized: potential early exits
+void miniFE::assemble_FE_data<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>(miniFE::simple_mesh_description<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType> const&, miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&, miniFE::Parameters&):
+          46, Loop not fused: complex flow graph
+              Loop not vectorized: data dependency
+              Loop unrolled 3 times (completely unrolled)
+void miniFE::perform_element_loop<int, miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>(miniFE::simple_mesh_description<int> const&, Box const&, miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&, miniFE::Parameters&):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    81, #omp parallel
+          70, Loop not vectorized/parallelized: not countable
+          48, Loop unrolled 2 times (completely unrolled)
+          50, Loop unrolled 2 times (completely unrolled)
+          52, Loop unrolled 2 times (completely unrolled)
+          67, Recognized memory zero idiom
+              Loop not vectorized/parallelized: loop count too small
+              Loop not vectorized/parallelized: too deeply nested
+              Generated vector simd code for the loop containing reductions
+              Loop not vectorized: data dependency
+              Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+          69, Recognized memory zero idiom
+              Outer loop unrolled 2 times (completely unrolled)
+              Loop not vectorized/parallelized: loop count too small
+              Generated vector simd code for the loop containing reductions
+              Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+              Loop unrolled 2 times
+          81, Loop not vectorized/parallelized: too deeply nested
+void miniFE::compute_gradient_values<double>(double*):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    36, include "Hex8_ElemData.hpp"
+                         48, Loop unrolled 2 times (completely unrolled)
+                         50, Loop unrolled 2 times (completely unrolled)
+                         52, Loop unrolled 2 times (completely unrolled)
+void miniFE::get_elem_nodes_and_coords<int, double>(miniFE::simple_mesh_description<int> const&, int, int*, double*):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    35, include "Hex8_box_utils.hpp"
+                        131, Loop not vectorized/parallelized: potential early exits
+NVC++-I-0162-Not equal test of loop control variable .0041.TRP replaced with < or > test. (main.cpp: 370)
+NVC++-I-0162-Not equal test of loop control variable .0040.TRP replaced with < or > test. (main.cpp: 266)
+NVC++-I-0162-Not equal test of loop control variable .ndi0110 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0048 replaced with < or > test. (main.cpp: 400)
+NVC++-I-0162-Not equal test of loop control variable .ndi0106 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0046 replaced with < or > test. (main.cpp: 400)
+NVC++-I-0162-Not equal test of loop control variable .ndi0100 replaced with < or > test. (main.cpp: 335)
+NVC++-I-0162-Not equal test of loop control variable .ndk0044 replaced with < or > test. (main.cpp: 302)
+NVC++-I-0162-Not equal test of loop control variable .ndi0110 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0048 replaced with < or > test. (main.cpp: 400)
+NVC++-I-0162-Not equal test of loop control variable .ndi0106 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0046 replaced with < or > test. (main.cpp: 400)
+NVC++-I-0162-Not equal test of loop control variable .ndi0100 replaced with < or > test. (main.cpp: 335)
+NVC++-I-0162-Not equal test of loop control variable .ndk0044 replaced with < or > test. (main.cpp: 302)
+NVC++-I-0162-Not equal test of loop control variable .ndi0110 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0048 replaced with < or > test. (main.cpp: 400)
+NVC++-I-0162-Not equal test of loop control variable .ndi0106 replaced with < or > test. (main.cpp: 404)
+NVC++-I-0162-Not equal test of loop control variable .ndk0046 replaced with < or > test. (main.cpp: 400)
+NVC++-I-0162-Not equal test of loop control variable .ndi0100 replaced with < or > test. (main.cpp: 335)
+NVC++-I-0162-Not equal test of loop control variable .ndk0044 replaced with < or > test. (main.cpp: 302)
+void miniFE::compute_element_matrix_and_vector<int, double>(miniFE::ElemData<int, double>&):
+         266, Recognized memory zero idiom
+         292, Loop not fused: function call before adjacent loop
+              Loop not vectorized/parallelized: too deeply nested
+         295, Loop not vectorized/parallelized: too deeply nested
+         298, Loop not vectorized/parallelized: loop count too small
+         302, Loop not fused: different loop trip count
+              Generated vector simd code for the loop containing reductions
+         310, Loop not fused: enclosed in different number of nests
+              Loop not vectorized: data dependency
+         335, Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+         370, Recognized memory zero idiom
+         388, Loop not vectorized/parallelized: loop count too small
+         392, Outer loop unrolled 2 times (completely unrolled)
+         400, Loop not fused: different loop trip count
+              Generated vector simd code for the loop containing reductions
+         404, Loop not fused: different loop trip count
+              Loop versioned for possible aliasing
+              Generated vector simd code for the loop
+              Loop unrolled 2 times
+NVC++-I-0162-Not equal test of loop control variable .0042.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .0042.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .0042.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .0042.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .0042.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .0042.TRP replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .ndk0054 replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .ndk0054 replaced with < or > test. (main.cpp: 43)
+NVC++-I-0162-Not equal test of loop control variable .ndk0054 replaced with < or > test. (main.cpp: 43)
+void miniFE::fill<double>(double*, double*, double const&):
+     56, include "driver.hpp"
+          54, include "assemble_FE_data.hpp"
+               34, include "perform_element_loop.hpp"
+                    35, include "Hex8_box_utils.hpp"
+                         36, include "Hex8.hpp"
+                              36, include "matrix_algebra_3x3.hpp"
+                                   43, Loop versioned for possible aliasing
+                                       Generated vector simd code for the loop
+                                       Loop unrolled 4 times
+void miniFE::sum_into_global_linear_system<int, double, miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>(miniFE::ElemData<int, double>&, miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+          54, include "assemble_FE_data.hpp"
+void miniFE::sum_in_symm_elem_matrix<miniFE::CSRMatrix<double, int, int>>(unsigned long, miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType const*, miniFE::CSRMatrix<double, int, int>::ScalarType const*, miniFE::CSRMatrix<double, int, int>&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+          54, include "assemble_FE_data.hpp"
+         152, Loop not vectorized/parallelized: contains structure move
+         152, Loop not vectorized/parallelized: contains structure move
+         201, Loop not vectorized/parallelized: too deeply nested
+void miniFE::sum_into_row<int, double>(int, int*, double*, int, int const*, double const*):
+        1499, Loop not vectorized/parallelized: contains structure move
+NVC++-I-0162-Not equal test of loop control variable .ndk0066 replaced with < or > test. (main.cpp: 425)
+NVC++-I-0162-Not equal test of loop control variable .ndk0066 replaced with < or > test. (main.cpp: 425)
+NVC++-I-0162-Not equal test of loop control variable .ndk0066 replaced with < or > test. (main.cpp: 425)
+void miniFE::impose_dirichlet<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>(miniFE::CSRMatrix<double, int, int>::ScalarType, miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&, int, int, int, std::set<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType, std::less<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType>, std::allocator<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType>> const&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+              464, #omp parallel
+          54, include "assemble_FE_data.hpp"
+         452, Loop not vectorized/parallelized: potential early exits
+         425, Loop not fused: function call before adjacent loop
+              Generated vector simd code for the loop
+         799, Loop not vectorized/parallelized: not countable
+         799, Loop not vectorized/parallelized: not countable
+NVC++-I-0162-Not equal test of loop control variable .ndk0070 replaced with < or > test. (main.cpp: 425)
+NVC++-I-0162-Not equal test of loop control variable .ndk0070 replaced with < or > test. (main.cpp: 425)
+NVC++-I-0162-Not equal test of loop control variable .ndk0070 replaced with < or > test. (main.cpp: 425)
+void miniFE::zero_row_and_put_1_on_diagonal<miniFE::CSRMatrix<double, int, int>>(miniFE::CSRMatrix<double, int, int>&, miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+              425, Generated vector simd code for the loop
+          54, include "assemble_FE_data.hpp"
+unsigned long miniFE::compute_matrix_stats<miniFE::CSRMatrix<double, int, int>>(miniFE::CSRMatrix<double, int, int> const&, int, int, YAML_Doc&):
+     56, include "driver.hpp"
+         105, Loop unrolled 1 times (completely unrolled)
+         105, Loop unrolled 1 times (completely unrolled)
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+void miniFE::get_global_min_max<double>(double, double&, double&, int&, double&, int&):
+     55, include "utils.hpp"
+         105, Loop unrolled 1 times (completely unrolled)
+NVC++-I-0162-Not equal test of loop control variable .ndk0080 replaced with < or > test. (main.cpp: 408)
+NVC++-I-0162-Not equal test of loop control variable .ndk0080 replaced with < or > test. (main.cpp: 408)
+NVC++-I-0162-Not equal test of loop control variable .ndk0080 replaced with < or > test. (main.cpp: 408)
+void miniFE::rearrange_matrix_local_external<miniFE::CSRMatrix<double, int, int>>(miniFE::CSRMatrix<double, int, int>&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+              378, Loop not vectorized/parallelized: not countable
+              392, Loop not vectorized/parallelized: not countable
+              402, Loop not fused: function call before adjacent loop
+                   Loop not vectorized: data dependency
+                   Loop unrolled 4 times
+              408, Loop not fused: function call before adjacent loop
+                   Loop versioned for possible aliasing
+                   Generated vector simd code for the loop
+                   Loop unrolled 2 times
+          54, include "assemble_FE_data.hpp"
+          87, Loop not vectorized/parallelized: potential early exits
+        1499, Loop not vectorized/parallelized: contains structure move
+void miniFE::sort_with_companions<int, double>(long, int*, double*):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+               87, Loop not vectorized/parallelized: potential early exits
+          54, include "assemble_FE_data.hpp"
+NVC++-I-0162-Not equal test of loop control variable .ndk0088 replaced with < or > test. (main.cpp: 611)
+NVC++-I-0162-Not equal test of loop control variable .ndk0086 replaced with < or > test. (main.cpp: 611)
+NVC++-I-0162-Not equal test of loop control variable .ndk0088 replaced with < or > test. (main.cpp: 611)
+NVC++-I-0162-Not equal test of loop control variable .ndk0086 replaced with < or > test. (main.cpp: 611)
+NVC++-I-0162-Not equal test of loop control variable .ndk0088 replaced with < or > test. (main.cpp: 611)
+NVC++-I-0162-Not equal test of loop control variable .ndk0086 replaced with < or > test. (main.cpp: 611)
+void miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>(miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int> const&, miniFE::Vector<double, int, int>&, miniFE::matvec_overlap<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>, miniFE::CSRMatrix<double, int, int>::LocalOrdinalType, miniFE::TypeTraits<miniFE::CSRMatrix<double, int, int>::ScalarType>::magnitude_type&, miniFE::CSRMatrix<double, int, int>::LocalOrdinalType&, miniFE::TypeTraits<miniFE::CSRMatrix<double, int, int>::ScalarType>::magnitude_type&, double*):
+     56, include "driver.hpp"
+          61, include "cg_solve.hpp"
+              140, Generating map(to:p_ptr[:],b_ptr[:],Acols[:],Arowoffsets[:],Ap_ptr[:],Acoefs[:]) 
+                   Generating map(tofrom:x_ptr[:]) 
+                   Generating map(to:r_ptr[:]) 
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         608, Loop not fused: function call before adjacent loop
+         611, Generated vector simd code for the loop containing reductions
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         608, Loop not fused: function call before adjacent loop
+         611, Generated vector simd code for the loop containing reductions
+         616, Loop not vectorized/parallelized: not countable
+NVC++-I-0162-Not equal test of loop control variable .ndi0122 replaced with < or > test. (main.cpp: 176)
+NVC++-I-0162-Not equal test of loop control variable .ndi0122 replaced with < or > test. (main.cpp: 176)
+NVC++-I-0162-Not equal test of loop control variable .ndi0122 replaced with < or > test. (main.cpp: 176)
+void miniFE::waxpby<miniFE::Vector<double, int, int>>(miniFE::Vector<double, int, int>::ScalarType, miniFE::Vector<double, int, int> const&, miniFE::Vector<double, int, int>::ScalarType, miniFE::Vector<double, int, int> const&, miniFE::Vector<double, int, int>&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+               39, include "Vector_functions.hpp"
+                   156, #omp target teams distribute parallel for simd
+                       156, Generating "nvkernel__ZN6miniFE6waxpbyINS_6VectorIdiiEEEEvNT_10ScalarTypeERKS3_S4_S6_RS3__F387L156_13" GPU kernel
+                       158, Loop parallelized across teams and threads(128), schedule(static)
+                   158, Loop not vectorized/parallelized: not countable
+                   161, #omp target teams distribute parallel for simd
+                       161, Generating "nvkernel__ZN6miniFE6waxpbyINS_6VectorIdiiEEEEvNT_10ScalarTypeERKS3_S4_S6_RS3__F387L161_15" GPU kernel
+                       163, Loop parallelized across teams and threads(128), schedule(static)
+                   163, Loop not vectorized/parallelized: not countable
+                   168, #omp target teams distribute parallel for simd
+                       168, Generating "nvkernel__ZN6miniFE6waxpbyINS_6VectorIdiiEEEEvNT_10ScalarTypeERKS3_S4_S6_RS3__F387L168_17" GPU kernel
+                       170, Loop parallelized across teams and threads(128), schedule(static)
+                   170, Loop not vectorized/parallelized: not countable
+                   176, Generated vector simd code for the loop
+               41, include "MatrixInitOp.hpp"
+          54, include "assemble_FE_data.hpp"
+miniFE::TypeTraits<miniFE::Vector<double, int, int>::ScalarType>::magnitude_type miniFE::dot_r2<miniFE::Vector<double, int, int>>(miniFE::Vector<double, int, int> const&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+               39, include "Vector_functions.hpp"
+                   293, #omp target teams distribute parallel for num_teams(512)
+                       291, Generating map(tofrom:result) 
+                       293, Generating "nvkernel__ZN6miniFE6dot_r2INS_6VectorIdiiEEEENS_10TypeTraitsINT_10ScalarTypeEE14magnitude_typeERKS4__F387L293_25" GPU kernel
+                            Loop parallelized across teams and threads(128), schedule(static)
+                            Generating reduction(+:result)
+                   293, Generating map(tofrom:result) 
+                        Loop not vectorized/parallelized: not countable
+               41, include "MatrixInitOp.hpp"
+          54, include "assemble_FE_data.hpp"
+void miniFE::daxpby<miniFE::Vector<double, int, int>>(double, miniFE::Vector<double, int, int> const&, double, miniFE::Vector<double, int, int>&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+               39, include "Vector_functions.hpp"
+                   199, #omp target teams distribute parallel for simd
+                       199, Generating "nvkernel__ZN6miniFE6daxpbyINS_6VectorIdiiEEEEvdRKT_dRS3__F387L199_29" GPU kernel
+                       201, Loop parallelized across teams and threads(128), schedule(static)
+                   201, Loop not vectorized/parallelized: not countable
+                   204, #omp target teams distribute parallel for simd
+                       204, Generating "nvkernel__ZN6miniFE6daxpbyINS_6VectorIdiiEEEEvdRKT_dRS3__F387L204_31" GPU kernel
+                       206, Loop parallelized across teams and threads(128), schedule(static)
+                   206, Loop not vectorized/parallelized: not countable
+                   209, #omp target teams distribute parallel for simd
+                       209, Generating "nvkernel__ZN6miniFE6daxpbyINS_6VectorIdiiEEEEvdRKT_dRS3__F387L209_33" GPU kernel
+                       211, Loop parallelized across teams and threads(128), schedule(static)
+                   211, Loop not vectorized/parallelized: not countable
+                   214, #omp target teams distribute parallel for simd
+                       214, Generating "nvkernel__ZN6miniFE6daxpbyINS_6VectorIdiiEEEEvdRKT_dRS3__F387L214_35" GPU kernel
+                       216, Loop parallelized across teams and threads(128), schedule(static)
+                   216, Loop not vectorized/parallelized: not countable
+                   219, #omp target teams distribute parallel for simd
+                       219, Generating "nvkernel__ZN6miniFE6daxpbyINS_6VectorIdiiEEEEvdRKT_dRS3__F387L219_37" GPU kernel
+                       221, Loop parallelized across teams and threads(128), schedule(static)
+                   221, Loop not vectorized/parallelized: not countable
+               41, include "MatrixInitOp.hpp"
+          54, include "assemble_FE_data.hpp"
+miniFE::TypeTraits<miniFE::Vector<double, int, int>::ScalarType>::magnitude_type miniFE::dot<miniFE::Vector<double, int, int>>(miniFE::Vector<double, int, int> const&, miniFE::Vector<double, int, int> const&):
+     56, include "driver.hpp"
+          51, include "SparseMatrix_functions.hpp"
+               39, include "Vector_functions.hpp"
+                   255, #omp target teams distribute parallel for num_teams(512)
+                       253, Generating map(tofrom:result) 
+                       255, Generating "nvkernel__ZN6miniFE3dotINS_6VectorIdiiEEEENS_10TypeTraitsINT_10ScalarTypeEE14magnitude_typeERKS4_S9__F387L255_49" GPU kernel
+                            Loop parallelized across teams and threads(128), schedule(static)
+                            Generating reduction(+:result)
+                   255, Generating map(tofrom:result) 
+                        Loop not vectorized/parallelized: not countable
+               41, include "MatrixInitOp.hpp"
+          54, include "assemble_FE_data.hpp"
+void miniFE::cg_solve<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>, miniFE::matvec_std<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>>(miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int> const&, miniFE::Vector<double, int, int>&, miniFE::matvec_std<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int>>, miniFE::CSRMatrix<double, int, int>::LocalOrdinalType, miniFE::TypeTraits<miniFE::CSRMatrix<double, int, int>::ScalarType>::magnitude_type&, miniFE::CSRMatrix<double, int, int>::LocalOrdinalType&, miniFE::TypeTraits<miniFE::CSRMatrix<double, int, int>::ScalarType>::magnitude_type&, double*):
+     56, include "driver.hpp"
+          61, include "cg_solve.hpp"
+              140, Generating map(to:p_ptr[:],b_ptr[:],Acols[:],Arowoffsets[:],Ap_ptr[:],Acoefs[:]) 
+                   Generating map(tofrom:x_ptr[:]) 
+                   Generating map(to:r_ptr[:]) 
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+int miniFE::verify_solution<miniFE::Vector<double, int, int>>(miniFE::simple_mesh_description<miniFE::Vector<double, int, int>::GlobalOrdinalType> const&, miniFE::Vector<double, int, int> const&, double, bool):
+     56, include "driver.hpp"
+          56, include "verify_solution.hpp"
+               82, Loop not vectorized/parallelized: potential early exits
+          61, include "cg_solve.hpp"
+          46, Loop not fused: complex flow graph
+              Loop not vectorized: data dependency
+              Loop unrolled 3 times (completely unrolled)
+          86, Loop not vectorized/parallelized: potential early exits
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+         616, Loop not vectorized/parallelized: not countable
+ /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvdd -dcuda /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -usenvvm -nvvm70 -reloc /tmp/nvaccpcEDmTpzKeVBO.gpu -computecap 90 -ptx /tmp/nvacc3cEDmL3dwSMB7.ptx -o /tmp/nvaccVcEDmn0cELCyD.cubin -omptarget -useompgpucg=nvcc -fastmath -ftz -cuda12060
+ /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvdd -dcuda /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -reloc -cuda12060 -fat main.cpp -sm 90 /tmp/nvaccVcEDmn0cELCyD.cubin -compute 90 /tmp/nvacc3cEDmL3dwSMB7.ptx -o /tmp/nvaccNcEDm1v5Hpa8c.fatbin
+NVC++/arm Linux 24.9-0: compilation completed with informational messages
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/opt '-passes=default<O3>' --fp-contract=fast -slp-vectorize-hor=false -nvhpc-select-opt -nvhpc-deinterleave-opt -nvhpc-func-attrs -nvhpc-unswitch-loops-with-trip-count=2 -mcpu=native /tmp/nvc++JtxDmPqQFLbaV.ll -S -o /tmp/nvc++7txDmXvCAQ9QT.llvm
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/llc /tmp/nvc++7txDmXvCAQ9QT.llvm -mcpu=native -O3 -aarch64-sve-vector-bits-min=128 -aarch64-sve-vector-bits-max=128 -enable-complex-deinterleaving=false -dwarf-directory=false --fp-contract=fast -non-global-value-max-name-size=4294967295 --align-all-functions=6 -lsr-complexity-limit=131072 -nvhpc-fusion -nvhpc-tbl-opt -nvhpc-memzero -filetype=obj --frame-pointer=none -o main.o
+Unlinking /tmp/nvc++ZtxDmzHa8buFm.il
+Unlinking /tmp/nvc++ltxDmHSKH21WQ.s
+Unlinking /tmp/nvc++JtxDmPqQFLbaV.ll
+Unlinking /tmp/nvc++7txDmXvCAQ9QT.llvm
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvcpfe -- -D__GNUC__=11 -D__GNUC_MINOR__=4 -D__GNUC_PATCHLEVEL__=1 -D__STDC_HOSTED__ -I- -I. -I../utils -I../fem -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include-stdexec --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11 --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/aarch64-redhat-linux --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/backward --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/include --sys_include /usr/local/include --sys_include /usr/include -D__PGLLVM__ -D__NVCOMPILER_LLVM__ -D__extension__= -D__linux__ -D__linux -D__ELF__ -D__LITTLE_ENDIAN__ -Dlinux -Dunix -D__arm64__ -D__aarch64__ -D__LP64__ -D__ARM_ARCH_8__ -D__AARCH64EL__ -D__ARM_ARCH_PROFILE='A' -D__ARM_64BIT_STATE -D__ARM_PCS_AAPCS64 -D__ARM_ARCH_ISA_A64 -D__ARM_FEATURE_CLZ -D__ARM_FEATURE_FMA -D__ARM_FEATURE_LDREX=0xF -D__ARM_FEATURE_DIV -D__ARM_FEATURE_NUMERIC_MAXMIN -D__ARM_FEATURE_IDIV -D__ARM_FEATURE_DIRECTED_ROUNDING -D__ARM_ALIGN_MAX_STACK_PWR=4 -D__ARM_STATE_ZA -D__ARM_STATE_ZT0 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FP=0xC -D__ARM_SIZEOF_WCHAR_T=4 -D__ARM_SIZEOF_MINIMAL_ENUM=4 -D__ARM_NEON -D__ARM_NEON_FP=0xC -D__FP_FAST_FMA -D__FP_FAST_FMAF -D__AARCH64_CMODEL_SMALL__ -D__ARM_ARCH=9 -D__ARM_FEATURE_QRDMX -D__ARM_FEATURE_JCVT -D__ARM_FEATURE_FRINT -D__ARM_FEATURE_BTI -D__ARM_FEATURE_ATOMICS -D__ARM_FEATURE_COMPLEX -D__ARM_FEATURE_SVE -D__ARM_FEATURE_SVE_VECTOR_OPERATORS=2 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FEATURE_SVE_BITS=128 -D__ARM_FEATURE_CRC32 -D__ARM_FEATURE_RCPC=1 -D__ARM_FEATURE_CRYPTO -D__ARM_FEATURE_AES -D__ARM_FEATURE_SHA2 -D__ARM_FEATURE_SHA3 -D__ARM_FEATURE_SHA512 -D__ARM_FEATURE_SM3 -D__ARM_FEATURE_SM4 -D__ARM_FEATURE_UNALIGNED -D__ARM_FEATURE_DOTPROD -D__ARM_FEATURE_MATMUL_INT8 -D__ARM_FEATURE_SVE_MATMUL_INT8 -D__arm64__ -D__aarch64__ -D__PGI -D__NVCOMPILER -D__NVCOMPILER_OPENMP_GPU -D__NVCOMPILER_OPENMP_MULTICORE -D_OPENMP=202011 -DCUDA_VERSION=12060 -DPGI_TESLA_TARGET -D_PGI_HX -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 --preinclude _cplus_preinclude.h --preinclude_macros _cplus_macros.h --float128 --gnu_version=110401 -D__pgnu_vsn=110401 --target_gpu --mp -D_OPENMP=202011 -D_NVHPC_RDC -q -o /tmp/nvc++Js0DmPG_c1rQC.il ../utils/BoxPartition.cpp -- ../utils/BoxPartition.cpp -opt 3 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 28 0x40000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -vect 56 -y 34 16 -x 37 0x480000 -x 34 0x8 -y 19 8 -y 35 0 -x 42 0x30 -x 42 0x20000 -x 39 0x80 -x 34 0x400000 -x 149 1 -x 150 1 -tp neoverse-v2 -x 120 0x1000 -x 119 0x8000000 -astype 0 -x 121 1 -fn ../utils/BoxPartition.cpp -il /tmp/nvc++Js0DmPG_c1rQC.il -x 117 0x200 -x 123 0x80000000 -x 123 4 -x 122 0x10 -x 70 0x40000000 -x 183 4 -x 121 0x800 -x 122 0x1 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -x 249 170 -x 8 0x40000000 -x 164 0x800000 -x 68 0x1 -x 56 0x10 -x 26 0x10 -x 26 1 -x 49 0x40000000 -x 56 0x4000 -x 71 0x2000 -x 71 0x4000 -x 34 0x40000000 -x 77 0x04 -x 206 0x02 -x 120 0x1000000 -x 73 0x04 -x 231 0x800 -accel tesla -x 197 0 -x 175 0 -x 203 0 -x 204 0 -x 227 0xFFFF -x 180 0x4000400 -x 121 0xc00 -x 186 0x80 -x 163 0x1 -x 186 0x80000 -cudaver 12060 -x 194 0x40000 -x 176 0x100 -cudacap 90 -x 163 0x200 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 176 0x100 -cudacap 90 -x 189 0x8000 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 187 0x40000 -x 187 0x8000000 -x 60 512 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 129 2 -x 129 4 -y 129 0x400 -y 129 0x8000 -quad -x 119 0x10000000 -x 56 0x2 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 0 0x1000000 -x 2 0x100000 -x 0 0x2000000 -x 161 0x6CFF6 -x 162 0x6CFF6 -mp -x 69 0x200 -x 69 0x400 -x 69 2 -x 183 0x2000000 -gnuvsn 110401 -x 123 0x400 -x 180 0x4000000 -x 194 0x20000000 -x 251 0x2 -x 233 0x1 -x 205 2 -x 233 0x100 -x 233 0x400 -cmdline '+nvc++ ../utils/BoxPartition.cpp -v -O3 -Mvect=simd -Mflushz -Mcache_align -Mfactorize -Mno-signed-zeros -Minline_cpu_f -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c' -asm /tmp/nvc++ts0Dm5thejlef.ll
+_INTERNAL_25____utils_BoxPartition_cpp_6ef98634::resize_int(int**, int*, int):
+    136, Loop not vectorized/parallelized: not countable
+_INTERNAL_25____utils_BoxPartition_cpp_6ef98634::box_partition_maps(int, int, Box const*, int, int**, int**, int**, int**):
+    187, Recognized memory set idiom
+         136, Loop not vectorized/parallelized: not countable
+         194, Loop not vectorized/parallelized: too deeply nested
+         211, Loop not vectorized/parallelized: too deeply nested
+NVC++/arm Linux 24.9-0: compilation successful
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/opt '-passes=default<O3>' --fp-contract=fast -slp-vectorize-hor=false -nvhpc-select-opt -nvhpc-deinterleave-opt -nvhpc-func-attrs -nvhpc-unswitch-loops-with-trip-count=2 -mcpu=native /tmp/nvc++ts0Dm5thejlef.ll -S -o /tmp/nvc++Rs0DmbZHAB6RX.llvm
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/llc /tmp/nvc++Rs0DmbZHAB6RX.llvm -mcpu=native -O3 -aarch64-sve-vector-bits-min=128 -aarch64-sve-vector-bits-max=128 -enable-complex-deinterleaving=false -dwarf-directory=false --fp-contract=fast -non-global-value-max-name-size=4294967295 --align-all-functions=6 -lsr-complexity-limit=131072 -nvhpc-fusion -nvhpc-tbl-opt -nvhpc-memzero -filetype=obj --frame-pointer=none -o BoxPartition.o
+Unlinking /tmp/nvc++Js0DmPG_c1rQC.il
+Unlinking /tmp/nvc++7s0DmXLsykbMQ.s
+Unlinking /tmp/nvc++ts0Dm5thejlef.ll
+Unlinking /tmp/nvc++Rs0DmbZHAB6RX.llvm
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvcpfe -- -D__GNUC__=11 -D__GNUC_MINOR__=4 -D__GNUC_PATCHLEVEL__=1 -D__STDC_HOSTED__ -I- -I. -I../utils -I../fem -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include-stdexec --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11 --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/aarch64-redhat-linux --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/backward --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/include --sys_include /usr/local/include --sys_include /usr/include -D__PGLLVM__ -D__NVCOMPILER_LLVM__ -D__extension__= -D__linux__ -D__linux -D__ELF__ -D__LITTLE_ENDIAN__ -Dlinux -Dunix -D__arm64__ -D__aarch64__ -D__LP64__ -D__ARM_ARCH_8__ -D__AARCH64EL__ -D__ARM_ARCH_PROFILE='A' -D__ARM_64BIT_STATE -D__ARM_PCS_AAPCS64 -D__ARM_ARCH_ISA_A64 -D__ARM_FEATURE_CLZ -D__ARM_FEATURE_FMA -D__ARM_FEATURE_LDREX=0xF -D__ARM_FEATURE_DIV -D__ARM_FEATURE_NUMERIC_MAXMIN -D__ARM_FEATURE_IDIV -D__ARM_FEATURE_DIRECTED_ROUNDING -D__ARM_ALIGN_MAX_STACK_PWR=4 -D__ARM_STATE_ZA -D__ARM_STATE_ZT0 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FP=0xC -D__ARM_SIZEOF_WCHAR_T=4 -D__ARM_SIZEOF_MINIMAL_ENUM=4 -D__ARM_NEON -D__ARM_NEON_FP=0xC -D__FP_FAST_FMA -D__FP_FAST_FMAF -D__AARCH64_CMODEL_SMALL__ -D__ARM_ARCH=9 -D__ARM_FEATURE_QRDMX -D__ARM_FEATURE_JCVT -D__ARM_FEATURE_FRINT -D__ARM_FEATURE_BTI -D__ARM_FEATURE_ATOMICS -D__ARM_FEATURE_COMPLEX -D__ARM_FEATURE_SVE -D__ARM_FEATURE_SVE_VECTOR_OPERATORS=2 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FEATURE_SVE_BITS=128 -D__ARM_FEATURE_CRC32 -D__ARM_FEATURE_RCPC=1 -D__ARM_FEATURE_CRYPTO -D__ARM_FEATURE_AES -D__ARM_FEATURE_SHA2 -D__ARM_FEATURE_SHA3 -D__ARM_FEATURE_SHA512 -D__ARM_FEATURE_SM3 -D__ARM_FEATURE_SM4 -D__ARM_FEATURE_UNALIGNED -D__ARM_FEATURE_DOTPROD -D__ARM_FEATURE_MATMUL_INT8 -D__ARM_FEATURE_SVE_MATMUL_INT8 -D__arm64__ -D__aarch64__ -D__PGI -D__NVCOMPILER -D__NVCOMPILER_OPENMP_GPU -D__NVCOMPILER_OPENMP_MULTICORE -D_OPENMP=202011 -DCUDA_VERSION=12060 -DPGI_TESLA_TARGET -D_PGI_HX -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 --preinclude _cplus_preinclude.h --preinclude_macros _cplus_macros.h --float128 --gnu_version=110401 -D__pgnu_vsn=110401 --target_gpu --mp -D_OPENMP=202011 -D_NVHPC_RDC -q -o /tmp/nvc++V_kEmnHpzTZQH.il YAML_Doc.cpp -- YAML_Doc.cpp -opt 3 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 28 0x40000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -vect 56 -y 34 16 -x 37 0x480000 -x 34 0x8 -y 19 8 -y 35 0 -x 42 0x30 -x 42 0x20000 -x 39 0x80 -x 34 0x400000 -x 149 1 -x 150 1 -tp neoverse-v2 -x 120 0x1000 -x 119 0x8000000 -astype 0 -x 121 1 -fn YAML_Doc.cpp -il /tmp/nvc++V_kEmnHpzTZQH.il -x 117 0x200 -x 123 0x80000000 -x 123 4 -x 122 0x10 -x 70 0x40000000 -x 183 4 -x 121 0x800 -x 122 0x1 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -x 249 170 -x 8 0x40000000 -x 164 0x800000 -x 68 0x1 -x 56 0x10 -x 26 0x10 -x 26 1 -x 49 0x40000000 -x 56 0x4000 -x 71 0x2000 -x 71 0x4000 -x 34 0x40000000 -x 77 0x04 -x 206 0x02 -x 120 0x1000000 -x 73 0x04 -x 231 0x800 -accel tesla -x 197 0 -x 175 0 -x 203 0 -x 204 0 -x 227 0xFFFF -x 180 0x4000400 -x 121 0xc00 -x 186 0x80 -x 163 0x1 -x 186 0x80000 -cudaver 12060 -x 194 0x40000 -x 176 0x100 -cudacap 90 -x 163 0x200 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 176 0x100 -cudacap 90 -x 189 0x8000 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 187 0x40000 -x 187 0x8000000 -x 60 512 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 129 2 -x 129 4 -y 129 0x400 -y 129 0x8000 -quad -x 119 0x10000000 -x 56 0x2 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 0 0x1000000 -x 2 0x100000 -x 0 0x2000000 -x 161 0x6CFF6 -x 162 0x6CFF6 -mp -x 69 0x200 -x 69 0x400 -x 69 2 -x 183 0x2000000 -gnuvsn 110401 -x 123 0x400 -x 180 0x4000000 -x 194 0x20000000 -x 251 0x2 -x 233 0x1 -x 205 2 -x 233 0x100 -x 233 0x400 -cmdline '+nvc++ YAML_Doc.cpp -v -O3 -Mvect=simd -Mflushz -Mcache_align -Mfactorize -Mno-signed-zeros -Minline_cpu_f -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c' -asm /tmp/nvc++F_kEmDbPBjuFv.ll
+YAML_Element::YAML_Element():
+         690, Loop not vectorized/parallelized: not countable
+         690, Loop not vectorized/parallelized: not countable
+YAML_Doc::generateYAML[abi:cxx11]():
+         536, Loop not vectorized/parallelized: not countable
+std::char_traits<char>::length(char const*):
+         171, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::operator=(char const*):
+        1459, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         536, Loop not vectorized/parallelized: not countable
+__gnu_cxx::char_traits<char>::length(char const*):
+     33, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                        171, Loop not vectorized/parallelized: not countable
+std::basic_ostream<char, std::char_traits<char>>& std::operator<<<char, std::char_traits<char>, std::allocator<char>>(std::basic_ostream<char, std::char_traits<char>>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&):
+     33, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, char const*):
+        1258, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&, char const*):
+        1258, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&):
+     33, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&):
+     33, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+         397, Loop not vectorized/parallelized: not countable
+NVC++/arm Linux 24.9-0: compilation successful
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/opt '-passes=default<O3>' --fp-contract=fast -slp-vectorize-hor=false -nvhpc-select-opt -nvhpc-deinterleave-opt -nvhpc-func-attrs -nvhpc-unswitch-loops-with-trip-count=2 -mcpu=native /tmp/nvc++F_kEmDbPBjuFv.ll -S -o /tmp/nvc++x_kEmfnre87wH.llvm
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/llc /tmp/nvc++x_kEmfnre87wH.llvm -mcpu=native -O3 -aarch64-sve-vector-bits-min=128 -aarch64-sve-vector-bits-max=128 -enable-complex-deinterleaving=false -dwarf-directory=false --fp-contract=fast -non-global-value-max-name-size=4294967295 --align-all-functions=6 -lsr-complexity-limit=131072 -nvhpc-fusion -nvhpc-tbl-opt -nvhpc-memzero -filetype=obj --frame-pointer=none -o YAML_Doc.o
+Unlinking /tmp/nvc++V_kEmnHpzTZQH.il
+Unlinking /tmp/nvc++N_kEm1QRwkqho.s
+Unlinking /tmp/nvc++F_kEmDbPBjuFv.ll
+Unlinking /tmp/nvc++x_kEmfnre87wH.llvm
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvcpfe -- -D__GNUC__=11 -D__GNUC_MINOR__=4 -D__GNUC_PATCHLEVEL__=1 -D__STDC_HOSTED__ -I- -I. -I../utils -I../fem -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include-stdexec --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11 --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/aarch64-redhat-linux --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/backward --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/include --sys_include /usr/local/include --sys_include /usr/include -D__PGLLVM__ -D__NVCOMPILER_LLVM__ -D__extension__= -D__linux__ -D__linux -D__ELF__ -D__LITTLE_ENDIAN__ -Dlinux -Dunix -D__arm64__ -D__aarch64__ -D__LP64__ -D__ARM_ARCH_8__ -D__AARCH64EL__ -D__ARM_ARCH_PROFILE='A' -D__ARM_64BIT_STATE -D__ARM_PCS_AAPCS64 -D__ARM_ARCH_ISA_A64 -D__ARM_FEATURE_CLZ -D__ARM_FEATURE_FMA -D__ARM_FEATURE_LDREX=0xF -D__ARM_FEATURE_DIV -D__ARM_FEATURE_NUMERIC_MAXMIN -D__ARM_FEATURE_IDIV -D__ARM_FEATURE_DIRECTED_ROUNDING -D__ARM_ALIGN_MAX_STACK_PWR=4 -D__ARM_STATE_ZA -D__ARM_STATE_ZT0 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FP=0xC -D__ARM_SIZEOF_WCHAR_T=4 -D__ARM_SIZEOF_MINIMAL_ENUM=4 -D__ARM_NEON -D__ARM_NEON_FP=0xC -D__FP_FAST_FMA -D__FP_FAST_FMAF -D__AARCH64_CMODEL_SMALL__ -D__ARM_ARCH=9 -D__ARM_FEATURE_QRDMX -D__ARM_FEATURE_JCVT -D__ARM_FEATURE_FRINT -D__ARM_FEATURE_BTI -D__ARM_FEATURE_ATOMICS -D__ARM_FEATURE_COMPLEX -D__ARM_FEATURE_SVE -D__ARM_FEATURE_SVE_VECTOR_OPERATORS=2 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FEATURE_SVE_BITS=128 -D__ARM_FEATURE_CRC32 -D__ARM_FEATURE_RCPC=1 -D__ARM_FEATURE_CRYPTO -D__ARM_FEATURE_AES -D__ARM_FEATURE_SHA2 -D__ARM_FEATURE_SHA3 -D__ARM_FEATURE_SHA512 -D__ARM_FEATURE_SM3 -D__ARM_FEATURE_SM4 -D__ARM_FEATURE_UNALIGNED -D__ARM_FEATURE_DOTPROD -D__ARM_FEATURE_MATMUL_INT8 -D__ARM_FEATURE_SVE_MATMUL_INT8 -D__arm64__ -D__aarch64__ -D__PGI -D__NVCOMPILER -D__NVCOMPILER_OPENMP_GPU -D__NVCOMPILER_OPENMP_MULTICORE -D_OPENMP=202011 -DCUDA_VERSION=12060 -DPGI_TESLA_TARGET -D_PGI_HX -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 --preinclude _cplus_preinclude.h --preinclude_macros _cplus_macros.h --float128 --gnu_version=110401 -D__pgnu_vsn=110401 --target_gpu --mp -D_OPENMP=202011 -D_NVHPC_RDC -q -o /tmp/nvc++IVSEmMGvj4XZ1.il YAML_Element.cpp -- YAML_Element.cpp -opt 3 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 28 0x40000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -vect 56 -y 34 16 -x 37 0x480000 -x 34 0x8 -y 19 8 -y 35 0 -x 42 0x30 -x 42 0x20000 -x 39 0x80 -x 34 0x400000 -x 149 1 -x 150 1 -tp neoverse-v2 -x 120 0x1000 -x 119 0x8000000 -astype 0 -x 121 1 -fn YAML_Element.cpp -il /tmp/nvc++IVSEmMGvj4XZ1.il -x 117 0x200 -x 123 0x80000000 -x 123 4 -x 122 0x10 -x 70 0x40000000 -x 183 4 -x 121 0x800 -x 122 0x1 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -x 249 170 -x 8 0x40000000 -x 164 0x800000 -x 68 0x1 -x 56 0x10 -x 26 0x10 -x 26 1 -x 49 0x40000000 -x 56 0x4000 -x 71 0x2000 -x 71 0x4000 -x 34 0x40000000 -x 77 0x04 -x 206 0x02 -x 120 0x1000000 -x 73 0x04 -x 231 0x800 -accel tesla -x 197 0 -x 175 0 -x 203 0 -x 204 0 -x 227 0xFFFF -x 180 0x4000400 -x 121 0xc00 -x 186 0x80 -x 163 0x1 -x 186 0x80000 -cudaver 12060 -x 194 0x40000 -x 176 0x100 -cudacap 90 -x 163 0x200 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 176 0x100 -cudacap 90 -x 189 0x8000 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 187 0x40000 -x 187 0x8000000 -x 60 512 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 129 2 -x 129 4 -y 129 0x400 -y 129 0x8000 -quad -x 119 0x10000000 -x 56 0x2 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 0 0x1000000 -x 2 0x100000 -x 0 0x2000000 -x 161 0x6CFF6 -x 162 0x6CFF6 -mp -x 69 0x200 -x 69 0x400 -x 69 2 -x 183 0x2000000 -gnuvsn 110401 -x 123 0x400 -x 180 0x4000000 -x 194 0x20000000 -x 251 0x2 -x 233 0x1 -x 205 2 -x 233 0x100 -x 233 0x400 -cmdline '+nvc++ YAML_Element.cpp -v -O3 -Mvect=simd -Mflushz -Mcache_align -Mfactorize -Mno-signed-zeros -Minline_cpu_f -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c' -asm /tmp/nvc++cVSEmgqo2mGz0.ll
+YAML_Element::~YAML_Element():
+     41, Loop not vectorized/parallelized: contains call
+YAML_Element::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, double):
+         690, Loop not vectorized/parallelized: not countable
+YAML_Element::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int):
+         690, Loop not vectorized/parallelized: not countable
+YAML_Element::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, long long):
+         690, Loop not vectorized/parallelized: not countable
+YAML_Element::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long):
+         690, Loop not vectorized/parallelized: not countable
+YAML_Element::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&):
+         690, Loop not vectorized/parallelized: not countable
+YAML_Element::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&):
+    101, Loop not vectorized/parallelized: potential early exits
+YAML_Element::printYAML(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>):
+    116, Loop not vectorized/parallelized: potential early exits
+    117, Loop not vectorized/parallelized: potential early exits
+std::char_traits<char>::length(char const*):
+         171, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::operator=(char const*):
+        1459, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::append(char const*):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*):
+         397, Loop not vectorized/parallelized: not countable
+__gnu_cxx::char_traits<char>::length(char const*):
+     30, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+                    40, include "char_traits.h"
+                        171, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, char const*):
+        1258, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&, char const*):
+        1258, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&):
+     30, include "iostream"
+          39, include "ostream"
+               38, include "ios"
+NVC++/arm Linux 24.9-0: compilation successful
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/opt '-passes=default<O3>' --fp-contract=fast -slp-vectorize-hor=false -nvhpc-select-opt -nvhpc-deinterleave-opt -nvhpc-func-attrs -nvhpc-unswitch-loops-with-trip-count=2 -mcpu=native /tmp/nvc++cVSEmgqo2mGz0.ll -S -o /tmp/nvc++sVSEm2qaXCUWW.llvm
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/llc /tmp/nvc++sVSEm2qaXCUWW.llvm -mcpu=native -O3 -aarch64-sve-vector-bits-min=128 -aarch64-sve-vector-bits-max=128 -enable-complex-deinterleaving=false -dwarf-directory=false --fp-contract=fast -non-global-value-max-name-size=4294967295 --align-all-functions=6 -lsr-complexity-limit=131072 -nvhpc-fusion -nvhpc-tbl-opt -nvhpc-memzero -filetype=obj --frame-pointer=none -o YAML_Element.o
+Unlinking /tmp/nvc++IVSEmMGvj4XZ1.il
+Unlinking /tmp/nvc++YVSEmwLbnxG3S.s
+Unlinking /tmp/nvc++cVSEmgqo2mGz0.ll
+Unlinking /tmp/nvc++sVSEm2qaXCUWW.llvm
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvcpfe -- -D__GNUC__=11 -D__GNUC_MINOR__=4 -D__GNUC_PATCHLEVEL__=1 -D__STDC_HOSTED__ -I- -I. -I../utils -I../fem -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include-stdexec --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11 --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/aarch64-redhat-linux --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/backward --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/include --sys_include /usr/local/include --sys_include /usr/include -D__PGLLVM__ -D__NVCOMPILER_LLVM__ -D__extension__= -D__linux__ -D__linux -D__ELF__ -D__LITTLE_ENDIAN__ -Dlinux -Dunix -D__arm64__ -D__aarch64__ -D__LP64__ -D__ARM_ARCH_8__ -D__AARCH64EL__ -D__ARM_ARCH_PROFILE='A' -D__ARM_64BIT_STATE -D__ARM_PCS_AAPCS64 -D__ARM_ARCH_ISA_A64 -D__ARM_FEATURE_CLZ -D__ARM_FEATURE_FMA -D__ARM_FEATURE_LDREX=0xF -D__ARM_FEATURE_DIV -D__ARM_FEATURE_NUMERIC_MAXMIN -D__ARM_FEATURE_IDIV -D__ARM_FEATURE_DIRECTED_ROUNDING -D__ARM_ALIGN_MAX_STACK_PWR=4 -D__ARM_STATE_ZA -D__ARM_STATE_ZT0 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FP=0xC -D__ARM_SIZEOF_WCHAR_T=4 -D__ARM_SIZEOF_MINIMAL_ENUM=4 -D__ARM_NEON -D__ARM_NEON_FP=0xC -D__FP_FAST_FMA -D__FP_FAST_FMAF -D__AARCH64_CMODEL_SMALL__ -D__ARM_ARCH=9 -D__ARM_FEATURE_QRDMX -D__ARM_FEATURE_JCVT -D__ARM_FEATURE_FRINT -D__ARM_FEATURE_BTI -D__ARM_FEATURE_ATOMICS -D__ARM_FEATURE_COMPLEX -D__ARM_FEATURE_SVE -D__ARM_FEATURE_SVE_VECTOR_OPERATORS=2 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FEATURE_SVE_BITS=128 -D__ARM_FEATURE_CRC32 -D__ARM_FEATURE_RCPC=1 -D__ARM_FEATURE_CRYPTO -D__ARM_FEATURE_AES -D__ARM_FEATURE_SHA2 -D__ARM_FEATURE_SHA3 -D__ARM_FEATURE_SHA512 -D__ARM_FEATURE_SM3 -D__ARM_FEATURE_SM4 -D__ARM_FEATURE_UNALIGNED -D__ARM_FEATURE_DOTPROD -D__ARM_FEATURE_MATMUL_INT8 -D__ARM_FEATURE_SVE_MATMUL_INT8 -D__arm64__ -D__aarch64__ -D__PGI -D__NVCOMPILER -D__NVCOMPILER_OPENMP_GPU -D__NVCOMPILER_OPENMP_MULTICORE -D_OPENMP=202011 -DCUDA_VERSION=12060 -DPGI_TESLA_TARGET -D_PGI_HX -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 --preinclude _cplus_preinclude.h --preinclude_macros _cplus_macros.h --float128 --gnu_version=110401 -D__pgnu_vsn=110401 --target_gpu --mp -D_OPENMP=202011 -D_NVHPC_RDC -q -o /tmp/nvc++TbfFmhH0ZBtnQ.il ../utils/param_utils.cpp -- ../utils/param_utils.cpp -opt 3 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 28 0x40000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -vect 56 -y 34 16 -x 37 0x480000 -x 34 0x8 -y 19 8 -y 35 0 -x 42 0x30 -x 42 0x20000 -x 39 0x80 -x 34 0x400000 -x 149 1 -x 150 1 -tp neoverse-v2 -x 120 0x1000 -x 119 0x8000000 -astype 0 -x 121 1 -fn ../utils/param_utils.cpp -il /tmp/nvc++TbfFmhH0ZBtnQ.il -x 117 0x200 -x 123 0x80000000 -x 123 4 -x 122 0x10 -x 70 0x40000000 -x 183 4 -x 121 0x800 -x 122 0x1 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -x 249 170 -x 8 0x40000000 -x 164 0x800000 -x 68 0x1 -x 56 0x10 -x 26 0x10 -x 26 1 -x 49 0x40000000 -x 56 0x4000 -x 71 0x2000 -x 71 0x4000 -x 34 0x40000000 -x 77 0x04 -x 206 0x02 -x 120 0x1000000 -x 73 0x04 -x 231 0x800 -accel tesla -x 197 0 -x 175 0 -x 203 0 -x 204 0 -x 227 0xFFFF -x 180 0x4000400 -x 121 0xc00 -x 186 0x80 -x 163 0x1 -x 186 0x80000 -cudaver 12060 -x 194 0x40000 -x 176 0x100 -cudacap 90 -x 163 0x200 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 176 0x100 -cudacap 90 -x 189 0x8000 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 187 0x40000 -x 187 0x8000000 -x 60 512 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 129 2 -x 129 4 -y 129 0x400 -y 129 0x8000 -quad -x 119 0x10000000 -x 56 0x2 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 0 0x1000000 -x 2 0x100000 -x 0 0x2000000 -x 161 0x6CFF6 -x 162 0x6CFF6 -mp -x 69 0x200 -x 69 0x400 -x 69 2 -x 183 0x2000000 -gnuvsn 110401 -x 123 0x400 -x 180 0x4000000 -x 194 0x20000000 -x 251 0x2 -x 233 0x1 -x 205 2 -x 233 0x100 -x 233 0x400 -cmdline '+nvc++ ../utils/param_utils.cpp -v -O3 -Mvect=simd -Mflushz -Mcache_align -Mfactorize -Mno-signed-zeros -Minline_cpu_f -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c' -asm /tmp/nvc++9bfFm35DIhDjc.ll
+std::char_traits<char>::length(char const*):
+         171, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::operator=(char const*):
+        1459, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::insert(unsigned long, char const*):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         536, Loop not vectorized/parallelized: not countable
+__gnu_cxx::char_traits<char>::length(char const*):
+     28, include "param_utils.hpp"
+          31, include "string"
+               40, include "char_traits.h"
+                   171, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&):
+     28, include "param_utils.hpp"
+          31, include "string"
+        1728, Loop not vectorized/parallelized: not countable
+Mantevo::read_args_into_string(int, char**, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&):
+         690, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+Mantevo::read_file_into_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&):
+         536, Loop not vectorized/parallelized: not countable
+NVC++/arm Linux 24.9-0: compilation successful
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/opt '-passes=default<O3>' --fp-contract=fast -slp-vectorize-hor=false -nvhpc-select-opt -nvhpc-deinterleave-opt -nvhpc-func-attrs -nvhpc-unswitch-loops-with-trip-count=2 -mcpu=native /tmp/nvc++9bfFm35DIhDjc.ll -S -o /tmp/nvc++LbfFmViTOm52c.llvm
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/llc /tmp/nvc++LbfFmViTOm52c.llvm -mcpu=native -O3 -aarch64-sve-vector-bits-min=128 -aarch64-sve-vector-bits-max=128 -enable-complex-deinterleaving=false -dwarf-directory=false --fp-contract=fast -non-global-value-max-name-size=4294967295 --align-all-functions=6 -lsr-complexity-limit=131072 -nvhpc-fusion -nvhpc-tbl-opt -nvhpc-memzero -filetype=obj --frame-pointer=none -o param_utils.o
+Unlinking /tmp/nvc++TbfFmhH0ZBtnQ.il
+Unlinking /tmp/nvc++vbfFm-P48Knzr.s
+Unlinking /tmp/nvc++9bfFm35DIhDjc.ll
+Unlinking /tmp/nvc++LbfFmViTOm52c.llvm
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvcpfe -- -D__GNUC__=11 -D__GNUC_MINOR__=4 -D__GNUC_PATCHLEVEL__=1 -D__STDC_HOSTED__ -I- -I. -I../utils -I../fem -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include-stdexec --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11 --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/aarch64-redhat-linux --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/backward --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/include --sys_include /usr/local/include --sys_include /usr/include -D__PGLLVM__ -D__NVCOMPILER_LLVM__ -D__extension__= -D__linux__ -D__linux -D__ELF__ -D__LITTLE_ENDIAN__ -Dlinux -Dunix -D__arm64__ -D__aarch64__ -D__LP64__ -D__ARM_ARCH_8__ -D__AARCH64EL__ -D__ARM_ARCH_PROFILE='A' -D__ARM_64BIT_STATE -D__ARM_PCS_AAPCS64 -D__ARM_ARCH_ISA_A64 -D__ARM_FEATURE_CLZ -D__ARM_FEATURE_FMA -D__ARM_FEATURE_LDREX=0xF -D__ARM_FEATURE_DIV -D__ARM_FEATURE_NUMERIC_MAXMIN -D__ARM_FEATURE_IDIV -D__ARM_FEATURE_DIRECTED_ROUNDING -D__ARM_ALIGN_MAX_STACK_PWR=4 -D__ARM_STATE_ZA -D__ARM_STATE_ZT0 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FP=0xC -D__ARM_SIZEOF_WCHAR_T=4 -D__ARM_SIZEOF_MINIMAL_ENUM=4 -D__ARM_NEON -D__ARM_NEON_FP=0xC -D__FP_FAST_FMA -D__FP_FAST_FMAF -D__AARCH64_CMODEL_SMALL__ -D__ARM_ARCH=9 -D__ARM_FEATURE_QRDMX -D__ARM_FEATURE_JCVT -D__ARM_FEATURE_FRINT -D__ARM_FEATURE_BTI -D__ARM_FEATURE_ATOMICS -D__ARM_FEATURE_COMPLEX -D__ARM_FEATURE_SVE -D__ARM_FEATURE_SVE_VECTOR_OPERATORS=2 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FEATURE_SVE_BITS=128 -D__ARM_FEATURE_CRC32 -D__ARM_FEATURE_RCPC=1 -D__ARM_FEATURE_CRYPTO -D__ARM_FEATURE_AES -D__ARM_FEATURE_SHA2 -D__ARM_FEATURE_SHA3 -D__ARM_FEATURE_SHA512 -D__ARM_FEATURE_SM3 -D__ARM_FEATURE_SM4 -D__ARM_FEATURE_UNALIGNED -D__ARM_FEATURE_DOTPROD -D__ARM_FEATURE_MATMUL_INT8 -D__ARM_FEATURE_SVE_MATMUL_INT8 -D__arm64__ -D__aarch64__ -D__PGI -D__NVCOMPILER -D__NVCOMPILER_OPENMP_GPU -D__NVCOMPILER_OPENMP_MULTICORE -D_OPENMP=202011 -DCUDA_VERSION=12060 -DPGI_TESLA_TARGET -D_PGI_HX -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 --preinclude _cplus_preinclude.h --preinclude_macros _cplus_macros.h --float128 --gnu_version=110401 -D__pgnu_vsn=110401 --target_gpu --mp -D_OPENMP=202011 -D_NVHPC_RDC -q -o /tmp/nvc++yCHFmiGQtsqWT.il ../utils/utils.cpp -- ../utils/utils.cpp -opt 3 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 28 0x40000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -vect 56 -y 34 16 -x 37 0x480000 -x 34 0x8 -y 19 8 -y 35 0 -x 42 0x30 -x 42 0x20000 -x 39 0x80 -x 34 0x400000 -x 149 1 -x 150 1 -tp neoverse-v2 -x 120 0x1000 -x 119 0x8000000 -astype 0 -x 121 1 -fn ../utils/utils.cpp -il /tmp/nvc++yCHFmiGQtsqWT.il -x 117 0x200 -x 123 0x80000000 -x 123 4 -x 122 0x10 -x 70 0x40000000 -x 183 4 -x 121 0x800 -x 122 0x1 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -x 249 170 -x 8 0x40000000 -x 164 0x800000 -x 68 0x1 -x 56 0x10 -x 26 0x10 -x 26 1 -x 49 0x40000000 -x 56 0x4000 -x 71 0x2000 -x 71 0x4000 -x 34 0x40000000 -x 77 0x04 -x 206 0x02 -x 120 0x1000000 -x 73 0x04 -x 231 0x800 -accel tesla -x 197 0 -x 175 0 -x 203 0 -x 204 0 -x 227 0xFFFF -x 180 0x4000400 -x 121 0xc00 -x 186 0x80 -x 163 0x1 -x 186 0x80000 -cudaver 12060 -x 194 0x40000 -x 176 0x100 -cudacap 90 -x 163 0x200 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 176 0x100 -cudacap 90 -x 189 0x8000 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 187 0x40000 -x 187 0x8000000 -x 60 512 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 129 2 -x 129 4 -y 129 0x400 -y 129 0x8000 -quad -x 119 0x10000000 -x 56 0x2 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 0 0x1000000 -x 2 0x100000 -x 0 0x2000000 -x 161 0x6CFF6 -x 162 0x6CFF6 -mp -x 69 0x200 -x 69 0x400 -x 69 2 -x 183 0x2000000 -gnuvsn 110401 -x 123 0x400 -x 180 0x4000000 -x 194 0x20000000 -x 251 0x2 -x 233 0x1 -x 205 2 -x 233 0x100 -x 233 0x400 -cmdline '+nvc++ ../utils/utils.cpp -v -O3 -Mvect=simd -Mflushz -Mcache_align -Mfactorize -Mno-signed-zeros -Minline_cpu_f -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c' -asm /tmp/nvc++yCHFmiQYqgoyf.ll
+std::char_traits<char>::length(char const*):
+         171, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         397, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&):
+         536, Loop not vectorized/parallelized: not countable
+__gnu_cxx::char_traits<char>::length(char const*):
+     29, include "string"
+          40, include "char_traits.h"
+              171, Loop not vectorized/parallelized: not countable
+std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> Mantevo::parse_parameter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&):
+     46, include "param_utils.hpp"
+         132, Loop not vectorized/parallelized: potential early exits
+int Mantevo::parse_parameter<int>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int const&):
+     46, include "param_utils.hpp"
+         132, Loop not vectorized/parallelized: potential early exits
+float Mantevo::parse_parameter<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float const&):
+     46, include "param_utils.hpp"
+         132, Loop not vectorized/parallelized: potential early exits
+miniFE::get_parameters(int, char**, miniFE::Parameters&):
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+         536, Loop not vectorized/parallelized: not countable
+NVC++/arm Linux 24.9-0: compilation successful
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/opt '-passes=default<O3>' --fp-contract=fast -slp-vectorize-hor=false -nvhpc-select-opt -nvhpc-deinterleave-opt -nvhpc-func-attrs -nvhpc-unswitch-loops-with-trip-count=2 -mcpu=native /tmp/nvc++yCHFmiQYqgoyf.ll -S -o /tmp/nvc++yCHFmi7hJPnBk.llvm
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/llc /tmp/nvc++yCHFmi7hJPnBk.llvm -mcpu=native -O3 -aarch64-sve-vector-bits-min=128 -aarch64-sve-vector-bits-max=128 -enable-complex-deinterleaving=false -dwarf-directory=false --fp-contract=fast -non-global-value-max-name-size=4294967295 --align-all-functions=6 -lsr-complexity-limit=131072 -nvhpc-fusion -nvhpc-tbl-opt -nvhpc-memzero -filetype=obj --frame-pointer=none -o utils.o
+Unlinking /tmp/nvc++yCHFmiGQtsqWT.il
+Unlinking /tmp/nvc++yCHFmiH_8nt0z.s
+Unlinking /tmp/nvc++yCHFmiQYqgoyf.ll
+Unlinking /tmp/nvc++yCHFmi7hJPnBk.llvm
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvcpfe -- -D__GNUC__=11 -D__GNUC_MINOR__=4 -D__GNUC_PATCHLEVEL__=1 -D__STDC_HOSTED__ -I- -I. -I../utils -I../fem -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include -I/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/extras/qd/include/qd --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nvshmem/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/nccl/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/comm_libs/openmpi/openmpi-3.1.5/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/math_libs/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/include-stdexec --sys_include /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/include --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11 --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/aarch64-redhat-linux --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/../../../../include/c++/11/backward --sys_include /usr/lib/gcc/aarch64-redhat-linux/11/include --sys_include /usr/local/include --sys_include /usr/include -D__PGLLVM__ -D__NVCOMPILER_LLVM__ -D__extension__= -D__linux__ -D__linux -D__ELF__ -D__LITTLE_ENDIAN__ -Dlinux -Dunix -D__arm64__ -D__aarch64__ -D__LP64__ -D__ARM_ARCH_8__ -D__AARCH64EL__ -D__ARM_ARCH_PROFILE='A' -D__ARM_64BIT_STATE -D__ARM_PCS_AAPCS64 -D__ARM_ARCH_ISA_A64 -D__ARM_FEATURE_CLZ -D__ARM_FEATURE_FMA -D__ARM_FEATURE_LDREX=0xF -D__ARM_FEATURE_DIV -D__ARM_FEATURE_NUMERIC_MAXMIN -D__ARM_FEATURE_IDIV -D__ARM_FEATURE_DIRECTED_ROUNDING -D__ARM_ALIGN_MAX_STACK_PWR=4 -D__ARM_STATE_ZA -D__ARM_STATE_ZT0 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FP=0xC -D__ARM_SIZEOF_WCHAR_T=4 -D__ARM_SIZEOF_MINIMAL_ENUM=4 -D__ARM_NEON -D__ARM_NEON_FP=0xC -D__FP_FAST_FMA -D__FP_FAST_FMAF -D__AARCH64_CMODEL_SMALL__ -D__ARM_ARCH=9 -D__ARM_FEATURE_QRDMX -D__ARM_FEATURE_JCVT -D__ARM_FEATURE_FRINT -D__ARM_FEATURE_BTI -D__ARM_FEATURE_ATOMICS -D__ARM_FEATURE_COMPLEX -D__ARM_FEATURE_SVE -D__ARM_FEATURE_SVE_VECTOR_OPERATORS=2 -D__ARM_NEON_SVE_BRIDGE -D__ARM_FEATURE_SVE_BITS=128 -D__ARM_FEATURE_CRC32 -D__ARM_FEATURE_RCPC=1 -D__ARM_FEATURE_CRYPTO -D__ARM_FEATURE_AES -D__ARM_FEATURE_SHA2 -D__ARM_FEATURE_SHA3 -D__ARM_FEATURE_SHA512 -D__ARM_FEATURE_SM3 -D__ARM_FEATURE_SM4 -D__ARM_FEATURE_UNALIGNED -D__ARM_FEATURE_DOTPROD -D__ARM_FEATURE_MATMUL_INT8 -D__ARM_FEATURE_SVE_MATMUL_INT8 -D__arm64__ -D__aarch64__ -D__PGI -D__NVCOMPILER -D__NVCOMPILER_OPENMP_GPU -D__NVCOMPILER_OPENMP_MULTICORE -D_OPENMP=202011 -DCUDA_VERSION=12060 -DPGI_TESLA_TARGET -D_PGI_HX -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 --preinclude _cplus_preinclude.h --preinclude_macros _cplus_macros.h --float128 --gnu_version=110401 -D__pgnu_vsn=110401 --target_gpu --mp -D_OPENMP=202011 -D_NVHPC_RDC -q -o /tmp/nvc++Cs9FmuGsW2qKe.il ../utils/mytimer.cpp -- ../utils/mytimer.cpp -opt 3 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 28 0x40000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -vect 56 -y 34 16 -x 37 0x480000 -x 34 0x8 -y 19 8 -y 35 0 -x 42 0x30 -x 42 0x20000 -x 39 0x80 -x 34 0x400000 -x 149 1 -x 150 1 -tp neoverse-v2 -x 120 0x1000 -x 119 0x8000000 -astype 0 -x 121 1 -fn ../utils/mytimer.cpp -il /tmp/nvc++Cs9FmuGsW2qKe.il -x 117 0x200 -x 123 0x80000000 -x 123 4 -x 122 0x10 -x 70 0x40000000 -x 183 4 -x 121 0x800 -x 122 0x1 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -autoinl 10 -x 168 400 -x 174 128000 -x 14 0x200000 -x 14 0x400000 -x 249 170 -x 8 0x40000000 -x 164 0x800000 -x 68 0x1 -x 56 0x10 -x 26 0x10 -x 26 1 -x 49 0x40000000 -x 56 0x4000 -x 71 0x2000 -x 71 0x4000 -x 34 0x40000000 -x 77 0x04 -x 206 0x02 -x 120 0x1000000 -x 73 0x04 -x 231 0x800 -accel tesla -x 197 0 -x 175 0 -x 203 0 -x 204 0 -x 227 0xFFFF -x 180 0x4000400 -x 121 0xc00 -x 186 0x80 -x 163 0x1 -x 186 0x80000 -cudaver 12060 -x 194 0x40000 -x 176 0x100 -cudacap 90 -x 163 0x200 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 176 0x100 -cudacap 90 -x 189 0x8000 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -x 187 0x40000 -x 187 0x8000000 -x 60 512 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 129 2 -x 129 4 -y 129 0x400 -y 129 0x8000 -quad -x 119 0x10000000 -x 56 0x2 -x 9 1 -x 42 0x14200000 -x 136 0x11 -x 0 0x1000000 -x 2 0x100000 -x 0 0x2000000 -x 161 0x6CFF6 -x 162 0x6CFF6 -mp -x 69 0x200 -x 69 0x400 -x 69 2 -x 183 0x2000000 -gnuvsn 110401 -x 123 0x400 -x 180 0x4000000 -x 194 0x20000000 -x 251 0x2 -x 233 0x1 -x 205 2 -x 233 0x100 -x 233 0x400 -cmdline '+nvc++ ../utils/mytimer.cpp -v -O3 -Mvect=simd -Mflushz -Mcache_align -Mfactorize -Mno-signed-zeros -Minline_cpu_f -Minfo -mp=gpu -gpu=cc90,fastmath -I. -I../utils -I../fem -DMINIFE_SCALAR=double -DMINIFE_LOCAL_ORDINAL=int -DMINIFE_GLOBAL_ORDINAL=int -DMINIFE_RESTRICT=__restrict__ -DMINIFE_CSR_MATRIX -DMINIFE_INFO=1 -DMINIFE_KERNELS=0 -c' -asm /tmp/nvc++Cs9Fmu5AJIBdU.ll
+NVC++/arm Linux 24.9-0: compilation successful
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/opt '-passes=default<O3>' --fp-contract=fast -slp-vectorize-hor=false -nvhpc-select-opt -nvhpc-deinterleave-opt -nvhpc-func-attrs -nvhpc-unswitch-loops-with-trip-count=2 -mcpu=native /tmp/nvc++Cs9Fmu5AJIBdU.ll -S -o /tmp/nvc++8s9Fm0dY8J3gI.llvm
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/share/llvm/bin/llc /tmp/nvc++8s9Fm0dY8J3gI.llvm -mcpu=native -O3 -aarch64-sve-vector-bits-min=128 -aarch64-sve-vector-bits-max=128 -enable-complex-deinterleaving=false -dwarf-directory=false --fp-contract=fast -non-global-value-max-name-size=4294967295 --align-all-functions=6 -lsr-complexity-limit=131072 -nvhpc-fusion -nvhpc-tbl-opt -nvhpc-memzero -filetype=obj --frame-pointer=none -o mytimer.o
+Unlinking /tmp/nvc++Cs9FmuGsW2qKe.il
+Unlinking /tmp/nvc++8s9Fm0IMqjyGp.s
+Unlinking /tmp/nvc++Cs9Fmu5AJIBdU.ll
+Unlinking /tmp/nvc++8s9Fm0dY8J3gI.llvm
+Export PGI_CURR_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6
+Export NVHPC_CURRENT_CUDA_VERSION=12.6.37
+Export NVCOMPILER=/opt/nvidia/hpc_sdk/Linux_aarch64/24.9
+Export PGI=/opt/nvidia/hpc_sdk
+
+/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/acclnk -nvidia /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/bin/tools/nvdd -cuda12060 -cudaroot /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6 -computecap=90 -computecap=90 -nvvm70 -init=ctxrel /usr/bin/ld /usr/lib64/crt1.o /usr/lib64/crti.o /usr/lib/gcc/aarch64-redhat-linux/11//crtbegin.o --eh-frame-hdr -m aarch64linux -dynamic-linker /lib/ld-linux-aarch64.so.1 -T /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/lib/nvhpc.ld -L/opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/lib -L/usr/lib64 -L/usr/lib/gcc/aarch64-redhat-linux/11/ main.o BoxPartition.o YAML_Doc.o YAML_Element.o param_utils.o utils.o mytimer.o -rpath /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/lib -rpath /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/cuda/12.6/lib64 -o miniFE.x -z now -L/usr/lib/gcc/aarch64-redhat-linux/11//../../../../lib64 /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/lib/acc_init_link_cuda.o /opt/nvidia/hpc_sdk/Linux_aarch64/24.9/compilers/lib/acc_init_link_mp.o -lacchost -laccdevaux -laccdevice --as-needed -lnvhpcman --no-as-needed -ldl -lcudadevice -latomic -lnvhpcatm -lstdc++ -lnvomp -ldl --as-needed -latomic -lnvhpcatm --no-as-needed -ldl -lpthread -lnvcpumath -lnvc -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed -lm /usr/lib/gcc/aarch64-redhat-linux/11//crtend.o /usr/lib64/crtn.o

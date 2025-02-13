@@ -12,7 +12,7 @@ MINIFE_MATRIX_TYPE = -DMINIFE_CSR_MATRIX
 
 #-----------------------------------------------------------------------
 
-CFLAGS = -v -O3 -Minfo -mp=gpu -gpu=cc70,fastmath
+CFLAGS = -v -O3 -Minfo -mp=gpu -gpu=cc90,fastmath
 #	-S -emit-llvm
 #\
 #	-S -emit-llvm
