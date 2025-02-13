@@ -1,1 +1,1 @@
-bash -c "time -p ( ./main ../dxtc2-sycl/data/lena_std.ppm ../dxtc2-sycl/data/lena_ref.dds 100 1>log.std 2>log.err;./main ../dxtc2-sycl/data/teapot512_std.ppm ../dxtc2-sycl/data/teapot512_ref.dds 100 1>>log.std 2>>log.err ) 2> log.time"
+bash -c "time -p ( ./main ../dxtc2-sycl/data/lena_std.ppm ../dxtc2-sycl/data/lena_ref.dds 100 1>log.std 2>log.err ) 2> log.time"
