@@ -1,0 +1,3 @@
+hipcc  -std=c++14 -Wall -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -O3 main.o -o main 
+bash -c "time -p ( ./main 10000000 100 1>log.std 2>log.err ) 2> log.time"

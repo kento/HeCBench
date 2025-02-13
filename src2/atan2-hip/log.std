@@ -1,12 +1,12 @@
 
 ======== output type is f32 ========
-Average execution time: 129.726379 (us)
+Average execution time: 128.579498 (us)
 RMSE: 0.000000
 
 ======== output type is i32 ========
-Average execution time: 124.715019 (us)
+Average execution time: 123.628487 (us)
 RMSE: 1.177096
 
 ======== output type is i16 ========
-Average execution time: 106.474861 (us)
+Average execution time: 106.065887 (us)
 RMSE: 0.000548
