@@ -1,1 +1,4 @@
-bash -c "time -p ( ./main ../sobel-sycl/SobelFilter_Input.bmp 100000 1>log.std 2>log.err ) 2> log.time"
+nvc++  -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
+nvc++  -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc90 -c reference.cpp -o reference.o
+nvc++  -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc90 main.o reference.o -o main 
+bash -c "../sobel-cuda/prepare_data.sh; time -p ( ./main ../sobel-sycl/SobelFilter_Input.bmp 100000 1>log.std 2>log.err ) 2> log.time"
