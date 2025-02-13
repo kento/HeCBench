@@ -29,7 +29,8 @@
 #include <hip/hip_runtime.h>
 #include <iostream>
 #include <limits> // std::numeric_limits
-#include <mma.h>
+//#include <mma.h>
+#include <rocwmma/rocwmma.hpp>
 #include <string>
 #include <vector>
 
