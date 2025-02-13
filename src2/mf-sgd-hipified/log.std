@@ -17,47 +17,7 @@ tr_path    :../../mf-sgd-cuda/src/netflix_test.bin
 va_path    :
 model_path :netflix_test.bin.model
 read problem called
-prob.nnz = 1408395
-m:480094, n:17771, nnz:1408395
-time elapsed:0.06239027s
-
-
-sgd_train called
-grid problem ...
-time elapsed:0.00958225s
-
-
-init model ...
-state_size (a multiple of 256):480256
-	number of thread blocks:150030
-	arraysize:38407520
-grid:0
-state_size (a multiple of 256):17920
-	number of thread blocks:5554
-	arraysize:1421680
-grid:0
-time elapsed:0.28086181s
-
-
-sgd_update_k128 ...
-time elapsed:3.86410845s
-
-
-scale model ...
-time elapsed:0.00657073s
-
-
-shuffle model ...
-time elapsed:0.03897063s
-
-
-save_model ...
-saving feature p(480094)...
-saving feature q(17771)...
-
-training application finished...
-
-
+file ../../mf-sgd-cuda/src/netflix_test.bin open failed
 k          :80
 num_workers:12
 u_grid     :1
@@ -77,44 +37,4 @@ tr_path    :../../mf-sgd-cuda/src/netflix_train.bin
 va_path    :
 model_path :netflix_train.bin.model
 read problem called
-prob.nnz = 99072112
-m:480190, n:17771, nnz:99072112
-time elapsed:3.19798531s
-
-
-sgd_train called
-grid problem ...
-time elapsed:0.67501142s
-
-
-init model ...
-state_size (a multiple of 256):480256
-	number of thread blocks:150060
-	arraysize:38415200
-grid:0
-state_size (a multiple of 256):17920
-	number of thread blocks:5554
-	arraysize:1421680
-grid:0
-time elapsed:0.27971856s
-
-
-sgd_update_k128 ...
-time elapsed:265.62185888s
-
-
-scale model ...
-time elapsed:0.00663605s
-
-
-shuffle model ...
-time elapsed:0.03938244s
-
-
-save_model ...
-saving feature p(480190)...
-saving feature q(17771)...
-
-training application finished...
-
-
+file ../../mf-sgd-cuda/src/netflix_train.bin open failed

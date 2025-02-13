@@ -1,6 +1,6 @@
 Learning
-error: 2.615843e-01
-error: 1.697035e-01
+error: 2.872635e-01
+error: 1.853776e-01
 Testing
-Error Rate: 5.13%
-Total time (learn + test) 75.885076 secs 
+Error Rate: 5.48%
+Total time (learn + test) 69.733833 secs 

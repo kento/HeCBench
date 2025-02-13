@@ -1,0 +1,23 @@
+main.cpp: In lambda function:
+main.cpp:235:14: warning: unused variable 'write_size' [-Wunused-variable]
+  235 |       size_t write_size = fwrite(ptr1, sizeof(float), model->k, fptr);
+      |              ^~~~~~~~~~
+main.cpp: In function 'int save_model(const mf_model*, const char*)':
+main.cpp:214:7: warning: unused variable 'sys_ret' [-Wunused-variable]
+  214 |   int sys_ret = system(command);
+      |       ^~~~~~~
+main.cpp: In function 'int main(int, char**)':
+main.cpp:265:15: warning: unused variable 'error_id' [-Wunused-variable]
+  265 |   cudaError_t error_id = cudaGetDeviceCount(&deviceCount);
+      |               ^~~~~~~~
+sgd_k128_kernel_hogwild_warp32.h(41): error: identifier "__shfl" is undefined
+        start_id = __shfl(start_id, 0);
+                   ^
+
+sgd_k128_kernel_hogwild_warp32.h(70): error: identifier "__shfl_down" is undefined
+          tmp_product += __shfl_down(tmp_product, 16);
+                         ^
+
+2 errors detected in the compilation of "sgd.cu".
+make[1]: *** [Makefile:53: sgd.o] Error 1
+make: *** [Makefile.NVD:2: run] Error 2

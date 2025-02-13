@@ -1,3 +1,9 @@
 nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -c main.cu -o main.o
 nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 main.o -o main 
-bash -c "time -p ( ./main 2 1>log.std 2>log.err ) 2> log.time"
+bash -c "../mnist-cuda/prepare_data.sh; time -p ( ./main 2 1>log.std 2>log.err ) 2> log.time"
+Archive:  ../mnist-cuda/data.zip
+   creating: data/
+  inflating: data/t10k-labels.idx1-ubyte  
+  inflating: data/t10k-images.idx3-ubyte  
+  inflating: data/train-labels.idx1-ubyte  
+  inflating: data/train-images.idx3-ubyte  

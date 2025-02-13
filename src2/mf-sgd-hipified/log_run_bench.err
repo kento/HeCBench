@@ -1,0 +1,20 @@
+main.cpp:235:14: warning: unused variable 'write_size' [-Wunused-variable]
+  235 |       size_t write_size = fwrite(ptr1, sizeof(float), model->k, fptr);
+      |              ^~~~~~~~~~
+main.cpp:214:7: warning: unused variable 'sys_ret' [-Wunused-variable]
+  214 |   int sys_ret = system(command);
+      |       ^~~~~~~
+main.cpp:265:14: warning: unused variable 'error_id' [-Wunused-variable]
+  265 |   hipError_t error_id = hipGetDeviceCount(&deviceCount);
+      |              ^~~~~~~~
+3 warnings generated when compiling for gfx90a.
+main.cpp:235:14: warning: unused variable 'write_size' [-Wunused-variable]
+  235 |       size_t write_size = fwrite(ptr1, sizeof(float), model->k, fptr);
+      |              ^~~~~~~~~~
+main.cpp:214:7: warning: unused variable 'sys_ret' [-Wunused-variable]
+  214 |   int sys_ret = system(command);
+      |       ^~~~~~~
+main.cpp:265:14: warning: unused variable 'error_id' [-Wunused-variable]
+  265 |   hipError_t error_id = hipGetDeviceCount(&deviceCount);
+      |              ^~~~~~~~
+3 warnings generated when compiling for host.
