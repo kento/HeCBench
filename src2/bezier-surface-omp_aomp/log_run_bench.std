@@ -1,0 +1,1 @@
+bash -c "time -p ( ./bs -n 8192 1>log.std 2>log.err ) 2> log.time"
