@@ -1,0 +1,198 @@
+CImg.h(4362): warning #186-D: pointless comparison of unsigned integer with zero
+        return x>=0?x%m:(x%m?m+x%m:0);
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+CImg.h(4362): warning #186-D: pointless comparison of unsigned integer with zero
+        return x>=0?x%m:(x%m?m+x%m:0);
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+CImg.h: In instantiation of 'unsigned int cimg_library::CImg<T>::_cimg_math_parser::compile(char*, char*) [with T = float]':
+CImg.h:14274:12:   required from 'cimg_library::CImg<T>::_cimg_math_parser::_cimg_math_parser(const cimg_library::CImg<T>&, const char*, const char*) [with T = float]'
+CImg.h:16538:8:   required from 'double cimg_library::CImg<T>::eval(const char*, double, double, double, double) const [with T = float]'
+CImg.h:49646:18:   required from here
+CImg.h:14351:96: warning: array subscript has type 'char' [-Wchar-subscripts]
+14351 |           case 'x' : case 'y' : case 'z' : case 'c' : case 'e' : _cimg_mp_return(label1pos[*ss]);
+      |                                                                                     ~~~~~~~~~~~^
+CImg.h:14436:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+14436 |             } else label1pos[*variable_name] = pos; // Single-char variable.
+      |             ~~~~~~~~~^~~~~~~~~~~~~~~~~
+CImg.h:14679:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+14679 |         } else if (label1pos[*variable_name]!=~0U) _cimg_mp_return(label1pos[*variable_name]); // Single-char variable.
+      |              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+CImg.h:14679:94: warning: array subscript has type 'char' [-Wchar-subscripts]
+14679 |         } else if (label1pos[*variable_name]!=~0U) _cimg_mp_return(label1pos[*variable_name]); // Single-char variable.
+      |                                                                                   ~~~~~~~~~~~^
+CImg.h: In instantiation of 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(const cimg_library::CImg<T>&, unsigned int, bool) [with T = char]':
+CImg.h:46545:44:   required from 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(unsigned int, unsigned int) [with T = char]'
+CImg.h:10384:20:   required from 'cimg_library::CImgList<t>& cimg_library::CImg<T>::move_to(cimg_library::CImgList<t>&, unsigned int) [with t = char; T = char]'
+CImg.h:14433:22:   required from 'unsigned int cimg_library::CImg<T>::_cimg_math_parser::compile(char*, char*) [with T = float]'
+CImg.h:14274:12:   required from 'cimg_library::CImg<T>::_cimg_math_parser::_cimg_math_parser(const cimg_library::CImg<T>&, const char*, const char*) [with T = float]'
+CImg.h:16538:8:   required from 'double cimg_library::CImg<T>::eval(const char*, double, double, double, double) const [with T = float]'
+CImg.h:49646:18:   required from here
+CImg.h:46494:24: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<char>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46494 |           if (npos) std::memcpy(new_data,_data,sizeof(CImg<T>)*npos);
+      |             ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CImg.h:9355:8: note: 'struct cimg_library::CImg<char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46495:44: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<char>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46495 |           if (npos!=_width-1) std::memcpy(new_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                           
+CImg.h:9355:8: note: 'struct cimg_library::CImg<char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46508:12: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct cimg_library::CImg<char>' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+46508 |           std::memset(_data,0,sizeof(CImg<T>)*(_width-1));
+      |           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+CImg.h:9355:8: note: 'struct cimg_library::CImg<char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46512:45: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<char>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46512 |           if (npos!=_width-1) std::memmove(_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             
+CImg.h:9355:8: note: 'struct cimg_library::CImg<char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h: In instantiation of 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(const cimg_library::CImg<T>&, unsigned int, bool) [with T = long int]':
+CImg.h:46545:44:   required from 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(unsigned int, unsigned int) [with T = long int]'
+CImg.h:10384:20:   required from 'cimg_library::CImgList<t>& cimg_library::CImg<T>::move_to(cimg_library::CImgList<t>&, unsigned int) [with t = long int; T = long int]'
+CImg.h:14445:126:   required from 'unsigned int cimg_library::CImg<T>::_cimg_math_parser::compile(char*, char*) [with T = float]'
+CImg.h:14274:12:   required from 'cimg_library::CImg<T>::_cimg_math_parser::_cimg_math_parser(const cimg_library::CImg<T>&, const char*, const char*) [with T = float]'
+CImg.h:16538:8:   required from 'double cimg_library::CImg<T>::eval(const char*, double, double, double, double) const [with T = float]'
+CImg.h:49646:18:   required from here
+CImg.h:46494:24: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<long int>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46494 |           if (npos) std::memcpy(new_data,_data,sizeof(CImg<T>)*npos);
+      |             ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CImg.h:9355:8: note: 'struct cimg_library::CImg<long int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46495:44: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<long int>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46495 |           if (npos!=_width-1) std::memcpy(new_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                           
+CImg.h:9355:8: note: 'struct cimg_library::CImg<long int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46508:12: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct cimg_library::CImg<long int>' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+46508 |           std::memset(_data,0,sizeof(CImg<T>)*(_width-1));
+      |           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+CImg.h:9355:8: note: 'struct cimg_library::CImg<long int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46512:45: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<long int>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46512 |           if (npos!=_width-1) std::memmove(_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             
+CImg.h:9355:8: note: 'struct cimg_library::CImg<long int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h: In instantiation of 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(const cimg_library::CImg<T>&, unsigned int, bool) [with T = unsigned char]':
+CImg.h:46545:44:   required from 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(unsigned int, unsigned int) [with T = unsigned char]'
+CImg.h:10384:20:   required from 'cimg_library::CImgList<t>& cimg_library::CImg<T>::move_to(cimg_library::CImgList<t>&, unsigned int) [with t = unsigned char; T = unsigned char]'
+CImg.h:24234:85:   required from 'cimg_library::CImgList<T> cimg_library::CImg<T>::get_split(char, int) const [with T = unsigned char]'
+CImg.h:44248:10:   required from 'const cimg_library::CImg<T>& cimg_library::CImg<T>::save_yuv(const char*, bool) const [with T = unsigned char]'
+CImg.h:42485:55:   required from 'const cimg_library::CImg<T>& cimg_library::CImg<T>::save(const char*, int, unsigned int) const [with T = unsigned char]'
+main.cu:372:15:   required from here
+CImg.h:46494:24: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<unsigned char>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46494 |           if (npos) std::memcpy(new_data,_data,sizeof(CImg<T>)*npos);
+      |             ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46495:44: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<unsigned char>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46495 |           if (npos!=_width-1) std::memcpy(new_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                           
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46508:12: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct cimg_library::CImg<unsigned char>' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+46508 |           std::memset(_data,0,sizeof(CImg<T>)*(_width-1));
+      |           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46512:45: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<unsigned char>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46512 |           if (npos!=_width-1) std::memmove(_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned char>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h: In instantiation of 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(const cimg_library::CImg<T>&, unsigned int, bool) [with T = float]':
+CImg.h:46545:44:   required from 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(unsigned int, unsigned int) [with T = float]'
+CImg.h:10384:20:   required from 'cimg_library::CImgList<t>& cimg_library::CImg<T>::move_to(cimg_library::CImgList<t>&, unsigned int) [with t = float; T = float]'
+CImg.h:47654:134:   required from 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::load_parrec(const char*) [with T = unsigned char]'
+CImg.h:40519:17:   required from 'cimg_library::CImg<T>& cimg_library::CImg<T>::load_parrec(const char*, char, float) [with T = unsigned char]'
+CImg.h:38326:1:   required from 'cimg_library::CImg<T>& cimg_library::CImg<T>::load(const char*) [with T = unsigned char]'
+CImg.h:10250:8:   required from 'cimg_library::CImg<T>& cimg_library::CImg<T>::assign(const char*) [with T = unsigned char]'
+CImg.h:9897:7:   required from 'cimg_library::CImg<T>::CImg(const char*) [with T = unsigned char]'
+main.cu:36:50:   required from here
+CImg.h:46494:24: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<float>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46494 |           if (npos) std::memcpy(new_data,_data,sizeof(CImg<T>)*npos);
+      |             ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CImg.h:9355:8: note: 'struct cimg_library::CImg<float>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46495:44: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<float>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46495 |           if (npos!=_width-1) std::memcpy(new_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                           
+CImg.h:9355:8: note: 'struct cimg_library::CImg<float>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46508:12: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct cimg_library::CImg<float>' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+46508 |           std::memset(_data,0,sizeof(CImg<T>)*(_width-1));
+      |           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+CImg.h:9355:8: note: 'struct cimg_library::CImg<float>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46512:45: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<float>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46512 |           if (npos!=_width-1) std::memmove(_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             
+CImg.h:9355:8: note: 'struct cimg_library::CImg<float>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h: In instantiation of 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(const cimg_library::CImg<T>&, unsigned int, bool) [with T = unsigned int]':
+CImg.h:46545:44:   required from 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::insert(unsigned int, unsigned int) [with T = unsigned int]'
+CImg.h:10384:20:   required from 'cimg_library::CImgList<t>& cimg_library::CImg<T>::move_to(cimg_library::CImgList<t>&, unsigned int) [with t = unsigned int; T = unsigned int]'
+CImg.h:47656:116:   required from 'cimg_library::CImgList<T>& cimg_library::CImgList<T>::load_parrec(const char*) [with T = unsigned char]'
+CImg.h:40519:17:   required from 'cimg_library::CImg<T>& cimg_library::CImg<T>::load_parrec(const char*, char, float) [with T = unsigned char]'
+CImg.h:38326:1:   required from 'cimg_library::CImg<T>& cimg_library::CImg<T>::load(const char*) [with T = unsigned char]'
+CImg.h:10250:8:   required from 'cimg_library::CImg<T>& cimg_library::CImg<T>::assign(const char*) [with T = unsigned char]'
+CImg.h:9897:7:   required from 'cimg_library::CImg<T>::CImg(const char*) [with T = unsigned char]'
+main.cu:36:50:   required from here
+CImg.h:46494:24: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<unsigned int>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46494 |           if (npos) std::memcpy(new_data,_data,sizeof(CImg<T>)*npos);
+      |             ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46495:44: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<unsigned int>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46495 |           if (npos!=_width-1) std::memcpy(new_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                           
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46508:12: warning: 'void* memset(void*, int, size_t)' clearing an object of type 'struct cimg_library::CImg<unsigned int>' with no trivial copy-assignment; use assignment or value-initialization instead [-Wclass-memaccess]
+46508 |           std::memset(_data,0,sizeof(CImg<T>)*(_width-1));
+      |           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h:46512:45: warning: 'void* memmove(void*, const void*, size_t)' writing to an object of type 'struct cimg_library::CImg<unsigned int>' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+46512 |           if (npos!=_width-1) std::memmove(_data+npos+1,_data+npos,sizeof(CImg<T>)*(_width-1-npos));
+      |                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             
+CImg.h:9355:8: note: 'struct cimg_library::CImg<unsigned int>' declared here
+ 9355 |   struct CImg {
+      |        ^~~~
+CImg.h: In function 'int cimg_library::cimg::system(const char*, const char*)':
+CImg.h:3895:13: warning: 'char* strncpy(char*, const char*, size_t)' output truncated before terminating nul copying as many bytes from a string as its length [-Wstringop-truncation]
+ 3895 |         std::strncpy(ncommand,command,l);
+      |         ~~~~^~~~~~~~~~~~~~~~~~~~~~
+CImg.h:3892:31: note: length computed here
+ 3892 |       const unsigned int l = std::strlen(command);
+      |                    ~~~~~~~~~~~^~~~~~~~~
+CImg.h: In static member function 'static void cimg_library::CImg<T>::_load_inr_header(FILE*, int*, float*) [with T = unsigned char]':
+CImg.h:40175:85: warning: 'char* strncpy(char*, const char*, size_t)' output may be truncated copying 63 bytes from a string of length 63 [-Wstringop-truncation]
+40175 |         case 2 : out[5] = cimg::strncasecmp(tmp1,"unsigned",8)?1:0; std::strncpy(tmp1,tmp2,sizeof(tmp1)-1);
+      |                                                                         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~        

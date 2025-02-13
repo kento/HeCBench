@@ -2,5 +2,4 @@ Sigma = 20
 Color denoising: yes
 Noise variance for individual channels (YCrCb if color): 131 118 132 
 Image width: 1024 height: 768
-Average device execution time (s): 0.0546537
-PSNR:32.1254
+Average device execution time (s): 0.0544128

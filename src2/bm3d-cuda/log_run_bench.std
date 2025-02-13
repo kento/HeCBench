@@ -1,0 +1,3 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -I/home/users/u0001621/libpng_gh/include -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -I/home/users/u0001621/libpng_gh/include -O3 main.o blockmatching.o filtering.o dct8x8.o -o main -lpthread -L/home/users/u0001621/libpng_gh/lib -lpng
+bash -c "time -p ( ./main ../bm3d-cuda/noised-bufferfly-20.png denoised.png 20 color 1>log.std 2>log.err ) 2> log.time"
