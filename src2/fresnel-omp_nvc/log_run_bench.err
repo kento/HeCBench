@@ -1,0 +1,4 @@
+nvlink error   : Undefined reference to '_Z32xFresnel_Auxiliary_Sine_Integrald' in 'fresnel.o'
+nvlink error   : Undefined reference to '_Z34xFresnel_Auxiliary_Cosine_Integrald' in 'fresnel.o'
+pgacclnk: child process exit status 2: /opt/nvidia/hpc_sdk/Linux_aarch64/25.1/compilers/bin/tools/nvdd
+make: *** [Makefile.NVD:54: main] Error 2

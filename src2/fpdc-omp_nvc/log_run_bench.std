@@ -1,0 +1,1 @@
+nvc++  -Wall -std=c++20 -O3 -Minfo -mp=gpu -gpu=sm_90 -c main.cpp -o main.o

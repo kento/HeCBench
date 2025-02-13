@@ -1,0 +1,57 @@
+clzll(unsigned long long):
+     56, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+     58, Loop not vectorized/parallelized: not countable
+CompressionKernel(int, int, int, unsigned long long const*, char*, int const*, int*):
+     92, #omp target teams num_teams(nTeams) thread_limit(nThreads)
+         92, Generating "nvkernel__Z17CompressionKerneliiiPKyPcPKiPi_F1L92_2" GPU kernel
+         95, #omp parallel
+          134, Barrier
+          136, Barrier
+          138, Barrier
+          140, Barrier
+          142, Barrier
+          144, Barrier
+          158, Barrier
+        129, Team private (ibufs) located in CUDA shared memory
+    125, Accelerator restriction: unsupported operation: UKNEG
+          58, Loop not vectorized/parallelized: not countable
+    149, Loop not vectorized: unknown
+         Loop unrolled 2 times
+main:
+         187, Loop not vectorized/parallelized: contains call
+         237, Loop not fused: complex flow graph
+              Loop not vectorized: unknown
+         248, Loop not fused: no successor loop
+              Loop not vectorized: data dependency
+              Loop unrolled 4 times
+         252, Loop not fused: function call before adjacent loop
+              Loop not vectorized: data dependency
+         264, Loop not vectorized/parallelized: contains call
+         276, Generating update from(.inl_off_169[:.inl_warpsperblock_166*.inl_blocks_165])
+         292, Loop not vectorized/parallelized: contains call
+         300, Loop not vectorized/parallelized: contains call
+         306, Generating update from(.inl_dbuf_167[((.inl_start_216+1)/2)*17:((.inl_start_216+1)/2)*17+.inl_off_169->])
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+     45, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+_INTERNAL_8_main_cpp_4d19179f::Compress(int, int, int, int):
+    187, Loop not vectorized/parallelized: contains call
+    237, Loop not fused: complex flow graph
+         Loop not vectorized: unknown
+    248, Loop not fused: no successor loop
+         Loop not vectorized: data dependency
+         Loop unrolled 4 times
+    252, Loop not fused: function call before adjacent loop
+         Loop not vectorized: data dependency
+    261, Generating map(to:cbuf[:doubles],cut[:num_warps]) 
+         Generating map(alloc:off[:num_warps],dbuf[:((doubles+1)/2)*17]) 
+    264, Loop not vectorized/parallelized: contains call
+    276, Generating update from(off[:num_warps])
+    292, Loop not vectorized/parallelized: contains call
+    300, Loop not vectorized/parallelized: contains call
+    306, Generating update from(dbuf[offset:offset+off->])
+nvvmCompileProgram: failed with error 9: NVVM_ERROR_COMPILATION
+nvnvvmd: error: /tmp/nvacc7JqYfXBbnttuJ.gpu (187, 32): parse use of undefined value '@nvkernel__Z17CompressionKerneliiiPKyPcPKiPi_F1L92_2_F1L95_4'
+NVC++-W-0155-Compiler failed to translate accelerator region (see -Minfo messages): Device compiler exited with error status code (main.cpp: 92)
+make: *** [Makefile.NVD:57: main.o] Error 2

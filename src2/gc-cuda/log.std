@@ -9,9 +9,9 @@ Total number of compute units: 132
 Maximum resident threads per compute unit: 2048
 Work-group size: 512
 Total number of work-groups: 528
-average runtime (100 runs):    0.000059 s
-throughput: 2125.915938 Mnodes/s
-throughput: 6604.356867 Medges/s
+average runtime (100 runs):    0.000061 s
+throughput: 2038.750399 Mnodes/s
+throughput: 6333.568961 Medges/s
 PASS
 Number of distinct colors used: 8
 color  0:      50456 ( 40.5%)

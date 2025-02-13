@@ -1,0 +1,77 @@
+main.cu:85:24: error: use of undeclared identifier '__any_sync'
+   85 |   for (int v = thread; __any_sync(Warp, v < nodes); v += threads) {
+      |                        ^
+main.cu:109:15: error: use of undeclared identifier '__ballot_sync'
+  109 |     int bal = __ballot_sync(Warp, cond);
+      |               ^
+main.cu:113:22: error: use of undeclared identifier '__shfl_sync'
+  113 |       const int wv = __shfl_sync(Warp, v, who);
+      |                      ^
+main.cu:114:24: error: use of undeclared identifier '__shfl_sync'
+  114 |       const int wbeg = __shfl_sync(Warp, beg, who);
+      |                        ^
+main.cu:115:24: error: use of undeclared identifier '__shfl_sync'
+  115 |       const int wend = __shfl_sync(Warp, end, who);
+      |                        ^
+main.cu:118:33: error: use of undeclared identifier '__any_sync'
+  118 |       for (int i = wbeg + lane; __any_sync(Warp, i < wend); i += WS) {
+      |                                 ^
+main.cu:126:23: error: use of undeclared identifier '__ballot_sync'
+  126 |         const int b = __ballot_sync(Warp, prio);
+      |                       ^
+main.cu:165:28: error: use of undeclared identifier '__any_sync'
+  165 |       for (int w = thread; __any_sync(Warp, w < stop); w += threads) {
+      |                            ^
+main.cu:179:19: error: use of undeclared identifier '__ballot_sync'
+  179 |         int bal = __ballot_sync(Warp, cond);
+      |                   ^
+main.cu:183:29: error: use of undeclared identifier '__shfl_sync'
+  183 |           const int wdata = __shfl_sync(Warp, data, who);
+      |                             ^
+main.cu:185:28: error: use of undeclared identifier '__shfl_sync'
+  185 |           const int wbeg = __shfl_sync(Warp, beg, who);
+      |                            ^
+main.cu:190:23: error: use of undeclared identifier '__shfl_sync'
+  190 |           int wpcol = __shfl_sync(Warp, pcol, who);
+      |                       ^
+main.cu:194:37: error: use of undeclared identifier '__any_sync'
+  194 |           for (int i = wbeg + lane; __any_sync(Warp, i < wend); i += WS) {
+      |                                     ^
+main.cu:218:23: error: use of undeclared identifier '__all_sync'
+  218 |           wshortcut = __all_sync(Warp, wshortcut);
+      |                       ^
+main.cu:219:19: error: use of undeclared identifier '__all_sync'
+  219 |           wdone = __all_sync(Warp, wdone);
+      |                   ^
+main.cu:220:20: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  220 |           wpcol &= __shfl_xor_sync(Warp, wpcol, 1);
+      |                    ^~~~~~~~~~~~~~~
+      |                    __shfl_xor
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:445:14: note: '__shfl_xor' declared here
+  445 | unsigned int __shfl_xor(unsigned int var, int lane_mask, int width = warpSize) {
+      |              ^
+main.cu:221:20: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  221 |           wpcol &= __shfl_xor_sync(Warp, wpcol, 2);
+      |                    ^~~~~~~~~~~~~~~
+      |                    __shfl_xor
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:445:14: note: '__shfl_xor' declared here
+  445 | unsigned int __shfl_xor(unsigned int var, int lane_mask, int width = warpSize) {
+      |              ^
+main.cu:222:20: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  222 |           wpcol &= __shfl_xor_sync(Warp, wpcol, 4);
+      |                    ^~~~~~~~~~~~~~~
+      |                    __shfl_xor
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:445:14: note: '__shfl_xor' declared here
+  445 | unsigned int __shfl_xor(unsigned int var, int lane_mask, int width = warpSize) {
+      |              ^
+main.cu:223:20: error: use of undeclared identifier '__shfl_xor_sync'; did you mean '__shfl_xor'?
+  223 |           wpcol &= __shfl_xor_sync(Warp, wpcol, 8);
+      |                    ^~~~~~~~~~~~~~~
+      |                    __shfl_xor
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:445:14: note: '__shfl_xor' declared here
+  445 | unsigned int __shfl_xor(unsigned int var, int lane_mask, int width = warpSize) {
+      |              ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -I../mis-cuda -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

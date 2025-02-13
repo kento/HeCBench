@@ -1,0 +1,3 @@
+NVC++-F-0155-Compiler failed to translate OpenMP region  (main.cpp: 162)
+NVC++/arm Linux 25.1-0: compilation aborted
+make: *** [Makefile.NVD:57: main.o] Error 2
