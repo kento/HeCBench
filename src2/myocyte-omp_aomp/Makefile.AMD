@@ -2,7 +2,7 @@ CC        = clang++
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
-ARCH      = gfx906
+ARCH      = gfx90a
 LAUNCHER = bash -c
 
 # Standard flags
@@ -28,6 +28,7 @@ ifeq ($(OPTIMIZE),yes)
 	CFLAGS += -O3
 endif
 
+program = myocyte.out
 
 ./myocyte.out:	./main.o 	./kernel/kernel_wrapper.o 	./util/file/file.o 	./util/num/num.o
 	$(CC) $(CFLAGS) ./main.o 		./kernel/kernel_wrapper.o 		./util/file/file.o 		./util/num/num.o 		$(LDFLAGS) 		-o myocyte.out

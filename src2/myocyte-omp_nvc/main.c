@@ -117,8 +117,12 @@ int main(int argc, char *argv []){
     //printf("Configuration used: arch = %d, cores = %d, time = %d\n", arch_arg, cores_arg, xmax);
   }
   else{
+#if 0
     printf("Provide time argument, example: -time 100");
     return 0;
+#else
+    xmax = atoi(argv[1]);
+#endif
   }
 
   //	EXECUTION IF THERE IS 1 WORKLOAD, PARALLELIZE INSIDE 1 WORKLOAD

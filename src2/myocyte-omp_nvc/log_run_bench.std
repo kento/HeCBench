@@ -1,4 +1,6 @@
-nvc++   -Wall -Minfo -mp=gpu -gpu=cc70 -O3 ./main.c 		-c 		-o ./main.o 		-O3
-nvc++   -Wall -Minfo -mp=gpu -gpu=cc70 -O3	./kernel/kernel_wrapper.c 		-c 		-o ./kernel/kernel_wrapper.o 
+nvc++   -Wall -Minfo -mp=gpu -gpu=cc90 -O3 ./main.c 		-c 		-o ./main.o 		-O3
+nvc++   -Wall -Minfo -mp=gpu -gpu=cc90 -O3	./kernel/kernel_wrapper.c 		-c 		-o ./kernel/kernel_wrapper.o 
 nvc++	./util/file/file.c 		-c 		-o ./util/file/file.o 		-O3
 nvc++	./util/num/num.c 		-c 		-o ./util/num/num.o 		-O3
+nvc++   -Wall -Minfo -mp=gpu -gpu=cc90 -O3 ./main.o 		./kernel/kernel_wrapper.o 		./util/file/file.o 		./util/num/num.o   -lm 		-o myocyte.out
+bash -c "time -p ( ./myocyte.out 10000 1>log.std 2>log.err ) 2> log.time"
