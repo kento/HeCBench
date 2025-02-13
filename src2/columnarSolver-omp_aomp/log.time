@@ -1,0 +1,4 @@
+bash: line 1: 149339 Aborted                 (core dumped) ./main ../columnarSolver-cuda/data > log.std 2> log.err
+real 3.46
+user 1.04
+sys 2.31
