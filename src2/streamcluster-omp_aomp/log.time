@@ -1,0 +1,4 @@
+bash: line 1: 151958 Aborted                 (core dumped) ./streamcluster 10 20 256 220000 65536 1000 none output.txt 1 > log.std 2> log.err
+real 3.77
+user 4.58
+sys 2.18

@@ -1,2 +1,1 @@
-clang++: error: invalid target ID ''; format is a processor name followed by an optional colon-delimited list of features followed by an enable/disable sign (e.g., 'gfx908:sramecc+:xnack-')
-make: *** [Makefile.AMD:39: streamcluster] Error 1
+make: *** [Makefile.AMD:44: run] Error 134

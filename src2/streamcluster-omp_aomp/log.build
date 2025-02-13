@@ -1,0 +1,9 @@
+clang++  -std=c++14 -Wall -DPROFILE_TMP -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a streamcluster.cpp -o streamcluster 
+streamcluster.cpp:192:15: warning: variable 'open' set but not used [-Wunused-but-set-variable]
+  192 |   static bool open = false;
+      |               ^
+1 warning generated.
+streamcluster.cpp:192:15: warning: variable 'open' set but not used [-Wunused-but-set-variable]
+  192 |   static bool open = false;
+      |               ^
+1 warning generated.

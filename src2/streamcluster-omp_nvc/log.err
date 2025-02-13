@@ -5,3 +5,21 @@ finish local search
 read 65536 points
 finish local search
 read 23392 points
+Present table dump for device[1]: NVIDIA Tesla GPU 0, compute capability 9.0, threadid=1
+Hint: specify 0x800 bit in NV_ACC_DEBUG for verbose info.
+host:0x105f0200 device:0xfffd39f3a000 size:65536 presentcount:0+1 line:88 name:switch_membership[:num]
+host:0xffff8a570010 device:0xfffd3e800000 size:1572864 presentcount:0+1 line:88 name:p_h[:num]
+host:0xffff8a700010 device:0xfffd3e200000 size:5767168 presentcount:0+1 line:88 name:work_mem_h[:num*(kmax+1)]
+host:0xffff8ac90010 device:0xfffd3a200000 size:67108864 presentcount:0+1 line:88 name:coord_h[:num*dim]
+allocated block device:0xfffd39f3a000 size:65536 thread:1
+allocated block device:0xfffd3a200000 size:67108864 thread:1
+allocated block device:0xfffd3e200000 size:5767168 thread:1
+allocated block device:0xfffd3e800000 size:1572864 thread:1
+deleted block   device:0xfffd39efa000 size:262144 threadid=1 
+
+Present table errors:
+center_table[:num] lives at 0x105f0200 size 93568 partially present in
+host:0x105f0200 device:0xfffd39f3a000 size:65536 presentcount:0+1 line:88 name:switch_membership[:num] file:/hs/work0/home/users/u0001620/work10/TMP21/streamcluster-omp_nvc/streamcluster_cl.h
+FATAL ERROR: variable in data clause is partially present on the device: name=center_table[:num]
+ file:/hs/work0/home/users/u0001620/work10/TMP21/streamcluster-omp_nvc/streamcluster_cl.h _Z5pgainlP6PointsfPliPbPiPcPdS5_S5_S5_S5_ line:124
+

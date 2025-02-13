@@ -1,0 +1,4 @@
+read 65536 points
+finish local search
+read 65536 points
+AMDGPU fatal error 1: Memory access fault by GPU 2 (agent 0x1435ab0) at virtual address 0x1a76000. Reasons: Unknown (0)
