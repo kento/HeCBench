@@ -190,11 +190,15 @@ void SumWithinBlocks(const int n, const int threads, FLOAT *data, FLOAT* blocksu
 }
   
 int main(int argc, char* argv[]) {
+#if 0
   if (argc != 2) {
     printf("Usage: %s <number of blocks to sample>\n", argv[0]);
     return 1;
   }
   const int Nsample = atoi(argv[1]); // No. of blocks to sample
+#else
+  const int Nsample = 100;    // No. of blocks to sample
+#endif
   
   FLOAT *x1 = (FLOAT*) malloc(Npoint * sizeof(FLOAT));
   FLOAT *y1 = (FLOAT*) malloc(Npoint * sizeof(FLOAT));
