@@ -10,8 +10,17 @@ int atomicLoad(const int *addr)
 {
   const volatile int *vaddr = addr; // volatile to bypass cache
 
+#if 0
   #pragma omp atomic read
   const int value = *vaddr;
+
+#else
+
+  int value = 0;
+#pragma omp atomic read
+  value = *vaddr;
+
+#endif
 
   // fence to ensure that dependent reads are correctly ordered
   //#pragma omp flush
