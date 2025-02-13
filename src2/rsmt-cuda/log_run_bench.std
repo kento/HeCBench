@@ -1,1 +1,3 @@
-bash -c "time -p ( ./main newblue7.kraftwerk70.3d.80.20.82.m8.gr 1>log.std 2>log.err ) 2> log.time"
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o -o main 
+bash -c "../rsmt-cuda/prepare_data.sh; time -p ( ./main ../rsmt-cuda/data/newblue7.kraftwerk70.3d.80.20.82.m8.gr 1>log.std 2>log.err ) 2> log.time"

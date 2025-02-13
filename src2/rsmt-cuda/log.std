@@ -1,12 +1,12 @@
 A Simple, Fast, and GPU-friendly Steiner-Tree Heuristic
 Copyright 2019-2022 Texas State University
 
-reading input file: newblue7.kraftwerk70.3d.80.20.82.m8.gr
+reading input file: ../rsmt-cuda/data/newblue7.kraftwerk70.3d.80.20.82.m8.gr
 number of nets: 2635625
 max pins per net: 256
 truncated nets: 2
 launching 264 thread blocks with 768 threads per block
-compute time: 0.066869 s
-throughput: 39414751 nets/sec
+compute time: 0.015652 s
+throughput: 168389024 nets/sec
 total wirelength: 1437821603
 total pins: 10073726
