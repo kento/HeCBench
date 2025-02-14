@@ -1,1 +1,4 @@
-bash -c "time -p ( ./main ../sobel-sycl/SobelFilter_Input.bmp 100000 1>log.std 2>log.err ) 2> log.time"
+hipcc  -std=c++14 -Wall -I../include -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -I../include -O3 -c reference.cu -o reference.o
+hipcc  -std=c++14 -Wall -I../include -O3 main.o reference.o -o main 
+bash -c "../sobel-cuda/prepare_data.sh; time -p ( ./main ../sobel-sycl/SobelFilter_Input.bmp 100000 1>log.std 2>log.err ) 2> log.time"

@@ -1,0 +1,18 @@
+In file included from main.cu:46:
+../rsc-cuda/support/verify.h:165:31: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  165 |   flowvector ego_vector_array[size_flow_vector_array];
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+../rsc-cuda/support/verify.h:165:31: note: function parameter 'size_flow_vector_array' with unknown value cannot be used in a constant expression
+../rsc-cuda/support/verify.h:155:84: note: declared here
+  155 | inline int estimate_ego_motion_first_order_flow(flowvector *flow_vector_array, int size_flow_vector_array,
+      |                                                                                    ^
+1 warning generated when compiling for gfx90a.
+In file included from main.cu:46:
+../rsc-cuda/support/verify.h:165:31: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  165 |   flowvector ego_vector_array[size_flow_vector_array];
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+../rsc-cuda/support/verify.h:165:31: note: function parameter 'size_flow_vector_array' with unknown value cannot be used in a constant expression
+../rsc-cuda/support/verify.h:155:84: note: declared here
+  155 | inline int estimate_ego_motion_first_order_flow(flowvector *flow_vector_array, int size_flow_vector_array,
+      |                                                                                    ^
+1 warning generated when compiling for host.

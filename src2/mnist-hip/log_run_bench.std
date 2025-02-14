@@ -1,1 +1,9 @@
-bash -c "time -p ( ./main 2 1>log.std 2>log.err ) 2> log.time"
+hipcc  -std=c++14 -Wall -I../mnist-cuda -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -I../mnist-cuda -O3 main.o -o main 
+bash -c "../mnist-cuda/prepare_data.sh; time -p ( ./main 2 1>log.std 2>log.err ) 2> log.time"
+Archive:  ../mnist-cuda/data.zip
+   creating: data/
+  inflating: data/t10k-labels.idx1-ubyte  
+  inflating: data/t10k-images.idx3-ubyte  
+  inflating: data/train-labels.idx1-ubyte  
+  inflating: data/train-images.idx3-ubyte  

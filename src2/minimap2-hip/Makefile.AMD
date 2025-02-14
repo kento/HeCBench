@@ -1,6 +1,6 @@
 LAUNCHER = bash -c
 CXX = g++
-HIPCC = hipcc 
+HIPCC = hipcc -I/opt/rocm/include
 
 # path #
 SRC_PATH = src
@@ -30,7 +30,7 @@ DEPS = $(OBJECTS:.o=.d)
 
 # flags #
 COMPILE_FLAGS = -std=c++11 -Wall -Wextra -g
-HIPCC_COMPILE_FLAGS = -std=c++17 -g -O3 -I/opt/rocm/include
+HIPCC_COMPILE_FLAGS = -std=c++17 -g -O3 # -I/opt/rocm/include
 
 INCLUDES = -I include/ -I /usr/local/include
 # Space-separated pkg-config libraries used by this project

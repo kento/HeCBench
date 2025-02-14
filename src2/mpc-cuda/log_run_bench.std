@@ -1,7 +1,6 @@
 gcc -O3 fpc.c -o fpc
+./prepare_data.sh
 ./fpc < msg_sp.trace.fpc > msg_sp.trace.out
-nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
-bash -c "../mpc-cuda/prepare_data.sh; time -p ( ./main msg_sp.trace.out 1 1>log.std 2>log.err;./main compression.txt 1>>log.std 2>>log.err ) 2> log.time"
-pkill nvidia-smi
-../scripts/m.sh
-min max diff memory in [MB] : 2 1118 1116
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o -o main 
+bash -c "time -p ( ./main msg_sp.trace.out 1 1>log.std 2>log.err;./main compression.txt 1>>log.std 2>>log.err ) 2> log.time"

@@ -1,7 +1,7 @@
 MPC - Massively Parallel Compression [double] (main.cu)
 Copyright 2015-2020 Texas State University
 
-compression time: 11.89 ms
-compression throughput: 24.399 GB/s
+compression time: 11.80 ms
+compression throughput: 24.588 GB/s
 compression ratio: 1.127
 

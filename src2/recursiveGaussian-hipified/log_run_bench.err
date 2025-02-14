@@ -1,1 +1,62 @@
-timeout was set to  3000
+shrUtils.cu:285:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  285 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:285:47: note: treat the string as an argument to avoid this
+  285 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cu:289:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  289 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:289:63: note: treat the string as an argument to avoid this
+  289 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cu:292:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  292 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:292:67: note: treat the string as an argument to avoid this
+  292 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+shrUtils.cu:87:12: warning: variable 'szNumWritten' set but not used [-Wunused-but-set-variable]
+   87 |     size_t szNumWritten = 0;
+      |            ^
+shrUtils.cu:1259:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1259 |     bool result = true;
+      |          ^
+shrUtils.cu:1301:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1301 |     bool result = true;
+      |          ^
+6 warnings generated when compiling for gfx90a.
+shrUtils.cu:285:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  285 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:285:47: note: treat the string as an argument to avoid this
+  285 |                         szNumWritten = printf(sFormatSpec.c_str());                             // console 
+      |                                               ^
+      |                                               "%s", 
+shrUtils.cu:289:63: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  289 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:289:63: note: treat the string as an argument to avoid this
+  289 |                         szNumWritten = fprintf (pFileStream0, sFormatSpec.c_str());             // sample log file
+      |                                                               ^
+      |                                                               "%s", 
+shrUtils.cu:292:67: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  292 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^~~~~~~~~~~~~~~~~~~
+shrUtils.cu:292:67: note: treat the string as an argument to avoid this
+  292 |                             szNumWritten  = fprintf(pFileStream1, sFormatSpec.c_str());         // master log file
+      |                                                                   ^
+      |                                                                   "%s", 
+shrUtils.cu:87:12: warning: variable 'szNumWritten' set but not used [-Wunused-but-set-variable]
+   87 |     size_t szNumWritten = 0;
+      |            ^
+shrUtils.cu:1259:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1259 |     bool result = true;
+      |          ^
+shrUtils.cu:1301:10: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+ 1301 |     bool result = true;
+      |          ^
+6 warnings generated when compiling for host.

@@ -1,0 +1,18 @@
+In file included from main.cu:46:
+./support/verify.h:166:31: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  166 |   flowvector ego_vector_array[size_flow_vector_array];
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+./support/verify.h:166:31: note: function parameter 'size_flow_vector_array' with unknown value cannot be used in a constant expression
+./support/verify.h:156:84: note: declared here
+  156 | inline int estimate_ego_motion_first_order_flow(flowvector *flow_vector_array, int size_flow_vector_array,
+      |                                                                                    ^
+1 warning generated when compiling for gfx90a.
+In file included from main.cu:46:
+./support/verify.h:166:31: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+  166 |   flowvector ego_vector_array[size_flow_vector_array];
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+./support/verify.h:166:31: note: function parameter 'size_flow_vector_array' with unknown value cannot be used in a constant expression
+./support/verify.h:156:84: note: declared here
+  156 | inline int estimate_ego_motion_first_order_flow(flowvector *flow_vector_array, int size_flow_vector_array,
+      |                                                                                    ^
+1 warning generated when compiling for host.

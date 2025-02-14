@@ -1,4 +1,4 @@
-bash: line 1: 2775858 Aborted                 (core dumped) ./main ../recursiveGaussian-cuda/StoneRGB.ppm 1000 > log.std 2> log.err
-real 7.78
-user 913.23
-sys 37.65
+bash: line 1: 1871791 Segmentation fault      (core dumped) ./main ../recursiveGaussian-cuda/StoneRGB.ppm 1000 > log.std 2> log.err
+real 0.30
+user 0.03
+sys 0.18

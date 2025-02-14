@@ -1,4 +1,4 @@
-bash: line 1: 68542 Aborted                 (core dumped) ./main compression.txt >> log.std 2>> log.err
-real 1.98
-user 0.69
-sys 1.22
+bash: line 1: 246356 Aborted                 (core dumped) ./main compression.txt >> log.std 2>> log.err
+real 1.86
+user 0.65
+sys 1.08

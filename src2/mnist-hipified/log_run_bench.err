@@ -1,0 +1,46 @@
+In file included from main.cu:10:
+./kernels.h:11:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   11 |   float h_bias[N];
+      |                ^
+./kernels.h:11:16: note: function parameter 'N' with unknown value cannot be used in a constant expression
+./kernels.h:5:25: note: declared here
+    5 | Layer::Layer(int M, int N, int O)
+      |                         ^
+./kernels.h:12:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   12 |   float h_weight[N][M];
+      |                     ^
+./kernels.h:12:21: note: function parameter 'M' with unknown value cannot be used in a constant expression
+./kernels.h:5:18: note: declared here
+    5 | Layer::Layer(int M, int N, int O)
+      |                  ^
+./kernels.h:12:18: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   12 |   float h_weight[N][M];
+      |                  ^
+./kernels.h:12:18: note: function parameter 'N' with unknown value cannot be used in a constant expression
+./kernels.h:5:25: note: declared here
+    5 | Layer::Layer(int M, int N, int O)
+      |                         ^
+3 warnings generated when compiling for gfx90a.
+In file included from main.cu:10:
+./kernels.h:11:16: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   11 |   float h_bias[N];
+      |                ^
+./kernels.h:11:16: note: function parameter 'N' with unknown value cannot be used in a constant expression
+./kernels.h:5:25: note: declared here
+    5 | Layer::Layer(int M, int N, int O)
+      |                         ^
+./kernels.h:12:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   12 |   float h_weight[N][M];
+      |                     ^
+./kernels.h:12:21: note: function parameter 'M' with unknown value cannot be used in a constant expression
+./kernels.h:5:18: note: declared here
+    5 | Layer::Layer(int M, int N, int O)
+      |                  ^
+./kernels.h:12:18: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   12 |   float h_weight[N][M];
+      |                  ^
+./kernels.h:12:18: note: function parameter 'N' with unknown value cannot be used in a constant expression
+./kernels.h:5:25: note: declared here
+    5 | Layer::Layer(int M, int N, int O)
+      |                         ^
+3 warnings generated when compiling for host.

@@ -8,7 +8,7 @@ OPTIMIZE  = yes
 DEBUG     = no
 VERIFY    = yes
 DEVICE    = gpu
-ARCH      = gfx906
+ARCH      = gfx90a
 LAUNCHER = bash -c
 
 #===============================================================================
