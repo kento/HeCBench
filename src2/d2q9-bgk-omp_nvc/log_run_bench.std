@@ -1,0 +1,3 @@
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc90 -c main.cpp -o main.o
+nvc++  -std=c++14 -Wall -I../include -O3 -Minfo -mp=gpu -gpu=cc90 main.o -o main 
+bash -c "../d2q9-bgk-cuda/prepare_data.sh; time -p ( ./main Inputs/input_256x256.params Obstacles/obstacles_256x256.dat 1>log.std 2>log.err ) 2> log.time"
