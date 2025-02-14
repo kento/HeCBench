@@ -1,6 +1,0 @@
-hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I.  -O3 -ffast-math -c main.c -o main.o
-hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I.  -O3 -ffast-math -c fbase.c -o fbase.o
-hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I.  -O3 -ffast-math -c fparam.c -o fparam.o
-hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I.  -O3 -ffast-math -c util.c -o util.o
-hipcc  -DINT -std=c++14 -x hip -D__HIP_PLATFORM_AMD__ -Wall -I.  -O3 -ffast-math -c frna.cu -o frna.o
-hipcc ./main.o ./fbase.o ./fparam.o ./util.o frna.o  -o main 

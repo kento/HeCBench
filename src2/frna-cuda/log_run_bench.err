@@ -1,9 +1,0 @@
-/usr/bin/ld: i386:x86-64 architecture of input file `main.o' is incompatible with aarch64 output
-/usr/bin/ld: i386:x86-64 architecture of input file `fbase.o' is incompatible with aarch64 output
-/usr/bin/ld: i386:x86-64 architecture of input file `fparam.o' is incompatible with aarch64 output
-/usr/bin/ld: i386:x86-64 architecture of input file `util.o' is incompatible with aarch64 output
-/usr/bin/ld: main.o: unrecognized relocation type 0xa in section `.text'
-/usr/bin/ld: is this version of the linker - version 2.35.2-54.el9 - out of date ?
-/usr/bin/ld: final link failed: bad value
-collect2: error: ld returned 1 exit status
-make: *** [Makefile.NVD:50: main] Error 1
