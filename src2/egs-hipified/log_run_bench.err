@@ -1,0 +1,84 @@
+In file included from main.cu:42:
+./media.c:264:13: warning: variable 'sig' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+  264 |         if (flag == 0) 
+      |             ^~~~~~~~~
+./media.c:285:32: note: uninitialized use occurs here
+  285 |       res[j] += pz_sorted[i] * sig;
+      |                                ^~~
+./media.c:264:9: note: remove the 'if' if its condition is always false
+  264 |         if (flag == 0) 
+      |         ^~~~~~~~~~~~~~
+  265 |           printf("Energy %f is outside the available data range of %f to %f.\n", e, exp(in_dat[0].x), exp(in_dat[n - 1].x));
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  266 |         else {
+      |         ~~~~
+./media.c:261:17: note: initialize the variable 'sig' to silence this warning
+  261 |       double sig;
+      |                 ^
+      |                  = 0.0
+In file included from main.cu:43:
+./init.cu:251:19: warning: variable 'sum1' set but not used [-Wunused-but-set-variable]
+  251 |   double sum = 0, sum1 = 0; int i;
+      |                   ^
+In file included from main.cu:44:
+./kernels.cu:811:15: error: use of undeclared identifier '__all_sync'
+  811 |     } while (!__all_sync(MASK, inner_loop_done));
+      |               ^
+./kernels.cu:824:13: error: use of undeclared identifier '__all_sync'
+  824 |   } while (!__all_sync(MASK, loop_done));
+      |             ^
+./kernels.cu:891:13: error: use of undeclared identifier '__all_sync'
+  891 |   } while (!__all_sync(MASK, loop_done));
+      |             ^
+./kernels.cu:1009:9: error: use of undeclared identifier '__any_sync'
+ 1009 |     if (__any_sync(MASK, p.process)) {
+      |         ^
+./kernels.cu:1011:25: error: use of undeclared identifier '__ballot_sync'
+ 1011 |       uint count_mask = __ballot_sync(MASK, p.process);
+      |                         ^
+./kernels.cu:1019:9: error: use of undeclared identifier '__all_sync'
+ 1019 |     if (__all_sync(MASK, done))
+      |         ^
+./kernels.cu:1025:9: error: use of undeclared identifier '__any_sync'
+ 1025 |     if (__any_sync(MASK, p.process)) {
+      |         ^
+./kernels.cu:1038:25: error: use of undeclared identifier '__ballot_sync'
+ 1038 |       uint count_mask = __ballot_sync(MASK, p.process);
+      |                         ^
+./kernels.cu:1046:9: error: use of undeclared identifier '__all_sync'
+ 1046 |     if (__all_sync(MASK, done))
+      |         ^
+./kernels.cu:1052:9: error: use of undeclared identifier '__any_sync'
+ 1052 |     if (__any_sync(MASK, p.process)) {
+      |         ^
+./kernels.cu:1054:25: error: use of undeclared identifier '__ballot_sync'
+ 1054 |       uint count_mask = __ballot_sync(MASK, p.process);
+      |                         ^
+./kernels.cu:1062:9: error: use of undeclared identifier '__all_sync'
+ 1062 |     if (__all_sync(MASK, done))
+      |         ^
+./kernels.cu:1068:9: error: use of undeclared identifier '__any_sync'
+ 1068 |     if (__any_sync(MASK, p.process)) {
+      |         ^
+./kernels.cu:1070:25: error: use of undeclared identifier '__ballot_sync'
+ 1070 |       uint count_mask = __ballot_sync(MASK, p.process);
+      |                         ^
+./kernels.cu:1078:9: error: use of undeclared identifier '__all_sync'
+ 1078 |     if (__all_sync(MASK, done))
+      |         ^
+./kernels.cu:1084:9: error: use of undeclared identifier '__any_sync'
+ 1084 |     if (__any_sync(MASK, p.process)) {
+      |         ^
+./kernels.cu:1086:25: error: use of undeclared identifier '__ballot_sync'
+ 1086 |       uint count_mask = __ballot_sync(MASK, p.process);
+      |                         ^
+./kernels.cu:1094:9: error: use of undeclared identifier '__all_sync'
+ 1094 |     if (__all_sync(MASK, done))
+      |         ^
+./kernels.cu:1100:9: error: use of undeclared identifier '__any_sync'
+ 1100 |     if (__any_sync(MASK, p.process)) {
+      |         ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

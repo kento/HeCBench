@@ -25,30 +25,30 @@ Detector
   Position  . . . . . . . . . x = 0.000000, y = 0.000000, z = 30.000000
   Size (pixels) . . . . . . . x = 512, y = 512
   Pixel size  . . . . . . . . x = 0.100000, y = 0.100000
-simulation running, wait for ETA...55884914 (55.88%) histories started, elapsed time: 3, ETA: 2   111745425 (111.75%) histories started, elapsed time: 3, ETA: 0   111745425 (111.75%) histories started, elapsed time: 3, ETA: 0   111745425 (111.75%) histories started, elapsed time: 3, ETA: 0   
+simulation running, wait for ETA...55882391 (55.88%) histories started, elapsed time: 3, ETA: 2   111728583 (111.73%) histories started, elapsed time: 3, ETA: 0   111728583 (111.73%) histories started, elapsed time: 3, ETA: 0   111728583 (111.73%) histories started, elapsed time: 3, ETA: 0   
 Simulation step counts
   Cutoff discard  . . . . . . 0
-  User discard  . . . . . . . 81255454
-  Photon step . . . . . . . . 2463869782
-  Rayleigh  . . . . . . . . . 11719216
-  Compton . . . . . . . . . . 79450697
-  Photo . . . . . . . . . . . 30489971
+  User discard  . . . . . . . 81215361
+  Photon step . . . . . . . . 2463865469
+  Rayleigh  . . . . . . . . . 11725384
+  Compton . . . . . . . . . . 79454152
+  Photo . . . . . . . . . . . 30513222
   Pair  . . . . . . . . . . . 0
-  New particles . . . . . . . 111745425
+  New particles . . . . . . . 111728583
 
 Divergence
-  Total different steps . . . 230495585
-  Total iterations  . . . . . 83966252
-  Average different steps . . 2.745098
+  Total different steps . . . 230517296
+  Total iterations  . . . . . 83966579
+  Average different steps . . 2.745346
   Average active threads  . . 36.43 % (at least)
 
 Timing statistics
-  Elapsed time  . . . . . . . 2910.45 ms (100.00 %)
-  Total CPU/GPU . . . . . . . 466.10 ms (16.01 %)
-  Simulation kernel . . . . . 424.03 ms (14.57 %)
-  Summing kernel  . . . . . . 4.86 ms (0.17 %)
-  Copying . . . . . . . . . . 11.19 ms (0.38 %)
-  Other . . . . . . . . . . . 2470.37 ms (84.88 %)
-  Initialization. . . . . . . 2444.35 ms (83.99 %)
+  Elapsed time  . . . . . . . 3026.47 ms (100.00 %)
+  Total CPU/GPU . . . . . . . 759.85 ms (25.11 %)
+  Simulation kernel . . . . . 726.55 ms (24.01 %)
+  Summing kernel  . . . . . . 4.77 ms (0.16 %)
+  Copying . . . . . . . . . . 1.14 ms (0.04 %)
+  Other . . . . . . . . . . . 2294.00 ms (75.80 %)
+  Initialization. . . . . . . 2266.62 ms (74.89 %)
 
-Histories per ms: 38394.550781
+Histories per ms: 36917.089844

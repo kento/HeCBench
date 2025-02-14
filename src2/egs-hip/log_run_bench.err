@@ -1,0 +1,47 @@
+In file included from main.cu:40:
+./media.c:263:13: warning: variable 'sig' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+  263 |         if (flag == 0) 
+      |             ^~~~~~~~~
+./media.c:284:32: note: uninitialized use occurs here
+  284 |       res[j] += pz_sorted[i] * sig;
+      |                                ^~~
+./media.c:263:9: note: remove the 'if' if its condition is always false
+  263 |         if (flag == 0) 
+      |         ^~~~~~~~~~~~~~
+  264 |           printf("Energy %f is outside the available data range of %f to %f.\n", e, exp(in_dat[0].x), exp(in_dat[n - 1].x));
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  265 |         else {
+      |         ~~~~
+./media.c:260:17: note: initialize the variable 'sig' to silence this warning
+  260 |       double sig;
+      |                 ^
+      |                  = 0.0
+In file included from main.cu:41:
+./init.cu:249:19: warning: variable 'sum1' set but not used [-Wunused-but-set-variable]
+  249 |   double sum = 0, sum1 = 0; int i;
+      |                   ^
+2 warnings generated when compiling for gfx90a.
+In file included from main.cu:40:
+./media.c:263:13: warning: variable 'sig' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+  263 |         if (flag == 0) 
+      |             ^~~~~~~~~
+./media.c:284:32: note: uninitialized use occurs here
+  284 |       res[j] += pz_sorted[i] * sig;
+      |                                ^~~
+./media.c:263:9: note: remove the 'if' if its condition is always false
+  263 |         if (flag == 0) 
+      |         ^~~~~~~~~~~~~~
+  264 |           printf("Energy %f is outside the available data range of %f to %f.\n", e, exp(in_dat[0].x), exp(in_dat[n - 1].x));
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  265 |         else {
+      |         ~~~~
+./media.c:260:17: note: initialize the variable 'sig' to silence this warning
+  260 |       double sig;
+      |                 ^
+      |                  = 0.0
+In file included from main.cu:41:
+./init.cu:249:19: warning: variable 'sum1' set but not used [-Wunused-but-set-variable]
+  249 |   double sum = 0, sum1 = 0; int i;
+      |                   ^
+2 warnings generated when compiling for host.
+make: *** [Makefile.AMD:57: run] Error 139

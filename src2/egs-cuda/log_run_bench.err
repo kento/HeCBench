@@ -1,0 +1,65 @@
+kernels.cu(677): warning #68-D: integer conversion resulted in a change of sign
+          idisc = -1;
+                  ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+kernels.cu(701): warning #186-D: pointless comparison of unsigned integer with zero
+        else if (idisc < 0)
+                       ^
+
+kernels.cu(677): warning #68-D: integer conversion resulted in a change of sign
+          idisc = -1;
+                  ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+kernels.cu(701): warning #186-D: pointless comparison of unsigned integer with zero
+        else if (idisc < 0)
+                       ^
+
+media.c: In function 'void init_rayleigh_data(uint, medium_t**)':
+media.c:771:30: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  771 |         h_ff[i * MXRAYFF + j] = *((double*)&zero);
+      |                             ~^~~~~~~~~~~~~~~~~~
+init.cu: In function 'void init_source()':
+init.cu:244:19: warning: comparison of integer expressions of different signedness: 'int' and 'uint' {aka 'unsigned int'} [-Wsign-compare]
+  244 |   for(int i=0; i<np; i++) { xi[i] = x[i]; fi[i] = f[i]; }
+      |                 ~~^~~~
+init.cu:250:15: warning: comparison of integer expressions of different signedness: 'int' and 'uint' {aka 'unsigned int'} [-Wsign-compare]
+  250 |   for(i=0; i<np; i++) {
+      |             ~~^~~~
+init.cu:262:15: warning: comparison of integer expressions of different signedness: 'int' and 'uint' {aka 'unsigned int'} [-Wsign-compare]
+  262 |   for(i=0; i<np; i++) fi[i] /= sum;
+      |             ~~^~~~
+init.cu:264:15: warning: comparison of integer expressions of different signedness: 'int' and 'uint' {aka 'unsigned int'} [-Wsign-compare]
+  264 |   for(i=0; i<np-1; i++) {
+      |             ~~^~~~~~~~~~~ 
+init.cu:265:17: warning: comparison of integer expressions of different signedness: 'int' and 'uint' {aka 'unsigned int'} [-Wsign-compare]
+  265 |     for(jh=0; jh<np-1; jh++) {
+      |              ~~~^~~~~~~~~~~~
+init.cu:268:17: warning: comparison of integer expressions of different signedness: 'int' and 'uint' {aka 'unsigned int'} [-Wsign-compare]
+  268 |     for(jl=0; jl<np-1; jl++) {
+      |              ~~~^~~~~~~~~~~~
+init.cu:283:19: warning: comparison of integer expressions of different signedness: 'int' and 'uint' {aka 'unsigned int'} [-Wsign-compare]
+  283 |   for (int i = 0; i < n; i++) {
+      |                 ~~^~~
+bmp.c: In function 'int write_bmp(const char*, int, int, char*)':
+bmp.c:66:8: warning: 'char* strncpy(char*, const char*, size_t)' output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+   66 |     strncpy(bmph.bfType, "BM", 2);
+      |     ~~~^~~~~~~~~~~~~~~~~~~~~~
+media.c: In function 'double* get_data(uint, uint, uint*, double2**, double*, double*, double2)':
+media.c:284:10: warning: 'sig' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  284 |       res[j] += pz_sorted[i] * sig;
+      |       ~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+media.c: In function 'double* get_data(uint, uint, uint*, double2**, double*, double*, double2)':
+media.c:284:10: warning: 'sig' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  284 |       res[j] += pz_sorted[i] * sig;
+      |       ~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+media.c:282:27: warning: 'eth' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  282 |         sig *= (1.0F - eth / e) * (1.0F - eth / e) * (1.0F - eth / e);
+      |                      ~~~~~^~~~
+media.c: In function 'void init_rayleigh_data(uint, medium_t**)':
+media.c:769:6: warning: '*(ulong*)h_ff_337 + _69' may be used uninitialized [-Wmaybe-uninitialized]
+  769 |       if (*((ulong*)&h_ff[i * MXRAYFF + j]) == 0) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
