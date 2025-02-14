@@ -1,1 +1,1 @@
-bash -c "time -p ( ./main 1000 1>log.std 2>log.err ) 2> log.time"
+bash -c "../geodesic-cuda/prepare_data.sh; time -p ( ./main 1000 1>log.std 2>log.err ) 2> log.time"
