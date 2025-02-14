@@ -93,10 +93,10 @@ clean:
 
 include ../include/gerbil-AMD
 
-run: $(program)
+run: all
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: $(program)
+run_mem: all
 	../scripts/rocm-smi.sh > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill rocm-smi.sh
