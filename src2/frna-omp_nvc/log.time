@@ -1,0 +1,4 @@
+bash: line 1: 2211353 Aborted                 (core dumped) ./main ../prna-cuda/HIV1-NL43.seq hiv1-nl43.out > log.std 2> log.err
+real 5.10
+user 0.10
+sys 3.00
