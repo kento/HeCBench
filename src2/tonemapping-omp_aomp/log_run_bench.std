@@ -1,1 +1,1 @@
-bash -c "time -p ( ./main ../tonemapping-sycl/input.hdr 10000 1>log.std 2>log.err ) 2> log.time"
+bash -c "../tonemapping-cuda/prepare_data.sh; time -p ( ./main ../tonemapping-sycl/input.hdr 10000 1>log.std 2>log.err ) 2> log.time"
