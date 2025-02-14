@@ -1,8 +1,8 @@
-Number of nodes = 264346	Number of edges = 733846	Initialization time (ms): 108.846432
-Host/Device Allocation time (ms): 125.044416
-Copy To Device time (ms): 50.808308
-Kernel on Host time (ms): 4.680211
-Kernel on Device time (ms): 43.063381
-Copy Back and Merge time (ms): 24.743089
-Host/Device Deallocation time (ms): 1.747378
+Number of nodes = 264346	Number of edges = 733846	Initialization time (ms): 96.870792
+Host/Device Allocation time (ms): 123.345256
+Copy To Device time (ms): 46.810197
+Kernel on Host time (ms): 4.643044
+Kernel on Device time (ms): 41.705266
+Copy Back and Merge time (ms): 22.603752
+Host/Device Deallocation time (ms): 1.626561
 PASS
