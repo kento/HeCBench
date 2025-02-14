@@ -1,0 +1,1 @@
+COMMAND= time -p ( ./main --input out_asc_uniform_1000_1000_100.bin 1>../log.std 2>../log.err ; ./main --input out_desc_uniform_1000_1000_100.bin 1>>../log.std 2>>../log.err ) 2> ../log.time

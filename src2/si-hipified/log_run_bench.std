@@ -1,0 +1,3 @@
+cd release;make run
+make[1]: Entering directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/si-hipified/release'
+make[1]: Leaving directory '/hs/work0/home/users/u0001621/git/HeCBench/src2/si-hipified/release'
