@@ -1,0 +1,15 @@
+kernels.cu:95:14: error: use of undeclared identifier '__shfl_down_sync'
+   95 |   output.x = __shfl_down_sync(0xFFFFFFFF, var.x, srcLane, width);
+      |              ^
+kernels.cu:96:14: error: use of undeclared identifier '__shfl_down_sync'
+   96 |   output.y = __shfl_down_sync(0xFFFFFFFF, var.y, srcLane, width);
+      |              ^
+kernels.cu:97:14: error: use of undeclared identifier '__shfl_down_sync'
+   97 |   output.z = __shfl_down_sync(0xFFFFFFFF, var.z, srcLane, width);
+      |              ^
+kernels.cu:98:14: error: use of undeclared identifier '__shfl_down_sync'
+   98 |   output.w = __shfl_down_sync(0xFFFFFFFF, var.w, srcLane, width);
+      |              ^
+4 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip kernels.cu -o "kernels.o"
+make: *** [Makefile.AMD:50: kernels.o] Error 1
