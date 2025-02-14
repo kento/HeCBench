@@ -1,3 +1,3 @@
-Average execution time of hipSparse csr2cscEx2 : 111.287727 (us)
+Average execution time of hipSparse csr2cscEx2 : 109.660805 (us)
 Computing the reference results..
 spgeam_example test PASSED
