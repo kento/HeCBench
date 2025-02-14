@@ -1,2 +1,4 @@
-Makefile.NVD:91: ../include/slu-NVIDIA: No such file or directory
-make: *** No rule to make target '../include/slu-NVIDIA'.  Stop.
+make[2]: clang: No such file or directory
+make[2]: *** [Makefile:51: nicslu_aegraph.o] Error 127
+make[1]: *** [Makefile:2: all] Error 2
+make: *** [Makefile.NVD:87: src/nicslu/lib/nicslu.a] Error 2

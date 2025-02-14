@@ -13,7 +13,8 @@ LAUNCHER  =
 #===============================================================================
 # Program name & source code list
 #===============================================================================
-SLU_PATH = ../slu-cuda/src
+#SLU_PATH = ../slu-cuda/src
+SLU_PATH = ./src
 
 SLU_LIBS = $(SLU_PATH)/nicslu/lib/nicslu.a \
            $(SLU_PATH)/nicslu/util/nicslu_util.a

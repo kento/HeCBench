@@ -1,0 +1,8 @@
+tar xf ./src/nicslu.tar.bz2 -C ./src
+make -C ./src/nicslu/
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP25A/slu-omp_nvc/src/nicslu'
+(cd lib; make)
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP25A/slu-omp_nvc/src/nicslu/lib'
+clang -fPIE -c -g -O2 -Wall -Wextra -msse2 -DNO_ATOMIC -DSSE2 ../source/nicslu_aegraph.c -o nicslu_aegraph.o
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP25A/slu-omp_nvc/src/nicslu/lib'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP25A/slu-omp_nvc/src/nicslu'

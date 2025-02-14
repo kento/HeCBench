@@ -1,2 +1,2 @@
-clang++  -std=c++14 -Wall -I../slu-cuda/src/../include           -I../slu-cuda/src/nicslu/include           -I../slu-cuda/src/nicslu/util -O3 -DVERIFY -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 preprocess.o Timer.o numeric.o symbolic.o main.o ../slu-cuda/src/nicslu/lib/nicslu.a            ../slu-cuda/src/nicslu/util/nicslu_util.a -o main -lpthread
-bash -c "time -p ( ./main -i ../slu-cuda/src/nicslu/demo/ASIC_100k.mtx 1>log.std 2>log.err ) 2> log.time"
+tar xf ./src/nicslu.tar.bz2 -C ./src
+bash -c "time -p ( .//main -i ./src/nicslu/demo/ASIC_100k.mtx 1>log.std 2>log.err ) 2> log.time"

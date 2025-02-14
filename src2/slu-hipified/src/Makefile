@@ -12,7 +12,7 @@ LAUNCHER  =
 #===============================================================================
 # Program name & source code list
 #===============================================================================
-SLU_PATH = ../../slu-cuda/src
+SLU_PATH = .
 
 SLU_LIBS = $(SLU_PATH)/nicslu/lib/nicslu.a \
            $(SLU_PATH)/nicslu/util/nicslu_util.a
@@ -29,10 +29,10 @@ SLU_INC = -I$(SLU_PATH)/../include \
           -I$(SLU_PATH)/nicslu/util
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall $(SLU_INC)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall $(SLU_INC)
 
 # Linker Flags
-LDFLAGS = -lpthread
+LDFLAGS = 
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
@@ -83,7 +83,5 @@ clean:
 test: $(program)
 	$(LAUNCHER) ./$(program) -i $(SLU_PATH)/nicslu/test/add32.mtx
 
-include ../../include/slu-AMD
-
 run: $(program)
-	$(LAUNCHER) "$(COMMAND)"
+	$(LAUNCHER) ./$(program) -i $(SLU_PATH)/nicslu/demo/ASIC_100k.mtx

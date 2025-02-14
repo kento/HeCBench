@@ -12,7 +12,10 @@ LAUNCHER = bash -c
 #===============================================================================
 # Program name & source code list
 #===============================================================================
+BIN_PATH = ./
+
 SLU_PATH = ../slu-cuda/src
+SLU_PATH = ./src
 
 SLU_LIBS = $(SLU_PATH)/nicslu/lib/nicslu.a            $(SLU_PATH)/nicslu/util/nicslu_util.a
 
@@ -49,6 +52,11 @@ endif
 # Targets to Build
 #===============================================================================
 
+all: lib $(program)
+        
+lib:
+	tar xf ./src/nicslu.tar.bz2 -C ./src
+	
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
@@ -82,10 +90,10 @@ test: $(program)
 
 include ../include/slu-AMD
 
-run: $(program)
+run: all
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: $(program)
+run_mem: all
 	../scripts/rocm-smi.sh > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill rocm-smi.sh
