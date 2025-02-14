@@ -1,0 +1,76 @@
+In file included from main.cu:45:
+./kernels.h:62:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   62 |   char buf[linesize];
+      |            ^~~~~~~~
+./kernels.h:62:12: note: read of non-const variable 'linesize' is not allowed in a constant expression
+./kernels.h:61:10: note: declared here
+   61 |   size_t linesize = 256;
+      |          ^
+./kernels.h:313:5: error: use of undeclared identifier '__syncwarp'; did you mean '__sync_swap'?
+  313 |     __syncwarp();
+      |     ^~~~~~~~~~
+      |     __sync_swap
+./kernels.h:313:5: note: '__sync_swap' declared here
+./kernels.h:313:16: error: too few arguments to function call, expected at least 1, have 0
+  313 |     __syncwarp();
+      |     ~~~~~~~~~~ ^
+./kernels.h:384:30: error: use of undeclared identifier '__any_sync'
+  384 |     for (int j = beg + lane; __any_sync(mask, j < end); j += warpsize) {
+      |                              ^
+./kernels.h:397:25: error: use of undeclared identifier '__shfl_up_sync'
+  397 |         const int tmp = __shfl_up_sync(mask, lblinc, d);
+      |                         ^
+./kernels.h:409:13: error: use of undeclared identifier '__shfl_sync'
+  409 |       lbl = __shfl_sync(mask, lbl, 31);
+      |             ^
+./kernels.h:428:26: error: use of undeclared identifier '__ballot_sync'
+  428 |         const int ball = __ballot_sync(mask, state == left);
+      |                          ^
+./kernels.h:429:26: error: use of undeclared identifier '__ballot_sync'
+  429 |         const int balr = __ballot_sync(mask, state == right);
+      |                          ^
+./kernels.h:457:28: error: use of undeclared identifier '__ballot_sync'
+  457 |           const int ball = __ballot_sync(mask, state == left);
+      |                            ^
+./kernels.h:483:28: error: use of undeclared identifier '__ballot_sync'
+  483 |           const int balr = __ballot_sync(mask, state == right);
+      |                            ^
+./kernels.h:509:29: error: use of undeclared identifier '__ballot_sync'
+  509 |             const int bal = __ballot_sync(mask, state == none);
+      |                             ^
+./kernels.h:524:18: error: use of undeclared identifier '__any_sync'
+  524 |         } while (__any_sync(mask, state == some));
+      |                  ^
+./kernels.h:530:30: error: use of undeclared identifier '__any_sync'
+  530 |     for (int j = beg + lane; __any_sync(mask, j < end); j += warpsize) {
+      |                              ^
+./kernels.h:537:11: error: use of undeclared identifier '__any_sync'
+  537 |       if (__any_sync(mask, paredge >= 0)) break;
+      |           ^
+./kernels.h:540:30: error: use of undeclared identifier '__any_sync'
+  540 |     for (int j = beg + lane; __any_sync(mask, j < end); j += warpsize) {
+      |                              ^
+./kernels.h:547:11: error: use of undeclared identifier '__any_sync'
+  547 |       if (__any_sync(mask, pos >= 0)) break;
+      |           ^
+./kernels.h:549:24: error: use of undeclared identifier '__ballot_sync'
+  549 |     unsigned int bal = __ballot_sync(mask, pos >= 0);
+      |                        ^
+./kernels.h:551:11: error: use of undeclared identifier '__shfl_sync'
+  551 |     pos = __shfl_sync(mask, pos, lid);
+      |           ^
+./kernels.h:572:5: error: use of undeclared identifier '__syncwarp'; did you mean '__sync_swap'?
+  572 |     __syncwarp();
+      |     ^~~~~~~~~~
+      |     __sync_swap
+./kernels.h:313:5: note: '__sync_swap' declared here
+  313 |     __syncwarp();
+      |     ^
+./kernels.h:572:16: error: too few arguments to function call, expected at least 1, have 0
+  572 |     __syncwarp();
+      |     ~~~~~~~~~~ ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++14 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:55: main.o] Error 1
+timeout was set to  3600
