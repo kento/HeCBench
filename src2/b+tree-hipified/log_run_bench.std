@@ -1,0 +1,7 @@
+hipcc	 -std=c++14  -Wall  -O3  ./main.cu 			-c 			-o ./main.o
+hipcc  ./kernel/kernel_wrapper.cu 				-c 				-o ./kernel/kernel_wrapper.o 				 -std=c++14  -Wall  -O3
+hipcc  ./kernel/kernel2_wrapper.cu 				-c 				-o ./kernel/kernel2_wrapper.o 				 -std=c++14  -Wall  -O3
+hipcc	./util/timer/timer.c 			-c 			-o ./util/timer/timer.o 
+hipcc	./util/num/num.c 			-c 			-o ./util/num/num.o 
+hipcc	 -std=c++14  -Wall  -O3 ./main.o 			./kernel/kernel_wrapper.o 			./kernel/kernel2_wrapper.o 			./util/timer/timer.o 			./util/num/num.o 			-lm  -o b+tree.out
+bash -c "../b+tree-cuda/prepare_data.sh; time -p ( ./b+tree.out file ../data/b+tree/mil.txt command ../data/b+tree/command.txt 1>log.std 2>log.err ) 2> log.time"

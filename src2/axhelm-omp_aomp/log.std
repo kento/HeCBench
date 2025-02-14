@@ -1,3 +1,3 @@
 word size: 4 bytes
-Correctness check: maxError = inf
- NRepetitions=100 Ndim=1 N=7 Nelements=8000 elapsed time=2.07476e+06 GDOF/s=1.32256 GB/s=86.865 GFLOPS/s=232.956
+Correctness check: maxError = 0.000610352
+ NRepetitions=100 Ndim=1 N=7 Nelements=8000 elapsed time=662423 GDOF/s=4.14237 GB/s=272.068 GFLOPS/s=729.637

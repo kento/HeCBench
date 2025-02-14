@@ -1,0 +1,55 @@
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+./main.c:746:7: warning: variable 'counter' set but not used [-Wunused-but-set-variable]
+  746 |   int counter = 0;
+      |       ^
+./main.c:852:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  852 |       else
+      |       ^
+./main.c:910:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  910 |       printf("(%x)", n);
+      |                ~~    ^
+./main.c:913:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  913 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.c:921:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  921 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.c:923:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  923 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+./main.c:1845:7: warning: variable 'arch_arg' set but not used [-Wunused-but-set-variable]
+ 1845 |   int arch_arg;
+      |       ^
+./main.c:1847:7: warning: variable 'cores_arg' set but not used [-Wunused-but-set-variable]
+ 1847 |   int cores_arg;
+      |       ^
+8 warnings generated.
+./main.c:746:7: warning: variable 'counter' set but not used [-Wunused-but-set-variable]
+  746 |   int counter = 0;
+      |       ^
+./main.c:852:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  852 |       else
+      |       ^
+./main.c:910:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  910 |       printf("(%x)", n);
+      |                ~~    ^
+./main.c:913:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  913 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.c:921:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  921 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.c:923:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  923 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+./main.c:1845:7: warning: variable 'arch_arg' set but not used [-Wunused-but-set-variable]
+ 1845 |   int arch_arg;
+      |       ^
+./main.c:1847:7: warning: variable 'cores_arg' set but not used [-Wunused-but-set-variable]
+ 1847 |   int cores_arg;
+      |       ^
+8 warnings generated.
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]

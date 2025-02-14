@@ -1,0 +1,5 @@
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c driver.cu -o driver.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c utils.cu -o utils.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o driver.o utils.o -o main 
+bash -c "../bsw-cuda/prepare_data.sh; time -p ( ./main ../bsw-cuda/test-data/protein-reference.fasta ../bsw-cuda/test-data/protein-query.fasta test_regression_protein_out 1>log.std 2>log.err ) 2> log.time"

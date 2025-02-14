@@ -1,0 +1,4 @@
+meshBasis.cpp: In function 'int meshWarpBlendNodesTet3D(int, float**, float**, float**)':
+meshBasis.cpp:379:13: warning: 'rstn' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  379 |     s[0][n] = rstn[1];
+      |     ~~~~~~~~^~~~~~~~~

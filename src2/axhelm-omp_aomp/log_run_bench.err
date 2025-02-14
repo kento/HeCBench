@@ -1,0 +1,130 @@
+In file included from main.cpp:23:
+./axhelmReference.cpp:32:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:32:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:32:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:32:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:32:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:32:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:33:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:33:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:33:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:33:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:33:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:33:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:34:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:34:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:34:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:34:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:34:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:34:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+9 warnings generated.
+In file included from main.cpp:23:
+./axhelmReference.cpp:32:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:32:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:32:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:32:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:32:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   32 |   dfloat Gqr[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:32:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:33:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:33:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:33:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:33:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:33:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   33 |   dfloat Gqs[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:33:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:34:28: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |                            ^~~~~
+./axhelmReference.cpp:34:28: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:34:21: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |                     ^~~~~
+./axhelmReference.cpp:34:21: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+./axhelmReference.cpp:34:14: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+   34 |   dfloat Gqt[cubNq][cubNq][cubNq];
+      |              ^~~~~
+./axhelmReference.cpp:34:14: note: function parameter 'cubNq' with unknown value cannot be used in a constant expression
+./axhelmReference.cpp:24:46: note: declared here
+   24 | static void axhelmElementReference(const int cubNq,
+      |                                              ^
+9 warnings generated.

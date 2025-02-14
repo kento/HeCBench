@@ -41,6 +41,12 @@ endif
 #===============================================================================
 # Targets to Build
 #===============================================================================
+
+all: lib $(program)
+
+lib:
+	tar xf BlasLapack.tar.gz
+
 $(program): $(obj) BlasLapack/libBlasLapack.a 
 	$(CC) $(CFLAGS) $+ -o $@ $(LDFLAGS)
 
@@ -60,10 +66,10 @@ clean:
 # run one- and three-dimensional kernels
 include ../include/axhelm-AMD
 
-run: $(program)
+run: all
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: $(program)
+run_mem: all
 	../scripts/rocm-smi.sh > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill rocm-smi.sh

@@ -8,5 +8,5 @@ minSize (CUDA block size): 200
 Total Alignments:30000
 Max Reference Size:1448
 Max Query Size:200
-Total loop iteration time (seconds):0.0355259
+Total loop iteration time (seconds):0.0397917
 Total Cells:1175735375

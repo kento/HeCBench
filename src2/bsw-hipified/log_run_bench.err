@@ -1,3 +1,17 @@
+main.cu:7:45: warning: variable 'totSizeA' set but not used [-Wunused-but-set-variable]
+    7 |   unsigned long largestA = 0, largestB = 0, totSizeA = 0, totSizeB = 0;
+      |                                             ^
+main.cu:7:59: warning: variable 'totSizeB' set but not used [-Wunused-but-set-variable]
+    7 |   unsigned long largestA = 0, largestB = 0, totSizeA = 0, totSizeB = 0;
+      |                                                           ^
+2 warnings generated when compiling for gfx90a.
+main.cu:7:45: warning: variable 'totSizeA' set but not used [-Wunused-but-set-variable]
+    7 |   unsigned long largestA = 0, largestB = 0, totSizeA = 0, totSizeB = 0;
+      |                                             ^
+main.cu:7:59: warning: variable 'totSizeB' set but not used [-Wunused-but-set-variable]
+    7 |   unsigned long largestA = 0, largestB = 0, totSizeA = 0, totSizeB = 0;
+      |                                                           ^
+2 warnings generated when compiling for host.
 In file included from driver.cu:5:
 ./kernel.cu:15:20: error: use of undeclared identifier '__ballot_sync'
    15 |   unsigned mask  = __ballot_sync(0xffffffff, threadIdx.x < lengthSeqB);  // blockDim.x

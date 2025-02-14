@@ -1,0 +1,3 @@
+hipcc  -std=c++14 -Wall -I../bfs-sycl -O3 -c bfs.cu -o bfs.o
+hipcc  -std=c++14 -Wall -I../bfs-sycl -O3 bfs.o -o main 
+bash -c "../bfs-cuda/prepare_data.sh; time -p ( ./main ../data/bfs/graph1MW_6.txt 1>log.std 2>log.err ) 2> log.time"

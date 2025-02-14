@@ -1,0 +1,46 @@
+./main.cu:750:7: warning: variable 'counter' set but not used [-Wunused-but-set-variable]
+  750 |   int counter = 0;
+      |       ^
+./main.cu:856:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  856 |       else
+      |       ^
+./main.cu:914:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  914 |       printf("(%x)", n);
+      |                ~~    ^
+./main.cu:917:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  917 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.cu:925:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  925 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.cu:927:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  927 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated when compiling for gfx90a.
+./main.cu:750:7: warning: variable 'counter' set but not used [-Wunused-but-set-variable]
+  750 |   int counter = 0;
+      |       ^
+./main.cu:856:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+  856 |       else
+      |       ^
+./main.cu:914:22: warning: format specifies type 'unsigned int' but the argument has type 'node *' [-Wformat]
+  914 |       printf("(%x)", n);
+      |                ~~    ^
+./main.cu:917:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  917 |         printf("%x ", n->pointers[i]);
+      |                 ~~    ^~~~~~~~~~~~~~
+./main.cu:925:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  925 |         printf("%x ", n->pointers[order - 1]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~
+./main.cu:927:23: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+  927 |         printf("%x ", n->pointers[n->num_keys]);
+      |                 ~~    ^~~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated when compiling for host.
+./kernel/kernel2_wrapper.cu:27:13: warning: unused variable 'offload_start' [-Wunused-variable]
+   27 |   long long offload_start = get_time();
+      |             ^~~~~~~~~~~~~
+1 warning generated when compiling for gfx90a.
+./kernel/kernel2_wrapper.cu:27:13: warning: unused variable 'offload_start' [-Wunused-variable]
+   27 |   long long offload_start = get_time();
+      |             ^~~~~~~~~~~~~
+1 warning generated when compiling for host.

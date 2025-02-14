@@ -1,0 +1,7 @@
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a  ./main.c 		-c 		-o ./main.o
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a	 ./kernel/kernel_wrapper.c 		-c 		-o ./kernel/kernel_wrapper.o
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a	 ./kernel/kernel2_wrapper.c 		-c 		-o ./kernel/kernel2_wrapper.o 
+clang++	./util/timer/timer.c 		-c 		-o ./util/timer/timer.o 		-O3
+clang++	./util/num/num.c 		-c 		-o ./util/num/num.o 		-O3
+clang++  -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a	./main.o 			./kernel/kernel_wrapper.o 			./kernel/kernel2_wrapper.o 			./util/timer/timer.o 			./util/num/num.o 			-lm 	                -o b+tree.out
+bash -c "../b+tree-cuda/prepare_data.sh; time -p ( ./b+tree.out file ../data/b+tree/mil.txt command ../data/b+tree/command.txt 1>log.std 2>log.err ) 2> log.time"

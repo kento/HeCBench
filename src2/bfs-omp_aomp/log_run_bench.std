@@ -1,0 +1,3 @@
+clang++  -std=c++14 -Wall -I../bfs-sycl -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c bfs.cpp -o bfs.o
+clang++  -std=c++14 -Wall -I../bfs-sycl -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a bfs.o -o main 
+bash -c "../bfs-cuda/prepare_data.sh; time -p ( ./main ../data/bfs/graph1MW_6.txt 1>log.std 2>log.err ) 2> log.time"
