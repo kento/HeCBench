@@ -1,1 +1,1 @@
-bash -c "time -p ( ./main ../prna-cuda/HIV1-NL43.seq  hiv1-nl43.out 1>log.std 2>log.err ) 2> log.time"
+nvcc  -DINT -std=c++14 -Xcompiler -Wall -arch=sm_60 -O3 -use_fast_math main.o fbase.o fparam.o util.o frna.o  -o main 
