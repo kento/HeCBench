@@ -1,0 +1,4 @@
+bash: line 1: 3055465 Segmentation fault      (core dumped) ./main -f ../tqs-cuda/input/patternsNP100NB512FB25.txt > log.std 2> log.err
+real 0.42
+user 0.03
+sys 0.26
