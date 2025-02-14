@@ -1,1 +1,3 @@
-bash -c "time -p ( ./main ../svd3x3-cuda/Dataset_1M.txt 1000 1>log.std 2>log.err ) 2> log.time"
+clang++  -std=c++14 -Wall  -O3 -ffast-math -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
+clang++  -std=c++14 -Wall  -O3 -ffast-math -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o -o main 
+bash -c "../svd3x3-cuda/prepare_data.sh; time -p ( ./main ../svd3x3-cuda/Dataset_1M.txt 1000 1>log.std 2>log.err ) 2> log.time"
