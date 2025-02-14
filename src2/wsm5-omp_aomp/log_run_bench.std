@@ -1,1 +1,1 @@
-clang++ -DMKX=4 -std=c++14 -Wall -I../wsm5-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c main.cpp -o main.o
+bash -c "time -p ( ./main 10 1>log.std 2>log.err ) 2> log.time"
