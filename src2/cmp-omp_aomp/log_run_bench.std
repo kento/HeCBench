@@ -1,1 +1,1 @@
-clang++  -std=c++14 -Wall -I../cmp-cuda -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c main.cpp -o main.o
+bash -c "time -p ( ./main -c0 1.975e-7 -c1 1.384e-6 -nc 5 -aph 2600 -tau 0.004 -v 2 -i ../cmp-cuda/fold1000.su 1>log.std 2>log.err ) 2> log.time"
