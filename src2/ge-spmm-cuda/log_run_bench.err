@@ -1,0 +1,10 @@
+./util/util.hpp: In instantiation of 'void readTuples(std::vector<int>&, std::vector<int>&, std::vector<T>&, int, FILE*) [with T = float; mtxT = int; FILE = FILE]':
+./util/util.hpp:316:21:   required from 'int readMtx(const char*, std::vector<int>&, std::vector<int>&, std::vector<T>&, int&, int&, int&) [with T = float]'
+main.cu:107:17:   required from here
+./util/util.hpp:128:5: warning: variable 'u' set but not used [-Wunused-but-set-variable]
+  128 |       int u = fscanf(f, "%d", &col_ind);
+      |     ^
+./util/util.hpp: In instantiation of 'void readTuples(std::vector<int>&, std::vector<int>&, std::vector<T>&, int, FILE*) [with T = float; mtxT = float; FILE = FILE]':
+./util/util.hpp:318:23:   required from 'int readMtx(const char*, std::vector<int>&, std::vector<int>&, std::vector<T>&, int&, int&, int&) [with T = float]'
+main.cu:107:17:   required from here
+./util/util.hpp:128:5: warning: variable 'u' set but not used [-Wunused-but-set-variable]

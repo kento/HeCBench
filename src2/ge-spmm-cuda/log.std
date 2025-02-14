@@ -1,7 +1,7 @@
 reading data file ...
 read file ok. N=262111 nnz=1234877
-Average kernel (method 1) execution time 589.016968 (us)
-Average kernel (method 2) execution time 348.347656 (us)
-Average kernel (method 3) execution time 295.766205 (us)
-Average kernel (method 4) execution time 295.418152 (us)
+Average kernel (method 1) execution time 587.269043 (us)
+Average kernel (method 2) execution time 348.587433 (us)
+Average kernel (method 3) execution time 295.711731 (us)
+Average kernel (method 4) execution time 295.530579 (us)
 PASS

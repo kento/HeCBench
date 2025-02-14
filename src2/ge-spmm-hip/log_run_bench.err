@@ -1,0 +1,24 @@
+In file included from main.cu:9:
+../ge-spmm-cuda/./util/mmio.hpp:196:13: warning: unused variable 'u' [-Wunused-variable]
+  196 |         int u = fscanf(f, "%d %d %lg\n", &I[i], &J[i], &val[i]);
+      |             ^
+In file included from main.cu:10:
+../ge-spmm-cuda/./util/util.hpp:128:11: warning: variable 'u' set but not used [-Wunused-but-set-variable]
+  128 |       int u = fscanf(f, "%d", &col_ind);
+      |           ^
+../ge-spmm-cuda/./util/util.hpp:185:11: warning: unused variable 'u' [-Wunused-variable]
+  185 |       int u = fscanf(f, "%d", &col_ind);
+      |           ^
+3 warnings generated when compiling for gfx90a.
+In file included from main.cu:9:
+../ge-spmm-cuda/./util/mmio.hpp:196:13: warning: unused variable 'u' [-Wunused-variable]
+  196 |         int u = fscanf(f, "%d %d %lg\n", &I[i], &J[i], &val[i]);
+      |             ^
+In file included from main.cu:10:
+../ge-spmm-cuda/./util/util.hpp:128:11: warning: variable 'u' set but not used [-Wunused-but-set-variable]
+  128 |       int u = fscanf(f, "%d", &col_ind);
+      |           ^
+../ge-spmm-cuda/./util/util.hpp:185:11: warning: unused variable 'u' [-Wunused-variable]
+  185 |       int u = fscanf(f, "%d", &col_ind);
+      |           ^
+3 warnings generated when compiling for host.
