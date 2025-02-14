@@ -1,1 +1,1 @@
-COMMAND = time -p ( ./$(program) ../dxtc1-sycl/data/lena_std.ppm ../dxtc1-sycl/data/lena_ref.dds 100 1>log.std 2>log.err ) 2> log.time
+COMMAND = time -p ( ./$(program) ../dxtc2-sycl/data/lena_std.ppm ../dxtc2-sycl/data/lena_ref.dds 100 1>log.std 2>log.err ) 2> log.time

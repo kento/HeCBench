@@ -1,1 +1,5 @@
+clang++  -DUSE_GPU -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c main.cpp -o main.o
+clang++  -DUSE_GPU -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c shrUtils.cpp -o shrUtils.o
+clang++  -DUSE_GPU -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 -c block.cpp -o block.o
+clang++  -DUSE_GPU -std=c++14 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx906 main.o shrUtils.o block.o -o main 
 bash -c "time -p ( ./main ../dxtc2-sycl/data/lena_std.ppm ../dxtc2-sycl/data/lena_ref.dds 100 1>log.std 2>log.err ) 2> log.time"

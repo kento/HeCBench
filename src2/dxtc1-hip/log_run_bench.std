@@ -1,4 +1,5 @@
 hipcc  -std=c++14 -Wall -O3 -c main.cu -o main.o
 hipcc  -std=c++14 -Wall -O3 -c shrUtils.cu -o shrUtils.o
-hipcc  -std=c++14 -Wall -O3 main.o shrUtils.o -o main 
+hipcc  -std=c++14 -Wall -O3 -c block.cu -o block.o
+hipcc  -std=c++14 -Wall -O3 main.o shrUtils.o block.o -o main 
 bash -c "time -p ( ./main ../dxtc2-sycl/data/lena_std.ppm ../dxtc2-sycl/data/lena_ref.dds 100 1>log.std 2>log.err ) 2> log.time"
