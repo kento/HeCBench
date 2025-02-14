@@ -31,26 +31,26 @@ End the permutation testing.
 
 >---- The ranking(count) of the original test statistics: 
   #Test   Counter 1  Counter 2  Counter 3
-     1       31         0        29 
-     2       31         0        29 
-     3       31        15        14 
-     4       29         0        31 
-     5       31         0        29 
-     6       37        15         8 
-     7       42         0        18 
-     8        0        60         0 
-     9       29         0        31 
-    10       28         2        30 
-    11       45         0        15 
-    12       13         0        47 
-    13       15         0        45 
-    14       29         0        31 
-    15       29         1        30 
-    16       44         1        15 
-    17       13         0        47 
-    18       15         0        45 
+     1     1417         0      1083 
+     2     1420         5      1075 
+     3     1275       545       680 
+     4     1074         5      1421 
+     5     1424         1      1075 
+     6     1520       571       409 
+     7     1812         1       687 
+     8        0      2500         0 
+     9     1075         1      1424 
+    10     1321         3      1176 
+    11     1822         1       677 
+    12      565         4      1931 
+    13      623         2      1875 
+    14     1076         6      1418 
+    15     1323         1      1176 
+    16     1820         4       676 
+    17      556         4      1940 
+    18      616         3      1881 
     19       73         0         6 
 >------------------------------------------------------< 
 
-Execution time of the permutation testing processed in the GPU : 8.714 sec
+Execution time of the permutation testing processed in the GPU : 7.530 sec
 ==> Assume that the noise source outputs are IID! 
