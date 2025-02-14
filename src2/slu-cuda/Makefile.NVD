@@ -1,0 +1,28 @@
+LAUNCHER = bash -c
+
+BIN_PATH = ./src
+
+program = main
+
+all : lib $(program)
+
+lib:
+	tar xf ./src/nicslu.tar.bz2 -C ./src
+
+$(program):
+	tar xf ./src/nicslu.tar.bz2 -C ./src
+	cd src; make -f Makefile
+
+clean:
+	cd src; make -f Makefile clean
+
+include ../include/slu-AMD
+
+run: all
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: all
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill nvidia-smi
+	../scripts/m.sh

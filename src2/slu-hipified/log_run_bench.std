@@ -1,0 +1,6 @@
+tar xf ./src/nicslu.tar.bz2 -C ./src
+cd src; make -f Makefile
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP25A/slu-hipified/src'
+make[1]: 'main' is up to date.
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP25A/slu-hipified/src'
+bash -c "time -p ( ./src/main -i ./src/nicslu/demo/ASIC_100k.mtx 1>log.std 2>log.err ) 2> log.time"

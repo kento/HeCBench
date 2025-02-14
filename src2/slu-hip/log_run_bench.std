@@ -1,0 +1,2 @@
+tar xf ./src/nicslu.tar.bz2 -C ./src
+bash -c "time -p ( .//main -i ./src/nicslu/demo/ASIC_100k.mtx 1>log.std 2>log.err ) 2> log.time"

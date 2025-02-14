@@ -1,0 +1,28 @@
+LAUNCHER = bash -c
+
+BIN_PATH = ./src
+
+program = main
+
+all : lib $(program)
+
+lib:
+	tar xf ./src/nicslu.tar.bz2 -C ./src
+
+$(program):
+	cd src; make -f Makefile
+
+clean:
+	cd src; make -f Makefile clean
+
+include ../include/slu-AMD
+
+run: all
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: all
+	../scripts/rocm-smi.sh > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill rocm-smi.sh
+	../scripts/rocm-m.sh
+
