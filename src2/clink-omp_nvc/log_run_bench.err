@@ -1,0 +1,58 @@
+sigmoid(float):
+     14, Generating implicit omp declare target routine
+         Generating NVIDIA GPU code
+init(char const*, char const*, char const*, float*, float*, float*, float*, float*, float*):
+     57, Loop not vectorized/parallelized: contains call
+     63, Loop not vectorized/parallelized: contains call
+     73, Loop nest collapsed
+         Loop not vectorized/parallelized: contains call
+     80, Loop nest collapsed
+         Loop not vectorized/parallelized: contains call
+     87, Loop nest collapsed
+         Loop not vectorized/parallelized: contains call
+     92, Loop not vectorized/parallelized: contains call
+lstm_n5(float const*, float const*, float const*, float const*, float const*, float const*, float*):
+    118, #omp target teams distribute parallel for thread_limit(256)
+        117, Generating map(to:outW[:5],intB[:20],inW[:20],outB[:1],intW[:100]) 
+             Generating map(from:y[:163840000]) 
+             Generating map(to:x[:163840000]) 
+        118, Generating "nvkernel__Z7lstm_n5PKfS0_S0_S0_S0_S0_Pf_F1L118_2" GPU kernel
+        121, Loop parallelized across teams and threads(128), schedule(static)
+    121, Loop not vectorized/parallelized: not countable
+    134, Outer loop unrolled 5 times (completely unrolled)
+    136, Loop not vectorized: data dependency
+         Loop unrolled 5 times (completely unrolled)
+    142, Outer loop unrolled 5 times (completely unrolled)
+    144, Loop not vectorized: data dependency
+         Loop unrolled 5 times (completely unrolled)
+    150, Outer loop unrolled 5 times (completely unrolled)
+    152, Loop not vectorized: data dependency
+         Loop unrolled 5 times (completely unrolled)
+    158, Outer loop unrolled 5 times (completely unrolled)
+    160, Loop not vectorized: data dependency
+         Loop unrolled 5 times (completely unrolled)
+    166, Generated vector simd code for the loop
+    172, Generated vector simd code for the loop containing reductions
+main:
+          57, Loop not vectorized/parallelized: contains call
+          63, Loop not vectorized/parallelized: contains call
+          73, Loop not vectorized/parallelized: contains call
+          80, Loop not vectorized/parallelized: contains call
+          87, Loop not vectorized/parallelized: contains call
+          92, Loop not vectorized/parallelized: contains call
+          57, Loop not vectorized/parallelized: contains call
+          63, Loop not vectorized/parallelized: contains call
+          73, Loop nest collapsed
+              Loop not vectorized/parallelized: contains call
+          80, Loop nest collapsed
+              Loop not vectorized/parallelized: contains call
+          87, Loop nest collapsed
+              Loop not vectorized/parallelized: contains call
+          92, Loop not vectorized/parallelized: contains call
+         209, Loop not vectorized/parallelized: too deeply nested
+std::chrono::duration<long, std::ratio<1l, 1000000000l>>::_S_gcd(long, long):
+      1, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
+std::chrono::duration<long, std::ratio<1l, 1000l>>::_S_gcd(long, long):
+      1, include "chrono"
+         472, Loop not vectorized/parallelized: not countable
