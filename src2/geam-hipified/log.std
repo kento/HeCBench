@@ -1,0 +1,8 @@
+----------------FP32 transpose matrix (16384 x 16384)----------------
+Host: serial matrix transpose time = 4474.208737 (ms)
+Device: average matrix transpose time = 8.215302 (ms)
+PASS
+----------------FP64 transpose matrix (16384 x 16384)----------------
+Host: serial matrix transpose time = 3697.801618 (ms)
+Device: average matrix transpose time = 28.946480 (ms)
+PASS
