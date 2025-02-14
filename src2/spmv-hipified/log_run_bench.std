@@ -1,1 +1,4 @@
-hipcc  -std=c++14  -Wall  -O3 -c kernels.cu -o kernels.o
+hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipsparse -O3 -c kernels.cu -o kernels.o
+hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipsparse -O3 -c utils.cpp -o utils.o
+hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipsparse -O3 main.o kernels.o utils.o -o main -lhipsparse
+bash -c "time -p ( ./main 16777216 10240 100 1>log.std 2>log.err ) 2> log.time"

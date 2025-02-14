@@ -1,0 +1,6 @@
+Initializing host matrices..
+Average execution time of SparseToDense_convert : 2112.618408 (us)
+sparse2dense_csr_example test PASSED
+Initializing host matrices..
+Average execution time of SparseToDense_convert : 12689.110352 (us)
+sparse2dense_csr_example test PASSED
