@@ -1,0 +1,1 @@
+bash -c "../cfd-cuda/prepare_data.sh; time -p ( ./main ../data/cfd/fvcorr.domn.097K 1>log.std 2>log.err ) 2> log.time"
