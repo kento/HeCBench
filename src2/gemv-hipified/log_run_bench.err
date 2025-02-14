@@ -1,0 +1,165 @@
+In file included from gemv.cu:7:
+./kernels.h:50:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   50 |     sum += __shfl_down_sync(0xffffffff, sum, 16);  // 0-16, 1-17, 2-18, etc.
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+In file included from gemv.cu:7:
+./kernels.h:52:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   52 |     sum += __shfl_down_sync(0xffffffff, sum, 8);  // 0-8, 1-9, 2-10, etc.
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+In file included from gemv.cu:7:
+./kernels.h:54:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   54 |     sum += __shfl_down_sync(0xffffffff, sum, 4);  // 0-4, 1-5, 2-6, etc.
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+In file included from gemv.cu:7:
+./kernels.h:56:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   56 |     sum += __shfl_down_sync(0xffffffff, sum, 2);  // 0-2, 1-3, 4-6, 5-7, etc.
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+In file included from gemv.cu:7:
+./kernels.h:58:12: error: use of undeclared identifier '__shfl_down_sync'; did you mean '__shfl_down'?
+   58 |     sum += __shfl_down_sync(0xffffffff, sum, 1);  // 0-1, 2-3, 4-5, etc.
+      |            ^~~~~~~~~~~~~~~~
+      |            __shfl_down
+/opt/rocm-6.2.0/include/hip/amd_detail/amd_warp_functions.h:342:14: note: '__shfl_down' declared here
+  342 | unsigned int __shfl_down(unsigned int var, unsigned int lane_delta, int width = warpSize) {
+      |              ^
+In file included from gemv.cu:8:
+./simple_tensor.h:19:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   19 |     hipMalloc((void**)&data_, height_ * width_ * sizeof(T));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gemv.cu:29:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   29 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:36:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   36 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:61:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   61 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:68:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   68 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:92:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   92 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:98:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   98 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:196:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  196 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:223:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  223 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+gemv.cu:246:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  246 |   hipDeviceSynchronize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+In file included from gemv.cu:8:
+./simple_tensor.h:18:9: warning: field 'height_' will be initialized after field 'width_' [-Wreorder-ctor]
+   18 |       : height_(height), width_(width) {
+      |         ^~~~~~~~~~~~~~   ~~~~~~~~~~~~
+      |         width_(width     height_(height
+gemv.cu:25:24: note: in instantiation of member function 'SimpleTensor<__half>::SimpleTensor' requested here
+   25 |   SimpleTensor<__half> result(vec.height_, 1);
+      |                        ^
+In file included from gemv.cu:8:
+./simple_tensor.h:19:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   19 |     hipMalloc((void**)&data_, height_ * width_ * sizeof(T));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./simple_tensor.h:56:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   56 |   ~SimpleTensor() { hipFree(data_); }
+      |                     ^~~~~~~ ~~~~~
+gemv.cu:25:24: note: in instantiation of member function 'SimpleTensor<__half>::~SimpleTensor' requested here
+   25 |   SimpleTensor<__half> result(vec.height_, 1);
+      |                        ^
+In file included from gemv.cu:8:
+./simple_tensor.h:34:9: warning: field 'height_' will be initialized after field 'width_' [-Wreorder-ctor]
+   34 |       : height_(other.height_), width_(other.width_), data_(other.data_) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~
+      |         width_(other.width_)    height_(other.height_)
+gemv.cu:41:10: note: in instantiation of member function 'SimpleTensor<__half>::SimpleTensor' requested here
+   41 |   return result;
+      |          ^
+In file included from gemv.cu:8:
+./simple_tensor.h:18:9: warning: field 'height_' will be initialized after field 'width_' [-Wreorder-ctor]
+   18 |       : height_(height), width_(width) {
+      |         ^~~~~~~~~~~~~~   ~~~~~~~~~~~~
+      |         width_(width     height_(height
+gemv.cu:177:25: note: in instantiation of member function 'SimpleTensor<uint4_2>::SimpleTensor' requested here
+  177 |   SimpleTensor<uint4_2> mat(size, mat_width);
+      |                         ^
+In file included from gemv.cu:8:
+./simple_tensor.h:19:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   19 |     hipMalloc((void**)&data_, height_ * width_ * sizeof(T));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./simple_tensor.h:56:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   56 |   ~SimpleTensor() { hipFree(data_); }
+      |                     ^~~~~~~ ~~~~~
+gemv.cu:177:25: note: in instantiation of member function 'SimpleTensor<uint4_2>::~SimpleTensor' requested here
+  177 |   SimpleTensor<uint4_2> mat(size, mat_width);
+      |                         ^
+In file included from gemv.cu:8:
+./simple_tensor.h:85:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   85 |     hipMemcpy(data_, rng.data(), total_elements * sizeof(T), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gemv.cu:179:7: note: in instantiation of member function 'SimpleTensor<uint4_2>::reset' requested here
+  179 |   mat.reset();
+      |       ^
+In file included from gemv.cu:8:
+./simple_tensor.h:73:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   73 |     hipMemcpy(data_, rng.data(), total_elements * sizeof(T), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gemv.cu:180:7: note: in instantiation of member function 'SimpleTensor<__half>::reset' requested here
+  180 |   vec.reset();
+      |       ^
+In file included from gemv.cu:8:
+./simple_tensor.h:47:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   47 |       hipFree(data_);
+      |       ^~~~~~~ ~~~~~
+gemv.cu:186:7: note: in instantiation of member function 'SimpleTensor<__half>::operator=' requested here
+  186 |   res = solve_gemv_int4_quantized_with_params(repeat, mat, vec, block_dim_x,
+      |       ^
+In file included from gemv.cu:8:
+./simple_tensor.h:18:9: warning: field 'height_' will be initialized after field 'width_' [-Wreorder-ctor]
+   18 |       : height_(height), width_(width) {
+      |         ^~~~~~~~~~~~~~   ~~~~~~~~~~~~
+      |         width_(width     height_(height
+gemv.cu:204:24: note: in instantiation of member function 'SimpleTensor<signed char>::SimpleTensor' requested here
+  204 |   SimpleTensor<int8_t> mat(size, size);
+      |                        ^
+In file included from gemv.cu:8:
+./simple_tensor.h:19:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   19 |     hipMalloc((void**)&data_, height_ * width_ * sizeof(T));
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./simple_tensor.h:56:21: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   56 |   ~SimpleTensor() { hipFree(data_); }
+      |                     ^~~~~~~ ~~~~~
+gemv.cu:204:24: note: in instantiation of member function 'SimpleTensor<signed char>::~SimpleTensor' requested here
+  204 |   SimpleTensor<int8_t> mat(size, size);
+      |                        ^
+In file included from gemv.cu:8:
+./simple_tensor.h:78:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   78 |     hipMemcpy(data_, rng.data(), total_elements * sizeof(T), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gemv.cu:206:7: note: in instantiation of member function 'SimpleTensor<signed char>::reset' requested here
+  206 |   mat.reset();
+      |       ^
+24 warnings and 5 errors generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++17 -Wall -O3 -c -x hip gemv.cu -o "gemv.o"
+make: *** [Makefile.AMD:50: gemv.o] Error 1
+timeout was set to  3000
