@@ -7,9 +7,12 @@ CC        = clang++
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
-ARCH      = gfx906
-GSL_INC   =-I$(HOME)/gsl_hip/include
-GSL_LIB   =-L$(HOME)/gsl_hip/lib -lgsl -lgslcblas 
+ARCH      = gfx90a
+
+GSL_HOME  = ../lib/gsl
+GSL_INC   =-I$(GSL_HOME)/gsl-amd/include
+GSL_LIB   =-L$(GSL_HOME)/gsl-amd/lib -lgsl -lgslcblas
+
 LAUNCHER = bash -c
 
 
@@ -52,6 +55,11 @@ endif
 # Targets to Build
 #===============================================================================
 
+all : lib $(program)
+
+lib :
+	tar xf $(GSL_HOME)/gsl-amd.tar.bz2 -C $(GSL_HOME)
+
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
@@ -75,10 +83,10 @@ clean:
 
 include ../include/xlqc-AMD
 
-run: $(program)
+run: main
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: $(program)
+run_mem: main
 	../scripts/rocm-smi.sh > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill rocm-smi.sh

@@ -1,1 +1,2 @@
-bash -c "time -p ( ./main dp 1>log.std 2>log.err ) 2> log.time"
+tar xf ../lib/gsl/gsl-nvidia.tar.bz2 -C ../lib/gsl
+bash -c "../xlqc-cuda/prepare_data.sh; export LD_LIBRARY_PATH=D_LIBRARY_PATH:../lib/gsl/gsl-nvidia/lib; time -p ( ./main dp 1>log.std 2>log.err ) 2> log.time"

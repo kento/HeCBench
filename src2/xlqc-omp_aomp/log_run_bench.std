@@ -1,1 +1,1 @@
-bash -c "time -p ( ./main sp 1>log.std 2>log.err;./main dp 1>>log.std 2>>log.err ) 2> log.time"
+bash -c "../xlqc-cuda/prepare_data.sh; export LD_LIBRARY_PATH=D_LIBRARY_PATH:../lib/gsl/gsl-amd/lib; time -p ( ./main dp 1>log.std 2>log.err ) 2> log.time"
