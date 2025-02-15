@@ -6,8 +6,11 @@
 CC        = nvcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
-GSL       = /home/users/u0001621/gsl_cuda
+ARCH      = sm_90
+
+GSL_HOME  = ../lib/gsl
+GSL       = $(GSL_HOME)/gsl-nvidia
+
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -44,6 +47,11 @@ endif
 # Targets to Build
 #===============================================================================
 
+all : lib $(program)
+
+lib :
+	tar xf $(GSL_HOME)/gsl-nvidia.tar.bz2 -C $(GSL_HOME)
+
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
@@ -55,10 +63,10 @@ clean:
 
 include ../include/sss-NVIDIA
 
-run: $(program)
+run: all
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: $(program)
+run_mem: all
 	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill nvidia-smi

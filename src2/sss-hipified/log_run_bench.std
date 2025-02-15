@@ -1,1 +1,2 @@
-bash -c "time -p ( GSL_RNG_SEED=123 ./main f9_n150_p50 1>log.std 2>log.err ) 2> log.time"
+tar xf ../lib/gsl/gsl-amd.tar.bz2 -C ../lib/gsl
+bash -c "export LD_LIBRARY_PATH=D_LIBRARY_PATH:../lib/gsl/gsl-amd/lib; time -p ( GSL_RNG_SEED=123 ./main f9_n150_p50 1>log.std 2>log.err ) 2> log.time"

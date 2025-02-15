@@ -1,3 +1,1 @@
 GSL_RNG_SEED=123
-gsl: qags.c:563: ERROR: integral is divergent, or slowly convergent
-Default GSL error handler invoked.

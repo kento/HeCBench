@@ -6,7 +6,10 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-GSL       = $(HOME)/gsl_hip
+
+GSL_HOME  = ../lib/gsl
+GSL       = $(GSL_HOME)/gsl-amd
+
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -43,6 +46,11 @@ endif
 # Targets to Build
 #===============================================================================
 
+all : lib $(program)
+
+lib :
+	tar xf $(GSL_HOME)/gsl-amd.tar.bz2 -C $(GSL_HOME)
+
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
@@ -54,10 +62,10 @@ clean:
 
 include ../include/sss-AMD
 
-run: $(program)
+run: all
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: $(program)
+run_mem: all
 	../scripts/rocm-smi.sh > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill rocm-smi.sh
