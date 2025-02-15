@@ -1,0 +1,28 @@
+LAUNCHER = bash -c
+
+bindir = ./release
+
+program = main
+
+all : $(program) prepare
+
+$(program):
+	mkdir -p $(bindir) && cd $(bindir); cmake .. -DCMAKE_BUILD_TYPE=Release -DSM_ARCH=90;make -j	      
+
+prepare :
+	cd $(bindir) && ./generate_dataset --iterations 100 --universe 1000 -k 1000
+	
+clean:
+	rm -rf $(bindir)
+
+# run one- and three-dimensional kernels
+include ../include/si-NVIDIA
+
+run: all
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: all
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill nvidia-smi
+	../scripts/m.sh

@@ -1,0 +1,86 @@
+mkdir -p ./release && cd ./release; CXX=hipcc cmake .. -DCMAKE_BUILD_TYPE=Release; make -j	      
+-- The HIP compiler identification is Clang 18.0.0
+-- The CXX compiler identification is Clang 18.0.0
+-- Detecting HIP compiler ABI info
+-- Detecting HIP compiler ABI info - done
+-- Check for working HIP compiler: /opt/rocm-6.2.0/lib/llvm/bin/clang++ - skipped
+-- Detecting HIP compile features
+-- Detecting HIP compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/rocm-6.2.0/bin/hipcc - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS
+-- Performing Test HIP_CLANG_SUPPORTS_PARALLEL_JOBS - Success
+-- cxxopts version 2.2.0
+-- Version: 7.1.2
+-- Build type: Release
+-- CXX_STANDARD: 14
+-- Performing Test has_std_14_flag
+-- Performing Test has_std_14_flag - Success
+-- Performing Test has_std_1y_flag
+-- Performing Test has_std_1y_flag - Success
+-- Performing Test SUPPORTS_USER_DEFINED_LITERALS
+-- Performing Test SUPPORTS_USER_DEFINED_LITERALS - Success
+-- Performing Test FMT_HAS_VARIANT
+-- Performing Test FMT_HAS_VARIANT - Success
+-- Required features: cxx_variadic_templates
+-- Performing Test HAS_NULLPTR_WARNING
+-- Performing Test HAS_NULLPTR_WARNING - Success
+-- Looking for strtod_l
+-- Looking for strtod_l - found
+-- CPM: adding package PackageProject.cmake@1.0 (v1.0)
+-- Configuring done (22.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/users/u0001620/work10/TMP36/si-hipified/release
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[2]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[ 28%] Building CXX object _deps/cxxopts-build/test/CMakeFiles/options_test.dir/options.cpp.o
+[ 28%] Building CXX object _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o
+[ 28%] Building CXX object _deps/cxxopts-build/src/CMakeFiles/example.dir/example.cpp.o
+[ 28%] Building CXX object _deps/cxxopts-build/test/CMakeFiles/options_test.dir/main.cpp.o
+[ 42%] Building CXX object _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o
+[ 42%] Building CXX object _deps/cxxopts-build/test/CMakeFiles/link_test.dir/link_b.cpp.o
+[ 50%] Building CXX object _deps/cxxopts-build/test/CMakeFiles/link_test.dir/link_a.cpp.o
+[ 57%] Linking CXX executable link_test
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[ 57%] Built target link_test
+[ 64%] Linking CXX static library libfmt.a
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[ 64%] Built target fmt
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[3]: Entering directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[ 71%] Building CXX object CMakeFiles/generate_dataset.dir/src/generate_dataset.cpp.o
+[ 78%] Linking CXX executable main
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[ 85%] Linking CXX executable example
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[ 85%] Built target example
+[ 92%] Linking CXX executable options_test
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[ 92%] Built target options_test
+[100%] Linking CXX executable generate_dataset
+make[3]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+[100%] Built target generate_dataset
+make[2]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work10/TMP36/si-hipified/release'

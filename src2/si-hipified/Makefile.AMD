@@ -1,0 +1,28 @@
+LAUNCHER = bash -c
+
+bindir = ./release
+
+program = main
+
+all : $(program) prepare
+
+$(program):
+	mkdir -p $(bindir) && cd $(bindir); CXX=hipcc cmake .. -DCMAKE_BUILD_TYPE=Release; make -j	      
+
+prepare :
+	cd $(bindir) && ./generate_dataset --iterations 100 --universe 1000 -k 1000
+	
+clean:
+	rm -rf $(bindir)
+
+# run one- and three-dimensional kernels
+include ../include/si-AMD
+
+run: all
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: all
+	../scripts/rocm-smi.sh > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill rocm-smi.sh
+	../scripts/rocm-m.sh
