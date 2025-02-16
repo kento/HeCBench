@@ -1,0 +1,4 @@
+tar xf bzip2_lib.tar.bz2
+hipcc  -std=c++14  -Wall -O3 -c src/cuda_ds/AddKernel.cu -o AddKernel.o
+hipcc  -std=c++14  -Wall -O3 -c src/cuda_ds/CompressKernel.cu -o CompressKernel.o
+g++  -std=c++11 -Wall -fpermissive -DGPU 	  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK 	  -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK 	  -I/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda/include -I./bzip2_lib/include -I/opt/rocm/include -O3 -c src/gerbil/FastParser.cpp -o FastParser.o

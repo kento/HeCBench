@@ -8,12 +8,12 @@ normalized kmers        :  true
 number of temp-files    :   512
 total number of threads :    72
 number of splitters     :    69
-number of hashers       :    44
+number of hashers       :    43
 input                   :       ../data/gerbil/ERR164407.fastq.gz
 temp                    :       tmp
 output                  :       out
-size of memory          : 585272 MB
-number of gpu's         :     1
+size of memory          : 487992 MB
+number of gpu's         :     0
 ---------------------------------------------
 Thread[0]: read file 'ERR164407.fastq.gz' (  72 MB)...
 ================== STAGE 1 ==================
@@ -21,27 +21,27 @@ total bytes read       :     76248044 B
 total blocks read      :         1164
 number of reads        :       282806
 number of bases        :     97607891
-number of superbundles :         2933
-size of temp file      :       91.656 MB (79.820 MB, 87.1% belegt)
+number of superbundles :         2939
+size of temp file      :       91.844 MB (79.820 MB, 86.9% belegt)
 number of s-mers       :      7468195
 number of k-mers       :     89441638
-memory usage           :       585271 MB
+memory usage           :       487991 MB
 ---------------------------------------------
 ********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
 ================== STAGE 2 ==================
-kmers (CPU)     :     89425607
-kmers (GPU)     :        16031
-ukmers (CPU)    :     74030061
-ukmers (GPU)    :        13549
-below th (CPU)  :     71288514
-below th (GPU)  :        13126
+kmers (CPU)     :     89441638
+kmers (GPU)     :            0
+ukmers (CPU)    :     74043610
+ukmers (GPU)    :            0
+below th (CPU)  :     71301640
+below th (GPU)  :            0
 size of output  :       20.920 MB
-memory usage    :          434 MB
+memory usage    :          412 MB
 ---------------------------------------------
 ===================================================
 ================== S U M M A R Y ==================
 ===================================================
-time (real) for stage1    :   1.543 s
-time (real) for stage2    :   2.634 s
-time (real) total (1 + 2) :   4.177 s
+time (real) for stage1    :   1.519 s
+time (real) for stage2    :   0.224 s
+time (real) total (1 + 2) :   1.744 s
 ---------------------------------------------------

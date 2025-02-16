@@ -6,8 +6,9 @@
 CC        = nvcc 
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
-DMND_PATH = ../diamond-sycl
+ARCH      = sm_90
+#DMND_PATH = ../diamond-sycl
+DMND_PATH = ./
 LAUNCHER = bash -c
 
 #===============================================================================

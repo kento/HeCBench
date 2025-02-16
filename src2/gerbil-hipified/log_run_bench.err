@@ -1,0 +1,71 @@
+In file included from src/gerbil/../../include/gerbil/SyncQueue.h:1,
+                 from src/gerbil/../../include/gerbil/FastParser.h:25,
+                 from src/gerbil/FastParser.cpp:8:
+/opt/rocm/include/hip/hip_runtime.h:66:2: error: #error ("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+   66 | #error("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+      |  ^~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from src/gerbil/../../include/gerbil/SyncQueue.h:1,
+                 from src/gerbil/../../include/gerbil/FastParser.h:25,
+                 from src/gerbil/FastParser.cpp:8:
+/opt/rocm/include/hip/hip_runtime_api.h:9193:2: error: #error ("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+ 9193 | #error("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+      |  ^~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:71,
+                 from src/gerbil/../../include/gerbil/SyncQueue.h:1,
+                 from src/gerbil/../../include/gerbil/FastParser.h:25,
+                 from src/gerbil/FastParser.cpp:8:
+/opt/rocm/include/hip/library_types.h:75:2: error: #error ("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+   75 | #error("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+      |  ^~~~~
+In file included from /opt/rocm/include/hip/hip_runtime.h:73,
+                 from src/gerbil/../../include/gerbil/SyncQueue.h:1,
+                 from src/gerbil/../../include/gerbil/FastParser.h:25,
+                 from src/gerbil/FastParser.cpp:8:
+/opt/rocm/include/hip/hip_vector_types.h:38:2: error: #error ("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+   38 | #error("Must define exactly one of __HIP_PLATFORM_AMD__ or __HIP_PLATFORM_NVIDIA__");
+      |  ^~~~~
+In file included from src/gerbil/../../include/gerbil/Bundle.h:25,
+                 from src/gerbil/../../include/gerbil/FastParser.h:26,
+                 from src/gerbil/FastParser.cpp:8:
+src/gerbil/../../include/gerbil/KMer.h:147: warning: ignoring '#pragma warning ' [-Wunknown-pragmas]
+  147 | #pragma warning(push, 0)
+      | 
+src/gerbil/../../include/gerbil/KMer.h:153: warning: ignoring '#pragma warning ' [-Wunknown-pragmas]
+  153 | #pragma warning(pop)
+      | 
+In file included from /opt/rocm/include/hip/hip_runtime.h:70,
+                 from src/gerbil/../../include/gerbil/SyncQueue.h:1,
+                 from src/gerbil/../../include/gerbil/FastParser.h:25,
+                 from src/gerbil/FastParser.cpp:8:
+/opt/rocm/include/hip/hip_runtime_api.h:9227:61: error: 'hipHostMallocDefault' was not declared in this scope
+ 9227 |                                        unsigned int flags = hipHostMallocDefault) {
+      |                                                             ^~~~~~~~~~~~~~~~~~~~
+/opt/rocm/include/hip/hip_runtime_api.h:9246:61: error: 'hipMemAttachGlobal' was not declared in this scope
+ 9246 |                                        unsigned int flags = hipMemAttachGlobal) {
+      |                                                             ^~~~~~~~~~~~~~~~~~
+In file included from src/gerbil/../../include/gerbil/types.h:27,
+                 from src/gerbil/../../include/gerbil/SyncQueue.h:26,
+                 from src/gerbil/../../include/gerbil/FastParser.h:25,
+                 from src/gerbil/FastParser.cpp:8:
+src/gerbil/../../include/gerbil/debug.h: In constructor 'gerbil::StackStopWatch::StackStopWatch(clockid_t)':
+src/gerbil/../../include/gerbil/debug.h:101:18: warning: 'gerbil::StackStopWatch::_sec' will be initialized after [-Wreorder]
+  101 |         __time_t _sec;
+      |                  ^~~~
+src/gerbil/../../include/gerbil/debug.h:98:14: warning:   'bool gerbil::StackStopWatch::_inProgress' [-Wreorder]
+   98 |         bool _inProgress;
+      |              ^~~~~~~~~~~
+src/gerbil/../../include/gerbil/debug.h:104:9: warning:   when initialized here [-Wreorder]
+  104 |         StackStopWatch(const clockid_t mode) :
+      |         ^~~~~~~~~~~~~~
+src/gerbil/../../include/gerbil/debug.h: In constructor 'gerbil::StackStopWatch::StackStopWatch()':
+src/gerbil/../../include/gerbil/debug.h:101:18: warning: 'gerbil::StackStopWatch::_sec' will be initialized after [-Wreorder]
+  101 |         __time_t _sec;
+      |                  ^~~~
+src/gerbil/../../include/gerbil/debug.h:98:14: warning:   'bool gerbil::StackStopWatch::_inProgress' [-Wreorder]
+   98 |         bool _inProgress;
+      |              ^~~~~~~~~~~
+src/gerbil/../../include/gerbil/debug.h:107:9: warning:   when initialized here [-Wreorder]
+  107 |         StackStopWatch() :
+      |         ^~~~~~~~~~~~~~
+make: *** [Makefile.AMD:62: FastParser.o] Error 1

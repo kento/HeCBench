@@ -6,8 +6,9 @@
 CC        = hipcc 
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
-DMND_PATH = ../diamond-sycl
+ARCH      = sm_90
+#DMND_PATH = ../diamond-sycl
+DMND_PATH = ./
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -29,7 +30,8 @@ obj = $(c_src:.c=.o) $(cpp_src:.cpp=.o) $(cuda_src:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall 
+#CFLAGS := $(EXTRA_CFLAGS) -std=c++14  -Wall 
+CFLAGS := $(EXTRA_CFLAGS)  -Wall 
 
 # Linker Flags
 LDFLAGS = -lz -lpthread

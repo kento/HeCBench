@@ -1,0 +1,4 @@
+clang++   -std=c++14 -Wall  -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march= -c src/blast/sm_blosum45.c -o src/blast/sm_blosum45.o
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: error: invalid target ID ''; format is a processor name followed by an optional colon-delimited list of features followed by an enable/disable sign (e.g., 'gfx908:sramecc+:xnack-')
+make: *** [Makefile.AMD:62: src/blast/sm_blosum45.o] Error 1

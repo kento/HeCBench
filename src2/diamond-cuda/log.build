@@ -1,0 +1,2866 @@
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_blosum45.c -o src/blast/sm_blosum45.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_blosum50.c -o src/blast/sm_blosum50.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_blosum62.c -o src/blast/sm_blosum62.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_blosum80.c -o src/blast/sm_blosum80.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_blosum90.c -o src/blast/sm_blosum90.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_pam30.c -o src/blast/sm_pam30.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_pam70.c -o src/blast/sm_pam70.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/sm_pam250.c -o src/blast/sm_pam250.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/run/main.cpp -o src/run/main.o
+In file included from src/run/../extra/compare.h:23,
+                 from src/run/main.cpp:22:
+src/run/../extra/match_file.h: In member function 'bool match_file::get(blast_match&, const blast_format&)':
+src/run/../extra/match_file.h:151:25: warning: unused variable 'q' [-Wunused-variable]
+  151 |                 Letter *q = queryseq, *s = subjectseq;
+      |                         ^
+src/run/../extra/match_file.h:151:40: warning: unused variable 's' [-Wunused-variable]
+  151 |                 Letter *q = queryseq, *s = subjectseq;
+      |                                        ^
+src/run/../extra/match_file.h:152:26: warning: unused variable 'match_mask' [-Wunused-variable]
+  152 |                 unsigned match_mask = 0, current_len = 0;
+      |                          ^~~~~~~~~~
+src/run/../extra/match_file.h:152:42: warning: unused variable 'current_len' [-Wunused-variable]
+  152 |                 unsigned match_mask = 0, current_len = 0;
+      |                                          ^~~~~~~~~~~
+In file included from src/run/../extra/compare.h:24,
+                 from src/run/main.cpp:22:
+src/run/../extra/../util/compressed_stream.h: At global scope:
+src/run/../extra/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../extra/../util/compressed_stream.h:23,
+                 from src/run/../extra/compare.h:24,
+                 from src/run/main.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../extra/compare.h:24,
+                 from src/run/main.cpp:22:
+src/run/../extra/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../extra/../util/compressed_stream.h:23,
+                 from src/run/../extra/compare.h:24,
+                 from src/run/main.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/main.cpp:22:
+src/run/../extra/compare.h: In function 'void get_target_seq(std::vector<blast_match>::const_iterator&, std::vector<blast_match>::const_iterator&, const const_iterator&, const const_iterator&, Cmp_stats&)':
+src/run/../extra/compare.h:80:24: warning: unused variable 'q' [-Wunused-variable]
+   80 |                 double q = sc_j / sc_i;
+      |                        ^
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/basic/config.cpp -o src/basic/config.o
+In file included from src/basic/../data/seed_set.h:23,
+                 from src/basic/../data/seed_histogram.h:28,
+                 from src/basic/../data/sorted_list.h:23,
+                 from src/basic/config.cpp:31:
+src/basic/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/basic/../data/../util/hash_table.h:24,
+                 from src/basic/../data/seed_set.h:23,
+                 from src/basic/../data/seed_histogram.h:28,
+                 from src/basic/../data/sorted_list.h:23,
+                 from src/basic/config.cpp:31:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/basic/../data/seed_set.h:23,
+                 from src/basic/../data/seed_histogram.h:28,
+                 from src/basic/../data/sorted_list.h:23,
+                 from src/basic/config.cpp:31:
+src/basic/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/basic/../data/../util/hash_table.h:24,
+                 from src/basic/../data/seed_set.h:23,
+                 from src/basic/../data/seed_histogram.h:28,
+                 from src/basic/../data/sorted_list.h:23,
+                 from src/basic/config.cpp:31:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/basic/config.cpp:31:
+src/basic/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/basic/../data/../util/hash_table.h:24,
+                 from src/basic/../data/seed_set.h:23,
+                 from src/basic/../data/seed_histogram.h:28,
+                 from src/basic/../data/sorted_list.h:23,
+                 from src/basic/config.cpp:31:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/basic/config.cpp:32:
+src/basic/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/basic/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/basic/config.cpp:34:
+src/basic/masking.h: At global scope:
+src/basic/masking.h:45:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   45 |         static auto_ptr<Masking> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/basic/../data/../util/hash_table.h:24,
+                 from src/basic/../data/seed_set.h:23,
+                 from src/basic/../data/seed_histogram.h:28,
+                 from src/basic/../data/sorted_list.h:23,
+                 from src/basic/config.cpp:31:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/basic/config.cpp: In constructor 'Config::Config(int, const char**)':
+src/basic/config.cpp:347:45: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  347 |                         Masking::instance = auto_ptr<Masking>(new Masking(score_matrix));
+      |                                             ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/basic/../data/../util/hash_table.h:24,
+                 from src/basic/../data/seed_set.h:23,
+                 from src/basic/../data/seed_histogram.h:28,
+                 from src/basic/../data/sorted_list.h:23,
+                 from src/basic/config.cpp:31:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/util/tinythread.cpp -o src/util/tinythread.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/util/compressed_stream.cpp -o src/util/compressed_stream.o
+In file included from src/util/compressed_stream.cpp:26:
+src/util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/util/compressed_stream.h:23,
+                 from src/util/compressed_stream.cpp:26:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/util/compressed_stream.cpp:26:
+src/util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/util/compressed_stream.h:23,
+                 from src/util/compressed_stream.cpp:26:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/basic/score_matrix.cpp -o src/basic/score_matrix.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/blast_filter.cpp -o src/blast/blast_filter.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/blast/blast_seg.cpp -o src/blast/blast_seg.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/data/queries.cpp -o src/data/queries.o
+In file included from src/data/queries.h:22,
+                 from src/data/queries.cpp:19:
+src/data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/queries.h:24,
+                 from src/data/queries.cpp:19:
+src/data/../util/hash_table.h: At global scope:
+src/data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/queries.h:24,
+                 from src/data/queries.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/queries.h:24,
+                 from src/data/queries.cpp:19:
+src/data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/queries.h:24,
+                 from src/data/queries.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/queries.h:24,
+                 from src/data/queries.cpp:19:
+src/data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/queries.h:24,
+                 from src/data/queries.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/data/reference.cpp -o src/data/reference.o
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/reference.h:27,
+                 from src/data/reference.cpp:24:
+src/data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/reference.h:22,
+                 from src/data/reference.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/reference.h:27,
+                 from src/data/reference.cpp:24:
+src/data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/reference.h:22,
+                 from src/data/reference.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/reference.h:27,
+                 from src/data/reference.cpp:24:
+src/data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/reference.h:22,
+                 from src/data/reference.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/load_seqs.h:24,
+                 from src/data/reference.cpp:26:
+src/data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/data/../util/seq_file_format.h:24,
+                 from src/data/load_seqs.h:25,
+                 from src/data/reference.cpp:26:
+src/data/../util/compressed_stream.h: At global scope:
+src/data/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/reference.h:22,
+                 from src/data/reference.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/../util/seq_file_format.h:24,
+                 from src/data/load_seqs.h:25,
+                 from src/data/reference.cpp:26:
+src/data/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/reference.h:22,
+                 from src/data/reference.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/reference.cpp:26:
+src/data/load_seqs.h: In function 'size_t push_seq(Sequence_set&, Sequence_set**, const std::vector<char>&, unsigned int)':
+src/data/load_seqs.h:56:52: warning: comparison of integer expressions of different signedness: 'int' and 'const unsigned int' [-Wsign-compare]
+   56 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+src/data/load_seqs.h:46:41: warning: unused variable 'queries' [-Wunused-variable]
+   46 |                 vector<Letter>  const * queries = proteins;
+      |                                         ^~~~~~~
+In file included from src/data/reference.cpp:29:
+src/data/../basic/masking.h: At global scope:
+src/data/../basic/masking.h:45:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   45 |         static auto_ptr<Masking> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/reference.h:22,
+                 from src/data/reference.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/data/reference.cpp: In function 'void make_db()':
+src/data/reference.cpp:87:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   87 |         auto_ptr<Input_stream> db_file (Compressed_istream::auto_detect(config.input_ref_file));
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/reference.h:22,
+                 from src/data/reference.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/data/seed_histogram.cpp -o src/data/seed_histogram.o
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/seed_histogram.cpp:19:
+src/data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/seed_histogram.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/seed_histogram.cpp:19:
+src/data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/seed_histogram.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/daa_record.cpp -o src/output/daa_record.o
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/daa_file.h:30,
+                 from src/output/daa_record.h:23,
+                 from src/output/daa_record.cpp:19:
+src/output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/daa_record.h:23,
+                 from src/output/daa_record.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/daa_file.h:30,
+                 from src/output/daa_record.h:23,
+                 from src/output/daa_record.cpp:19:
+src/output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/daa_record.h:23,
+                 from src/output/daa_record.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/reference.h:27,
+                 from src/output/daa_file.h:30,
+                 from src/output/daa_record.h:23,
+                 from src/output/daa_record.cpp:19:
+src/output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/daa_record.h:23,
+                 from src/output/daa_record.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/daa_record.h:26,
+                 from src/output/daa_record.cpp:19:
+src/output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/daa_record.cpp:20:
+src/output/output.h: At global scope:
+src/output/output.h:129:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  129 |         static auto_ptr<Output_sink> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/daa_record.h:23,
+                 from src/output/daa_record.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/output/daa_record.cpp: In function 'Binary_buffer::Iterator& operator>>(Binary_buffer::Iterator&, DAA_query_record::Match&)':
+src/output/daa_record.cpp:59:34: warning: 'subject_begin' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   59 |         r.subject_range.begin_ = (int)subject_begin;
+      |                                  ^~~~~~~~~~~~~~~~~~
+src/output/daa_record.cpp:56:18: warning: 'query_begin' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   56 |         uint32_t query_begin, subject_begin;
+      |                  ^~~~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/search/search.cpp -o src/search/search.o
+In file included from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/search.cpp:19:
+src/search/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/search.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/search.cpp:19:
+src/search/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/search.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/align_range.h:23,
+                 from src/search/search.cpp:19:
+src/search/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/search.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/../data/queries.h:22,
+                 from src/search/hit_filter.h:27,
+                 from src/search/search.cpp:20:
+src/search/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/search/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/util/command_line_parser.cpp -o src/util/command_line_parser.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/util/seq_file_format.cpp -o src/util/seq_file_format.o
+In file included from src/util/seq_file_format.h:24,
+                 from src/util/seq_file_format.cpp:19:
+src/util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/util/compressed_stream.h:23,
+                 from src/util/seq_file_format.h:24,
+                 from src/util/seq_file_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/util/seq_file_format.h:24,
+                 from src/util/seq_file_format.cpp:19:
+src/util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/util/compressed_stream.h:23,
+                 from src/util/seq_file_format.h:24,
+                 from src/util/seq_file_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/util/util.cpp -o src/util/util.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/util/Timer.cpp -o src/util/Timer.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/basic/basic.cpp -o src/basic/basic.o
+In file included from src/basic/basic.cpp:22:
+src/basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/basic/basic.cpp:25:
+src/basic/masking.h: At global scope:
+src/basic/masking.h:45:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   45 |         static auto_ptr<Masking> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/basic/masking.h:20,
+                 from src/basic/basic.cpp:25:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/floating_sw.cpp -o src/dp/floating_sw.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/basic/hssp.cpp -o src/basic/hssp.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/ungapped_align.cpp -o src/dp/ungapped_align.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/run/tools.cpp -o src/run/tools.o
+In file included from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+src/run/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../util/compressed_stream.h:23,
+                 from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+src/run/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../util/compressed_stream.h:23,
+                 from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../data/queries.h:22,
+                 from src/run/tools.cpp:25:
+src/run/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/run/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/run/../data/seed_set.h:23,
+                 from src/run/../data/seed_histogram.h:28,
+                 from src/run/../data/sorted_list.h:23,
+                 from src/run/../data/queries.h:24,
+                 from src/run/tools.cpp:25:
+src/run/../data/../util/hash_table.h: At global scope:
+src/run/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../util/compressed_stream.h:23,
+                 from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../data/seed_set.h:23,
+                 from src/run/../data/seed_histogram.h:28,
+                 from src/run/../data/sorted_list.h:23,
+                 from src/run/../data/queries.h:24,
+                 from src/run/tools.cpp:25:
+src/run/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../util/compressed_stream.h:23,
+                 from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../data/queries.h:24,
+                 from src/run/tools.cpp:25:
+src/run/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../util/compressed_stream.h:23,
+                 from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/tools.cpp:26:
+src/run/../data/load_seqs.h: In function 'size_t push_seq(Sequence_set&, Sequence_set**, const std::vector<char>&, unsigned int)':
+src/run/../data/load_seqs.h:56:52: warning: comparison of integer expressions of different signedness: 'int' and 'const unsigned int' [-Wsign-compare]
+   56 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+src/run/../data/load_seqs.h:46:41: warning: unused variable 'queries' [-Wunused-variable]
+   46 |                 vector<Letter>  const * queries = proteins;
+      |                                         ^~~~~~~
+In file included from src/run/tools.cpp:28:
+src/run/../extra/match_file.h: In member function 'bool match_file::get(blast_match&, const blast_format&)':
+src/run/../extra/match_file.h:151:25: warning: unused variable 'q' [-Wunused-variable]
+  151 |                 Letter *q = queryseq, *s = subjectseq;
+      |                         ^
+src/run/../extra/match_file.h:151:40: warning: unused variable 's' [-Wunused-variable]
+  151 |                 Letter *q = queryseq, *s = subjectseq;
+      |                                        ^
+src/run/../extra/match_file.h:152:26: warning: unused variable 'match_mask' [-Wunused-variable]
+  152 |                 unsigned match_mask = 0, current_len = 0;
+      |                          ^~~~~~~~~~
+src/run/../extra/match_file.h:152:42: warning: unused variable 'current_len' [-Wunused-variable]
+  152 |                 unsigned match_mask = 0, current_len = 0;
+      |                                          ^~~~~~~~~~~
+In file included from src/run/tools.cpp:29:
+src/run/../basic/masking.h: At global scope:
+src/run/../basic/masking.h:45:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   45 |         static auto_ptr<Masking> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../util/compressed_stream.h:23,
+                 from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/run/tools.cpp: In function 'void fastq2fasta()':
+src/run/tools.cpp:134:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  134 |         auto_ptr<Input_stream> f(Compressed_istream::auto_detect(config.query_file));
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../util/compressed_stream.h:23,
+                 from src/run/../util/seq_file_format.h:24,
+                 from src/run/tools.cpp:24:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/greedy_align.cpp -o src/dp/greedy_align.o
+In file included from src/dp/../align/../data/seed_set.h:23,
+                 from src/dp/../align/../data/seed_histogram.h:28,
+                 from src/dp/../align/../data/sorted_list.h:23,
+                 from src/dp/../align/../data/reference.h:27,
+                 from src/dp/../align/extend_ungapped.h:23,
+                 from src/dp/greedy_align.cpp:29:
+src/dp/../align/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/../dp/../align/align.h:22,
+                 from src/dp/../align/../dp/dp.h:26,
+                 from src/dp/../align/extend_ungapped.h:22,
+                 from src/dp/greedy_align.cpp:29:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../align/../data/seed_set.h:23,
+                 from src/dp/../align/../data/seed_histogram.h:28,
+                 from src/dp/../align/../data/sorted_list.h:23,
+                 from src/dp/../align/../data/reference.h:27,
+                 from src/dp/../align/extend_ungapped.h:23,
+                 from src/dp/greedy_align.cpp:29:
+src/dp/../align/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/../dp/../align/align.h:22,
+                 from src/dp/../align/../dp/dp.h:26,
+                 from src/dp/../align/extend_ungapped.h:22,
+                 from src/dp/greedy_align.cpp:29:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../align/../data/reference.h:27,
+                 from src/dp/../align/extend_ungapped.h:23,
+                 from src/dp/greedy_align.cpp:29:
+src/dp/../align/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/../dp/../align/align.h:22,
+                 from src/dp/../align/../dp/dp.h:26,
+                 from src/dp/../align/extend_ungapped.h:22,
+                 from src/dp/greedy_align.cpp:29:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../output/../output/daa_record.h:26,
+                 from src/dp/../output/output_format.h:26,
+                 from src/dp/greedy_align.cpp:31:
+src/dp/../output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/dp/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/dp/../output/output_format.h:27,
+                 from src/dp/greedy_align.cpp:31:
+src/dp/../output/../util/compressed_stream.h: At global scope:
+src/dp/../output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/../dp/../align/align.h:22,
+                 from src/dp/../align/../dp/dp.h:26,
+                 from src/dp/../align/extend_ungapped.h:22,
+                 from src/dp/greedy_align.cpp:29:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../output/output_format.h:27,
+                 from src/dp/greedy_align.cpp:31:
+src/dp/../output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/../dp/../align/align.h:22,
+                 from src/dp/../align/../dp/dp.h:26,
+                 from src/dp/../align/extend_ungapped.h:22,
+                 from src/dp/greedy_align.cpp:29:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/greedy_align.cpp:31:
+src/dp/../output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/../dp/../align/align.h:22,
+                 from src/dp/../align/../dp/dp.h:26,
+                 from src/dp/../align/extend_ungapped.h:22,
+                 from src/dp/greedy_align.cpp:29:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/dp/greedy_align.cpp: In instantiation of 'void Greedy_aligner2::forward_pass(_it, _it, bool, double) [with _it = Index_iterator]':
+src/dp/greedy_align.cpp:530:15:   required from here
+src/dp/greedy_align.cpp:294:58: warning: unused variable 'shift' [-Wunused-variable]
+  294 |                                 const int de = j->first, shift = dd - de;
+      |                                                          ^~~~~
+src/dp/greedy_align.cpp:327:58: warning: unused variable 'shift' [-Wunused-variable]
+  327 |                                 const int de = j->first, shift = dd - de;
+      |                                                          ^~~~~
+src/dp/greedy_align.cpp: In function 'int Greedy_aligner2::get_approximate_link(int, int, double, int)':
+src/dp/greedy_align.cpp:266:262: warning: 'path_min' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  266 |                                 cout << "Link n=" << e_idx << " d=" << e.diag() << " i_end=" << e.query_end() << " max_i=" << max_i << " shift=" << shift << " space=" << space << " prefix_score=" << prefix_score << " link_score=" << link_score << " path_min="<<path_min<<endl;
+      |                                                                                                                                                                                                                                                                      ^~~~~~~~
+src/dp/greedy_align.cpp:264:52: warning: 'path_max' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  264 |                         diags.add_edge(Diag_graph::Edge(prefix_score, path_max, link_j, d_idx, e_idx, prefix_score == path_max ? prefix_score : path_min, prefix_score_begin));
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/dp/../align/extend_ungapped.h:22,
+                 from src/dp/greedy_align.cpp:29:
+src/dp/../align/../dp/dp.h:307:25: warning: 'prefix_score_begin' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  307 |                         prefix_score_begin(prefix_score_begin),
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/dp/greedy_align.cpp:223:94: note: 'prefix_score_begin' was declared here
+  223 |                 int prefix_score = 0, link_score = 0, link_j, diff1 = 0, path_max, path_min, prefix_score_begin;
+      |                                                                                              ^~~~~~~~~~~~~~~~~~
+src/dp/greedy_align.cpp:223:55: warning: 'link_j' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  223 |                 int prefix_score = 0, link_score = 0, link_j, diff1 = 0, path_max, path_min, prefix_score_begin;
+      |                                                       ^~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/run/benchmark.cpp -o src/run/benchmark.o
+In file included from src/run/../align/../data/seed_set.h:23,
+                 from src/run/../align/../data/seed_histogram.h:28,
+                 from src/run/../align/../data/sorted_list.h:23,
+                 from src/run/../align/../data/reference.h:27,
+                 from src/run/../align/extend_ungapped.h:23,
+                 from src/run/benchmark.cpp:25:
+src/run/../align/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../dp/../align/align.h:22,
+                 from src/run/../dp/floating_sw.h:23,
+                 from src/run/benchmark.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../align/../data/seed_set.h:23,
+                 from src/run/../align/../data/seed_histogram.h:28,
+                 from src/run/../align/../data/sorted_list.h:23,
+                 from src/run/../align/../data/reference.h:27,
+                 from src/run/../align/extend_ungapped.h:23,
+                 from src/run/benchmark.cpp:25:
+src/run/../align/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../dp/../align/align.h:22,
+                 from src/run/../dp/floating_sw.h:23,
+                 from src/run/benchmark.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../align/../data/reference.h:27,
+                 from src/run/../align/extend_ungapped.h:23,
+                 from src/run/benchmark.cpp:25:
+src/run/../align/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../dp/../align/align.h:22,
+                 from src/run/../dp/floating_sw.h:23,
+                 from src/run/benchmark.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../output/../output/daa_record.h:26,
+                 from src/run/../output/output_format.h:26,
+                 from src/run/benchmark.cpp:28:
+src/run/../output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/run/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/run/../output/output_format.h:27,
+                 from src/run/benchmark.cpp:28:
+src/run/../output/../util/compressed_stream.h: At global scope:
+src/run/../output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../dp/../align/align.h:22,
+                 from src/run/../dp/floating_sw.h:23,
+                 from src/run/benchmark.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../output/output_format.h:27,
+                 from src/run/benchmark.cpp:28:
+src/run/../output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../dp/../align/align.h:22,
+                 from src/run/../dp/floating_sw.h:23,
+                 from src/run/benchmark.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/benchmark.cpp:28:
+src/run/../output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../dp/../align/align.h:22,
+                 from src/run/../dp/floating_sw.h:23,
+                 from src/run/benchmark.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/run/benchmark.cpp: In function 'void benchmark_greedy(const Sequence_set&, unsigned int, unsigned int)':
+src/run/benchmark.cpp:192:19: warning: unused variable 'd' [-Wunused-variable]
+  192 |         const int d = (int)qa - (int)sa, band = 7;
+      |                   ^
+src/run/benchmark.cpp:192:42: warning: unused variable 'band' [-Wunused-variable]
+  192 |         const int d = (int)qa - (int)sa, band = 7;
+      |                                          ^~~~
+src/run/benchmark.cpp: In function 'void benchmark_sw()':
+src/run/benchmark.cpp:300:18: warning: variable 'qa' set but not used [-Wunused-but-set-variable]
+  300 |         unsigned qa = 0, sa = 0;
+      |                  ^~
+src/run/benchmark.cpp:300:26: warning: variable 'sa' set but not used [-Wunused-but-set-variable]
+  300 |         unsigned qa = 0, sa = 0;
+      |                          ^~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/search/stage2.cpp -o src/search/stage2.o
+In file included from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/stage2.cpp:19:
+src/search/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/stage2.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/stage2.cpp:19:
+src/search/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/stage2.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/align_range.h:23,
+                 from src/search/stage2.cpp:19:
+src/search/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/stage2.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/../data/queries.h:22,
+                 from src/search/stage2.cpp:22:
+src/search/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/search/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/output_format.cpp -o src/output/output_format.o
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+src/output/../output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+src/output/../output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+src/output/../output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/daa_record.h:26,
+                 from src/output/output_format.h:26,
+                 from src/output/output_format.cpp:21:
+src/output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/output_format.cpp:21:
+src/output/../util/compressed_stream.h: At global scope:
+src/output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/output_format.cpp:21:
+src/output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.cpp:21:
+src/output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/output/output_format.cpp:26:1: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   26 | auto_ptr<Output_format> output_format;
+      | ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/output/output_format.cpp: In function 'void init_output()':
+src/output/output_format.cpp:95:25: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   95 |         output_format = auto_ptr<Output_format>(get_output_format());
+      |                         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/output_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/join_blocks.cpp -o src/output/join_blocks.o
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+src/output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+src/output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/reference.h:27,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+src/output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/join_blocks.cpp:19:
+src/output/output.h:129:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  129 |         static auto_ptr<Output_sink> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/queries.h:22,
+                 from src/output/join_blocks.cpp:21:
+src/output/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/join_blocks.cpp:23:
+src/output/../util/compressed_stream.h: At global scope:
+src/output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/join_blocks.cpp:23:
+src/output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/join_blocks.cpp:23:
+src/output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/output/join_blocks.cpp: In member function 'Target* Join_records::get_target()':
+src/output/join_blocks.cpp:148:25: warning: unused variable 't' [-Wunused-variable]
+  148 |                 Target *t = new Target(records.front().info_.score);
+      |                         ^
+src/output/join_blocks.cpp: In function 'void join_worker(Task_queue<Text_buffer, Join_writer>*)':
+src/output/join_blocks.cpp:246:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  246 |                 auto_ptr<Output_format> f(output_format->clone());
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/join_blocks.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output.h:25,
+                 from src/output/join_blocks.cpp:19:
+src/output/../util/text_buffer.h:69:22: warning: 'out' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   69 |                 ptr_ += sizeof(_t);
+      |                 ~~~~~^~~~~~~~~~~~~
+src/output/join_blocks.cpp:228:22: note: 'out' was declared here
+  228 |         Text_buffer *out;
+      |                      ^~~
+In file included from src/output/../output/../align/align.h:26,
+                 from src/output/../output/daa_write.h:28,
+                 from src/output/join_blocks.cpp:22:
+src/output/../output/../align/../util/task_queue.h:135:33: warning: 'n' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  135 |         { return (head_idx_ + n - head_)%limit_; }
+      |                  ~~~~~~~~~~~~~~~^~~~~~~~
+src/output/join_blocks.cpp:227:16: note: 'n' was declared here
+  227 |         size_t n;
+      |                ^
+In file included from src/output/output.h:25,
+                 from src/output/join_blocks.cpp:19:
+src/output/../util/text_buffer.h:226:33: warning: 'seek_pos' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  226 |                 return data_[pos];
+      |                                 ^
+src/output/join_blocks.cpp:234:24: note: 'seek_pos' was declared here
+  234 |                 size_t seek_pos;
+      |                        ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/data/frequent_seeds.cpp -o src/data/frequent_seeds.o
+In file included from src/data/frequent_seeds.h:23,
+                 from src/data/frequent_seeds.cpp:20:
+src/data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/frequent_seeds.h:23,
+                 from src/data/frequent_seeds.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/frequent_seeds.h:23,
+                 from src/data/frequent_seeds.cpp:20:
+src/data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/frequent_seeds.h:23,
+                 from src/data/frequent_seeds.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/frequent_seeds.h:24,
+                 from src/data/frequent_seeds.cpp:20:
+src/data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/frequent_seeds.h:23,
+                 from src/data/frequent_seeds.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/align/query_mapper.cpp -o src/align/query_mapper.o
+In file included from src/align/../data/queries.h:22,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+src/align/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/align/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+src/align/../data/../util/hash_table.h: At global scope:
+src/align/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+src/align/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+src/align/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/query_mapper.cpp:22:
+src/align/../output/output.h:129:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  129 |         static auto_ptr<Output_sink> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../output/output_format.h:27,
+                 from src/align/query_mapper.cpp:23:
+src/align/../output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../output/output_format.h:27,
+                 from src/align/query_mapper.cpp:23:
+src/align/../output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/query_mapper.cpp:23:
+src/align/../output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/align/query_mapper.cpp: In member function 'bool Query_mapper::generate_output(Text_buffer&, Statistics&)':
+src/align/query_mapper.cpp:178:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  178 |         auto_ptr<Target_culling> target_culling(Target_culling::get(targets.empty() ? 0 : &targets[0]));
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/align/query_mapper.cpp:182:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  182 |         auto_ptr<Output_format> f(output_format->clone());
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/query_mapper.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/align/align_target.cpp -o src/align/align_target.o
+In file included from src/align/../data/queries.h:22,
+                 from src/align/query_mapper.h:27,
+                 from src/align/align_target.cpp:19:
+src/align/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/align/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/align_target.cpp:19:
+src/align/../data/../util/hash_table.h: At global scope:
+src/align/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/align_target.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/align_target.cpp:19:
+src/align/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/align_target.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/align_target.cpp:19:
+src/align/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/../data/../util/hash_table.h:24,
+                 from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/queries.h:24,
+                 from src/align/query_mapper.h:27,
+                 from src/align/align_target.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/blast_tab_format.cpp -o src/output/blast_tab_format.o
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+src/output/../output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+src/output/../output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+src/output/../output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/daa_record.h:26,
+                 from src/output/output_format.h:26,
+                 from src/output/blast_tab_format.cpp:21:
+src/output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/blast_tab_format.cpp:21:
+src/output/../util/compressed_stream.h: At global scope:
+src/output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/blast_tab_format.cpp:21:
+src/output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/blast_tab_format.cpp:21:
+src/output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_tab_format.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/padded_banded_sw.cpp -o src/dp/padded_banded_sw.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/needleman_wunsch.cpp -o src/dp/needleman_wunsch.o
+In file included from src/dp/../output/../output/../data/seed_set.h:23,
+                 from src/dp/../output/../output/../data/seed_histogram.h:28,
+                 from src/dp/../output/../output/../data/sorted_list.h:23,
+                 from src/dp/../output/../output/../data/reference.h:27,
+                 from src/dp/../output/../output/daa_file.h:30,
+                 from src/dp/../output/output_format.h:25,
+                 from src/dp/needleman_wunsch.cpp:26:
+src/dp/../output/../output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/align.h:22,
+                 from src/dp/dp.h:26,
+                 from src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../output/../output/../data/seed_set.h:23,
+                 from src/dp/../output/../output/../data/seed_histogram.h:28,
+                 from src/dp/../output/../output/../data/sorted_list.h:23,
+                 from src/dp/../output/../output/../data/reference.h:27,
+                 from src/dp/../output/../output/daa_file.h:30,
+                 from src/dp/../output/output_format.h:25,
+                 from src/dp/needleman_wunsch.cpp:26:
+src/dp/../output/../output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/align.h:22,
+                 from src/dp/dp.h:26,
+                 from src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../output/../output/../data/reference.h:27,
+                 from src/dp/../output/../output/daa_file.h:30,
+                 from src/dp/../output/output_format.h:25,
+                 from src/dp/needleman_wunsch.cpp:26:
+src/dp/../output/../output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/align.h:22,
+                 from src/dp/dp.h:26,
+                 from src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../output/../output/daa_record.h:26,
+                 from src/dp/../output/output_format.h:26,
+                 from src/dp/needleman_wunsch.cpp:26:
+src/dp/../output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/dp/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/dp/../output/output_format.h:27,
+                 from src/dp/needleman_wunsch.cpp:26:
+src/dp/../output/../util/compressed_stream.h: At global scope:
+src/dp/../output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/align.h:22,
+                 from src/dp/dp.h:26,
+                 from src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/../output/output_format.h:27,
+                 from src/dp/needleman_wunsch.cpp:26:
+src/dp/../output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/align.h:22,
+                 from src/dp/dp.h:26,
+                 from src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/dp/needleman_wunsch.cpp:26:
+src/dp/../output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/dp/../align/align.h:22,
+                 from src/dp/dp.h:26,
+                 from src/dp/needleman_wunsch.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/dp/needleman_wunsch.cpp: In function 'int needleman_wunsch(sequence, sequence, int, int, int, int, unsigned int, unsigned int, Diag_graph&, bool)':
+src/dp/needleman_wunsch.cpp:181:24: warning: unused variable 'd' [-Wunused-variable]
+  181 |         Diagonal_node *d = &diags[node];
+      |                        ^
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/blast_pairwise_format.cpp -o src/output/blast_pairwise_format.o
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+src/output/../output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+src/output/../output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+src/output/../output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/daa_record.h:26,
+                 from src/output/output_format.h:26,
+                 from src/output/blast_pairwise_format.cpp:19:
+src/output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/blast_pairwise_format.cpp:19:
+src/output/../util/compressed_stream.h: At global scope:
+src/output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/blast_pairwise_format.cpp:19:
+src/output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/blast_pairwise_format.cpp:19:
+src/output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/blast_pairwise_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/extra/roc.cpp -o src/extra/roc.o
+In file included from src/extra/roc.cpp:24:
+src/extra/match_file.h: In member function 'bool match_file::get(blast_match&, const blast_format&)':
+src/extra/match_file.h:151:25: warning: unused variable 'q' [-Wunused-variable]
+  151 |                 Letter *q = queryseq, *s = subjectseq;
+      |                         ^
+src/extra/match_file.h:151:40: warning: unused variable 's' [-Wunused-variable]
+  151 |                 Letter *q = queryseq, *s = subjectseq;
+      |                                        ^
+src/extra/match_file.h:152:26: warning: unused variable 'match_mask' [-Wunused-variable]
+  152 |                 unsigned match_mask = 0, current_len = 0;
+      |                          ^~~~~~~~~~
+src/extra/match_file.h:152:42: warning: unused variable 'current_len' [-Wunused-variable]
+  152 |                 unsigned match_mask = 0, current_len = 0;
+      |                                          ^~~~~~~~~~~
+In file included from src/extra/../util/seq_file_format.h:24,
+                 from src/extra/roc.cpp:25:
+src/extra/../util/compressed_stream.h: At global scope:
+src/extra/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/extra/../util/compressed_stream.h:23,
+                 from src/extra/../util/seq_file_format.h:24,
+                 from src/extra/roc.cpp:25:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/extra/../util/seq_file_format.h:24,
+                 from src/extra/roc.cpp:25:
+src/extra/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/extra/../util/compressed_stream.h:23,
+                 from src/extra/../util/seq_file_format.h:24,
+                 from src/extra/roc.cpp:25:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/comp_based_stats.cpp -o src/dp/comp_based_stats.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/extra/model_sim.cpp -o src/extra/model_sim.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/run/double_indexed.cpp -o src/run/double_indexed.o
+In file included from src/run/../data/seed_set.h:23,
+                 from src/run/../data/seed_histogram.h:28,
+                 from src/run/../data/sorted_list.h:23,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../data/seed_set.h:23,
+                 from src/run/../data/seed_histogram.h:28,
+                 from src/run/../data/sorted_list.h:23,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../data/queries.h:22,
+                 from src/run/double_indexed.cpp:22:
+src/run/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/run/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/run/../util/seq_file_format.h:24,
+                 from src/run/double_indexed.cpp:26:
+src/run/../util/compressed_stream.h: At global scope:
+src/run/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../util/seq_file_format.h:24,
+                 from src/run/double_indexed.cpp:26:
+src/run/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/double_indexed.cpp:27:
+src/run/../data/load_seqs.h: In function 'size_t push_seq(Sequence_set&, Sequence_set**, const std::vector<char>&, unsigned int)':
+src/run/../data/load_seqs.h:56:52: warning: comparison of integer expressions of different signedness: 'int' and 'const unsigned int' [-Wsign-compare]
+   56 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+src/run/../data/load_seqs.h:46:41: warning: unused variable 'queries' [-Wunused-variable]
+   46 |                 vector<Letter>  const * queries = proteins;
+      |                                         ^~~~~~~
+In file included from src/run/double_indexed.cpp:28:
+src/run/../output/output_format.h: At global scope:
+src/run/../output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../output/daa_write.h:24,
+                 from src/run/double_indexed.cpp:30:
+src/run/../output/output.h:129:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  129 |         static auto_ptr<Output_sink> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/double_indexed.cpp:32:
+src/run/../basic/masking.h:45:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   45 |         static auto_ptr<Masking> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/run/double_indexed.cpp: In function 'void master_thread(Database_file&, Timer&)':
+src/run/double_indexed.cpp:258:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  258 |         auto_ptr<Input_stream> d_query_file(Compressed_istream::auto_detect(config.query_file));
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/run/double_indexed.cpp:274:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  274 |         auto_ptr<Input_stream> query_file(Compressed_istream::auto_detect(config.query_file));
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/run/double_indexed.cpp:281:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  281 |         auto_ptr<Output_stream> master_out(config.compression == 1
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/run/double_indexed.cpp:286:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  286 |         auto_ptr<Output_stream> unaligned_file;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/run/double_indexed.cpp:288:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  288 |                 unaligned_file = auto_ptr<Output_stream>(new Output_stream(config.unaligned));
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/run/../data/reference.h:22,
+                 from src/run/double_indexed.cpp:21:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/run/../data/sorted_list.h:23,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/seed_histogram.h: In instantiation of 'Partitioned_histogram::Partitioned_histogram(const Sequence_set&, bool, const _filter*) [with _filter = Seed_set]':
+src/run/double_indexed.cpp:130:71:   required from here
+src/run/../data/seed_histogram.h:96:31: warning: 'void* memset(void*, int, size_t)' clearing an object of non-trivial type 'struct Array<unsigned int, 1024>'; use assignment or value-initialization instead [-Wclass-memaccess]
+   96 |                         memset(data_[s].data(), 0, (p_.size() - 1)*sizeof(unsigned)*Const::seedp);
+      |                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/run/../data/sorted_list.h:22,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/../util/util.h:333:8: note: 'struct Array<unsigned int, 1024>' declared here
+  333 | struct Array
+      |        ^~~~~
+In file included from src/run/../data/sorted_list.h:23,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/seed_histogram.h: In instantiation of 'Partitioned_histogram::Partitioned_histogram(const Sequence_set&, bool, const _filter*) [with _filter = Hashed_seed_set]':
+src/run/double_indexed.cpp:132:77:   required from here
+src/run/../data/seed_histogram.h:96:31: warning: 'void* memset(void*, int, size_t)' clearing an object of non-trivial type 'struct Array<unsigned int, 1024>'; use assignment or value-initialization instead [-Wclass-memaccess]
+   96 |                         memset(data_[s].data(), 0, (p_.size() - 1)*sizeof(unsigned)*Const::seedp);
+      |                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/run/../data/sorted_list.h:22,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/../util/util.h:333:8: note: 'struct Array<unsigned int, 1024>' declared here
+  333 | struct Array
+      |        ^~~~~
+In file included from src/run/../data/sorted_list.h:23,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/seed_histogram.h: In instantiation of 'Partitioned_histogram::Partitioned_histogram(const Sequence_set&, bool, const _filter*) [with _filter = No_filter]':
+src/run/double_indexed.cpp:134:70:   required from here
+src/run/../data/seed_histogram.h:96:31: warning: 'void* memset(void*, int, size_t)' clearing an object of non-trivial type 'struct Array<unsigned int, 1024>'; use assignment or value-initialization instead [-Wclass-memaccess]
+   96 |                         memset(data_[s].data(), 0, (p_.size() - 1)*sizeof(unsigned)*Const::seedp);
+      |                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/run/../data/sorted_list.h:22,
+                 from src/run/../data/reference.h:27,
+                 from src/run/double_indexed.cpp:21:
+src/run/../data/../util/util.h:333:8: note: 'struct Array<unsigned int, 1024>' declared here
+  333 | struct Array
+      |        ^~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/search/collision.cpp -o src/search/collision.o
+In file included from src/search/../data/frequent_seeds.h:23,
+                 from src/search/collision.h:22,
+                 from src/search/collision.cpp:19:
+src/search/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/frequent_seeds.h:23,
+                 from src/search/collision.h:22,
+                 from src/search/collision.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/../data/frequent_seeds.h:23,
+                 from src/search/collision.h:22,
+                 from src/search/collision.cpp:19:
+src/search/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/frequent_seeds.h:23,
+                 from src/search/collision.h:22,
+                 from src/search/collision.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/../data/frequent_seeds.h:24,
+                 from src/search/collision.h:22,
+                 from src/search/collision.cpp:19:
+src/search/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/frequent_seeds.h:23,
+                 from src/search/collision.h:22,
+                 from src/search/collision.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/sam_format.cpp -o src/output/sam_format.o
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+src/output/../output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+src/output/../output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+src/output/../output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/daa_record.h:26,
+                 from src/output/output_format.h:26,
+                 from src/output/sam_format.cpp:19:
+src/output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/sam_format.cpp:19:
+src/output/../util/compressed_stream.h: At global scope:
+src/output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/sam_format.cpp:19:
+src/output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/sam_format.cpp:19:
+src/output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/sam_format.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/align/align.cpp -o src/align/align.o
+In file included from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/reference.h:27,
+                 from src/align/align.cpp:21:
+src/align/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../data/seed_set.h:23,
+                 from src/align/../data/seed_histogram.h:28,
+                 from src/align/../data/sorted_list.h:23,
+                 from src/align/../data/reference.h:27,
+                 from src/align/align.cpp:21:
+src/align/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../data/reference.h:27,
+                 from src/align/align.cpp:21:
+src/align/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../output/../output/daa_record.h:26,
+                 from src/align/../output/output_format.h:26,
+                 from src/align/align.cpp:22:
+src/align/../output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/align/../output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/align/../output/output_format.h:27,
+                 from src/align/align.cpp:22:
+src/align/../output/../util/compressed_stream.h: At global scope:
+src/align/../output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/../output/output_format.h:27,
+                 from src/align/align.cpp:22:
+src/align/../output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/align.cpp:22:
+src/align/../output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/align/align.cpp:24:
+src/align/../output/output.h:129:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  129 |         static auto_ptr<Output_sink> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/align/align.cpp:60:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   60 |         static auto_ptr<Queue> queue_;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/align/align.cpp: In static member function 'static void Align_fetcher::init(size_t, size_t, std::vector<hit, std::allocator<hit> >::iterator, std::vector<hit, std::allocator<hit> >::iterator)':
+src/align/align.cpp:37:26: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   37 |                 queue_ = auto_ptr<Queue>(new Queue(qbegin, qend));
+      |                          ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/align/align.cpp: At global scope:
+src/align/align.cpp:63:1: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   63 | auto_ptr<Queue> Align_fetcher::queue_;
+      | ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/align/align.cpp: In function 'void align_queries(Trace_pt_buffer&, Output_stream*)':
+src/align/align.cpp:124:41: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  124 |                 Output_sink::instance = auto_ptr<Output_sink>(new Output_sink(query_range.first, output_file));
+      |                                         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/align/align.h:22,
+                 from src/align/align.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/search/setup.cpp -o src/search/setup.o
+In file included from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/setup.cpp:19:
+src/search/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/setup.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/setup.cpp:19:
+src/search/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/setup.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/search/align_range.h:23,
+                 from src/search/setup.cpp:19:
+src/search/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/search/../data/../util/hash_table.h:24,
+                 from src/search/../data/seed_set.h:23,
+                 from src/search/../data/seed_histogram.h:28,
+                 from src/search/../data/sorted_list.h:23,
+                 from src/search/align_range.h:23,
+                 from src/search/setup.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/extra/opt.cpp -o src/extra/opt.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/diag_scores.cpp -o src/dp/diag_scores.o
+src/dp/diag_scores.cpp: In function 'void score_diagonal2(const Letter*, const Bias_correction&, const Letter*, int, int, int, std::vector<Diagonal_node>&, int)':
+src/dp/diag_scores.cpp:29:20: warning: unused variable 'j' [-Wunused-variable]
+   29 |         int i = 0, j = 0, begin = 0, end = 0, l = 0;
+      |                    ^
+src/dp/diag_scores.cpp: In member function 'void Diag_scores::get_diag(int, int, int, int, int, std::vector<Diagonal_node>&, int, bool, const Bias_correction&)':
+src/dp/diag_scores.cpp:238:58: warning: unused variable 'p_begin' [-Wunused-variable]
+  238 |         int p = std::max((j_begin - j) / block_len, b0), p_begin = p, p_end = std::min((j_end - j + block_len - 1) / block_len, b1), best = -1, best_score = -1, begin = -1, max_score, last = p;
+      |                                                          ^~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/data/taxonomy.cpp -o src/data/taxonomy.o
+In file included from src/data/taxonomy.cpp:22:
+src/data/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/compressed_stream.h:23,
+                 from src/data/taxonomy.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/taxonomy.cpp:22:
+src/data/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/compressed_stream.h:23,
+                 from src/data/taxonomy.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/taxonomy.cpp:21:
+In constructor 'Taxonomy::Accession::Accession(const string&)',
+    inlined from 'void Taxonomy::get_taxids(const char*, std::set<unsigned int>&) const' at src/data/taxonomy.cpp:109:37:
+src/data/taxonomy.h:49:40: warning: 'char* strncpy(char*, const char*, size_t)' specified bound 14 equals destination size [-Wstringop-truncation]
+   49 |                                 strncpy(this->s, t.c_str(), max_accesion_len);
+      |                                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/lib/tantan/tantan.cpp -o src/lib/tantan/tantan.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/lib/tantan/tantale.cpp -o src/lib/tantan/tantale.o
+src/lib/tantan/tantale.cpp:46: warning: ignoring '#pragma omp simd' [-Wunknown-pragmas]
+   46 |       #pragma omp simd reduction(+:accu)
+      | 
+src/lib/tantan/tantale.cpp:64: warning: ignoring '#pragma omp simd' [-Wunknown-pragmas]
+   64 |         #pragma omp simd
+      | 
+src/lib/tantan/tantale.cpp:75: warning: ignoring '#pragma omp simd' [-Wunknown-pragmas]
+   75 |    #pragma omp simd reduction(+:accu)
+      | 
+src/lib/tantan/tantale.cpp:96: warning: ignoring '#pragma omp simd' [-Wunknown-pragmas]
+   96 |         #pragma omp simd
+      | 
+src/lib/tantan/tantale.cpp:107: warning: ignoring '#pragma omp simd' [-Wunknown-pragmas]
+  107 |       #pragma omp simd reduction(+:accu)
+      | 
+src/lib/tantan/tantale.cpp:184: warning: ignoring '#pragma omp simd' [-Wunknown-pragmas]
+  184 |    #pragma omp simd
+      | 
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/swipe.cpp -o src/dp/swipe.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/dp/banded_sw.cpp -o src/dp/banded_sw.o
+src/dp/banded_sw.cpp: In function 'void banded_sw(const sequence&, const sequence&, int, int, int, int, Hsp_data&)':
+src/dp/banded_sw.cpp:282:13: warning: unused variable 'n' [-Wunused-variable]
+  282 |         int n=0;
+      |             ^
+src/dp/banded_sw.cpp:315:18: warning: 'max_j' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  315 |         traceback(query, subject, mtx.scores(), band, d_begin + j_begin, max_i, max_j, out);
+      |         ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/dp/banded_sw.cpp:315:18: warning: 'max_i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/data/sorted_list.cpp -o src/data/sorted_list.o
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/sorted_list.cpp:19:
+src/data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/sorted_list.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/sorted_list.cpp:19:
+src/data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/sorted_list.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/sorted_list.cpp:19:
+src/data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_histogram.h:28,
+                 from src/data/sorted_list.h:23,
+                 from src/data/sorted_list.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/queries.h:22,
+                 from src/data/sorted_list.cpp:21:
+src/data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/data/seed_set.cpp -o src/data/seed_set.o
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_set.cpp:19:
+src/data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_set.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/data/seed_set.h:23,
+                 from src/data/seed_set.cpp:19:
+src/data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/data/../util/hash_table.h:24,
+                 from src/data/seed_set.h:23,
+                 from src/data/seed_set.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/util/binary_file.cpp -o src/util/binary_file.o
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/taxon_format.cpp -o src/output/taxon_format.o
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+src/output/../output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/seed_set.h:23,
+                 from src/output/../output/../data/seed_histogram.h:28,
+                 from src/output/../output/../data/sorted_list.h:23,
+                 from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+src/output/../output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/../data/reference.h:27,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+src/output/../output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/daa_record.h:26,
+                 from src/output/output_format.h:26,
+                 from src/output/taxon_format.cpp:20:
+src/output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/taxon_format.cpp:20:
+src/output/../util/compressed_stream.h: At global scope:
+src/output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/taxon_format.cpp:20:
+src/output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/taxon_format.cpp:20:
+src/output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../output/../data/reference.h:22,
+                 from src/output/../output/daa_file.h:30,
+                 from src/output/output_format.h:25,
+                 from src/output/taxon_format.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/view.cpp -o src/output/view.o
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+src/output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+src/output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/reference.h:27,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+src/output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../output/daa_record.h:26,
+                 from src/output/output_format.h:26,
+                 from src/output/view.cpp:24:
+src/output/../output/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../output/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/view.cpp:24:
+src/output/../util/compressed_stream.h: At global scope:
+src/output/../util/compressed_stream.h:47:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   47 |         auto_ptr<char> in, out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_format.h:27,
+                 from src/output/view.cpp:24:
+src/output/../util/compressed_stream.h:65:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   65 |         auto_ptr<char> out;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/view.cpp:24:
+src/output/output_format.h:57:8: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   57 | extern auto_ptr<Output_format> output_format;
+      |        ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/output/view.cpp:48:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 |         auto_ptr<Output_stream> f_;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+src/output/view.cpp: In function 'void view_query(DAA_query_record&, Text_buffer&, Output_format&)':
+src/output/view.cpp:77:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   77 |         auto_ptr<Output_format> f(format.clone());
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/daa_file.h:30,
+                 from src/output/view.cpp:22:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/view.cpp:25:
+src/output/../util/task_queue.h: In function 'void View_context::operator()(unsigned int)':
+src/output/../util/task_queue.h:135:33: warning: 'n' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  135 |         { return (head_idx_ + n - head_)%limit_; }
+      |                  ~~~~~~~~~~~~~~~^~~~~~~~
+src/output/view.cpp:102:32: note: 'n' was declared here
+  102 |                         size_t n;
+      |                                ^
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/output_sink.cpp -o src/output/output_sink.o
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+src/output/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/seed_set.h:23,
+                 from src/output/../data/seed_histogram.h:28,
+                 from src/output/../data/sorted_list.h:23,
+                 from src/output/../data/reference.h:27,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+src/output/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/reference.h:27,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+src/output/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/output_sink.cpp:19:
+src/output/output.h:129:16: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  129 |         static auto_ptr<Output_sink> instance;
+      |                ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../data/queries.h:22,
+                 from src/output/output_sink.cpp:20:
+src/output/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+src/output/output_sink.cpp: At global scope:
+src/output/output_sink.cpp:25:1: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   25 | auto_ptr<Output_sink> Output_sink::instance;
+      | ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../data/reference.h:22,
+                 from src/output/output.h:27,
+                 from src/output/output_sink.cpp:19:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c src/output/target_culling.cpp -o src/output/target_culling.o
+In file included from src/output/../align/../data/queries.h:22,
+                 from src/output/../align/query_mapper.h:27,
+                 from src/output/target_culling.h:23,
+                 from src/output/target_culling.cpp:20:
+src/output/../align/../data/../basic/translate.h: In static member function 'static unsigned int Translator::computeGoodFrames(const std::vector<char>*, unsigned int)':
+src/output/../align/../data/../basic/translate.h:132:52: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  132 |                                         if ( (j-p) >= runLen)
+      |                                              ~~~~~~^~~~~~~~~
+In file included from src/output/../align/../data/seed_set.h:23,
+                 from src/output/../align/../data/seed_histogram.h:28,
+                 from src/output/../align/../data/sorted_list.h:23,
+                 from src/output/../align/../data/queries.h:24,
+                 from src/output/../align/query_mapper.h:27,
+                 from src/output/target_culling.h:23,
+                 from src/output/target_culling.cpp:20:
+src/output/../align/../data/../util/hash_table.h: At global scope:
+src/output/../align/../data/../util/hash_table.h:207:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  207 |         auto_ptr<entry> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../align/../data/../util/hash_table.h:24,
+                 from src/output/../align/../data/seed_set.h:23,
+                 from src/output/../align/../data/seed_histogram.h:28,
+                 from src/output/../align/../data/sorted_list.h:23,
+                 from src/output/../align/../data/queries.h:24,
+                 from src/output/../align/query_mapper.h:27,
+                 from src/output/target_culling.h:23,
+                 from src/output/target_culling.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../align/../data/seed_set.h:23,
+                 from src/output/../align/../data/seed_histogram.h:28,
+                 from src/output/../align/../data/sorted_list.h:23,
+                 from src/output/../align/../data/queries.h:24,
+                 from src/output/../align/query_mapper.h:27,
+                 from src/output/target_culling.h:23,
+                 from src/output/target_culling.cpp:20:
+src/output/../align/../data/../util/hash_table.h:308:9: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  308 |         auto_ptr<fp> table;
+      |         ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../align/../data/../util/hash_table.h:24,
+                 from src/output/../align/../data/seed_set.h:23,
+                 from src/output/../align/../data/seed_histogram.h:28,
+                 from src/output/../align/../data/sorted_list.h:23,
+                 from src/output/../align/../data/queries.h:24,
+                 from src/output/../align/query_mapper.h:27,
+                 from src/output/target_culling.h:23,
+                 from src/output/target_culling.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from src/output/../align/../data/queries.h:24,
+                 from src/output/../align/query_mapper.h:27,
+                 from src/output/target_culling.h:23,
+                 from src/output/target_culling.cpp:20:
+src/output/../align/../data/sorted_list.h:230:17: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  230 |                 auto_ptr<sorted_list::buffered_iterator> it;
+      |                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from src/output/../align/../data/../util/hash_table.h:24,
+                 from src/output/../align/../data/seed_set.h:23,
+                 from src/output/../align/../data/seed_histogram.h:28,
+                 from src/output/../align/../data/sorted_list.h:23,
+                 from src/output/../align/../data/queries.h:24,
+                 from src/output/../align/query_mapper.h:27,
+                 from src/output/target_culling.h:23,
+                 from src/output/target_culling.cpp:20:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c masking.cu -o masking.o
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(39): warning #815-D: type qualifier on return type is meaningless
+   operator const uint64_t() const
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+   { return (const uint64_t)(x) - (const uint64_t)(y); }
+             ^
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+   { return (const uint64_t)(x) - (const uint64_t)(y); }
+                                   ^
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(39): warning #815-D: type qualifier on return type is meaningless
+   operator const uint64_t() const
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+   { return (const uint64_t)(x) - (const uint64_t)(y); }
+             ^
+
+../diamond-sycl/src/basic/../util/../basic/packed_loc.h(44): warning #191-D: type qualifier is meaningless on cast type
+   { return (const uint64_t)(x) - (const uint64_t)(y); }
+                                   ^
+
+masking.cu(368): warning #177-D: variable "cnt" was declared but never referenced
+    int cnt = 0;
+        ^
+
+../diamond-sycl/src/basic/masking.h:45:20: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   45 |         static auto_ptr<Masking> instance;
+      |                    ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:57:25: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                         ^~~~~~~~
+masking.cu:209:6: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  209 | auto_ptr<Masking> Masking::instance;
+      |      ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:57:25: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                         ^~~~~~~~
+masking.cu: In function 'void mask_seqs(Sequence_set&, const Masking&, bool)':
+masking.cu:422:19: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+  422 |       for (int j = 0; j < seqs.length(i); j++) {
+      |                 ~~^~~~~~~~~~~~~~~~
+masking.cu:426:19: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'long unsigned int'} [-Wsign-compare]
+  426 |       for (int j = 0; j < seqs.length(i); j++)
+      |                 ~~^~~~~~~~~~~~~~~~
+nvcc   -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 .//src/blast/sm_blosum45.o .//src/blast/sm_blosum50.o .//src/blast/sm_blosum62.o .//src/blast/sm_blosum80.o .//src/blast/sm_blosum90.o .//src/blast/sm_pam30.o .//src/blast/sm_pam70.o .//src/blast/sm_pam250.o .//src/run/main.o .//src/basic/config.o .//src/util/tinythread.o .//src/util/compressed_stream.o .//src/basic/score_matrix.o .//src/blast/blast_filter.o .//src/blast/blast_seg.o .//src/data/queries.o .//src/data/reference.o .//src/data/seed_histogram.o .//src/output/daa_record.o .//src/search/search.o .//src/util/command_line_parser.o .//src/util/seq_file_format.o .//src/util/util.o .//src/util/Timer.o .//src/basic/basic.o .//src/dp/floating_sw.o .//src/basic/hssp.o .//src/dp/ungapped_align.o .//src/run/tools.o .//src/dp/greedy_align.o .//src/run/benchmark.o .//src/search/stage2.o .//src/output/output_format.o .//src/output/join_blocks.o .//src/data/frequent_seeds.o .//src/align/query_mapper.o .//src/align/align_target.o .//src/output/blast_tab_format.o .//src/dp/padded_banded_sw.o .//src/dp/needleman_wunsch.o .//src/output/blast_pairwise_format.o .//src/extra/roc.o .//src/dp/comp_based_stats.o .//src/extra/model_sim.o .//src/run/double_indexed.o .//src/search/collision.o .//src/output/sam_format.o .//src/align/align.o .//src/search/setup.o .//src/extra/opt.o .//src/dp/diag_scores.o .//src/data/taxonomy.o .//src/lib/tantan/tantan.o .//src/lib/tantan/tantale.o .//src/dp/swipe.o .//src/dp/banded_sw.o .//src/data/sorted_list.o .//src/data/seed_set.o .//src/util/binary_file.o .//src/output/taxon_format.o .//src/output/view.o .//src/output/output_sink.o .//src/output/target_culling.o ./masking.o  -o diamond -lz -lpthread

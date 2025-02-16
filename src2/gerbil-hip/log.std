@@ -15,14 +15,14 @@ output                  :       out
 size of memory          : 1030306 MB
 number of gpu's         :     1
 ---------------------------------------------
-Thread[0]: read file 'ERR164407.fastq.gz' (  72 MB)...
+Thread[1]: read file 'ERR164407.fastq.gz' (  72 MB)...
 ================== STAGE 1 ==================
 total bytes read       :     76248044 B
 total blocks read      :         1164
 number of reads        :       282806
 number of bases        :     97607891
-number of superbundles :         2869
-size of temp file      :       89.656 MB (79.820 MB, 89.0% belegt)
+number of superbundles :         2872
+size of temp file      :       89.750 MB (79.820 MB, 88.9% belegt)
 number of s-mers       :      7468195
 number of k-mers       :     89441638
 memory usage           :      1030305 MB
@@ -32,16 +32,16 @@ memory usage           :      1030305 MB
 kmers (CPU)     :     89435902
 kmers (GPU)     :         5736
 ukmers (CPU)    :     74038793
-ukmers (GPU)    :         5735
+ukmers (GPU)    :         5733
 below th (CPU)  :     71296975
-below th (GPU)  :         5735
+below th (GPU)  :         5733
 size of output  :       20.918 MB
 memory usage    :          894 MB
 ---------------------------------------------
 ===================================================
 ================== S U M M A R Y ==================
 ===================================================
-time (real) for stage1    :   1.678 s
-time (real) for stage2    :   1.066 s
-time (real) total (1 + 2) :   2.744 s
+time (real) for stage1    :   1.654 s
+time (real) for stage2    :   1.080 s
+time (real) total (1 + 2) :   2.734 s
 ---------------------------------------------------
