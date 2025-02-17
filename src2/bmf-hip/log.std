@@ -37,33 +37,33 @@ Starting run 4 in slot 1 with seed 3007757058
 	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
 	Final distance for slot 1	abs_err: 627869	rel_err: 0.0799753
 	Result is better than previous best. Copying to host.
-Starting run 5 in slot 1 with seed 141052762
-Starting run 1 in slot 0 with seed 3230891671
-	Start distance for slot 1	abs_err: 1.47289e+06	rel_err: 0.18761
-	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
-	Final distance for slot 1	abs_err: 638566	rel_err: 0.0813379
-Starting run 6 in slot 1 with seed 628461821
-	Start distance for slot 0	abs_err: 1.50001e+06	rel_err: 0.191065
+Starting run 1 in slot 0 with seed 2703985752
+Starting run 5 in slot 1 with seed 3230891671
+	Start distance for slot 0	abs_err: 1.47289e+06	rel_err: 0.18761
 	Break condition for slot 0:	Reached iteration limit: 10000 after 10001 iterations.
-	Final distance for slot 0	abs_err: 653870	rel_err: 0.0832872
-Starting run 2 in slot 0 with seed 1224256096
-	Start distance for slot 1	abs_err: 1.48412e+06	rel_err: 0.189041
+	Final distance for slot 0	abs_err: 648568	rel_err: 0.0826119
+Starting run 2 in slot 0 with seed 628461821
+	Start distance for slot 1	abs_err: 1.49486e+06	rel_err: 0.190409
 	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
-	Final distance for slot 1	abs_err: 634964	rel_err: 0.080879
-Starting run 7 in slot 1 with seed 2456613905
-	Start distance for slot 0	abs_err: 1.46137e+06	rel_err: 0.186144
+	Final distance for slot 1	abs_err: 642436	rel_err: 0.0818308
+Starting run 6 in slot 1 with seed 1224256096
+	Start distance for slot 0	abs_err: 1.48412e+06	rel_err: 0.189041
 	Break condition for slot 0:	Reached iteration limit: 10000 after 10001 iterations.
-	Final distance for slot 0	abs_err: 650774	rel_err: 0.0828929
-Starting run 3 in slot 0 with seed 4189240124
-	Start distance for slot 1	abs_err: 1.47784e+06	rel_err: 0.18824
+	Final distance for slot 0	abs_err: 634964	rel_err: 0.080879
+Starting run 3 in slot 0 with seed 2456613905
+	Start distance for slot 1	abs_err: 1.46137e+06	rel_err: 0.186144
 	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
-	Final distance for slot 1	abs_err: 647712	rel_err: 0.0825028
-	Start distance for slot 0	abs_err: 1.5003e+06	rel_err: 0.191103
+	Final distance for slot 1	abs_err: 650774	rel_err: 0.0828929
+Starting run 7 in slot 1 with seed 4189240124
+	Start distance for slot 0	abs_err: 1.47784e+06	rel_err: 0.18824
 	Break condition for slot 0:	Reached iteration limit: 10000 after 10001 iterations.
-	Final distance for slot 0	abs_err: 633039	rel_err: 0.0806338
-# elapsed time (GPUKERNELLOOP): 6.7002s
-Writing to files "../bmf-cuda/data/MNIST.in_distances_2-7_15:2:59.txt" complete
-Writing to files "../bmf-cuda/data/MNIST.in_best_factor_A_2-7_15:2:59.data" and "../bmf-cuda/data/MNIST.in_best_factor_B_2-7_15:2:59.data" complete
+	Final distance for slot 0	abs_err: 647712	rel_err: 0.0825028
+	Start distance for slot 1	abs_err: 1.5003e+06	rel_err: 0.191103
+	Break condition for slot 1:	Reached iteration limit: 10000 after 10001 iterations.
+	Final distance for slot 1	abs_err: 633039	rel_err: 0.0806338
+# elapsed time (GPUKERNELLOOP): 6.70738s
+Writing to files "../bmf-cuda/data/MNIST.in_distances_2-17_16:4:22.txt" complete
+Writing to files "../bmf-cuda/data/MNIST.in_best_factor_A_2-17_16:4:22.data" and "../bmf-cuda/data/MNIST.in_best_factor_B_2-17_16:4:22.data" complete
 true_positives: 	639009	true_negatives: 	6583907
 false_positives:	214519	false_negatives:	413350
 total error:	627869	rel error:	0.0799753

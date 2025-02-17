@@ -1,3 +1,4 @@
-real 5.99
-user 3.14
-sys 2.64
+bash: line 1: 1636476 Aborted                 (core dumped) ./main ../bmd-cuda/data/MNIST.in -r 8 -l 112 -i 10000 --seed 123 --stuck 10000 > log.std 2> log.err
+real 0.36
+user 0.00
+sys 0.00
