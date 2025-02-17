@@ -1,1 +1,1 @@
-bash -c "time -p ( ulimit -s unlimited ; ./main delaunay_n24.egr 100 1>log.std 2>log.err ) 2> log.time"
+bash -c "../cc-hip/prepare_data.sh; time -p ( ulimit -s unlimited ; ./main ../cc-cuda/delaunay_n24.egr 100 1>log.std 2>log.err ) 2> log.time"

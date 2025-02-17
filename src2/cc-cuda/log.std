@@ -7,8 +7,8 @@ maximum degree: 26 edges
 Number of multiprocessor = 132
 Max threads per multiprocessor = 2048
 Number of thread blocks in a grid = 1056
-Average kernel execution time: 0.0013 s
-throughput: 12967.256 Mnodes/s
-throughput: 77803.462 Medges/s
+Average kernel execution time: 0.0017 s
+throughput: 10126.186 Mnodes/s
+throughput: 60757.058 Medges/s
 number of connected components: 1
 PASS
