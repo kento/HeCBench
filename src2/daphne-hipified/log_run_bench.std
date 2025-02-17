@@ -1,0 +1,9 @@
+cd src/points2image; make -f Makefile
+make[1]: Entering directory '/hs/work0/home/users/u0001620/work14/TMP7/daphne-hipified/src/points2image'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/hs/work0/home/users/u0001620/work14/TMP7/daphne-hipified/src/points2image'
+../scripts/rocm-smi.sh > log.mem &
+bash -c "cd ./src/points2image; time -p ( ./main -p 1 1>../../log.std 2>../../log.err ) 2> ../../log.time; cd ../../"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 301.91 290.91

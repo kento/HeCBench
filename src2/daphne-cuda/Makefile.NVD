@@ -1,2 +1,21 @@
-run:
-	cd src/points2image;make -f Makefile run
+LAUNCHER = bash -c
+
+program = main
+
+$(program):
+	cd src/points2image; make -f Makefile
+
+clean:
+	cd src/points2image; make -f Makefile clean
+
+include ../include/daphne-NVIDIA
+
+# TODO: when p > 1, results mismatch
+run: $(program)
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: $(program)
+	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill nvidia-smi
+	../scripts/m.sh

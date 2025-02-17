@@ -1,2 +1,21 @@
-run:
-	cd src/points2image;make -f Makefile run
+LAUNCHER = bash -c
+
+program = main
+
+$(program):
+	cd src/points2image; make -f Makefile
+
+clean:
+	cd src/points2image; make -f Makefile clean
+
+include ../include/daphne-AMD
+
+# TODO: when p > 1, results mismatch
+run: $(program)
+	$(LAUNCHER) "$(COMMAND)"
+
+run_mem: $(program)
+	../scripts/rocm-smi.sh > log.mem &
+	$(LAUNCHER) "$(COMMAND)"
+	pkill rocm-smi.sh
+	../scripts/rocm-m.sh
