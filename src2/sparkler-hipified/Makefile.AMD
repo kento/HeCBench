@@ -1,16 +1,16 @@
 #===============================================================================
 # User Options
 #===============================================================================
-MPI_ROOT=/opt/nvidia/hpc_sdk/Linux_x86_64/21.3/comm_libs/mpi
-CUBLAS_ROOT=/opt/nvidia/hpc_sdk/Linux_x86_64/21.3/math_libs/11.2
-CUDART_ROOT=/opt/nvidia/hpc_sdk/Linux_x86_64/21.3/cuda/11.2
+#MPI_ROOT=$(HOME)/openmpi-4.1.0-install/
+#HIPBLAS_ROOT=/opt/rocm/hipblas
+#HIPRT_ROOT=/opt/rocm/hip
 
 # Compiler can be set below, or via environment variable
 CC        = hipcc
-LD        = mpiCC #$(MPI_ROOT)/bin/mpiCC
+#LD        = $(MPI_ROOT)/bin/mpiCC
+LD        = mpiCC
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_90
 LAUNCHER = bash -c
 
 #===============================================================================
@@ -28,12 +28,11 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -I$(MPI_ROOT)/include -std=c++11  -Wall -I/opt/rocm/include/hipblas
+CFLAGS := $(EXTRA_CFLAGS) -I$(MPI_ROOT)/include -std=c++11 -Wall -fPIE -I/opt/rocm/include/hipblas
 
 # Linker Flags
-LDFLAGS = -L$(CUBLAS_ROOT)/targets/x86_64-linux/lib/ -lhipblas 	  -L$(CUDART_ROOT)/targets/x86_64-linux/lib/ -lcudart
-
-LDFLAGS = -L/opt/rocm/lib -lhipblas -lamdhip64
+#LDFLAGS = -L$(HIPBLAS_ROOT)/lib -lhipblas 	  -L$(HIPRT_ROOT)/lib -lamdhip64 
+LDFLAGS = -L/opt/rocm/lib -lhipblas  -lamdhip64 
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
@@ -50,10 +49,10 @@ endif
 # Targets to Build
 #===============================================================================
 
-$(program): $(obj) Makefile
+$(program): $(obj)
 	$(LD) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu Makefile
+%.o: %.cu
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

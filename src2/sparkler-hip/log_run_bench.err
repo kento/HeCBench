@@ -1,6 +1,0 @@
-main.cu:12:10: fatal error: 'hipblas.h' file not found
-   12 | #include <hipblas.h>
-      |          ^~~~~~~~~~~
-1 error generated when compiling for gfx90a.
-failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -I/home/users/u0001621/openmpi-4.1.0-install//include -std=c++11 -Wall -fPIE -O3 -c -x hip main.cu -o "main.o"
-make: *** [Makefile.AMD:54: main.o] Error 1

@@ -1,1 +1,2 @@
-COMMAND = time -p ( ./$(mpi-program) 1>log.std 2>log.err;./$(nccl-program) 1>>log.std 2>>log.err ) 2> log.time
+#COMMAND = time -p ( ./$(mpi-program) 1>log.std 2>log.err;./$(nccl-program) 1>>log.std 2>>log.err ) 2> log.time
+COMMAND = time -p ( python ../scripts/genhostfile.py ; mpirun --hostfile hosts -n 2 ./$(mpi-program) 1>log.std 2>log.err; mpirun --hostfile hosts -n 2 ./$(nccl-program) 1>>log.std 2>>log.err ) 2> log.time

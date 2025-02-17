@@ -1,1 +1,1 @@
-hipcc  -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.3/comm_libs/mpi/include -std=c++11  -Wall  -O3 -c main.cu -o main.o
+bash -c "time -p ( python ../scripts/genhostfile.py ; mpirun --hostfile hosts -n 2 ./main --num_vector 4000 --num_field 90000 --num_iterations 10 1>log.std 2>log.err ) 2> log.time"
