@@ -1,0 +1,10 @@
+In file included from main.cu:31:
+./kernels.h:52:7: warning: variable 'cnt' set but not used [-Wunused-but-set-variable]
+   52 |   int cnt = 0;
+      |       ^
+1 warning generated when compiling for gfx90a.
+In file included from main.cu:31:
+./kernels.h:52:7: warning: variable 'cnt' set but not used [-Wunused-but-set-variable]
+   52 |   int cnt = 0;
+      |       ^
+1 warning generated when compiling for host.
