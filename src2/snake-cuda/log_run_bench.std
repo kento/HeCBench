@@ -1,1 +1,3 @@
-bash -c "time -p ( ./main 100 ./Datasets/ERR240727_1_E2_30000Pairs.txt 30000 1000 1>log.std 2>log.err ) 2> log.time"
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90  -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90  -O3 main.o -o main 
+bash -c "../snake-cuda/prepare_data.sh; time -p ( ./main 100 ../snake-cuda/Datasets/ERR240727_1_E2_30000Pairs.txt 30000 1000 1>log.std 2>log.err ) 2> log.time"

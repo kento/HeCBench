@@ -1,0 +1,24 @@
+In file included from main.cu:63:
+../snake-cuda/kernel.h:42:7: warning: variable 'Diagonal' set but not used [-Wunused-but-set-variable]
+   42 |   int Diagonal = 0;
+      |       ^
+In file included from main.cu:64:
+../snake-cuda/reference.h:49:9: warning: variable 'Diagonal' set but not used [-Wunused-but-set-variable]
+   49 |     int Diagonal = 0;
+      |         ^
+main.cu:81:11: warning: variable 'read' set but not used [-Wunused-but-set-variable]
+   81 |   ssize_t read;
+      |           ^
+3 warnings generated when compiling for gfx90a.
+In file included from main.cu:63:
+../snake-cuda/kernel.h:42:7: warning: variable 'Diagonal' set but not used [-Wunused-but-set-variable]
+   42 |   int Diagonal = 0;
+      |       ^
+In file included from main.cu:64:
+../snake-cuda/reference.h:49:9: warning: variable 'Diagonal' set but not used [-Wunused-but-set-variable]
+   49 |     int Diagonal = 0;
+      |         ^
+main.cu:81:11: warning: variable 'read' set but not used [-Wunused-but-set-variable]
+   81 |   ssize_t read;
+      |           ^
+3 warnings generated when compiling for host.
