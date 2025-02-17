@@ -1,6 +1,1 @@
-nvc++  -std=c++11 -Wall -Minfo -mp=gpu -gpu=cc70 -O3	 ./main.c 		-c 		-o ./main.o 		-O3
-nvc++	./util/graphics/graphics.c 		-c 		-o ./util/graphics/graphics.o 		-O3
-nvc++	./util/graphics/resize.c 		-c 		-o ./util/graphics/resize.o 		-O3
-nvc++	./util/timer/timer.c 		-c 		-o ./util/timer/timer.o 		-O3
-nvc++  -std=c++11 -Wall -Minfo -mp=gpu -gpu=cc70 -O3	./main.o 		./util/graphics/graphics.o 		./util/graphics/resize.o 		./util/timer/timer.o 		-lm 		-lm -o srad
-bash -c "time -p ( ./ 1000 0.5 20000 46258 1>log.std 2>log.err ) 2> log.time"
+bash -c "time -p ( ././srad 1000 0.5 20000 46258 1>log.std 2>log.err ) 2> log.time"

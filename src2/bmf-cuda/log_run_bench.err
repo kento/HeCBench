@@ -1,0 +1,4 @@
+src/updates_and_measures.cuh:12: warning: ignoring '#pragma unroll ' [-Wunknown-pragmas]
+   12 |   for(unsigned int i = 0; i < rand_depth; ++i) {
+      | 
+make: *** [Makefile.NVD:69: run] Error 134

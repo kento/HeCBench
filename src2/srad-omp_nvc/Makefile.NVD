@@ -2,7 +2,7 @@ CC        = nvc++
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
-SM        = cc70
+SM        = cc90
 LAUNCHER = bash -c
 
 # Standard flags
@@ -27,6 +27,9 @@ ifeq ($(OPTIMIZE),yes)
 	CFLAGS += -O3
 endif
 
+###############################
+program = ./srad
+
 ./srad:	./main.o 	./util/graphics/graphics.o 	./util/graphics/resize.o 	./util/timer/timer.o
 	$(CC) $(CFLAGS)	./main.o 		./util/graphics/graphics.o 		./util/graphics/resize.o 		./util/timer/timer.o 		-lm 		$(LDFLAGS) -o srad
 
@@ -47,10 +50,10 @@ clean:
 
 include ../include/srad-NVIDIA
 
-run: srad
+run: $(program)
 	$(LAUNCHER) "$(COMMAND)"
 
-run_mem: srad
+run_mem: $(program)
 	nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
 	$(LAUNCHER) "$(COMMAND)"
 	pkill nvidia-smi

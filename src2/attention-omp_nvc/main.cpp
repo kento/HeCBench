@@ -62,6 +62,7 @@ float* attention_device(const float* key, const float* value, const float* query
 }
 
 int main(int argc, char* argv[]) {
+#if 0
   if (argc != 4) {
     printf("Usage: %s <rows> <columns> <repeat>\n", argv[0]);
     return 1;
@@ -69,6 +70,16 @@ int main(int argc, char* argv[]) {
   const int n = atoi(argv[1]);
   const int d = atoi(argv[2]);
   const int r = atoi(argv[3]);
+#else
+  if (argc != 5) {
+    printf("Usage: %s <rows> <columns> <dummy> <repeat>\n", argv[0]);
+    return 1;
+  }
+  const int n = atoi(argv[1]);
+  const int d = atoi(argv[2]);
+  const int k = atoi(argv[3]);
+  const int r = atoi(argv[4]);
+#endif
 
   // input
   float* key = (float*) malloc (n * d * sizeof(float));
