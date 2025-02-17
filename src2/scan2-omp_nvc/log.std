@@ -1,4 +1,4 @@
 Executing kernel for 1000 iterations
 -------------------------------------------
-Average execution time of scan kernels: 67732.1 (us)
-FAIL
+Average execution time of scan kernels: 4333.48 (us)
+PASS
