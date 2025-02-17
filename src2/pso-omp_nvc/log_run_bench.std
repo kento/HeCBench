@@ -1,5 +1,1 @@
-nvc++  -Wall -I../pso-cuda  -O3 -Minfo -mp=gpu -gpu=cc70 -c ../pso-cuda/main.cpp -o main.o
-nvc++  -Wall -I../pso-cuda  -O3 -Minfo -mp=gpu -gpu=cc70 -c kernel_gpu.cpp -o kernel_gpu.o
-nvc++  -Wall -I../pso-cuda  -O3 -Minfo -mp=gpu -gpu=cc70 -c ../pso-cuda/kernel_cpu.cpp -o kernel_cpu.o
-nvc++  -Wall -I../pso-cuda  -O3 -Minfo -mp=gpu -gpu=cc70 main.o kernel_gpu.o kernel_cpu.o -o main 
-bash -c "time -p ( ./main 30000 10000 1>log.std 2>log.err ) 2> log.time"
+bash -c "time -p ( ./main 30 10000 1>log.std 2>log.err ) 2> log.time"
