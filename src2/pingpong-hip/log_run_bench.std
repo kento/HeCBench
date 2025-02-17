@@ -1,1 +1,1 @@
-hipcc  -std=c++14 -I/home/users/u0001621/ompi_for_gpu/ompi/include -Wall -O3 main-mpi.o -o main-mpi -L/home/users/u0001621/ompi_for_gpu/ompi/lib -lmpi -lrccl
+bash -c "time -p ( python ../scripts/genhostfile.py ; mpirun --hostfile hosts -n 2 ./main-mpi 1>log.std 2>log.err; mpirun --hostfile hosts -n 2 ./main-nccl 1>>log.std 2>>log.err ) 2> log.time"

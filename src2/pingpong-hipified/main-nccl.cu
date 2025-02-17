@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <hip/hip_runtime.h>
 #include <mpi.h>
-#include <nccl.h>
+#include <rccl/rccl.h>
 
 #define NCCLCHECK(cmd) do {                         \
   ncclResult_t r = cmd;                             \

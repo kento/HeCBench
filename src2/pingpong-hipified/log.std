@@ -1,0 +1,13 @@
+MPI : Transfer size (B):     524288, Transfer Time (s):     0.000226385, Bandwidth (GB/s):     2.315912441
+MPI : Transfer size (B):    1048576, Transfer Time (s):     0.000427639, Bandwidth (GB/s):     2.452011808
+MPI : Transfer size (B):    2097152, Transfer Time (s):     0.000837671, Bandwidth (GB/s):     2.503549482
+MPI : Transfer size (B):    4194304, Transfer Time (s):     0.001658110, Bandwidth (GB/s):     2.529569742
+MPI : Transfer size (B):    8388608, Transfer Time (s):     0.000836624, Bandwidth (GB/s):    10.026736384
+MPI : Transfer size (B):   16777216, Transfer Time (s):     0.001649988, Bandwidth (GB/s):    10.168085002
+MPI : Transfer size (B):   33554432, Transfer Time (s):     0.002663435, Bandwidth (GB/s):    12.598181358
+MPI : Transfer size (B):   67108864, Transfer Time (s):     0.005222278, Bandwidth (GB/s):    12.850496425
+MPI : Transfer size (B):  134217728, Transfer Time (s):     0.010355954, Bandwidth (GB/s):    12.960440878
+MPI : Transfer size (B):  268435456, Transfer Time (s):     0.020631910, Bandwidth (GB/s):    13.010693303
+MPI : Transfer size (B):  536870912, Transfer Time (s):     0.041176921, Bandwidth (GB/s):    13.038150949
+MPI : Transfer size (B): 1073741824, Transfer Time (s):     0.082279980, Bandwidth (GB/s):    13.049855129
+Failed, NCCL error main-nccl.cu:73 'unhandled system error (run with NCCL_DEBUG=INFO for details)'
