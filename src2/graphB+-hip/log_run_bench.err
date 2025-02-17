@@ -1,2 +1,2 @@
-make: *** [Makefile.AMD:62: run] Interrupt
+make: *** [Makefile.AMD:62: run] Terminated
 timeout was set to  3600
