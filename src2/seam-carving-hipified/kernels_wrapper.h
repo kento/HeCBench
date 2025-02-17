@@ -1,4 +1,3 @@
-#include "hip/hip_runtime.h"
 /* ################# wrappers ################### */
 
 void compute_costs(
