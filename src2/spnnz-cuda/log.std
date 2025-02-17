@@ -1,4 +1,6 @@
 Initializing host matrices..
-Average execution time of cusparseSnnz : 5561.065918 (us)
-nnz: 17590850 != 17586571
-sparse_nnz_example test FAILED: wrong result
+Average execution time of cusparseSnnz : 1180.950806 (us)
+sparse_nnz_example test PASSED
+Initializing host matrices..
+Average execution time of cusparseSnnz : 5160.624512 (us)
+sparse_nnz_example test PASSED
