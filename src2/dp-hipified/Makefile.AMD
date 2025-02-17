@@ -8,6 +8,8 @@ OPTIMIZE  = yes
 DEBUG     = no
 LAUNCHER = bash -c
 
+ROC_STDPAR_HOME  = ../lib/roc-stdpar
+
 HIP_ARCH  = gfx90a
 #===============================================================================
 # Program name & source code list
@@ -24,7 +26,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall           --hipstdpar --hipstdpar-path=$(HOME)/git/roc-stdpar/include           --offload-arch=$(HIP_ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall --hipstdpar-path=$(ROC_STDPAR_HOME)/include           --offload-arch=$(HIP_ARCH)
 
 # Linker Flags
 LDFLAGS = -lhipblas
