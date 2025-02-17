@@ -4,7 +4,8 @@
 #include <stdlib.h>
 
 #include <hip/hip_runtime.h>
-#include <nccl.h>
+//#include <nccl.h>
+#include <rccl/rccl.h>
 #include <mpi.h>
 
 #define MPICHECK(cmd) do {                          \

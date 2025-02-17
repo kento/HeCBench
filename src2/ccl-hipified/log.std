@@ -1,0 +1,36 @@
+qc-mi250-02:3876822:3876822 [0] NCCL INFO Bootstrap : Using ibp210s0f1:10.129.71.82<0>
+qc-mi250-02:3876822:3876822 [0] NCCL INFO NET/Plugin : dlerror=librccl-net.so: cannot open shared object file: No such file or directory No plugin found (librccl-net.so), using internal implementation
+
+qc-mi250-02:3876822:3876822 [0] /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/init.cc:115 NCCL WARN NUMA auto balancing enabled which can lead to variability in the RCCL performance! Disable by "sudo sysctl kernel.numa_balancing=0"
+qc-mi250-02:3876822:3876822 [0] NCCL INFO Kernel version: 5.14.0-427.31.1.el9_4.x86_64
+
+qc-mi250-02:3876822:3876822 [0] /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/init.cc:136 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+qc-mi250-02:3876822:3876822 [0] NCCL INFO ROCr version 1.14
+qc-mi250-02:3876822:3876822 [0] NCCL INFO Dmabuf feature disabled without NCCL_DMABUF_ENABLE=1
+RCCL version 2.20.5+hip6.2 Unknown 
+qc-mi250-03:2497798:2497798 [0] NCCL INFO ROCr version 1.14
+qc-mi250-03:2497798:2497798 [0] NCCL INFO Dmabuf feature disabled without NCCL_DMABUF_ENABLE=1
+qc-mi250-03:2497798:2497798 [0] NCCL INFO Bootstrap : Using ibp210s0f1:10.129.71.83<0>
+qc-mi250-03:2497798:2497798 [0] NCCL INFO NET/Plugin : dlerror=librccl-net.so: cannot open shared object file: No such file or directory No plugin found (librccl-net.so), using internal implementation
+
+qc-mi250-03:2497798:2497798 [0] /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/init.cc:115 NCCL WARN NUMA auto balancing enabled which can lead to variability in the RCCL performance! Disable by "sudo sysctl kernel.numa_balancing=0"
+qc-mi250-03:2497798:2497798 [0] NCCL INFO Kernel version: 5.14.0-427.31.1.el9_4.x86_64
+
+qc-mi250-03:2497798:2497798 [0] /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/init.cc:136 NCCL WARN Missing "iommu=pt" from kernel command line which can lead to system instablity or hang!
+qc-mi250-03:2497798:2497798 [0] NCCL INFO NET/IB : Using [0]mlx5_1:1/IB [RO]; OOB ibp210s0f1:10.129.71.83<0>
+qc-mi250-03:2497798:2497798 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/transport/net_ib.cc:384 -> 2
+qc-mi250-03:2497798:2497798 [0] NCCL INFO Using non-device net plugin version 0
+qc-mi250-03:2497798:2497798 [0] NCCL INFO Using network IB
+qc-mi250-02:3876822:3876822 [0] NCCL INFO NET/IB : Using [0]mlx5_1:1/IB [RO]; OOB ibp210s0f1:10.129.71.82<0>
+qc-mi250-02:3876822:3876822 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/transport/net_ib.cc:384 -> 2
+qc-mi250-02:3876822:3876822 [0] NCCL INFO Using non-device net plugin version 0
+qc-mi250-02:3876822:3876822 [0] NCCL INFO Using network IB
+
+qc-mi250-03:2497798:2497798 [0] /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/misc/socket.cc:535 NCCL WARN socketPollConnect: Connect to 10.129.71.82<43169> returned 113(No route to host) errno 115(Operation now in progress)
+qc-mi250-03:2497798:2497798 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/misc/socket.cc:572 -> 2
+qc-mi250-03:2497798:2497798 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/misc/socket.cc:621 -> 2
+qc-mi250-03:2497798:2497798 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/bootstrap.cc:280 -> 2
+qc-mi250-03:2497798:2497798 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/init.cc:1890 -> 2
+qc-mi250-03:2497798:2497798 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/init.cc:2144 -> 2
+qc-mi250-03:2497798:2497798 [0] NCCL INFO /long_pathname_so_that_rpms_can_package_the_debug_info/src/extlibs/rccl/build/hipify/src/init.cc:2182 -> 2
+Failed, NCCL error main.cu:100 'unhandled system error (run with NCCL_DEBUG=INFO for details)'

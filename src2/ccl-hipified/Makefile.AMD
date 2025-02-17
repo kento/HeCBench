@@ -11,7 +11,9 @@ ARCH      = sm_60
 #LAUNCHER  = /usr/bin/mpirun -n 2
 NVHPC_SDK = /opt/nvidia/hpc_sdk/Linux_x86_64/24.5
 MPI_ROOT  = $(NVHPC_SDK)/comm_libs/12.4/openmpi4/openmpi-4.1.5
-LAUNCHER  = $(NVHPC_SDK)/comm_libs/mpi/bin/mpirun -n 2
+#LAUNCHER  = $(NVHPC_SDK)/comm_libs/mpi/bin/mpirun -n 2
+MPI_ROOT  = /usr/local
+LAUNCHER  = bash -c
 
 #===============================================================================
 # Program name & source code list
@@ -31,7 +33,7 @@ obj = $(source:.cu=.o)
 CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -I$(MPI_ROOT)/include            -Wall 
 
 # Linker Flags
-LDFLAGS = -L$(MPI_ROOT)/lib -lmpi -lnccl
+LDFLAGS = -L$(MPI_ROOT)/lib64 -lmpi -lrccl
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
