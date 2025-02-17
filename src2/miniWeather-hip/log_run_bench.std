@@ -1,2 +1,1 @@
-hipcc -DNX=400        	  -DNZ=200 	  -DSIM_TIME=600 	  -DDATA_SPEC=DATA_SPEC_THERMAL           -I"/usr/lib/x86_64-linux-gnu/openmpi/include"           -std=c++14 -Wall -O3 -c main.cu -o main.o
-hipcc -DNX=400        	  -DNZ=200 	  -DSIM_TIME=600 	  -DDATA_SPEC=DATA_SPEC_THERMAL           -I"/usr/lib/x86_64-linux-gnu/openmpi/include"           -std=c++14 -Wall -O3 main.o -o main -L"/usr/lib/x86_64-linux-gnu/openmpi/lib" -lmpi
+bash -c "time -p ( python ../scripts/genhostfile.py ; mpiexec --hostfile hosts -n 2 ./main 1>log.std 2>log.err ) 2> log.time"

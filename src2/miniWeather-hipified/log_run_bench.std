@@ -1,2 +1,1 @@
-hipcc -DNX=400        	  -DNZ=200 	  -DSIM_TIME=600 	  -DDATA_SPEC=DATA_SPEC_THERMAL           -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5/include           -std=c++14  -Wall  -O3 -c main.cu -o main.o
-hipcc -DNX=400        	  -DNZ=200 	  -DSIM_TIME=600 	  -DDATA_SPEC=DATA_SPEC_THERMAL           -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5/include           -std=c++14  -Wall  -O3 main.o -o main -L/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5/lib -lmpi
+bash -c "time -p ( python ../scripts/genhostfile.py ; mpiexec --hostfile hosts -n 2 ./main 1>log.std 2>log.err ) 2> log.time"
