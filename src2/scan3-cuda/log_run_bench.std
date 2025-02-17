@@ -1,1 +1,1 @@
-bash -c "time -p ( ./main 1000 500000000 1>log.std 2>log.err ) 2> log.time"
+bash -c "time -p ( ./main 1000 33554432 1>log.std 2>log.err ) 2> log.time"
