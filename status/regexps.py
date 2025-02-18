@@ -118,7 +118,7 @@ regexps = {
   'depixel':'(?:Average kernel time over [0-9]+ iterations: )([0-9.+-e]+)(?: \(s\))',
   'deredundancy':'(?:Device offload time )([0-9.+-e]+)(?: secs)',
   'determinant':'(?:Average execution time: )([0-9.+-e]+)(?: \(us\))',
-  'diamond':'',
+  'diamond':'(?: \[)([0-9.+-e]+)(?:s\])',
   'dispatch':'(?:mean = )([0-9.+-e]+)(?: us)',
   'distort':'(?:Average kernel execution time: )([0-9.+-e]+)(?: \(ms\))',
   'divergence':'(?:Total Time: )([0-9.+-e]+)',
