@@ -1,24 +1,24 @@
 
 FP64 Dot
-Average hipblasDotEx_v2 execution time 3.362393 (ms)
+Average hipblasDotEx_v2 execution time 3.355025 (ms)
 Host: 65503.996094  Device: 65504.000000
 PASS
 
 
 FP32 Dot
-Average hipblasDotEx_v2 execution time 1.649173 (ms)
+Average hipblasDotEx_v2 execution time 1.637448 (ms)
 Host: 65503.996094  Device: 65503.996094
 PASS
 
 
 FP16 Dot
-Average hipblasDotEx_v2 execution time 1.058498 (ms)
+Average hipblasDotEx_v2 execution time 1.048791 (ms)
 Host: 65472.015625  Device: 65472.000000
 PASS
 
 
 BF16 Dot
-Average hipblasDotEx_v2 execution time 1.078435 (ms)
+Average hipblasDotEx_v2 execution time 1.074091 (ms)
 Host: 65536.000000  Device: 65536.000000
 PASS
 
