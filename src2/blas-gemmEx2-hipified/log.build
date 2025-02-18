@@ -1,3 +1,4 @@
+hipcc  -std=c++17  -Wall -I/opt/rocm/include/hipblaslt -O3 -c main.cu -o main.o
 In file included from main.cu:15:
 In file included from /opt/rocm/include/hipblaslt/hipblaslt.h:60:
 In file included from /opt/rocm/include/hipblaslt/hipblaslt-types.h:35:
@@ -301,4 +302,3 @@ main.cu:45:3: warning: ignoring return value of function declared with 'nodiscar
 54 warnings and 4 errors generated when compiling for gfx90a.
 failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++17 -Wall -I/opt/rocm/include/hipblaslt -O3 -c -x hip main.cu -o "main.o"
 make: *** [Makefile.AMD:50: main.o] Error 1
-timeout was set to  300
