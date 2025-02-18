@@ -1,0 +1,67 @@
+main.cu:127:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  127 |       hipDeviceSynchronize();
+      |       ^~~~~~~~~~~~~~~~~~~~
+main.cu:125:16: error: no matching function for call to 'hipblasHgemmStridedBatched'
+  125 |         stat = hipblasHgemmStridedBatched(GEMM_BATCHED_PARAMETERS);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:212:3: note: in instantiation of function template specialization 'gemmBatched<__half>' requested here
+  212 |   gemmBatched<__half>(lower, upper, num, reps, verbose);
+      |   ^
+/opt/rocm/include/hipblas/hipblas.h:19662:32: note: candidate function not viable: no known conversion from 'const __half *' to 'const hipblasHalf *' (aka 'const unsigned short *') for 7th argument
+ 19662 | HIPBLAS_EXPORT hipblasStatus_t hipblasHgemmStridedBatched(hipblasHandle_t    handle,
+       |                                ^
+ 19663 |                                                           hipblasOperation_t transA,
+ 19664 |                                                           hipblasOperation_t transB,
+ 19665 |                                                           int                m,
+ 19666 |                                                           int                n,
+ 19667 |                                                           int                k,
+ 19668 |                                                           const hipblasHalf* alpha,
+       |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:127:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  127 |       hipDeviceSynchronize();
+      |       ^~~~~~~~~~~~~~~~~~~~
+main.cu:165:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  165 |   hipFree(devMatrices);
+      |   ^~~~~~~ ~~~~~~~~~~~
+main.cu:166:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  166 |   hipFree(devVectors);
+      |   ^~~~~~~ ~~~~~~~~~~
+main.cu:167:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  167 |   hipFree(devResult);
+      |   ^~~~~~~ ~~~~~~~~~
+main.cu:127:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  127 |       hipDeviceSynchronize();
+      |       ^~~~~~~~~~~~~~~~~~~~
+main.cu:214:3: note: in instantiation of function template specialization 'gemmBatched<float>' requested here
+  214 |   gemmBatched<float>(lower, upper, num, reps, verbose);
+      |   ^
+main.cu:165:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  165 |   hipFree(devMatrices);
+      |   ^~~~~~~ ~~~~~~~~~~~
+main.cu:166:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  166 |   hipFree(devVectors);
+      |   ^~~~~~~ ~~~~~~~~~~
+main.cu:167:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  167 |   hipFree(devResult);
+      |   ^~~~~~~ ~~~~~~~~~
+main.cu:127:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  127 |       hipDeviceSynchronize();
+      |       ^~~~~~~~~~~~~~~~~~~~
+main.cu:216:3: note: in instantiation of function template specialization 'gemmBatched<double>' requested here
+  216 |   gemmBatched<double>(lower, upper, num, reps, verbose);
+      |   ^
+main.cu:150:7: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  150 |       hipMemcpy(result, devResult, vectors_size, hipMemcpyDeviceToHost);
+      |       ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:165:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  165 |   hipFree(devMatrices);
+      |   ^~~~~~~ ~~~~~~~~~~~
+main.cu:166:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  166 |   hipFree(devVectors);
+      |   ^~~~~~~ ~~~~~~~~~~
+main.cu:167:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  167 |   hipFree(devResult);
+      |   ^~~~~~~ ~~~~~~~~~
+14 warnings and 1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++17 -Wall -I../blas-gemmBatched-cuda -I/opt/rocm/include/hipblas -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:50: main.o] Error 1

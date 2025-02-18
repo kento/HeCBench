@@ -5,7 +5,13 @@
 #include <type_traits> // is_same
 #include <hip/hip_runtime.h>
 #include <hip/hip_fp16.h>
+
+#if 0
 #include <cuda_bf16.h>
+#else
+#include <hip/amd_detail/amd_hip_bf16.h>
+#endif
+
 #include <hipblas.h>
 #include "utils.h"
 
