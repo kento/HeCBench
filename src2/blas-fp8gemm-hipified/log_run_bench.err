@@ -1,1 +1,18 @@
-timeout was set to  3000
+In file included from main.cu:2:
+In file included from ./helper.h:37:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt.h:60:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt-types.h:35:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt_float8.h:62:
+/opt/rocm/include/hipblaslt/hipblaslt_hip_f8_impl.h:95:18: warning: unused variable 'y' [-Wunused-variable]
+   95 |         uint32_t y, head, mantissa;
+      |                  ^
+1 warning generated when compiling for gfx90a.
+In file included from main.cu:2:
+In file included from ./helper.h:37:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt.h:60:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt-types.h:35:
+In file included from /opt/rocm/include/hipblaslt/hipblaslt_float8.h:62:
+/opt/rocm/include/hipblaslt/hipblaslt_hip_f8_impl.h:95:18: warning: unused variable 'y' [-Wunused-variable]
+   95 |         uint32_t y, head, mantissa;
+      |                  ^
+1 warning generated when compiling for host.
