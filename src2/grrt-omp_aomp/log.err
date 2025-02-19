@@ -1,0 +1,4 @@
+"PluginInterface" error: Failure to init kernel: Error in hsa_executable_get_symbol_by_name(__omp_offloading_e99e6340_d8012323__Z5task1PdS_ii_l366.kd): HSA_STATUS_ERROR_INVALID_SYMBOL_NAME: There is no symbol with the given name.
+omptarget error: Failed to load kernel __omp_offloading_e99e6340_d8012323__Z5task1PdS_ii_l366
+"PluginInterface" error: Failure to init kernel: Error in hsa_executable_get_symbol_by_name(__omp_offloading_e99e6340_d8012323__Z5task2PdS_ii_l486.kd): HSA_STATUS_ERROR_INVALID_SYMBOL_NAME: There is no symbol with the given name.
+omptarget error: Failed to load kernel __omp_offloading_e99e6340_d8012323__Z5task2PdS_ii_l486
