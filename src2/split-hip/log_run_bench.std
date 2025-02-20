@@ -1,1 +1,5 @@
-bash -c "time -p ( ./main 33554432 1000 1>log.std 2>log.err ) 2> log.time"
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 2000000000 10 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 0.00 16287.13 16287.13
