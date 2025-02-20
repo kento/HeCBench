@@ -1,4 +1,5 @@
 Warmup..
-Average execution time of raw_accessor_kernel: 4145.003418 (us)
-Average execution time of tensor_packed_accessor_kernel: 4131.933594 (us)
-PASS
+Average execution time of raw_accessor_kernel: 927518.187500 (us)
+Average execution time of tensor_packed_accessor_kernel: 932197.375000 (us)
+17535.121094 17535.119141
+FAIL
