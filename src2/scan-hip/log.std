@@ -10,14 +10,14 @@ PASS
 PASS
 
 The number of elements to scan in a thread block: 128
-Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 2508.260742 (us)
-Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 2713.304932 (us). Reduce the time by -8.2%
-Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 2548.922363 (us)
-Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 2787.481445 (us). Reduce the time by -9.4%
-Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 2886.877441 (us)
-Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 2745.870605 (us). Reduce the time by 4.9%
-Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 5269.974609 (us)
-Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 4147.568848 (us). Reduce the time by 21.3%
+Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 9371.312500 (us)
+Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 10130.384766 (us). Reduce the time by -8.1%
+Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 9548.480469 (us)
+Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 10061.090820 (us). Reduce the time by -5.4%
+Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 10828.312500 (us)
+Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 10316.067383 (us). Reduce the time by 4.7%
+Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 19525.687500 (us)
+Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 15441.404297 (us). Reduce the time by 20.9%
 
 The number of elements to scan in a thread block: 256
 PASS
@@ -30,14 +30,14 @@ PASS
 PASS
 
 The number of elements to scan in a thread block: 256
-Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 1568.758301 (us)
-Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 1781.692017 (us). Reduce the time by -13.6%
-Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 1679.557617 (us)
-Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 1816.085815 (us). Reduce the time by -8.1%
-Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 2441.161865 (us)
-Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 1918.954712 (us). Reduce the time by 21.4%
-Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 4439.444824 (us)
-Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 3757.040527 (us). Reduce the time by 15.4%
+Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 9717.628906 (us)
+Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 10401.316406 (us). Reduce the time by -7.0%
+Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 9737.588867 (us)
+Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 10531.640625 (us). Reduce the time by -8.2%
+Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 10796.032227 (us)
+Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 9871.432617 (us). Reduce the time by 8.6%
+Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 18170.117188 (us)
+Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 14858.996094 (us). Reduce the time by 18.2%
 
 The number of elements to scan in a thread block: 512
 PASS
@@ -50,14 +50,14 @@ PASS
 PASS
 
 The number of elements to scan in a thread block: 512
-Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 1607.480957 (us)
-Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 1745.147339 (us). Reduce the time by -8.6%
-Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 1808.537231 (us)
-Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 1828.280762 (us). Reduce the time by -1.1%
-Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 2352.540039 (us)
-Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 1959.458618 (us). Reduce the time by 16.7%
-Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 4054.125000 (us)
-Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 3620.182861 (us). Reduce the time by 10.7%
+Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 6072.468750 (us)
+Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 6532.230469 (us). Reduce the time by -7.6%
+Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 6807.598633 (us)
+Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 6853.313477 (us). Reduce the time by -0.7%
+Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 8747.745117 (us)
+Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 7394.734375 (us). Reduce the time by 15.5%
+Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 15119.737305 (us)
+Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 13566.268555 (us). Reduce the time by 10.3%
 
 The number of elements to scan in a thread block: 1024
 PASS
@@ -70,14 +70,14 @@ PASS
 PASS
 
 The number of elements to scan in a thread block: 1024
-Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 1832.406738 (us)
-Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 1940.044678 (us). Reduce the time by -5.9%
-Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 1969.425903 (us)
-Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 1978.616455 (us). Reduce the time by -0.5%
-Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 2561.852295 (us)
-Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 2079.041992 (us). Reduce the time by 18.8%
-Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 4004.040283 (us)
-Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 3276.411865 (us). Reduce the time by 18.2%
+Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 6940.074707 (us)
+Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 7270.379395 (us). Reduce the time by -4.8%
+Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 7434.634277 (us)
+Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 7397.809082 (us). Reduce the time by 0.5%
+Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 9613.790039 (us)
+Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 7823.104492 (us). Reduce the time by 18.6%
+Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 14833.061523 (us)
+Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 12366.156250 (us). Reduce the time by 16.6%
 
 The number of elements to scan in a thread block: 2048
 PASS
@@ -90,11 +90,11 @@ PASS
 PASS
 
 The number of elements to scan in a thread block: 2048
-Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 2064.780518 (us)
-Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 2175.737305 (us). Reduce the time by -5.4%
-Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 2321.552979 (us)
-Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 2236.510254 (us). Reduce the time by 3.7%
-Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 3037.167480 (us)
-Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 2208.499268 (us). Reduce the time by 27.3%
-Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 4399.396484 (us)
-Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 3718.933838 (us). Reduce the time by 15.5%
+Element size in bytes is 1. Average execution time of scan (w/  bank conflicts): 7873.638672 (us)
+Element size in bytes is 1. Average execution time of scan (w/o bank conflicts): 8162.712402 (us). Reduce the time by -3.7%
+Element size in bytes is 2. Average execution time of scan (w/  bank conflicts): 8777.054688 (us)
+Element size in bytes is 2. Average execution time of scan (w/o bank conflicts): 8246.666016 (us). Reduce the time by 6.0%
+Element size in bytes is 4. Average execution time of scan (w/  bank conflicts): 11282.985352 (us)
+Element size in bytes is 4. Average execution time of scan (w/o bank conflicts): 8326.466797 (us). Reduce the time by 26.2%
+Element size in bytes is 8. Average execution time of scan (w/  bank conflicts): 16390.386719 (us)
+Element size in bytes is 8. Average execution time of scan (w/o bank conflicts): 13918.497070 (us). Reduce the time by 15.1%
