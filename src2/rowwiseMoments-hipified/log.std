@@ -1,2 +1,2 @@
-Average execution time of RowwiseMoments kernel: 1340.383301 (us)
-Checksum: mean = 0.500016 and rstd = 3.464152
+Average execution time of RowwiseMoments kernel: 54146.363281 (us)
+Checksum: mean = 0.500003 and rstd = 3.464112
