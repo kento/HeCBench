@@ -2,55 +2,55 @@
 The size of each matrix element is 1 byte
 
 Input matrix is row major and reverse along rows
-Average kernel execution time: 1.776927 (ms)
+Average kernel execution time: 0.931567 (ms)
 
 Input matrix is row major and reverse along columns
-Average kernel execution time: 0.896172 (ms)
+Average kernel execution time: 0.887996 (ms)
 
 Input matrix is column major and reverse along rows
-Average kernel execution time: 0.887788 (ms)
+Average kernel execution time: 0.887990 (ms)
 
 Input matrix is column major and reverse along columns
-Average kernel execution time: 0.890934 (ms)
+Average kernel execution time: 0.888630 (ms)
 
 The size of each matrix element is 2 bytes
 
 Input matrix is row major and reverse along rows
-Average kernel execution time: 1.770085 (ms)
+Average kernel execution time: 1.785509 (ms)
 
 Input matrix is row major and reverse along columns
-Average kernel execution time: 1.766349 (ms)
+Average kernel execution time: 1.767704 (ms)
 
 Input matrix is column major and reverse along rows
-Average kernel execution time: 1.766847 (ms)
+Average kernel execution time: 1.766514 (ms)
 
 Input matrix is column major and reverse along columns
-Average kernel execution time: 1.769178 (ms)
+Average kernel execution time: 1.767980 (ms)
 
 The size of each matrix element is 4 bytes
 
 Input matrix is row major and reverse along rows
-Average kernel execution time: 3.515583 (ms)
+Average kernel execution time: 3.529624 (ms)
 
 Input matrix is row major and reverse along columns
-Average kernel execution time: 3.520904 (ms)
+Average kernel execution time: 3.520490 (ms)
 
 Input matrix is column major and reverse along rows
-Average kernel execution time: 3.520426 (ms)
+Average kernel execution time: 3.520164 (ms)
 
 Input matrix is column major and reverse along columns
-Average kernel execution time: 3.514623 (ms)
+Average kernel execution time: 3.513342 (ms)
 
 The size of each matrix element is 8 bytes
 
 Input matrix is row major and reverse along rows
-Average kernel execution time: 7.017292 (ms)
+Average kernel execution time: 7.025238 (ms)
 
 Input matrix is row major and reverse along columns
-Average kernel execution time: 7.007004 (ms)
+Average kernel execution time: 7.007216 (ms)
 
 Input matrix is column major and reverse along rows
-Average kernel execution time: 7.006400 (ms)
+Average kernel execution time: 7.006755 (ms)
 
 Input matrix is column major and reverse along columns
-Average kernel execution time: 7.016271 (ms)
+Average kernel execution time: 7.017142 (ms)
