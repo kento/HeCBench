@@ -1,1 +1,9 @@
-bash -c "time -p ( ./main -num_systems=524288 1>log.std 2>log.err;./main --lmem -num_systems=524288 1>>log.std 2>>log.err;./main --vec4 -num_systems=524288 1>>log.std 2>>log.err ) 2> log.time"
+clang++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++17 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c main.cpp -o main.o
+clang++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++17 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c shrUtils.cpp -o shrUtils.o
+clang++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++17 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a -c cmd_arg_reader.cpp -o cmd_arg_reader.o
+clang++  -DUNIX -DBENCH_ITERATIONS=100 -std=c++17 -Wall -O3 -target x86_64-pc-linux-gnu           -fopenmp -fopenmp-targets=amdgcn-amd-amdhsa           -Xopenmp-target=amdgcn-amd-amdhsa           -march=gfx90a main.o shrUtils.o cmd_arg_reader.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main -num_systems=8388560 1>log.std 2>log.err 1>>log.std 2>>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 11.00 30959.70 30948.70

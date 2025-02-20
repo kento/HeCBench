@@ -5,39 +5,39 @@ Using CTA of size 256 for Sweep
   Num_systems = 8388560, system_size = 128
 
 ----- CPU  solvers -----
-  CPU Time =    15.52825 s
-  Throughput =  540.2127 systems/sec
+  CPU Time =    15.29819 s
+  Throughput =  548.3368 systems/sec
 
 ----- optimized GPU solvers -----
 
  pcr_small_systems_kernel
   looping 100 times..
-Tridiagonal-pcrsmall-base, Throughput = 410073.5931 Systems/s, Time = 0.02046 s, Size = 8388560 Systems
+Tridiagonal-pcrsmall-base, Throughput = 410211.3348 Systems/s, Time = 0.02045 s, Size = 8388560 Systems
   err = 0.9551
 
  pcr_branch_free_kernel
   looping 100 times..
-Tridiagonal-pcrsmall-optimized, Throughput = 417911.2138 Systems/s, Time = 0.02007 s, Size = 8388560 Systems
+Tridiagonal-pcrsmall-optimized, Throughput = 419806.4390 Systems/s, Time = 0.01998 s, Size = 8388560 Systems
   err = 0.9551
 
  cyclic_small_systems_kernel
   looping 100 times..
-Tridiagonal-cyclicsmall-base, Throughput = 386368.1870 Systems/s, Time = 0.02171 s, Size = 8388560 Systems
+Tridiagonal-cyclicsmall-base, Throughput = 386169.3432 Systems/s, Time = 0.02172 s, Size = 8388560 Systems
   err = 1.2574
 
  cyclic_branch_free_kernel
   looping 100 times..
-Tridiagonal-cyclicsmall-optimized, Throughput = 393959.8796 Systems/s, Time = 0.02129 s, Size = 8388560 Systems
+Tridiagonal-cyclicsmall-optimized, Throughput = 393294.3412 Systems/s, Time = 0.02133 s, Size = 8388560 Systems
   err = 1.2574
 
 sweep_small_systems_global_kernel
   looping 100 times..
-Tridiagonal-sweepsmall-noreorder, Throughput = 37969.5694 Systems/s, Time = 0.22093 s, Size = 8388560 Systems
+Tridiagonal-sweepsmall-noreorder, Throughput = 38297.7974 Systems/s, Time = 0.21904 s, Size = 8388560 Systems
   err = 0.9607
 
 sweep_data_reorder_kernel
 sweep_small_systems_global_kernel
   looping 100 times..
-Tridiagonal-sweepsmall-reorder, Throughput = 443625.1295 Systems/s, Time = 0.01891 s, Size = 8388560 Systems
+Tridiagonal-sweepsmall-reorder, Throughput = 446985.0729 Systems/s, Time = 0.01877 s, Size = 8388560 Systems
   err = nan
 
