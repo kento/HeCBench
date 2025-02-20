@@ -1,6 +1,6 @@
 Initializing input matrices..
 Done
-Average execution time of SPAXPBY : 18.373850 (us)
+Average execution time of SPAXPBY : 53.426605 (us)
 Computing the reference results..
 Done
 axpby_example test PASSED
