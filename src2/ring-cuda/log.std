@@ -2,86 +2,86 @@ Device name: NVIDIA GH200 480GB
 Warning, only one device is detected.This program is supposed to execute with multiple devices.
 ----------------------------------------------------------------
 Copy length = 1
-Average total exchange time: 1.930860 (us)
-Average exchange time per device: 1.930860 (us)
+Average total exchange time: 3.360000 (us)
+Average exchange time per device: 3.360000 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 4
-Average total exchange time: 1.767340 (us)
-Average exchange time per device: 1.767340 (us)
+Average total exchange time: 2.044800 (us)
+Average exchange time per device: 2.044800 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 16
-Average total exchange time: 1.758380 (us)
-Average exchange time per device: 1.758380 (us)
+Average total exchange time: 1.958400 (us)
+Average exchange time per device: 1.958400 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 64
-Average total exchange time: 1.716140 (us)
-Average exchange time per device: 1.716140 (us)
+Average total exchange time: 1.843200 (us)
+Average exchange time per device: 1.843200 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 256
-Average total exchange time: 1.671660 (us)
-Average exchange time per device: 1.671660 (us)
+Average total exchange time: 1.916700 (us)
+Average exchange time per device: 1.916700 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 1024
-Average total exchange time: 1.742380 (us)
-Average exchange time per device: 1.742380 (us)
+Average total exchange time: 2.089600 (us)
+Average exchange time per device: 2.089600 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 4096
-Average total exchange time: 1.731190 (us)
-Average exchange time per device: 1.731190 (us)
+Average total exchange time: 1.846400 (us)
+Average exchange time per device: 1.846400 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 16384
-Average total exchange time: 1.760300 (us)
-Average exchange time per device: 1.760300 (us)
+Average total exchange time: 1.910400 (us)
+Average exchange time per device: 1.910400 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 65536
-Average total exchange time: 1.751980 (us)
-Average exchange time per device: 1.751980 (us)
+Average total exchange time: 1.920000 (us)
+Average exchange time per device: 1.920000 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 262144
-Average total exchange time: 1.779180 (us)
-Average exchange time per device: 1.779180 (us)
+Average total exchange time: 2.217600 (us)
+Average exchange time per device: 2.217600 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 1048576
-Average total exchange time: 1.774070 (us)
-Average exchange time per device: 1.774070 (us)
+Average total exchange time: 2.380800 (us)
+Average exchange time per device: 2.380800 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 4194304
-Average total exchange time: 1.732780 (us)
-Average exchange time per device: 1.732780 (us)
+Average total exchange time: 2.396800 (us)
+Average exchange time per device: 2.396800 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 16777216
-Average total exchange time: 1.832940 (us)
-Average exchange time per device: 1.832940 (us)
+Average total exchange time: 2.486300 (us)
+Average exchange time per device: 2.486300 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 67108864
-Average total exchange time: 1.954220 (us)
-Average exchange time per device: 1.954220 (us)
+Average total exchange time: 3.110400 (us)
+Average exchange time per device: 3.110400 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 268435456
-Average total exchange time: 3.072290 (us)
-Average exchange time per device: 3.072290 (us)
+Average total exchange time: 5.728000 (us)
+Average exchange time per device: 5.728000 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 1073741824
-Average total exchange time: 3.204130 (us)
-Average exchange time per device: 3.204130 (us)
+Average total exchange time: 5.811100 (us)
+Average exchange time per device: 5.811100 (us)
 PASS
 ----------------------------------------------------------------
 Copy length = 4294967296
-Average total exchange time: 3.257880 (us)
-Average exchange time per device: 3.257880 (us)
+Average total exchange time: 6.188700 (us)
+Average exchange time per device: 6.188700 (us)
 PASS
