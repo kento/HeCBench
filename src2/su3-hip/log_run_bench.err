@@ -1,0 +1,9 @@
+su3_nn_bench.cu:152:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  152 |   make_lattice(a.data(), ldim, Complx{1.0,0.0});
+      |                  ^
+1 warning generated when compiling for gfx90a.
+su3_nn_bench.cu:152:18: warning: passing 4-byte aligned argument to 16-byte aligned parameter 1 of 'make_lattice' may result in an unaligned pointer access [-Walign-mismatch]
+  152 |   make_lattice(a.data(), ldim, Complx{1.0,0.0});
+      |                  ^
+1 warning generated when compiling for host.
+timeout was set to  600
