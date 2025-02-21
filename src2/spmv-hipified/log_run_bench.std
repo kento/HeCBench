@@ -1,4 +1,5 @@
-hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipsparse -O3 -c kernels.cu -o kernels.o
-hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipsparse -O3 -c utils.cpp -o utils.o
-hipcc  -std=c++14  -Wall -I/opt/rocm/include/hipsparse -O3 main.o kernels.o utils.o -o main -lhipsparse
-bash -c "time -p ( ./main 16777216 10240 100 1>log.std 2>log.err ) 2> log.time"
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 16777216 100000 1 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.98 40289.84 40278.86
