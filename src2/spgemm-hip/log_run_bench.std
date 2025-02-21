@@ -1,1 +1,9 @@
-bash -c "time -p ( ./main 1024 1024 1024 1024 1000 1 1>log.std 2>log.err;./main 4096 4096 4096 4096 1000 0 1>>log.std 2>>log.err ) 2> log.time"
+hipcc  -std=c++14 -Wall -I../spgemm-cuda -O3 -c main.cu -o main.o
+hipcc  -std=c++14 -Wall -I../spgemm-cuda -O3 main.o -o main -lhipsparse
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 87040 24576 24576 24576 1 0 ) 2> log.time"
+Average execution time of SPGEMM (COO) compute: 65085.765625 (us)
+Average execution time of SPGEMM (CSR) compute: 92802.546875 (us)
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 11268.36 11257.37
