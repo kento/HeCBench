@@ -1,3 +1,7 @@
 hipcc  -std=c++14  -Wall            -I../spd2s-cuda -I/opt/rocm/include/hipsparse -O3 -c main.cu -o main.o
 hipcc  -std=c++14  -Wall            -I../spd2s-cuda -I/opt/rocm/include/hipsparse -O3 main.o -o main -lhipsparse
-bash -c "time -p ( ./main 20082 20082 150616 1000 1>log.std 2>log.err;./main 41490 41490 17590850 1000 1>>log.std 2>>log.err ) 2> log.time"
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 100000 81490 17590850 1 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 33098.61 33087.62
