@@ -7,7 +7,7 @@ CC        = OMPI_CXX=clang++  mpicxx
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
-ARCH      = gfx906
+ARCH      = gfx90a
 LAUNCHER = bash -c
 
 #===============================================================================

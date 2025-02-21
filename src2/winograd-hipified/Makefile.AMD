@@ -6,7 +6,7 @@
 CC        = hipcc
 OPTIMIZE  = yes
 DEBUG     = no
-ARCH      = sm_60
+ARCH      = sm_90
 INPUT_SIZE = 1024
 LAUNCHER = bash -c
 

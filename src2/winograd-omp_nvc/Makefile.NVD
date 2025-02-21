@@ -7,7 +7,7 @@ CC        = nvc++
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
-SM        = cc70
+SM        = cc90
 INPUT_SIZE = 1024
 LAUNCHER = bash -c
 

@@ -7,7 +7,7 @@ CC        = clang++
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
-ARCH      = gfx906
+ARCH      = gfx90a
 INPUT_SIZE = 1024
 LAUNCHER = bash -c
 

@@ -7,14 +7,18 @@ VPATH   = ./
 HDRDIR  = ./include
 
 # adjust this for your system
-CUDADIR=/auto/software/nvidia/x86_64/cuda-11.0
+#CUDADIR=/auto/software/nvidia/x86_64/cuda-11.0
+CUDADIR=/opt/rocm
 OPENMPI_BINDIR=/usr/lib64/openmpi3/bin
 
 # set options for this machine
 # specify which compilers to use for c, fortran and linking
-CC	= $(OPENMPI_BINDIR)/mpicc
-LD	= $(OPENMPI_BINDIR)/mpicc
-NVCC	= $(CUDADIR)/bin/hipcc
+#CC	= $(OPENMPI_BINDIR)/mpicc
+#LD	= $(OPENMPI_BINDIR)/mpicc
+CC	= mpicc
+LD	= mpicc
+#NVCC	= $(CUDADIR)/bin/hipcc
+NVCC	= hipcc
 #DEBUG   = -g -G -DDEBUG
 FAST    = -O3  
 LAUNCHER = bash -c
@@ -26,7 +30,7 @@ CFLAGS = -Dp_N=$(N) -DNDG3d -DCUDA -I$(HDRDIR) -O3 -I$(CUDADIR)/include
 LDFLAGS	= -I$(HDRDIR) -O3 
 
 # libraries to be linked in
-LIBS	= -lm -L./3rdParty/ParMetis-3.1/ -lparmetis -lmetis -L$(CUDADIR)/lib64 -lcuda -lcudart
+LIBS	= -lm -L./3rdParty/ParMetis-3.1/ -lparmetis -lmetis -L$(CUDADIR)/lib -lcuda -lcudart
 
 # types of files we are going to construct rules for
 .SUFFIXES: .c .f .cu
@@ -51,6 +55,10 @@ veryclean :
 	make clean
 	cd 3rdParty/ParMetis-3.1 && make clean
 
-run :
-	mpiexec -n $(NP) ./MaxwellsGPU3d  Meshes/FS_K01022.neu
+#run :
+#	mpiexec -n $(NP) ./MaxwellsGPU3d  Meshes/FS_K01022.neu
 
+include ../include/miniDGS-AMD
+
+run : $(MaxwellsRun3d)
+	$(LAUNCHER) "$(COMMAND)"
