@@ -1,1 +1,7 @@
-bash -c "time -p ( ./main -i 1000 -l 32 -t 128 -v 3 -w 1 1>log.std 2>log.err ) 2> log.time"
+hipcc  -std=c++14 -Wall -DMILC_COMPLEX -DPRECISION -O3 -c su3_nn_bench.cu -o su3_nn_bench.o
+hipcc  -std=c++14 -Wall -DMILC_COMPLEX -DPRECISION -O3 su3_nn_bench.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main -i 1000 -l 50 -t 128 -v 3 -w 1 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 4288.90 4277.91

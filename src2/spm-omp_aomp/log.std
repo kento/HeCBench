@@ -1,4 +1,4 @@
-Average kernel execution time: 2.177733 (ms)
-Device count: 9932334
-Host count: 9932334
-Maximum difference 4
+Average kernel execution time: 504.254456 (ms)
+Device count: 1270334313
+Host count: 1270334258
+Maximum difference 62

@@ -3,5 +3,5 @@
 
 Sorting 1778774528 32-bit float keys (only)
 
-Throughput = 3753.4535 MElements/s, Time = 0.47390 s
+Throughput = 33138.5873 MElements/s, Time = 0.05368 s
 PASS

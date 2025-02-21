@@ -3,28 +3,28 @@
 -------------------------------------
 
 f = 0
-Average kernel execution time: 16.617956 (ms)
-Value range [-1.922080e+00, 1.469215e+00]
+Average kernel execution time: 51859.644531 (ms)
+Value range [-2.527217e+00, 1.311987e-01]
 
 f = 1
-Average kernel execution time: 16.588770 (ms)
-Value range [-7.731843e+00, 5.741163e+00]
+Average kernel execution time: 99428.476562 (ms)
+Value range [-7.731843e+00, 5.211831e-01]
 
 f = 2
-Average kernel execution time: 16.621756 (ms)
-Value range [-4.625142e+00, 9.272439e+00]
+Average kernel execution time: 101606.835938 (ms)
+Value range [-4.859980e+00, 9.312931e-01]
 -------------------------------------
  surfelRenderTest with type float64  
 -------------------------------------
 
 f = 0
-Average kernel execution time: 16.595057 (ms)
-Value range [-1.922080e+00, 1.469215e+00]
+Average kernel execution time: 100155.437500 (ms)
+Value range [-2.527217e+00, 1.311987e-01]
 
 f = 1
-Average kernel execution time: 16.570642 (ms)
-Value range [-7.731843e+00, 5.741163e+00]
+Average kernel execution time: 95057.898438 (ms)
+Value range [-7.731843e+00, 5.211831e-01]
 
 f = 2
-Average kernel execution time: 16.616291 (ms)
-Value range [-4.625142e+00, 9.272438e+00]
+Average kernel execution time: 102147.585938 (ms)
+Value range [-4.859980e+00, 9.312931e-01]

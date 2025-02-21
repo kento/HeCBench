@@ -1,1 +1,5 @@
-bash -c "time -p ( ./main 256 256 256 1000 1>log.std 2>log.err ) 2> log.time"
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 512 512 512 50 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 6263.44 6252.45

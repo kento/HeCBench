@@ -1,3 +1,3 @@
-Average serial execution time: 157.566437 (ms)
-Average kernel execution time: 70.143112 (ms)
-Maximum error: 0.000000e+00
+Average serial execution time: 15878.264648 (ms)
+Average kernel execution time: 236.910736 (ms)
+Maximum error: 1.110223e-16

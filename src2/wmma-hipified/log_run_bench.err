@@ -1,6 +1,74 @@
-main.cu:32:10: fatal error: 'mma.h' file not found
-   32 | #include <mma.h>
-      |          ^~~~~~~
-1 error generated when compiling for gfx90a.
+main.cu:42:17: error: expected namespace name
+   42 | using namespace nvcuda;
+      |                 ^
+main.cu:109:16: error: use of undeclared identifier 'wmma'
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                ^
+main.cu:109:31: error: use of undeclared identifier 'wmma'
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                               ^
+main.cu:109:47: error: declaration of variable 'WMMA_M' with deduced type 'auto' requires an initializer
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                               ^
+main.cu:109:55: error: declaration of variable 'WMMA_N' with deduced type 'auto' requires an initializer
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                       ^
+main.cu:109:63: error: declaration of variable 'WMMA_K' with deduced type 'auto' requires an initializer
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                               ^
+main.cu:109:71: error: declaration of variable 'float16_t' with deduced type 'auto' requires an initializer
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                                       ^
+main.cu:110:31: error: use of undeclared identifier 'wmma'
+  110 |                               wmma::row_major>();
+      |                               ^
+main.cu:110:46: error: expected ';' at end of declaration
+  110 |                               wmma::row_major>();
+      |                                              ^
+      |                                              ;
+main.cu:111:16: error: use of undeclared identifier 'wmma'
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                ^
+main.cu:111:31: error: use of undeclared identifier 'wmma'
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                               ^
+main.cu:111:47: error: redefinition of 'WMMA_M'
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                               ^
+main.cu:109:47: note: previous definition is here
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                               ^
+main.cu:111:47: error: declaration of variable 'WMMA_M' with deduced type 'auto' requires an initializer
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                               ^
+main.cu:111:55: error: redefinition of 'WMMA_N'
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                       ^
+main.cu:109:55: note: previous definition is here
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                       ^
+main.cu:111:55: error: declaration of variable 'WMMA_N' with deduced type 'auto' requires an initializer
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                       ^
+main.cu:111:63: error: redefinition of 'WMMA_K'
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                               ^
+main.cu:109:63: note: previous definition is here
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                               ^
+main.cu:111:63: error: declaration of variable 'WMMA_K' with deduced type 'auto' requires an initializer
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                               ^
+main.cu:111:71: error: redefinition of 'float16_t'
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                                       ^
+main.cu:109:71: note: previous definition is here
+  109 |   auto fragA = wmma::fragment<wmma::matrix_a, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                                       ^
+main.cu:111:71: error: declaration of variable 'float16_t' with deduced type 'auto' requires an initializer
+  111 |   auto fragB = wmma::fragment<wmma::matrix_b, WMMA_M, WMMA_N, WMMA_K, float16_t,
+      |                                                                       ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated when compiling for gfx90a.
 failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -Wall -O3 -c -x hip main.cu -o "main.o"
 make: *** [Makefile.AMD:50: main.o] Error 1

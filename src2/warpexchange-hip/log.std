@@ -1,2 +1,3 @@
-Average execution time of kernel: 1039.332520 (us)
-PASS
+Average execution time of kernel: 109.037003 (us)
+Error at index 4
+FAIL

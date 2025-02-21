@@ -1,0 +1,10 @@
+Mismatch of q at 715667648: CPU_ref: -0.869885 vs GPU: -0.696144
+Mismatch of q at 715667649: CPU_ref: -0.116828 vs GPU: 0.772673
+Mismatch of q at 715667650: CPU_ref: 0.396698 vs GPU: 0.257307
+Mismatch of q at 715667651: CPU_ref: 0.272284 vs GPU: -0.227727
+Mismatch of q at 715667652: CPU_ref: 0.0316488 vs GPU: -0.989349
+Mismatch of q at 715667653: CPU_ref: -0.0551482 vs GPU: 0.230913
+Mismatch of q at 715667654: CPU_ref: 0.212713 vs GPU: -0.166464
+Mismatch of q at 715667655: CPU_ref: 0.297958 vs GPU: -0.492815
+Mismatch of q at 715667656: CPU_ref: 0.536799 vs GPU: -0.0330583
+Mismatch of q at 715667657: CPU_ref: -0.504984 vs GPU: -0.909171

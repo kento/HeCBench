@@ -5,8 +5,8 @@ Checking block size 256.
 Checking block size 512.
 All results match. Starting benchmarks.
 
-block_size   32 | time 0.264228 ms
-block_size   64 | time 0.142570 ms
-block_size  128 | time 0.124905 ms
-block_size  256 | time 0.126672 ms
-block_size  512 | time 0.127202 ms
+block_size   32 | time 15.984419 ms
+block_size   64 | time 8.186570 ms
+block_size  128 | time 7.082481 ms
+block_size  256 | time 7.130445 ms
+block_size  512 | time 7.192398 ms

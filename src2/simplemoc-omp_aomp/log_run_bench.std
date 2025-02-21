@@ -1,1 +1,2 @@
-bash -c "time -p ( ./main -s 5000000 -e 128 -n 10 1>log.std 2>log.err ) 2> log.time"
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main -s 50000000 -e 51200 -n 2 1>log.std 2>log.err ) 2> log.time"

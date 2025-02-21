@@ -15,7 +15,7 @@
 ================================================================================
                                   INPUT SUMMARY
 ================================================================================
-Kernel execution times:  10
+Kernel execution times:  2
 Energy Groups:           51200
 2D Source Regions:       5000
 Coarse Axial Intervals:  27
@@ -32,7 +32,7 @@ Simulation Complete.
 ================================================================================
                                  RESULTS SUMMARY
 ================================================================================
-Total kernel time:       1175.347 seconds
-Device offload time:     1177.787 seconds
+Total kernel time:       235.117 seconds
+Device offload time:     235.438 seconds
 Time per Intersection:   0.046 ns
 ================================================================================

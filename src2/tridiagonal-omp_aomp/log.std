@@ -2,123 +2,42 @@
 
 Using CTA of size 256 for Sweep
 
-  Num_systems = 524288, system_size = 128
+  Num_systems = 8388560, system_size = 128
 
 ----- CPU  solvers -----
-  CPU Time =    0.54117 s
-  Throughput =  968.7993 systems/sec
+  CPU Time =    8.69412 s
+  Throughput =  964.8541 systems/sec
 
 ----- optimized GPU solvers -----
 
  pcr_small_systems_kernel
   looping 100 times..
-Tridiagonal-pcrsmall-base, Throughput = 63693.8157 Systems/s, Time = 0.00823 s, Size = 524288 Systems
-  err = 0.8575
+Tridiagonal-pcrsmall-base, Throughput = 128548.0312 Systems/s, Time = 0.06526 s, Size = 8388560 Systems
+  err = 492075.4135
 
  pcr_branch_free_kernel
   looping 100 times..
-Tridiagonal-pcrsmall-optimized, Throughput = 74321.7579 Systems/s, Time = 0.00705 s, Size = 524288 Systems
-  err = 0.8575
+Tridiagonal-pcrsmall-optimized, Throughput = 146505.4341 Systems/s, Time = 0.05726 s, Size = 8388560 Systems
+  err = 492075.4135
 
  cyclic_small_systems_kernel
   looping 100 times..
-Tridiagonal-cyclicsmall-base, Throughput = 42907.4611 Systems/s, Time = 0.01222 s, Size = 524288 Systems
-  err = 1.1554
+Tridiagonal-cyclicsmall-base, Throughput = 84659.5490 Systems/s, Time = 0.09909 s, Size = 8388560 Systems
+  err = 492075.5327
 
  cyclic_branch_free_kernel
   looping 100 times..
-Tridiagonal-cyclicsmall-optimized, Throughput = 49092.7921 Systems/s, Time = 0.01068 s, Size = 524288 Systems
-  err = 1.1554
+Tridiagonal-cyclicsmall-optimized, Throughput = 94282.7222 Systems/s, Time = 0.08897 s, Size = 8388560 Systems
+  err = 492075.5327
 
 sweep_small_systems_global_kernel
   looping 100 times..
-Tridiagonal-sweepsmall-noreorder, Throughput = 7767.0028 Systems/s, Time = 0.06750 s, Size = 524288 Systems
-  err = 0.8659
+Tridiagonal-sweepsmall-noreorder, Throughput = 7098.6338 Systems/s, Time = 1.18171 s, Size = 8388560 Systems
+  err = 0.9266
 
 sweep_data_reorder_kernel
 sweep_small_systems_global_kernel
   looping 100 times..
-Tridiagonal-sweepsmall-reorder, Throughput = 41861.5028 Systems/s, Time = 0.01252 s, Size = 524288 Systems
-  err = 0.8659
-
-./main Starting...
-
-Using CTA of size 256 for Sweep
-
-  Num_systems = 524288, system_size = 128
-
------ CPU  solvers -----
-  CPU Time =    0.54124 s
-  Throughput =  968.6721 systems/sec
-
------ optimized GPU solvers -----
-
- pcr_small_systems_kernel
-  looping 100 times..
-Tridiagonal-pcrsmall-base, Throughput = 62410.7097 Systems/s, Time = 0.00840 s, Size = 524288 Systems
-  err = 0.8575
-
- pcr_branch_free_kernel
-  looping 100 times..
-Tridiagonal-pcrsmall-optimized, Throughput = 74275.5426 Systems/s, Time = 0.00706 s, Size = 524288 Systems
-  err = 0.8575
-
- cyclic_small_systems_kernel
-  looping 100 times..
-Tridiagonal-cyclicsmall-base, Throughput = 43902.3190 Systems/s, Time = 0.01194 s, Size = 524288 Systems
-  err = 1.1554
-
- cyclic_branch_free_kernel
-  looping 100 times..
-Tridiagonal-cyclicsmall-optimized, Throughput = 47695.4131 Systems/s, Time = 0.01099 s, Size = 524288 Systems
-  err = 1.1554
-
-sweep_small_systems_local_kernel
-  looping 100 times..
-Tridiagonal-sweepsmall-noreorder, Throughput = 6847.8763 Systems/s, Time = 0.07656 s, Size = 524288 Systems
-  err = 0.8659
-
-sweep_data_reorder_kernel
-sweep_small_systems_local_kernel
-  looping 100 times..
-Tridiagonal-sweepsmall-reorder, Throughput = 41614.3797 Systems/s, Time = 0.01260 s, Size = 524288 Systems
-  err = 0.8659
-
-./main Starting...
-
-Using CTA of size 64 for Sweep
-
-  Num_systems = 524288, system_size = 128
-
------ CPU  solvers -----
-  CPU Time =    0.54158 s
-  Throughput =  968.0657 systems/sec
-
------ optimized GPU solvers -----
-
- pcr_small_systems_kernel
-  looping 100 times..
-Tridiagonal-pcrsmall-base, Throughput = 63630.5076 Systems/s, Time = 0.00824 s, Size = 524288 Systems
-  err = 0.8575
-
- pcr_branch_free_kernel
-  looping 100 times..
-Tridiagonal-pcrsmall-optimized, Throughput = 74335.3749 Systems/s, Time = 0.00705 s, Size = 524288 Systems
-  err = 0.8575
-
- cyclic_small_systems_kernel
-  looping 100 times..
-Tridiagonal-cyclicsmall-base, Throughput = 42960.1949 Systems/s, Time = 0.01220 s, Size = 524288 Systems
-  err = 1.1554
-
- cyclic_branch_free_kernel
-  looping 100 times..
-Tridiagonal-cyclicsmall-optimized, Throughput = 49040.9628 Systems/s, Time = 0.01069 s, Size = 524288 Systems
-  err = 1.1554
-
-sweep_data_reorder_kernel
-sweep_small_systems_global_vec4_kernel
-  looping 100 times..
-Tridiagonal-sweepsmall-reorder, Throughput = 42590.2099 Systems/s, Time = 0.01231 s, Size = 524288 Systems
-  err = 1.1554
+Tridiagonal-sweepsmall-reorder, Throughput = 47766.0600 Systems/s, Time = 0.17562 s, Size = 8388560 Systems
+  err = 0.9266
 

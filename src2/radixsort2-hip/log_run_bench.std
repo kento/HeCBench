@@ -1,1 +1,5 @@
-bash -c "time -p ( ./main -float -keysonly -n=536870912 1>log.std 2>log.err;./main -float -n=536870912 1>>log.std 2>>log.err;./main -keysonly -n=536870912 1>>log.std 2>>log.err;./main -n=536870912 1>>log.std 2>>log.err ) 2> log.time"
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main -float -keysonly -n=10368709120 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 14712.50 14701.51

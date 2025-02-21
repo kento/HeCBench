@@ -1,1 +1,8 @@
-bash -c "time -p ( ./main 1024 16384 64 100 1>log.std 2>log.err ) 2> log.time"
+hipcc  -std=c++14  -Wall  -O3 -c main.cu -o main.o
+hipcc  -std=c++14  -Wall  -O3 -c cuThomasBatch.cu -o cuThomasBatch.o
+hipcc  -std=c++14  -Wall  -O3 main.o cuThomasBatch.o -o main 
+../scripts/rocm-smi.sh > log.mem &
+bash -c "time -p ( ./main 10240 163840 64 1 1>log.std 2>log.err ) 2> log.time"
+pkill rocm-smi.sh
+../scripts/rocm-m.sh
+min max diff memory in [MB] : 10.99 53974.31 53963.32

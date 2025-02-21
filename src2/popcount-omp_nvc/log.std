@@ -1,12 +1,12 @@
-Average kernel execution time (pc1): 9410.319497 (us)
+Average kernel execution time (pc1): 9605.029400 (us)
 Fail
-Average kernel execution time (pc2): 9412.705135 (us)
+Average kernel execution time (pc2): 9405.940600 (us)
 Fail
-Average kernel execution time (pc3): 11505.553446 (us)
+Average kernel execution time (pc3): 11532.073200 (us)
 Fail
-Average kernel execution time (pc4): 10417.531121 (us)
+Average kernel execution time (pc4): 10439.496800 (us)
 Fail
-Average kernel execution time (pc5): 61231.903525 (us)
+Average kernel execution time (pc5): 61496.673800 (us)
 Fail
-Average kernel execution time (pc6): 9406.682706 (us)
+Average kernel execution time (pc6): 9398.459000 (us)
 Fail

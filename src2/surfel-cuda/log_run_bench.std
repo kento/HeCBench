@@ -1,1 +1,7 @@
-bash -c "time -p ( ./main 1024 39600 50400 100 1>log.std 2>log.err ) 2> log.time"
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 -c main.cu -o main.o
+nvcc  -std=c++14 -Xcompiler -Wall -arch=sm_90 -O3 main.o -o main 
+nvidia-smi --query-gpu=memory.used,memory.total --format=csv --loop-ms=1 > log.mem &
+bash -c "time -p ( ./main 10240 39600 50400 1 1>log.std 2>log.err ) 2> log.time"
+pkill nvidia-smi
+../scripts/m.sh
+min max diff memory in [MB] : 2 15784 15782

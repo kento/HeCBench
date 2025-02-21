@@ -15,15 +15,15 @@
 ================================================================================
                                   INPUT SUMMARY
 ================================================================================
-Kernel execution times:  10
-Energy Groups:           128
+Kernel execution times:  2
+Energy Groups:           51200
 2D Source Regions:       5000
 Coarse Axial Intervals:  27
 Fine Axial Intervals:    5
 Axial Decomposition:     20
 3D Source Regions:       6750
-Segments:                5,000,000
-Memory Estimate (MB):    36.41
+Segments:                50,000,000
+Memory Estimate (MB):    14502.11
 ================================================================================
                                    SIMULATION
 ================================================================================
@@ -32,7 +32,7 @@ Simulation Complete.
 ================================================================================
                                  RESULTS SUMMARY
 ================================================================================
-Total kernel time:       3.733 seconds
-Device offload time:     4.118 seconds
-Time per Intersection:   0.583 ns
+Total kernel time:       0.001 seconds
+Device offload time:     1.994 seconds
+Time per Intersection:   0.000 ns
 ================================================================================
