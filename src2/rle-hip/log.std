@@ -4,40 +4,40 @@ Test iterator: on 2147483647 items, 1 segments (avg run length 2147483648.000), 
 	 Keys PASS
 	 Lengths PASS
 	 Count PASS
-, 9.349 avg ms, 229.711 billion items/s, 0.000 logical GB/s
+, 9.348 avg ms, 229.722 billion items/s, 0.000 logical GB/s
 
 
 Test pointer: 2147483647 items, 2147483647 segments (avg run length 1.000), {i key, i offset, i length}, max_segment 1, entropy_reduction 0
 	 Keys PASS
 	 Lengths PASS
 	 Count PASS
-, 21.038 avg ms, 102.075 billion items/s, -0.000 logical GB/s
+, 23.010 avg ms, 93.328 billion items/s, -0.000 logical GB/s
 
 
 Test pointer: 2147483647 items, 1142928788 segments (avg run length 1.879), {i key, i offset, i length}, max_segment 16, entropy_reduction 1
 	 Keys PASS
 	 Lengths PASS
 	 Count PASS
-, 16.300 avg ms, 131.744 billion items/s, 33.956 logical GB/s
+, 16.156 avg ms, 132.918 billion items/s, 34.259 logical GB/s
 
 
 Test pointer: 2147483647 items, 149592234 segments (avg run length 14.356), {i key, i offset, i length}, max_segment 256, entropy_reduction 2
 	 Keys PASS
 	 Lengths PASS
 	 Count PASS
-, 13.228 avg ms, 162.350 billion items/s, 90.473 logical GB/s
+, 13.224 avg ms, 162.395 billion items/s, 90.498 logical GB/s
 
 
 Test pointer: 2147483647 items, 17811627 segments (avg run length 120.566), {i key, i offset, i length}, max_segment 4096, entropy_reduction 3
 	 Keys PASS
 	 Lengths PASS
 	 Count PASS
-, 12.575 avg ms, 170.779 billion items/s, 11.332 logical GB/s
+, 12.364 avg ms, 173.694 billion items/s, 11.525 logical GB/s
 
 
 Test pointer: 2147483647 items, 2171116 segments (avg run length 989.115), {i key, i offset, i length}, max_segment 65536, entropy_reduction 4
 	 Keys PASS
 	 Lengths PASS
 	 Count PASS
-, 11.469 avg ms, 187.248 billion items/s, 1.514 logical GB/s
+, 11.465 avg ms, 187.301 billion items/s, 1.515 logical GB/s
 

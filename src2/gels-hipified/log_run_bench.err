@@ -1,0 +1,216 @@
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipMalloc((void**)&A_dev, stride_a * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:86:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   86 |   hipMalloc((void**)&B_dev, stride_b * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipMalloc((void**)&ptrA_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:96:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   96 |   hipMalloc((void**)&ptrB_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:106:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  106 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:128:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  128 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:135:14: error: use of undeclared identifier 'cublasGetStatusString'
+  135 |              cublasGetStatusString(status));
+      |              ^
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipMalloc((void**)&A_dev, stride_a * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:228:13: note: in instantiation of function template specialization 'run_gels_batch_example<float, float, true>' requested here
+  228 |   failed |= run_gels_batch_example<float>(repeat);
+      |             ^
+main.cu:86:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   86 |   hipMalloc((void**)&B_dev, stride_b * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipMalloc((void**)&ptrA_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:96:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   96 |   hipMalloc((void**)&ptrB_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:97:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   97 |   hipMemcpy(ptrA_array_dev, ptrA_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:98:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   98 |   hipMemcpy(ptrB_array_dev, ptrB_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:103:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  103 |     hipMemcpy(A_dev, A, stride_a * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:104:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  104 |     hipMemcpy(B_dev, B, stride_b * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:106:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  106 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:128:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  128 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:144:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |   hipMemcpy(B, B_dev, stride_b * batch_size * sizeof(data_t), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:167:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  167 |   hipFree(A_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:168:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  168 |   hipFree(B_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:169:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  169 |   hipFree(ptrA_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+main.cu:170:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  170 |   hipFree(ptrB_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipMalloc((void**)&A_dev, stride_a * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:231:13: note: in instantiation of function template specialization 'run_gels_batch_example<std::complex<float>, float, false>' requested here
+  231 |   failed |= run_gels_batch_example<std::complex<float>>(repeat);
+      |             ^
+main.cu:86:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   86 |   hipMalloc((void**)&B_dev, stride_b * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipMalloc((void**)&ptrA_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:96:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   96 |   hipMalloc((void**)&ptrB_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:97:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   97 |   hipMemcpy(ptrA_array_dev, ptrA_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:98:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   98 |   hipMemcpy(ptrB_array_dev, ptrB_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:103:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  103 |     hipMemcpy(A_dev, A, stride_a * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:104:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  104 |     hipMemcpy(B_dev, B, stride_b * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:106:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  106 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:128:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  128 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:144:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |   hipMemcpy(B, B_dev, stride_b * batch_size * sizeof(data_t), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:167:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  167 |   hipFree(A_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:168:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  168 |   hipFree(B_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:169:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  169 |   hipFree(ptrA_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+main.cu:170:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  170 |   hipFree(ptrB_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipMalloc((void**)&A_dev, stride_a * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:234:13: note: in instantiation of function template specialization 'run_gels_batch_example<double, double, true>' requested here
+  234 |   failed |= run_gels_batch_example<double>(repeat);
+      |             ^
+main.cu:86:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   86 |   hipMalloc((void**)&B_dev, stride_b * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipMalloc((void**)&ptrA_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:96:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   96 |   hipMalloc((void**)&ptrB_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:97:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   97 |   hipMemcpy(ptrA_array_dev, ptrA_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:98:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   98 |   hipMemcpy(ptrB_array_dev, ptrB_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:103:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  103 |     hipMemcpy(A_dev, A, stride_a * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:104:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  104 |     hipMemcpy(B_dev, B, stride_b * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:106:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  106 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:128:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  128 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:144:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |   hipMemcpy(B, B_dev, stride_b * batch_size * sizeof(data_t), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:167:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  167 |   hipFree(A_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:168:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  168 |   hipFree(B_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:169:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  169 |   hipFree(ptrA_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+main.cu:170:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  170 |   hipFree(ptrB_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+main.cu:83:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   83 |   hipMalloc((void**)&A_dev, stride_a * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:237:13: note: in instantiation of function template specialization 'run_gels_batch_example<std::complex<double>, double, false>' requested here
+  237 |   failed |= run_gels_batch_example<std::complex<double>>(repeat);
+      |             ^
+main.cu:86:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   86 |   hipMalloc((void**)&B_dev, stride_b * batch_size * sizeof(data_t));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:95:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   95 |   hipMalloc((void**)&ptrA_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:96:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   96 |   hipMalloc((void**)&ptrB_array_dev, batch_size * sizeof(data_t*));
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:97:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   97 |   hipMemcpy(ptrA_array_dev, ptrA_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:98:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   98 |   hipMemcpy(ptrB_array_dev, ptrB_array, batch_size * sizeof(data_t*), hipMemcpyHostToDevice);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:103:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  103 |     hipMemcpy(A_dev, A, stride_a * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:104:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  104 |     hipMemcpy(B_dev, B, stride_b * batch_size * sizeof(data_t), hipMemcpyHostToDevice);
+      |     ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:106:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  106 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:128:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  128 |     hipDeviceSynchronize();
+      |     ^~~~~~~~~~~~~~~~~~~~
+main.cu:144:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  144 |   hipMemcpy(B, B_dev, stride_b * batch_size * sizeof(data_t), hipMemcpyDeviceToHost);
+      |   ^~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cu:167:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  167 |   hipFree(A_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:168:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  168 |   hipFree(B_dev);
+      |   ^~~~~~~ ~~~~~
+main.cu:169:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  169 |   hipFree(ptrA_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+main.cu:170:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  170 |   hipFree(ptrB_array_dev);
+      |   ^~~~~~~ ~~~~~~~~~~~~~~
+66 warnings and 1 error generated when compiling for gfx90a.
+failed to execute:/opt/rocm-6.2.0/lib/llvm/bin/clang++  --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a --offload-arch=gfx90a  -std=c++17 -Wall -O3 -c -x hip main.cu -o "main.o"
+make: *** [Makefile.AMD:51: main.o] Error 1

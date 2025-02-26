@@ -1,9 +1,9 @@
 16-byte aligned pointers: Yes
-Average execution time of ReluGrad_impl1 Kernel: 3821.313232 (us)
+Average execution time of ReluGrad_impl1 Kernel: 4121.058594 (us)
 PASS
-Average execution time of ReluGrad_impl2 Kernel: 3221.092773 (us)
+Average execution time of ReluGrad_impl2 Kernel: 3222.331543 (us)
 PASS
-Average execution time of Relu_impl1 Kernel : 6456.131836 (us)
+Average execution time of Relu_impl1 Kernel : 6466.348633 (us)
 PASS
-Average execution time of Relu_impl2 Kernel: 6377.351562 (us)
+Average execution time of Relu_impl2 Kernel: 6375.251953 (us)
 PASS

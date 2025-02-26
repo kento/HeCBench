@@ -1,4 +1,0 @@
-../scripts/m.sh: line 5: warning: command substitution: ignored null byte in input
-make: *** [Makefile.NVD:65: run_mem] Error 1
-timeout was set to  600
-timeout was set to  600
