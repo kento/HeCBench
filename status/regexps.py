@@ -331,7 +331,7 @@ regexps = {
   'particlefilter':'(?:Device offloading time: )([0-9.+-e]+)(?: \(s\))',
   'particles':'(?:Total execution time of [0-9]+ loop iterations: )([0-9.+-e]+)(?: \(s\))',
   'pathfinder':'(?:Device offloading time = )([0-9.+-e]+)(?: \(s\))',
-  'pcc':'([0-9.+-e]+)(?: \(s\))',
+  'pcc':'([0-9.+-]+)(?: \(s\))',
   'perlin':'(?:Total kernel execution time )([0-9.+-e]+)(?: \(ms\))',
   'permutate':'(?:Execution time of the permutation testing processed in the GPU : )([0-9.+-e]+)(?: sec)',
   'permute':'(?:time )([0-9.+-e]+)(?: ms)',
