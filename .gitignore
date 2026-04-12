@@ -13,3 +13,7 @@
 *.yaml
 dpct_output
 */main
+src/*/main
+src/*/main_omp
+src/*/stencil_1d
+src/*/Projectile
