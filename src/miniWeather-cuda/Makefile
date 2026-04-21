@@ -31,7 +31,7 @@ CFLAGS := -DNX=400 \
 	  -DSIM_TIME=600 \
 	  -DDATA_SPEC=DATA_SPEC_THERMAL \
           -I$(MPI_ROOT)/include \
-          -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+          -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = -L$(MPI_ROOT)/lib -lmpi
@@ -54,7 +54,7 @@ endif
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu Makefile
+%.o: %.cu check_output.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

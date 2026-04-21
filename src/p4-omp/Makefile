@@ -24,7 +24,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../p4-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../p4-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -52,7 +52,7 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp ../p4-cuda/params.h
+%.o: %.cpp ../p4-cuda/params.h ../p4-cuda/reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

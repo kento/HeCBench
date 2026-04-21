@@ -3,7 +3,7 @@
 #===============================================================================
 
 # Compiler can be set below, or via environment variable
-CC        = icpc
+CC        = icpx
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
@@ -21,7 +21,7 @@ program = divergence
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall 
 
 # Linker Flags
 LDFLAGS = 
@@ -38,7 +38,7 @@ ifeq ($(OPTIMIZE),yes)
 endif
 
 ifeq ($(DEVICE),gpu)
-  CFLAGS +=-qnextgen -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__
+  CFLAGS +=-fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__
 else
   CFLAGS +=-qopenmp
 endif
@@ -46,13 +46,10 @@ endif
 # Targets to Build
 #===============================================================================
 
-$(program): divergence.o timer.o 
+$(program): divergence.o
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 divergence.o: divergence.cpp divergence.hpp Makefile
-	$(CC) $(CFLAGS) -c $< -o $@
-
-timer.o: timer/timer.cpp timer/timer.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 

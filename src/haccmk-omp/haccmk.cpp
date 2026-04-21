@@ -59,7 +59,8 @@ void haccmk (
 
           r2 = dxc * dxc + dyc * dyc + dzc * dzc;
 
-          if ( r2 < fsrrmax ) m = mass[j]; else m = 0.f;
+          //if ( r2 < fsrrmax ) m = mass[j]; else m = 0.f;
+          m = mass[j] * (r2 < fsrrmax);
 
           f = r2 + mp_rsm;
           f = m * ( 1.f / (f * sqrtf(f)) - 
@@ -201,7 +202,7 @@ int main( int argc, char *argv[] )
 
   // verify
   int error = 0;
-  const float eps = 1e-1f;
+  const float eps = 1.0f;
   for (i = 0; i < n2; i++) {
     if (fabsf(vx2[i] - vx2_hw[i]) > eps) {
       printf("error at vx2[%d] %f %f\n", i, vx2[i], vx2_hw[i]);

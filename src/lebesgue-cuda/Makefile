@@ -22,7 +22,7 @@ obj = main.o utils.o kernels.o
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -48,7 +48,7 @@ $(program): $(obj) Makefile
 %.o: %.cu Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
-%.o: %.cpp lebesgue.h Makefile
+%.o: %.cpp reference.h lebesgue.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

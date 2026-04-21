@@ -7,8 +7,6 @@
 #include <cuda.h>
 #include "kernels.h"
 
-using namespace std;
-
 void initialization(double c[][DATAYSIZE][DATAXSIZE])
 {
   srand(2);
@@ -52,14 +50,14 @@ int main(int argc, char *argv[])
   const double gamma = 0.5;
   const double D = 1.0;
 
-  string name_c = "./out/integral_c.txt";
-  ofstream ofile_c (name_c);
+  std::string name_c = "./out/integral_c.txt";
+  std::ofstream ofile_c (name_c);
 
-  string name_mu = "./out/integral_mu.txt";
-  ofstream ofile_mu (name_mu);
+  std::string name_mu = "./out/integral_mu.txt";
+  std::ofstream ofile_mu (name_mu);
 
-  string name_f = "./out/integral_f.txt";
-  ofstream ofile_f (name_f);
+  std::string name_f = "./out/integral_f.txt";
+  std::ofstream ofile_f (name_f);
 
   typedef double nRarray[DATAYSIZE][DATAXSIZE];
 
@@ -128,15 +126,15 @@ int main(int argc, char *argv[])
 
       integral_c = integral(c_host,nx,ny,nz);
 
-      ofile_c << t << "," << integral_c << endl;
+      ofile_c << t << "," << integral_c << "\n";
 
       integral_mu = integral(mu_host,nx,ny,nz);
 
-      ofile_mu << t << "," << integral_mu << endl;
+      ofile_mu << t << "," << integral_mu << "\n";
 
       integral_f = integral(f_host,nx,ny,nz);
 
-      ofile_f << t << "," << integral_f << endl;
+      ofile_f << t << "," << integral_f << "\n";
     }
 
     Swap<<<gridSize, blockSize>>>(d_cnew, d_cold);

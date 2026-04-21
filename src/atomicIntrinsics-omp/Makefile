@@ -3,7 +3,7 @@
 #===============================================================================
 
 # Compiler can be set below, or via environment variable
-CC        = icpc
+CC        = icpx
 OPTIMIZE  = yes
 DEBUG     = no
 DEVICE    = gpu
@@ -24,7 +24,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../atomicIntrinsics-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../atomicIntrinsics-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -59,4 +59,4 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 100
+	$(LAUNCHER) ./$(program) 27 100

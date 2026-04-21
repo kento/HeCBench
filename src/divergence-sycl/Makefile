@@ -21,7 +21,7 @@ HIP_ARCH  = gfx908
 
 program = main
 
-source = divergence.cpp timer/timer.cpp
+source = divergence.cpp
 
 obj = $(source:.cpp=.o)
 
@@ -31,6 +31,11 @@ obj = $(source:.cpp=.o)
 
 # Standard Flags
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl --gcc-toolchain=$(GCC_TOOLCHAIN)
+
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
 
 # Linker Flags
 LDFLAGS = 
@@ -67,9 +72,6 @@ $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
 divergence.o: divergence.cpp divergence.hpp
-	$(CC) $(CFLAGS) -c $< -o $@
-
-timer.o: timer/timer.cpp timer/timer.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

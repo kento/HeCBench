@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <hipcub/hipcub.hpp>
 #include "common.h"
 #include "reference.h"
 
@@ -64,29 +65,25 @@ __global__ void softmax_forward_online_kernel(float* out, const float* inp, int 
 }
 */
 
+template <unsigned int WarpSize>
 __global__ void softmax_forward_online_kernel2(float* out, const float* inp, int N, int C) {
-  const int warpsPerBlock = blockDim.x / warpSize;
   int tid = threadIdx.x;
+  if (tid >= C) return;
 
-  if (tid >= C) {
-    return;
-  }
-
-  int warpId = tid / warpSize;
-  int laneId = tid % warpSize;
+  int warpId = tid / WarpSize;
+  const int warpsPerBlock = blockDim.x / WarpSize;
   int row = blockIdx.x * warpsPerBlock + warpId;
 
-  if (row >= N) {
-    return;
-  }
+  if (row >= N) return;
 
+  int laneId = tid % WarpSize;
   const float* x = inp + row * C;
   float* const y = out + row * C;
 
   // merge calculating maxval and sumval in one loop
   // which is an arithmetic improvment from online softmax over normal softmax
   float maxval = -INFINITY, sumval = 0.0f, bigger;
-  for (int i = laneId; i < C; i += warpSize) {
+  for (int i = laneId; i < C; i += WarpSize) {
     // when updating the maxval, dynamically updates the previous sumval by
     // multiplying e^{previous_maxval - current_maxval}
     bigger = fmaxf(maxval, x[i]);
@@ -97,7 +94,7 @@ __global__ void softmax_forward_online_kernel2(float* out, const float* inp, int
   // use warp functions instead of cooperative groups for better readibility
   // calculate the warp wised maxval and sumval
   float offsetMaxval, offsetSumval;
-  for (int offset = warpSize / 2; offset > 0; offset >>= 1) {
+  for (int offset = WarpSize / 2; offset > 0; offset >>= 1) {
     offsetMaxval = __shfl_down(maxval, offset);
     offsetSumval = __shfl_down(sumval, offset);
     if (offsetMaxval > maxval) {
@@ -114,9 +111,110 @@ __global__ void softmax_forward_online_kernel2(float* out, const float* inp, int
   maxval = __shfl(maxval, 0);
   sumval = __shfl(sumval, 0);
 
-  for (int i = laneId; i < C; i += warpSize) {
+  for (int i = laneId; i < C; i += WarpSize) {
     y[i] = expf(x[i] - maxval) / sumval;
   }
+}
+
+__global__ void softmax_forward_online_kernel3(float* __restrict__ out, const float* __restrict__ inp, int N, int C) {
+  __shared__ float smem[1024];
+
+  int row = blockIdx.x;
+  if (row >= N) return;
+
+  const float* x = inp + row * C;
+  float* y = out + row * C;
+  float maxval = -INFINITY;
+  float sumval = 0.0f;
+
+  int tid = threadIdx.x;
+  for (int i = tid; i < C; i += blockDim.x) {
+      float v = x[i];
+      if (v > maxval) {
+          sumval *= expf(maxval - v);
+          maxval = v;
+      }
+      sumval += expf(v - maxval);
+  }
+
+  smem[tid] = maxval;
+  __syncthreads();
+
+  for (int stride = blockDim.x / 2; stride > 0; stride /= 2) {
+      if (tid < stride) {
+          smem[tid] = fmaxf(smem[tid], smem[tid + stride]);
+      }
+      __syncthreads();
+  }
+
+  float row_max = smem[0];
+  __syncthreads();
+
+  smem[tid] = sumval * expf(maxval - row_max);
+  __syncthreads();
+
+  for (int stride = blockDim.x / 2; stride > 0; stride >>= 1) {
+      if (tid < stride) {
+          smem[tid] += smem[tid + stride];
+      }
+      __syncthreads();
+  }
+  float row_sum = smem[0];
+  __syncthreads();
+
+  for (int i = tid; i < C; i += blockDim.x) {
+      y[i] = expf(x[i] - row_max) / row_sum;
+  }
+}
+
+// Baseline softmax
+template <unsigned int WarpSize>
+__global__ void softmax_forward_baseline_kernel(float* out, const float* inp, int N, int C) {
+  int tid = threadIdx.x;
+  if (tid >= C) return;
+
+  int warpId = tid / WarpSize;
+  const int warpsPerBlock = blockDim.x / WarpSize;
+  int row = blockIdx.x * warpsPerBlock + warpId;
+
+  if (row >= N) return;
+
+  int laneId = tid % WarpSize;
+  const float* x = inp + row * C;
+  float* const y = out + row * C;
+
+  using WarpReduce = hipcub::WarpReduce<float>;
+  __shared__ typename WarpReduce::TempStorage temp[1024/WarpSize];
+
+  float maxval = -INFINITY;
+  for (int i = laneId; i < C; i += WarpSize) {
+    maxval = max(x[i], maxval);
+  }
+  maxval = WarpReduce(temp[warpId]).Reduce(maxval, hipcub::Max());
+
+  maxval = __shfl(maxval, 0);
+  
+  float sumval = 0;
+  for (int i = laneId; i < C; i += WarpSize) {
+    sumval += expf(x[i] - maxval);
+  }
+  sumval = WarpReduce(temp[warpId]).Sum(sumval);
+
+  sumval = __shfl(sumval, 0);
+
+  for (int i = laneId; i < C; i += WarpSize) {
+    y[i] = expf(x[i] - maxval) / sumval;
+  }
+}
+
+void softmax_forward_baseline(float* out, const float* inp, int N, int C,
+                            int warp_size, int block_size) {
+  const int grid_size = ceil_div(N * warp_size, block_size);
+  if (warp_size == 64)
+    softmax_forward_baseline_kernel<64><<<grid_size, block_size >>> (out, inp, N, C);
+  else
+    softmax_forward_baseline_kernel<32><<<grid_size, block_size >>> (out, inp, N, C);
+  hipCheck(hipDeviceSynchronize());
 }
 
 /*
@@ -131,7 +229,17 @@ void softmax_forward_online(float* out, const float* inp, int N, int C,
 void softmax_forward_online2(float* out, const float* inp, int N, int C,
                              int warp_size, int block_size) {
   const int grid_size = ceil_div(N * warp_size, block_size);
-  softmax_forward_online_kernel2 <<<grid_size, block_size >>> (out, inp, N, C);
+  if (warp_size == 64)
+    softmax_forward_online_kernel2<64><<<grid_size, block_size >>> (out, inp, N, C);
+  else
+    softmax_forward_online_kernel2<32><<<grid_size, block_size >>> (out, inp, N, C);
+  hipCheck(hipDeviceSynchronize());
+}
+
+void softmax_forward_online3(float* out, const float* inp, int N, int C,
+                             int warp_size, int block_size) {
+  const int grid_size = N;
+  softmax_forward_online_kernel3 <<<grid_size, block_size >>> (out, inp, N, C);
   hipCheck(hipDeviceSynchronize());
 }
 
@@ -140,11 +248,17 @@ void softmax_forward(int kernel_num, float* out, const float* inp, int N, int C,
                      const int warp_size, const int block_size) {
   switch (kernel_num) {
     case 1:
-      //softmax_forward_online(out, inp, N, C, warp_size, block_size);
-      printf("kernel 1 not supported\n");
+      softmax_forward_baseline(out, inp, N, C, warp_size, block_size);
       break;
     case 2:
+      //softmax_forward_online(out, inp, N, C, warp_size, block_size);
+      printf("kernel not supported\n");
+      break;
+    case 3:
       softmax_forward_online2(out, inp, N, C, warp_size, block_size);
+      break;
+    case 4:
+      softmax_forward_online3(out, inp, N, C, warp_size, block_size);
       break;
     default:
       printf("Invalid kernel number\n");
@@ -182,16 +296,19 @@ int main(int argc, char **argv) {
   hipCheck(hipMemcpy(d_inp, inp, B * T * V * sizeof(float), hipMemcpyHostToDevice));
 
   // read kernel_num from command line
-  int kernel_num = 1;
+  int kernel_num = 2;
   if (argc > 1) {
     kernel_num = atoi(argv[1]);
   }
-  printf("Using kernel %d\n", kernel_num);
+  if (kernel_num > 1)
+    printf("Using kernel online %d\n", kernel_num);
+  else
+    printf("Using kernel baseline %d\n", kernel_num);
+
 
   // query the warp size
-  hipDeviceProp_t props;
-  hipGetDeviceProperties(&props, 0);
-  int warp_size = props.warpSize;
+  int warp_size;
+  hipCheck(hipDeviceGetAttribute(&warp_size, hipDeviceAttributeWarpSize, 0));
 
   softmax_forward_cpu(out, inp, B * T, V);
   {

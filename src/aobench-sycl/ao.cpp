@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
 #include <math.h>
-#include <time.h>
+#include <chrono>
 #include <sycl/sycl.hpp>
 
 #define WIDTH        256
@@ -276,24 +275,31 @@ void saveppm(const char *fname, int w, int h, unsigned char *img)
   FILE *fp;
 
   fp = fopen(fname, "wb");
-  assert(fp);
-
-  fprintf(fp, "P6\n");
-  fprintf(fp, "%d %d\n", w, h);
-  fprintf(fp, "255\n");
-  fwrite(img, w * h * 3, 1, fp);
-  fclose(fp);
+  if (!fp) {
+    printf("Failed to open the file %s\n", fname);
+  } else {
+    fprintf(fp, "P6\n");
+    fprintf(fp, "%d %d\n", w, h);
+    fprintf(fp, "255\n");
+    fwrite(img, w * h * 3, 1, fp);
+    fclose(fp);
+  }
 }
 
 
-void render(sycl::queue &q, unsigned char *img, int w, int h, int nsubsamples, 
+long render(sycl::queue &q, unsigned char *img, int w, int h, int nsubsamples, 
             const Sphere* spheres, const Plane &plane)
 {
+  size_t image_size = (size_t)w * h * 3 * sizeof(unsigned char); 
+
   unsigned char *d_img = sycl::malloc_device<unsigned char>(w * h * 3, q);
-  q.memcpy(d_img, img, sizeof(unsigned char) * w * h * 3);
+  q.memcpy(d_img, img, image_size);
 
   Sphere *d_spheres = sycl::malloc_device<Sphere>(3, q);
   q.memcpy(d_spheres, spheres, sizeof(Sphere) * 3);
+
+  q.wait();
+  auto start = std::chrono::steady_clock::now();
 
   sycl::range<2> gws ((h+BLOCK_SIZE-1)/BLOCK_SIZE*BLOCK_SIZE,
                       (w+BLOCK_SIZE-1)/BLOCK_SIZE*BLOCK_SIZE);
@@ -348,11 +354,15 @@ void render(sycl::queue &q, unsigned char *img, int w, int h, int nsubsamples,
           d_img[ 3 * ( y * w + x ) + 2 ] = my_clamp ( s2 / ( float )( nsubsamples * nsubsamples ) );
         }
      });
-  });
+  }).wait();
+
+  auto end = std::chrono::steady_clock::now();
+  auto time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
 
   q.memcpy(img, d_img, sizeof(unsigned char) * w * h * 3).wait();
   sycl::free(d_img, q);
   sycl::free(d_spheres, q);
+  return time;
 }
 
 int main(int argc, char **argv)
@@ -377,17 +387,11 @@ int main(int argc, char **argv)
   sycl::queue q(sycl::cpu_selector_v, sycl::property::queue::in_order());
 #endif
 
-  clock_t start;
-  start = clock();
+  long time = 0;
   for( int i = 0; i < LOOPMAX; ++i ){
-    render( q, img, WIDTH, HEIGHT, NSUBSAMPLES, spheres, plane );
+    time += render( q, img, WIDTH, HEIGHT, NSUBSAMPLES, spheres, plane );
   }
-  clock_t end = clock();
-  float delta = ( float )end - ( float )start;
-  float msec = delta * 1000.0 / ( float )CLOCKS_PER_SEC;
-
-  printf( "Total render time (%d iterations): %f sec.\n", LOOPMAX, msec / 1000.0 );
-  printf( "Average render time: %f sec.\n", msec / 1000.0 / (float)LOOPMAX );
+  printf( "Average kernel time: %lf usec.\n", (double)time / (1e3 * LOOPMAX));
 
   saveppm( "ao.ppm", WIDTH, HEIGHT, img );
   free( img );

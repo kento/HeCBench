@@ -23,7 +23,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../seam-carving-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../seam-carving-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -54,4 +54,4 @@ clean:
 
 run: $(program)
 	$(LAUNCHER) ./$(program) ../seam-carving-cuda/Broadway_tower.jpg 100 -u 
-	#./$(program) ../seam-carving-cuda/Broadway_tower.jpg 100 -a
+	#$(LAUNCHER) ./$(program) ../seam-carving-cuda/Broadway_tower.jpg 100 -a

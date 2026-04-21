@@ -11,14 +11,9 @@
 
 
 size_t get_device_mem(){
-  int gpus;
   size_t free_mem, total_mem;
-  cudaGetDeviceCount(&gpus);
-  for ( int id = 0; id < gpus; id++ ) {
-    cudaSetDevice(id);
-    cudaMemGetInfo(&free_mem, &total_mem);
-    std::cout << "GPU: " << id << " has free memory (Mbytes):=" << (double)free_mem/(1024*1024) << ", out of total (Mbytes):=" << (double)total_mem/(1024*1024) << std::endl;
-  }
+  cudaMemGetInfo(&free_mem, &total_mem);
+  std::cout << "GPU 0 has free memory (Mbytes):=" << (double)free_mem/(1024*1024) << ", out of total (Mbytes):=" << (double)total_mem/(1024*1024) << std::endl;
   return free_mem;
 }
 
@@ -292,6 +287,7 @@ void call_kernel(std::vector<CtgWithReads>& data_in, uint32_t max_ctg_size, uint
   loop_time.timer_start();
   double data_mv_tim = 0;
   double packing_tim = 0;
+  double kernel_tim = 0;
   slice_size = tot_extensions/iterations;
   for(int slice = 0; slice < iterations; slice++){
     print_vals("Done(%):", ((double)slice/iterations)*100);
@@ -386,10 +382,13 @@ void call_kernel(std::vector<CtgWithReads>& data_in, uint32_t max_ctg_size, uint
     print_vals("Calling Kernel with blocks:", blocks, "Threads:", thread_per_blk);
     int64_t sum_ext=0, num_walks=0;
     uint32_t qual_offset = 33;
+    tim_temp.timer_start();
     iterative_walks_kernel<<<blocks,thread_per_blk>>>(cid_d, ctg_seq_offsets_d, ctg_seqs_d, reads_right_d, quals_right_d, reads_r_offset_d, rds_r_cnt_offset_d, 
         depth_d, d_ht, prefix_ht_size_d, d_ht_bool, mer_len, max_mer_len, term_counts_d, num_walks, max_walk_len, sum_ext, max_read_size, max_read_count, qual_offset, longest_walks_d, mer_walk_temp_d, final_walk_lens_d, vec_size);
 
     CUDA_CHECK(cudaDeviceSynchronize());
+    tim_temp.timer_end();
+    kernel_tim += tim_temp.get_total_time();
 
     //perform revcomp of contig sequences and launch kernel with left reads, 
     print_vals("revcomp-ing the contigs for next kernel");
@@ -430,10 +429,15 @@ void call_kernel(std::vector<CtgWithReads>& data_in, uint32_t max_ctg_size, uint
     CUDA_CHECK(cudaMemcpy(ctg_seqs_d, ctgs_seqs_rc_h.get(), sizeof(char) * ctgs_offset_sum, cudaMemcpyHostToDevice));
     tim_temp.timer_end();
     data_mv_tim += tim_temp.get_total_time();
+
+    tim_temp.timer_start();
     iterative_walks_kernel<<<blocks,thread_per_blk>>>(cid_d, ctg_seq_offsets_d, ctg_seqs_d, reads_left_d, quals_left_d, reads_l_offset_d, rds_l_cnt_offset_d, 
         depth_d, d_ht, prefix_ht_size_d, d_ht_bool, mer_len, max_mer_len, term_counts_d, num_walks, max_walk_len, sum_ext, max_read_size, max_read_count, qual_offset, longest_walks_d, mer_walk_temp_d, final_walk_lens_d, vec_size);
-    print_vals("Device to Host Transfer...", "Copying back left walks");
+    CUDA_CHECK(cudaDeviceSynchronize());
+    tim_temp.timer_end();
+    kernel_tim += tim_temp.get_total_time();
 
+    print_vals("Device to Host Transfer...", "Copying back left walks");
     tim_temp.timer_start();
     CUDA_CHECK(cudaMemcpy(longest_walks_l_h.get() + slice * max_walk_len * slice_size , longest_walks_d, sizeof(char) * vec_size * max_walk_len, cudaMemcpyDeviceToHost)); // copy back left walks
     CUDA_CHECK(cudaMemcpy(final_walk_lens_l_h.get() + slice * slice_size , final_walk_lens_d, sizeof(int32_t) * vec_size, cudaMemcpyDeviceToHost)); 
@@ -444,6 +448,7 @@ void call_kernel(std::vector<CtgWithReads>& data_in, uint32_t max_ctg_size, uint
   print_vals("Total Loop Time:", loop_time.get_total_time());
   print_vals("Total Data Move Time:", data_mv_tim);
   print_vals("Total Packing Time:", packing_tim);
+  std::cerr << "Total Kernel Time (s):" << kernel_tim << std::endl;
 
   //once all the alignments are on cpu, then go through them and stitch them with contigs in front and back.
 

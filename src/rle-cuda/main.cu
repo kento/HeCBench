@@ -33,12 +33,9 @@
 // Ensure printing of CUDA runtime errors to console
 #define CUB_STDERR
 
-#include <cub/device/device_run_length_encode.cuh>
-#include <cub/util_allocator.cuh>
-
+#include <cub/cub.cuh>
 #include <chrono>
 #include <cstdio>
-
 #include "test_util.h"
 
 using namespace cub;
@@ -59,14 +56,14 @@ template <typename InputIteratorT,
           typename LengthsOutputIteratorT,
           typename NumRunsIterator,
           typename OffsetT>
-CUB_RUNTIME_FUNCTION __forceinline__ cudaError_t Dispatch(int timing_iterations,
-                                                          void *d_temp_storage,
-                                                          size_t &temp_storage_bytes,
-                                                          InputIteratorT d_in,
-                                                          UniqueOutputIteratorT d_unique_out,
-                                                          LengthsOutputIteratorT d_lengths_out,
-                                                          NumRunsIterator d_num_runs,
-                                                          OffsetT num_items)
+__forceinline__ cudaError_t Dispatch(int timing_iterations,
+                                     void *d_temp_storage,
+                                     size_t &temp_storage_bytes,
+                                     InputIteratorT d_in,
+                                     UniqueOutputIteratorT d_unique_out,
+                                     LengthsOutputIteratorT d_lengths_out,
+                                     NumRunsIterator d_num_runs,
+                                     OffsetT num_items)
 {
   cudaError_t error = cudaSuccess;
   for (int i = 0; i < timing_iterations; ++i)
@@ -114,11 +111,11 @@ void Initialize(int entropy_reduction, T *h_in, int num_items, int max_segment)
     {
       RandomBits(repeat, entropy_reduction);
       repeat = (int)((double(repeat) * double(max_segment)) / double(max_int));
-      repeat = CUB_MAX(1, repeat);
+      repeat = max(1, repeat);
     }
 
     int j = i;
-    while (j < CUB_MIN(i + repeat, num_items))
+    while (j < min(i + repeat, num_items))
     {
       h_in[j] = key;
       j++;
@@ -377,7 +374,11 @@ void TestIterator(int num_items)
   LengthT *h_lengths_reference = new LengthT[num_items];
 
   T one_val = 1;
+#if defined(__CUDACC_VER_MAJOR__) && (__CUDACC_VER_MAJOR__ >= 13)
+  thrust::constant_iterator<T, int> h_in(one_val);
+#else
   ConstantInputIterator<T, int> h_in(one_val);
+#endif
 
   // Initialize problem and solution
   int num_runs = Solve(h_in,
@@ -423,12 +424,12 @@ void Test(int num_items)
   TestIterator<T, OffsetT, LengthT>(num_items);
 
   // Evaluate different run lengths / segment sizes
-  const int max_seg_limit = CUB_MIN(num_items, 1 << 16);
+  const int max_seg_limit = min(num_items, 1 << 16);
   const int max_seg_inc   = 4;
   for (int max_segment = 1, entropy_reduction = 0; max_segment <= max_seg_limit;
        max_segment <<= max_seg_inc, entropy_reduction++)
   {
-    const int max_seg = CUB_MAX(1, max_segment);
+    const int max_seg = max(1, max_segment);
     TestPointer<T, OffsetT, LengthT>(num_items, entropy_reduction, max_seg);
   }
 }

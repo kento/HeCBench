@@ -33,6 +33,11 @@ obj = $(source:.cpp=.o)
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl -I../include \
           --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
 LDFLAGS = 
 
@@ -74,4 +79,4 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) URNG_Input.bmp 16 16 1000
+	$(LAUNCHER) ./$(program) URNG_Input.bmp 1000

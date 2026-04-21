@@ -25,11 +25,11 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH) \
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH) \
           -I$(GSL)/include
 
 # Linker Flags
-LDFLAGS = -L$(GSL)/lib -lgsl -lblas
+LDFLAGS = -L$(GSL)/lib -lgsl
 
 # Debug Flags
 ifeq ($(DEBUG),yes)

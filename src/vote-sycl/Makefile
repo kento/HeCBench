@@ -29,26 +29,26 @@ obj = $(source:.cpp=.o)
 # Sets Flags
 #===============================================================================
 
-# Subgroup size is either 32 or 64 on AMD GPUs
-SUB_GROUP = 32
-
 # Standard Flags
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl -I../vote-cuda \
           --gcc-toolchain=$(GCC_TOOLCHAIN) \
 
+
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
 # Linker Flags
 LDFLAGS = 
 
 ifeq ($(CUDA), yes)
   CFLAGS += -fsycl-targets=nvptx64-nvidia-cuda \
-            -Xsycl-target-backend --cuda-gpu-arch=$(CUDA_ARCH) \
-            -DWARP_SIZE=$(SUB_GROUP)
+            -Xsycl-target-backend --cuda-gpu-arch=$(CUDA_ARCH)
 endif
 
 ifeq ($(HIP), yes)
   CFLAGS += -fsycl-targets=amdgcn-amd-amdhsa \
-            -Xsycl-target-backend --offload-arch=$(HIP_ARCH) \
-            -DWARP_SIZE=$(SUB_GROUP)
+            -Xsycl-target-backend --offload-arch=$(HIP_ARCH)
 endif
 
 # Debug Flags
@@ -79,4 +79,4 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) $(SUB_GROUP) 10000000
+	$(LAUNCHER) ./$(program) 10000000

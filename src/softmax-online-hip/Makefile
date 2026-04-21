@@ -23,7 +23,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../softmax-online-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../softmax-online-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -53,5 +53,7 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	#$(LAUNCHER) ./$(program) 1
-	$(LAUNCHER) ./$(program) 2
+	$(LAUNCHER) ./$(program) 1
+	#$(LAUNCHER) ./$(program) 2
+	$(LAUNCHER) ./$(program) 3
+	$(LAUNCHER) ./$(program) 4

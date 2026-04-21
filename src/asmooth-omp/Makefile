@@ -24,7 +24,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../asmooth-cuda/
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../asmooth-cuda/
 
 # Linker Flags
 LDFLAGS = 
@@ -53,7 +53,7 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp ../asmooth-cuda/reference.cpp
+%.o: %.cpp ../asmooth-cuda/reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

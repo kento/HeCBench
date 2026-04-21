@@ -30,7 +30,13 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl --gcc-toolchain=$(GCC_TOOLCHAIN)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../ccsd-trpdrv-cuda \
+          -fsycl --gcc-toolchain=$(GCC_TOOLCHAIN)
+
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
 
 # Linker Flags
 LDFLAGS = 
@@ -66,11 +72,17 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp
+ccsd_tengy.o : ccsd_tengy.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ccsd_trpdrv.o : ccsd_trpdrv.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
+main.o: main.cpp ../ccsd-trpdrv-cuda/reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 40 200 100
+	$(LAUNCHER) ./$(program) 160 400 100

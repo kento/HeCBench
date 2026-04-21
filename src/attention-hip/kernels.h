@@ -2,7 +2,7 @@
 #include <hip/hip_cooperative_groups.h>
 
 __global__
-void kernel1 (
+void attention_kernel1 (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -16,12 +16,12 @@ void kernel1 (
     for (int j = 0; j < d; j++)
       sum += key[i * d + j] * query[j];
     dot_product[i] = sum;
-    atomicAdd(exp_sum, expf(sum));
+    atomicAdd(exp_sum, __expf(sum));
   }
 }
 
 __global__
-void kernel2 (
+void attention_kernel2 (
     const float*__restrict__ exp_sum,
     const float*__restrict__ dot_product,
     float*__restrict__ score,
@@ -29,11 +29,11 @@ void kernel2 (
 {
   int i = blockIdx.x * blockDim.x + threadIdx.x;
   if (i < n)
-    score[i] = expf(dot_product[i]) / exp_sum[0];
+    score[i] = __expf(dot_product[i]) / exp_sum[0];
 }
 
 __global__
-void kernel3 (
+void attention_kernel3 (
     const float*__restrict__ score,
     const float*__restrict__ value,
     float*__restrict__ output,
@@ -50,7 +50,7 @@ void kernel3 (
 }
 
 __global__
-void kernel1_blockReduce (
+void attention_kernel1_blockReduce (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -69,19 +69,20 @@ void kernel1_blockReduce (
   sum = BlockReduce(temp_storage).Sum(sum);
   if (threadIdx.x == 0) {
     dot_product[i] = sum;
-    atomicAdd(exp_sum, expf(sum));
+    atomicAdd(exp_sum, __expf(sum));
   }
 }
 
-__device__ inline float warpReduceSum(cooperative_groups::thread_block_tile<32> &warp, float val) {
-    for (int offset = 16; offset > 0; offset /= 2) {
+template <unsigned int WarpSize>
+__device__ inline float warpReduceSum(cooperative_groups::thread_block_tile<WarpSize> &warp, float val) {
+    for (int offset = WarpSize/2; offset > 0; offset /= 2) {
         val += warp.shfl_xor(val, offset);
     }
     return val;
 }
 
 __global__
-void kernel1_warpReduce (
+void attention_kernel1_warpReduce (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -89,9 +90,14 @@ void kernel1_warpReduce (
     const int n,
     const int d)
 {
+#if defined(__GFX8__) || defined(__GFX9__)
+  #define WarpSize 64
+#else
+  #define WarpSize 32
+#endif
   namespace cg = cooperative_groups;
   cg::thread_block block = cg::this_thread_block();
-  cg::thread_block_tile<32> warp = cg::tiled_partition<32>(block);
+  cg::thread_block_tile<WarpSize> warp = cg::tiled_partition<WarpSize>(block);
   // each i iteration is assigned to a warp
   // meta_group_size is the number of warps in a block, and meta_group_rank is the warp index
   int i = blockIdx.x * warp.meta_group_size() + warp.meta_group_rank();
@@ -101,16 +107,16 @@ void kernel1_warpReduce (
       sum += key[i * d + j] * query[j];
     }
     //sum = cg::reduce(warp, sum, cg::plus<float>{});
-    sum = warpReduceSum(warp, sum);
+    sum = warpReduceSum<WarpSize>(warp, sum);
     if (warp.thread_rank() == 0) {
       dot_product[i] = sum;
-      atomicAdd(exp_sum, expf(sum));
+      atomicAdd(exp_sum, __expf(sum));
     }
   }
 }
 
 __global__
-void kernel2_blockReduce (
+void attention_kernel2_blockReduce (
     const float*__restrict__ exp_sum,
     const float*__restrict__ dot_product,
     const float*__restrict__ value,
@@ -121,7 +127,7 @@ void kernel2_blockReduce (
   int j = blockIdx.x;
   float sum = 0;
   for (int i = threadIdx.x; i < n; i += blockDim.x) {
-    float score = expf(dot_product[i]) / exp_sum[0];
+    float score = __expf(dot_product[i]) / exp_sum[0];
     sum += score * value[i * d + j];
   }
   using BlockReduce = hipcub::BlockReduce<float, 256>;
@@ -129,4 +135,34 @@ void kernel2_blockReduce (
   sum = BlockReduce(temp_storage).Sum(sum);
   if (threadIdx.x == 0)
     output[j] = sum;
+}
+
+__global__
+void attention_kernel2_warpReduce (
+    const float*__restrict__ exp_sum,
+    const float*__restrict__ dot_product,
+    const float*__restrict__ value,
+    float*__restrict__ output,
+    const int n,
+    const int d)
+{
+#if defined(__GFX8__) || defined(__GFX9__)
+  #define WarpSize 64
+#else
+  #define WarpSize 32
+#endif
+  namespace cg = cooperative_groups;
+  cg::thread_block block = cg::this_thread_block();
+  cg::thread_block_tile<WarpSize> warp = cg::tiled_partition<WarpSize>(block);
+  int j = blockIdx.x * warp.meta_group_size() + warp.meta_group_rank();
+  if (j < d) {
+    float sum = 0;
+    for (int i = warp.thread_rank(); i < n; i += warp.size()) {
+      float score = __expf(dot_product[i]) / exp_sum[0];
+      sum += score * value[i * d + j];
+    }
+    sum = warpReduceSum<WarpSize>(warp, sum);
+    if (warp.thread_rank() == 0)
+      output[j] = sum;
+  }
 }

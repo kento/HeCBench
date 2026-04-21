@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -47,7 +47,8 @@ endif
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu GSimulationKernels.hpp GSimulation.hpp Particle.hpp type.hpp Makefile
+%.o: %.cu GSimulationKernels.hpp GSimulationReference.hpp GSimulation.hpp \
+          Particle.hpp type.hpp Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

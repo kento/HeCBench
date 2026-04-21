@@ -34,6 +34,11 @@ CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../lzss-cuda  -fsycl \
           -I ./oneDPL/include -I ./oneTBB/include \
           --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
 LDFLAGS = 
 
@@ -75,4 +80,4 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) -i ../lzss-cuda/tpch/tpch@1.0-15.bin
+	$(LAUNCHER) ./$(program) -i ../lzss-cuda/QCLOUDf48.bin.f32.errctrl.1e-3

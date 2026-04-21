@@ -3,68 +3,19 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cuda.h>
+#include <cub/cub.cuh>
+#include "reference.h"
 
-#define FINAL_MASK 0xffffffff
-
-__inline__ __device__
-float warpReduceSum(float val)
+struct Max
 {
-  for(int mask = 16; mask > 0; mask >>= 1)
-    val += __shfl_xor_sync(FINAL_MASK, val, mask, 32);
-  return val;
-}
-
-// Calculate the sum of all elements in a block
-__inline__ __device__
-float blockReduceSum(float val)
-{
-  static __shared__ float shared[32]; 
-  int lane = threadIdx.x & 0x1f; 
-  int wid = threadIdx.x >> 5;  
-
-  val = warpReduceSum(val);
-
-  if(lane == 0)
-    shared[wid] = val;
-
-  __syncthreads();
-
-
-  val = (threadIdx.x < (blockDim.x >> 5 )) ? shared[lane] : 0;
-  val = warpReduceSum(val);
-
-  return val;
-}
-
-__inline__ __device__
-float warpReduceMax(float val)
-{
-  for(int mask = 16; mask > 0; mask >>= 1)
-    val = max(val, __shfl_xor_sync(FINAL_MASK, val, mask, 32));
-  return val;
-}
-
-// Calculate the maximum of all elements in a block
-__inline__ __device__
-float blockReduceMax(float val)
-{
-  static __shared__ float shared[32]; 
-  int lane = threadIdx.x & 0x1f; // in-warp idx
-  int wid = threadIdx.x >> 5;  // warp idx
-
-  val = warpReduceMax(val); // get max in each warp
-
-  if(lane == 0) // record in-warp max by warp Idx
-    shared[wid] = val;
-
-  __syncthreads();
-
-  val = (threadIdx.x < (blockDim.x >> 5)) ? shared[lane] : 0;
-  val = warpReduceMax(val);
-
-  return val;
-}
-
+  template <typename T, typename U>
+  __device__ __forceinline__
+  typename std::common_type<T, U>::type
+    operator()(T &&t, U &&u) const
+  {
+    return ((t) > (u)) ? (t) : (u);
+  }
+};
 
 __global__
 void mha (
@@ -95,6 +46,8 @@ void mha (
   int candidate_id = blockIdx.x / nhead;
   int head_id = blockIdx.x % nhead;
 
+  typedef cub::BlockReduce<float, 256> BlockReduce;
+  __shared__ typename BlockReduce::TempStorage temp_storage;
   /*
      sq is the query vector shared by all threads inside the same block.
 
@@ -110,8 +63,11 @@ void mha (
 
   // pos is the start position of the corresponding query matrix prococessed by this block.
   int pos = candidate_id * qk_col + head_id * dim_per_head + threadIdx.x;
-  if(threadIdx.x < dim_per_head) sq[threadIdx.x] = q[pos];
+  if(threadIdx.x < dim_per_head)  {
+    sq[threadIdx.x] = q[pos];
+  }
   __syncthreads();
+
 
   // calculate the correlation between the query and key QK^T/sqrt(d_k)
 
@@ -132,10 +88,11 @@ void mha (
   float local_i = threadIdx.x < n_steps ? summ : -1e-20f;
   float local_o;
 
-  float max_val = blockReduceMax(local_i);
+  float max_val = BlockReduce(temp_storage).Reduce(local_i, Max());
 
-  if(threadIdx.x == 0)
+  if(threadIdx.x == 0) {
     s_max_val = max_val;
+  }
   __syncthreads();
 
   local_i -= s_max_val;
@@ -145,11 +102,13 @@ void mha (
   local_o = expf(local_i);
 
   float val = (threadIdx.x < n_steps) ? local_o : 0.f;
-  val = blockReduceSum(val);
+  val = BlockReduce(temp_storage).Sum(val);
   if(threadIdx.x == 0) s_sum = val;
   __syncthreads();
 
-  if(threadIdx.x < n_steps) logits[threadIdx.x] = local_o / s_sum;
+  if(threadIdx.x < n_steps) {
+    logits[threadIdx.x] = local_o / s_sum;
+  }
   __syncthreads();
 
   // calculate the weighted sum on value matrix V softmax(QK^T/sqrt(d_k))V 
@@ -225,8 +184,10 @@ int main(int argc, char* argv[])
   float *hk = (float*)malloc(k_size_bytes);
   float *hv = (float*)malloc(v_size_bytes);
   float *h_dst = (float*)malloc(q_size_bytes);
+  float *r_dst = (float*)malloc(q_size_bytes);
 
   // Initialize query, key and value matrices
+  srand(123);
   for(int i = 0; i < q_size; ++i)
     hq[i] = rand() / (float)RAND_MAX;
 
@@ -265,21 +226,24 @@ int main(int argc, char* argv[])
   cudaFree(dv);
   cudaFree(dst);
 
-  // compute distances as simple checksums
-  for (int i = 0; i < beamsize - 1; i++) {
-    float sum = 0.f;
+  mha_reference(hq, hk, hv, beamsize, n_steps, qk_col, v_col, nhead, scaler, THRESHOLD, r_dst);
+
+  bool ok = true;
+  for (int i = 0; i < beamsize; i++) {
     for (int j = 0; j < dim_feature; j++) {
-       float d = h_dst[i * dim_feature + j] -
-                 h_dst[(i + 1) * dim_feature + j];
-       sum += d * d;
+      if (fabsf(h_dst[i*dim_feature+j] - r_dst[i*dim_feature+j]) > 1e-3f) {
+        ok = false;
+        break;
+      }
     }
-    printf("Distance between beams %d and %d: %f\n", i, i+1, sqrtf(sum));
   }
+  printf("%s\n", ok ? "PASS" : "FAIL");
 
   free(hq);
   free(hk);
   free(hv);
   free(h_dst);
+  free(r_dst);
 
   return 0;
 }

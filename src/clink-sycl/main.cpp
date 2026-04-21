@@ -15,10 +15,7 @@
 #define WGS 256
 #define SAMPLE_TEST_LEN 20000
 
-float sigmoid(float x)
-{
-  return 1.f / (1.f + sycl::exp(-x));
-}
+#include "reference.h"
 
 #ifdef DEBUG
 void dump (const char* work_path, const char* result_filename, const float* result) 
@@ -138,9 +135,10 @@ long lstm_n5( sycl::queue &q,
     cgh.parallel_for<class lstm>(
       sycl::nd_range<1>(sycl::range<1>(N), sycl::range<1>(WGS)),
       [=] (sycl::nd_item<1> item) {
-      int t,i,j;
       int gid = item.get_global_id(0);
+      if (gid >= N) return;
       
+      int t,i,j;
       float h_state[5] = {0,0,0,0,0};
       float c_state[5] = {0,0,0,0,0};
       float i_state[5] = {0,0,0,0,0};
@@ -157,7 +155,7 @@ long lstm_n5( sycl::queue &q,
           for (i = 0; i < 5; ++i)
             i_state[j] += h_state[i] * ldg(&d_intW[j*5+i]);
           i_state[j] += ldg(&d_intB[j]);
-          i_state[j] = sigmoid(i_state[j]);
+          i_state[j] = 1.f / (1.f + sycl::exp(-i_state[j]));
         }
         
         for (j = 0; j < 5; ++j) {
@@ -165,7 +163,7 @@ long lstm_n5( sycl::queue &q,
           for (i = 0; i < 5; ++i)
             f_state[j] += h_state[i] * ldg(&d_intW[25+j*5+i]);
           f_state[j] += ldg(&d_intB[5+j]);
-          f_state[j] = sigmoid(f_state[j]);
+          f_state[j] = 1.f / (1.f + sycl::exp(-f_state[j]));
         }
 
         for (j = 0; j < 5; ++j) {
@@ -173,7 +171,7 @@ long lstm_n5( sycl::queue &q,
           for (i = 0; i < 5; ++i)
             o_state[j] += h_state[i] * ldg(&d_intW[50+j*5+i]);
           o_state[j] += ldg(&d_intB[10+j]);
-          o_state[j] = sigmoid(o_state[j]);
+          o_state[j] = 1.f / (1.f + sycl::exp(-o_state[j]));
         }
 
         for (j = 0; j < 5; ++j) {
@@ -251,6 +249,9 @@ int main(int argc, char* argv[])
       std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count();
     std::cout << "Device offload time: " <<  elapsedTime << " ms\n";
 
+    if (n == 0)
+      reference(sample_input, inW, intW, intB, outW, &outB, infer1_out);
+
 #ifdef DEBUG
     dump(work_path, result1_filename, infer1_out);
 #endif
@@ -262,6 +263,9 @@ int main(int argc, char* argv[])
     elapsedTime =
       std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count();
     std::cout << "Device offload time: " <<  elapsedTime << " ms\n";
+
+    if (n == 0)
+      reference(sample_input, inW, intW, intB, outW, &outB, infer2_out);
 
 #ifdef DEBUG
     dump(work_path, result2_filename, infer2_out);

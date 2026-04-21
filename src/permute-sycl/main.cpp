@@ -21,9 +21,9 @@ void permuate_cpu(float *inp, float *q, float *k, float *v, int B, int T, int C,
 }
 
 void permute_kernel(
-    float* __restrict__ q,
-    float* __restrict__ k,
-    float* __restrict__ v,
+    float* __restrict__ Q,
+    float* __restrict__ K,
+    float* __restrict__ V,
     const float* inp,
     int B, int T, int NH, int d, const sycl::nd_item<1> &item) {
   // okay so now, this kernel wants Q,K,V to all be of shape (B, NH, T, d)
@@ -48,30 +48,31 @@ void permute_kernel(
             +          (nh_ * d)
             +                d_;
 
-    q[idx] = inp[inp_idx];
-    k[idx] = inp[inp_idx + C];
-    v[idx] = inp[inp_idx + 2 * C];
+    Q[idx] = inp[inp_idx];
+    K[idx] = inp[inp_idx + C];
+    V[idx] = inp[inp_idx + 2 * C];
   }
 }
 
-void permute (sycl::queue &que, float* out, const float* inp,
-    int B, int T, int C, int NH,
-    const int block_size) {
+void permute (sycl::queue &q, float* out, const float* inp,
+              int B, int T, int C, int NH,
+              const int block_size)
+{
   // inp is (B, T, 3C) QKV
   int HS = C / NH; // head size
 
   // permute and separate inp from (B, T, 3, NH, HS) to 3X (B, NH, T, HS)
-  float *q, *k, *v;
-  q = out + 0 * B * T * C;
-  k = out + 1 * B * T * C;
-  v = out + 2 * B * T * C;
+  float *Q, *K, *V;
+  Q = out + 0 * B * T * C;
+  K = out + 1 * B * T * C;
+  V = out + 2 * B * T * C;
   int total_threads = B * T * C;
   int num_blocks = ceil_div(total_threads, block_size);
-  que.parallel_for(
+  q.parallel_for(
       sycl::nd_range<1>(sycl::range<1>(num_blocks * block_size),
                         sycl::range<1>(block_size)),
       [=](sycl::nd_item<1> item) {
-        permute_kernel(q, k, v, inp, B, T, NH, HS, item);
+        permute_kernel(Q, K, V, inp, B, T, NH, HS, item);
   }).wait();
 }
 
@@ -92,33 +93,33 @@ int main(int argc, char **argv) {
   // create host memory of random numbers
   float* inp = make_random_float(S * 3);
   float* out = make_random_float(S * 3);
-  float* q = make_random_float(S);
-  float* k = make_random_float(S);
-  float* v = make_random_float(S);
+  float* Q = make_random_float(S);
+  float* K = make_random_float(S);
+  float* V = make_random_float(S);
 
-  permuate_cpu(inp, q, k, v, B, T, C, NH);
+  permuate_cpu(inp, Q, K, V, B, T, C, NH);
 
   // move to GPU
 #ifdef USE_GPU
-  sycl::queue que(sycl::gpu_selector_v, sycl::property::queue::in_order());
+  sycl::queue q(sycl::gpu_selector_v, sycl::property::queue::in_order());
 #else
-  sycl::queue que(sycl::cpu_selector_v, sycl::property::queue::in_order());
+  sycl::queue q(sycl::cpu_selector_v, sycl::property::queue::in_order());
 #endif
 
   float *d_inp, *d_out;
-  d_inp = sycl::malloc_device<float>(S * 3, que);
-  que.memcpy(d_inp, inp, S * 3 * sizeof(float));
-  d_out = sycl::malloc_device<float>(S * 3, que);
+  d_inp = sycl::malloc_device<float>(S * 3, q);
+  q.memcpy(d_inp, inp, S * 3 * sizeof(float));
+  d_out = sycl::malloc_device<float>(S * 3, q);
 
   int block_sizes[] = {32, 64, 128, 256, 512};
 
   for (size_t j = 0; j < sizeof(block_sizes) / sizeof(int); j++) {
     int block_size = block_sizes[j];
     printf("Checking block size %d.\n", block_size);
-    permute (que, d_out, d_inp, B, T, C, NH, block_size);
-    validate_result(d_out, q, "q", S, 1e-6f);
-    validate_result(d_out+B*T*C, k, "k", S, 1e-6f);
-    validate_result(d_out+2*B*T*C, v, "v", S, 1e-6f);
+    permute (q, d_out, d_inp, B, T, C, NH, block_size);
+    validate_result(q, d_out, Q, "q", S, 1e-6f);
+    validate_result(q, d_out+B*T*C, K, "k", S, 1e-6f);
+    validate_result(q, d_out+2*B*T*C, V, "v", S, 1e-6f);
   }
   printf("All results match. Starting benchmarks.\n\n");
 
@@ -126,19 +127,19 @@ int main(int argc, char **argv) {
   for (size_t j = 0; j < sizeof(block_sizes) / sizeof(int); j++) {
     int block_size = block_sizes[j];
     float elapsed_time = benchmark_kernel(repeat_times, permute,
-        que, d_out, d_inp, B, T, C, NH, block_size);
+        q, d_out, d_inp, B, T, C, NH, block_size);
 
     printf("block_size %4d | time %f ms\n", block_size, elapsed_time);
   }
 
   // free memory
   free(inp);
-  free(q);
-  free(k);
-  free(v);
+  free(Q);
+  free(K);
+  free(V);
   free(out);
-  sycl::free(d_inp, que);
-  sycl::free(d_out, que);
+  sycl::free(d_inp, q);
+  sycl::free(d_out, q);
 
   return 0;
 }

@@ -13,7 +13,7 @@ LAUNCHER  =
 # Program name & source code list
 #===============================================================================
 
-program = chi2
+program = main
 
 source = chi2.cpp
 
@@ -24,7 +24,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../chi2-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../chi2-cuda
 
 # Linker Flags
 LDFLAGS = 

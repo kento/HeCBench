@@ -23,8 +23,8 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall \
-          -I../blockAccess-cuda -I../warpexchange-cuda/
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall \
+          -I../blockAccess-cuda -I../warpexchange-hip
 
 # Linker Flags
 LDFLAGS = 

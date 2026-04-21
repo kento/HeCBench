@@ -11,7 +11,9 @@
 #include <stdio.h>
 #include <math.h>
 #include <mpi.h>
-#include <time.h>
+#include <chrono>
+#include <omp.h>
+#include "check_output.h"
 
 const double pi        = 3.14159265358979323846264338327;   //Pi
 const double grav      = 9.8;                               //Gravitational acceleration (m / s^2)
@@ -84,8 +86,8 @@ double *recvbuf_l;            //Buffer to receive data from the left MPI rank
 double *recvbuf_r;            //Buffer to receive data from the right MPI rank
 int    num_out = 0;           //The number of outputs performed so far
 int    direction_switch = 1;
-double mass0, te0;            //Initial domain totals for mass and total energy  
-double mass , te ;            //Domain totals for mass and total energy  
+double mass0, te0;            //Initial domain totals for mass and total energy
+double mass , te ;            //Domain totals for mass and total energy
 
 //How is this not in the standard?!
 double dmin( double a , double b ) { if (a<b) {return a;} else {return b;} };
@@ -142,16 +144,15 @@ int main(int argc, char **argv) {
                                   sendbuf_l[:hs*nz*NUM_VARS],\
                                   sendbuf_r[:hs*nz*NUM_VARS],\
                                   recvbuf_l[:hs*nz*NUM_VARS],\
-                                  recvbuf_r[:hs*nz*NUM_VARS]) 
+                                  recvbuf_r[:hs*nz*NUM_VARS])
 {
 
   //Initial reductions for mass, kinetic energy, and total energy
   reductions(mass0,te0);
 
-  ////////////////////////////////////////////////////
   // MAIN TIME STEP LOOP
-  ////////////////////////////////////////////////////
-  auto c_start = clock();
+  auto c_start = std::chrono::steady_clock::now();
+
   while (etime < sim_time) {
     //If the time step leads to exceeding the simulation time, shorten it for the last step
     if (etime + dt > sim_time) { dt = sim_time - etime; }
@@ -160,17 +161,22 @@ int main(int argc, char **argv) {
     //Update the elapsed time and output counter
     etime = etime + dt;
   }
-  auto c_end = clock();
-  if (masterproc) {
-     printf("CPU Time: %lf sec\n",( (double) (c_end-c_start) ) / CLOCKS_PER_SEC);
-  }
+
+  auto c_end =  std::chrono::steady_clock::now();
+  auto c_time = std::chrono::duration_cast<std::chrono::nanoseconds>(c_end - c_start).count();
+  if (masterproc)
+    printf("Total main time step loop: %lf sec\n", c_time * 1e-9);
 
   //Final reductions for mass, kinetic energy, and total energy
   reductions(mass,te);
 }
 
-  printf( "d_mass: %le\n" , (mass - mass0)/mass0 );
-  printf( "d_te:   %le\n" , (te   - te0  )/te0   );
+  double d_mass = (mass - mass0) / mass0;
+  double d_te = (te - te0) / te0;
+  printf("d_mass: %le\n" , d_mass);
+  printf("d_te:   %le\n" , d_te);
+  bool ok = check_output(d_mass, d_te);
+  printf("%s\n", ok ? "PASS" : "FAIL");
 
   finalize();
 }
@@ -751,28 +757,27 @@ void finalize() {
 void reductions( double &mass , double &te ) {
   mass = 0;
   te   = 0;
-
-#pragma omp target map(to: state[0:(nz+2*hs)*(nx+2*hs)*NUM_VARS]) map(tofrom: mass, te) 
+  #pragma omp target map(to: state[0:(nz+2*hs)*(nx+2*hs)*NUM_VARS]) map(tofrom: mass, te)
   {
-  #pragma omp teams distribute parallel for collapse(2) reduction(+:mass,te)
-  for (int k=0; k<nz; k++) {
-    for (int i=0; i<nx; i++) {
-      int ind_r = ID_DENS*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
-      int ind_u = ID_UMOM*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
-      int ind_w = ID_WMOM*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
-      int ind_t = ID_RHOT*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
-      double r  =   state[ind_r] + hy_dens_cell[hs+k];             // Density
-      double u  =   state[ind_u] / r;                              // U-wind
-      double w  =   state[ind_w] / r;                              // W-wind
-      double th = ( state[ind_t] + hy_dens_theta_cell[hs+k] ) / r; // Potential Temperature (theta)
-      double p  = C0*pow(r*th,gamm);                               // Pressure
-      double t  = th / pow(p0/p,rd/cp);                            // Temperature
-      double ke = r*(u*u+w*w);                                     // Kinetic Energy
-      double ie = r*cv*t;                                          // Internal Energy
-      mass += r        *dx*dz; // Accumulate domain mass
-      te   += (ke + ie)*dx*dz; // Accumulate domain total energy
+    #pragma omp teams distribute parallel for collapse(2) reduction(+:mass,te)
+    for (int k=0; k<nz; k++) {
+      for (int i=0; i<nx; i++) {
+        int ind_r = ID_DENS*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
+        int ind_u = ID_UMOM*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
+        int ind_w = ID_WMOM*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
+        int ind_t = ID_RHOT*(nz+2*hs)*(nx+2*hs) + (k+hs)*(nx+2*hs) + i+hs;
+        double r  =   state[ind_r] + hy_dens_cell[hs+k];             // Density
+        double u  =   state[ind_u] / r;                              // U-wind
+        double w  =   state[ind_w] / r;                              // W-wind
+        double th = ( state[ind_t] + hy_dens_theta_cell[hs+k] ) / r; // Potential Temperature (theta)
+        double p  = C0*pow(r*th,gamm);                               // Pressure
+        double t  = th / pow(p0/p,rd/cp);                            // Temperature
+        double ke = r*(u*u+w*w);                                     // Kinetic Energy
+        double ie = r*cv*t;                                          // Internal Energy
+        mass += r        *dx*dz; // Accumulate domain mass
+        te   += (ke + ie)*dx*dz; // Accumulate domain total energy
+      }
     }
-  }
   }
   double glob[2], loc[2];
   loc[0] = mass;

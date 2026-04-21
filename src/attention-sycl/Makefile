@@ -33,6 +33,11 @@ obj = $(source:.cpp=.o)
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../attention-cuda -fsycl \
           --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
 LDFLAGS = 
 
@@ -74,9 +79,11 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 65536 2048 0 100
-	$(LAUNCHER) ./$(program) 65536 2048 1 100
-	$(LAUNCHER) ./$(program) 65536 2048 2 100
-	$(LAUNCHER) ./$(program) 8192 8192 0 100
-	$(LAUNCHER) ./$(program) 8192 8192 1 100
-	$(LAUNCHER) ./$(program) 8192 8192 2 100
+	$(LAUNCHER) ./$(program) 65536 2048 0 1000
+	$(LAUNCHER) ./$(program) 65536 2048 1 1000
+	$(LAUNCHER) ./$(program) 65536 2048 2 1000
+	$(LAUNCHER) ./$(program) 65536 2048 3 1000
+	$(LAUNCHER) ./$(program) 8192 8192 0 1000
+	$(LAUNCHER) ./$(program) 8192 8192 1 1000
+	$(LAUNCHER) ./$(program) 8192 8192 2 1000
+	$(LAUNCHER) ./$(program) 8192 8192 3 1000

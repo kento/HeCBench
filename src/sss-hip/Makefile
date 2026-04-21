@@ -24,10 +24,10 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I$(GSL)/include
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I$(GSL)/include
 
 # Linker Flags
-LDFLAGS = -L$(GSL)/lib -lgsl -lblas
+LDFLAGS = -L$(GSL)/lib -lgsl
 
 # Debug Flags
 ifeq ($(DEBUG),yes)

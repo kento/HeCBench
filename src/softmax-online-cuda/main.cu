@@ -8,8 +8,20 @@
 #include <cuda_runtime.h>
 #include <cooperative_groups.h>
 #include <cooperative_groups/reduce.h>
+#include <cub/cub.cuh>
 #include "common.h"
 #include "reference.h"
+
+struct Max
+{
+  template <typename T, typename U>
+  __device__ __forceinline__
+  typename std::common_type<T, U>::type
+    operator()(T &&t, U &&u) const
+  {
+    return ((t) > (u)) ? (t) : (u);
+  }
+};
 
 // online softmax paper: http://arxiv.org/abs/1805.02867
 // online softmax reduces loops from 3 to 2
@@ -67,21 +79,16 @@ __global__ void softmax_forward_online_kernel(float* out, const float* inp, int 
 }
 
 __global__ void softmax_forward_online_kernel2(float* out, const float* inp, int N, int C) {
-  const int warpsPerBlock = blockDim.x / warpSize;
   int tid = threadIdx.x;
-
-  if (tid >= C) {
-    return;
-  }
+  if (tid >= C) return;
 
   int warpId = tid / warpSize;
-  int laneId = tid % warpSize;
+  const int warpsPerBlock = blockDim.x / warpSize;
   int row = blockIdx.x * warpsPerBlock + warpId;
 
-  if (row >= N) {
-    return;
-  }
+  if (row >= N) return;
 
+  int laneId = tid % warpSize;
   const float* x = inp + row * C;
   float* const y = out + row * C;
 
@@ -122,6 +129,105 @@ __global__ void softmax_forward_online_kernel2(float* out, const float* inp, int
   }
 }
 
+__global__ void softmax_forward_online_kernel3(float* __restrict__ out, const float* __restrict__ inp, int N, int C) {
+  __shared__ float smem[1024];
+
+  int row = blockIdx.x;
+  if (row >= N) return;
+
+  const float* x = inp + row * C;
+  float* y = out + row * C;
+  float maxval = -INFINITY;
+  float sumval = 0.0f;
+
+  int tid = threadIdx.x;
+  for (int i = tid; i < C; i += blockDim.x) {
+      float v = x[i];
+      if (v > maxval) {
+          sumval *= expf(maxval - v);
+          maxval = v;
+      }
+      sumval += expf(v - maxval);
+  }
+
+  smem[tid] = maxval;
+  __syncthreads();
+
+  for (int stride = blockDim.x / 2; stride > 0; stride /= 2) {
+      if (tid < stride) {
+          smem[tid] = fmaxf(smem[tid], smem[tid + stride]);
+      }
+      __syncthreads();
+  }
+
+  float row_max = smem[0];
+  __syncthreads();
+
+  smem[tid] = sumval * expf(maxval - row_max);
+  __syncthreads();
+
+  for (int stride = blockDim.x / 2; stride > 0; stride >>= 1) {
+      if (tid < stride) {
+          smem[tid] += smem[tid + stride];
+      }
+      __syncthreads();
+  }
+  float row_sum = smem[0];
+  __syncthreads();
+
+  for (int i = tid; i < C; i += blockDim.x) {
+      y[i] = expf(x[i] - row_max) / row_sum;
+  }
+}
+
+// Baseline softmax
+__global__ void softmax_forward_baseline_kernel(float* out, const float* inp, int N, int C) {
+  int tid = threadIdx.x;
+  if (tid >= C) return;
+
+  int warpId = tid / warpSize;
+  const int warpsPerBlock = blockDim.x / warpSize;
+  int row = blockIdx.x * warpsPerBlock + warpId;
+
+  if (row >= N) return;
+
+  int laneId = tid % warpSize;
+  const float* x = inp + row * C;
+  float* const y = out + row * C;
+
+  using WarpReduce = cub::WarpReduce<float>;
+  __shared__ typename WarpReduce::TempStorage temp[32];
+
+  float maxval = -INFINITY;
+  for (int i = laneId; i < C; i += warpSize) {
+    maxval = max(x[i], maxval);
+  }
+  maxval = WarpReduce(temp[warpId]).Reduce(maxval, Max());
+
+  __syncwarp();
+
+  maxval = __shfl_sync(0xFFFFFFFF, maxval, 0);
+  
+  float sumval = 0;
+  for (int i = laneId; i < C; i += warpSize) {
+    sumval += expf(x[i] - maxval);
+  }
+  sumval = WarpReduce(temp[warpId]).Sum(sumval);
+
+  sumval = __shfl_sync(0xFFFFFFFF, sumval, 0);
+
+  for (int i = laneId; i < C; i += warpSize) {
+    y[i] = expf(x[i] - maxval) / sumval;
+  }
+}
+
+void softmax_forward_baseline(float* out, const float* inp, int N, int C,
+                             int warp_size, int block_size) {
+  const int grid_size = ceil_div(N * warp_size, block_size);
+  softmax_forward_baseline_kernel <<<grid_size, block_size >>> (out, inp, N, C);
+  cudaCheck(cudaDeviceSynchronize());
+}
+
 void softmax_forward_online(float* out, const float* inp, int N, int C,
                             int warp_size, int block_size) {
   const int grid_size = ceil_div(N * warp_size, block_size);
@@ -136,15 +242,28 @@ void softmax_forward_online2(float* out, const float* inp, int N, int C,
   cudaCheck(cudaDeviceSynchronize());
 }
 
+void softmax_forward_online3(float* out, const float* inp, int N, int C,
+                             int warp_size, int block_size) {
+  const int grid_size = N;
+  softmax_forward_online_kernel3 <<<grid_size, block_size >>> (out, inp, N, C);
+  cudaCheck(cudaDeviceSynchronize());
+}
+
 // kernel version dispatch
 void softmax_forward(int kernel_num, float* out, const float* inp, int N, int C,
                      const int warp_size, const int block_size) {
   switch (kernel_num) {
     case 1:
-      softmax_forward_online(out, inp, N, C, warp_size, block_size);
+      softmax_forward_baseline(out, inp, N, C, warp_size, block_size);
       break;
     case 2:
+      softmax_forward_online(out, inp, N, C, warp_size, block_size);
+      break;
+    case 3:
       softmax_forward_online2(out, inp, N, C, warp_size, block_size);
+      break;
+    case 4:
+      softmax_forward_online3(out, inp, N, C, warp_size, block_size);
       break;
     default:
       printf("Invalid kernel number\n");
@@ -182,11 +301,14 @@ int main(int argc, char **argv) {
   cudaCheck(cudaMemcpy(d_inp, inp, B * T * V * sizeof(float), cudaMemcpyHostToDevice));
 
   // read kernel_num from command line
-  int kernel_num = 1;
+  int kernel_num = 2;
   if (argc > 1) {
     kernel_num = atoi(argv[1]);
   }
-  printf("Using kernel %d\n", kernel_num);
+  if (kernel_num > 1)
+    printf("Using kernel online %d\n", kernel_num);
+  else
+    printf("Using kernel baseline %d\n", kernel_num);
 
   // query the warp size
   cudaDeviceProp props;

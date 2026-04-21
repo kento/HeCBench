@@ -20,7 +20,7 @@ program = divergence
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall
 
 # Linker Flags
 LDFLAGS = 
@@ -41,13 +41,10 @@ endif
 # Targets to Build
 #===============================================================================
 
-$(program): divergence.o timer.o 
+$(program): divergence.o
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 divergence.o: divergence.cu divergence.hpp Makefile
-	$(CC) $(CFLAGS) -c $< -o $@
-
-timer.o: timer/timer.cpp timer/timer.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 

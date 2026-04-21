@@ -16,8 +16,6 @@
 #define BLKYSIZE 4
 #define BLKZSIZE 4
 
-using namespace std;
-
 double Laplacian(const double c[][DATAYSIZE][DATAXSIZE],
                  double dx, double dy, double dz, int x, int y, int z)
 {
@@ -220,14 +218,14 @@ int main(int argc, char *argv[])
   const double gamma = 0.5;
   const double D = 1.0;
 
-  string name_c = "./out/integral_c.txt";
-  ofstream ofile_c (name_c);
+  std::string name_c = "./out/integral_c.txt";
+  std::ofstream ofile_c (name_c);
 
-  string name_mu = "./out/integral_mu.txt";
-  ofstream ofile_mu (name_mu);
+  std::string name_mu = "./out/integral_mu.txt";
+  std::ofstream ofile_mu (name_mu);
 
-  string name_f = "./out/integral_f.txt";
-  ofstream ofile_f (name_f);
+  std::string name_f = "./out/integral_f.txt";
+  std::ofstream ofile_f (name_f);
 
   typedef double nRarray[DATAYSIZE][DATAXSIZE];
 
@@ -320,15 +318,15 @@ int main(int argc, char *argv[])
       q.wait();
       integral_c = integral(c_host,nx,ny,nz);
 
-      ofile_c << t << "," << integral_c << std::endl;
+      ofile_c << t << "," << integral_c << "\n";
 
       integral_mu = integral(mu_host,nx,ny,nz);
 
-      ofile_mu << t << "," << integral_mu << std::endl;
+      ofile_mu << t << "," << integral_mu << "\n";
 
       integral_f = integral(f_host,nx,ny,nz);
 
-      ofile_f << t << "," << integral_f << std::endl;
+      ofile_f << t << "," << integral_f << "\n";
     }
 
     q.submit([&] (sycl::handler &cgh) {

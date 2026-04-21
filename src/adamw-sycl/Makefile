@@ -35,6 +35,11 @@ obj = $(source:.cpp=.o)
 CFLAGS := $(EXTRA_CFLAGS) -std=c++20 -Wall -fsycl \
           --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
 LDFLAGS = 
 
@@ -69,11 +74,11 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp kernels.h
+%.o: %.cpp kernels.h reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 100000000 100
+	$(LAUNCHER) ./$(program) 1000000 100

@@ -46,17 +46,15 @@ __device__ inline void insertHashTable(const uint32_t key, uint32_t *value,
 __device__ inline uint32_t lookupHashTable(const uint32_t key, const uint32_t hash_size,
                                            const uint32_t *hash_table) {
   uint64_t hash_value = hash(key);
-  uint32_t slot = hash_value % (hash_size / 2) /*key, value*/;
+  uint32_t slot = hash_value % hash_size /*key, value*/;
   uint32_t empty_key = UINT32_MAX;
-  int cnt = 0;
   while (true /* need to be adjusted according to data*/) {
-    cnt++;
     if (hash_table[slot] == key) {
-      return hash_table[slot + hash_size / 2];
+      return hash_table[slot + hash_size];
     } else if (hash_table[slot] == empty_key) {
       return empty_key;
     } else {
-      slot = (slot + 1) % (hash_size / 2);
+      slot = (slot + 1) % hash_size;
     }
   }
   return empty_key;
@@ -97,8 +95,8 @@ __global__ void voxelizationKernel(const float *points, size_t points_size, floa
                                    int grid_y_size, int grid_x_size, int feature_num,
                                    int max_voxels, int max_points_per_voxel,
                                    unsigned int *hash_table, unsigned int *num_points_per_voxel,
-                                   float *voxels_temp, unsigned int *voxel_indices,
-                                   unsigned int *real_voxel_num) {
+                                   float *voxels_temp, unsigned int *voxel_indices)
+{
   int point_idx = blockIdx.x * blockDim.x + threadIdx.x;
   if (point_idx >= points_size) {
     return;
@@ -115,15 +113,15 @@ __global__ void voxelizationKernel(const float *points, size_t points_size, floa
   }
 
   int voxel_idx = floorf((px - min_x_range) / voxel_x_size);
+  if (voxel_idx >= grid_x_size) {
+    return;
+  }
   int voxel_idy = floorf((py - min_y_range) / voxel_y_size);
+  if (voxel_idy >= grid_y_size) {
+    return;
+  }
   int voxel_idz = floorf((pz - min_z_range) / voxel_z_size);
-  if ((voxel_idx < 0 || voxel_idx >= grid_x_size)) {
-    return;
-  }
-  if ((voxel_idy < 0 || voxel_idy >= grid_y_size)) {
-    return;
-  }
-  if ((voxel_idz < 0 || voxel_idz >= grid_z_size)) {
+  if (voxel_idz >= grid_z_size) {
     return;
   }
 
@@ -131,7 +129,7 @@ __global__ void voxelizationKernel(const float *points, size_t points_size, floa
       voxel_idz * grid_y_size * grid_x_size + voxel_idy * grid_x_size + voxel_idx;
 
   // scatter to voxels
-  unsigned int voxel_id = lookupHashTable(voxel_offset, points_size * 2 * 2, hash_table);
+  unsigned int voxel_id = lookupHashTable(voxel_offset, points_size * 2, hash_table);
   if (voxel_id >= max_voxels) {
     return;
   }
@@ -219,7 +217,7 @@ cudaError_t voxelizationLaunch(const float *points, size_t points_size,
       points, points_size, min_x_range, max_x_range, min_y_range, max_y_range, min_z_range,
       max_z_range, voxel_x_size, voxel_y_size, voxel_z_size, grid_z_size, grid_y_size, grid_x_size,
       feature_num, max_voxels, max_points_per_voxel, hash_table, num_points_per_voxel,
-      voxel_features, voxel_indices, real_voxel_num);
+      voxel_features, voxel_indices);
   cudaError_t err = cudaGetLastError();
   return err;
 }

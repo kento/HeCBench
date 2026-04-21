@@ -140,7 +140,7 @@ void sobelGPU_kernel(sycl::nd_item<2> item,
 double sobolGPU(sycl::queue &q, int repeat, int n_vectors, int n_dimensions,
                 unsigned int *d_directions, float *d_output)
 {
-    const int threadsperblock = 64;
+    const int threadsperblock = 128;
 
     // This implementation of the generator outputs all the draws for
     // one dimension in a contiguous region of memory, followed by the
@@ -195,7 +195,8 @@ double sobolGPU(sycl::queue &q, int repeat, int n_vectors, int n_dimensions,
           sycl::nd_range<2>(gws, lws), [=] (sycl::nd_item<2> item) {
           // Offset into the correct dimension as specified by the block y coordinate
           sobelGPU_kernel(item, d_directions, d_output,
-                          v.get_pointer(), n_vectors, n_dimensions);
+                          v.get_multi_ptr<sycl::access::decorated::no>().get(),
+                          n_vectors, n_dimensions);
         });
       });
     }

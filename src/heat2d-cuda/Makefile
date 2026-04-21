@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -Xcompiler -fopenmp -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -Xcompiler -fopenmp -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -47,14 +47,11 @@ endif
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu io.c lapl_ss.c Makefile
+%.o: %.cu Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)
 
-data.txt: mkinit.py
-	python2 mkinit.py 4096 8192 data.txt
-
-run: $(program) data.txt
-	$(LAUNCHER) ./$(program) 4096 8192 1000 data.txt
+run: $(program)
+	$(LAUNCHER) ./$(program) 4096 4096 1000

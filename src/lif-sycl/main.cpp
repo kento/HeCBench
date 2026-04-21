@@ -17,7 +17,7 @@ void reference (
   for (int i = 0; i < numNeurons; i++)
   {
     int neuron_index = i % neurons_per_item;
-    int item_index = (int)(i / neurons_per_item);
+    int item_index = i / neurons_per_item;
 
     float voltage = voltage_array[i];
     float ref_time = reftime_array[i];
@@ -67,7 +67,7 @@ void lif (
   if( i < numNeurons)
   {
     int neuron_index = i % neurons_per_item;
-    int item_index = (int)(i / neurons_per_item);
+    int item_index = i / neurons_per_item;
 
     float voltage = voltage_array[i];
     float ref_time = reftime_array[i];
@@ -83,8 +83,8 @@ void lif (
     mult *= -1.f / dt;
     mult += 1.f;
 
-    mult = mult > 1.f ? 1.f : mult;
-    mult = mult < 0.f ? 0.f : mult;
+    mult = sycl::fmin(mult, 1.f);
+    mult = sycl::fmax(mult, 0.f);
 
     voltage *= mult;
 

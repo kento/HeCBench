@@ -24,7 +24,7 @@
  the output delta to a Gray code (a^(a>>1)) so a string of 1's (as
  is commonly produced by subtraction) look like a single 1-bit
  difference.
- * the base values were pseudorandom, all zero but one bit set, or 
+ * the base values were pseudorandom, all zero but one bit set, or
  all zero plus a counter that starts at zero.
 
  Some k values for my "a-=c; a^=rot(c,k); c+=b;" arrangement that
@@ -34,7 +34,7 @@
  14  9  3  7 17  3
  Well, "9 15 3 18 27 15" didn't quite get 32 bits diffing
  for "differ" defined as + with a one-bit base and a two-bit delta.  I
- used http://burtleburtle.net/bob/hash/avalanche.html to choose 
+ used http://burtleburtle.net/bob/hash/avalanche.html to choose
  the operations, constants, and arrangements of the variables.
 
  This does not achieve avalanche.  There are input bits of (a,b,c)
@@ -73,7 +73,7 @@
  the output delta to a Gray code (a^(a>>1)) so a string of 1's (as
  is commonly produced by subtraction) look like a single 1-bit
  difference.
- * the base values were pseudorandom, all zero but one bit set, or 
+ * the base values were pseudorandom, all zero but one bit set, or
  all zero plus a counter that starts at zero.
 
  These constants passed:
@@ -98,13 +98,13 @@
 
 
 __device__ __host__
-unsigned int mixRemainder(unsigned int a, 
-    unsigned int b, 
-    unsigned int c, 
+unsigned int mixRemainder(unsigned int a,
+    unsigned int b,
+    unsigned int c,
     unsigned int k0,
     unsigned int k1,
     unsigned int k2,
-    unsigned int length ) 
+    unsigned int length )
 {
   switch(length)
   {
@@ -148,7 +148,7 @@ unsigned int hashlittle( const void *key, size_t length, unsigned int initval)
   }
 
   /*----------------------------- handle the last (probably partial) block */
-  /* 
+  /*
    * "k[2]&0xffffff" actually reads beyond the end of the string, but
    * then masks off the part it's not allowed to read.  Because the
    * string is aligned, the masked-off tail is in the same word as the
@@ -179,40 +179,38 @@ unsigned int hashlittle( const void *key, size_t length, unsigned int initval)
   return c;
 }
 
-__global__ void kernel (
+__global__ void jk3_hash_kernel (
     const unsigned int *__restrict__ lengths,
     const unsigned int *__restrict__ initvals,
     const unsigned int *__restrict__ keys,
     unsigned int *__restrict__ out,
-    const int N ) 
+    const int N )
 {
   int id = blockDim.x*blockIdx.x+threadIdx.x;
   if (id >= N) return;
   unsigned int length = lengths[id];
   const unsigned int initval = initvals[id];
-  // a value of type "const unsigned int *" cannot be used to initialize an entity of type "unsigned int *"
-  const unsigned int *k = keys+id*16;  // each key has at most 15 words (60 bytes)
+  auto k = (const uint3*) (keys+id*16);  // each key has at most 15 words (60 bytes)
 
   /* Set up the internal state */
-  unsigned int a,b,c; 
+  unsigned int a,b,c;
   unsigned int r0,r1,r2;
   a = b = c = 0xdeadbeef + length + initval;
 
   /*------ all but last block: aligned reads and affect 32 bits of (a,b,c) */
+  uint3 v;
   while (length > 12) {
-    a += k[0];
-    b += k[1];
-    c += k[2];
+    v = *k++;
+    a += v.x;
+    b += v.y;
+    c += v.z;
     mix(a,b,c);
     length -= 12;
-    k += 3;
   }
-  r0 = k[0];
-  r1 = k[1];
-  r2 = k[2];
+  v = *k;
 
   /*----------------------------- handle the last (probably partial) block */
-  /* 
+  /*
    * "k[2]&0xffffff" actually reads beyond the end of the string, but
    * then masks off the part it's not allowed to read.  Because the
    * string is aligned, the masked-off tail is in the same word as the
@@ -221,7 +219,7 @@ __global__ void kernel (
    * still catch it and complain.  The masking trick does make the hash
    * noticably faster for short strings (like English words).
    */
-  out[id] = mixRemainder(a, b, c, r0, r1, r2, length);
+  out[id] = mixRemainder(a, b, c, v.x, v.y, v.z, length);
 }
 
 int main(int argc, char** argv) {
@@ -263,15 +261,15 @@ int main(int argc, char** argv) {
 
   unsigned int* d_keys;
   hipMalloc((void**)&d_keys, sizeof(unsigned int)*N*16);
-  hipMemcpyAsync(d_keys, keys, sizeof(unsigned int)*N*16, hipMemcpyHostToDevice, 0);
+  hipMemcpy(d_keys, keys, sizeof(unsigned int)*N*16, hipMemcpyHostToDevice);
 
   unsigned int* d_lens;
   hipMalloc((void**)&d_lens, sizeof(unsigned int)*N);
-  hipMemcpyAsync(d_lens, lens, sizeof(unsigned int)*N, hipMemcpyHostToDevice, 0);
+  hipMemcpy(d_lens, lens, sizeof(unsigned int)*N, hipMemcpyHostToDevice);
 
   unsigned int* d_initvals;
   hipMalloc((void**)&d_initvals, sizeof(unsigned int)*N);
-  hipMemcpyAsync(d_initvals, initvals, sizeof(unsigned int)*N, hipMemcpyHostToDevice, 0);
+  hipMemcpy(d_initvals, initvals, sizeof(unsigned int)*N, hipMemcpyHostToDevice);
 
   unsigned int* d_out;
   hipMalloc((void**)&d_out, sizeof(unsigned int)*N);
@@ -283,7 +281,7 @@ int main(int argc, char** argv) {
   auto start = std::chrono::steady_clock::now();
 
   for (int n = 0; n < repeat; n++) {
-    hipLaunchKernelGGL(kernel, grids, threads, 0, 0, d_lens, d_initvals, d_keys, d_out, N);
+    jk3_hash_kernel<<< grids, threads >>>(d_lens, d_initvals, d_keys, d_out, N);
   }
 
   hipDeviceSynchronize();

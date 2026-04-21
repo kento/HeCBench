@@ -13,23 +13,23 @@ LAUNCHER  =
 # Program name & source code list
 #===============================================================================
 
-program = lud
+program = main
 
-source = lud.cu ./common/common.cu 
+source = lud.cu ./common/common.cpp 
 
 #===============================================================================
 # Sets Flags
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH) -I./common
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH) -I./common
 
 # Linker Flags
 LDFLAGS = 
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
-  CFLAGS += -g
+  CFLAGS += -g -G
   LDFLAGS  += -g
 endif
 

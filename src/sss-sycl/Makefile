@@ -34,8 +34,13 @@ CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl \
           -I$(GSL)/include \
           --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
-LDFLAGS = -L$(GSL)/lib -lgsl -lblas
+LDFLAGS = -L$(GSL)/lib -lgsl
 
 ifeq ($(CUDA), yes)
   CFLAGS += -fsycl-targets=nvptx64-nvidia-cuda \

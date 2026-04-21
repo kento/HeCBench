@@ -10,6 +10,7 @@
  */
 
 #include <stdio.h>
+#include <chrono>
 #include <sycl/sycl.hpp>
 
 #define THREADS_PER_BLOCK 256
@@ -47,7 +48,7 @@ void reduce(float *inputVec, double *outputVec, size_t inputSize, size_t outputS
       beta       += temp;
       tmp[local_tid] = beta;
     }
-    tile.barrier(sycl::access::fence_space::local_space);
+    sycl::group_barrier(tile);
   }
   item.barrier(sycl::access::fence_space::local_space);
 
@@ -154,9 +155,9 @@ void usingGraph(sycl::queue &q, float* inputVec_h, float *inputVec_d,
           sycl::nd_range<1>(sycl::range<1>(numOfBlocks) *
                             sycl::range<1>(THREADS_PER_BLOCK),
                             sycl::range<1>(THREADS_PER_BLOCK)),
-          [=](sycl::nd_item<1> item) [[intel::reqd_sub_group_size(32)]] {
+          [=](sycl::nd_item<1> item) [[sycl::reqd_sub_group_size(32)]] {
             reduce(inputVec_d, outputVec_d, inputSize, numOfBlocks, item,
-                   tmp_acc.get_pointer());
+                   tmp_acc.get_multi_ptr<sycl::access::decorated::no>().get());
           });
     });
       q.submit([&](sycl::handler &cgh) {
@@ -166,9 +167,9 @@ void usingGraph(sycl::queue &q, float* inputVec_h, float *inputVec_d,
         cgh.parallel_for(
             sycl::nd_range<1>(sycl::range<1>(THREADS_PER_BLOCK),
                               sycl::range<1>(THREADS_PER_BLOCK)),
-            [=](sycl::nd_item<1> item) [[intel::reqd_sub_group_size(32)]] {
+            [=](sycl::nd_item<1> item) [[sycl::reqd_sub_group_size(32)]] {
               reduceFinal(outputVec_d, result_d, numOfBlocks, item,
-                          tmp_acc.get_pointer());
+                          tmp_acc.get_multi_ptr<sycl::access::decorated::no>().get());
             });
       });
   }
@@ -217,9 +218,9 @@ void usingStream(sycl::queue &q, float* inputVec_h, float *inputVec_d,
                               sycl::range<1>(THREADS_PER_BLOCK),
                               sycl::range<1>(THREADS_PER_BLOCK)),
             [=](sycl::nd_item<1> item)
-                [[intel::reqd_sub_group_size(32)]] {
+                [[sycl::reqd_sub_group_size(32)]] {
                   reduce(inputVec_d, outputVec_d, inputSize, numOfBlocks,
-                         item, tmp_acc.get_pointer());
+                         item, tmp_acc.get_multi_ptr<sycl::access::decorated::no>().get());
                 });
       });
       q.submit([&](sycl::handler &cgh) {
@@ -230,9 +231,9 @@ void usingStream(sycl::queue &q, float* inputVec_h, float *inputVec_d,
             sycl::nd_range<1>(sycl::range<1>(THREADS_PER_BLOCK),
                               sycl::range<1>(THREADS_PER_BLOCK)),
             [=](sycl::nd_item<1> item)
-                [[intel::reqd_sub_group_size(32)]] {
+                [[sycl::reqd_sub_group_size(32)]] {
                   reduceFinal(outputVec_d, result_d, numOfBlocks, item,
-                              tmp_acc.get_pointer());
+                              tmp_acc.get_multi_ptr<sycl::access::decorated::no>().get());
                 });
       });
     }

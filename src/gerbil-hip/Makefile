@@ -37,12 +37,12 @@ obj = AddKernel.o        \
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++11 -Wall -fpermissive -DGPU \
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fpermissive -DGPU \
 	  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK \
           -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK \
 	  -I/opt/rocm/include -D__HIP_PLATFORM_AMD__
 
-HIPCCFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -DGPU
+HIPCCFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -DGPU
 
 # Linker Flags
 LDFLAGS = -lboost_system -lboost_thread -lboost_regex -lboost_filesystem \
@@ -104,4 +104,4 @@ clean:
 	rm -rf $(program) $(obj) out
 
 run: $(program)
-	$(LAUNCHER) HIP_VISIBLE_DEVICES=1 ./$(program) -i -g ERR164407.fastq.gz tmp out
+	$(LAUNCHER) HIP_VISIBLE_DEVICES=0 ./$(program) -i -g ERR164407.fastq.gz tmp out
