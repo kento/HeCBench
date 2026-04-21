@@ -35,6 +35,11 @@ obj = $(source:.cpp=.o)
 CFLAGS := -std=c++17 -Wall -I../nw-cuda -fsycl \
           --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 
 # Linker Flags
 LDFLAGS = 
@@ -74,7 +79,7 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp kernel1.sycl kernel2.sycl ../nw-cuda/reference.cpp
+%.o: %.cpp kernel1.sycl kernel2.sycl ../nw-cuda/reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

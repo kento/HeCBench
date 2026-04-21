@@ -6,6 +6,7 @@
 CC        = nvcc
 OPTIMIZE  = yes
 DEBUG     = no
+VERIFY    = no
 ARCH      = sm_60
 LAUNCHER  =
 
@@ -24,7 +25,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -35,6 +36,10 @@ ifeq ($(DEBUG),yes)
   LDFLAGS  += -g
 endif
 
+# Verification Flags
+ifeq ($(VERIFY),yes)
+  CFLAGS += -DDEBUG
+endif
 
 # Optimization Flags
 ifeq ($(OPTIMIZE),yes)

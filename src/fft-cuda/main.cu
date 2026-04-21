@@ -2,6 +2,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
+#include <cstring>
 #include <cuda.h>
 
 #ifdef SINGLE_PRECISION
@@ -128,9 +129,9 @@ int main(int argc, char** argv)
   const int n_ffts = half_n_ffts * 2;
   const int half_n_cmplx = half_n_ffts * 512;
   const unsigned long used_bytes = half_n_cmplx * 2 * sizeof(T2);
-  const double n_cmplx = (double)half_n_cmplx*2.0;
+  const int n_cmplx = half_n_cmplx*2;
 
-  fprintf(stdout, "used_bytes=%lu, n_cmplx=%g\n", used_bytes, n_cmplx);
+  fprintf(stdout, "used_bytes=%lu, n_cmplx=%d\n", used_bytes, n_cmplx);
 
   // allocate host memory, in-place FFT/iFFT operations
   T2 *source = (T2*) malloc (used_bytes);

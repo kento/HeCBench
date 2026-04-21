@@ -24,14 +24,15 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall \
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall \
 	-DNX=400 \
        	-DNZ=200 \
 	-DSIM_TIME=600 \
-	-DDATA_SPEC=DATA_SPEC_THERMAL
+	-DDATA_SPEC=DATA_SPEC_THERMAL \
+        -I../miniWeather-cuda/
 
 # Linker Flags
-LDFLAGS = 
+LDFLAGS =
 
 # Debug Flags
 ifeq ($(DEBUG),yes)
@@ -46,18 +47,18 @@ ifeq ($(OPTIMIZE),yes)
 endif
 
 ifeq ($(DEVICE),gpu)
-  CFLAGS +=-cxx=icpc -qnextgen -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__
+  CFLAGS +=-cxx=icpx  -fiopenmp -fopenmp-targets=spir64 -D__STRICT_ANSI__
 else
-  CFLAGS +=--cxx=icpc 
+  CFLAGS +=--cxx=icpx
 endif
 #===============================================================================
 # Targets to Build
 #===============================================================================
 
-$(program): $(obj) Makefile
+$(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp Makefile
+%.o: %.cpp ../miniWeather-cuda/check_output.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

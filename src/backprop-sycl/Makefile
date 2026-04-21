@@ -35,6 +35,11 @@ obj = $(source:.cpp=.o)
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../backprop-cuda \
           -fsycl --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
 LDFLAGS = 
 
@@ -74,6 +79,7 @@ $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
 %.o: %.cpp ../backprop-cuda/backprop.h \
+           ../backprop-cuda/reference.h \
 	   bpnn_adjust_weights.sycl bpnn_layerforward.sycl
 	$(CC) $(CFLAGS) -c $< -o $@
 

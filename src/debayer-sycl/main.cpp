@@ -65,7 +65,9 @@ int main(int argc, char* argv[])
       cgh.parallel_for<class debayer>(
         nd_range<2>(gws, lws), [=] (nd_item<2> item) {
         malvar_he_cutler_demosaic (
-          item, apron.get_pointer(), height, width, 
+          item,
+          apron.get_multi_ptr<sycl::access::decorated::no>().get(),
+          height, width, 
           d_input, input_image_pitch,
           d_output, output_image_pitch,
           bayer_pattern );
@@ -78,7 +80,7 @@ int main(int argc, char* argv[])
   auto time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
   printf("Average kernel execution time %f (s)\n", time * 1e-9f / repeat);
 
-  q.memcpy(output, d_output, output_image_size);
+  q.memcpy(output, d_output, output_image_size).wait();
 
   long sum = 0;
   for (int i = 0; i < numPix; i++) sum += output[i];

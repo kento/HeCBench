@@ -22,7 +22,7 @@ obj = main.o meshBasis.o
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH) \
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH) \
           -Ddfloat=float -Ddlong=int 
 
 # Linker Flags
@@ -62,4 +62,4 @@ clean:
 # run one- and three-dimensional kernels
 run: $(program)
 	$(LAUNCHER) ./$(program) 1 8000 100
-	./$(program) 3 8000 100
+	$(LAUNCHER) ./$(program) 3 8000 100

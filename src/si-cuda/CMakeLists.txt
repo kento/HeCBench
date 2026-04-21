@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.18)
 project(set_intersection_eval CUDA CXX)
 
-set(CMAKE_CUDA_STANDARD 14)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CUDA_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17)
 
-set(SM_ARCH 60 CACHE STRING "CUDA SM architecture e.g. 50, 52, 60")
+set(SM_ARCH 60 CACHE STRING "CUDA SM architecture e.g. 60, 70, 80, 90")
 
 include(FetchContent)
 
@@ -12,7 +12,7 @@ include(FetchContent)
 FetchContent_Declare(
         cxxopts
         GIT_REPOSITORY https://github.com/jarro2783/cxxopts.git
-        GIT_TAG        v2.2.1
+        GIT_TAG        v3.3.1
 )
 FetchContent_MakeAvailable(cxxopts)
 # Adds cxxopts

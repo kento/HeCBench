@@ -23,7 +23,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../include -I../urng-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../include -I../urng-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -53,4 +53,4 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) ../urng-sycl/URNG_Input.bmp 16 16 1000
+	$(LAUNCHER) ./$(program) ../urng-sycl/URNG_Input.bmp 1000

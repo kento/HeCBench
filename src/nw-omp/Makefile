@@ -25,7 +25,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../nw-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../nw-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -54,10 +54,10 @@ endif
 # Targets to Build
 #===============================================================================
 
-$(program): $(obj) Makefile
+$(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp  ../nw-cuda/reference.cpp Makefile
+%.o: %.cpp  ../nw-cuda/reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

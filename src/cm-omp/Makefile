@@ -24,7 +24,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I ../cm-cuda/
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I ../cm-cuda/
 
 # Linker Flags
 LDFLAGS = 
@@ -53,13 +53,13 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-main.o: ../cm-cuda/main.cpp ../cm-cuda/utils.h
+main.o: ../cm-cuda/main.cpp utils.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-io.o: ../cm-cuda/io.cpp ../cm-cuda/utils.h
+io.o: ../cm-cuda/io.cpp utils.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-process.o: process.cpp kernels.h ../cm-cuda/utils.h 
+process.o: process.cpp kernels.h utils.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

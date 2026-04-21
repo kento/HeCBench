@@ -10,7 +10,13 @@ Z. Jin and J. S. Vetter, "A Benchmark Suite for Improving Performance Portabilit
 [NVIDIA HPC SDK](https://developer.nvidia.com/hpc-sdk)
 
 # Dependencies
-  Certain SYCL benchmarks require [oneDPL](https://github.com/oneapi-src/oneDPL), [oneTBB](https://github.com/oneapi-src/oneTBB), [Syclomatic](https://github.com/oneapi-src/SYCLomatic), or [oneMKL interfaces](https://github.com/oneapi-src/oneMKL).
+Certain benchmarks require [Boost](https://www.boost.org/releases/latest/), [GSL](https://www.gnu.org/software/gsl), [GDAL](https://github.com/OSGeo/gdal), GPU-aware Message Passing Interface(MPI) or vendors' collective communication libraries (e.g. NCCL).<br>
+Boost: hbc, ge-spmm, mmcsf, warpsort, gerbil<br>
+MPI:   miniDGS, miniWeather, pingpong, sparkler, allreduce, ccl, halo-finder<br>
+CCL:   ccl<br>
+GSL:   sss, xlqc<br>
+GDAL:  stsg<br>
+BZip2: gerbil
 
 # Benchmark categories
 Each benchmark falls into a single category. While such classification is not accurate, the arrangement serves as a starting point for users of the benchmark suite. Please see the Reference for more information about each benchmark. 
@@ -22,19 +28,19 @@ Each benchmark falls into a single category. While such classification is not ac
     allreduce, cmembench, babelstream, ccl, memcpy, memtest, pingpong, randomAccess, shmembench, triad 
 
 ### Bioinformatics
-    all-pairs-distance, bsw, ccs, cm, deredundancy, diamond, epistasis, extend2, frna, fsm, ga, logan, minibude, minimap2, nbnxm, nw, pcc, prna, sa, snake
+    all-pairs-distance, bsw, ccs, cm, deredundancy, diamond, epistasis, extend2, frna, fsm, ga, local-ht, logan, minibude, minimap2, nbnxm, nw, pcc, prna, sa, snake
 
 ### Computer vision and image processing
-    affine, aobench, asmooth, background-subtract, bezier-surface, bilateral, bm3d, boxfilter, cbsfil, car, ced, colorwheel, convolution1D, convolution3D, convolutionDeformable, convolutionSeperable, dct8x8, debayer, depixel, degrid, doh, dpid, egs, face, flame, gabor, gamma-correction, hogbom, mandelbrot, marchCubes, match, medianfilter, morphology, mriQ, ne, opticalFlow, perlin, sobel, tonemapping, recursiveGaussian, resize, sad, seam-carving, spm, srad, ssim, stencil1d, stencil3d, surfel, voxelization, zoom
+    affine, aobench, asmooth, background-subtract, bezier-surface, bilateral, bm3d, boxfilter, cbsfil, car, ced, colorwheel, convolution1D, convolution3D, convolutionDeformable, convolutionSeperable, dct8x8, debayer, depixel, degrid, doh, dpid, egs, face, flame, gabor, gamma-correction, hogbom, mandelbrot, marchCubes, match, medianfilter, morphology, mriQ, ne, opticalFlow, perlin, sobel, tonemapping, recursiveGaussian, resize, sad, seam-carving, spm, srad, ssim, stencil1d, stencil3d, surfel, tgvnn, voxelization, zoom
     
 ### Cryptography
     aes, bitcracker, bitpermute, chacha20, columnarSolver, ecdh, keccaktreehash, merkle, present  
 
 ### Data compression and reduction
-    atomicAggregate, atomicCAS, atomicCost, atomicIntrinsics, atomicPerf, atomicSystemWide, bitpacking, bscan, bwt, compute-score, contract, dxtc2, filter, fpc, histogram, lzss, minmax, mpc, mtf, quant, rle, sc, scan, scan2, scan3, segment-reduce
+    atomicAggregate, atomicCAS, atomicCost, atomicIntrinsics, atomicPerf, atomicSystemWide, bitpacking, bscan, bwt, compute-score, contract, dxtc2, filter, fma, fpc, histogram, lzss, minmax, mpc, mtf, quantAQLM, quantBnB, quantVLLM, rle, sc, scan, scan2, scan3, scatter, scatterAdd, scatterThrust, segment-reduce
 
 ### Data encoding, decoding, or verification
-    ans, crc64, crs, entropy, jenkins-hash, ldpc, md5hash, murmurhash3
+    ans, crc64, crs, entropy, jenkins-hash, kiss, ldpc, md5hash, murmurhash3
 
 ### Finance
     aop, black-scholes, binomial, bonds, libor
@@ -46,13 +52,13 @@ Each benchmark falls into a single category. While such classification is not ac
     cc, floydwarshall, floydwarshall2, gc, hbc, hungarian, mis, sssp, rsmt
 
 ### Language and kernel features
-    aligned-types, asta, blockAccess, blockexchange, collision, concurrentKernels, conversion, dispatch, graphExecution, ert, interleave, intrinsics-cast, kernelLaunch, layout, mallocFree, maxFlops, mixbench, nosync, openmp, overlap, p2p, pad, pitch, popcount, prefetch, reverse, ring, saxpy-ompt, shuffle, simpleMultiDevice, streamCreateCopyDestroy, streamOrderedAllocation, streamPriority, streamUM, tensorAccessor, threadfence, warpexchange, vote, wmma, wordcount, zerocopy 
+    adjacent, aligned-types, asta, blockAccess, blockexchange, collision, concurrentKernels, conversion, dispatch, graphExecution, ert, interleave, intrinsics-cast, kernelLaunch, layout, mallocFree, maxFlops, mixbench, nosync, openmp, overlap, p2p, pad, pitch, popcount, prefetch, reverse, ring, saxpy-ompt, shuffle, simpleMultiDevice, streamCreateCopyDestroy, streamOrderedAllocation, streamPriority, streamUM, tensorAccessor, threadfence, warpexchange, vote, wmma, wordcount, zerocopy 
 
 ### Machine learning  
-    accuracy, adam, adamw, addBiasQKV, addBiasResidualLayerNorm, attention, attentionMultiHead, backprop, bincount, bn, channelShuffle, channelSum, clink, concat, crossEntropy, dense-embedding, dropout, dwconv, dwconv1d, expdist, flip, gd, gelu, ge-spmm, glu, gmm, gru, kalman, kmc, kmeans, knn, layernorm, lda, lif, logprob, lr, lrn, mask, matern, maxpool3d, mcpr, meanshift, mf-sgd, mmcsf, mnist, mrc, multinomial, nlll, nonzero, overlay, p4, page-rank, permute, perplexity, pointwise, pool, qkv, qtclustering, remap, relu, resnet-kernels, rowwiseMoments, rotary, sampling, scel, snicit, softmax, softmax-fused, softmax-online, stddev, streamcluster, swish, unfold, vol2col, wedford, winograd, word2vec
+    accuracy, adam, adamw, addBiasQKV, addBiasResidualLayerNorm, attention, attentionMultiHead, backprop, bincount, bn, channelShuffle, channelSum, clink, concat, crossEntropy, dense-embedding, dropout, dwconv, dwconv1d, expdist, flip, gd, gelu, ge-spmm, geglu, glu, gmm, gru, kalman, kmc, kmeans, knn, layernorm, lda, lif, logprob, lr, lrn, mask, matern, maxpool3d, mcpr, meanshift, mf-sgd, mmcsf, mnist, moe, moe-align, moe-sum, mrc, multinomial, nlll, nonzero, overlay, p4, page-rank, permute, perplexity, pointwise, pool, qkv, qtclustering, remap, relu, resnet-kernels, rowwiseMoments, rotary, sampling, scel, snicit, softmax, softmax-fused, softmax-online, stddev, streamcluster, swish, tsne, unfold, vol2col, wedford, winograd, word2vec
 
 ### Math
-    atan2, blas-dot, blas-fp8gemm, blas-gemm, blas-gemmBatched, blas-gemmStridedBatched, blas-gemmEx, blas-gemmEx2, complex, cross, determinant, divergence, dp, eigenvalue, f16max, f16sp, frechet, fresnel, fwt, gaussian, geam, gels, gemv, hellinger, hmm, idivide, interval, jaccard, jacobi, kurtosis, lanczos, langford, lci, lebesgue, leukocyte, lfib4, log2, lud, ludb, michalewicz, matrix-rotate, matrixT, minkowski, mr, mrg32k3a, norm2, nqueen, ntt, phmm, pnpoly, reverse2D, rfs, romberg, rsc, sddmm-batch, secp256k1, simpleSpmv, slu, spd2s, spgeam, spgemm, spmm, spmv, spnnz, sps2d, spsort, sptrsv, thomas, wyllie, zeropoint
+    atan2, axpby, blas-dot, blas-fp8gemm, blas-gemm, blas-gemmBatched, blas-gemmStridedBatched, blas-gemmEx, blas-gemmEx2, complex, cross, determinant, divergence, dp, eigenvalue, f16max, f16sp, f8cast, fresnel, fwt, gaussian, geam, gels, gemv, hellinger, hmm, idivide, interval, jaccard, jacobi, kurtosis, lanczos, langford, lci, lebesgue, leukocyte, lfib4, log2, lud, ludb, lut-gemm, michalewicz, matrix-rotate, matrixT, minkowski, mr, mrg32k3a, norm2, nqueen, ntt, phmm, pnpoly, quant3MatMul, reverse2D, rfs, romberg, rsc, sddmm-batch, secp256k1, simpleSpmv, slu, spd2s, spgeam, spgemm, spmm, spmv, spnnz, sps2d, spsort, sptrsv, thomas, wyllie, zeropoint
    
 ### Random number generation
     mt, permutate, qrg, rng-wallace, sobol, urng
@@ -64,7 +70,7 @@ Each benchmark falls into a single category. While such classification is not ac
     extrema, fft, lombscargle, sosfil, zmddft
 
 ### Simulation
-    ace, adv, amgmk, axhelm, bh, bspline-vgh, burger, cooling, ccsd-trpdrv, che, chemv, chi2, clenergy, cmp, cobahh, d2q9_bgk, d3q19_bgk, damage, ddbp, dslash, easyWave, eikonal, fdtd3d, feynman-kac, fhd, fluidSim, gibbs, goulash, gpp, grrt, haccmk, halo-finder, heartwall, heat, heat2d, henry, hexicton, hotspot, hotspot3D, hpl, hwt1d, hypterm, ising, iso2dfd, laplace, laplace3d, lavaMD, lid-driven-cavity, logic-resim, logic-rewrite, loopback, lsqt, lulesh, mcmd, md, mdh, metropolis, miniFE, minimod, minisweep, miniWeather, multimaterial, myocte, nbody, particle-diffusion, particlefilter, particles, pathfinder, pns, projectile, pso, qem, rainflow, rayleighBenardConvection, reaction, rsbench, rtm8, rushlarsen, s3d, su3sheath, simplemoc, slit, sparkler, sph, sw4ck, tensorT, testSNAP, tissue, tpacf, tqs, tridiagonal, tsa, vanGenuchten, vmc, wlcpow, wsm5, xlqc, xsbench
+    ace, adv, amgmk, axhelm, bh, bspline-vgh, burger, cooling, ccsd-trpdrv, che, chemv, chi2, clenergy, cmp, cobahh, d2q9_bgk, d3q19_bgk, damage, ddbp, dslash, easyWave, eikonal, fdtd3d, feynman-kac, fhd, fluidSim, gibbs, goulash, gpp, grrt, haccmk, halo-finder, heartwall, heat, heat2d, henry, hexicton, hotspot, hotspot3D, hpl, hwt1d, hypterm, ising, iso2dfd, laplace, laplace3d, lavaMD, lid-driven-cavity, logic-resim, logic-rewrite, loopback, lsqt, lulesh, mcmd, md, mdh, metropolis, miniFE, minimod, minisweep, miniWeather, multimaterial, mxfp4, myocte, nbody, particle-diffusion, particlefilter, particles, pathfinder, pns, projectile, pso, qem, rainflow, rayleighBenardConvection, reaction, rsbench, rtm8, rushlarsen, s3d, su3, sheath, simplemoc, slit, sparkler, sph, sw4ck, tensorT, testSNAP, tissue, tpacf, tqs, tridiagonal, tsa, vanGenuchten, vmc, wlcpow, wsm5, xlqc, xsbench
 
 ### Sorting
     bitonic-sort, hybridsort, is, merge, quicksort, radixsort, segsort, sort, sortKV, split, warpsort
@@ -83,23 +89,28 @@ Each benchmark falls into a single category. While such classification is not ac
       `make run`
       
       Navigate to a benchmark in SYCL (benchmark-sycl) and type   
-      `make CUDA=yes CUDA_ARCH=sm_70 run`       (targeting an NVIDIA GPU)
-      `make HIP=yes HIP_ARCH=gfx908 run`        (targeting an AMD GPU)
-      `make run` or `make CC=icpx run`          (targeting an Intel GPU)
+      `make CUDA=yes CUDA_ARCH=sm_70 run`         (targeting an NVIDIA GPU with clang++)
+      `make CUDA=yes CUDA_ARCH=sm_70 CC=icpx run` (targeting an NVIDIA GPU with icpx)
+      `make HIP=yes HIP_ARCH=gfx908 run`          (targeting an AMD GPU with clang++)
+      `make HIP=yes HIP_ARCH=gfx908 CC=icpx run`  (targeting an AMD GPU with icpx)
+      `make run` or `make CC=icpx run`            (targeting an Intel GPU with clang++ or icpx)
 
       NOTE: GCC_TOOLCHAIN may be set to select a specific version of GNU toolchain for the SYCL compiler
       `make CUDA=yes CUDA_ARCH=sm_70 GCC_TOOLCHAIN=/path/to/x86_64/gcc-9.1.0 run`
      
       Navigate to a benchmark in OpenMP (benchmark-omp) and type  
-      `make -f Makefile.nvc run`  (targeting NVIDIA GPUs)
-      `make -f Makefile.aomp run` (targeting AMD GPUs)
-      `make run`                  (targeting Intel GPUs) 
+      `make -f Makefile.nvc run`                (targeting NVIDIA GPUs with nvc++)
+      `make -f Makefile.aomp run`               (targeting AMD GPUs with clang++)
+      `make -f Makefile.aomp CC=amdclang++ run` (targeting AMD GPUs with amdclang++)
+      `make run`                                (targeting Intel GPUs with icpx)
       
       Users may need to set appropriate values (e.g., `sm_80`, `sm_90`, `gfx906`, `gfx1030`) for their target offloading devices  
       `make -f Makefile.nvc SM=cc80 run`
       `make -f Makefile.aomp ARCH=gfx906 run`
+
+  Option 2 (Experimental): Build a set of benchmarks with [CMake build](CMAKE_BUILD.md)
       
-  Option 2: Python scripts that help build, run and gather results from the benchmarks. As well as a basic script to compare results from two different runs.
+  Option 3: Python scripts that help build, run and gather results from the benchmarks. As well as a basic script to compare results from two different runs.
 
     It works with a `.json` file containing the benchmark names, a regex to
     find the timings in the benchmark output and optional arguments that
@@ -153,22 +164,27 @@ For other benchmarks, datasets are either included with the benchmarks or could 
 
 # Known issues
 The programs have not been evaluated on Windows or MacOS  
-The lastest Intel SYCL compiler (not the Intel oneAPI toolkit) may be needed for building some SYCL programs successfully  
 Kernel results do not exactly match using these programming languages on a platform for certain programs  
 Not all programs automate the verification of host and device results  
 Not all CUDA programs have SYCL, HIP or OpenMP equivalents  
-Not all programs have OpenMP target offloading implementations  
 Raw performance of any program may be suboptimal  
 Some programs may take long to complete on an integrated GPU  
 Some host programs contain platform-specific intrinsics, so they may cause compile error on a PowerPC platform
+Program hang: bh-hip, mpc-sycl 
 
 # Emulation
 When double-precision floating-point operations are not supported on certain Intel GPU devices, software emulation may be enabled. [FP64 emulation](https://github.com/intel/compute-runtime/blob/master/opencl/doc/FAQ.md#feature-double-precision-emulation-fp64)
 
 # Feedback from the papers
-Faqir-Rhazoui, Y. and García, C., 2024. SYCL in the edge: performance and energy evaluation for heterogeneous acceleration. The Journal of Supercomputing, pp.1-21.
+Zaeed, M., Islam, T.Z. and Inđić, V., 2025. Opal: A Modular Framework for Optimizing Performance using Analytics and LLMs. arXiv preprint arXiv:2510.00932.
 
-Dearing, M.T., Tao, Y., Wu, X., Lan, Z. and Taylor, V., 2024. LASSI: An LLM-based Automated Self-Correcting Pipeline for Translating Parallel Scientific Codes. arXiv preprint arXiv:2407.01638.
+Schäffeler, J., 2025. Comparing Application Performance across GPU Programming Models.
+
+Bolet, G., Georgakoudis, G., Menon, H., Parasyris, K., Hasabnis, N., Estes, H., Cameron, K.W. and Oren, G., 2025. Can Large Language Models Predict Parallel Code Performance?. arXiv preprint arXiv:2505.03988.
+
+Dearing, M.T., Tao, Y., Wu, X., Lan, Z. and Taylor, V., 2025. Leveraging LLMs to Automate Energy-Aware Refactoring of Parallel Scientific Codes. arXiv preprint arXiv:2505.02184.
+
+Faqir-Rhazoui, Y. and García, C., 2024. SYCL in the edge: performance and energy evaluation for heterogeneous acceleration. The Journal of Supercomputing, pp.1-21.
 
 Marzen, L., Dutta, A. and Jannesari, A., 2024. Static Generation of Efficient OpenMP Offload Data Mappings. arXiv preprint arXiv:2406.13881.
 
@@ -216,6 +232,9 @@ Early results are shown [here](results/README.md)
 
 ### addBiasResidualLayerNorm (cuda)
   Combines the bias, residual of previous block and the computation of layer normalization (https://github.com/NVIDIA/FasterTransformer)
+
+### adjacent (cuda)
+  The differences of adjacent elements in the elements (https://nvidia.github.io/cccl)
 
 ### adv (cuda)
   Advection (https://github.com/Nek5000/nekBench/tree/master/adv)
@@ -285,6 +304,9 @@ Early results are shown [here](results/README.md)
 
 ### attentionMultiHead (cuda)
   Implementation of multi-head attention (https://github.com/IrishCoffee/cudnnMultiHeadAttention)
+
+### axpby (cuda)
+  Sum of multiple scalar-vector products (https://github.com/NVIDIA/apex)
 
 ### axhelm (cuda)
   Helmholtz matrix-vector product (https://github.com/Nek5000/nekBench/tree/master/axhelm)
@@ -619,6 +641,9 @@ Early results are shown [here](results/README.md)
 ### f16sp (cuda)
   Half-precision scalar product (https://docs.nvidia.com/cuda/cuda-samples/index.html)
 
+### f8cast (cuda)
+  Cast floating-point numbers from FP32 to FP8 (https://www.xyzzhangfan.tech/blog/2025/)
+
 ### face (cuda)
   Face detection using the Viola-Jones algorithm (https://sites.google.com/site/5kk73gpu2012/assignment/viola-jones-face-detection)
 
@@ -652,11 +677,11 @@ Early results are shown [here](results/README.md)
 ### fluidSim (opencl)
   2D Fluid Simulation using the Lattice-Boltzman method (https://github.com/OpenCL/AMD_APP_samples)
 
+### fma (cuda)
+  Fused multiply and add operations with gather-scatter indices (https://github.com/NVlabs/WarpConvNet)
+
 ### fpc (opencl)
   Frequent pattern compression ( Base-delta-immediate compression: practical data compression for on-chip caches. In Proceedings of the 21st international conference on Parallel architectures and compilation techniques (pp. 377- 388). ACM.)
-
-### frechet (matlab)
-  Compute the discrete Frechet distance between two curves specified by discrete ordered points in n-dimensional space (https://github.com/mp4096/discrete-frechet-distance)
 
 ### fresnel (c)
   Fresnel integral
@@ -705,6 +730,9 @@ Early results are shown [here](results/README.md)
 
 ### ge-spmm (cuda)
   General-purposed sparse matrix-matrix multiplication on GPUs for graph neural networks (https://github.com/hgyhungry/ge-spmm)
+
+### geglu (cuda)
+  A variant of the gated linear unit function (https://github.com/NVIDIA/NeMo)
 
 ### gibbs (cuda)
   Implementation of a Gibbs-Metropolis sampling algorithm (https://github.com/arendsee/cuda-gibbs-example)
@@ -841,6 +869,9 @@ Early results are shown [here](results/README.md)
 ### kernelLaunch (hip)
   Kernel launch with small, medium and large kernel arguments (https://github.com/ROCm/hip-tests)
 
+### kiss (cuda)
+  Fast random number generator for C++ and CUDA (https://github.com/sleeepyjack/kiss_rng/tree/master)
+
 ### kmc (cuda)
   Kernel matrix compute (https://github.com/MKLab-ITI/CUDA)
 
@@ -904,6 +935,9 @@ Early results are shown [here](results/README.md)
 ### linearprobing (cuda)
   A simple lock-free hash table (https://github.com/nosferalatu/SimpleGPUHashTable)
 
+### local-ht (cuda)
+  GPU local assembly in MetaHipMer2 Metagenome Assembler (https://github.com/leannmlindsey/gpu_local_ht)
+
 ### log2 (c)
   Approximate the log2 math function (https://adacenter.org/sites/default/files/milspec/Transcendentals.zip)
 
@@ -942,6 +976,9 @@ Early results are shown [here](results/README.md)
 
 ### lulesh (cuda)
   Livermore unstructured Lagrangian explicit shock hydrodynamics (https://github.com/LLNL/LULESH)
+
+### lut-gemm (cuda)
+  Qantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models (https://github.com/naver-aics/lut-gemm)
 
 ### lzss (cuda)
   Efficient LZSS compression solution for multi-byte data on GPUs (https://github.com/hipdac-lab/ICS23-GPULZ)
@@ -1054,6 +1091,15 @@ Early results are shown [here](results/README.md)
 ### mnist (cuda)
   Chapter 4.2: Converting CUDA CNN to HIP (https://developer.amd.com/wp-content/resources)
 
+### moe (cuda)
+  Mixtur-of-Experts softmax and top-k (https://github.com/sgl-project/sglang/tree/main)
+
+### moe-align (cuda)
+  Sort the indices of padded tokens by expert in a Mixture-of-Experts layer (https://github.com/vllm-project/vllm)
+
+### moe-sum (cuda)
+  Element-wise summation operation across the top-k expert outputs in a Mixture-of-Experts layer (https://github.com/vllm-project/vllm)
+
 ### morphology (cuda)
   Morphological operators: Erosion and Dilation (https://github.com/yszheda/CUDA-Morphology)
 
@@ -1083,6 +1129,9 @@ Early results are shown [here](results/README.md)
 
 ### murmurhash3 (c)
   MurmurHash3 yields a 128-bit hash value (https://github.com/aappleby/smhasher/wiki/MurmurHash3)
+
+### mxfp4 (cuda)
+  Simulation of 4-bit floating-point numbers using 16-bit floating-point numbers (https://github.com/amd/Quark/)
 
 ### myocte (opencl)
   Myocte in the Rodinia benchmark suite (http://lava.cs.virginia.edu/Rodinia/download_links.htm)
@@ -1225,8 +1274,17 @@ Early results are shown [here](results/README.md)
 ### qtclustering (opencl)
   Quality threshold clustering (https://github.com/vetter/shoc/)
 
-### quant (cuda)
-  8-bit quantization (https://github.com/bitsandbytes-foundation/bitsandbytes/tree/main)
+### quantAQLM (cuda)
+  Additive quantization (https://github.com/vllm-project/vllm/tree/main)
+
+### quantBnB (cuda)
+  8-bit quantization from bitsandbytes (https://github.com/bitsandbytes-foundation/bitsandbytes/tree/main)
+
+### quantVLLM (cuda)
+  8-bit quantization from vllm (https://github.com/vllm-project/vllm/tree/main)
+
+### quant3MatMul (cuda)
+  A 3-bit quantized matrix full-precision vector product (https://github.com/IST-DASLab/gptq)
 
 ### quicksort (sycl)
   Quicksort (https://software.intel.com/content/www/us/en/develop/download/code-for-the-parallel-universe-article-gpu-quicksort-from-opencl-to-data-parallel-c.html)
@@ -1339,6 +1397,15 @@ Early results are shown [here](results/README.md)
 
 ### scan3 (cuda)
   Scan a large array using vendors' libraries (https://github.com/NVIDIA/cub)
+
+### scatter (cuda)
+  Reduce values at the indices specified in a index tensor (https://github.com/rusty1s/pytorch_scatter/tree/master)
+
+### scatterAdd (cuda)
+  Add values from a source tensor at the indices specified in a index tensor (https://github.com/awslabs/vip-token-centric-compression)
+
+### scatterThrust (cuda)
+  Scatter values at the indices specified using Thrust and oneDPL
 
 ### scel (cuda)
   Sigmoid cross-entropy with logits (https://pytorch.org/)
@@ -1523,6 +1590,9 @@ Early results are shown [here](results/README.md)
 ### testSNAP (openmp)
   A proxy for the SNAP force calculation in the LAMMPS molecular dynamics package (https://github.com/FitSNAP/TestSNAP)
 
+### tgvnn (cuda)
+  Dynamic MR Image Reconstruction using TGV and Low Rank Decomposition (https://github.com/dongwang881107/tgvnn)
+
 ### thomas (cuda)
   Solve tridiagonal systems of equations using the Thomas algorithm (https://pm.bsc.es/gitlab/run-math/cuThomasBatch/tree/master)
 
@@ -1549,6 +1619,9 @@ Early results are shown [here](results/README.md)
 
 ### tsa (cuda)
   Trotter-Suzuki approximation (https://bitbucket.org/zzzoom/trottersuzuki/src/master/)
+
+### tsne (cuda)
+  FFT-accelerated Interpolation-based t-SNE (https://github.com/oneapi-src/Velocity-Bench/tree/main/tsne)
 
 ### tsp (cuda)
   Solving the symmetric traveling salesman problem with iterative hill climbing (https://userweb.cs.txstate.edu/~burtscher/research/TSP_GPU/) 
@@ -1626,8 +1699,13 @@ Early results are shown [here](results/README.md)
 Authored and maintained by Zheming Jin (https://github.com/zjin-lcf) 
 
 ## Acknowledgement
-Abhishek Bagusetty, Andrew Barker, Andrey Alekseenko, Anton Gorshkov, Beau Johnston, Bernhard Esslinger, Bert de Jong, Chengjian Liu, Chris Knight, Daine McNiven, David Oro, David Sanchez, Douglas Franz, Edson Borin, Gabriell Araujo, Georgi Mirazchiyski, Henry Linjamäki, Henry Gabb, Hugh Delaney, Ian Karlin, Istvan Reguly, Jack Kirk, Jason Lau, Jeff Hammond, Jenny Chen, Jeongnim Kim, Jianxin Qiu, Jakub Chlanda, Jiya Su, John Tramm, Ju Zheng, Junchao Zhang, Kali Uday Balleda, Kinman Lei, Luke Drummond, Martin Burtscher, Matthias Noack, Michael Kruse, Michel Migdal, Mike Franusich, Mike Giles, Mikhail Dvorskiy, Mohammed Alser, Muhammad Haseeb, Muaaz Awan, Nevin Liber, Nicholas Miller, Pavel Samolysov, Pedro Valero Lara, Piotr Różański, Rahulkumar Gayatri, Samyak Gangwal, Shaoyi Peng, Steffen Larsen, Rafal Bielski, Robert Harrison, Robin Kobus, Rod Burns, Rodrigo Vimieiro, Romanov Vlad, Tadej Ciglarič, Thomas Applencourt, Tiago Carneiro, Tiago Cogumbreiro, Timmie Smith, Tobias Baumann, Usman Roshan, Wayne Joubert, Ye Luo, Yongbin Gu, Zhe Chen
+Abhishek Bagusetty, Andrew Barker, Andrey Alekseenko, Anton Gorshkov, Beau Johnston, Bernhard Esslinger, Bert de Jong, Chengjian Liu, Chris Knight, Daine McNiven, David Oro, David Sanchez, Douglas Franz, Edson Borin, Gabriell Araujo, Georgi Mirazchiyski, Henry Linjamäki, Henry Gabb, Hugh Delaney, Ian Karlin, Istvan Reguly, Jack Kirk, Jason Lau, Jeff Hammond, Jenny Chen, Jeongnim Kim, Jianxin Qiu, Jakub Chlanda, Jiya Su, John Tramm, Ju Zheng, Junchao Zhang, Kali Uday Balleda, Kinman Lei, Luke Drummond, Martin Burtscher, Matthias Noack, Matthew Davis, Michael Kruse, Michel Migdal, Mike Franusich, Mike Giles, Mikhail Dvorskiy, Mohammed Alser, Mohammed ,Tarek Ibn Ziad, Muhammad Haseeb, Muaaz Awan, Nevin Liber, Nicholas Miller, Oscar Ludwig, Pavel Samolysov, Pedro Valero Lara, Piotr Różański, Rahulkumar Gayatri, Samyak Gangwal, Shaoyi Peng, Steffen Larsen, Rafal Bielski, Robert Harrison, Robin Kobus, Rod Burns, Rodrigo Vimieiro, Romanov Vlad, Tadej Ciglarič, Thomas Applencourt, Tiago Carneiro, Tiago Cogumbreiro, Timmie Smith, Tobias Baumann, Usman Roshan, Wayne Joubert, Ye Luo, Yongbin Gu, Zhe Chen
 
 Codeplay<sup>®</sup> and Intel<sup>®</sup> for their contributions to the oneAPI ecosystem   
 
-The project uses resources at the Intel<sup>®</sup> DevCloud, the Chameleon testbed supported by the National Science Foundation, the Argonne Leadership Computing Facility supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC02-06CH11357, and the Experimental Computing Laboratory (ExCL) at Oak Ridge National Laboratory supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC05-00OR22725.
+The project used resources at the Intel<sup>®</sup> DevCloud, the Chameleon testbed supported by the National Science Foundation, the University of Oregon Neuroinformatics Center, the Argonne Leadership Computing Facility supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC02-06CH11357, and the Experimental Computing Laboratory (ExCL) at Oak Ridge National Laboratory supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC05-00OR22725.
+
+## License
+HeCBench has a BSD-3 license, as found in the [LICENSE](LICENSE) file.
+
+The benchmarks ace, ans, bitcracker, bm3d, bmf, bspline-vgh, car, ccs, che, contract, diamond, feynman-kac, lebesgue have GPL-style licenses.

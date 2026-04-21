@@ -22,7 +22,8 @@ obj = main.o meshBasis.o
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -Ddfloat=float -Ddlong=int
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -Ddfloat=float -Ddlong=int \
+          -I../axhelm-cuda
 
 # Linker Flags
 LDFLAGS = BlasLapack/libBlasLapack.a -lgfortran
@@ -49,7 +50,7 @@ endif
 $(program): $(obj) BlasLapack/libBlasLapack.a 
 	$(CC) $(CFLAGS) $+ -o $@ $(LDFLAGS)
 
-main.o : main.cpp axhelmReference.cpp
+main.o : main.cpp ../axhelm-cuda/axhelmReference.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 	
 meshBasis.o : meshBasis.cpp meshBasis.hpp meshNodesTet3D.h
@@ -65,4 +66,4 @@ clean:
 # run one- and three-dimensional kernels
 run: $(program)
 	$(LAUNCHER) ./$(program) 1 8000 100
-	./$(program) 3 8000 100
+	$(LAUNCHER) ./$(program) 3 8000 100

@@ -6,6 +6,7 @@
 CC        = clang++
 OPTIMIZE  = yes
 DEBUG     = no
+VERIFY    = no
 LAUNCHER  =
 
 GPU       = yes
@@ -32,6 +33,11 @@ obj = $(source:.cpp=.o)
 # Standard Flags
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
 LDFLAGS = 
 
@@ -49,6 +55,11 @@ endif
 ifeq ($(DEBUG),yes)
   CFLAGS  += -g -DDEBUG
   LDFLAGS += -g
+endif
+
+# Verification Flags
+ifeq ($(VERIFY),yes)
+  CFLAGS += -DDEBUG
 endif
 
 # Optimization Flags

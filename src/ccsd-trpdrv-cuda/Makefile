@@ -25,7 +25,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -49,12 +49,17 @@ endif
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu Makefile
+ccsd_tengy.o : ccsd_tengy.cu Makefile
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ccsd_trpdrv.o : ccsd_trpdrv.cu Makefile
+	$(CC) $(CFLAGS) -c $< -o $@
+
+main.o : main.cu reference.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 40 200 100
-
+	$(LAUNCHER) ./$(program) 160 400 100

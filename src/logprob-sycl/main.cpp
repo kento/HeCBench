@@ -86,7 +86,7 @@ void log_probs_kernel(
     }
 
 #ifdef USE_SYCL_GROUP_REDUCE
-    float max_val = reduce_over_group(item.get_group(), local_max, maximum<>());
+    float max_val = sycl::reduce_over_group(item.get_group(), local_max, sycl::maximum<>());
 #else
     float max_val = blockReduceMax<float>(local_max, item, shared);
 #endif
@@ -103,7 +103,7 @@ void log_probs_kernel(
     }
 
 #ifdef USE_SYCL_GROUP_REDUCE
-    float sum_exp  = reduce_over_group(item.get_group(), local_sum_exp, plus<>());
+    float sum_exp  = sycl::reduce_over_group(item.get_group(), local_sum_exp, sycl::plus<>());
 #else
     float sum_exp = blockReduceSum<float>(local_sum_exp, item, shared);
 #endif
@@ -149,7 +149,7 @@ void accumulate_log_probs(
     local_accum += static_cast<float>(log_probs[step]);
   }
 #ifdef USE_SYCL_GROUP_REDUCE
-  float accum  = reduce_over_group(item.get_group(), local_accum, plus<>());
+  float accum  = sycl::reduce_over_group(item.get_group(), local_accum, sycl::plus<>());
 #else
   float accum = blockReduceSum<float>(local_accum, item, shared);
 #endif
@@ -247,11 +247,11 @@ int main(int argc, char* argv[])
 #endif
       sycl::local_accessor<float, 0> s_max_logit (cgh);
       cgh.parallel_for(sycl::nd_range<2>(gws, lws), [=](sycl::nd_item<2> item)
-        [[intel::reqd_sub_group_size(SG)]] {
+        [[sycl::reqd_sub_group_size(SG)]] {
         log_probs_kernel<float>(
             item,
 #ifndef USE_SYCL_GROUP_REDUCE
-            sm.get_pointer(),
+            sm.get_multi_ptr<sycl::access::decorated::no>().get(),
 #endif
             s_max_logit,
             d_log_probs, d_logits, d_ids, d_lengths, max_length, batch_size,
@@ -264,11 +264,11 @@ int main(int argc, char* argv[])
       sycl::local_accessor<float, 1> sm (sycl::range<1>(SG), cgh);
 #endif
       cgh.parallel_for(sycl::nd_range<2>(gws2, lws), [=](sycl::nd_item<2> item)
-        [[intel::reqd_sub_group_size(SG)]] {
+        [[sycl::reqd_sub_group_size(SG)]] {
         accumulate_log_probs(
            item,
 #ifndef USE_SYCL_GROUP_REDUCE
-           sm.get_pointer(),
+           sm.get_multi_ptr<sycl::access::decorated::no>().get(),
 #endif
            d_cum_log_probs, d_log_probs, d_lengths,
            max_length, batch_size);
@@ -318,11 +318,11 @@ int main(int argc, char* argv[])
 #endif
       sycl::local_accessor<float, 0> s_max_logit (cgh);
       cgh.parallel_for(sycl::nd_range<2>(gws, lws), [=](sycl::nd_item<2> item)
-        [[intel::reqd_sub_group_size(SG)]] {
+        [[sycl::reqd_sub_group_size(SG)]] {
         log_probs_kernel<float>(
             item,
 #ifndef USE_SYCL_GROUP_REDUCE
-            sm.get_pointer(),
+            sm.get_multi_ptr<sycl::access::decorated::no>().get(),
 #endif
             s_max_logit,
             d_log_probs, d_logits, d_ids, d_lengths, max_length, batch_size,
@@ -335,11 +335,11 @@ int main(int argc, char* argv[])
       sycl::local_accessor<float, 1> sm (sycl::range<1>(SG), cgh);
 #endif
       cgh.parallel_for(sycl::nd_range<2>(gws2, lws), [=](sycl::nd_item<2> item)
-        [[intel::reqd_sub_group_size(SG)]] {
+        [[sycl::reqd_sub_group_size(SG)]] {
         accumulate_log_probs(
            item,
 #ifndef USE_SYCL_GROUP_REDUCE
-           sm.get_pointer(),
+           sm.get_multi_ptr<sycl::access::decorated::no>().get(),
 #endif
            d_cum_log_probs, d_log_probs, d_lengths,
            max_length, batch_size);

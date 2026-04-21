@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -54,9 +54,9 @@ clean:
 
 process: fpc.c
 	gcc -O3 fpc.c -o fpc
-	./fpc < msg_sp.trace.fpc > msg_sp.trace.out
+	#./fpc < msg_sp.trace.fpc > msg_sp.trace.out
 
-run: process $(program)
+run: $(program)
         # compression
 	$(LAUNCHER) ./$(program) msg_sp.trace.out 1
         # decompression

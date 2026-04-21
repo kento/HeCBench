@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -54,4 +54,4 @@ clean:
 
 run: $(program)
 	$(LAUNCHER) ./$(program) Broadway_tower.jpg 100 -u 
-	#./$(program) Broadway_tower.jpg 100 -a
+	#$(LAUNCHER) ./$(program) Broadway_tower.jpg 100 -a

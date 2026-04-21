@@ -3,7 +3,7 @@
 #===============================================================================
 
 # Compiler can be set below, or via environment variable
-CC        = icpc
+CC        = icpx
 OPTIMIZE  = yes
 DEBUG     = no
 DUMP      = no
@@ -25,7 +25,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../backprop-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../backprop-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -57,7 +57,7 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp ../backprop-cuda/backprop.h
+%.o: %.cpp ../backprop-cuda/backprop.h ../backprop-cuda/reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

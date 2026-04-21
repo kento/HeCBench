@@ -8,7 +8,7 @@ static inline T atomicAdd(T* val, const T delta)
     return ref.fetch_add(delta);
 }
 
-void kernel1 (
+void attention_kernel1 (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -27,7 +27,7 @@ void kernel1 (
   }
 }
 
-void kernel2 (
+void attention_kernel2 (
     const float*__restrict__ exp_sum,
     const float*__restrict__ dot_product,
     float*__restrict__ score,
@@ -40,7 +40,7 @@ void kernel2 (
 }
 
 
-void kernel3 (
+void attention_kernel3 (
     const float*__restrict__ score,
     const float*__restrict__ value,
     float*__restrict__ output,
@@ -58,7 +58,7 @@ void kernel3 (
 }
 
 
-void kernel1_blockReduce (
+void attention_kernel1_blockReduce (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -83,7 +83,7 @@ void kernel1_blockReduce (
 }
 
 
-void kernel1_warpReduce (
+void attention_kernel1_warpReduce (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -110,7 +110,7 @@ void kernel1_warpReduce (
 }
 
 
-void kernel2_blockReduce (
+void attention_kernel2_blockReduce (
     const float*__restrict__ exp_sum,
     const float*__restrict__ dot_product,
     const float*__restrict__ value,
@@ -130,4 +130,27 @@ void kernel2_blockReduce (
   sum = sycl::reduce_over_group(item.get_group(), sum, sycl::plus<float>{});
   if (item.get_local_id(0) == 0)
     output[j] = sum;
+}
+
+void attention_kernel2_warpReduce (
+    const float*__restrict__ exp_sum,
+    const float*__restrict__ dot_product,
+    const float*__restrict__ value,
+    float*__restrict__ output,
+    const int n,
+    const int d,
+    const sycl::nd_item<1> &item)
+{
+  sycl::sub_group warp = item.get_sub_group();
+  int j = item.get_group(0) * warp.get_group_linear_range() + warp.get_group_linear_id();
+  if (j < d) {
+    float sum = 0;
+      for (int i = warp.get_local_linear_id(); i < n; i += warp.get_max_local_range()[0]) {
+      float score = sycl::native::exp(dot_product[i]) / exp_sum[0];
+      sum += score * value[i * d + j];
+    }
+    sum = sycl::reduce_over_group(warp, sum, sycl::plus<float>{});
+    if (warp.leader())
+      output[j] = sum;
+  }
 }

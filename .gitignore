@@ -1,5 +1,4 @@
 *~
-*.txt
 *.bin
 *.o
 *.ppm
@@ -8,12 +7,21 @@
 *.traindata
 *.swp
 *.out
-*.json
 *.log
 *.yaml
 dpct_output
 */main
-src/*/main
-src/*/main_omp
-src/*/stencil_1d
-src/*/Projectile
+main
+*.tmp
+
+# Exclude text files except CMake and documentation
+*.txt
+!CMakeLists.txt
+!plan.md
+!README*.md
+!*.markdown
+
+# Exclude JSON files except CMake presets
+*.json
+!CMakePresets.json
+!CMakeUserPresets.json

@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH) \
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH) \
           --expt-relaxed-constexpr
 
 # Linker Flags
@@ -38,7 +38,7 @@ endif
 
 # Optimization Flags
 ifeq ($(OPTIMIZE),yes)
-  CFLAGS += -O3 --use_fast_math
+  CFLAGS += -O3 #--use_fast_math
 endif
 
 #===============================================================================
@@ -48,14 +48,13 @@ endif
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu Makefile
+%.o: %.cu reference.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 20 12 64 64 1000
-	$(LAUNCHER) ./$(program) 20 12 1024 1024 1000
-	$(LAUNCHER) ./$(program) 20 20 1024 1024 1000
-	$(LAUNCHER) ./$(program) 48 20 1024 1024 1000
+	$(LAUNCHER) ./$(program) 4 12 256 256 1000
+	$(LAUNCHER) ./$(program) 4 12 1024 1024 1000
+	$(LAUNCHER) ./$(program) 16 12 1024 1024 1000

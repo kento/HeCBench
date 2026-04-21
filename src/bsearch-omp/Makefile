@@ -6,6 +6,7 @@
 CC        = icpx
 OPTIMIZE  = yes
 DEBUG     = no
+VERIFY    = no
 DEVICE    = gpu
 LAUNCHER  =
 
@@ -24,7 +25,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall 
 
 # Linker Flags
 LDFLAGS = 
@@ -35,6 +36,10 @@ ifeq ($(DEBUG),yes)
   LDFLAGS  += -g
 endif
 
+# Verification Flags
+ifeq ($(VERIFY),yes)
+  CFLAGS += -DDEBUG
+endif
 
 # Optimization Flags
 ifeq ($(OPTIMIZE),yes)

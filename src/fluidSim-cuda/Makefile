@@ -15,14 +15,16 @@ LAUNCHER  =
 #===============================================================================
 program = main
 
-obj = main.o kernels.o reference.o
+source = main.cu kernels.cu
+
+obj = $(source:.cu=.o)
 
 #===============================================================================
 # Sets Flags
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Xcompiler -Wall -arch=$(ARCH)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Xcompiler -Wall -arch=$(ARCH)
 
 # Linker Flags
 LDFLAGS = 
@@ -51,11 +53,8 @@ $(program): $(obj) Makefile
 kernels.o: kernels.cu utils.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
-main.o: main.cpp utils.h Makefile
-	$(CC) $(CFLAGS) -x cu -c $< -o $@
-
-reference.o: ../fluidSim-sycl/reference.cpp Makefile
-	$(CC) $(CFLAGS) -x cu -c $< -o $@
+main.o: main.cu reference.h utils.h Makefile
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)

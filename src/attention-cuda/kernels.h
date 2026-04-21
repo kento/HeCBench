@@ -3,7 +3,7 @@
 #include <cooperative_groups/reduce.h>
 
 __global__
-void kernel1 (
+void attention_kernel1 (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -17,12 +17,12 @@ void kernel1 (
     for (int j = 0; j < d; j++)
       sum += key[i * d + j] * query[j];
     dot_product[i] = sum;
-    atomicAdd(exp_sum, expf(sum));
+    atomicAdd(exp_sum, __expf(sum));
   }
 }
 
 __global__
-void kernel2 (
+void attention_kernel2 (
     const float*__restrict__ exp_sum,
     const float*__restrict__ dot_product,
     float*__restrict__ score,
@@ -30,11 +30,11 @@ void kernel2 (
 {
   int i = blockIdx.x * blockDim.x + threadIdx.x;
   if (i < n)
-    score[i] = expf(dot_product[i]) / exp_sum[0];
+    score[i] = __expf(dot_product[i]) / exp_sum[0];
 }
 
 __global__
-void kernel3 (
+void attention_kernel3 (
     const float*__restrict__ score,
     const float*__restrict__ value,
     float*__restrict__ output,
@@ -51,7 +51,7 @@ void kernel3 (
 }
 
 __global__
-void kernel1_blockReduce (
+void attention_kernel1_blockReduce (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -70,12 +70,12 @@ void kernel1_blockReduce (
   sum = BlockReduce(temp_storage).Sum(sum);
   if (threadIdx.x == 0) {
     dot_product[i] = sum;
-    atomicAdd(exp_sum, expf(sum));
+    atomicAdd(exp_sum, __expf(sum));
   }
 }
 
 __global__
-void kernel1_warpReduce (
+void attention_kernel1_warpReduce (
     const float*__restrict__ key,
     const float*__restrict__ query,
     float*__restrict__ dot_product,
@@ -97,13 +97,13 @@ void kernel1_warpReduce (
     sum = cg::reduce(warp, sum, cg::plus<float>{});
     if (warp.thread_rank() == 0) {
       dot_product[i] = sum;
-      atomicAdd(exp_sum, expf(sum));
+      atomicAdd(exp_sum, __expf(sum));
     }
   }
 }
 
 __global__
-void kernel2_blockReduce (
+void attention_kernel2_blockReduce (
     const float*__restrict__ exp_sum,
     const float*__restrict__ dot_product,
     const float*__restrict__ value,
@@ -114,7 +114,7 @@ void kernel2_blockReduce (
   int j = blockIdx.x;
   float sum = 0;
   for (int i = threadIdx.x; i < n; i += blockDim.x) {
-    float score = expf(dot_product[i]) / exp_sum[0];
+    float score = __expf(dot_product[i]) / exp_sum[0];
     sum += score * value[i * d + j];
   }
   using BlockReduce = cub::BlockReduce<float, 256>;
@@ -122,4 +122,29 @@ void kernel2_blockReduce (
   sum = BlockReduce(temp_storage).Sum(sum);
   if (threadIdx.x == 0)
     output[j] = sum;
+}
+
+__global__
+void attention_kernel2_warpReduce (
+    const float*__restrict__ exp_sum,
+    const float*__restrict__ dot_product,
+    const float*__restrict__ value,
+    float*__restrict__ output,
+    const int n,
+    const int d)
+{
+  namespace cg = cooperative_groups;
+  cg::thread_block block = cg::this_thread_block();
+  cg::thread_block_tile<32> warp = cg::tiled_partition<32>(block);
+  int j = blockIdx.x * warp.meta_group_size() + warp.meta_group_rank();
+  if (j < d) {
+    float sum = 0;
+    for (int i = warp.thread_rank(); i < n; i += warp.size()) {
+      float score = __expf(dot_product[i]) / exp_sum[0];
+      sum += score * value[i * d + j];
+    }
+    sum = cg::reduce(warp, sum, cg::plus<float>{});
+    if (warp.thread_rank() == 0)
+      output[j] = sum;
+  }
 }

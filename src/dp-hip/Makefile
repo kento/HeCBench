@@ -24,9 +24,13 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
+#--hipstdpar-path=/opt/rocm/include/thrust/system/hip/hipstdpar
+
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall \
-          --hipstdpar --hipstdpar-path=roc-stdpar/include \
+          -I/opt/rocm/include/hipblas \
+          --hipstdpar \
           --offload-arch=$(HIP_ARCH)
+
 
 # Linker Flags
 LDFLAGS = -lhipblas

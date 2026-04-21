@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I../backprop-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I../backprop-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -51,7 +51,7 @@ $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
 %.o: %.cu ../backprop-cuda/backprop.h ../backprop-cuda/bpnn_adjust_weights.h \
-          ../backprop-cuda/bpnn_layerforward.h Makefile
+          ../backprop-cuda/bpnn_layerforward.h ../backprop-cuda/reference.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

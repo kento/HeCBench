@@ -24,7 +24,7 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall -I. -I../mr-cuda
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -I. -I../mr-cuda
 
 # Linker Flags
 LDFLAGS = 
@@ -59,4 +59,4 @@ clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program)
+	$(LAUNCHER) ./$(program) 100

@@ -8,7 +8,7 @@
 #include <cuda.h>
 #include "reference.h"
 
-__global__ void kernel(
+__global__ void chi_kernel(
   const unsigned int rows,
   const unsigned int cols,
   const int cRows,
@@ -16,6 +16,9 @@ __global__ void kernel(
   const unsigned char *__restrict__ snpdata,
   float *__restrict__ results)
 {
+  int tid = threadIdx.x + blockIdx.x * blockDim.x;
+  if (tid >= cols) return;
+
   unsigned char y;
   int m, n;
   unsigned int p = 0;
@@ -28,9 +31,6 @@ __global__ void kernel(
   float Cexpected[3];
   float numerator1;
   float numerator2;
-
-  int tid = threadIdx.x + blockIdx.x * blockDim.x;
-  if (tid >= cols) return;
 
   int cases[3] = {1,1,1};
   int controls[3] = {1,1,1};
@@ -126,13 +126,13 @@ int main(int argc, char* argv[]) {
   auto start = std::chrono::high_resolution_clock::now();
 
   for (int i = 0; i < repeat; i++) {
-    kernel <<< dim3(nblocks), dim3(nthreads) >>> (rows,cols,ncases,ncontrols,d_data,d_results);
+    chi_kernel <<< dim3(nblocks), dim3(nthreads) >>> (rows,cols,ncases,ncontrols,d_data,d_results);
   }
 
   cudaDeviceSynchronize();
   auto end = std::chrono::high_resolution_clock::now();
   auto time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
-  printf("Average kernel execution time = %f (s)\n", time * 1e-9f / repeat);
+  printf("Average chi_kernel execution time = %f (s)\n", time * 1e-9f / repeat);
 
   cudaMemcpy(h_results, d_results, result_size, cudaMemcpyDeviceToHost);
 

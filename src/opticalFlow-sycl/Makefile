@@ -33,6 +33,11 @@ obj = $(source:.cpp=.o)
 CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -I../opticalFlow-cuda/Common \
           -Wall -fsycl --gcc-toolchain=$(GCC_TOOLCHAIN)
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
 LDFLAGS = 
 
@@ -74,4 +79,4 @@ clean:
 	rm -rf $(program) $(obj) *.flo
 
 run: $(program)
-	$(LAUNCHER) ./$(program)
+	$(LAUNCHER) ./$(program) ../opticalFlow-cuda/data/frame10.ppm ../opticalFlow-cuda/data/frame11.ppm

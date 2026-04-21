@@ -8,10 +8,10 @@
  */
 
 // Includes
-#include <cstdio>
-#include <algorithm>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <sys/time.h>
-#include <time.h>
 #include <hip/hip_runtime.h>
 
 // Constants used by the program
@@ -338,7 +338,7 @@ void modified_insertion_sort(float *dist, int *index, int length, int k) {
     }
 
     // Shift values (and indexes) higher that the current distance to the right
-    int j = std::min(i, k - 1);
+    int j = i < k - 1 ? i : k-1;
     while (j > 0 && dist[j - 1] > curr_dist) {
       dist[j] = dist[j - 1];
       index[j] = index[j - 1];
@@ -479,14 +479,13 @@ int main(int argc, char* argv[]) {
     }
     if (ind[i] == knn_index[i]) {
       nb_correct_indexes++;
-    } else {
-      printf("Mismatch @%d: %d %d\n", i, ind[i], knn_index[i]);
     }
   }
 
   float precision_accuracy = nb_correct_precisions / ((float)query_nb * k);
   float index_accuracy = nb_correct_indexes / ((float)query_nb * k);
   printf("Precision accuracy %f\nIndex accuracy %f\n", precision_accuracy, index_accuracy);
+  printf("%s\n", (precision_accuracy == 1.f) ? "PASS" : "FAIL");
 
   free(ind);
   free(dist);

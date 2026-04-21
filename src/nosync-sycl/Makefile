@@ -34,8 +34,13 @@ CFLAGS := -std=c++17 -Wall -fsycl \
           --gcc-toolchain=$(GCC_TOOLCHAIN) \
           -I./oneDPL/include -I./oneTBB/include
 
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
+
 # Linker Flags
-LDFLAGS = 
+LDFLAGS = -lpthread 
 
 ifeq ($(CUDA), yes)
   CFLAGS += -fsycl-targets=nvptx64-nvidia-cuda \

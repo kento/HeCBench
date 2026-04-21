@@ -13,7 +13,7 @@ LAUNCHER  =
 # Program name & source code list
 #===============================================================================
 
-program = test
+program = main
 
 source = ccsd_tengy.cu  ccsd_trpdrv.cu  main.cu
 
@@ -24,7 +24,7 @@ obj = $(source:.cu=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++14 -Wall 
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall 
 
 # Linker Flags
 LDFLAGS = 
@@ -48,12 +48,17 @@ endif
 $(program): $(obj) Makefile
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cu Makefile
+ccsd_tengy.o : ccsd_tengy.cu Makefile
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ccsd_trpdrv.o : ../ccsd-trpdrv-cuda/ccsd_trpdrv.cu Makefile
+	$(CC) $(CFLAGS) -c $< -o $@
+
+main.o : ../ccsd-trpdrv-cuda/main.cu ../ccsd-trpdrv-cuda/reference.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 40 200 100
-
+	$(LAUNCHER) ./$(program) 160 400 100

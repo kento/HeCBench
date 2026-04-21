@@ -1,8 +1,8 @@
 NVCC_BIN=nvcc
 
 # the path may be adjusted for each platform
-#MPI_INCLUDE=/usr/lib/x86_64-linux-gnu/openmpi/include
-MPI_INCLUDE=/usr/include/openmpi-x86_64/
+MPI_INCLUDE=/usr/lib/x86_64-linux-gnu/openmpi/include
+#MPI_INCLUDE=/usr/include/openmpi-x86_64/
 
 OPT=-O3 -DRCB_UNTHREADED_BUILD -DUSE_SERIAL_COSMO
 
@@ -150,7 +150,7 @@ FORCE_SOURCES += BHForceTree.cxx
 FORCE_SOURCES += RCOForceTree.cxx
 FORCE_SOURCES += RCBForceTree.cxx
 FORCE_SOURCES_C += BGQStep16.c
-FORCE_SOURCES_C += BGQCM.c
+#FORCE_SOURCES_C += BGQCM.c
 FORCE_OBJLIST = $(FORCE_SOURCES:.cxx=.o)
 FORCE_OBJLIST_C = $(FORCE_SOURCES_C:.c=.o)
 FORCE_OBJECTS := $(addprefix $(OBJDIR)/,$(FORCE_OBJLIST) $(FORCE_OBJLIST_C))

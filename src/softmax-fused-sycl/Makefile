@@ -30,7 +30,13 @@ obj = $(source:.cpp=.o)
 #===============================================================================
 
 # Standard Flags
-CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl --gcc-toolchain=$(GCC_TOOLCHAIN)
+CFLAGS := $(EXTRA_CFLAGS) -std=c++17 -Wall -fsycl -I../softmax-fused-cuda \
+          --gcc-toolchain=$(GCC_TOOLCHAIN)
+
+ifeq ($(VENDOR), AdaptiveCpp)
+    CFLAGS_TMP := $(CFLAGS)
+    CFLAGS = $(filter-out -fsycl, $(CFLAGS_TMP))
+endif
 
 # Linker Flags
 LDFLAGS = 
@@ -53,7 +59,7 @@ endif
 
 # Optimization Flags
 ifeq ($(OPTIMIZE),yes)
-  CFLAGS += -O3 -ffast-math
+  CFLAGS += -O3 #-ffast-math
 endif
 
 ifeq ($(GPU),yes)
@@ -66,14 +72,13 @@ endif
 $(program): $(obj)
 	$(CC) $(CFLAGS) $(obj) -o $@ $(LDFLAGS)
 
-%.o: %.cpp
+%.o: %.cpp ../softmax-fused-cuda/reference.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(program) $(obj)
 
 run: $(program)
-	$(LAUNCHER) ./$(program) 20 12 64 64 1000
-	$(LAUNCHER) ./$(program) 20 12 1024 1024 1000
-	$(LAUNCHER) ./$(program) 20 20 1024 1024 1000
-	$(LAUNCHER) ./$(program) 48 20 1024 1024 1000
+	$(LAUNCHER) ./$(program) 4 12 256 256 1000
+	$(LAUNCHER) ./$(program) 4 12 1024 1024 1000
+	$(LAUNCHER) ./$(program) 16 12 1024 1024 1000

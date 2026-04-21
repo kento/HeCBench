@@ -11,15 +11,6 @@
 // choose integer type to avoid floating-point rounding errors
 typedef int scalar_t;
 
-template <typename T>
-using BlockReduce1D = hipcub::BlockReduce<T, NUM_THREADS>;
-
-template <typename T, int kBlockDimX, int kBlockDimY>
-using BlockReduce2D = hipcub::BlockReduce<T,
-                                       kBlockDimX,
-                                       hipcub::BLOCK_REDUCE_WARP_REDUCTIONS,
-                                       kBlockDimY>;
-
 #define DISPATCH_REDUCE_KERNEL_BY_2D_BLOCK_WITH_TYPE(                      \
     size, Func, T, grid_dim, stream, ...)                                  \
   do {                                                                     \
@@ -36,6 +27,27 @@ using BlockReduce2D = hipcub::BlockReduce<T,
 
 
 template <typename T, int kBlockDimX, int kBlockDimY>
+__device__ void BlockReduce(T &input1, T &input2) {
+  using BlockReduce = hipcub::BlockReduce<T,
+                                       kBlockDimX,
+                                       hipcub::BLOCK_REDUCE_WARP_REDUCTIONS,
+                                       kBlockDimY>;
+  __shared__ typename BlockReduce::TempStorage temp_storage1;
+  __shared__ typename BlockReduce::TempStorage temp_storage2;
+  input1 = BlockReduce(temp_storage1).Sum(input1);
+  input2 = BlockReduce(temp_storage2).Sum(input2);
+}
+
+template <typename T>
+__device__ void BlockReduce(T &input1, T &input2) {
+  using BlockReduce = hipcub::BlockReduce<T, NUM_THREADS>;
+  __shared__ typename BlockReduce::TempStorage temp_storage1;
+  __shared__ typename BlockReduce::TempStorage temp_storage2;
+  input1 = BlockReduce(temp_storage1).Sum(input1);
+  input2 = BlockReduce(temp_storage2).Sum(input2);
+}
+
+template <typename T, int kBlockDimX, int kBlockDimY>
 __global__
 void ChannelSumNCHW(
     const int N,
@@ -45,15 +57,8 @@ void ChannelSumNCHW(
     T*__restrict__ sum,
     T*__restrict__ sumsq)
 {
-  __shared__
-  typename BlockReduce2D<T, kBlockDimX, kBlockDimY>::TempStorage m_storage;
-
-  __shared__
-  typename BlockReduce2D<T, kBlockDimX, kBlockDimY>::TempStorage v_storage;
-
   T m_val = 0;
   T v_val = 0;
-
   const int c = blockIdx.x;
 
   // sum batches from different channels
@@ -64,9 +69,7 @@ void ChannelSumNCHW(
       v_val += __ldg(X + index) * __ldg(X + index);
     }
   }
-  m_val = BlockReduce2D<T, kBlockDimX, kBlockDimY>(m_storage).Sum(m_val);
-  v_val = BlockReduce2D<T, kBlockDimX, kBlockDimY>(v_storage).Sum(v_val);
-
+  BlockReduce<T, kBlockDimX, kBlockDimY>(m_val, v_val);
   if (threadIdx.x == 0 && threadIdx.y == 0) {
     sum[c] = m_val;
     sumsq[c] = v_val;
@@ -83,8 +86,6 @@ void ChannelSumNHWC(
     T*__restrict__ sum,
     T*__restrict__ sumsq)
 {
-  __shared__ typename BlockReduce1D<T>::TempStorage m_storage;
-  __shared__ typename BlockReduce1D<T>::TempStorage v_storage;
   const int inner_size = N * HxW;
   const int c = blockIdx.x;
   T m_val = 0;
@@ -94,8 +95,7 @@ void ChannelSumNHWC(
     m_val += __ldg(X + index);
     v_val += __ldg(X + index) * __ldg(X + index);
   }
-  m_val = BlockReduce1D<T>(m_storage).Sum(m_val);
-  v_val = BlockReduce1D<T>(v_storage).Sum(v_val);
+  BlockReduce<T>(m_val, v_val);
   if (threadIdx.x == 0) {
     sum[c] = m_val;
     sumsq[c] = v_val;
